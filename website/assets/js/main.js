@@ -148,9 +148,35 @@
     }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
+    // Watch for dynamically added elements (like projects, products, articles loaded via AJAX)
+    const mutationObserver = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        mutation.addedNodes.forEach(node => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            if (node.matches('[data-reveal]')) revealObserver.observe(node);
+            node.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+          }
+        });
+      });
+    });
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
   } else {
     // Skip animation for reduced motion
     document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('revealed'));
+
+    // Automatically reveal any new dynamic elements
+    const mutationObserver = new MutationObserver(mutations => {
+      mutations.forEach(mutation => {
+        mutation.addedNodes.forEach(node => {
+          if (node.nodeType === Node.ELEMENT_NODE) {
+            if (node.matches('[data-reveal]')) node.classList.add('revealed');
+            node.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('revealed'));
+          }
+        });
+      });
+    });
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
   }
 
   /* ── Counter Animation ──────────────────────────────────────── */

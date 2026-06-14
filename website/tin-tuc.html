@@ -146,13 +146,13 @@
 
 <section class="section" style="padding:48px 0 80px">
   <div class="container">
-    <div class="blog-layout">
+    <div class="news-layout">
       <!-- Main -->
       <div>
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
           <p id="articleCount" style="font-size:13px;color:var(--gray-400)">Đang tải...</p>
         </div>
-        <div class="blog-grid" id="blogGrid">
+        <div class="article-grid" id="blogGrid">
           <div class="blog-skeleton"></div>
           <div class="blog-skeleton"></div>
           <div class="blog-skeleton"></div>
@@ -162,17 +162,17 @@
       </div>
 
       <!-- Sidebar -->
-      <aside class="blog-sidebar">
+      <aside class="news-sidebar">
         <div class="sidebar-widget">
-          <div class="sidebar-widget-header">Bài Viết Mới Nhất</div>
+          <div class="sidebar-title">Bài Viết Mới Nhất</div>
           <div class="sidebar-widget-body" id="recentPosts"><p style="font-size:13px;color:var(--gray-400)">Đang tải...</p></div>
         </div>
         <div class="sidebar-widget">
-          <div class="sidebar-widget-header">Danh Mục</div>
+          <div class="sidebar-title">Danh Mục</div>
           <div class="sidebar-widget-body" id="catWidget"><p style="font-size:13px;color:var(--gray-400)">Đang tải...</p></div>
         </div>
         <div class="sidebar-widget">
-          <div class="sidebar-widget-header">Liên Hệ Tư Vấn</div>
+          <div class="sidebar-title">Liên Hệ Tư Vấn</div>
           <div class="sidebar-widget-body" style="text-align:center;padding:20px 16px">
             <p style="font-size:13px;color:var(--gray-500);margin-bottom:14px">Kỹ sư sẵn sàng tư vấn miễn phí cho dự án của bạn</p>
             <a href="lien-he.html" class="btn btn-gold" style="display:block;justify-content:center">Liên Hệ Ngay</a>
@@ -232,7 +232,10 @@ function renderFilterBar(cats) {
 function renderSidebarCats(cats) {
   const el = document.getElementById('catWidget');
   if (!cats.length) { el.innerHTML='<p style="font-size:13px;color:var(--gray-400)">Chưa có danh mục</p>'; return; }
-  el.innerHTML = cats.map(c=>`<a href="tin-tuc.html?cat=${c.slug}" class="sidebar-tag">${CMS.esc(c.name)}</a>`).join('');
+  el.innerHTML = `<div class="category-list">` + cats.map(c=>`
+    <div class="cat-item" onclick="window.location.href='tin-tuc.html?cat=${c.slug}'">
+      <span>${CMS.esc(c.name)}</span>
+    </div>`).join('') + `</div>`;
   const footer = document.getElementById('footerCats');
   if (footer) footer.innerHTML = '<li><a href="tin-tuc.html">Tất cả bài viết</a></li>' +
     cats.map(c=>`<li><a href="tin-tuc.html?cat=${c.slug}">${CMS.esc(c.name)}</a></li>`).join('');
@@ -249,28 +252,28 @@ async function loadArticles() {
     document.getElementById('blogPagination').innerHTML = ''; return;
   }
   grid.innerHTML = data.map((a,i) => blogCardHTML(a, i===0 && _page===1 && _filter==='all')).join('');
+  grid.querySelectorAll('.article-card').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.06) + 's';
+  });
   renderPagination(pages);
 }
 
 function blogCardHTML(a, featured) {
   const img  = a.thumbnail ? CMS.imgUrl(a.thumbnail) : 'assets/images/hero-interior.png';
   const date = CMS.formatDate(a.published_at);
-  const cls  = featured ? 'blog-card blog-card-featured' : 'blog-card';
+  const cls  = featured ? 'article-card featured' : 'article-card';
   return `<a href="tin-tuc-chi-tiet.html?slug=${a.slug||a.id}" class="${cls}" data-reveal>
-    <div class="blog-card-img">
+    <div class="article-thumb">
       <img src="${CMS.esc(img)}" alt="${CMS.esc(a.title)}" loading="lazy" onerror="this.src='assets/images/hero-interior.png'" />
-      <span class="badge badge-gold blog-card-cat">${CMS.esc(a.category||'Bài viết')}</span>
     </div>
-    <div class="blog-card-body">
-      <div class="blog-card-date">
-        <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-        ${date}
+    <div class="article-body">
+      <div class="article-meta">
+        <span class="article-cat">${CMS.esc(a.category||'Bài viết')}</span>
+        <span class="article-date">${date}</span>
       </div>
-      <h2 class="blog-card-title">${CMS.esc(a.title)}</h2>
-      <p class="blog-card-excerpt">${CMS.esc((a.excerpt||'').slice(0,120))}${(a.excerpt||'').length>120?'...':''}</p>
-      <div class="blog-card-footer">
-        <span class="blog-card-more">Đọc tiếp <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
-      </div>
+      <h2 class="article-title">${CMS.esc(a.title)}</h2>
+      <p class="article-excerpt">${CMS.esc((a.excerpt||'').slice(0,120))}${(a.excerpt||'').length>120?'...':''}</p>
+      <span class="article-link">Đọc tiếp <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
     </div>
   </a>`;
 }
@@ -280,9 +283,9 @@ async function loadRecentPosts() {
   const el = document.getElementById('recentPosts');
   if (!data.length) { el.innerHTML='<p style="font-size:13px;color:var(--gray-400)">Chưa có bài viết</p>'; return; }
   el.innerHTML = data.map(a=>`
-    <a href="tin-tuc-chi-tiet.html?slug=${a.slug||a.id}" class="sidebar-post">
-      <div class="sidebar-post-img"><img src="${a.thumbnail?CMS.imgUrl(a.thumbnail):'assets/images/hero-interior.png'}" loading="lazy" onerror="this.src='assets/images/hero-interior.png'" / alt=""></div>
-      <div><div class="sidebar-post-title">${CMS.esc(a.title)}</div><div class="sidebar-post-date">${CMS.formatDate(a.published_at)}</div></div>
+    <a href="tin-tuc-chi-tiet.html?slug=${a.slug||a.id}" class="sidebar-article">
+      <div class="sidebar-thumb"><img src="${a.thumbnail?CMS.imgUrl(a.thumbnail):'assets/images/hero-interior.png'}" loading="lazy" onerror="this.src='assets/images/hero-interior.png'" / alt=""></div>
+      <div><h4>${CMS.esc(a.title)}</h4><span>${CMS.formatDate(a.published_at)}</span></div>
     </a>`).join('');
 }
 

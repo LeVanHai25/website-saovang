@@ -272,40 +272,31 @@ async function loadProjects() {
     return;
   }
 
-  grid.innerHTML = data.map(p => projectCardHTML(p)).join('');
+  grid.innerHTML = data.map((p, i) => projectCardHTML(p, i === 0 && _currentPage === 1 && _currentFilter === 'all')).join('');
 
   // Reveal animation
-  grid.querySelectorAll('.proj-card').forEach((el, i) => {
-    el.style.animationDelay = (i * 0.06) + 's';
-    el.classList.add('fade-in');
+  grid.querySelectorAll('.proj-item').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.06) + 's';
   });
 
   // Pagination
   renderPagination(pages);
 }
 
-function projectCardHTML(p) {
+function projectCardHTML(p, featured) {
   const imgSrc = p.thumbnail ? CMS.imgUrl(p.thumbnail) : 'assets/images/project-villa.png';
   const badgeColor = p.cat_color || '#c8860a';
-  return `<a href="du-an-chi-tiet.html?slug=${p.slug || p.id}" class="proj-card" data-reveal>
-    <div class="proj-img">
-      <img src="${CMS.esc(imgSrc)}" alt="${CMS.esc(p.title)}" loading="lazy" onerror="this.src='assets/images/project-villa.png'" />
-      <span class="badge" style="background:${badgeColor};color:#fff">${CMS.esc(p.category || '')}</span>
-    </div>
-    <div class="proj-body">
-      <span class="proj-cat-label">${CMS.esc(p.category || '')}</span>
-      <h3 class="proj-title">${CMS.esc(p.title)}</h3>
-      <p class="proj-desc">${CMS.esc((p.excerpt || '').slice(0, 120))}${(p.excerpt||'').length > 120 ? '...' : ''}</p>
-      <div class="proj-meta">
-        <div class="proj-meta-item">
-          <span class="meta-label">Chủ đầu tư</span>
-          <span class="meta-val">${CMS.esc(p.client || '—')}</span>
-        </div>
-        <div class="proj-meta-item">
-          <span class="meta-label">Giá trị</span>
-          <span class="meta-val gold">${CMS.esc(p.project_value || 'Liên hệ')}</span>
-        </div>
-      </div>
+  const cls = featured ? 'proj-item featured' : 'proj-item';
+  return `<a href="du-an-chi-tiet.html?slug=${p.slug || p.id}" class="${cls}" data-reveal>
+    <img src="${CMS.esc(imgSrc)}" alt="${CMS.esc(p.title)}" loading="lazy" onerror="this.src='assets/images/project-villa.png'" />
+    <div class="proj-info">
+      <span class="proj-info-cat">${CMS.esc(p.category || '')}</span>
+      <h3>${CMS.esc(p.title)}</h3>
+      <p>${CMS.esc((p.excerpt || '').slice(0, 120))}${(p.excerpt||'').length > 120 ? '...' : ''}</p>
+      <span class="proj-info-link">
+        Xem chi tiết
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </span>
     </div>
   </a>`;
 }

@@ -265,30 +265,35 @@ async function loadProducts() {
   }
 
   grid.innerHTML = data.map(p => productCardHTML(p)).join('');
-  grid.querySelectorAll('.product-card').forEach((el, i) => {
-    el.style.animationDelay = (i * 0.05) + 's';
-    el.classList.add('fade-in');
+  grid.querySelectorAll('.prod-card').forEach((el, i) => {
+    el.style.transitionDelay = (i * 0.05) + 's';
   });
   renderPagination(pages);
 }
 
 function productCardHTML(p) {
   const img = p.thumbnail ? CMS.imgUrl(p.thumbnail) : 'assets/images/product-inox.png';
-  return `<a href="san-pham-chi-tiet.html?slug=${p.slug || p.id}" class="product-card" data-reveal>
-    <div class="product-img">
+  const priceText = p.price ? p.price : 'Liên hệ';
+  const unitText = p.unit ? ` / ${p.unit}` : '';
+  const brandText = p.brand || p.category || 'SAO VÀNG';
+  
+  return `<a href="san-pham-chi-tiet.html?slug=${p.slug || p.id}" class="prod-card" data-reveal>
+    <div class="prod-thumb">
       <img src="${CMS.esc(img)}" alt="${CMS.esc(p.title)}" loading="lazy" onerror="this.src='assets/images/product-inox.png'" />
-      <span class="badge badge-dark">${CMS.esc(p.category||'')}</span>
+      <div class="prod-badge-wrap">
+        <span class="badge badge-dark" style="background:rgba(0,0,0,.75);color:#fff;font-size:9px;padding:3px 8px;border-radius:10px">${CMS.esc(p.category||'')}</span>
+      </div>
     </div>
-    <div class="product-body">
-      <span class="product-brand">${CMS.esc(p.brand || p.category || '')}</span>
-      <h3 class="product-name">${CMS.esc(p.title)}</h3>
-      <p class="product-desc">${CMS.esc((p.excerpt||'').slice(0,90))}${(p.excerpt||'').length>90?'...':''}</p>
-      <div class="product-footer">
-        <span class="product-more">
+    <div class="prod-body">
+      <span class="prod-cat">${CMS.esc(brandText)}</span>
+      <h3 class="prod-name">${CMS.esc(p.title)}</h3>
+      <p class="prod-desc">${CMS.esc((p.excerpt||'').slice(0,90))}${(p.excerpt||'').length>90?'...':''}</p>
+      <div class="prod-meta">
+        <span class="prod-price">${priceText}${unitText}</span>
+        <span class="prod-action">
           Xem chi tiết
           <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
         </span>
-        <span class="product-origin">${CMS.esc(p.brand||'SAO VÀNG')}</span>
       </div>
     </div>
   </a>`;

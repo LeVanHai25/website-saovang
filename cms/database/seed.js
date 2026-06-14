@@ -88,6 +88,19 @@ async function seed() {
     console.log('✅ Sample form: Form Liên Hệ');
   }
 
+  // ── Seed Categories ──────────────────────────────────────
+  const categories = [
+    { name: 'Nhà ở & Biệt thự', slug: 'nha-o-biet-thu', content_type: 'project', color: '#c8860a' },
+    { name: 'Du thuyền', slug: 'du-thuyen', content_type: 'project', color: '#8b0000' },
+    { name: 'Vật liệu inox', slug: 'vat-lieu-inox', content_type: 'product', color: '#7f8c8d' },
+    { name: 'Xu hướng', slug: 'xu-huong', content_type: 'article', color: '#2980b9' },
+  ];
+  const insertCat = db.prepare('INSERT OR IGNORE INTO categories (name, slug, content_type, color) VALUES (?, ?, ?, ?)');
+  for (const cat of categories) {
+    insertCat.run(cat.name, cat.slug, cat.content_type, cat.color);
+  }
+  console.log(`✅ ${categories.length} categories seeded`);
+
   // Force persist
   db._persist();
 
