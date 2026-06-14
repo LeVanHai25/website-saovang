@@ -216,8 +216,8 @@
 <script>
 async function initDetailPage() {
   const settings = await CMS.getSettings();
-  if (settings.logo_badge) { document.getElementById('logoBadge').textContent = settings.logo_badge; document.getElementById('footerLogoBadge').textContent = settings.logo_badge; }
-  if (settings.company_short) document.getElementById('logoName').textContent = settings.company_short;
+  if (settings.logo_badge)    { ['logoBadge','footerLogoBadge'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = settings.logo_badge; }); }
+  if (settings.company_short) { ['logoName','footerLogoName'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = settings.company_short; }); }
 
   const slug = CMS.getSlugFromUrl();
   if (!slug) { showError(); return; }

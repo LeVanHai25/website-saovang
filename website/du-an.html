@@ -150,14 +150,12 @@
 </section>
 
 <!-- STATS STRIP -->
-<div class="stats-strip">
-  <div class="container">
-    <div class="stats-strip-grid">
-      <div class="strip-stat"><div class="n" data-counter>300+</div><div class="l">Công Trình Hoàn Thành</div></div>
-      <div class="strip-stat"><div class="n" data-counter>50+</div><div class="l">Du Thuyền Bàn Giao</div></div>
-      <div class="strip-stat"><div class="n" data-counter>7+</div><div class="l">Năm Kinh Nghiệm</div></div>
-      <div class="strip-stat"><div class="n">100%</div><div class="l">Khách Hàng Hài Lòng</div></div>
-    </div>
+<div class="container">
+  <div class="project-stats">
+    <div class="pstat"><div class="pstat-num" data-counter>300+</div><div class="pstat-lbl">Công Trình Hoàn Thành</div></div>
+    <div class="pstat"><div class="pstat-num" data-counter>50+</div><div class="pstat-lbl">Du Thuyền Bàn Giao</div></div>
+    <div class="pstat"><div class="pstat-num" data-counter>7+</div><div class="pstat-lbl">Năm Kinh Nghiệm</div></div>
+    <div class="pstat"><div class="pstat-num">100%</div><div class="pstat-lbl">Khách Hàng Hài Lòng</div></div>
   </div>
 </div>
 
@@ -226,8 +224,8 @@ async function initProjectsPage() {
 }
 
 function applySettings(s) {
-  if (s.logo_badge)    { document.getElementById('logoBadge').textContent = s.logo_badge; document.getElementById('footerLogoBadge').textContent = s.logo_badge; }
-  if (s.company_short) { document.getElementById('logoName').textContent  = s.company_short; document.getElementById('footerLogoName').textContent  = s.company_short; }
+  if (s.logo_badge)    { ['logoBadge','footerLogoBadge'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = s.logo_badge; }); }
+  if (s.company_short) { ['logoName','footerLogoName'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = s.company_short; }); }
   if (s.company_full)  { document.getElementById('footerDesc').textContent = s.company_full + ' — Chuyên thiết kế & thi công cơ khí nhà ở và du thuyền cao cấp.'; }
   if (s.site_phone)    { document.getElementById('footerPhone').textContent = s.site_phone; }
   if (s.site_email)    { document.getElementById('footerEmail').textContent = s.site_email; }

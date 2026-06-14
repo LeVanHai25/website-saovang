@@ -3,7 +3,7 @@
  * Kết nối tới CMS API để load nội dung động
  */
 (function () {
-  const CMS_URL = 'http://localhost:4000';
+  const CMS_URL = window.location.origin;
 
   window.CMS = {
     // ── Settings ──────────────────────────────────────────
