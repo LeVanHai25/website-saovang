@@ -541,7 +541,8 @@ input, select, textarea { font: inherit; }
     position: fixed;
     top: 0;
     right: 0;
-    bottom: 0;
+    height: 100vh;
+    height: 100dvh;
     width: min(320px, 85vw);
     background: var(--dark);
     padding-top: calc(var(--header-h) + var(--sp-5));
