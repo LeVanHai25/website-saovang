@@ -1,0 +1,82 @@
+[
+  {
+    "number": "01",
+    "title": "Enterprise Strategy",
+    "description": "Comprehensive strategic planning that aligns business objectives with market opportunities and organizational capabilities.",
+    "process": "Discovery → Analysis → Strategy Design → Roadmap → Implementation Support",
+    "deliverables": "Strategic blueprint · Market assessment · Growth roadmap · Business case",
+    "impactMetric": "Avg. 28% revenue growth within 18 months"
+  },
+  {
+    "number": "02",
+    "title": "Digital Product Development",
+    "description": "Design and engineering of world-class digital products that delight users and drive business results.",
+    "process": "Research → Ideation → Prototyping → Development → Launch → Iterate",
+    "deliverables": "Product strategy · UX/UI design · MVP · Production platform · Analytics",
+    "impactMetric": "3× average user engagement improvement"
+  },
+  {
+    "number": "03",
+    "title": "Cloud Migration & Modernization",
+    "description": "Seamless migration of legacy systems to modern cloud platforms with minimal disruption and maximum value.",
+    "process": "Assessment → Planning → Migration → Optimization → Managed Services",
+    "deliverables": "Cloud strategy · Migration plan · Architecture design · Runbooks · SLA framework",
+    "impactMetric": "35% infrastructure cost reduction on average"
+  },
+  {
+    "number": "04",
+    "title": "Data Analytics & Intelligence",
+    "description": "Building data-driven organizations with advanced analytics platforms and actionable business intelligence.",
+    "process": "Data Audit → Architecture → Integration → Analytics → Insights Delivery",
+    "deliverables": "Data platform · Dashboards · Predictive models · Data governance · Training",
+    "impactMetric": "60% faster data-driven decision making"
+  },
+  {
+    "number": "05",
+    "title": "Organizational Transformation",
+    "description": "Reshaping organizations for agility, efficiency, and sustainable performance through people, process, and culture change.",
+    "process": "Diagnostic → Design → Pilot → Scale → Sustain",
+    "deliverables": "Org design · Change roadmap · Training programs · KPI framework · Culture audit",
+    "impactMetric": "45% improvement in employee engagement scores"
+  },
+  {
+    "number": "06",
+    "title": "Cybersecurity Services",
+    "description": "End-to-end security services from strategy and architecture to managed detection, response, and compliance.",
+    "process": "Risk Assessment → Architecture → Implementation → Monitoring → Response",
+    "deliverables": "Security roadmap · Architecture design · SOC setup · Incident playbooks · Compliance",
+    "impactMetric": "90% reduction in mean time to detection"
+  },
+  {
+    "number": "07",
+    "title": "M&A Advisory & Integration",
+    "description": "Strategic advisory for mergers, acquisitions, and post-merger integration to maximize deal value and accelerate synergies.",
+    "process": "Target Screening → Due Diligence → Valuation → Integration Planning → Execution",
+    "deliverables": "Deal thesis · Due diligence report · Integration playbook · Synergy tracker",
+    "impactMetric": "$8B+ in total deal value advised"
+  },
+  {
+    "number": "08",
+    "title": "Supply Chain & Operations",
+    "description": "Optimizing end-to-end supply chains and operational processes for resilience, efficiency, and competitive advantage.",
+    "process": "Mapping → Analysis → Redesign → Technology Enablement → Continuous Improvement",
+    "deliverables": "Process maps · Optimization models · Technology roadmap · Performance dashboards",
+    "impactMetric": "25% average supply chain cost reduction"
+  },
+  {
+    "number": "09",
+    "title": "Sustainability & ESG",
+    "description": "Integrating sustainability into core business strategy with measurable ESG frameworks and reporting capabilities.",
+    "process": "Materiality Assessment → Strategy → Implementation → Reporting → Assurance",
+    "deliverables": "ESG strategy · Carbon roadmap · Sustainability report · Stakeholder framework",
+    "impactMetric": "30% average carbon footprint reduction"
+  },
+  {
+    "number": "10",
+    "title": "Talent & Leadership",
+    "description": "Building high-performance teams and developing leaders who can drive transformation and organizational excellence.",
+    "process": "Assessment → Strategy → Development Programs → Coaching → Measurement",
+    "deliverables": "Talent strategy · Leadership programs · Succession plans · Culture framework",
+    "impactMetric": "40% improvement in leadership pipeline strength"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "number": "01",
+    "title": "Global Bank Digital Transformation",
+    "description": "End-to-end digital transformation for a Tier 1 global bank, modernizing core banking platforms and customer experiences across 40+ markets.",
+    "client": "Global Financial Institution",
+    "duration": "36 months",
+    "sector": "Financial Services",
+    "image": "/assets/images/case-study-1.png",
+    "imageAlt": "Data center",
+    "isDark": true,
+    "challenge": "Legacy core banking system serving 15M+ customers across 40 markets was limiting product innovation, increasing compliance risk, and degrading customer experience with 3+ second transaction times.",
+    "approach": "Phased migration to cloud-native microservices architecture. API-first design enabling real-time integration. New digital banking platform with AI-powered personalization. Agile delivery across 12 parallel workstreams.",
+    "outcome": "Successfully migrated 15M+ customer accounts with zero downtime. New platform processes 10× more transactions per second. Mobile banking app rated 4.8/5 across markets.",
+    "metrics": [
+      { "label": "Transaction Speed", "value": "95%", "percentage": 95 },
+      { "label": "Cost Reduction", "value": "40%", "percentage": 40 },
+      { "label": "Customer Satisfaction", "value": "+88%", "percentage": 88 },
+      { "label": "Time to Market", "value": "60%↓", "percentage": 60 }
+    ]
+  },
+  {
+    "number": "02",
+    "title": "Smart City Infrastructure Program",
+    "description": "Designing and implementing an integrated IoT and data analytics platform for a $2B smart city development across urban mobility, energy, and public services.",
+    "client": "Government Authority",
+    "duration": "48 months",
+    "sector": "Infrastructure & Government",
+    "image": "/assets/images/case-study-2.png",
+    "imageAlt": "Smart city",
+    "isDark": true,
+    "challenge": "A major Middle Eastern city needed to integrate disparate urban systems — transportation, utilities, emergency services — into a unified intelligent platform serving 2M+ residents.",
+    "approach": "Designed and deployed a cloud-native urban data platform integrating 50,000+ IoT sensors. Real-time analytics dashboard for city operators. AI-powered predictive models for traffic, energy, and public safety.",
+    "outcome": "Platform now processes 1M+ data points daily. Reduced traffic congestion by 22%. Energy efficiency improved by 30%. Emergency response times cut by 40%.",
+    "metrics": [
+      { "label": "IoT Integration", "value": "50K+", "percentage": 100 },
+      { "label": "Traffic Reduction", "value": "22%", "percentage": 22 },
+      { "label": "Energy Efficiency", "value": "+30%", "percentage": 30 },
+      { "label": "Response Time", "value": "40%↓", "percentage": 40 }
+    ]
+  },
+  {
+    "number": "03",
+    "title": "Luxury Retail Omnichannel Platform",
+    "description": "Unified commerce platform for a global luxury retail group, connecting 300+ boutiques with digital channels for seamless customer experiences.",
+    "client": "Luxury Retail Conglomerate",
+    "duration": "24 months",
+    "sector": "Retail & Consumer",
+    "image": "/assets/images/case-study-3.png",
+    "imageAlt": "Retail flagship",
+    "isDark": true,
+    "challenge": "Disconnected retail channels with separate inventory systems, inconsistent customer data, and no unified view of the customer journey across physical boutiques and digital touchpoints.",
+    "approach": "Built a composable commerce platform with real-time inventory sync, unified CDP, AI-powered clienteling tools, and immersive digital experiences that mirror the in-boutique luxury feel.",
+    "outcome": "Digital revenue grew 180% in first year. Customer lifetime value increased 45%. In-store conversion improved 28% with clienteling tools. Inventory accuracy reached 99.7%.",
+    "metrics": [
+      { "label": "Digital Revenue", "value": "+180%", "percentage": 90 },
+      { "label": "Customer LTV", "value": "+45%", "percentage": 45 },
+      { "label": "Store Conversion", "value": "+28%", "percentage": 28 },
+      { "label": "Inventory Accuracy", "value": "99.7%", "percentage": 99 }
+    ]
+  },
+  {
+    "number": "04",
+    "title": "Healthcare AI & Analytics Platform",
+    "description": "AI-powered clinical decision support and operational analytics platform for a national healthcare network spanning 120+ hospitals and 50,000+ clinicians.",
+    "client": "National Healthcare Network",
+    "duration": "30 months",
+    "sector": "Healthcare",
+    "image": "/assets/images/case-study-4.png",
+    "imageAlt": "Healthcare facility",
+    "isDark": true,
+    "challenge": "Fragmented patient data across 120 hospitals, lack of predictive capabilities for patient outcomes, and operational inefficiencies costing $200M+ annually in waste.",
+    "approach": "Unified health data platform with FHIR-compliant architecture. AI models for clinical decision support, readmission prediction, and resource optimization. Real-time operational dashboards for hospital administrators.",
+    "outcome": "Unified 40M+ patient records. Readmission rates reduced by 18%. Clinical decision accuracy improved 32%. $85M annual savings from operational optimization.",
+    "metrics": [
+      { "label": "Patient Records", "value": "40M+", "percentage": 100 },
+      { "label": "Readmission Rate", "value": "18%↓", "percentage": 18 },
+      { "label": "Clinical Accuracy", "value": "+32%", "percentage": 32 },
+      { "label": "Annual Savings", "value": "$85M", "percentage": 85 }
+    ]
+  }
+]

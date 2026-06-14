@@ -1,0 +1,142 @@
+[
+  {
+    "number": "01",
+    "title": "Digital Transformation",
+    "description": "End-to-end enterprise digitalization that reimagines business models, customer experiences, and operational processes.",
+    "isDark": true,
+    "steps": [
+      {
+        "label": "Challenge",
+        "text": "Legacy systems and fragmented digital landscapes preventing organizational agility and customer-centric innovation."
+      },
+      {
+        "label": "Solution",
+        "text": "Holistic digital strategy combining cloud migration, platform modernization, and experience redesign."
+      },
+      {
+        "label": "Method",
+        "text": "Agile delivery with design thinking, continuous integration, and iterative value release across workstreams."
+      },
+      {
+        "label": "Result",
+        "text": "40% average reduction in time-to-market. 3× improvement in digital customer engagement."
+      },
+      {
+        "label": "Differentiator",
+        "text": "Proprietary MERIDIAN Digital Maturity Framework™ with 200+ enterprise benchmarks."
+      }
+    ]
+  },
+  {
+    "number": "02",
+    "title": "Data & Artificial Intelligence",
+    "description": "Transforming raw data into strategic assets through advanced analytics, machine learning, and intelligent automation.",
+    "isDark": false,
+    "steps": [
+      {
+        "label": "Challenge",
+        "text": "Siloed data, lack of AI readiness, and inability to derive actionable insights from growing data volumes."
+      },
+      {
+        "label": "Solution",
+        "text": "Unified data platform strategy with embedded AI/ML capabilities across business functions."
+      },
+      {
+        "label": "Method",
+        "text": "DataOps + MLOps pipeline with governance-first architecture and responsible AI principles."
+      },
+      {
+        "label": "Result",
+        "text": "60% faster decision-making. $50M+ average annual value generated from data monetization."
+      },
+      {
+        "label": "Differentiator",
+        "text": "MERIDIAN Cortex™ — our proprietary AI-readiness assessment and deployment accelerator."
+      }
+    ]
+  },
+  {
+    "number": "03",
+    "title": "Cloud & Infrastructure",
+    "description": "Architecting resilient, scalable cloud environments that power enterprise agility and operational excellence.",
+    "isDark": true,
+    "steps": [
+      {
+        "label": "Challenge",
+        "text": "Aging on-premise infrastructure creating cost, scalability, and security vulnerabilities as business demands grow."
+      },
+      {
+        "label": "Solution",
+        "text": "Multi-cloud architecture strategy with automated infrastructure management and embedded security controls."
+      },
+      {
+        "label": "Method",
+        "text": "Infrastructure-as-Code deployment with zero-downtime migration playbooks and continuous compliance monitoring."
+      },
+      {
+        "label": "Result",
+        "text": "35% average infrastructure cost reduction. 99.99% platform uptime achieved across client deployments."
+      },
+      {
+        "label": "Differentiator",
+        "text": "MERIDIAN CloudPath™ framework — proven across 120+ enterprise cloud migrations globally."
+      }
+    ]
+  },
+  {
+    "number": "04",
+    "title": "Cybersecurity & Risk",
+    "description": "Building cyber-resilient enterprises through comprehensive security strategy, architecture, and managed defense.",
+    "isDark": false,
+    "steps": [
+      {
+        "label": "Challenge",
+        "text": "Escalating threat landscape and compliance complexity exposing organizations to critical operational and reputational risk."
+      },
+      {
+        "label": "Solution",
+        "text": "Zero-trust security architecture with AI-powered threat detection and enterprise-wide resilience programs."
+      },
+      {
+        "label": "Method",
+        "text": "Risk-based security maturity assessment, prioritized remediation roadmap, and continuous managed detection and response."
+      },
+      {
+        "label": "Result",
+        "text": "90% reduction in mean time to detection. Full regulatory compliance achieved within 6 months."
+      },
+      {
+        "label": "Differentiator",
+        "text": "MERIDIAN Shield™ — integrated SOC-as-a-Service with AI-augmented threat intelligence."
+      }
+    ]
+  },
+  {
+    "number": "05",
+    "title": "Organizational Transformation",
+    "description": "Reshaping organizations for agility, efficiency, and sustained performance through people, process, and culture.",
+    "isDark": true,
+    "steps": [
+      {
+        "label": "Challenge",
+        "text": "Organizational structures and cultures misaligned with digital-era demands, limiting speed and innovation capacity."
+      },
+      {
+        "label": "Solution",
+        "text": "Comprehensive transformation program addressing operating model design, talent development, and culture change."
+      },
+      {
+        "label": "Method",
+        "text": "Evidence-based diagnostic, co-designed target state, and phased capability-building with embedded change management."
+      },
+      {
+        "label": "Result",
+        "text": "45% improvement in employee engagement. 30% reduction in time-to-decision across leadership layers."
+      },
+      {
+        "label": "Differentiator",
+        "text": "MERIDIAN Org Intelligence™ — proprietary diagnostic benchmarked across 200+ organizational transformations."
+      }
+    ]
+  }
+]

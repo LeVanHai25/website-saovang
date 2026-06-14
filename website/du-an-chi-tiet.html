@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#8B0000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Chi Tiết Dự Án | SAO VÀNG</title>
+  <meta name="description" id="pageDesc" content="Chi tiết dự án cơ khí cao cấp của Sao Vàng." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+  /* ══ PROJECT DETAIL ══════════════════════════════════════════ */
+  .proj-detail-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: start;
+  }
+  /* Main gallery */
+  .proj-gallery { display: flex; flex-direction: column; gap: clamp(8px, 2vw, 14px); }
+  .proj-main-img { border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 16/9; }
+  .proj-main-img img { width: 100%; height: 100%; object-fit: cover; }
+  .proj-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(6px, 1.5vw, 12px);
+  }
+  .proj-thumb { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; cursor: pointer; opacity: .7; transition: opacity .2s; }
+  .proj-thumb:hover, .proj-thumb.active { opacity: 1; }
+  .proj-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* Sidebar info */
+  .proj-info-box {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md); padding: clamp(20px, 4vw, 32px);
+    box-shadow: 0 4px 24px rgba(0,0,0,.06);
+  }
+  .proj-info-box h3 { font-family: var(--ff-head); font-size: clamp(16px, 2vw, 20px); font-weight: 800; color: var(--dark); margin-bottom: var(--sp-5); line-height: 1.3; }
+  .proj-meta-list { display: flex; flex-direction: column; gap: 0; }
+  .proj-meta-row { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--sp-3); padding: var(--sp-3) 0; border-bottom: 1px solid var(--gray-100); font-size: var(--fs-sm); }
+  .proj-meta-row:last-child { border-bottom: none; }
+  .proj-meta-row .lbl { color: var(--gray-500); font-weight: 400; flex-shrink: 0; }
+  .proj-meta-row .val { color: var(--dark); font-weight: 600; text-align: right; }
+  .proj-cta { margin-top: var(--sp-5); display: flex; flex-direction: column; gap: var(--sp-3); }
+  .proj-cta .btn { justify-content: center; }
+
+  /* Description */
+  .proj-desc { font-size: var(--fs-body-lg); font-weight: 300; color: var(--gray-500); line-height: 1.85; margin-bottom: var(--sp-5); }
+  .proj-section-title { font-family: var(--ff-head); font-size: var(--fs-h3); font-weight: 800; color: var(--dark); margin-bottom: var(--sp-4); }
+
+  /* Related projects */
+  .related-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(12px, 3vw, 20px);
+  }
+
+  /* ══ RESPONSIVE ══════════════════════════════════════════════ */
+  @media (min-width: 640px)  { .related-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .proj-detail-layout { grid-template-columns: 1fr 360px; } }
+  @media (min-width: 1280px) { .proj-detail-layout { grid-template-columns: 1fr 400px; } }
+
+  /* ── prefers-reduced-motion ─────────────────────────────── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+    [data-reveal] { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+  <meta property="og:title" content="Chi Tiết Dự Án | SAO VÀNG" />
+  <meta property="og:description" content="Xem chi tiết dự án cơ khí cao cấp của Sao Vàng — hình ảnh, thông số kỹ thuật và giá trị công trình." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://saovang.vn/assets/images/hero-interior.png" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://saovang.vn/du-an-chi-tiet.html" />
+</head>
+<body>
+<header class="header" id="header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Sao Vàng — Trang chủ">
+      <span class="logo-badge" aria-hidden="true">SV</span>
+      <span class="logo-name">SAO VÀNG</span>
+    </a>
+    <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
+      <a href="index.html" class="nav-item">TRANG CHỦ</a>
+      <a href="gioi-thieu.html" class="nav-item">GIỚI THIỆU</a>
+      <a href="linh-vuc-hoat-dong.html" class="nav-item">LĨNH VỰC</a>
+      <a href="du-an.html" class="nav-item active" aria-current="page">DỰ ÁN</a>
+      <a href="san-pham.html" class="nav-item">SẢN PHẨM</a>
+      <a href="tin-tuc.html" class="nav-item">TIN TỨC</a>
+      <a href="lien-he.html" class="nav-item">LIÊN HỆ</a>
+      <a href="bao-gia.html" class="nav-item" style="color:var(--gold);font-weight:700">BÁO GIÁ</a>
+      <a href="san-pham.html" class="nav-item premium">+ CAO CẤP</a>
+    </nav>
+    <a href="tel:0937729909" class="header-phone" aria-label="Gọi hotline 093 7729 909">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      093 7729 909
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<!-- HERO -->
+<div class="detail-hero" id="detailHero">
+  <img id="detailHeroImg" src="assets/images/project-villa.png" alt="" />
+  <div class="detail-hero-overlay"></div>
+  <div class="detail-hero-content">
+    <div class="container">
+      <nav class="breadcrumb" style="margin-bottom:12px">
+        <a href="index.html" style="color:rgba(255,255,255,.7)">Trang chủ</a>
+        <span class="sep"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+        <a href="du-an.html" style="color:rgba(255,255,255,.7)">Dự án</a>
+        <span class="sep"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+        <span class="current" style="color:#fff" id="breadcrumbTitle">...</span>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- LOADING STATE -->
+<div id="loadingState" class="container" style="padding:60px 0;text-align:center">
+  <div style="width:40px;height:40px;border:3px solid var(--gray-200);border-top-color:var(--red);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 16px"></div>
+  <p style="color:var(--gray-400)">Đang tải dự án...</p>
+</div>
+
+<!-- DETAIL CONTENT -->
+<div id="detailContent" class="container" style="display:none">
+  <div class="detail-layout">
+    <!-- Main -->
+    <div class="detail-main">
+      <div class="detail-cat" id="detailCat"></div>
+      <h1 class="detail-title" id="detailTitle"></h1>
+      <div class="detail-excerpt" id="detailExcerpt"></div>
+
+      <div id="detailBody" class="detail-body"></div>
+
+      <!-- Gallery -->
+      <div id="gallerySection" style="display:none">
+        <h2 class="detail-section-title">Hình Ảnh Dự Án</h2>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+
+      <!-- Challenge / Solution / Result -->
+      <div id="csr"></div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="detail-sidebar">
+      <div class="meta-card">
+        <div class="meta-card-header">
+          <h3>Thông Tin Dự Án</h3>
+        </div>
+        <div class="meta-card-body" id="metaBody">
+          <!-- Filled dynamically -->
+        </div>
+        <div class="meta-cta">
+          <a href="lien-he.html" class="btn btn-gold" style="width:100%;justify-content:center;display:flex">Yêu Cầu Báo Giá</a>
+          <a href="du-an.html" style="display:block;text-align:center;margin-top:10px;font-size:13px;color:var(--gray-400)">← Xem tất cả dự án</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ERROR STATE -->
+<div id="errorState" class="container" style="display:none;padding:80px 0;text-align:center">
+  <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#ccc" stroke-width="1.5" style="margin-bottom:16px"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+  <h2 style="color:var(--gray-600);margin-bottom:8px">Không tìm thấy dự án</h2>
+  <p style="color:var(--gray-400);margin-bottom:24px">Dự án này không tồn tại hoặc đã bị xóa</p>
+  <a href="du-an.html" class="btn btn-gold">← Quay lại danh sách</a>
+</div>
+
+<!-- RELATED PROJECTS -->
+<div id="relatedSection" style="display:none;background:var(--gray-50);padding:60px 0">
+  <div class="container">
+    <h2 class="section-title" style="margin-bottom:6px">Dự Án <span style="color:var(--red)">Liên Quan</span></h2>
+    <p style="color:var(--gray-400);margin-bottom:24px;font-size:14px">Các công trình cùng danh mục</p>
+    <div class="related-grid" id="relatedGrid"></div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section style="padding:72px 0;text-align:center;background:var(--white)">
+  <div class="container">
+    <span class="tag">Bắt Đầu</span>
+    <h2 class="section-title" style="margin-bottom:12px">Có Dự Án Cần Thi Công?</h2>
+    <p style="font-size:15px;color:var(--gray-500);margin-bottom:32px">Liên hệ ngay để được tư vấn và nhận báo giá miễn phí</p>
+    <a href="lien-he.html" class="btn btn-gold">Yêu Cầu Báo Giá Ngay</a>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><div class="logo" style="margin-bottom:18px"><span class="logo-badge" id="footerLogoBadge">SV</span><span class="logo-name">SAO VÀNG</span></div><p>Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng.</p></div>
+  <div class="footer-col"><h4>Dự Án</h4><ul><li><a href="du-an.html">Tất cả dự án</a></li></ul></div>
+  <div class="footer-col"><h4>Công Ty</h4><ul><li><a href="gioi-thieu.html">Giới thiệu</a></li><li><a href="san-pham.html">Sản phẩm</a></li><li><a href="lien-he.html">Liên hệ</a></li></ul></div>
+  <div class="footer-col"><h4>Liên Hệ</h4><div class="footer-contact-item"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg><span><strong>Hotline</strong><a href="tel:0937729909">093 7729 909</a></span></div></div>
+</div><div class="footer-bottom"><span>© 2026 Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng.</span></div></div></footer>
+
+<div class="floats">
+  <a href="https://zalo.me/0937729909" class="float-btn float-chat" aria-label="Chat Zalo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
+  <a href="tel:0937729909" class="float-btn float-phone"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></a>
+</div>
+
+<div id="lightbox" class="lightbox" style="display:none" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<script src="assets/js/cms-client.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+async function initDetailPage() {
+  const settings = await CMS.getSettings();
+  if (settings.logo_badge) { document.getElementById('logoBadge').textContent = settings.logo_badge; document.getElementById('footerLogoBadge').textContent = settings.logo_badge; }
+  if (settings.company_short) document.getElementById('logoName').textContent = settings.company_short;
+
+  const slug = CMS.getSlugFromUrl();
+  if (!slug) { showError(); return; }
+
+  const result = await CMS.getProject(slug);
+  if (!result || !result.project) { showError(); return; }
+
+  renderDetail(result);
+}
+
+function showError() {
+  document.getElementById('loadingState').style.display = 'none';
+  document.getElementById('errorState').style.display = 'block';
+}
+
+function renderDetail({ project: p, blocks, gallery, related }) {
+  document.getElementById('loadingState').style.display = 'none';
+  document.getElementById('detailContent').style.display = 'block';
+
+  // SEO
+  document.getElementById('pageTitle').textContent = `${p.title} | SAO VÀNG`;
+  document.getElementById('pageDesc').setAttribute('content', p.seo_desc || p.excerpt || '');
+  document.getElementById('breadcrumbTitle').textContent = p.title;
+
+  // Hero image
+  if (p.thumbnail) document.getElementById('detailHeroImg').src = CMS.imgUrl(p.thumbnail);
+
+  // Category
+  document.getElementById('detailCat').innerHTML = `
+    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+    ${CMS.esc(p.category || '')}`;
+
+  document.getElementById('detailTitle').textContent = p.title;
+  document.getElementById('detailExcerpt').textContent = p.excerpt || '';
+
+  // Meta sidebar
+  const metaRows = [
+    { label: 'Chủ đầu tư',  val: p.client,         cls: '' },
+    { label: 'Giá trị',     val: p.project_value,  cls: 'gold' },
+    { label: 'Địa điểm',   val: p.location,        cls: '' },
+    { label: 'Năm thực hiện',val: p.year,           cls: '' },
+    { label: 'Diện tích',  val: p.area,            cls: '' },
+    { label: 'Thời gian',  val: p.duration,        cls: '' },
+    { label: 'Danh mục',   val: p.category,        cls: '' },
+  ].filter(r => r.val);
+
+  document.getElementById('metaBody').innerHTML = metaRows.map(r => `
+    <div class="meta-row">
+      <span class="meta-row-label">${r.label}</span>
+      <span class="meta-row-val ${r.cls}">${CMS.esc(r.val)}</span>
+    </div>`).join('');
+
+  // Body blocks
+  const bodyEl = document.getElementById('detailBody');
+  if (blocks && blocks.length) {
+    bodyEl.innerHTML = blocks.map(b => renderBlock(b)).join('');
+  } else if (p.excerpt) {
+    bodyEl.innerHTML = `<p>${CMS.esc(p.excerpt)}</p>`;
+  }
+
+  // Challenge / Solution / Result
+  if (p.challenge || p.solution || p.result) {
+    const csrEl = document.getElementById('csr');
+    csrEl.innerHTML = [
+      p.challenge ? `<h2 class="detail-section-title">Thách Thức</h2><div class="detail-body">${CMS.esc(p.challenge)}</div>` : '',
+      p.solution  ? `<h2 class="detail-section-title">Giải Pháp</h2><div class="detail-body">${CMS.esc(p.solution)}</div>`  : '',
+      p.result    ? `<h2 class="detail-section-title">Kết Quả</h2><div class="detail-body">${CMS.esc(p.result)}</div>`     : '',
+    ].join('');
+  }
+
+  // Gallery
+  if (gallery && gallery.length) {
+    document.getElementById('gallerySection').style.display = 'block';
+    document.getElementById('galleryGrid').innerHTML = gallery.map(img => `
+      <div class="gallery-item" onclick="openLightbox('${CMS.imgUrl(img)}')">
+        <img src="${CMS.imgUrl(img)}" alt="${CMS.esc(p.title)}" loading="lazy" />
+      </div>`).join('');
+  }
+
+  // Related projects
+  if (related && related.length) {
+    document.getElementById('relatedSection').style.display = 'block';
+    document.getElementById('relatedGrid').innerHTML = related.map(r => `
+      <a href="du-an-chi-tiet.html?slug=${r.slug || r.id}" class="related-card">
+        <img src="${CMS.imgUrl(r.thumbnail) || 'assets/images/project-villa.png'}" alt="${CMS.esc(r.title)}" loading="lazy" onerror="this.src='assets/images/project-villa.png'" />
+        <div class="related-card-body">
+          <div class="related-card-cat">${CMS.esc(r.category || '')}</div>
+          <div class="related-card-title">${CMS.esc(r.title)}</div>
+        </div>
+      </a>`).join('');
+  }
+}
+
+function renderBlock(block) {
+  let data = {};
+  try { data = typeof block.data === 'string' ? JSON.parse(block.data) : block.data; } catch {}
+  switch (block.type) {
+    case 'text':    return `<div class="detail-body" style="margin-bottom:20px">${data.content || data.html || ''}</div>`;
+    case 'image':   return `<figure style="margin:24px 0"><img src="${CMS.imgUrl(data.url||data.src||'')}" alt="${CMS.esc(data.alt||data.caption||'')}" style="width:100%;border-radius:6px" />${data.caption?`<figcaption style="font-size:13px;color:var(--gray-400);text-align:center;margin-top:8px">${CMS.esc(data.caption)}</figcaption>`:''}</figure>`;
+    case 'quote':   return `<blockquote style="border-left:4px solid var(--gold);padding:16px 20px;margin:24px 0;background:var(--gray-50);border-radius:0 6px 6px 0"><p style="font-size:17px;font-style:italic;color:var(--dark);margin:0">${CMS.esc(data.text||data.quote||'')}</p>${data.author?`<cite style="font-size:13px;color:var(--gray-400);margin-top:8px;display:block">— ${CMS.esc(data.author)}</cite>`:''}</blockquote>`;
+    default:        return '';
+  }
+}
+
+function openLightbox(url) {
+  document.getElementById('lightboxImg').src = url;
+  document.getElementById('lightbox').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+}
+window.openLightbox = openLightbox;
+window.closeLightbox = closeLightbox;
+
+document.addEventListener('DOMContentLoaded', initDetailPage);
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+<!-- STICKY MOBILE CTA BAR -->
+<div class="sticky-cta-bar" id="stickyCtaBar" role="complementary" aria-label="Liên hệ nhanh">
+  <a href="tel:0937729909" class="btn btn-gold btn-sm">
+    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    Gọi Ngay
+  </a>
+  <a href="https://zalo.me/0937729909" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
+  <a href="bao-gia.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
+</div>
+</body>
+</html>

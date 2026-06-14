@@ -1,0 +1,60 @@
+{
+  "name": "MERIDIAN",
+  "groupSuffix": "GROUP",
+  "fullName": "MERIDIAN Group",
+  "tagline": "Shaping Tomorrow's Enterprises Through Strategic Innovation & Technology Excellence",
+  "shortTagline": "Shaping Tomorrow's Enterprises",
+  "description": "MERIDIAN Group is a global strategy and technology consultancy that partners with industry-leading organizations to navigate complexity, accelerate growth, and build resilient enterprises.",
+  "longDescription": "Founded in 2009, we have grown from a boutique advisory firm into a multi-disciplinary consultancy spanning four continents. Our integrated approach combines deep industry expertise with cutting-edge technology to deliver measurable impact at scale.",
+  "clientTypes": "We serve Fortune 500 enterprises, sovereign wealth funds, and high-growth organizations across technology, financial services, healthcare, energy, and infrastructure sectors.",
+  "type": "Global Strategy & Technology Consultancy",
+  "founded": "2009",
+  "headquarters": "Singapore",
+  "revenue": "$420M (FY2025)",
+  "website": "www.meridian.group",
+  "email": "hello@meridian.group",
+  "phone": "+65 6800 1200",
+  "copyright": "© 2026 MERIDIAN Group. All rights reserved.",
+  "confidentiality": "Confidential — For intended recipients only.",
+  "documentTitle": "MERIDIAN — Company Profile 2026",
+  "profileYear": "2026",
+  "sectors": [
+    "Technology",
+    "Finance",
+    "Healthcare",
+    "Energy",
+    "Infrastructure"
+  ],
+  "offices": [
+    {
+      "city": "Singapore",
+      "label": "Singapore — HQ",
+      "address": "One Raffles Quay, Level 42",
+      "postcode": "Singapore 048583"
+    },
+    {
+      "city": "London",
+      "label": "London",
+      "address": "22 Bishopsgate, Level 35",
+      "postcode": "London EC2N 4BQ"
+    },
+    {
+      "city": "New York",
+      "label": "New York",
+      "address": "One World Trade Center, Floor 64",
+      "postcode": "New York, NY 10007"
+    },
+    {
+      "city": "Dubai",
+      "label": "Dubai",
+      "address": "DIFC Gate Village, Building 3",
+      "postcode": "Dubai, UAE"
+    },
+    {
+      "city": "Sydney",
+      "label": "Sydney",
+      "address": "Governor Phillip Tower, Level 40",
+      "postcode": "Sydney NSW 2000"
+    }
+  ]
+}

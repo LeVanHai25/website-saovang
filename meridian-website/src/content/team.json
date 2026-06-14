@@ -1,0 +1,34 @@
+{
+  "executives": [
+    {
+      "name": "Alexander Chen",
+      "title": "Chief Executive Officer",
+      "experience": "25 years · McKinsey alumnus",
+      "tier": "ceo"
+    },
+    {
+      "name": "Sarah Mitchell",
+      "title": "Chief Strategy Officer",
+      "experience": "20 years · BCG alumna",
+      "tier": "csuite"
+    },
+    {
+      "name": "Rajesh Patel",
+      "title": "Chief Technology Officer",
+      "experience": "18 years · Google alumnus",
+      "tier": "csuite"
+    },
+    {
+      "name": "Emma Lindström",
+      "title": "Chief Operating Officer",
+      "experience": "22 years · Accenture alumna",
+      "tier": "csuite"
+    },
+    {
+      "name": "David Nakamura",
+      "title": "Chief Financial Officer",
+      "experience": "19 years · Goldman Sachs",
+      "tier": "csuite"
+    }
+  ]
+}

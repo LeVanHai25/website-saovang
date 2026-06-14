@@ -1,0 +1,17 @@
+{
+  "vision": {
+    "title": "To be the most trusted partner in enterprise transformation globally.",
+    "description": "We envision a world where every organization has the strategic clarity and technological capability to thrive in an era of continuous change."
+  },
+  "mission": {
+    "title": "Empowering organizations to build resilient, future-ready enterprises.",
+    "description": "We combine world-class strategy with deep technology expertise to help our clients navigate complexity, unlock growth, and create enduring value for all stakeholders."
+  },
+  "values": [
+    { "name": "Excellence", "description": "Uncompromising quality in every engagement" },
+    { "name": "Integrity", "description": "Transparent, honest, and principled counsel" },
+    { "name": "Impact", "description": "Measurable outcomes that matter" },
+    { "name": "Collaboration", "description": "Partnership over transaction" },
+    { "name": "Innovation", "description": "Forward-thinking solutions" }
+  ]
+}

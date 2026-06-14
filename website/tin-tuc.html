@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#8B0000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tin Tức & Kiến Thức Cơ Khí | SAO VÀNG</title>
+  <meta name="description" content="Tin tức mới nhất về thiết kế cơ khí, vật liệu inox, du thuyền và công trình cao cấp từ Sao Vàng." />
+  <link rel="preload" as="image" href="assets/images/hero-interior.png" />
+    <meta property="og:title" content="Tin Tức & Kiến Thức | SAO VÀNG" />
+  <meta property="og:description" content="Tin tức, kiến thức kỹ thuật và xu hướng thiết kế cơ khí cao cấp từ đội ngũ chuyên gia Sao Vàng." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://saovang.vn/tin-tuc.html" />
+  <meta property="og:image" content="https://saovang.vn/assets/images/hero-interior.png" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+  /* ══ NEWS LAYOUT ════════════════════════════════════════════ */
+  .news-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(24px, 4vw, 48px);
+    align-items: start;
+  }
+
+  /* Article cards */
+  .article-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 3vw, 24px);
+  }
+  .article-card {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md); overflow: hidden;
+    transition: all .25s var(--ease); cursor: pointer;
+  }
+  .article-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,.09); transform: translateY(-3px); border-color: transparent; }
+  .article-thumb { aspect-ratio: 16/9; overflow: hidden; background: var(--gray-100); }
+  .article-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+  .article-card:hover .article-thumb img { transform: scale(1.05); }
+  .article-body { padding: clamp(14px, 3vw, 24px); }
+  .article-meta { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-3); flex-wrap: wrap; }
+  .article-cat { font-family: var(--ff-head); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-a11y); }
+  .article-date { font-size: var(--fs-xs); color: var(--gray-400); }
+  .article-read { font-size: var(--fs-xs); color: var(--gray-400); }
+  .article-title { font-family: var(--ff-head); font-size: clamp(14px, 1.8vw, 18px); font-weight: 700; color: var(--dark); line-height: 1.4; margin-bottom: var(--sp-2); }
+  .article-excerpt { font-size: var(--fs-body); color: var(--gray-500); line-height: 1.7; font-weight: 300; margin-bottom: var(--sp-3); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .article-link { font-family: var(--ff-head); font-size: 11px; font-weight: 700; color: var(--gold-a11y); display: inline-flex; align-items: center; gap: 4px; transition: gap .2s; }
+  .article-card:hover .article-link { gap: 8px; }
+
+  /* Featured article (first) */
+  .article-card.featured .article-thumb { aspect-ratio: 21/9; }
+  .article-card.featured .article-title { font-size: clamp(16px, 2.5vw, 24px); }
+
+  /* Sidebar */
+  .news-sidebar { display: flex; flex-direction: column; gap: clamp(20px, 3vw, 32px); }
+  .sidebar-widget { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-md); padding: clamp(16px, 3vw, 24px); }
+  .sidebar-title { font-family: var(--ff-head); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--dark); margin-bottom: var(--sp-4); padding-bottom: var(--sp-3); border-bottom: 2px solid var(--gold); display: inline-block; }
+  .sidebar-article { display: flex; gap: var(--sp-3); padding: var(--sp-3) 0; border-bottom: 1px solid var(--gray-100); }
+  .sidebar-article:last-child { border-bottom: none; padding-bottom: 0; }
+  .sidebar-thumb { width: 72px; height: 56px; min-width: 72px; border-radius: var(--radius); overflow: hidden; background: var(--gray-100); }
+  .sidebar-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .sidebar-article h4 { font-family: var(--ff-head); font-size: 12px; font-weight: 700; color: var(--dark); line-height: 1.4; margin-bottom: 4px; }
+  .sidebar-article span { font-size: 11px; color: var(--gray-400); }
+  .category-list { display: flex; flex-direction: column; gap: var(--sp-2); }
+  .cat-item { display: flex; align-items: center; justify-content: space-between; padding: var(--sp-2) 0; border-bottom: 1px solid var(--gray-100); font-size: var(--fs-sm); color: var(--gray-600); transition: color .2s; cursor: pointer; }
+  .cat-item:hover { color: var(--gold-a11y); }
+  .cat-count { font-family: var(--ff-head); font-size: 11px; font-weight: 700; background: var(--gray-100); color: var(--gray-500); padding: 2px 8px; border-radius: 20px; }
+
+  /* Pagination */
+  .pagination { display: flex; align-items: center; justify-content: center; gap: var(--sp-2); margin-top: var(--sp-7); flex-wrap: wrap; }
+  .page-btn { width: 40px; height: 40px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-family: var(--ff-head); font-size: 13px; font-weight: 700; border: 1.5px solid var(--gray-200); color: var(--gray-500); transition: all .2s; cursor: pointer; }
+  .page-btn:hover { border-color: var(--gold); color: var(--gold-a11y); }
+  .page-btn.active { background: var(--gold); color: var(--white); border-color: var(--gold); }
+
+  /* ══ RESPONSIVE ══════════════════════════════════════════════ */
+  @media (min-width: 640px)  { .article-grid { grid-template-columns: 1fr 1fr; } .article-card.featured { grid-column: span 2; } }
+  @media (min-width: 1024px) { .news-layout { grid-template-columns: 1fr 320px; } .article-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1280px) { .news-layout { grid-template-columns: 1fr 340px; } }
+
+  /* ── prefers-reduced-motion ─────────────────────────────── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+    [data-reveal] { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+  <link rel="canonical" href="https://saovang.vn/tin-tuc.html" />
+</head>
+<body>
+<header class="header" id="header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Sao Vàng — Trang chủ">
+      <span class="logo-badge" aria-hidden="true">SV</span>
+      <span class="logo-name">SAO VÀNG</span>
+    </a>
+    <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
+      <a href="index.html" class="nav-item">TRANG CHỦ</a>
+      <a href="gioi-thieu.html" class="nav-item">GIỚI THIỆU</a>
+      <a href="linh-vuc-hoat-dong.html" class="nav-item">LĨNH VỰC</a>
+      <a href="du-an.html" class="nav-item">DỰ ÁN</a>
+      <a href="san-pham.html" class="nav-item">SẢN PHẨM</a>
+      <a href="tin-tuc.html" class="nav-item active" aria-current="page">TIN TỨC</a>
+      <a href="lien-he.html" class="nav-item">LIÊN HỆ</a>
+      <a href="bao-gia.html" class="nav-item" style="color:var(--gold);font-weight:700">BÁO GIÁ</a>
+      <a href="san-pham.html" class="nav-item premium">+ CAO CẤP</a>
+    </nav>
+    <a href="tel:0937729909" class="header-phone" aria-label="Gọi hotline 093 7729 909">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      093 7729 909
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"><img src="assets/images/hero-interior.png" alt="Tin tức Sao Vàng" /><div class="page-hero-overlay"></div></div>
+  <div class="container page-hero-content">
+    <span class="tag">Tin Tức &amp; Kiến Thức</span>
+    <h1 class="page-hero-title">Blog Cơ Khí Sao Vàng</h1>
+    <p class="page-hero-sub">Xu hướng thiết kế · Kiến thức vật liệu · Tin tức công ty</p>
+    <nav class="breadcrumb"><a href="index.html">Trang chủ</a><span class="sep"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span><span class="current">Tin tức</span></nav>
+  </div>
+</section>
+
+<div class="filter-section">
+  <div class="container">
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">Tất cả</button>
+    </div>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:8px">
+      <label style="font-size:12px;color:var(--gray-500)">Sắp xếp:</label>
+      <select class="sort-select" id="sortSelect" onchange="onSortChange()" style="border:1.5px solid var(--gray-200);border-radius:4px;padding:6px 10px;font-size:12px;color:var(--dark);background:var(--white)">
+        <option value="desc">Mới nhất</option>
+        <option value="asc">Cũ nhất</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<section class="section" style="padding:48px 0 80px">
+  <div class="container">
+    <div class="blog-layout">
+      <!-- Main -->
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+          <p id="articleCount" style="font-size:13px;color:var(--gray-400)">Đang tải...</p>
+        </div>
+        <div class="blog-grid" id="blogGrid">
+          <div class="blog-skeleton"></div>
+          <div class="blog-skeleton"></div>
+          <div class="blog-skeleton"></div>
+          <div class="blog-skeleton"></div>
+        </div>
+        <div class="pagination" id="blogPagination"></div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="blog-sidebar">
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-header">Bài Viết Mới Nhất</div>
+          <div class="sidebar-widget-body" id="recentPosts"><p style="font-size:13px;color:var(--gray-400)">Đang tải...</p></div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-header">Danh Mục</div>
+          <div class="sidebar-widget-body" id="catWidget"><p style="font-size:13px;color:var(--gray-400)">Đang tải...</p></div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="sidebar-widget-header">Liên Hệ Tư Vấn</div>
+          <div class="sidebar-widget-body" style="text-align:center;padding:20px 16px">
+            <p style="font-size:13px;color:var(--gray-500);margin-bottom:14px">Kỹ sư sẵn sàng tư vấn miễn phí cho dự án của bạn</p>
+            <a href="lien-he.html" class="btn btn-gold" style="display:block;justify-content:center">Liên Hệ Ngay</a>
+            <a href="tel:0937729909" style="display:block;text-align:center;margin-top:8px;font-size:13px;color:var(--gray-400)">093 7729 909</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><div class="logo" style="margin-bottom:18px"><span class="logo-badge" id="footerBadge">SV</span><span class="logo-name" id="footerName">SAO VÀNG</span></div><p id="footerDesc">Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng</p></div>
+  <div class="footer-col"><h4>Tin Tức</h4><ul id="footerCats"><li><a href="tin-tuc.html">Tất cả bài viết</a></li></ul></div>
+  <div class="footer-col"><h4>Công Ty</h4><ul><li><a href="gioi-thieu.html">Giới thiệu</a></li><li><a href="du-an.html">Dự án</a></li><li><a href="san-pham.html">Sản phẩm</a></li><li><a href="lien-he.html">Liên hệ</a></li></ul></div>
+  <div class="footer-col"><h4>Liên Hệ</h4><div class="footer-contact-item"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.27h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.37a16 16 0 006.29 6.29l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span><strong>Hotline</strong><a href="tel:0937729909" id="footerPhone">093 7729 909</a></span></div></div>
+</div><div class="footer-bottom"><span id="footerCopy">© 2026 Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng.</span></div></div></footer>
+
+<div class="floats">
+  <a href="https://zalo.me/0937729909" class="float-btn float-chat" aria-label="Chat Zalo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
+  <a href="tel:0937729909" class="float-btn float-phone"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></a>
+</div>
+
+<script src="assets/js/cms-client.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+let _filter = 'all', _page = 1, _order = 'desc';
+
+async function initBlogPage() {
+  const [settings, cats] = await Promise.all([CMS.getSettings(), CMS.getCategories('article')]);
+  applyBranding(settings);
+  renderFilterBar(cats);
+  renderSidebarCats(cats);
+  await Promise.all([loadArticles(), loadRecentPosts()]);
+}
+
+function applyBranding(s) {
+  if (s.logo_badge)    ['logoBadge','footerBadge'].forEach(id => { const e=document.getElementById(id); if(e) e.textContent=s.logo_badge; });
+  if (s.company_short) ['logoName','footerName'].forEach(id => { const e=document.getElementById(id); if(e) e.textContent=s.company_short; });
+  if (s.company_full)  { const e=document.getElementById('footerDesc'); if(e) e.textContent=s.company_full; }
+  if (s.site_phone)    { const e=document.getElementById('footerPhone'); if(e) e.textContent=s.site_phone; }
+  if (s.company_full)  { const e=document.getElementById('footerCopy'); if(e) e.textContent=`© ${new Date().getFullYear()} ${s.company_full}.`; }
+}
+
+function renderFilterBar(cats) {
+  const bar = document.getElementById('filterBar');
+  bar.innerHTML = `<button class="filter-btn active" data-filter="all">Tất cả</button>` +
+    cats.map(c=>`<button class="filter-btn" data-filter="${c.slug}">${CMS.esc(c.name)}</button>`).join('');
+  bar.querySelectorAll('.filter-btn').forEach(btn => btn.addEventListener('click', async () => {
+    bar.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    _filter = btn.dataset.filter; _page = 1;
+    await loadArticles();
+  }));
+}
+
+function renderSidebarCats(cats) {
+  const el = document.getElementById('catWidget');
+  if (!cats.length) { el.innerHTML='<p style="font-size:13px;color:var(--gray-400)">Chưa có danh mục</p>'; return; }
+  el.innerHTML = cats.map(c=>`<a href="tin-tuc.html?cat=${c.slug}" class="sidebar-tag">${CMS.esc(c.name)}</a>`).join('');
+  const footer = document.getElementById('footerCats');
+  if (footer) footer.innerHTML = '<li><a href="tin-tuc.html">Tất cả bài viết</a></li>' +
+    cats.map(c=>`<li><a href="tin-tuc.html?cat=${c.slug}">${CMS.esc(c.name)}</a></li>`).join('');
+}
+
+async function loadArticles() {
+  const grid = document.getElementById('blogGrid');
+  grid.innerHTML = Array(4).fill('<div class="blog-skeleton"></div>').join('');
+  const cat = _filter === 'all' ? '' : _filter;
+  const { data, total, pages } = await CMS.getArticles({ category: cat, page: _page, limit: 8 });
+  document.getElementById('articleCount').textContent = `Hiển thị ${data.length} trong ${total} bài viết`;
+  if (!data.length) {
+    grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:48px;color:var(--gray-400)"><svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="#ccc" stroke-width="1.5" style="margin-bottom:12px"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg><h3 style="margin-bottom:8px;color:var(--gray-500)">Chưa có bài viết nào</h3></div>`;
+    document.getElementById('blogPagination').innerHTML = ''; return;
+  }
+  grid.innerHTML = data.map((a,i) => blogCardHTML(a, i===0 && _page===1 && _filter==='all')).join('');
+  renderPagination(pages);
+}
+
+function blogCardHTML(a, featured) {
+  const img  = a.thumbnail ? CMS.imgUrl(a.thumbnail) : 'assets/images/hero-interior.png';
+  const date = CMS.formatDate(a.published_at);
+  const cls  = featured ? 'blog-card blog-card-featured' : 'blog-card';
+  return `<a href="tin-tuc-chi-tiet.html?slug=${a.slug||a.id}" class="${cls}" data-reveal>
+    <div class="blog-card-img">
+      <img src="${CMS.esc(img)}" alt="${CMS.esc(a.title)}" loading="lazy" onerror="this.src='assets/images/hero-interior.png'" />
+      <span class="badge badge-gold blog-card-cat">${CMS.esc(a.category||'Bài viết')}</span>
+    </div>
+    <div class="blog-card-body">
+      <div class="blog-card-date">
+        <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        ${date}
+      </div>
+      <h2 class="blog-card-title">${CMS.esc(a.title)}</h2>
+      <p class="blog-card-excerpt">${CMS.esc((a.excerpt||'').slice(0,120))}${(a.excerpt||'').length>120?'...':''}</p>
+      <div class="blog-card-footer">
+        <span class="blog-card-more">Đọc tiếp <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></span>
+      </div>
+    </div>
+  </a>`;
+}
+
+async function loadRecentPosts() {
+  const { data } = await CMS.getArticles({ limit: 5 });
+  const el = document.getElementById('recentPosts');
+  if (!data.length) { el.innerHTML='<p style="font-size:13px;color:var(--gray-400)">Chưa có bài viết</p>'; return; }
+  el.innerHTML = data.map(a=>`
+    <a href="tin-tuc-chi-tiet.html?slug=${a.slug||a.id}" class="sidebar-post">
+      <div class="sidebar-post-img"><img src="${a.thumbnail?CMS.imgUrl(a.thumbnail):'assets/images/hero-interior.png'}" loading="lazy" onerror="this.src='assets/images/hero-interior.png'" / alt=""></div>
+      <div><div class="sidebar-post-title">${CMS.esc(a.title)}</div><div class="sidebar-post-date">${CMS.formatDate(a.published_at)}</div></div>
+    </a>`).join('');
+}
+
+function renderPagination(pages) {
+  const el = document.getElementById('blogPagination');
+  if (pages<=1) { el.innerHTML=''; return; }
+  el.innerHTML = Array.from({length:pages},(_,i)=>i+1).map(p=>
+    `<button class="page-btn ${p===_page?'active':''}" onclick="gotoPage(${p})">${p}</button>`
+  ).join('');
+}
+
+async function gotoPage(p) { _page=p; await loadArticles(); window.scrollTo({top:400,behavior:'smooth'}); }
+function onSortChange() { _order=document.getElementById('sortSelect').value; _page=1; loadArticles(); }
+window.gotoPage=gotoPage; window.onSortChange=onSortChange;
+
+// Check URL params
+const _urlParams = new URLSearchParams(window.location.search);
+const _catParam  = _urlParams.get('cat');
+if (_catParam) _filter = _catParam;
+
+document.addEventListener('DOMContentLoaded', initBlogPage);
+</script>
+
+<!-- STICKY MOBILE CTA BAR -->
+<div class="sticky-cta-bar" id="stickyCtaBar" role="complementary" aria-label="Liên hệ nhanh">
+  <a href="tel:0937729909" class="btn btn-gold btn-sm">
+    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    Gọi Ngay
+  </a>
+  <a href="https://zalo.me/0937729909" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
+  <a href="bao-gia.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
+</div>
+</body>
+</html>

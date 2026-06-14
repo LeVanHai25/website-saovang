@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#8B0000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Chi Tiết Sản Phẩm | SAO VÀNG</title>
+  <meta name="description" id="pageDesc" content="Vật tư & thiết bị cơ khí chất lượng cao từ Sao Vàng." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+  /* ══ PRODUCT DETAIL ══════════════════════════════════════════ */
+  .prod-detail-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: start;
+  }
+  /* Gallery */
+  .prod-gallery { display: flex; flex-direction: column; gap: clamp(8px, 2vw, 12px); }
+  .prod-main-img { border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 1/1; background: var(--gray-100); }
+  .prod-main-img img { width: 100%; height: 100%; object-fit: cover; }
+  .prod-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(6px, 1.5vw, 10px);
+  }
+  .prod-thumb { border-radius: var(--radius); overflow: hidden; aspect-ratio: 1/1; cursor: pointer; opacity: .65; transition: opacity .2s; border: 2px solid transparent; }
+  .prod-thumb:hover, .prod-thumb.active { opacity: 1; border-color: var(--gold); }
+  .prod-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* Info panel */
+  .prod-info-panel { display: flex; flex-direction: column; gap: var(--sp-5); }
+  .prod-detail-cat { font-family: var(--ff-head); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--gold-a11y); margin-bottom: var(--sp-2); }
+  .prod-detail-name { font-family: var(--ff-head); font-size: var(--fs-h2); font-weight: 900; color: var(--dark); line-height: 1.2; margin-bottom: var(--sp-3); }
+  .prod-detail-price { font-family: var(--ff-head); font-size: clamp(22px, 3vw, 32px); font-weight: 900; color: var(--red); margin-bottom: var(--sp-2); }
+  .prod-detail-price-note { font-size: var(--fs-sm); color: var(--gray-500); }
+  .prod-detail-desc { font-size: var(--fs-body-lg); color: var(--gray-500); line-height: 1.8; font-weight: 300; }
+
+  /* Specs table */
+  .specs-table { width: 100%; border-collapse: collapse; margin-top: var(--sp-4); }
+  .specs-table tr { border-bottom: 1px solid var(--gray-100); }
+  .specs-table tr:last-child { border-bottom: none; }
+  .specs-table td { padding: var(--sp-3) var(--sp-2); font-size: var(--fs-body); vertical-align: top; }
+  .specs-table td:first-child { color: var(--gray-500); font-weight: 400; width: 45%; }
+  .specs-table td:last-child { color: var(--dark); font-weight: 600; }
+
+  /* Action buttons */
+  .prod-actions { display: flex; flex-direction: column; gap: var(--sp-3); }
+  .prod-actions .btn { justify-content: center; }
+
+  /* Tab system */
+  .detail-tabs { display: flex; gap: 0; border-bottom: 2px solid var(--gray-200); margin-bottom: var(--sp-6); overflow-x: auto; }
+  .detail-tab { font-family: var(--ff-head); font-size: 12px; font-weight: 700; letter-spacing: .06em; color: var(--gray-500); padding: var(--sp-3) var(--sp-5); border-bottom: 2px solid transparent; margin-bottom: -2px; cursor: pointer; white-space: nowrap; transition: all .2s; }
+  .detail-tab.active { color: var(--dark); border-bottom-color: var(--red); }
+  .detail-tab:hover { color: var(--dark); }
+  .tab-content { display: none; }
+  .tab-content.active { display: block; }
+
+  /* Related */
+  .related-prod-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(10px, 2.5vw, 20px);
+  }
+
+  /* ══ RESPONSIVE ══════════════════════════════════════════════ */
+  @media (min-width: 480px)  { .prod-actions { flex-direction: row; } }
+  @media (min-width: 640px)  { .related-prod-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1024px) {
+    .prod-detail-layout { grid-template-columns: 1fr 1fr; }
+    .prod-main-img { aspect-ratio: 4/3; }
+  }
+  @media (min-width: 1280px) {
+    .prod-detail-layout { grid-template-columns: 1.1fr 1fr; }
+    .related-prod-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* ── prefers-reduced-motion ─────────────────────────────── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+    [data-reveal] { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+  <meta property="og:title" content="Chi Tiết Sản Phẩm | SAO VÀNG" />
+  <meta property="og:description" content="Thông tin chi tiết sản phẩm cơ khí cao cấp Sao Vàng — thông số, vật liệu, giá và hướng dẫn đặt hàng." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://saovang.vn/assets/images/hero-interior.png" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://saovang.vn/san-pham-chi-tiet.html" />
+</head>
+<body>
+<header class="header" id="header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Sao Vàng — Trang chủ">
+      <span class="logo-badge" aria-hidden="true">SV</span>
+      <span class="logo-name">SAO VÀNG</span>
+    </a>
+    <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
+      <a href="index.html" class="nav-item">TRANG CHỦ</a>
+      <a href="gioi-thieu.html" class="nav-item">GIỚI THIỆU</a>
+      <a href="linh-vuc-hoat-dong.html" class="nav-item">LĨNH VỰC</a>
+      <a href="du-an.html" class="nav-item">DỰ ÁN</a>
+      <a href="san-pham.html" class="nav-item active" aria-current="page">SẢN PHẨM</a>
+      <a href="tin-tuc.html" class="nav-item">TIN TỨC</a>
+      <a href="lien-he.html" class="nav-item">LIÊN HỆ</a>
+      <a href="bao-gia.html" class="nav-item" style="color:var(--gold);font-weight:700">BÁO GIÁ</a>
+      <a href="san-pham.html" class="nav-item premium">+ CAO CẤP</a>
+    </nav>
+    <a href="tel:0937729909" class="header-phone" aria-label="Gọi hotline 093 7729 909">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      093 7729 909
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<!-- LOADING -->
+<div id="loadingState" style="padding:120px 0;text-align:center">
+  <div style="width:40px;height:40px;border:3px solid #eee;border-top-color:#8B0000;border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 16px"></div>
+  <p style="color:#999">Đang tải sản phẩm...</p>
+</div>
+
+<!-- PRODUCT HERO -->
+<div id="productHero" style="display:none">
+  <div class="prod-hero">
+    <div class="container">
+      <nav class="breadcrumb" style="margin-bottom:20px">
+        <a href="index.html" style="color:rgba(255,255,255,.6)">Trang chủ</a>
+        <span class="sep"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+        <a href="san-pham.html" style="color:rgba(255,255,255,.6)">Sản phẩm</a>
+        <span class="sep"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+        <span style="color:#fff" id="breadcrumbTitle">...</span>
+      </nav>
+      <div class="prod-hero-inner">
+        <!-- Gallery -->
+        <div>
+          <div class="prod-gallery-main">
+            <img id="mainProductImg" src="assets/images/product-inox.png" alt="" />
+          </div>
+          <div class="prod-gallery-thumbs" id="thumbsRow"></div>
+        </div>
+        <!-- Info -->
+        <div class="prod-info">
+          <span class="prod-brand" id="prodBrand"></span>
+          <h1 class="prod-title" id="prodTitle"></h1>
+          <div class="prod-price" id="prodPrice"></div>
+          <p class="prod-excerpt" id="prodExcerpt"></p>
+          <div class="prod-actions">
+            <a href="lien-he.html" class="btn btn-gold">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.27h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.37a16 16 0 006.29 6.29l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              Yêu cầu báo giá
+            </a>
+            <a href="tel:0937729909" class="btn btn-outline" style="border-color:rgba(255,255,255,.3);color:#fff">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+              093 7729 909
+            </a>
+          </div>
+          <div class="prod-meta-mini" id="prodMetaMini"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="prod-body-section">
+    <div class="container">
+      <div class="prod-detail-layout">
+        <!-- Main -->
+        <div>
+          <div id="prodBodyContent"></div>
+
+          <!-- Specs -->
+          <div id="specsSection" style="display:none;margin-top:32px">
+            <h2 style="font-family:var(--ff-head);font-size:22px;font-weight:800;margin-bottom:16px;color:var(--dark)">
+              Thông Số <span style="color:var(--red)">Kỹ Thuật</span>
+            </h2>
+            <table class="specs-table" id="specsTable"></table>
+          </div>
+
+          <!-- Gallery -->
+          <div id="gallerySection" style="display:none;margin-top:32px">
+            <h2 style="font-family:var(--ff-head);font-size:22px;font-weight:800;margin-bottom:16px;color:var(--dark)">Hình Ảnh Thực Tế</h2>
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px" id="galleryGrid"></div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div>
+          <div class="prod-sidebar-card">
+            <div class="prod-sidebar-card-header"><h3>Tại Sao Chọn Sao Vàng?</h3></div>
+            <div class="prod-sidebar-card-body">
+              <div class="sidebar-feature">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Hàng chính hãng, nguồn gốc rõ ràng
+              </div>
+              <div class="sidebar-feature">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Bảo hành chính thức từ nhà sản xuất
+              </div>
+              <div class="sidebar-feature">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                Tư vấn kỹ thuật miễn phí
+              </div>
+              <div class="sidebar-feature">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                Giao hàng toàn quốc, đóng gói cẩn thận
+              </div>
+              <div class="sidebar-feature">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Kho hàng tại Hà Nội & TP.HCM
+              </div>
+              <hr style="border:none;border-top:1px solid var(--gray-100);margin:12px 0">
+              <a href="lien-he.html" class="btn btn-gold" style="display:flex;justify-content:center;width:100%">Yêu Cầu Báo Giá</a>
+              <a href="san-pham.html" style="display:block;text-align:center;margin-top:8px;font-size:13px;color:var(--gray-400)">← Xem tất cả sản phẩm</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ERROR -->
+<div id="errorState" style="display:none;padding:80px 0;text-align:center">
+  <h2 style="color:var(--gray-500)">Không tìm thấy sản phẩm</h2>
+  <a href="san-pham.html" class="btn btn-gold" style="margin-top:20px">← Quay lại</a>
+</div>
+
+<!-- RELATED -->
+<div id="relatedSection" style="display:none;background:var(--gray-50);padding:60px 0">
+  <div class="container">
+    <h2 style="font-family:var(--ff-head);font-size:26px;font-weight:800;margin-bottom:6px">
+      Sản Phẩm <span style="color:var(--red)">Liên Quan</span>
+    </h2>
+    <p style="color:var(--gray-400);margin-bottom:24px;font-size:14px">Các sản phẩm cùng danh mục</p>
+    <div class="related-grid" id="relatedGrid"></div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section style="padding:60px 0;text-align:center;background:var(--white)">
+  <div class="container">
+    <span class="tag">Tư Vấn</span>
+    <h2 style="font-family:var(--ff-head);font-size:28px;font-weight:800;margin:8px 0 12px">Cần Tư Vấn Vật Tư?</h2>
+    <p style="color:var(--gray-500);margin-bottom:28px">Kỹ sư sẵn sàng tư vấn lựa chọn vật liệu phù hợp cho công trình của bạn</p>
+    <a href="lien-he.html" class="btn btn-gold">Liên Hệ Tư Vấn Ngay</a>
+  </div>
+</section>
+
+<footer class="footer"><div class="container"><div class="footer-grid">
+  <div class="footer-brand"><div class="logo" style="margin-bottom:18px"><span class="logo-badge" id="footerLogoBadge">SV</span><span class="logo-name">SAO VÀNG</span></div><p>Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng.</p></div>
+  <div class="footer-col"><h4>Sản Phẩm</h4><ul><li><a href="san-pham.html">Tất cả sản phẩm</a></li></ul></div>
+  <div class="footer-col"><h4>Công Ty</h4><ul><li><a href="gioi-thieu.html">Giới thiệu</a></li><li><a href="du-an.html">Dự án</a></li><li><a href="lien-he.html">Liên hệ</a></li></ul></div>
+  <div class="footer-col"><h4>Liên Hệ</h4><div class="footer-contact-item"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg><span><strong>Hotline</strong><a href="tel:0937729909">093 7729 909</a></span></div></div>
+</div><div class="footer-bottom"><span>© 2026 Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng.</span></div></div></footer>
+
+<div class="floats">
+  <a href="https://zalo.me/0937729909" class="float-btn float-chat" aria-label="Chat Zalo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg></a>
+  <a href="tel:0937729909" class="float-btn float-phone"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg></a>
+</div>
+
+<script src="assets/js/cms-client.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+async function initProductDetail() {
+  const settings = await CMS.getSettings();
+  if (settings.logo_badge)    document.getElementById('logoBadge').textContent  = settings.logo_badge;
+  if (settings.company_short) document.getElementById('logoName').textContent   = settings.company_short;
+  if (settings.logo_badge)    document.getElementById('footerLogoBadge').textContent = settings.logo_badge;
+
+  const slug = CMS.getSlugFromUrl();
+  if (!slug) { showError(); return; }
+
+  const result = await CMS.getProduct(slug);
+  if (!result || !result.product) { showError(); return; }
+  renderProduct(result);
+}
+
+function showError() {
+  document.getElementById('loadingState').style.display = 'none';
+  document.getElementById('errorState').style.display   = 'block';
+}
+
+function renderProduct({ product: p, blocks, gallery, related }) {
+  document.getElementById('loadingState').style.display = 'none';
+  document.getElementById('productHero').style.display  = 'block';
+
+  document.getElementById('pageTitle').textContent = `${p.title} | SAO VÀNG`;
+  document.getElementById('pageDesc').setAttribute('content', p.excerpt || '');
+  document.getElementById('breadcrumbTitle').textContent = p.title;
+
+  // Hero info
+  document.getElementById('prodBrand').textContent   = p.brand   || p.category || '';
+  document.getElementById('prodTitle').textContent   = p.title;
+  document.getElementById('prodPrice').innerHTML     = p.price
+    ? `${CMS.esc(p.price)} <small>${CMS.esc(p.unit||'')}</small>`
+    : '<small style="font-size:16px">Liên hệ để báo giá</small>';
+  document.getElementById('prodExcerpt').textContent = p.excerpt || '';
+
+  // Main image
+  const mainImg = document.getElementById('mainProductImg');
+  if (p.thumbnail) mainImg.src = CMS.imgUrl(p.thumbnail);
+
+  // Gallery thumbs
+  const thumbsRow = document.getElementById('thumbsRow');
+  const images = gallery && gallery.length ? gallery : (p.thumbnail ? [p.thumbnail] : []);
+  if (images.length > 1) {
+    thumbsRow.innerHTML = images.map((img, i) => `
+      <div class="prod-thumb ${i===0?'active':''}" onclick="switchMainImg('${CMS.imgUrl(img)}',this)">
+        <img src="${CMS.imgUrl(img)}" loading="lazy" />
+      </div>`).join('');
+  }
+
+  // Meta mini
+  const metas = [
+    { lbl:'Danh mục',  val: p.category },
+    { lbl:'Thương hiệu', val: p.brand },
+    { lbl:'Đơn vị',   val: p.unit },
+    { lbl:'Tình trạng', val: p.in_stock === '0' ? 'Liên hệ' : 'Còn hàng' },
+  ].filter(m => m.val);
+  document.getElementById('prodMetaMini').innerHTML = metas.map(m => `
+    <div class="prod-meta-mini-item">
+      <span class="lbl">${CMS.esc(m.lbl)}</span>
+      <span class="val">${CMS.esc(m.val)}</span>
+    </div>`).join('');
+
+  // Body blocks
+  const bodyEl = document.getElementById('prodBodyContent');
+  if (blocks && blocks.length) {
+    bodyEl.innerHTML = blocks.map(b => {
+      let data = {};
+      try { data = typeof b.data === 'string' ? JSON.parse(b.data) : b.data; } catch {}
+      switch(b.type) {
+        case 'text':  return `<div style="font-size:15px;line-height:1.85;color:var(--gray-600);margin-bottom:20px">${data.content||data.html||''}</div>`;
+        case 'image': return `<figure style="margin:20px 0"><img src="${CMS.imgUrl(data.url||data.src||'')}" style="width:100%;border-radius:6px" />${data.caption?`<figcaption style="font-size:13px;color:var(--gray-400);text-align:center;margin-top:6px">${CMS.esc(data.caption)}</figcaption>`:''}</figure>`;
+        default:      return '';
+      }
+    }).join('');
+  } else if (p.excerpt) {
+    bodyEl.innerHTML = `<p style="font-size:15px;line-height:1.85;color:var(--gray-600)">${CMS.esc(p.excerpt)}</p>`;
+  }
+
+  // Specs
+  if (p.specs) {
+    try {
+      const specs = typeof p.specs === 'string' ? JSON.parse(p.specs) : p.specs;
+      if (specs && typeof specs === 'object') {
+        document.getElementById('specsSection').style.display = 'block';
+        document.getElementById('specsTable').innerHTML = Object.entries(specs).map(([k,v]) =>
+          `<tr><td>${CMS.esc(k)}</td><td>${CMS.esc(String(v))}</td></tr>`
+        ).join('');
+      }
+    } catch {}
+  }
+
+  // Gallery extra
+  if (gallery && gallery.length > 1) {
+    document.getElementById('gallerySection').style.display = 'block';
+    document.getElementById('galleryGrid').innerHTML = gallery.map(img =>
+      `<div style="border-radius:4px;overflow:hidden;cursor:pointer;aspect-ratio:4/3" onclick="switchMainImg('${CMS.imgUrl(img)}',null)">
+        <img src="${CMS.imgUrl(img)}" style="width:100%;height:100%;object-fit:cover" loading="lazy" />
+      </div>`
+    ).join('');
+  }
+
+  // Related
+  if (related && related.length) {
+    document.getElementById('relatedSection').style.display = 'block';
+    document.getElementById('relatedGrid').innerHTML = related.map(r => `
+      <a href="san-pham-chi-tiet.html?slug=${r.slug||r.id}" class="related-prod">
+        <img src="${r.thumbnail ? CMS.imgUrl(r.thumbnail) : 'assets/images/product-inox.png'}" alt="${CMS.esc(r.title)}" loading="lazy" onerror="this.src='assets/images/product-inox.png'" />
+        <div class="related-prod-body">
+          <div class="related-prod-cat">${CMS.esc(r.category||'')}</div>
+          <div class="related-prod-name">${CMS.esc(r.title)}</div>
+        </div>
+      </a>`).join('');
+  }
+}
+
+function switchMainImg(url, thumbEl) {
+  document.getElementById('mainProductImg').src = url;
+  if (thumbEl) {
+    document.querySelectorAll('.prod-thumb').forEach(t => t.classList.remove('active'));
+    thumbEl.classList.add('active');
+  }
+}
+window.switchMainImg = switchMainImg;
+
+document.addEventListener('DOMContentLoaded', initProductDetail);
+</script>
+
+<!-- STICKY MOBILE CTA BAR -->
+<div class="sticky-cta-bar" id="stickyCtaBar" role="complementary" aria-label="Liên hệ nhanh">
+  <a href="tel:0937729909" class="btn btn-gold btn-sm">
+    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    Gọi Ngay
+  </a>
+  <a href="https://zalo.me/0937729909" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
+  <a href="bao-gia.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
+</div>
+</body>
+</html>

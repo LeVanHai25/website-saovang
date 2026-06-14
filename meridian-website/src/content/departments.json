@@ -1,0 +1,52 @@
+{
+  "departments": [
+    {
+      "number": "01",
+      "name": "Strategy & Advisory",
+      "description": "Corporate strategy, M&A advisory, market entry, growth planning, and organizational design.",
+      "professionals": "85 professionals"
+    },
+    {
+      "number": "02",
+      "name": "Digital & Technology",
+      "description": "Cloud architecture, enterprise platforms, digital products, and systems integration.",
+      "professionals": "120 professionals"
+    },
+    {
+      "number": "03",
+      "name": "Data & AI",
+      "description": "Advanced analytics, machine learning, data infrastructure, and AI-driven automation.",
+      "professionals": "65 professionals"
+    },
+    {
+      "number": "04",
+      "name": "Operations & Transformation",
+      "description": "Process optimization, supply chain, change management, and operational excellence.",
+      "professionals": "70 professionals"
+    },
+    {
+      "number": "05",
+      "name": "Cybersecurity & Risk",
+      "description": "Security architecture, risk assessment, compliance, and resilience planning.",
+      "professionals": "40 professionals"
+    }
+  ],
+  "operatingModel": [
+    {
+      "name": "Client Layer",
+      "description": "Dedicated client partners and engagement managers"
+    },
+    {
+      "name": "Delivery Layer",
+      "description": "Cross-functional teams organized by capability"
+    },
+    {
+      "name": "Platform Layer",
+      "description": "Shared tools, frameworks, and accelerators"
+    },
+    {
+      "name": "Knowledge Layer",
+      "description": "Research, training, and intellectual capital"
+    }
+  ]
+}

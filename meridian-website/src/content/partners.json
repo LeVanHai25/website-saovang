@@ -1,0 +1,8 @@
+[
+  { "name": "Amazon Web Services", "tier": "Advanced Partner", "description": "Cloud infrastructure, serverless, and managed services" },
+  { "name": "Microsoft Azure", "tier": "Gold Partner", "description": "Enterprise cloud, AI, and productivity solutions" },
+  { "name": "Google Cloud", "tier": "Premier Partner", "description": "Data analytics, machine learning, and Kubernetes" },
+  { "name": "Salesforce", "tier": "Platinum Partner", "description": "CRM, customer engagement, and commerce cloud" },
+  { "name": "ServiceNow", "tier": "Elite Partner", "description": "IT service management and workflow automation" },
+  { "name": "Snowflake", "tier": "Select Partner", "description": "Data cloud, warehousing, and data sharing" }
+]

@@ -1,0 +1,14 @@
+{
+  "certifications": [
+    { "badge": "ISO", "title": "ISO 27001:2022", "description": "Information Security Management" },
+    { "badge": "ISO", "title": "ISO 9001:2015", "description": "Quality Management Systems" },
+    { "badge": "SOC", "title": "SOC 2 Type II", "description": "Security, Availability & Confidentiality" },
+    { "badge": "CMMI", "title": "CMMI Level 5", "description": "Optimizing Maturity Level" }
+  ],
+  "awards": [
+    { "title": "Forrester Wave Leader", "description": "Digital Transformation Services, 2025" },
+    { "title": "Gartner Magic Quadrant", "description": "Cloud & Infrastructure Services, 2025" },
+    { "title": "Best Workplace Asia-Pacific", "description": "Great Place to Work, 2024 & 2025" },
+    { "title": "Sustainability Excellence", "description": "ESG Innovation Award, 2025" }
+  ]
+}

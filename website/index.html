@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#8B0000" />
+  <title>SAO VÀNG — Thiết Kế &amp; Thi Công Cơ Khí Nhà Ở &amp; Du Thuyền Cao Cấp</title>
+  <meta name="description" content="Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng — Chuyên tư vấn, thiết kế, gia công và lắp đặt kết cấu cơ khí nhà ở, biệt thự và du thuyền hạng sang từ năm 2017." />
+  <meta property="og:title" content="SAO VÀNG — Cơ Khí Nhà Ở &amp; Du Thuyền Cao Cấp" />
+  <meta property="og:description" content="Tư vấn miễn phí · Vật liệu chuẩn EU · Bảo hành 5 năm · 300+ công trình hoàn thành." />
+  <meta property="og:type" content="website" />
+  <link rel="preload" as="image" href="assets/images/hero-interior.png" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+  /* ══ HERO ══════════════════════════════════════════════ */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin-top: var(--header-h);
+  }
+  .hero-bg { position:absolute; inset:0; z-index:0; }
+  .hero-bg img {
+    width:100%; height:100%;
+    object-fit:cover; object-position:center;
+    animation: heroZoom 14s ease-in-out infinite alternate;
+  }
+  @media (prefers-reduced-motion: reduce) { .hero-bg img { animation: none; } }
+  .hero-overlay {
+    position:absolute; inset:0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.40) 55%, rgba(0,0,0,0.75) 100%);
+  }
+  @keyframes heroZoom { from{transform:scale(1.0)} to{transform:scale(1.06)} }
+  @keyframes fadeUp  { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes bounce  { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    flex: 1;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    padding: clamp(24px, 6vw, 80px) clamp(16px, 4vw, 48px);
+  }
+  .hero-overline {
+    font-family: var(--ff-head);
+    font-size: clamp(9px, 1.5vw, 11px);
+    font-weight: 600; letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: clamp(16px, 3vw, 24px);
+    animation: fadeUp .8s ease both;
+  }
+  .hero-title {
+    font-family: var(--ff-head);
+    font-size: var(--fs-hero);
+    font-weight: 900; line-height: 1.08;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: clamp(16px, 3vw, 24px);
+    text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+    animation: fadeUp .9s .1s ease both;
+    max-width: 16ch;
+  }
+  .hero-title .gold { color: var(--gold-light); }
+  .hero-sub {
+    font-size: clamp(14px, 2vw, 17px);
+    font-weight: 300;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.75;
+    max-width: 55ch;
+    margin-bottom: clamp(24px, 4vw, 36px);
+    animation: fadeUp 1s .2s ease both;
+  }
+  .hero-btns {
+    display: flex; gap: clamp(10px, 2vw, 16px);
+    justify-content: center; flex-wrap: wrap;
+    animation: fadeUp 1s .3s ease both;
+  }
+
+  /* Stats bar */
+  .hero-stats {
+    position: relative; z-index: 2;
+    display: flex;
+    justify-content: center; align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: clamp(16px, 3vw, 28px) clamp(16px, 4vw, 32px);
+    background: linear-gradient(0deg, rgba(0,0,0,0.65) 0%, transparent 100%);
+    animation: fadeUp 1s .45s ease both;
+  }
+  .stat-item {
+    display: flex; flex-direction: column; align-items: center;
+    padding: clamp(8px, 2vw, 12px) clamp(16px, 4vw, 44px);
+  }
+  .stat-num {
+    font-family: var(--ff-head);
+    font-size: clamp(24px, 4vw, 46px);
+    font-weight: 900; color: var(--gold-light);
+    line-height: 1; letter-spacing: -0.02em;
+  }
+  .stat-lbl {
+    font-family: var(--ff-head);
+    font-size: clamp(9px, 1.2vw, 11px);
+    font-weight: 600; letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    margin-top: 4px; text-align: center;
+  }
+  .stat-div { width:1px; height:clamp(28px, 4vw, 44px); background:rgba(255,255,255,0.18); }
+
+  .scroll-down {
+    position: absolute;
+    bottom: clamp(100px, 14vw, 128px);
+    left: 50%; transform: translateX(-50%);
+    z-index: 3;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    color: rgba(255,255,255,0.5);
+    font-family: var(--ff-head); font-size: 9.5px;
+    letter-spacing: 0.18em; text-transform: uppercase;
+    cursor: pointer;
+    animation: bounce 2.4s infinite;
+  }
+
+  /* ══ ABOUT ══════════════════════════════════════════════ */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: center;
+  }
+  .about-lead {
+    font-size: clamp(16px, 2vw, 19px);
+    font-weight: 600; color: var(--dark); line-height: 1.6;
+    margin-bottom: var(--sp-4);
+  }
+  .about-features {
+    display: flex; flex-direction: column; gap: var(--sp-4);
+    margin: var(--sp-6) 0;
+    background: var(--gray-100); padding: clamp(16px, 3vw, 24px) clamp(16px, 3vw, 28px);
+    border-radius: var(--radius); border-left: 4px solid var(--gold);
+  }
+  .feat-item { display:flex; align-items:flex-start; gap: var(--sp-3); }
+  .feat-icon {
+    width:32px; height:32px; min-width:32px;
+    background:rgba(139,0,0,0.07); border-radius: var(--radius);
+    display:flex; align-items:center; justify-content:center;
+    color: var(--red);
+  }
+  .feat-item strong { display:block; font-size: var(--fs-body); font-weight:700; color:var(--dark); margin-bottom:2px; }
+  .feat-item p { font-size: var(--fs-sm); color:var(--gray-500); margin:0; line-height:1.6; }
+  .about-img-wrap {
+    position:relative; border-radius: var(--radius-md); overflow:hidden;
+    aspect-ratio:4/3;
+    box-shadow:0 12px 48px rgba(0,0,0,0.15);
+  }
+  .about-img-wrap img { width:100%; height:100%; object-fit:cover; transition:transform .6s ease; }
+  .about-img-wrap:hover img { transform:scale(1.04); }
+  .about-badge {
+    position:absolute; bottom: clamp(12px,3vw,24px); right: clamp(12px,3vw,24px);
+    background:var(--gold); color:var(--white);
+    padding: clamp(10px,2vw,16px) clamp(14px,2.5vw,22px);
+    border-radius: var(--radius); text-align:center;
+    box-shadow:0 4px 20px rgba(200,134,10,.45);
+  }
+  .about-badge strong { display:block; font-family:var(--ff-head); font-size: clamp(24px,4vw,32px); font-weight:900; line-height:1; }
+  .about-badge span { font-size: var(--fs-xs); font-weight:600; letter-spacing:0.06em; opacity:.9; }
+
+  /* ══ SERVICES GRID ═══════════════════════════════════════ */
+  .svc-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    background: rgba(255,255,255,.04);
+  }
+  .svc-card {
+    background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06);
+    padding: clamp(24px, 4vw, 38px) clamp(20px, 3vw, 30px);
+    transition:all .28s var(--ease); position:relative; overflow:hidden;
+  }
+  .svc-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--gold); transform:scaleX(0); transform-origin:left; transition:transform .3s ease; }
+  .svc-card:hover { background:rgba(200,134,10,.09); border-color:rgba(200,134,10,.25); transform:translateY(-3px); }
+  .svc-card:hover::before { transform:scaleX(1); }
+  .svc-icon { width:48px; height:48px; border-radius: var(--radius); background:rgba(200,134,10,.12); display:flex; align-items:center; justify-content:center; color:var(--gold); margin-bottom: var(--sp-5); }
+  .svc-card h3 { font-family:var(--ff-head); font-size: clamp(14px,1.5vw,16px); font-weight:700; color:var(--white); margin-bottom: var(--sp-2); line-height:1.3; }
+  .svc-card p { font-size: var(--fs-sm); font-weight:300; color:rgba(255,255,255,.58); line-height:1.7; margin-bottom: var(--sp-4); }
+  .svc-link { font-family:var(--ff-head); font-size:12px; font-weight:700; letter-spacing:.05em; color:var(--gold-light); display:inline-flex; align-items:center; gap:5px; transition:gap .2s; }
+  .svc-card:hover .svc-link { gap:9px; }
+
+  /* ══ PROJECTS ════════════════════════════════════════════ */
+  .proj-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(8px, 2vw, 14px);
+  }
+  .proj-card {
+    position:relative; border-radius: var(--radius-md); overflow:hidden; cursor:pointer;
+    aspect-ratio: 16/9;
+  }
+  .proj-card.large { aspect-ratio: auto; min-height: clamp(200px, 35vw, 400px); }
+  .proj-card img { width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+  .proj-card:hover img { transform:scale(1.05); }
+  .proj-overlay {
+    position:absolute; inset:0;
+    background:linear-gradient(0deg,rgba(0,0,0,0.82) 0%,transparent 55%);
+    display:flex; flex-direction:column; justify-content:flex-end;
+    padding: clamp(16px, 3vw, 26px); color:var(--white);
+  }
+  .proj-cat { font-family:var(--ff-head); font-size:10px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-light); display:block; margin-bottom:6px; }
+  .proj-overlay h3 { font-family:var(--ff-head); font-size: clamp(14px, 2vw, 18px); font-weight:700; line-height:1.3; margin-bottom:4px; }
+  .proj-overlay p { font-size: var(--fs-xs); color:rgba(255,255,255,.65); font-weight:300; }
+
+  /* ══ WHY US ══════════════════════════════════════════════ */
+  .why-section { position:relative; padding: var(--section-py) 0; overflow:hidden; }
+  .why-bg { position:absolute; inset:0; }
+  .why-bg img { width:100%; height:100%; object-fit:cover; }
+  .why-bg::after { content:''; position:absolute; inset:0; background:rgba(8,8,8,.88); }
+  .why-content { position:relative; z-index:2; }
+  .why-grid {
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    background:rgba(255,255,255,.05);
+    margin-top: var(--sp-7);
+  }
+  .why-card { background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.06); padding: clamp(24px,4vw,34px) clamp(20px,3vw,28px); transition:all .25s var(--ease); }
+  .why-card:hover { background:rgba(200,134,10,.08); border-color:rgba(200,134,10,.2); }
+  .why-num { font-family:var(--ff-head); font-size: clamp(28px,5vw,42px); font-weight:900; color:rgba(200,134,10,.18); line-height:1; margin-bottom: var(--sp-3); letter-spacing:-.02em; }
+  .why-card h3 { font-family:var(--ff-head); font-size: clamp(14px,1.5vw,15px); font-weight:700; color:var(--white); margin-bottom: var(--sp-2); line-height:1.3; }
+  .why-card p { font-size: var(--fs-sm); font-weight:300; color:rgba(255,255,255,.52); line-height:1.7; }
+
+  /* ══ PROCESS ═════════════════════════════════════════════ */
+  .process-steps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(24px, 4vw, 32px);
+    position: relative;
+  }
+  .process-steps::before { display: none; }
+  .process-step { display:flex; flex-direction:column; align-items:center; text-align:center; padding: 0 clamp(8px,2vw,16px); position:relative; z-index:1; }
+  .step-num {
+    width: clamp(52px, 6vw, 64px); height: clamp(52px, 6vw, 64px);
+    border-radius:50%; background:var(--white); border:2px solid var(--gray-200);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--ff-head); font-size: clamp(15px,2vw,18px); font-weight:900;
+    color:var(--gray-300); margin-bottom: var(--sp-4); transition:all .3s;
+  }
+  .process-step.active .step-num { background:var(--red); border-color:var(--red); color:var(--white); box-shadow:0 4px 20px rgba(139,0,0,.3); }
+  .process-step h4 { font-family:var(--ff-head); font-size: clamp(12px,1.5vw,13px); font-weight:700; color:var(--dark); margin-bottom: var(--sp-2); }
+  .process-step p { font-size: var(--fs-xs); color:var(--gray-500); line-height:1.65; }
+
+  /* ══ CTA BANNER ══════════════════════════════════════════ */
+  .cta-banner { background:var(--red); padding: var(--section-py) 0; text-align:center; }
+  .cta-banner h2 { font-family:var(--ff-head); font-size: var(--fs-h2); font-weight:900; color:var(--white); margin-bottom: var(--sp-3); max-width:24ch; margin-inline:auto; }
+  .cta-banner p { font-size: var(--fs-body-lg); font-weight:300; color:rgba(255,255,255,.75); margin-bottom: var(--sp-7); max-width:50ch; margin-inline:auto; }
+  .cta-banner .btns { display:flex; gap:clamp(10px,2vw,16px); justify-content:center; flex-wrap:wrap; }
+
+  /* ══ RESPONSIVE: Tablet (640px+) ═════════════════════════ */
+  @media (min-width: 640px) {
+    .svc-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .proj-grid { grid-template-columns: 1fr 1fr; }
+    .proj-card { aspect-ratio: 4/3; }
+    .proj-card.large { grid-row: span 2; aspect-ratio: auto; }
+  }
+
+  /* ══ RESPONSIVE: Laptop (1024px+) ════════════════════════ */
+  @media (min-width: 1024px) {
+    .about-grid { grid-template-columns: 1fr 1fr; gap: clamp(48px, 6vw, 80px); }
+    .svc-grid { grid-template-columns: repeat(3, 1fr); }
+    .why-grid { grid-template-columns: repeat(3, 1fr); }
+    .proj-grid {
+      grid-template-columns: 1.2fr 1fr;
+      grid-template-rows: clamp(240px, 30vw, 320px) clamp(180px, 22vw, 240px);
+    }
+    .proj-card { aspect-ratio: auto; }
+    .process-steps {
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+    }
+    .process-steps::before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: clamp(26px, 3vw, 32px);
+      left: 10%; right: 10%;
+      height: 1px;
+      background: var(--gray-200);
+      z-index: 0;
+    }
+  }
+
+  /* ══ RESPONSIVE: Desktop (1440px+) ═══════════════════════ */
+  @media (min-width: 1440px) {
+    .proj-grid { grid-template-rows: 340px 260px; }
+  }
+
+  /* ══ STICKY MOBILE CTA BAR ════════════════════════════════ */
+  .hero-cta-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0; right: 0;
+    z-index: 890;
+    background: var(--dark);
+    border-top: 1px solid rgba(255,255,255,.08);
+    padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 24px);
+    padding-bottom: calc(clamp(10px, 2vw, 14px) + var(--safe-bottom));
+    gap: 10px;
+    transform: translateY(100%);
+    transition: transform 0.4s var(--ease);
+    box-shadow: 0 -4px 24px rgba(0,0,0,0.3);
+  }
+  .hero-cta-bar .cta-bar-text {
+    font-family: var(--ff-head);
+    font-size: 11px; font-weight: 700;
+    color: rgba(255,255,255,.7);
+    display: flex; align-items: center;
+    flex: 1;
+    white-space: nowrap;
+  }
+  .hero-cta-bar .btn { flex: 1; font-size: 11px; padding: 10px 12px; justify-content: center; }
+  @media (min-width: 1024px) { .hero-cta-bar { display: none; } }
+  /* Stat dividers hide on mobile XS */
+  @media (max-width: 479px) {
+    .stat-div { display: none; }
+    .stat-item { padding: 8px 12px; }
+  }
+  </style>
+  <link rel="canonical" href="https://saovang.vn/index.html" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Sao Vàng — Trang chủ">
+      <span class="logo-badge" aria-hidden="true">SV</span>
+      <span class="logo-name">SAO VÀNG</span>
+    </a>
+    <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
+      <a href="index.html" class="nav-item active" aria-current="page">TRANG CHỦ</a>
+      <a href="gioi-thieu.html" class="nav-item">GIỚI THIỆU</a>
+      <a href="linh-vuc-hoat-dong.html" class="nav-item">LĨNH VỰC</a>
+      <a href="du-an.html" class="nav-item">DỰ ÁN</a>
+      <a href="san-pham.html" class="nav-item">SẢN PHẨM</a>
+      <a href="tin-tuc.html" class="nav-item">TIN TỨC</a>
+      <a href="lien-he.html" class="nav-item">LIÊN HỆ</a>
+      <a href="bao-gia.html" class="nav-item" style="color:var(--gold);font-weight:700">BÁO GIÁ</a>
+      <a href="san-pham.html" class="nav-item premium">+ CAO CẤP</a>
+    </nav>
+    <a href="tel:0937729909" class="header-phone" aria-label="Gọi hotline 093 7729 909">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      093 7729 909
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<!-- ═══ HERO ═══════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="assets/images/hero-interior.png" alt="Nội thất cao cấp Sao Vàng" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <p class="hero-overline">Công Ty TNHH ĐT TM Và DV Kỹ Thuật Sao Vàng</p>
+    <h1 class="hero-title">
+      Thiết Kế &amp; Thi Công<br />
+      <span class="gold">Cơ Khí Nhà Ở</span><br />
+      &amp; Du Thuyền Cao Cấp
+    </h1>
+    <p class="hero-sub">Chuyên tư vấn, thiết kế, gia công và lắp đặt kết cấu cơ khí cho nhà ở, biệt thự và du thuyền hạng sang theo yêu cầu riêng của từng khách hàng.</p>
+    <div class="hero-btns">
+      <a href="linh-vuc-hoat-dong.html" class="btn btn-gold">
+        Xem Dịch Vụ
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+      <a href="lien-he.html" class="btn btn-outline">Liên Hệ Ngay</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item"><span class="stat-num" data-counter>2017</span><span class="stat-lbl">Năm Thành Lập</span></div>
+    <div class="stat-div"></div>
+    <div class="stat-item"><span class="stat-num" data-counter>300+</span><span class="stat-lbl">Công Trình Hoàn Thành</span></div>
+    <div class="stat-div"></div>
+    <div class="stat-item"><span class="stat-num" data-counter>50+</span><span class="stat-lbl">Du Thuyền Bàn Giao</span></div>
+    <div class="stat-div"></div>
+    <div class="stat-item"><span class="stat-num">24/7</span><span class="stat-lbl">Hỗ Trợ Kỹ Thuật</span></div>
+  </div>
+  <div class="scroll-down" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+    Cuộn Xuống
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</section>
+
+<!-- ═══ VỀ CHÚNG TÔI ════════════════════════════════════════════ -->
+<section class="section" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div data-reveal>
+        <span class="tag">Giới Thiệu</span>
+        <h2 class="section-title">Về Công Ty <span class="gold">Sao Vàng</span></h2>
+        <p class="about-lead">Thành lập năm 2017, Sao Vàng là đơn vị chuyên sâu về cơ khí cao cấp cho nhà ở và du thuyền hạng sang tại Việt Nam.</p>
+        <p class="body-text" style="font-size:15px;color:var(--gray-500);line-height:1.8;margin-bottom:12px;">Với đội ngũ kỹ sư cơ khí giàu kinh nghiệm và hệ thống máy móc CNC hiện đại, chúng tôi cam kết mang đến những sản phẩm đạt tiêu chuẩn quốc tế — phù hợp với gu thẩm mỹ và yêu cầu đặc thù của từng khách hàng.</p>
+        <div class="about-features">
+          <div class="feat-item">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.27h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.37a16 16 0 006.29 6.29l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div><strong>Tư vấn miễn phí 24/7</strong><p>Đội ngũ chuyên gia sẵn sàng tư vấn kỹ thuật và báo giá ngay lập tức</p></div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div><strong>Chất lượng tiêu chuẩn quốc tế</strong><p>Vật liệu nhập khẩu EU, Nhật Bản — kiểm định ISO nghiêm ngặt</p></div>
+          </div>
+          <div class="feat-item">
+            <div class="feat-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <div><strong>Bảo hành lên đến 5 năm</strong><p>Cam kết bảo hành dài hạn, bảo trì định kỳ miễn phí năm đầu tiên</p></div>
+          </div>
+        </div>
+        <a href="gioi-thieu.html" class="btn btn-gold">Tìm Hiểu Thêm <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="about-img-wrap" data-reveal data-reveal-delay="3">
+        <img src="assets/images/hero-interior.png" alt="Nội thất Sao Vàng" / loading="lazy">
+        <div class="about-badge"><strong>7+</strong><span>Năm Kinh Nghiệm</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ LĨNH VỰC HOẠT ĐỘNG ══════════════════════════════════════ -->
+<section class="section bg-dark" id="services">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:48px;" data-reveal>
+      <span class="tag">Dịch Vụ</span>
+      <h2 class="section-title white">Lĩnh Vực <span class="gold">Hoạt Động</span></h2>
+      <p class="section-desc white" style="margin:0 auto;">Giải pháp cơ khí toàn diện — từ tư vấn, thiết kế đến gia công và lắp đặt chuyên nghiệp</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card" data-reveal>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Cơ Khí Nhà Ở</h3>
+        <p>Thiết kế và thi công lan can, cầu thang, cửa nhôm kính, mái che, khung kết cấu cho nhà ở và biệt thự cao cấp.</p>
+        <a href="linh-vuc-hoat-dong.html" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="svc-card" data-reveal data-reveal-delay="1" style="border-color:rgba(200,134,10,.3);background:rgba(200,134,10,.08);">
+        <div style="position:absolute;top:14px;right:14px;" class="badge badge-gold">Nổi Bật</div>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
+        <h3>Du Thuyền Cao Cấp</h3>
+        <p>Thiết kế và thi công toàn bộ kết cấu cơ khí nội — ngoại thất du thuyền hạng sang theo tiêu chuẩn quốc tế.</p>
+        <a href="linh-vuc-hoat-dong.html" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="svc-card" data-reveal data-reveal-delay="2">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
+        <h3>Cầu Thang &amp; Lan Can</h3>
+        <p>Inox 304/316 hàn TIG bóng gương, lan can kính cường lực — thiết kế theo yêu cầu, bảo hành 5 năm.</p>
+        <a href="linh-vuc-hoat-dong.html" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="svc-card" data-reveal>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+        <h3>Cổng &amp; Hàng Rào</h3>
+        <p>Sắt rèn nghệ thuật, nhôm đúc, CNC chính xác — sơn tĩnh điện bền màu, thiết kế cổ điển hay hiện đại.</p>
+        <a href="linh-vuc-hoat-dong.html" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="svc-card" data-reveal data-reveal-delay="1">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg></div>
+        <h3>Cửa &amp; Vách Kính</h3>
+        <p>Hệ thống cửa nhôm kính, vách ngăn kính cường lực, mái kính — khung Xingfa cao cấp, cách nhiệt tốt.</p>
+        <a href="linh-vuc-hoat-dong.html" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <div class="svc-card" data-reveal data-reveal-delay="2">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Bảo Trì &amp; Sửa Chữa</h3>
+        <p>Bảo dưỡng định kỳ, xử lý gỉ sét, đánh bóng lại bề mặt, thay thế phụ kiện — hỗ trợ 24/7 toàn quốc.</p>
+        <a href="linh-vuc-hoat-dong.html" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:40px;">
+      <a href="linh-vuc-hoat-dong.html" class="btn btn-gold">Xem Tất Cả Dịch Vụ <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ DỰ ÁN NỔI BẬT ══════════════════════════════════════════ -->
+<section class="section bg-gray" id="projects">
+  <div class="container">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:40px;" data-reveal>
+      <div>
+        <span class="tag">Dự Án</span>
+        <h2 class="section-title">Dự Án <span class="gold">Nổi Bật</span></h2>
+        <p class="section-desc" style="margin-bottom:0;">Hơn 300 công trình hoàn thành — mỗi dự án là minh chứng cho chất lượng Sao Vàng</p>
+      </div>
+      <a href="du-an.html" class="btn btn-outline-dark" style="flex-shrink:0;">Xem Tất Cả</a>
+    </div>
+    <div class="proj-grid">
+      <div class="proj-card large" data-reveal>
+        <img src="assets/images/project-villa.png" alt="Biệt thự nghỉ dưỡng" / loading="lazy">
+        <div class="proj-overlay">
+          <span class="proj-cat">Cơ Khí Nhà Ở</span>
+          <h3>Biệt Thự Nghỉ Dưỡng Đà Lạt</h3>
+          <p>Cầu thang inox, lan can kính, cổng nhôm đúc cổ điển — 2.5 tỷ VNĐ</p>
+        </div>
+      </div>
+      <div class="proj-card" data-reveal data-reveal-delay="1">
+        <img src="assets/images/project-yacht.png" alt="Du thuyền Sao Biển" / loading="lazy">
+        <div class="proj-overlay">
+          <span class="proj-cat">Du Thuyền</span>
+          <h3>Du Thuyền 28m "Sao Biển"</h3>
+          <p>Vịnh Hạ Long — 18 tỷ VNĐ</p>
+        </div>
+      </div>
+      <div class="proj-card" data-reveal data-reveal-delay="2">
+        <img src="assets/images/hero-interior.png" alt="Penthouse Sky Garden" / loading="lazy">
+        <div class="proj-overlay">
+          <span class="proj-cat">Cầu Thang &amp; Lan Can</span>
+          <h3>Penthouse Tòa Sky Garden</h3>
+          <p>Inox 316 + kính cường lực — 850 triệu VNĐ</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TẠI SAO CHỌN SAO VÀNG ══════════════════════════════════ -->
+<section class="why-section">
+  <div class="why-bg">
+    <img src="assets/images/hero-yacht.png" alt="Tại sao Sao Vàng" / loading="lazy">
+  </div>
+  <div class="container why-content">
+    <div style="text-align:center;margin-bottom:0;" data-reveal>
+      <span class="tag">Ưu Điểm</span>
+      <h2 class="section-title white">Tại Sao Chọn <span class="gold">Sao Vàng?</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card" data-reveal><div class="why-num">01</div><h3>Kinh Nghiệm 7+ Năm</h3><p>Hơn 300 công trình và 50 du thuyền hoàn thành, tích lũy bề dày kinh nghiệm thực tế không thể thay thế.</p></div>
+      <div class="why-card" data-reveal data-reveal-delay="1"><div class="why-num">02</div><h3>Đội Ngũ Chuyên Nghiệp</h3><p>120+ kỹ sư và thợ lành nghề được đào tạo chuyên sâu, đạt chứng chỉ hàn quốc tế AWS và ASME.</p></div>
+      <div class="why-card" data-reveal data-reveal-delay="2"><div class="why-num">03</div><h3>Vật Liệu Chất Lượng</h3><p>Nguyên liệu nhập khẩu trực tiếp từ châu Âu và Nhật Bản — đầy đủ CO, CQ và chứng nhận chất lượng.</p></div>
+      <div class="why-card" data-reveal><div class="why-num">04</div><h3>Tiến Độ Đúng Hạn</h3><p>Cam kết giao công trình đúng tiến độ hợp đồng, không phát sinh chi phí ngoài dự toán đã ký.</p></div>
+      <div class="why-card" data-reveal data-reveal-delay="1"><div class="why-num">05</div><h3>Bảo Hành Dài Hạn</h3><p>Bảo hành lên đến 5 năm — bảo trì định kỳ miễn phí năm đầu, hỗ trợ kỹ thuật suốt vòng đời sản phẩm.</p></div>
+      <div class="why-card" data-reveal data-reveal-delay="2"><div class="why-num">06</div><h3>Hỗ Trợ 24/7</h3><p>Đội kỹ thuật viên ứng trực 24/7, sẵn sàng xử lý sự cố khẩn cấp trong vòng 2 giờ tại TP.HCM và Hà Nội.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ QUY TRÌNH LÀM VIỆC ══════════════════════════════════════ -->
+<section class="section">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:56px;" data-reveal>
+      <span class="tag">Quy Trình</span>
+      <h2 class="section-title">Quy Trình <span class="gold">Làm Việc</span></h2>
+      <p class="section-desc" style="margin:0 auto;">5 bước đơn giản — từ yêu cầu đến bàn giao công trình hoàn chỉnh</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step active" data-reveal>
+        <div class="step-num">01</div>
+        <h4>Tiếp Nhận Yêu Cầu</h4>
+        <p>Lắng nghe và ghi nhận toàn bộ nhu cầu của khách hàng qua điện thoại, email hoặc gặp trực tiếp</p>
+      </div>
+      <div class="process-step active" data-reveal data-reveal-delay="1">
+        <div class="step-num">02</div>
+        <h4>Khảo Sát &amp; Báo Giá</h4>
+        <p>Kỹ sư khảo sát thực tế, tư vấn phương án kỹ thuật và gửi báo giá chi tiết trong vòng 24 giờ</p>
+      </div>
+      <div class="process-step active" data-reveal data-reveal-delay="2">
+        <div class="step-num">03</div>
+        <h4>Ký Hợp Đồng</h4>
+        <p>Thống nhất thiết kế, vật liệu, tiến độ và ký hợp đồng minh bạch với điều khoản bảo hành rõ ràng</p>
+      </div>
+      <div class="process-step active" data-reveal data-reveal-delay="3">
+        <div class="step-num">04</div>
+        <h4>Sản Xuất &amp; Thi Công</h4>
+        <p>Gia công tại xưởng theo bản vẽ thiết kế, lắp đặt tại công trình với đội thợ chuyên nghiệp</p>
+      </div>
+      <div class="process-step active" data-reveal data-reveal-delay="4">
+        <div class="step-num">05</div>
+        <h4>Nghiệm Thu &amp; Bàn Giao</h4>
+        <p>Kiểm tra chất lượng toàn diện, hoàn thiện hồ sơ bảo hành và bàn giao công trình đúng tiến độ</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA BANNER ══════════════════════════════════════════════ -->
+<section class="cta-banner">
+  <div class="container">
+    <h2>Sẵn Sàng Bắt Đầu Dự Án Của Bạn?</h2>
+    <p>Liên hệ ngay để được tư vấn miễn phí và nhận báo giá trong vòng 24 giờ</p>
+    <div class="btns">
+      <a href="lien-he.html" class="btn btn-gold">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        Gửi Yêu Cầu Tư Vấn
+      </a>
+      <a href="tel:0937729909" class="btn btn-outline">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+        093 7729 909
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:18px;"><span class="logo-badge">SV</span><span class="logo-name">SAO VÀNG</span></div>
+        <p>Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng — Chuyên thiết kế &amp; thi công cơ khí nhà ở và du thuyền cao cấp từ năm 2017.</p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="social-link" aria-label="YouTube"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+          <a href="#" class="social-link" aria-label="Zalo"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><text y="18" font-size="13" font-weight="bold" font-family="Arial">Z</text></svg></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Dịch Vụ</h4>
+        <ul>
+          <li><a href="linh-vuc-hoat-dong.html">Thiết kế cơ khí nhà ở</a></li>
+          <li><a href="linh-vuc-hoat-dong.html">Thi công du thuyền</a></li>
+          <li><a href="linh-vuc-hoat-dong.html">Cầu thang &amp; lan can</a></li>
+          <li><a href="linh-vuc-hoat-dong.html">Cổng &amp; hàng rào</a></li>
+          <li><a href="linh-vuc-hoat-dong.html">Cửa &amp; vách kính</a></li>
+          <li><a href="linh-vuc-hoat-dong.html">Bảo trì &amp; sửa chữa</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Công Ty</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+          <li><a href="du-an.html">Dự án thực hiện</a></li>
+          <li><a href="san-pham.html">Sản phẩm</a></li>
+          <li><a href="tin-tuc.html">Tin tức &amp; sự kiện</a></li>
+          <li><a href="lien-he.html">Liên hệ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Liên Hệ</h4>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.27h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.37a16 16 0 006.29 6.29l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span><strong>Hotline</strong><a href="tel:0937729909">093 7729 909</a></span></div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><span><strong>Email</strong>info@saovang.vn</span></div>
+        <div class="footer-contact-item"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span><strong>Giờ làm việc</strong>T2 – T7: 7:30 – 17:30<br/>Hỗ trợ kỹ thuật: 24/7</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng. Bảo lưu mọi quyền.</span>
+      <span>Thiết kế &amp; phát triển bởi Sao Vàng Tech</span>
+    </div>
+  </div>
+</footer>
+
+<!-- FLOATING BUTTONS -->
+<div class="floats" role="complementary" aria-label="Liên hệ nhanh">
+  <a href="https://zalo.me/0937729909" class="float-btn float-chat" aria-label="Chat Zalo" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+  </a>
+  <a href="tel:0937729909" class="float-btn float-phone" aria-label="Gọi 093 7729 909">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+  </a>
+</div>
+<a href="lien-he.html" class="float-support" aria-label="Hỗ trợ kỹ thuật">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
+</a>
+
+<!-- STICKY MOBILE CTA BAR -->
+<div class="hero-cta-bar" id="heroCtaBar" role="complementary" aria-label="Liên hệ nhanh">
+  <span class="cta-bar-text">
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-right:5px;color:var(--gold)" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    Tư vấn miễn phí
+  </span>
+  <a href="tel:0937729909" class="btn btn-gold btn-sm">Gọi Ngay</a>
+  <a href="https://zalo.me/0937729909" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
+</div>
+
+<script src="assets/js/main.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng",
+  "alternateName": "Sao Vàng Tech",
+  "url": "https://saovang.vn",
+  "logo": "https://saovang.vn/assets/images/logo.png",
+  "description": "Chuyên thiết kế, gia công và lắp đặt kết cấu cơ khí nhà ở, biệt thự và du thuyền hạng sang từ năm 2017.",
+  "foundingDate": "2017",
+  "telephone": "+84937729909",
+  "email": "info@saovang.vn",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "VN",
+    "addressRegion": "TP. Hồ Chí Minh"
+  },
+  "areaServed": ["TP. Hồ Chí Minh", "Hà Nội", "Đà Lạt", "Vịnh Hạ Long"],
+  "priceRange": "$",
+  "openingHours": "Mo-Sa 07:30-17:30",
+  "sameAs": [
+    "https://zalo.me/0937729909"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Dịch Vụ Cơ Khí Cao Cấp",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Thiết kế cơ khí nhà ở"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Thi công du thuyền cao cấp"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cầu thang & lan can inox"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Cổng & hàng rào cao cấp"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Bảo trì & sửa chữa"}}
+    ]
+  }
+}
+</script>
+
+<!-- STICKY MOBILE CTA BAR -->
+<div class="sticky-cta-bar" id="stickyCtaBar" role="complementary" aria-label="Liên hệ nhanh">
+  <a href="tel:0937729909" class="btn btn-gold btn-sm">
+    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    Gọi Ngay
+  </a>
+  <a href="https://zalo.me/0937729909" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
+  <a href="bao-gia.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
+</div>
+</body>
+</html>

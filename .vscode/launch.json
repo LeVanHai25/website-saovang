@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "🚀 Chạy CMS Server",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/cms/server.js",
+      "cwd": "${workspaceFolder}/cms",
+      "console": "integratedTerminal",
+      "restart": true,
+      "env": {
+        "NODE_ENV": "development",
+        "PORT": "4000"
+      }
+    }
+  ]
+}

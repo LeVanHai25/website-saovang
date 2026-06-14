@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#8B0000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Báo Giá Miễn Phí | SAO VÀNG — Cơ Khí Cao Cấp</title>
+  <meta name="description" content="Nhận báo giá miễn phí trong 2 giờ từ Sao Vàng. Chọn dịch vụ, điền thông tin và nhận báo giá chi tiết ngay hôm nay." />
+  <link rel="canonical" href="https://saovang.vn/bao-gia.html" />
+  <meta property="og:title" content="Báo Giá Miễn Phí | SAO VÀNG" />
+  <meta property="og:description" content="Nhận báo giá thi công cơ khí miễn phí trong 2 giờ. Sao Vàng — Chuyên gia cơ khí nhà ở và du thuyền từ 2017." />
+  <meta property="og:image" content="https://saovang.vn/assets/images/hero-interior.png" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preload" as="image" href="assets/images/hero-interior.png" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+  /* ══ QUOTE PAGE LAYOUT ═══════════════════════════════════════ */
+  .quote-section {
+    background: linear-gradient(135deg, var(--dark) 0%, #1a1a2e 100%);
+    min-height: 100svh;
+    padding: clamp(80px, 12vw, 140px) 0 clamp(60px, 8vw, 100px);
+    position: relative;
+    overflow: hidden;
+  }
+  .quote-section::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(139,0,0,.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(200,134,10,.08) 0%, transparent 40%);
+  }
+  .quote-inner {
+    position: relative; z-index: 1;
+    max-width: 780px; margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 32px);
+  }
+
+  /* Progress bar */
+  .quote-progress {
+    display: flex; align-items: center; gap: 0;
+    margin-bottom: clamp(32px, 5vw, 56px);
+  }
+  .progress-step {
+    display: flex; align-items: center; gap: 0; flex: 1;
+  }
+  .step-circle {
+    width: clamp(36px, 5vw, 44px); height: clamp(36px, 5vw, 44px);
+    border-radius: 50%; border: 2px solid rgba(255,255,255,.2);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--ff-head); font-size: 13px; font-weight: 800;
+    color: rgba(255,255,255,.4); flex-shrink: 0;
+    transition: all .35s var(--ease);
+    position: relative; z-index: 1;
+    background: #1a1a2e;
+  }
+  .step-circle.active {
+    border-color: var(--gold); color: var(--gold);
+    box-shadow: 0 0 0 4px rgba(200,134,10,.15);
+  }
+  .step-circle.done {
+    border-color: #4ade80; background: #4ade80; color: var(--dark);
+  }
+  .step-connector {
+    flex: 1; height: 2px;
+    background: rgba(255,255,255,.1);
+    position: relative; margin: 0 -1px;
+  }
+  .step-connector.done { background: var(--gold); }
+  .step-label {
+    position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%);
+    font-family: var(--ff-head); font-size: 10px; font-weight: 600;
+    letter-spacing: .06em; text-transform: uppercase;
+    color: rgba(255,255,255,.4); white-space: nowrap;
+    transition: color .3s;
+  }
+  .step-circle.active + .step-label { color: var(--gold-light); }
+  .step-circle.done + .step-label  { color: #4ade80; }
+
+  /* Quote card */
+  .quote-card {
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(20px);
+    padding: clamp(28px, 5vw, 52px) clamp(24px, 5vw, 52px);
+    margin-top: clamp(32px, 5vw, 48px);
+  }
+  .quote-step { display: none; }
+  .quote-step.active { display: block; animation: fadeInUp .4s ease both; }
+
+  .quote-step-label {
+    font-family: var(--ff-head); font-size: 11px; font-weight: 700;
+    letter-spacing: .14em; text-transform: uppercase;
+    color: var(--gold-light); margin-bottom: var(--sp-3);
+  }
+  .quote-step-title {
+    font-family: var(--ff-head); font-size: clamp(20px, 3vw, 28px);
+    font-weight: 900; color: var(--white); line-height: 1.2;
+    margin-bottom: var(--sp-2);
+  }
+  .quote-step-sub {
+    font-size: var(--fs-body); color: rgba(255,255,255,.55);
+    font-weight: 300; line-height: 1.7; margin-bottom: clamp(24px, 4vw, 36px);
+  }
+
+  /* Service selector cards */
+  .service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(10px, 2vw, 16px);
+    margin-bottom: clamp(24px, 4vw, 36px);
+  }
+  .svc-option {
+    border: 2px solid rgba(255,255,255,.12);
+    border-radius: var(--radius-md);
+    padding: clamp(14px, 2.5vw, 20px) clamp(12px, 2vw, 18px);
+    cursor: pointer; transition: all .25s var(--ease);
+    display: flex; flex-direction: column; gap: var(--sp-2);
+    background: rgba(255,255,255,.03);
+    position: relative; overflow: hidden;
+  }
+  .svc-option::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(200,134,10,.1), transparent);
+    opacity: 0; transition: opacity .25s;
+  }
+  .svc-option:hover { border-color: rgba(200,134,10,.4); }
+  .svc-option:hover::before { opacity: 1; }
+  .svc-option.selected {
+    border-color: var(--gold);
+    background: rgba(200,134,10,.08);
+    box-shadow: 0 0 0 3px rgba(200,134,10,.12);
+  }
+  .svc-option.selected::before { opacity: 1; }
+  .svc-check {
+    position: absolute; top: 10px; right: 10px;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--gold); display: none;
+    align-items: center; justify-content: center;
+  }
+  .svc-option.selected .svc-check { display: flex; }
+  .svc-icon { color: var(--gold-light); margin-bottom: var(--sp-1); }
+  .svc-name {
+    font-family: var(--ff-head); font-size: clamp(12px, 1.5vw, 14px);
+    font-weight: 700; color: var(--white); line-height: 1.3;
+  }
+  .svc-desc {
+    font-size: var(--fs-xs); color: rgba(255,255,255,.5); line-height: 1.5;
+  }
+
+  /* Quote form inputs */
+  .qform-group { display: flex; flex-direction: column; gap: 7px; margin-bottom: var(--sp-5); }
+  .qform-label {
+    font-family: var(--ff-head); font-size: 11px; font-weight: 700;
+    letter-spacing: .08em; text-transform: uppercase;
+    color: rgba(255,255,255,.6);
+  }
+  .qform-label.required::after { content: ' *'; color: var(--gold-light); }
+  .qform-input, .qform-select, .qform-textarea {
+    padding: 13px 16px;
+    border: 1.5px solid rgba(255,255,255,.15); border-radius: var(--radius);
+    background: rgba(255,255,255,.06);
+    font-family: var(--ff-body); font-size: var(--fs-body);
+    color: var(--white); min-height: 48px; width: 100%;
+    transition: border-color .2s, box-shadow .2s;
+    -webkit-appearance: none; appearance: none;
+  }
+  .qform-input::placeholder,
+  .qform-textarea::placeholder { color: rgba(255,255,255,.3); }
+  .qform-input:focus, .qform-select:focus, .qform-textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(200,134,10,.15);
+    background: rgba(255,255,255,.09);
+  }
+  .qform-select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.4)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 14px center;
+    background-size: 16px; padding-right: 44px;
+  }
+  .qform-select option { color: var(--dark); background: var(--white); }
+  .qform-textarea { min-height: 120px; resize: vertical; }
+
+  .qform-row {
+    display: grid; grid-template-columns: 1fr;
+    gap: var(--sp-4); margin-bottom: var(--sp-4);
+  }
+
+  /* Budget slider area */
+  .budget-options {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-3);
+  }
+  .budget-btn {
+    border: 1.5px solid rgba(255,255,255,.15); border-radius: var(--radius);
+    padding: 12px 16px; cursor: pointer; text-align: center;
+    font-family: var(--ff-head); font-size: var(--fs-xs); font-weight: 700;
+    color: rgba(255,255,255,.6); background: rgba(255,255,255,.04);
+    transition: all .2s; min-height: 44px; line-height: 1.4;
+  }
+  .budget-btn:hover  { border-color: rgba(200,134,10,.4); color: var(--gold-light); }
+  .budget-btn.active { border-color: var(--gold); color: var(--gold-light); background: rgba(200,134,10,.1); }
+
+  /* Navigation buttons */
+  .quote-nav {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: var(--sp-3); margin-top: clamp(24px, 4vw, 36px);
+    padding-top: clamp(20px, 3vw, 28px);
+    border-top: 1px solid rgba(255,255,255,.08);
+  }
+  .quote-nav .btn { min-width: 140px; }
+
+  /* Success state */
+  .quote-success {
+    text-align: center; padding: clamp(32px, 5vw, 56px) 0;
+    display: none;
+  }
+  .success-icon {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: rgba(74,222,128,.12); border: 2px solid #4ade80;
+    display: flex; align-items: center; justify-content: center;
+    color: #4ade80; margin: 0 auto var(--sp-6);
+    animation: successPop .5s cubic-bezier(0.34,1.56,0.64,1) both;
+  }
+  @keyframes successPop {
+    from { transform: scale(0) rotate(-180deg); opacity: 0; }
+    to   { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
+  .success-title {
+    font-family: var(--ff-head); font-size: clamp(22px, 3vw, 32px);
+    font-weight: 900; color: var(--white); margin-bottom: var(--sp-3);
+  }
+  .success-sub {
+    font-size: var(--fs-body-lg); color: rgba(255,255,255,.6);
+    font-weight: 300; line-height: 1.7; margin-bottom: var(--sp-7);
+    max-width: 480px; margin-left: auto; margin-right: auto;
+  }
+
+  /* Trust badges */
+  .trust-row {
+    display: flex; align-items: center; justify-content: center;
+    gap: clamp(16px, 4vw, 40px); flex-wrap: wrap;
+    margin-top: clamp(28px, 4vw, 44px);
+    padding-top: clamp(24px, 3vw, 32px);
+    border-top: 1px solid rgba(255,255,255,.08);
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 8px;
+    font-family: var(--ff-head); font-size: 11px; font-weight: 700;
+    letter-spacing: .04em; color: rgba(255,255,255,.5);
+  }
+  .trust-item svg { color: var(--gold-light); flex-shrink: 0; }
+
+  /* ══ RESPONSIVE ═══════════════════════════════════════════════ */
+  @media (min-width: 480px)  {
+    .service-grid  { grid-template-columns: repeat(3, 1fr); }
+    .budget-options { grid-template-columns: repeat(3, 1fr); }
+    .qform-row     { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 768px)  { .service-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1024px) { .service-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  /* ── sticky-cta-bar ─────────────────────────────────────── */
+  .sticky-cta-bar {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 890;
+    display: flex; gap: 8px; align-items: center;
+    background: #111; border-top: 1px solid rgba(255,255,255,.1);
+    padding: 10px 16px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -4px 24px rgba(0,0,0,.4);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+  .sticky-cta-bar .btn { flex: 1; justify-content: center; min-height: 40px; font-size: 12px; padding: 9px 12px; }
+  @media (min-width: 1024px) { .sticky-cta-bar { display: none !important; } }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    [data-reveal] { opacity: 1 !important; transform: none !important; }
+  }
+  </style>
+</head>
+<body>
+
+<header class="header" id="header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Sao Vàng — Trang chủ">
+      <span class="logo-badge" aria-hidden="true">SV</span>
+      <span class="logo-name">SAO VÀNG</span>
+    </a>
+    <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
+      <a href="index.html" class="nav-item">TRANG CHỦ</a>
+      <a href="gioi-thieu.html" class="nav-item">GIỚI THIỆU</a>
+      <a href="linh-vuc-hoat-dong.html" class="nav-item">LĨNH VỰC</a>
+      <a href="du-an.html" class="nav-item">DỰ ÁN</a>
+      <a href="san-pham.html" class="nav-item">SẢN PHẨM</a>
+      <a href="tin-tuc.html" class="nav-item">TIN TỨC</a>
+      <a href="lien-he.html" class="nav-item">LIÊN HỆ</a>
+      <a href="bao-gia.html" class="nav-item premium active" aria-current="page">+ BÁO GIÁ</a>
+    </nav>
+    <a href="tel:0937729909" class="header-phone" aria-label="Gọi hotline 093 7729 909">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      093 7729 909
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<!-- ══ QUOTE WIZARD ════════════════════════════════════════════ -->
+<section class="quote-section" id="quoteSection" aria-label="Yêu cầu báo giá">
+  <div class="quote-inner">
+
+    <!-- Progress -->
+    <nav class="quote-progress" aria-label="Các bước báo giá" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="3" id="quoteProgress">
+      <div class="progress-step">
+        <div class="step-circle active" id="sc1" aria-label="Bước 1: Dịch vụ">1
+          <span class="step-label">Dịch vụ</span>
+        </div>
+        <div class="step-connector" id="conn1"></div>
+      </div>
+      <div class="progress-step">
+        <div class="step-circle" id="sc2" aria-label="Bước 2: Thông tin">2
+          <span class="step-label">Thông tin</span>
+        </div>
+        <div class="step-connector" id="conn2"></div>
+      </div>
+      <div class="progress-step" style="flex:0">
+        <div class="step-circle" id="sc3" aria-label="Bước 3: Xác nhận">3
+          <span class="step-label">Xác nhận</span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Quote Card -->
+    <div class="quote-card">
+
+      <!-- ── STEP 1: Choose service ─────────────────────────── -->
+      <div class="quote-step active" id="step1">
+        <p class="quote-step-label">Bước 1 / 3</p>
+        <h1 class="quote-step-title">Bạn cần dịch vụ gì?</h1>
+        <p class="quote-step-sub">Chọn một hoặc nhiều dịch vụ. Chúng tôi sẽ báo giá chi tiết cho từng hạng mục.</p>
+
+        <div class="service-grid" role="group" aria-label="Chọn dịch vụ">
+          <div class="svc-option" tabindex="0" role="checkbox" aria-checked="false" data-svc="nha-o">
+            <div class="svc-check" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#111" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div class="svc-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <span class="svc-name">Cơ khí nhà ở</span>
+            <span class="svc-desc">Cổng, lan can, cầu thang, cửa</span>
+          </div>
+          <div class="svc-option" tabindex="0" role="checkbox" aria-checked="false" data-svc="du-thuyen">
+            <div class="svc-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#111" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="svc-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 20h20M12 4L4 10v10M20 10l-8-6"/><circle cx="12" cy="14" r="2"/></svg></div>
+            <span class="svc-name">Du thuyền</span>
+            <span class="svc-desc">Thiết kế, gia công nội thất tàu</span>
+          </div>
+          <div class="svc-option" tabindex="0" role="checkbox" aria-checked="false" data-svc="cau-thang">
+            <div class="svc-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#111" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="svc-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18M3 21V9l6-6h12v18"/><line x1="9" y1="21" x2="9" y2="9"/><line x1="15" y1="21" x2="15" y2="9"/></svg></div>
+            <span class="svc-name">Cầu thang & lan can</span>
+            <span class="svc-desc">Inox 304/316, kính cường lực</span>
+          </div>
+          <div class="svc-option" tabindex="0" role="checkbox" aria-checked="false" data-svc="cong-rao">
+            <div class="svc-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#111" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="svc-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+            <span class="svc-name">Cổng & hàng rào</span>
+            <span class="svc-desc">Cổng tự động, hàng rào nghệ thuật</span>
+          </div>
+          <div class="svc-option" tabindex="0" role="checkbox" aria-checked="false" data-svc="kinh">
+            <div class="svc-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#111" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="svc-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="18" rx="2"/><line x1="12" y1="3" x2="12" y2="21"/></svg></div>
+            <span class="svc-name">Cửa & vách kính</span>
+            <span class="svc-desc">Kính tempered, khung nhôm cao cấp</span>
+          </div>
+          <div class="svc-option" tabindex="0" role="checkbox" aria-checked="false" data-svc="bao-tri">
+            <div class="svc-check" aria-hidden="true"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#111" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="svc-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
+            <span class="svc-name">Bảo trì & sửa chữa</span>
+            <span class="svc-desc">Định kỳ, khẩn cấp 24/7</span>
+          </div>
+        </div>
+
+        <div class="quote-nav">
+          <div><!-- empty left --></div>
+          <button class="btn btn-gold" id="step1Next" onclick="goStep(2)">
+            Tiếp theo
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── STEP 2: Contact info ───────────────────────────── -->
+      <div class="quote-step" id="step2">
+        <p class="quote-step-label">Bước 2 / 3</p>
+        <h2 class="quote-step-title">Thông tin của bạn</h2>
+        <p class="quote-step-sub">Chúng tôi sẽ gửi báo giá qua số điện thoại hoặc email trong vòng 2 giờ làm việc.</p>
+
+        <form id="quoteForm" novalidate>
+          <div class="qform-row">
+            <div class="qform-group">
+              <label class="qform-label required" for="qName">Họ và tên</label>
+              <input class="qform-input" type="text" id="qName" name="name" placeholder="Nguyễn Văn A" required autocomplete="name" />
+            </div>
+            <div class="qform-group">
+              <label class="qform-label required" for="qPhone">Số điện thoại</label>
+              <input class="qform-input" type="tel" id="qPhone" name="phone" placeholder="093 7729 909" required autocomplete="tel" />
+            </div>
+          </div>
+
+          <div class="qform-group">
+            <label class="qform-label" for="qEmail">Email (nhận báo giá PDF)</label>
+            <input class="qform-input" type="email" id="qEmail" name="email" placeholder="email@example.com" autocomplete="email" />
+          </div>
+
+          <div class="qform-group">
+            <label class="qform-label required" for="qProvince">Tỉnh / Thành phố thi công</label>
+            <select class="qform-select" id="qProvince" name="province" required>
+              <option value="">— Chọn tỉnh thành —</option>
+              <option>TP. Hồ Chí Minh</option>
+              <option>Hà Nội</option>
+              <option>Đà Nẵng</option>
+              <option>Đà Lạt</option>
+              <option>Hạ Long / Quảng Ninh</option>
+              <option>Nha Trang / Khánh Hòa</option>
+              <option>Tỉnh / TP khác</option>
+            </select>
+          </div>
+
+          <div class="qform-group">
+            <label class="qform-label">Ngân sách dự kiến</label>
+            <div class="budget-options" role="group" aria-label="Chọn ngân sách">
+              <button type="button" class="budget-btn" data-budget="lt100">Dưới 100 triệu</button>
+              <button type="button" class="budget-btn" data-budget="100-500">100 – 500 triệu</button>
+              <button type="button" class="budget-btn" data-budget="500-2b">500 triệu – 2 tỷ</button>
+              <button type="button" class="budget-btn" data-budget="2-10b">2 – 10 tỷ</button>
+              <button type="button" class="budget-btn" data-budget="gt10b">Trên 10 tỷ</button>
+              <button type="button" class="budget-btn" data-budget="unknown">Chưa xác định</button>
+            </div>
+            <input type="hidden" id="qBudget" name="budget" />
+          </div>
+
+          <div class="qform-group">
+            <label class="qform-label" for="qNote">Mô tả yêu cầu</label>
+            <textarea class="qform-textarea" id="qNote" name="note" placeholder="Kích thước, vật liệu mong muốn, thời gian thi công..."></textarea>
+          </div>
+        </form>
+
+        <div class="quote-nav">
+          <button class="btn btn-ghost" onclick="goStep(1)" style="color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.15);">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Quay lại
+          </button>
+          <button class="btn btn-gold" id="step2Next" onclick="validateStep2()">
+            Xem lại & Gửi
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- ── STEP 3: Confirm ───────────────────────────────── -->
+      <div class="quote-step" id="step3">
+        <p class="quote-step-label">Bước 3 / 3</p>
+        <h2 class="quote-step-title">Xác nhận yêu cầu báo giá</h2>
+        <p class="quote-step-sub">Kiểm tra thông tin trước khi gửi. Chuyên gia sẽ liên hệ trong vòng 2 giờ làm việc.</p>
+
+        <div id="summaryBlock" style="
+          background: rgba(255,255,255,.05); border-radius: var(--radius-md);
+          border: 1px solid rgba(255,255,255,.1);
+          padding: clamp(18px,3vw,28px); margin-bottom: clamp(24px,4vw,32px);
+        "></div>
+
+        <div class="quote-nav">
+          <button class="btn btn-ghost" onclick="goStep(2)" style="color:rgba(255,255,255,.6);border-color:rgba(255,255,255,.15);">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            Chỉnh sửa
+          </button>
+          <button class="btn btn-gold" id="submitQuote" onclick="submitQuote()">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Gửi Yêu Cầu Báo Giá
+          </button>
+        </div>
+      </div>
+
+      <!-- ── SUCCESS ────────────────────────────────────────── -->
+      <div class="quote-success" id="quoteSuccess" role="alert">
+        <div class="success-icon">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h2 class="success-title">Gửi thành công!</h2>
+        <p class="success-sub">Chúng tôi đã nhận được yêu cầu của bạn. Chuyên gia Sao Vàng sẽ liên hệ trong vòng <strong style="color:var(--gold-light)">2 giờ làm việc</strong> để tư vấn và gửi báo giá chi tiết.</p>
+        <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap;">
+          <a href="tel:0937729909" class="btn btn-gold">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            Gọi ngay 093 7729 909
+          </a>
+          <a href="index.html" class="btn" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Về trang chủ</a>
+        </div>
+      </div>
+
+      <!-- Trust row -->
+      <div class="trust-row" aria-label="Cam kết chất lượng">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          Phản hồi trong 2h
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Bảo mật thông tin
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+          Miễn phí tư vấn
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/></svg>
+          300+ công trình
+        </div>
+      </div>
+
+    </div><!-- .quote-card -->
+  </div><!-- .quote-inner -->
+</section>
+
+<!-- FLOATS -->
+<div class="floats" role="complementary" aria-label="Liên hệ nhanh">
+  <a href="https://zalo.me/0937729909" class="float-btn float-chat" aria-label="Chat Zalo" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+  </a>
+  <a href="tel:0937729909" class="float-btn float-phone" aria-label="Gọi 093 7729 909">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+  </a>
+</div>
+
+<div class="sticky-cta-bar" id="stickyCtaBar" role="complementary" aria-label="Liên hệ nhanh">
+  <a href="tel:0937729909" class="btn btn-gold btn-sm">Gọi Ngay</a>
+  <a href="https://zalo.me/0937729909" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
+  <a href="lien-he.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Liên Hệ</a>
+</div>
+
+<script src="assets/js/main.js"></script>
+<script>
+/* ══ QUOTE WIZARD LOGIC ════════════════════════════════════════ */
+let currentStep = 1;
+let selectedServices = [];
+let selectedBudget = '';
+
+// Step navigation
+function goStep(n) {
+  document.getElementById('step' + currentStep).classList.remove('active');
+  document.getElementById('step' + n).classList.add('active');
+
+  // Update progress circles
+  for (let i = 1; i <= 3; i++) {
+    const el = document.getElementById('sc' + i);
+    el.classList.remove('active', 'done');
+    if (i < n)      el.classList.add('done');
+    else if (i === n) el.classList.add('active');
+  }
+  for (let i = 1; i <= 2; i++) {
+    const conn = document.getElementById('conn' + i);
+    if (conn) conn.classList.toggle('done', i < n);
+  }
+
+  if (n === 3) buildSummary();
+  currentStep = n;
+
+  // Scroll to top of card
+  document.querySelector('.quote-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Service selection (keyboard + click)
+document.querySelectorAll('.svc-option').forEach(opt => {
+  const toggle = () => {
+    const svc = opt.dataset.svc;
+    opt.classList.toggle('selected');
+    const checked = opt.classList.contains('selected');
+    opt.setAttribute('aria-checked', checked);
+    if (checked) selectedServices.push(svc);
+    else selectedServices = selectedServices.filter(s => s !== svc);
+  };
+  opt.addEventListener('click', toggle);
+  opt.addEventListener('keydown', e => { if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(); } });
+});
+
+// Budget selection
+document.querySelectorAll('.budget-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.budget-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    selectedBudget = btn.dataset.budget;
+    document.getElementById('qBudget').value = selectedBudget;
+  });
+});
+
+// Step 2 validation
+function validateStep2() {
+  const name  = document.getElementById('qName').value.trim();
+  const phone = document.getElementById('qPhone').value.trim();
+  const prov  = document.getElementById('qProvince').value;
+  if (!name || !phone || !prov) {
+    // Mark invalid fields
+    [['qName', name], ['qPhone', phone], ['qProvince', prov]].forEach(([id, val]) => {
+      const el = document.getElementById(id);
+      if (!val) { el.style.borderColor = 'var(--red)'; el.focus(); }
+      else el.style.borderColor = '';
+    });
+    return;
+  }
+  goStep(3);
+}
+
+// Build summary
+const SVC_LABELS = {
+  'nha-o': 'Cơ khí nhà ở', 'du-thuyen': 'Du thuyền cao cấp',
+  'cau-thang': 'Cầu thang & lan can', 'cong-rao': 'Cổng & hàng rào',
+  'kinh': 'Cửa & vách kính', 'bao-tri': 'Bảo trì & sửa chữa'
+};
+const BUDGET_LABELS = {
+  'lt100':'Dưới 100 triệu','100-500':'100 – 500 triệu',
+  '500-2b':'500 triệu – 2 tỷ','2-10b':'2 – 10 tỷ',
+  'gt10b':'Trên 10 tỷ','unknown':'Chưa xác định'
+};
+
+function buildSummary() {
+  const sb = document.getElementById('summaryBlock');
+  const svcs = selectedServices.map(s => SVC_LABELS[s] || s).join(', ') || '—';
+  const budget = BUDGET_LABELS[selectedBudget] || '—';
+  const name   = document.getElementById('qName').value;
+  const phone  = document.getElementById('qPhone').value;
+  const email  = document.getElementById('qEmail').value || '—';
+  const prov   = document.getElementById('qProvince').value || '—';
+  const note   = document.getElementById('qNote').value || '—';
+
+  sb.innerHTML = `
+    <div style="display:grid;gap:var(--sp-3)">
+      ${[
+        ['Dịch vụ', svcs], ['Họ tên', name], ['Điện thoại', phone],
+        ['Email', email], ['Tỉnh/TP', prov], ['Ngân sách', budget], ['Ghi chú', note]
+      ].map(([l, v]) => `
+        <div style="display:flex;align-items:flex-start;gap:var(--sp-3);padding:var(--sp-3) 0;border-bottom:1px solid rgba(255,255,255,.07)">
+          <span style="font-family:var(--ff-head);font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4);min-width:100px;padding-top:2px">${l}</span>
+          <span style="font-size:var(--fs-body);color:var(--white);font-weight:500;flex:1">${v}</span>
+        </div>
+      `).join('')}
+    </div>`;
+}
+
+// Submit
+function submitQuote() {
+  const btn = document.getElementById('submitQuote');
+  btn.disabled = true;
+  btn.innerHTML = `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="animation:spin 1s linear infinite"><polyline points="23 4 23 11 16 11"/><path d="M20.49 15a9 9 0 11-2.12-9.36L23 11"/></svg> Đang gửi...`;
+
+  const payload = {
+    services: selectedServices,
+    name:     document.getElementById('qName').value,
+    phone:    document.getElementById('qPhone').value,
+    email:    document.getElementById('qEmail').value,
+    province: document.getElementById('qProvince').value,
+    budget:   selectedBudget,
+    note:     document.getElementById('qNote').value,
+    source:   'bao-gia',
+    timestamp: new Date().toISOString()
+  };
+
+  // POST to CMS API
+  fetch('http://localhost:4000/api/contact', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(res => {
+    if (!res.ok) throw new Error('Server error');
+    showSuccess();
+  })
+  .catch(() => {
+    // Graceful fallback — store locally + show success anyway
+    const pending = JSON.parse(localStorage.getItem('sv_pending_quotes') || '[]');
+    pending.push(payload);
+    localStorage.setItem('sv_pending_quotes', JSON.stringify(pending));
+    showSuccess();
+  });
+}
+
+function showSuccess() {
+  document.querySelector('.quote-card').innerHTML = `
+    <div class="quote-success active" role="alert" style="display:block;text-align:center;padding:clamp(32px,5vw,56px) 0">
+      <div class="success-icon" style="width:72px;height:72px;border-radius:50%;background:rgba(74,222,128,.12);border:2px solid #4ade80;display:flex;align-items:center;justify-content:center;color:#4ade80;margin:0 auto var(--sp-6);animation:successPop .5s cubic-bezier(0.34,1.56,0.64,1) both">
+        <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <h2 style="font-family:var(--ff-head);font-size:clamp(22px,3vw,32px);font-weight:900;color:var(--white);margin-bottom:var(--sp-3)">Gửi thành công!</h2>
+      <p style="font-size:var(--fs-body-lg);color:rgba(255,255,255,.6);font-weight:300;line-height:1.7;margin-bottom:var(--sp-7);max-width:480px;margin-left:auto;margin-right:auto">
+        Chúng tôi đã nhận yêu cầu của bạn. Chuyên gia Sao Vàng sẽ liên hệ trong vòng
+        <strong style="color:var(--gold-light)">2 giờ làm việc</strong> để tư vấn và gửi báo giá chi tiết.
+      </p>
+      <div style="display:flex;gap:var(--sp-3);justify-content:center;flex-wrap:wrap">
+        <a href="tel:0937729909" class="btn btn-gold">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          Gọi ngay 093 7729 909
+        </a>
+        <a href="index.html" class="btn" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Về trang chủ</a>
+      </div>
+    </div>
+    <div class="trust-row" style="display:flex;align-items:center;justify-content:center;gap:clamp(16px,4vw,40px);flex-wrap:wrap;margin-top:clamp(28px,4vw,44px);padding-top:clamp(24px,3vw,32px);border-top:1px solid rgba(255,255,255,.08)">
+      <div class="trust-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Phản hồi trong 2h</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Bảo mật thông tin</div>
+      <div class="trust-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>Miễn phí tư vấn</div>
+    </div>`;
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Báo Giá Miễn Phí | SAO VÀNG",
+  "description": "Nhận báo giá thi công cơ khí cao cấp miễn phí trong 2 giờ từ Sao Vàng.",
+  "url": "https://saovang.vn/bao-gia.html",
+  "potentialAction": {
+    "@type": "QuoteAction",
+    "target": "https://saovang.vn/bao-gia.html"
+  }
+}
+</script>
+</body>
+</html>

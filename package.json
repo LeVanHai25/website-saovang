@@ -1,0 +1,14 @@
+{
+  "name": "saovang-website-root",
+  "version": "2.1.0",
+  "description": "Sao Vàng Website & CMS Root Package for Deployment",
+  "main": "start.js",
+  "scripts": {
+    "install-deps": "npm install --prefix cms",
+    "build": "npm run install-deps",
+    "start": "node start.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

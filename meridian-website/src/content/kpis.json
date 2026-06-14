@@ -1,0 +1,14 @@
+{
+  "summary": [
+    { "number": 17, "suffix": "+", "label": "Years of Excellence", "dataTarget": 17 },
+    { "number": 540, "suffix": "+", "label": "Projects Delivered", "dataTarget": 540 },
+    { "number": 200, "suffix": "+", "label": "Global Clients", "dataTarget": 200 },
+    { "number": 380, "suffix": "+", "label": "Professionals", "dataTarget": 380 }
+  ],
+  "journey": [
+    { "value": "5", "label": "Global Offices" },
+    { "value": "35×", "label": "Revenue Growth" },
+    { "value": "30×", "label": "Team Growth" },
+    { "value": "4", "label": "Continents" }
+  ]
+}
