@@ -16,36 +16,33 @@ initDb().then(db => {
 
   // Project categories
   [
-    ['Nhà ở & Biệt thự','nha-o-biet-thu','project','#8B0000',1],
-    ['Du thuyền','du-thuyen','project','#c8860a',2],
-    ['Cầu thang & Lan can','cau-thang-lan-can','project','#1a3a5c',3],
-    ['Cổng & Hàng rào','cong-hang-rao','project','#2d5a27',4],
-    ['Khung thép kết cấu','khung-thep','project','#4a4a4a',5],
-    ['Công trình công cộng','cong-trinh-cong-cong','project','#7B3F00',6],
+    ['Cơ khí nghệ thuật','co-khi-nghe-thuat','project','#8B0000',1],
+    ['Nhôm kính cao cấp','nhom-kinh-cao-cap','project','#0d4e8a',2],
+    ['Du thuyền hạng sang','du-thuyen-hang-sang','project','#c8860a',3],
+    ['Cửa & Vách kính','cua-vach-kinh','project','#1a3a5c',4],
+    ['Cầu thang & Lan can','cau-thang-lan-can','project','#5b5b5b',5],
+    ['Cổng & Hàng rào','cong-hang-rao','project','#2d5a27',6],
   ].forEach(r => ins.run(...r));
 
   // Product categories
   [
-    ['Vật liệu Inox','vat-lieu-inox','product','#c8860a',1],
-    ['Kính & Phụ kiện','kinh-phu-kien','product','#1a3a5c',2],
-    ['Thép kết cấu','thep-ket-cau','product','#4a4a4a',3],
-    ['Vật liệu hàng hải','vat-lieu-hang-hai','product','#0d4e8a',4],
-    ['Sơn & Bảo vệ bề mặt','son-bao-ve','product','#2d5a27',5],
-    ['Thiết bị gia công','thiet-bi-gia-cong','product','#7B3F00',6],
+    ['Cửa nhôm định hình','cua-nhom-dinh-hinh','product','#0d4e8a',1],
+    ['Kính cường lực & Phụ kiện','kinh-cuong-luc','product','#1a3a5c',2],
+    ['Lan can & Phụ kiện Inox','lan-can-inox','product','#c8860a',3],
+    ['Thép kết cấu','thep-ket-cau','product','#4a4a4a',4],
   ].forEach(r => ins.run(...r));
 
   // Article categories
   [
-    ['Xu hướng thiết kế','xu-huong','article','#c8860a',1],
-    ['Kiến thức vật liệu','kien-thuc','article','#1a3a5c',2],
-    ['Tin tức công ty','tin-tuc-cong-ty','article','#2d5a27',3],
-    ['Dự án nổi bật','du-an-noi-bat','article','#8B0000',4],
+    ['Xu hướng kiến trúc','xu-huong-kien-truc','article','#c8860a',1],
+    ['Kiến thức kỹ thuật','kien-thuc-ky-thuat','article','#1a3a5c',2],
+    ['Tin tức Sao Vàng','tin-tuc-sao-vang','article','#2d5a27',3],
   ].forEach(r => ins.run(...r));
 
   // Settings
   db.prepare('INSERT OR IGNORE INTO settings (key,value,type,label,group_name) VALUES (?,?,?,?,?)').run('site_logo','','text','Logo URL','general');
   db.prepare('INSERT OR IGNORE INTO settings (key,value,type,label,group_name) VALUES (?,?,?,?,?)').run('company_short','SAO VÀNG','text','Tên viết tắt','general');
-  db.prepare('INSERT OR IGNORE INTO settings (key,value,type,label,group_name) VALUES (?,?,?,?,?)').run('company_full','Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng','text','Tên đầy đủ công ty','general');
+  db.prepare('INSERT OR IGNORE INTO settings (key,value,type,label,group_name) VALUES (?,?,?,?,?)').run('company_full','CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG','text','Tên đầy đủ công ty','general');
   db.prepare('INSERT OR IGNORE INTO settings (key,value,type,label,group_name) VALUES (?,?,?,?,?)').run('logo_badge','SV','text','Logo badge text (2 ký tự)','general');
 
   db._persist();

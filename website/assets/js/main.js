@@ -390,4 +390,77 @@
     formObserver.observe(contactForm);
   }
 
+  /* ── Dynamic Branding Settings Synchronization ───────────────── */
+  const loadBrandingSettings = () => {
+    fetch('/api/public/settings')
+      .then(res => res.json())
+      .then(settings => {
+        if (!settings) return;
+
+        // 1. Update site phone numbers
+        const phone = settings.site_phone;
+        if (phone) {
+          const rawPhone = phone.replace(/\D/g, '');
+          document.querySelectorAll('a[href^="tel:"]').forEach(el => {
+            el.href = `tel:${rawPhone}`;
+            // Preserve child SVG if any
+            const svg = el.querySelector('svg');
+            el.textContent = '';
+            if (svg) el.appendChild(svg);
+            el.appendChild(document.createTextNode(' ' + phone));
+          });
+        }
+
+        // 2. Update logos (both header and footer)
+        const siteLogo = settings.site_logo;
+        const logoBadge = settings.logo_badge || 'SV';
+        const companyShort = settings.company_short || 'SAO VÀNG';
+
+        document.querySelectorAll('.logo').forEach(logoEl => {
+          if (siteLogo) {
+            const existingImg = logoEl.querySelector('img.dynamic-logo');
+            if (existingImg) {
+              existingImg.src = siteLogo;
+              existingImg.alt = companyShort;
+            } else {
+              logoEl.innerHTML = `<img src="${siteLogo}" alt="${companyShort}" class="dynamic-logo" style="height:38px; object-fit:contain; max-width:180px;" />`;
+            }
+          } else {
+            let badgeEl = logoEl.querySelector('.logo-badge');
+            let nameEl = logoEl.querySelector('.logo-name');
+            if (!badgeEl || !nameEl) {
+              logoEl.innerHTML = `<span class="logo-badge" aria-hidden="true">${logoBadge}</span><span class="logo-name">${companyShort}</span>`;
+            } else {
+              badgeEl.textContent = logoBadge;
+              nameEl.textContent = companyShort;
+            }
+          }
+        });
+
+        // 3. Update footer description
+        const companyFull = settings.company_full;
+        if (companyFull) {
+          const footerDesc = document.querySelector('.footer-brand p, #footerDesc');
+          if (footerDesc) {
+            const text = footerDesc.textContent;
+            if (text.includes('—')) {
+              const parts = text.split('—');
+              footerDesc.textContent = `${companyFull} —${parts.slice(1).join('—')}`;
+            } else {
+              footerDesc.textContent = companyFull;
+            }
+          }
+        }
+      })
+      .catch(err => console.warn('Failed to sync branding settings:', err));
+  };
+
+  // Run on load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', loadBrandingSettings);
+  } else {
+    loadBrandingSettings();
+  }
+
 })();
+

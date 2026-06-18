@@ -190,16 +190,16 @@ function _insertDefaults(sqljs) {
 
   // Default settings
   const settings = [
-    ['site_name',        'Sao Vàng',                          'text',  'Tên website',            'general'],
-    ['site_tagline',     'Cơ Khí Cao Cấp',                   'text',  'Tagline',                'general'],
+    ['site_name',        'Cơ Khí & Nhôm Kính Sao Vàng',       'text',  'Tên website',            'general'],
+    ['site_tagline',     'Bền vững với thời gian – Đem tinh hoa về cho đất Việt', 'text',  'Tagline',                'general'],
     ['site_email',       'info@saovang.vn',                   'text',  'Email liên hệ',           'general'],
-    ['site_phone',       '093 7729 909',                      'text',  'Số điện thoại',           'general'],
-    ['site_address',     'Việt Nam',                          'text',  'Địa chỉ',                'general'],
+    ['site_phone',       '0869 590 279',                      'text',  'Số điện thoại',           'general'],
+    ['site_address',     'Tầng 3, TT7-35 Khu đô thị Văn Phú, Phường Kiến Hưng, TP Hà Nội, Việt Nam', 'text',  'Địa chỉ', 'general'],
     ['facebook_url',     '',                                  'text',  'Facebook URL',            'social'],
     ['youtube_url',      '',                                  'text',  'YouTube URL',             'social'],
     ['zalo_url',         '',                                  'text',  'Zalo URL',                'social'],
     ['seo_title_suffix', '| SAO VÀNG',                        'text',  'SEO title suffix',        'seo'],
-    ['seo_description',  'Cơ khí thiết kế nhà ở & du thuyền cao cấp từ năm 2017', 'text', 'Default meta description', 'seo'],
+    ['seo_description',  'Chuyên thiết kế & thi công cơ khí nghệ thuật, nhôm kính kiến trúc cao cấp từ năm 2017', 'text', 'Default meta description', 'seo'],
     ['cdn_enabled',      '0',                                 'bool',  'CDN enabled',             'cdn'],
     ['cdn_base_url',     '',                                  'text',  'CDN Base URL',            'cdn'],
     ['smtp_host',        '',                                  'text',  'SMTP Host',               'email'],

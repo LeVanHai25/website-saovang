@@ -425,7 +425,8 @@ async function uploadLogo(input) {
   try {
     const { url } = await API.categories.uploadLogo(fd);
     statusEl.innerHTML = `<span style="color:var(--green,#22c55e)">✓ Upload thành công!</span>`;
-    Toast.success('Logo đã cài đặt! Refresh website để xem.');
+    Toast.success('Logo đã cài đặt!');
+    await loadBrandingSettings();
   } catch (e) {
     statusEl.textContent = 'Lỗi: ' + e.message;
     Toast.error(e.message);
@@ -444,7 +445,15 @@ async function saveBrandingSettings() {
   };
   try {
     await API.settings.update(payload);
-    Toast.success('Đã lưu thương hiệu! Refresh website để cập nhật.');
+    Toast.success('Đã lưu thương hiệu!');
+    if (payload.logo_badge) {
+      const badge = document.getElementById('adminLogoBadge');
+      if (badge) badge.textContent = payload.logo_badge;
+    }
+    if (payload.company_short) {
+      const name = document.getElementById('adminBrandName');
+      if (name) name.textContent = payload.company_short;
+    }
   } catch (e) { Toast.error(e.message); }
 }
 

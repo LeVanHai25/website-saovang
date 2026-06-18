@@ -956,3 +956,89 @@ input, select, textarea { font: inherit; }
   body { font-size: 12pt; }
   .section { padding: 24pt 0; }
 }
+
+/* ── Company Info Card (About & Contact Pages) ───────────────── */
+.company-info-card {
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: clamp(24px, 4vw, 40px);
+  background: #fafafa;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(24px, 4vw, 60px);
+  align-items: start;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.01);
+  margin-top: var(--sp-8);
+}
+.company-info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.company-info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-left: 2px solid var(--gray-200);
+  padding-left: clamp(16px, 3vw, 40px);
+}
+.company-info-row {
+  border-left: 3px solid var(--red);
+  padding-left: 12px;
+}
+.company-info-row strong {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-400);
+  margin-bottom: 3px;
+}
+.company-info-row span, 
+.company-info-row a {
+  font-size: clamp(14px, 1.8vw, 17px);
+  font-weight: 800;
+  color: var(--dark);
+  font-family: var(--ff-head);
+  line-height: 1.35;
+  text-decoration: none;
+}
+.company-info-row a:hover {
+  color: var(--gold);
+}
+.company-info-row .address-text {
+  font-family: var(--ff-body);
+  font-weight: 500;
+}
+.badge-active {
+  background: #2a7a2a;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.badge-shortname {
+  background: var(--red);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 768px) {
+  .company-info-card {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .company-info-details {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+

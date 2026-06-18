@@ -41,9 +41,9 @@ const HEADER_TEMPLATE = (activeHref) => {
 ${navItems}
       <a href="san-pham.html" class="nav-item premium">+ CAO CẤP</a>
     </nav>
-    <a href="tel:0937729909" class="header-phone" aria-label="Gọi hotline 093 7729 909">
+    <a href="tel:0869590279" class="header-phone" aria-label="Gọi hotline 0869 590 279">
       <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-      093 7729 909
+      0869 590 279
     </a>
     <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
       <span></span><span></span><span></span>
@@ -57,21 +57,21 @@ ${navItems}
 const STICKY_CTA = `
 <!-- STICKY MOBILE CTA BAR -->
 <div class="sticky-cta-bar" id="stickyCtaBar" role="complementary" aria-label="Liên hệ nhanh">
-  <a href="tel:0937729909" class="btn btn-gold btn-sm">
+  <a href="tel:0869590279" class="btn btn-gold btn-sm">
     <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
     Gọi Ngay
   </a>
-  <a href="https://zalo.me/0937729909" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
+  <a href="https://zalo.me/0869590279" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
   <a href="lien-he.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
 </div>`;
 
 // Floating buttons (fixed Zalo link)
 const FLOATS_HTML = `<!-- FLOATING BUTTONS -->
 <div class="floats" role="complementary" aria-label="Liên hệ nhanh">
-  <a href="https://zalo.me/0937729909" class="float-btn float-chat" aria-label="Chat Zalo" target="_blank" rel="noopener">
+  <a href="https://zalo.me/0869590279" class="float-btn float-chat" aria-label="Chat Zalo" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
   </a>
-  <a href="tel:0937729909" class="float-btn float-phone" aria-label="Gọi 093 7729 909">
+  <a href="tel:0869590279" class="float-btn float-phone" aria-label="Gọi 0869 590 279">
     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
   </a>
 </div>
@@ -102,6 +102,8 @@ const STICKY_CTA_CSS = `
 
 // Mapping: filename → which nav item is active
 const PAGE_ACTIVE_NAV = {
+  'index.html':             'index.html',
+  'bao-gia.html':           'bao-gia.html',
   'gioi-thieu.html':        'gioi-thieu.html',
   'linh-vuc-hoat-dong.html':'linh-vuc-hoat-dong.html',
   'du-an.html':             'du-an.html',
