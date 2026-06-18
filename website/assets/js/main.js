@@ -488,11 +488,86 @@
       .catch(err => console.warn('Failed to sync branding settings:', err));
   };
 
+  // File upload input visual handler
+  const setupFileUploads = () => {
+    document.querySelectorAll('.file-upload-input').forEach(input => {
+      const parent = input.closest('.file-upload-wrapper');
+      if (!parent) return;
+      const fileNameEl = parent.querySelector('.file-name');
+      input.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        if (file) {
+          fileNameEl.textContent = file.name;
+        } else {
+          fileNameEl.textContent = 'Chưa chọn file nào';
+        }
+      });
+    });
+  };
+
+  // Submit quote form on home page or other pages
+  const setupQuoteSubmit = () => {
+    const form = document.getElementById('homeQuoteForm');
+    if (!form) return;
+    
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'ĐANG GỬI...';
+      
+      try {
+        const formData = new FormData();
+        formData.append('name', document.getElementById('homeName').value);
+        formData.append('phone', document.getElementById('homePhone').value);
+        formData.append('province', document.getElementById('homeAddress').value);
+        formData.append('services', document.getElementById('homeService').value);
+        formData.append('note', document.getElementById('homeNote').value);
+        formData.append('source', 'homepage_inline');
+        
+        const fileInput = document.getElementById('homeUpload');
+        if (fileInput && fileInput.files[0]) {
+          formData.append('drawing', fileInput.files[0]);
+        }
+        
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          body: formData
+        });
+        
+        const result = await response.json();
+        
+        if (result.success) {
+          alert(result.message || 'Gửi yêu cầu báo giá thành công! Chúng tôi sẽ liên hệ trong 2 giờ.');
+          form.reset();
+          const fileNameEl = form.querySelector('.file-name');
+          if (fileNameEl) fileNameEl.textContent = 'Chưa chọn file nào';
+        } else {
+          alert(result.error || 'Có lỗi xảy ra, vui lòng thử lại sau.');
+        }
+      } catch (err) {
+        console.error('Error submitting form:', err);
+        alert('Có lỗi kết nối. Vui lòng thử lại sau.');
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalText;
+      }
+    });
+  };
+
   // Run on load
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadBrandingSettings);
-  } else {
+  const init = () => {
     loadBrandingSettings();
+    setupFileUploads();
+    setupQuoteSubmit();
+  };
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
   }
 
 })();

@@ -81,8 +81,9 @@ async function bootstrap() {
     });
   });
 
-  // ── Contact / Quote form submission ─────────────────────────
-  app.post('/api/contact', (req, res) => {
+  // ── Contact / Quote form submission (with upload support) ───
+  const { upload, getRelativePath } = require('./middleware/upload');
+  app.post('/api/contact', upload.single('drawing'), (req, res) => {
     try {
       const { getDb } = require('./database/db');
       const db = getDb();
@@ -108,22 +109,30 @@ async function bootstrap() {
           note      TEXT,
           source    TEXT DEFAULT 'website',
           status    TEXT DEFAULT 'new',
+          attachment TEXT,
           created_at TEXT DEFAULT (datetime('now','localtime'))
         )
       `).run();
 
+      // Ensure column exists for retro-compatibility
+      try {
+        db.prepare('ALTER TABLE leads ADD COLUMN attachment TEXT').run();
+      } catch (e) {}
+
+      const attachment = req.file ? `/uploads${getRelativePath(req.file.path).replace(/\\/g, '/')}` : null;
+
       const insert = db.prepare(`
-        INSERT INTO leads (name, phone, email, province, budget, services, note, source)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO leads (name, phone, email, province, budget, services, note, source, attachment)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
       `);
       const info = insert.run(
         name, phone, email || null, province || null,
         budget || null,
         Array.isArray(services) ? services.join(',') : (services || null),
-        note || null, source
+        note || null, source, attachment
       );
 
-      console.log(`[LEAD] New lead #${info.lastInsertRowid}: ${name} — ${phone} (${source})`);
+      console.log(`[LEAD] New lead #${info.lastInsertRowid}: ${name} — ${phone} (${source}) ${attachment ? 'with attachment' : ''}`);
 
       res.json({
         success: true,

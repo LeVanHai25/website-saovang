@@ -79,10 +79,11 @@ const STICKY_CTA = `
 <div class="sticky-cta-bar" id="stickyCtaBar" role="complementary" aria-label="Liên hệ nhanh">
   <a href="tel:0869590279" class="btn btn-gold btn-sm">
     <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-    Gọi Ngay
+    Gọi Điện
   </a>
-  <a href="https://zalo.me/0869590279" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
+  <a href="https://zalo.me/0869590279" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener" style="background:#0068ff; color:#fff; border-color:#0068ff;">Zalo</a>
   <a href="bao-gia.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
+  <a href="https://maps.google.com/?q=TT7-35+KĐT+Văn+Phú,+Hà+Đông,+Hà+Nội" class="btn btn-sm" target="_blank" rel="noopener" style="background:rgba(255,255,255,.05);color:#fff;border-color:rgba(255,255,255,.1)">Chỉ Đường</a>
 </div>`;
 
 // Floating buttons (fixed Zalo link)
@@ -98,6 +99,67 @@ const FLOATS_HTML = `<!-- FLOATING BUTTONS -->
 <a href="lien-he.html" class="float-support" aria-label="Hỗ trợ kỹ thuật">
   <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
 </a>`;
+
+// Shared footer template
+const FOOTER_TEMPLATE = `<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom:18px;">
+          <span class="logo-badge">SV</span>
+          <span class="logo-name">Cơ Khí Sao Vàng</span>
+        </a>
+        <p style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.7); margin-bottom:16px;">
+          <strong>Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng</strong><br>
+          MST: 0110461829 — Sở KH&ĐT Hà Nội cấp năm 2024.<br>
+          📍 Văn phòng: Tầng 3, TT7-35 KĐT Văn Phú, Hà Đông, Hà Nội.<br>
+          ⚙️ Nhà xưởng: Đường CN 6, KCN Bắc Từ Liêm, Hà Nội.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="social-link" aria-label="YouTube"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+          <a href="https://zalo.me/0869590279" class="social-link" aria-label="Zalo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><text y="17" font-size="12" font-weight="bold" font-family="Arial">Zalo</text></svg></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Dịch Vụ</h4>
+        <ul>
+          <li><a href="linh-vuc-hoat-dong.html#co-khi-division">Cơ khí nghệ thuật</a></li>
+          <li><a href="linh-vuc-hoat-dong.html#cua-nhom-cua-so">Cửa nhôm cao cấp</a></li>
+          <li><a href="linh-vuc-hoat-dong.html#vach-kinh-mat-dung">Vách kính &amp; Mặt dựng</a></li>
+          <li><a href="linh-vuc-hoat-dong.html#cau-thang-lan-can">Cầu thang uốn xoắn</a></li>
+          <li><a href="linh-vuc-hoat-dong.html#cong-hang-rao">Cổng nhôm đúc</a></li>
+          <li><a href="linh-vuc-hoat-dong.html#bao-tri-dich-vu">Bảo trì &amp; Kỹ thuật</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Công Ty</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+          <li><a href="du-an.html">Dự án thực hiện</a></li>
+          <li><a href="san-pham.html">Sản phẩm cao cấp</a></li>
+          <li><a href="tin-tuc.html">Tin tức &amp; Sự kiện</a></li>
+          <li><a href="lien-he.html">Liên hệ trực tiếp</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Bản Đồ</h4>
+        <div style="width:100%; border-radius:6px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); height:130px; margin-top:8px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.688172083984!2d105.77583627589578!3d20.965037990069354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adc71e3b2e3b%3A0xe5a3c2cf7e3c1b82!2zS0RUIFbEg24gUGjDugEsIEjDoCDEkMO0bmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1718712345678!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <span>© 2026 Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng. Bảo lưu mọi quyền.</span>
+      <span>Thiết kế &amp; phát triển bởi Sao Vàng Tech</span>
+    </div>
+  </div>
+</footer>`;
+
 
 // Sticky CTA CSS (added to each page's <style> block)
 const STICKY_CTA_CSS = `
@@ -149,11 +211,13 @@ Object.entries(PAGE_ACTIVE_NAV).forEach(([filename, activeHref]) => {
   const origLen = html.length;
 
   try {
-    // ── 1. Add theme-color meta if missing ────────────────────
-    if (!html.includes('theme-color')) {
+    // ── 1. Add theme-color meta if missing / update to luxury red ──
+    if (html.includes('theme-color')) {
+      html = html.replace(/<meta name="theme-color" content="[^"]*"\s*\/?>/gi, '<meta name="theme-color" content="#A50000" />');
+    } else {
       html = html.replace(
         '<meta name="viewport"',
-        '<meta name="theme-color" content="#8B0000" />\n  <meta name="viewport"'
+        '<meta name="theme-color" content="#A50000" />\n  <meta name="viewport"'
       );
     }
 
@@ -211,6 +275,13 @@ Object.entries(PAGE_ACTIVE_NAV).forEach(([filename, activeHref]) => {
 
     // ── 8. Statically replace "SAO VÀNG" in footer logo with "Cơ Khí Sao Vàng" ─
     html = html.replace(/(<span class="logo-name"[^>]*>)\s*SAO VÀNG\s*(<\/span>)/gi, '$1Cơ Khí Sao Vàng$2');
+
+    // ── 9. Replace footer block with expanded template ────────
+    const footerStart = html.indexOf('<footer class="footer"');
+    if (footerStart !== -1) {
+      const footerEnd = html.indexOf('</footer>', footerStart) + '</footer>'.length;
+      html = html.slice(0, footerStart) + FOOTER_TEMPLATE + html.slice(footerEnd);
+    }
 
     fs.writeFileSync(filePath, html, 'utf8');
     const delta = html.length - origLen;
