@@ -41,7 +41,7 @@ initDb().then(db => {
 
   // Settings
   db.prepare('INSERT OR IGNORE INTO settings (key,value,type,label,group_name) VALUES (?,?,?,?,?)').run('site_logo','','text','Logo URL','general');
-  db.prepare('INSERT OR IGNORE INTO settings (key,value,type,label,group_name) VALUES (?,?,?,?,?)').run('company_short','SAO VÀNG','text','Tên viết tắt','general');
+  db.prepare('INSERT OR IGNORE INTO settings (key,value,type,label,group_name) VALUES (?,?,?,?,?)').run('company_short','Cơ Khí Sao Vàng','text','Tên viết tắt','general');
   db.prepare('INSERT OR IGNORE INTO settings (key,value,type,label,group_name) VALUES (?,?,?,?,?)').run('company_full','CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG','text','Tên đầy đủ công ty','general');
   db.prepare('INSERT OR IGNORE INTO settings (key,value,type,label,group_name) VALUES (?,?,?,?,?)').run('logo_badge','SV','text','Logo badge text (2 ký tự)','general');
 

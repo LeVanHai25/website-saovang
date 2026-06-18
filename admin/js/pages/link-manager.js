@@ -327,7 +327,7 @@ async function loadBrandingSettings() {
     const { values } = await API.settings.get('general');
     const logoUrl   = values.site_logo || '';
     const badgeText = values.logo_badge || 'SV';
-    const compShort = values.company_short || values.site_name || 'SAO VÀNG';
+    const compShort = values.company_short || values.site_name || 'Cơ Khí Sao Vàng';
 
     document.getElementById('settingsContent').innerHTML = `
       <div class="form-section">
@@ -370,7 +370,7 @@ async function loadBrandingSettings() {
         <div class="form-row" style="margin-bottom:14px">
           <div class="field-group">
             <label class="field-label">Tên viết tắt (hiển trong header)</label>
-            <input type="text" id="s_company_short" class="field-input" value="${Utils.esc(values.company_short||'')}" placeholder="SAO VÀNG" oninput="document.getElementById('logoNamePreview').textContent=this.value" />
+            <input type="text" id="s_company_short" class="field-input" value="${Utils.esc(values.company_short||'')}" placeholder="Cơ Khí Sao Vàng" oninput="document.getElementById('logoNamePreview').textContent=this.value" />
           </div>
           <div class="field-group">
             <label class="field-label">Tên đầy đủ công ty</label>

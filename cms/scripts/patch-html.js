@@ -33,9 +33,9 @@ const HEADER_TEMPLATE = (activeHref) => {
 
   return `<header class="header" id="header" role="banner">
   <div class="header-inner">
-    <a href="index.html" class="logo" aria-label="Sao Vàng — Trang chủ">
+    <a href="index.html" class="logo" aria-label="Cơ Khí Sao Vàng — Trang chủ">
       <span class="logo-badge" aria-hidden="true">SV</span>
-      <span class="logo-name">SAO VÀNG</span>
+      <span class="logo-name">Cơ Khí Sao Vàng</span>
     </a>
     <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
 ${navItems}
@@ -153,27 +153,28 @@ Object.entries(PAGE_ACTIVE_NAV).forEach(([filename, activeHref]) => {
       html = html.replace('</style>', STICKY_CTA_CSS + '\n  </style>');
     }
 
-    // ── 4. Replace header block with responsive version ───────
+    // ── 4. Replace header block with responsive version (cleaning up duplicate backdrops) ───
     const headerStart = html.indexOf('<header class="header"');
-    const headerEnd   = html.indexOf('</header>') + '</header>'.length;
-    if (headerStart !== -1 && headerEnd > headerStart) {
+    if (headerStart !== -1) {
+      let headerEnd = html.indexOf('</header>') + '</header>'.length;
+      while (true) {
+        const remaining = html.slice(headerEnd, headerEnd + 200);
+        const m = remaining.match(/^\s*<div class="nav-backdrop"[^>]*><\/div>/);
+        if (m) {
+          headerEnd += m[0].length;
+        } else {
+          break;
+        }
+      }
       const newHeader = HEADER_TEMPLATE(activeHref);
       html = html.slice(0, headerStart) + newHeader + html.slice(headerEnd);
     }
 
-    // ── 5. Replace float buttons block ────────────────────────
-    // Remove old floats + float-support
+    // ── 5. Replace float buttons block (cleaning up duplicate float blocks) ─────────────────
     html = html.replace(
-      /<!-- FLOATING BUTTONS -->[\s\S]*?<\/a>\s*\n/,
+      /(?:<!-- FLOATING BUTTONS -->|<!-- FLOATS -->)?\s*<div class="floats"[\s\S]*?<\/div>(?:\s*<a href="[^"]*" class="float-support"[\s\S]*?<\/a>)?/g,
       FLOATS_HTML + '\n'
     );
-    // Also handle if floats appear without comment
-    if (!html.includes('zalo.me')) {
-      html = html.replace(
-        /href="#" class="float-btn float-chat"/g,
-        'href="https://zalo.me/0937729909" class="float-btn float-chat" aria-label="Chat Zalo" target="_blank" rel="noopener"'
-      );
-    }
 
     // ── 6. Inject sticky CTA bar before </body> ───────────────
     if (!html.includes('sticky-cta-bar') && !html.includes('stickyCtaBar')) {

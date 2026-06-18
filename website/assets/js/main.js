@@ -414,7 +414,7 @@
         // 2. Update logos (both header and footer)
         const siteLogo = settings.site_logo;
         const logoBadge = settings.logo_badge || 'SV';
-        const companyShort = settings.company_short || 'SAO VÀNG';
+        const companyShort = settings.company_short || 'Cơ Khí Sao Vàng';
 
         document.querySelectorAll('.logo').forEach(logoEl => {
           if (siteLogo) {

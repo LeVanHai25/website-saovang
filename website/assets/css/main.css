@@ -4,7 +4,7 @@
    Breakpoints: 390 · 480 · 640 · 768 · 1024 · 1280 · 1440 · 1920 · 2560
 ════════════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;600&display=swap&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Open+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@1,500&display=swap');
 
 /* ── Reset & Base ─────────────────────────────────────────────── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
