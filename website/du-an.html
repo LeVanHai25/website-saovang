@@ -597,10 +597,10 @@ async function initProjectsPage() {
 function applySettings(s) {
   if (s.logo_badge)    { ['logoBadge','footerLogoBadge'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = s.logo_badge; }); }
   if (s.company_short) { ['logoName','footerLogoName'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = s.company_short; }); }
-  if (s.company_full)  { document.getElementById('footerDesc').textContent = s.company_full + ' — Chuyên thiết kế & thi công cơ khí nhà ở và du thuyền cao cấp.'; }
-  if (s.site_phone)    { document.getElementById('footerPhone').textContent = s.site_phone; }
-  if (s.site_email)    { document.getElementById('footerEmail').textContent = s.site_email; }
-  if (s.site_name)     { document.getElementById('footerCopyright').textContent = `© ${new Date().getFullYear()} ${s.company_full || s.site_name}. Bảo lưu mọi quyền.`; }
+  if (s.company_full)  { const el = document.getElementById('footerDesc'); if(el) el.textContent = s.company_full + ' — Chuyên thiết kế & thi công cơ khí nhà ở và du thuyền cao cấp.'; }
+  if (s.site_phone)    { const el = document.getElementById('footerPhone'); if(el) el.textContent = s.site_phone; }
+  if (s.site_email)    { const el = document.getElementById('footerEmail'); if(el) el.textContent = s.site_email; }
+  if (s.site_name)     { const el = document.getElementById('footerCopyright'); if(el) el.textContent = `© ${new Date().getFullYear()} ${s.company_full || s.site_name}. Bảo lưu mọi quyền.`; }
 }
 
 function renderFilterBar(cats) {
