@@ -30,7 +30,7 @@
   @media (prefers-reduced-motion: reduce) { .hero-bg img { animation: none; } }
   .hero-overlay {
     position:absolute; inset:0;
-    background: linear-gradient(180deg, rgba(0,0,0,0.48) 0%, rgba(0,0,0,0.40) 55%, rgba(0,0,0,0.75) 100%);
+    background: linear-gradient(180deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.50) 50%, rgba(0,0,0,0.85) 100%);
   }
   @keyframes heroZoom { from{transform:scale(1.0)} to{transform:scale(1.06)} }
   @keyframes fadeUp  { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
@@ -46,36 +46,57 @@
   }
   .hero-overline {
     font-family: var(--ff-head);
-    font-size: clamp(12px, 1.8vw, 15px);
-    font-weight: 700; letter-spacing: 0.28em;
+    font-size: clamp(11px, 1.6vw, 14px);
+    font-weight: 700; letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--gold-light);
     text-shadow: 0 2px 12px rgba(0,0,0,0.5);
-    margin-bottom: clamp(16px, 3vw, 24px);
+    margin-bottom: clamp(8px, 1.5vw, 14px);
     animation: fadeUp .8s ease both;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .hero-overline::before,
+  .hero-overline::after {
+    content: '';
+    flex: 1;
+    max-width: 60px;
+    height: 1px;
+    background: var(--gold-light);
+    opacity: 0.6;
   }
   .hero-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: clamp(12px, 2.5vw, 20px);
-    margin-bottom: clamp(24px, 4vw, 36px);
+    gap: 0;
+    margin-bottom: clamp(20px, 3.5vw, 32px);
     animation: fadeUp .9s .1s ease both;
   }
   .hero-title .slogan-1 {
     font-family: var(--ff-head);
-    font-size: clamp(26px, 5vw, 64px);
+    font-size: clamp(30px, 5.5vw, 72px);
     font-weight: 900;
     text-transform: uppercase;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.05em;
     color: var(--white);
-    text-shadow: 0 4px 30px rgba(0,0,0,0.6);
+    text-shadow: 0 4px 32px rgba(0,0,0,0.7), 0 1px 0 rgba(255,255,255,0.15);
     display: block;
     line-height: 1.1;
+    padding-bottom: clamp(12px, 2vw, 18px);
+  }
+  .hero-title .slogan-divider {
+    width: clamp(60px, 10vw, 120px);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+    margin: 0 auto clamp(12px, 2vw, 18px);
+    display: block;
+    opacity: 0.85;
   }
   .hero-title .slogan-2 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(18px, 3.5vw, 36px);
+    font-size: clamp(20px, 4vw, 42px);
     font-weight: 500;
     font-style: italic;
     color: var(--gold-light);
@@ -209,6 +230,37 @@
   .svc-card p { font-size: var(--fs-sm); font-weight:300; color:rgba(255,255,255,.58); line-height:1.7; margin-bottom: var(--sp-4); }
   .svc-link { font-family:var(--ff-head); font-size:12px; font-weight:700; letter-spacing:.05em; color:var(--gold-light); display:inline-flex; align-items:center; gap:5px; transition:gap .2s; }
   .svc-card:hover .svc-link { gap:9px; }
+
+  /* Homepage Division Headers */
+  .homepage-division-header {
+    margin-block: 38px 20px;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.12);
+    padding-bottom: 14px;
+    text-align: left;
+  }
+  .homepage-division-header h3 {
+    font-family: var(--ff-head);
+    font-size: clamp(15px, 2.2vw, 19px);
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    display: inline-block;
+  }
+  .division-badge {
+    font-family: var(--ff-head);
+    font-size: 9px;
+    font-weight: 800;
+    color: var(--gold);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: rgba(200, 134, 10, 0.15);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-right: 14px;
+    vertical-align: middle;
+    display: inline-block;
+  }
 
   /* ══ PROJECTS ════════════════════════════════════════════ */
   .proj-grid {
@@ -364,11 +416,27 @@
     <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
       <a href="index.html" class="nav-item active" aria-current="page">TRANG CHỦ</a>
       <a href="gioi-thieu.html" class="nav-item">GIỚI THIỆU</a>
-      <a href="linh-vuc-hoat-dong.html" class="nav-item">LĨNH VỰC</a>
+      <div class="nav-dropdown">
+        <a href="linh-vuc-hoat-dong.html" class="nav-item">
+          LĨNH VỰC
+          <svg class="chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown-menu">
+          <a href="linh-vuc-hoat-dong.html#co-khi-division" class="dropdown-item">
+            <span class="dropdown-title">Cơ Khí Nghệ Thuật</span>
+            <span class="dropdown-desc">Cửa cổng nhôm đúc, cầu thang xoắn, sắt nghệ thuật uốn tay</span>
+          </a>
+          <a href="linh-vuc-hoat-dong.html#nhom-kinh-division" class="dropdown-item">
+            <span class="dropdown-title">Nhôm Kính Kiến Trúc</span>
+            <span class="dropdown-desc">Cửa nhôm Class A, Slim profile, vách mặt dựng, cabin kính</span>
+          </a>
+        </div>
+      </div>
       <a href="du-an.html" class="nav-item">DỰ ÁN</a>
       <a href="san-pham.html" class="nav-item">SẢN PHẨM</a>
       <a href="tin-tuc.html" class="nav-item">TIN TỨC</a>
       <a href="lien-he.html" class="nav-item">LIÊN HỆ</a>
+      <a href="bao-gia.html" class="nav-item" style="color:var(--gold);font-weight:700">BÁO GIÁ</a>
       <a href="san-pham.html" class="nav-item premium">+ CAO CẤP</a>
     </nav>
     <a href="tel:0869590279" class="header-phone" aria-label="Gọi hotline 0869 590 279">
@@ -389,9 +457,10 @@
     <div class="hero-overlay"></div>
   </div>
   <div class="hero-content">
-    <p class="hero-overline">CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG</p>
+    <p class="hero-overline">CƠ KHÍ SAO VÀNG</p>
     <h1 class="hero-title">
       <span class="slogan-1">Bền Vững Với Thời Gian</span>
+      <span class="slogan-divider" aria-hidden="true"></span>
       <span class="slogan-2">Đem tinh hoa về cho đất Việt</span>
     </h1>
     <p class="hero-sub">Sao Vàng chuyên tư vấn, thiết kế, gia công lắp đặt các sản phẩm cơ khí nghệ thuật, nhôm cửa &amp; cửa sổ kính kiến trúc và nội thất kim loại cao cấp theo tiêu chuẩn quốc tế.</p>
@@ -408,7 +477,7 @@
     <div class="stat-div"></div>
     <div class="stat-item"><span class="stat-num" data-counter>300+</span><span class="stat-lbl">Công Trình Hoàn Thành</span></div>
     <div class="stat-div"></div>
-    <div class="stat-item"><span class="stat-num" data-counter>50+</span><span class="stat-lbl">Du Thuyền Bàn Giao</span></div>
+    <div class="stat-item"><span class="stat-num" data-counter>50+</span><span class="stat-lbl">Dự Án Tiêu Biểu</span></div>
     <div class="stat-div"></div>
     <div class="stat-item"><span class="stat-num">24/7</span><span class="stat-lbl">Hỗ Trợ Kỹ Thuật</span></div>
   </div>
@@ -465,42 +534,61 @@
       <h2 class="section-title white">Lĩnh Vực <span class="gold">Hoạt Động</span></h2>
       <p class="section-desc white" style="margin:0 auto;">Cân bằng hai thế mạnh: Cơ khí nghệ thuật tinh xảo & Hệ thống nhôm cửa, vách kính kiến trúc cao cấp</p>
     </div>
-    <div class="svc-grid">
+    <!-- DIVISION I: CƠ KHÍ & SẮT MỸ THUẬT -->
+    <div class="homepage-division-header" data-reveal>
+      <span class="division-badge">Phân Khu I</span>
+      <h3>Cơ Khí &amp; Sắt Mỹ Thuật Chế Tác</h3>
+    </div>
+    <div class="svc-grid" style="margin-bottom: 32px;">
+      <!-- Card 01 -->
       <div class="svc-card" data-reveal>
         <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
-        <h3>Cơ Khí Nghệ Thuật</h3>
-        <p>Thiết kế, chế tác sắt nghệ thuật uốn thủ công, hoa văn rèn mỹ nghệ cao cấp cho các biệt thự, lâu đài sang trọng.</p>
+        <h3>Chế Tác Cơ Khí Nghệ Thuật</h3>
+        <p>Tư vấn, thiết kế, gia công chế tác các sản phẩm sắt uốn thủ công nghệ thuật, chi tiết uốn lượn cổ điển tinh xảo cho biệt thự, lâu đài.</p>
         <a href="linh-vuc-hoat-dong.html#co-khi-nghe-thuat" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
       </div>
-      <div class="svc-card" data-reveal data-reveal-delay="1" style="border-color:rgba(200,134,10,.3);background:rgba(200,134,10,.08);">
-        <div style="position:absolute;top:14px;right:14px;" class="badge badge-gold">Nổi Bật</div>
-        <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
-        <h3>Cửa Nhôm &amp; Cửa Sổ</h3>
-        <p>Sản xuất thi công các hệ cửa nhôm định hình cao cấp Xingfa Class A, hệ cửa Slim siêu mảnh, cửa trượt nâng đồng bộ.</p>
-        <a href="linh-vuc-hoat-dong.html#cua-nhom-cua-so" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-      <div class="svc-card" data-reveal data-reveal-delay="2">
-        <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg></div>
-        <h3>Vách Kính &amp; Mặt Dựng</h3>
-        <p>Lắp đặt vách kính mặt dựng Unitized cản nhiệt Low-E khổ lớn, cabin tắm kính và hệ vách kính cường lực ngăn phòng.</p>
-        <a href="linh-vuc-hoat-dong.html#vach-kinh-mat-dung" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-      <div class="svc-card" data-reveal>
+      <!-- Card 02 -->
+      <div class="svc-card" data-reveal data-reveal-delay="1">
         <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div>
-        <h3>Cầu Thang &amp; Lan Can</h3>
-        <p>Cầu thang xoắn kết cấu thép uốn nghệ thuật, lan can inox mạ vàng titan sang trọng, lan can kính cường lực chịu lực.</p>
+        <h3>Cầu Thang &amp; Lan Can Nghệ Thuật</h3>
+        <p>Cầu thang xoắn ốc kết cấu thép tấm lốc CNC phức tạp, lan can sắt rèn thủ công nghệ thuật hoặc inox mạ vàng titan PVD chân không.</p>
         <a href="linh-vuc-hoat-dong.html#cau-thang-lan-can" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
       </div>
-      <div class="svc-card" data-reveal data-reveal-delay="1">
+      <!-- Card 03 -->
+      <div class="svc-card" data-reveal data-reveal-delay="2">
         <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></div>
-        <h3>Cổng &amp; Hàng Rào</h3>
-        <p>Cổng nhôm đúc nguyên tấm cao cấp, hàng rào sắt rèn mỹ thuật mạ kẽm nhúng nóng chống ăn mòn ngoài trời trọn đời.</p>
+        <h3>Cổng Nhôm Đúc &amp; Hàng Rào</h3>
+        <p>Gia công đúc chân không hợp kim nhôm nguyên khối cho hệ cổng chính, hàng rào sắt mỹ nghệ rèn tay mạ kẽm nhúng nóng chống gỉ trọn đời.</p>
         <a href="linh-vuc-hoat-dong.html#cong-hang-rao" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
       </div>
+    </div>
+
+    <!-- DIVISION II: CỬA NHÔM & KÍNH KIẾN TRÚC -->
+    <div class="homepage-division-header" data-reveal>
+      <span class="division-badge">Phân Khu II</span>
+      <h3>Cửa Nhôm &amp; Kính Kiến Trúc Cao Cấp</h3>
+    </div>
+    <div class="svc-grid">
+      <!-- Card 04 -->
+      <div class="svc-card" data-reveal style="border-color:rgba(200,134,10,.3);background:rgba(200,134,10,.08);">
+        <div style="position:absolute;top:14px;right:14px;" class="badge badge-gold">Nổi Bật</div>
+        <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+        <h3>Cửa Nhôm &amp; Cửa Sổ Cao Cấp</h3>
+        <p>Sản xuất lắp ráp hệ nhôm Xingfa Class A phủ sơn PVDF kháng muối biển, hệ cửa trượt Slim siêu mảnh panorama và cửa trượt nâng giảm chấn.</p>
+        <a href="linh-vuc-hoat-dong.html#cua-nhom-cua-so" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <!-- Card 05 -->
+      <div class="svc-card" data-reveal data-reveal-delay="1">
+        <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg></div>
+        <h3>Vách Kính &amp; Mặt Dựng Kiến Trúc</h3>
+        <p>Giải pháp tổng thể mặt dựng Unitized khổ lớn cách âm cách nhiệt cản tia UV với kính Low-E, cabin tắm kính và vách kính văn phòng sang trọng.</p>
+        <a href="linh-vuc-hoat-dong.html#vach-kinh-mat-dung" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </div>
+      <!-- Card 06 -->
       <div class="svc-card" data-reveal data-reveal-delay="2">
         <div class="svc-icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg></div>
-        <h3>Bảo Trì &amp; Dịch Vụ</h3>
-        <p>Bảo trì định kỳ cửa nhôm kính, thay thế phụ kiện chính hãng, xử lý chống thấm dột vách kính, đánh bóng inox du thuyền.</p>
+        <h3>Bảo Trì &amp; Dịch Vụ Kỹ Thuật</h3>
+        <p>Dịch vụ hậu mãi ưu việt: bảo dưỡng cân chỉnh cửa nhôm kính định kỳ, chống thấm dột vách dựng và phục hồi tẩy gỉ inox marine du thuyền.</p>
         <a href="linh-vuc-hoat-dong.html#bao-tri-dich-vu" class="svc-link">Xem chi tiết <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
       </div>
     </div>
@@ -523,27 +611,27 @@
     </div>
     <div class="proj-grid">
       <div class="proj-card large" data-reveal>
-        <img src="assets/images/project-villa.png" alt="Biệt thự nghỉ dưỡng" / loading="lazy">
+        <img src="assets/images/project-dalat-villa.png" alt="Biệt thự nghỉ dưỡng" / loading="lazy">
         <div class="proj-overlay">
           <span class="proj-cat">Cơ Khí Nhà Ở</span>
           <h3>Biệt Thự Nghỉ Dưỡng Đà Lạt</h3>
-          <p>Cầu thang inox, lan can kính, cổng nhôm đúc cổ điển — 2.5 tỷ VNĐ</p>
+          <p>Cầu thang inox uốn lượn, vách dựng kính cao cấp cản nhiệt Low-E — 2.5 tỷ VNĐ</p>
         </div>
       </div>
       <div class="proj-card" data-reveal data-reveal-delay="1">
-        <img src="assets/images/project-yacht.png" alt="Du thuyền Sao Biển" / loading="lazy">
+        <img src="assets/images/project-saobien-yacht.png" alt="Du thuyền Sao Biển" / loading="lazy">
         <div class="proj-overlay">
           <span class="proj-cat">Du Thuyền</span>
           <h3>Du Thuyền 28m "Sao Biển"</h3>
-          <p>Vịnh Hạ Long — 18 tỷ VNĐ</p>
+          <p>Lan can inox marine 316L, gia công cơ khí hàng hải — 18 tỷ VNĐ</p>
         </div>
       </div>
       <div class="proj-card" data-reveal data-reveal-delay="2">
-        <img src="assets/images/hero-interior.png" alt="Penthouse Sky Garden" / loading="lazy">
+        <img src="assets/images/project-penthouse.png" alt="Penthouse Sky Garden" / loading="lazy">
         <div class="proj-overlay">
           <span class="proj-cat">Cầu Thang &amp; Lan Can</span>
           <h3>Penthouse Tòa Sky Garden</h3>
-          <p>Inox 316 + kính cường lực — 850 triệu VNĐ</p>
+          <p>Cầu thang xoắn ốc kết cấu uốn CNC, lan can kính cường lực — 850 triệu VNĐ</p>
         </div>
       </div>
     </div>
@@ -632,7 +720,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="logo" style="margin-bottom:18px;"><span class="logo-badge">SV</span><span class="logo-name">SAO VÀNG</span></div>
+        <div class="logo" style="margin-bottom:18px;"><span class="logo-badge">SV</span><span class="logo-name">Cơ Khí Sao Vàng</span></div>
         <p>Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng — Chuyên thiết kế &amp; thi công cơ khí nhà ở và du thuyền cao cấp từ năm 2024.</p>
         <div class="footer-socials">
           <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
@@ -689,15 +777,11 @@
 </a>
 
 
-<!-- STICKY MOBILE CTA BAR -->
-<div class="hero-cta-bar" id="heroCtaBar" role="complementary" aria-label="Liên hệ nhanh">
-  <span class="cta-bar-text">
-    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-right:5px;color:var(--gold)" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-    Tư vấn miễn phí
-  </span>
-  <a href="tel:0869590279" class="btn btn-gold btn-sm">Gọi Ngay</a>
-  <a href="https://zalo.me/0869590279" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
-</div>
+
+
+
+
+
 
 <script src="assets/js/main.js"></script>
 

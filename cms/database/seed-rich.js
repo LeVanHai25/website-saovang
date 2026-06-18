@@ -30,7 +30,7 @@ initDb().then(db => {
     {
       title: 'Du Thuyền Cao Cấp 28m "Sao Biển"',
       patch: { slug: 'du-thuyen-cao-cap-28m-sao-bien', category: 'Du thuyền' },
-      meta:  { client: 'Cty Du lịch Ha Long', project_value: '18 tỷ VNĐ', location: 'Vịnh Hạ Long, Quảng Ninh', year: '2023', duration: '8 tháng', challenge: 'Tiêu chuẩn kỹ thuật hàng hải quốc tế, chịu được sóng gió cấp 8.', solution: 'Sử dụng inox marine 316L và thép hàng hải chuyên dụng, hàn TIG đạt chuẩn Lloyds.', result: 'Du thuyền đã hoàn thành 200+ chuyến vịnh Hạ Long, được báo chí quốc tế đánh giá cao.' },
+      meta:  { client: 'Cty Du lịch Ha Long', project_value: '18 tỷ VNĐ', location: 'Vịnh Hạ Long, Quảng Ninh', year: '2024', duration: '8 tháng', challenge: 'Tiêu chuẩn kỹ thuật hàng hải quốc tế, chịu được sóng gió cấp 8.', solution: 'Sử dụng inox marine 316L và thép hàng hải chuyên dụng, hàn TIG đạt chuẩn Lloyds.', result: 'Du thuyền đã hoàn thành 200+ chuyến vịnh Hạ Long, được báo chí quốc tế đánh giá cao.' },
     },
   ];
 
@@ -57,7 +57,7 @@ initDb().then(db => {
       type: 'project', title: 'Cổng Dinh Thự Cổ Điển Sài Gòn', slug: 'cong-dinh-thu-co-dien-sai-gon',
       excerpt: 'Cổng sắt rèn nghệ thuật, hàng rào nhôm đúc cổ điển cho dinh thự tư nhân — thiết kế độc bản, hoàn toàn thủ công.',
       category: 'Cổng & Hàng rào', featured: 0,
-      meta: { client: 'Gia đình Hoàng', project_value: '450 triệu VNĐ', location: 'TP. Hồ Chí Minh', year: '2023', duration: '6 tuần' },
+      meta: { client: 'Gia đình Hoàng', project_value: '450 triệu VNĐ', location: 'TP. Hồ Chí Minh', year: '2024', duration: '6 tuần' },
     },
     {
       type: 'project', title: 'Du Thuyền Resort 5 Sao Phú Quốc', slug: 'du-thuyen-resort-phu-quoc',

@@ -25,10 +25,30 @@ const HEADER_TEMPLATE = (activeHref) => {
     { href: 'san-pham.html',         label: 'SẢN PHẨM' },
     { href: 'tin-tuc.html',          label: 'TIN TỨC' },
     { href: 'lien-he.html',          label: 'LIÊN HỆ' },
+    { href: 'bao-gia.html',          label: 'BÁO GIÁ', isGold: true },
   ];
   const navItems = items.map(i => {
     const active = i.href === activeHref ? ' active" aria-current="page' : '';
-    return `      <a href="${i.href}" class="nav-item${active}">${i.label}</a>`;
+    const styleAttr = i.isGold ? ' style="color:var(--gold);font-weight:700"' : '';
+    if (i.href === 'linh-vuc-hoat-dong.html') {
+      return `      <div class="nav-dropdown">
+        <a href="linh-vuc-hoat-dong.html" class="nav-item${active}">
+          ${i.label}
+          <svg class="chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown-menu">
+          <a href="linh-vuc-hoat-dong.html#co-khi-division" class="dropdown-item">
+            <span class="dropdown-title">Cơ Khí Nghệ Thuật</span>
+            <span class="dropdown-desc">Cửa cổng nhôm đúc, cầu thang xoắn, sắt nghệ thuật uốn tay</span>
+          </a>
+          <a href="linh-vuc-hoat-dong.html#nhom-kinh-division" class="dropdown-item">
+            <span class="dropdown-title">Nhôm Kính Kiến Trúc</span>
+            <span class="dropdown-desc">Cửa nhôm Class A, Slim profile, vách mặt dựng, cabin kính</span>
+          </a>
+        </div>
+      </div>`;
+    }
+    return `      <a href="${i.href}" class="nav-item${active}"${styleAttr}>${i.label}</a>`;
   }).join('\n');
 
   return `<header class="header" id="header" role="banner">
@@ -62,7 +82,7 @@ const STICKY_CTA = `
     Gọi Ngay
   </a>
   <a href="https://zalo.me/0869590279" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
-  <a href="lien-he.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
+  <a href="bao-gia.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
 </div>`;
 
 // Floating buttons (fixed Zalo link)
@@ -188,6 +208,9 @@ Object.entries(PAGE_ACTIVE_NAV).forEach(([filename, activeHref]) => {
         '<script src="assets/js/cms-client.js"></script>\n<script src="assets/js/main.js">'
       );
     }
+
+    // ── 8. Statically replace "SAO VÀNG" in footer logo with "Cơ Khí Sao Vàng" ─
+    html = html.replace(/(<span class="logo-name"[^>]*>)\s*SAO VÀNG\s*(<\/span>)/gi, '$1Cơ Khí Sao Vàng$2');
 
     fs.writeFileSync(filePath, html, 'utf8');
     const delta = html.length - origLen;

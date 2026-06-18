@@ -18,7 +18,7 @@ initDb().then(db => {
               result:    'Công trình hoàn thiện đúng tiến độ, được chủ đầu tư đánh giá 5 sao.' } },
     // id=6 Du Thuyền 28m Sao Biển
     { id: 6, slug: 'du-thuyen-28m-sao-bien', category: 'Du thuyền',
-      meta: { client: 'Cty Du lịch Hạ Long', project_value: '18 tỷ VNĐ', location: 'Vịnh Hạ Long, Quảng Ninh', year: '2023', duration: '8 tháng',
+      meta: { client: 'Cty Du lịch Hạ Long', project_value: '18 tỷ VNĐ', location: 'Vịnh Hạ Long, Quảng Ninh', year: '2024', duration: '8 tháng',
               challenge: 'Tiêu chuẩn kỹ thuật hàng hải quốc tế, chịu được sóng gió cấp 8.',
               solution:  'Sử dụng inox marine 316L và thép hàng hải chuyên dụng, hàn TIG đạt chuẩn Lloyds.',
               result:    'Du thuyền đã hoàn thành 200+ chuyến vịnh Hạ Long, được báo chí quốc tế đánh giá cao.' } },
@@ -31,7 +31,7 @@ initDb().then(db => {
       meta: { client: 'Gia đình Trần', project_value: '850 triệu VNĐ', location: 'Hà Nội', year: '2024', area: '280m²', duration: '2 tháng' } },
     // id=13 Cổng Dinh Thự
     { id: 13, slug: 'cong-dinh-thu-co-dien-sai-gon', category: 'Cổng & Hàng rào',
-      meta: { client: 'Gia đình Hoàng', project_value: '450 triệu VNĐ', location: 'TP. Hồ Chí Minh', year: '2023', duration: '6 tuần' } },
+      meta: { client: 'Gia đình Hoàng', project_value: '450 triệu VNĐ', location: 'TP. Hồ Chí Minh', year: '2024', duration: '6 tuần' } },
     // id=14 Du Thuyền Phú Quốc
     { id: 14, slug: 'du-thuyen-resort-phu-quoc', category: 'Du thuyền',
       meta: { client: 'Tập đoàn Sun Group', project_value: '24 tỷ VNĐ', location: 'Phú Quốc', year: '2024', duration: '12 tháng' } },

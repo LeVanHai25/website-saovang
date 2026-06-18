@@ -417,11 +417,30 @@
               return;
             }
             
-            // Update standard hotline links (header, footer, etc.)
+            // Update standard hotline links (header, footer, etc.) while preserving prefix text
+            let textNodesContent = '';
+            el.childNodes.forEach(node => {
+              if (node.nodeType === Node.TEXT_NODE) {
+                textNodesContent += node.textContent;
+              }
+            });
+            textNodesContent = textNodesContent.trim();
+            const digitIndex = textNodesContent.search(/\d/);
+            let prefix = '';
+            if (digitIndex > 0) {
+              prefix = textNodesContent.substring(0, digitIndex);
+            } else if (digitIndex === 0) {
+              prefix = ' ';
+            } else if (textNodesContent) {
+              prefix = textNodesContent + ' ';
+            } else {
+              prefix = ' ';
+            }
+            
             const svg = el.querySelector('svg');
             el.textContent = '';
             if (svg) el.appendChild(svg);
-            el.appendChild(document.createTextNode(' ' + phone));
+            el.appendChild(document.createTextNode(prefix + phone));
           });
         }
 

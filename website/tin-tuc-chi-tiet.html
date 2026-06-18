@@ -85,11 +85,27 @@
     <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
       <a href="index.html" class="nav-item">TRANG CHỦ</a>
       <a href="gioi-thieu.html" class="nav-item">GIỚI THIỆU</a>
-      <a href="linh-vuc-hoat-dong.html" class="nav-item">LĨNH VỰC</a>
+      <div class="nav-dropdown">
+        <a href="linh-vuc-hoat-dong.html" class="nav-item">
+          LĨNH VỰC
+          <svg class="chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown-menu">
+          <a href="linh-vuc-hoat-dong.html#co-khi-division" class="dropdown-item">
+            <span class="dropdown-title">Cơ Khí Nghệ Thuật</span>
+            <span class="dropdown-desc">Cửa cổng nhôm đúc, cầu thang xoắn, sắt nghệ thuật uốn tay</span>
+          </a>
+          <a href="linh-vuc-hoat-dong.html#nhom-kinh-division" class="dropdown-item">
+            <span class="dropdown-title">Nhôm Kính Kiến Trúc</span>
+            <span class="dropdown-desc">Cửa nhôm Class A, Slim profile, vách mặt dựng, cabin kính</span>
+          </a>
+        </div>
+      </div>
       <a href="du-an.html" class="nav-item">DỰ ÁN</a>
       <a href="san-pham.html" class="nav-item">SẢN PHẨM</a>
       <a href="tin-tuc.html" class="nav-item active" aria-current="page">TIN TỨC</a>
       <a href="lien-he.html" class="nav-item">LIÊN HỆ</a>
+      <a href="bao-gia.html" class="nav-item" style="color:var(--gold);font-weight:700">BÁO GIÁ</a>
       <a href="san-pham.html" class="nav-item premium">+ CAO CẤP</a>
     </nav>
     <a href="tel:0869590279" class="header-phone" aria-label="Gọi hotline 0869 590 279">
@@ -208,7 +224,7 @@
 </section>
 
 <footer class="footer"><div class="container"><div class="footer-grid">
-  <div class="footer-brand"><div class="logo" style="margin-bottom:18px"><span class="logo-badge" id="footerBadge">SV</span><span class="logo-name" id="footerName">SAO VÀNG</span></div><p id="footerDesc">Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng</p></div>
+  <div class="footer-brand"><div class="logo" style="margin-bottom:18px"><span class="logo-badge" id="footerBadge">SV</span><span class="logo-name" id="footerName">Cơ Khí Sao Vàng</span></div><p id="footerDesc">Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng</p></div>
   <div class="footer-col"><h4>Tin Tức</h4><ul><li><a href="tin-tuc.html">Tất cả bài viết</a></li></ul></div>
   <div class="footer-col"><h4>Công Ty</h4><ul><li><a href="gioi-thieu.html">Giới thiệu</a></li><li><a href="du-an.html">Dự án</a></li><li><a href="san-pham.html">Sản phẩm</a></li><li><a href="lien-he.html">Liên hệ</a></li></ul></div>
   <div class="footer-col"><h4>Liên Hệ</h4><div class="footer-contact-item"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 014.69 12a19.79 19.79 0 01-3.07-8.67A2 2 0 013.6 1.27h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L7.91 8.37a16 16 0 006.29 6.29l.91-.91a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><span><strong>Hotline</strong><a href="tel:0869590279" id="footerPhone">0869 590 279</a></span></div></div>
@@ -224,6 +240,11 @@
 <a href="lien-he.html" class="float-support" aria-label="Hỗ trợ kỹ thuật">
   <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
 </a>
+
+
+
+
+
 
 
 
