@@ -16,14 +16,24 @@ async function run() {
     await new Promise((resolve, reject) => {
       seedProcess.on('close', (code) => {
         if (code === 0) {
-          console.log('✅ Seeding completed successfully.');
+          console.log('✅ Base seeding completed.');
           resolve();
         } else {
-          reject(new Error(`Seeding failed with exit code: ${code}`));
+          reject(new Error(`Base seeding failed with exit code: ${code}`));
         }
       });
-      seedProcess.on('error', (err) => {
-        reject(err);
+    });
+
+    console.log('🗃️ Upgrading database with 15 premium projects...');
+    const upgradeProcess = spawn('node', ['cms/database/reset-db-content.js'], { stdio: 'inherit', shell: true });
+    await new Promise((resolve, reject) => {
+      upgradeProcess.on('close', (code) => {
+        if (code === 0) {
+          console.log('✅ Premium projects seeded successfully.');
+          resolve();
+        } else {
+          reject(new Error(`Premium seeding failed with exit code: ${code}`));
+        }
       });
     });
   } else {
