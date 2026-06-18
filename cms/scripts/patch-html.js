@@ -22,6 +22,7 @@ const HEADER_TEMPLATE = (activeHref) => {
     { href: 'gioi-thieu.html',       label: 'GIỚI THIỆU' },
     { href: 'linh-vuc-hoat-dong.html', label: 'LĨNH VỰC' },
     { href: 'du-an.html',            label: 'DỰ ÁN' },
+    { href: 'nang-luc.html',         label: 'NĂNG LỰC' },
     { href: 'san-pham.html',         label: 'SẢN PHẨM' },
     { href: 'tin-tuc.html',          label: 'TIN TỨC' },
     { href: 'lien-he.html',          label: 'LIÊN HỆ' },
@@ -37,13 +38,29 @@ const HEADER_TEMPLATE = (activeHref) => {
           <svg class="chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </a>
         <div class="dropdown-menu">
-          <a href="linh-vuc-hoat-dong.html#co-khi-division" class="dropdown-item">
+          <a href="co-khi-nghe-thuat.html" class="dropdown-item">
             <span class="dropdown-title">Cơ Khí Nghệ Thuật</span>
-            <span class="dropdown-desc">Cửa cổng nhôm đúc, cầu thang xoắn, sắt nghệ thuật uốn tay</span>
+            <span class="dropdown-desc">Mái kính, sắt nghệ thuật uốn tay, inox marine 316L</span>
           </a>
-          <a href="linh-vuc-hoat-dong.html#nhom-kinh-division" class="dropdown-item">
-            <span class="dropdown-title">Nhôm Kính Kiến Trúc</span>
-            <span class="dropdown-desc">Cửa nhôm Class A, Slim profile, vách mặt dựng, cabin kính</span>
+          <a href="cau-thang-xoan.html" class="dropdown-item">
+            <span class="dropdown-title">Cầu Thang Xoắn</span>
+            <span class="dropdown-desc">Cầu thang xoắn ốc thép uốn, xương cá nghệ thuật</span>
+          </a>
+          <a href="cong-nghe-thuat.html" class="dropdown-item">
+            <span class="dropdown-title">Cổng &amp; Hàng Rào</span>
+            <span class="dropdown-desc">Cổng nhôm đúc chân không, cổng sắt mỹ thuật rèn tay</span>
+          </a>
+          <a href="cua-nhom-kinh.html" class="dropdown-item">
+            <span class="dropdown-title">Cửa Nhôm Kính</span>
+            <span class="dropdown-desc">Hệ cửa nhôm Slim profile, Xingfa Class A phủ PVDF</span>
+          </a>
+          <a href="vach-kinh.html" class="dropdown-item">
+            <span class="dropdown-title">Vách Kính Mặt Dựng</span>
+            <span class="dropdown-desc">Vách kính Unitized khổ lớn, vách kính chịu lực ngắm cảnh</span>
+          </a>
+          <a href="lan-can-kinh.html" class="dropdown-item">
+            <span class="dropdown-title">Lan Can Kính</span>
+            <span class="dropdown-desc">Lan can kính cường lực, ban công sắt uốn nghệ thuật</span>
           </a>
         </div>
       </div>`;
@@ -190,6 +207,13 @@ const PAGE_ACTIVE_NAV = {
   'linh-vuc-hoat-dong.html':'linh-vuc-hoat-dong.html',
   'du-an.html':             'du-an.html',
   'du-an-chi-tiet.html':    'du-an.html',
+  'nang-luc.html':          'nang-luc.html',
+  'co-khi-nghe-thuat.html': 'linh-vuc-hoat-dong.html',
+  'cau-thang-xoan.html':    'linh-vuc-hoat-dong.html',
+  'cong-nghe-thuat.html':   'linh-vuc-hoat-dong.html',
+  'cua-nhom-kinh.html':     'linh-vuc-hoat-dong.html',
+  'vach-kinh.html':         'linh-vuc-hoat-dong.html',
+  'lan-can-kinh.html':      'linh-vuc-hoat-dong.html',
   'san-pham.html':          'san-pham.html',
   'san-pham-chi-tiet.html': 'san-pham.html',
   'tin-tuc.html':           'tin-tuc.html',

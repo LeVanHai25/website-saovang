@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#A50000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Năng Lực Sản Xuất & Xưởng Chế Tác | Cơ Khí Sao Vàng</title>
+  <meta name="description" content="Khám phá xưởng cơ khí 800m² tại KCN Bắc Từ Liêm của Sao Vàng. Trang bị máy cắt Laser Fiber 6000W CNC, máy chấn 100T, đội ngũ thợ hàn AWS/ASME đạt chuẩn ISO 9001:2015." />
+  <link rel="preload" as="image" href="assets/images/hero-services.png" />
+  <meta property="og:title" content="Năng Lực Sản Xuất & Xưởng Chế Tác | Cơ Khí Sao Vàng" />
+  <meta property="og:description" content="Xưởng cơ khí 800m² tại KCN Bắc Từ Liêm, trang bị máy cắt Laser Fiber 6000W CNC, máy chấn 100T, tiêu chuẩn ISO 9001:2015." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://saovang.vn/nang-luc.html" />
+  <meta property="og:image" content="https://saovang.vn/assets/images/workshop_cnc.png" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    /* PAGE CUSTOM OVERRIDES */
+    .factory-intro {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(32px, 6vw, 64px);
+      align-items: center;
+    }
+    .factory-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .factory-stat-card {
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      padding: 16px;
+      border-radius: var(--radius);
+      text-align: center;
+    }
+    .factory-stat-num {
+      font-family: var(--ff-head);
+      font-size: clamp(20px, 3vw, 28px);
+      font-weight: 800;
+      color: var(--red);
+    }
+    .factory-stat-label {
+      font-size: 11px;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+    .qaqc-section {
+      background: var(--dark);
+      color: var(--white);
+      padding-block: var(--section-py);
+    }
+    .qaqc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--sp-6);
+      margin-top: var(--sp-6);
+    }
+    .qaqc-card {
+      background: var(--dark-2);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-md);
+      padding: var(--sp-5);
+      position: relative;
+    }
+    .qaqc-card h3 {
+      font-family: var(--ff-head);
+      font-size: var(--fs-body-lg);
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-bottom: var(--sp-2);
+    }
+    .qaqc-card p {
+      font-size: var(--fs-sm);
+      color: var(--gray-400);
+      line-height: 1.6;
+    }
+    @media (min-width: 1024px) {
+      .factory-intro {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  
+  /* ══ STICKY BOTTOM CTA (mobile) ══════════════════════════════ */
+  .sticky-cta-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 890;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: #111;
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding: 10px 16px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -4px 24px rgba(0,0,0,.4);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+  .sticky-cta-bar .btn { flex: 1; justify-content: center; min-height: 40px; }
+  @media (min-width: 1024px) { .sticky-cta-bar { display: none !important; } }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER PLACEHOLDER - WILL BE PATCHED -->
+  <header class="header" id="header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Cơ Khí Sao Vàng — Trang chủ">
+      <span class="logo-badge" aria-hidden="true">SV</span>
+      <span class="logo-name">Cơ Khí Sao Vàng</span>
+    </a>
+    <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
+      <a href="index.html" class="nav-item">TRANG CHỦ</a>
+      <a href="gioi-thieu.html" class="nav-item">GIỚI THIỆU</a>
+      <div class="nav-dropdown">
+        <a href="linh-vuc-hoat-dong.html" class="nav-item">
+          LĨNH VỰC
+          <svg class="chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown-menu">
+          <a href="co-khi-nghe-thuat.html" class="dropdown-item">
+            <span class="dropdown-title">Cơ Khí Nghệ Thuật</span>
+            <span class="dropdown-desc">Mái kính, sắt nghệ thuật uốn tay, inox marine 316L</span>
+          </a>
+          <a href="cau-thang-xoan.html" class="dropdown-item">
+            <span class="dropdown-title">Cầu Thang Xoắn</span>
+            <span class="dropdown-desc">Cầu thang xoắn ốc thép uốn, xương cá nghệ thuật</span>
+          </a>
+          <a href="cong-nghe-thuat.html" class="dropdown-item">
+            <span class="dropdown-title">Cổng &amp; Hàng Rào</span>
+            <span class="dropdown-desc">Cổng nhôm đúc chân không, cổng sắt mỹ thuật rèn tay</span>
+          </a>
+          <a href="cua-nhom-kinh.html" class="dropdown-item">
+            <span class="dropdown-title">Cửa Nhôm Kính</span>
+            <span class="dropdown-desc">Hệ cửa nhôm Slim profile, Xingfa Class A phủ PVDF</span>
+          </a>
+          <a href="vach-kinh.html" class="dropdown-item">
+            <span class="dropdown-title">Vách Kính Mặt Dựng</span>
+            <span class="dropdown-desc">Vách kính Unitized khổ lớn, vách kính chịu lực ngắm cảnh</span>
+          </a>
+          <a href="lan-can-kinh.html" class="dropdown-item">
+            <span class="dropdown-title">Lan Can Kính</span>
+            <span class="dropdown-desc">Lan can kính cường lực, ban công sắt uốn nghệ thuật</span>
+          </a>
+        </div>
+      </div>
+      <a href="du-an.html" class="nav-item">DỰ ÁN</a>
+      <a href="nang-luc.html" class="nav-item active" aria-current="page">NĂNG LỰC</a>
+      <a href="san-pham.html" class="nav-item">SẢN PHẨM</a>
+      <a href="tin-tuc.html" class="nav-item">TIN TỨC</a>
+      <a href="lien-he.html" class="nav-item">LIÊN HỆ</a>
+      <a href="bao-gia.html" class="nav-item" style="color:var(--gold);font-weight:700">BÁO GIÁ</a>
+      <a href="san-pham.html" class="nav-item premium">+ CAO CẤP</a>
+    </nav>
+    <a href="tel:0869590279" class="header-phone" aria-label="Gọi hotline 0869 590 279">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      0869 590 279
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <main role="main">
+    <!-- PAGE HERO -->
+    <section class="page-hero" role="banner">
+      <div class="page-hero-bg">
+        <img src="assets/images/hero-services.png" alt="Xưởng cơ khí Sao Vàng CNC hiện đại" />
+      </div>
+      <div class="container page-hero-content">
+        <span class="tag white">HỒ SƠ NĂNG LỰC</span>
+        <h1 class="page-hero-title">NĂNG LỰC SẢN XUẤT</h1>
+        <p class="page-hero-desc">Quy mô xưởng 800m², trang thiết bị cơ khí phụ trợ CNC chính xác, đội ngũ thợ lành nghề, quy trình kiểm soát QA/QC chặt chẽ đạt tiêu chuẩn ISO 9001:2015.</p>
+      </div>
+    </section>
+
+    <!-- INTRO & STATS -->
+    <section class="section">
+      <div class="container">
+        <div class="factory-intro">
+          <div>
+            <span class="tag">QUY MÔ NHÀ XƯỞNG</span>
+            <h2 class="section-title">Nhà Xưởng Chế Tác Cơ Khí Phụ Trợ Hiện Đại</h2>
+            <p class="section-desc" style="margin-bottom: 20px;">Tọa lạc tại <strong>Đường CN 6, Khu công nghiệp Bắc Từ Liêm, Hà Nội</strong>, xưởng sản xuất của Sao Vàng được thiết kế tối ưu hóa theo quy trình một chiều. Từ khâu tập kết vật tư nguyên liệu, gia công phôi thô CNC, chế tác rèn uốn nghệ thuật, sơn phủ hoàn thiện và kiểm tra đóng gói xuất xưởng.</p>
+            <p class="section-desc">Chúng tôi đầu tư mạnh mẽ vào các giải pháp công nghệ cao để giảm thiểu sai số chế tác, nâng cao độ bền bề mặt sản phẩm kim loại dưới điều kiện khí hậu ẩm ướt và gió muối biển đặc trưng tại Việt Nam.</p>
+            <div class="factory-stats-grid">
+              <div class="factory-stat-card">
+                <div class="factory-stat-num">800 m²</div>
+                <div class="factory-stat-label">Diện tích xưởng</div>
+              </div>
+              <div class="factory-stat-card">
+                <div class="factory-stat-num">15+ máy</div>
+                <div class="factory-stat-label">Thiết bị CNC</div>
+              </div>
+              <div class="factory-stat-card">
+                <div class="factory-stat-num">20+ thợ</div>
+                <div class="factory-stat-label">Kỹ sư &amp; thợ hàn</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); border: 1px solid var(--gray-200);">
+              <img src="assets/images/workshop_cnc.png" alt="Toàn cảnh nhà xưởng chế tác Sao Vàng" style="width: 100%; height: auto;" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MACHINERY SYSTEM -->
+    <section class="section bg-gray">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto var(--sp-6);">
+          <span class="tag">TRANG THIẾT BỊ</span>
+          <h2 class="section-title" style="margin-inline: auto;">Hệ Thống Máy Móc CNC Công Nghệ Cao</h2>
+          <p class="section-desc" style="margin-inline: auto;">Để tạo ra những tác phẩm sắt mỹ nghệ, cầu thang xoắn ốc uốn lượn hay hệ vách kính Unitized đạt độ chính xác cơ khí dưới 1mm, Sao Vàng sở hữu chuỗi thiết bị gia công đồng bộ.</p>
+        </div>
+
+        <div class="machinery-grid">
+          <div class="machine-card">
+            <img src="assets/images/laser_cutting.png" alt="Máy cắt Laser Fiber CNC" class="machine-img" />
+            <div class="machine-info">
+              <h3 class="machine-title">Máy Cắt Laser Fiber 6000W CNC</h3>
+              <p class="machine-desc">Cắt định hình kim loại tấm thép carbon dày đến 25mm, Inox đến 16mm và nhôm đến 12mm. Nguồn phát cắt mạnh mẽ tạo mạch cắt phẳng mịn, không sinh bavia, loại bỏ hoàn toàn sai lệch kích thước bản vẽ CAD.</p>
+            </div>
+          </div>
+
+          <div class="machine-card">
+            <img src="assets/images/welding_work.png" alt="Hệ thống máy hàn TIG/MIG khí Argon" class="machine-img" />
+            <div class="machine-info">
+              <h3 class="machine-title">Trạm Hàn TIG/MIG Khí Bảo Vệ Argon</h3>
+              <p class="machine-desc">Chuyên trị các vật liệu inox hàng hải (Marine 316L), nhôm định hình và sắt đặc uốn rèn. Đội thợ hàn được đào tạo chuyên sâu đạt chứng chỉ quốc tế AWS và ASME, tạo nên các đường hàn ngấu ngầm vững chắc, thẩm mỹ.</p>
+            </div>
+          </div>
+
+          <div class="machine-card">
+            <img src="assets/images/workshop_cnc.png" alt="Máy chấn CNC thủy lực 100 tấn" class="machine-img" />
+            <div class="machine-info">
+              <h3 class="machine-title">Máy Chấn CNC Thủy Lực 100 Tấn</h3>
+              <p class="machine-desc">Với chiều dài chấn tối đa 3.2m và lực chấn mạnh mẽ, máy cho phép gấp tạo nếp thép tấm dày một cách chuẩn xác, uốn lốc các tấm dầm cầu thang xoắn dập khuôn lượn sóng hoàn hảo, trơn tru.</p>
+            </div>
+          </div>
+
+          <div class="machine-card">
+            <img src="assets/images/team_engineers.png" alt="Đội ngũ kỹ sư thiết kế CAD/CAM" class="machine-img" />
+            <div class="machine-info">
+              <h3 class="machine-title">Đội Kỹ Sư CAD/CAM &amp; Quét 3D</h3>
+              <p class="machine-desc">Sử dụng máy quét laser 3D đo đạc trực tiếp hiện trạng tại công trình, sau đó dựng mô hình kết cấu thép và kính cường lực trên Revit/Tekla, đảm bảo khâu gia công lắp ráp đồng bộ 100%, không phát sinh chỉnh sửa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QA/QC SYSTEM -->
+    <section class="qaqc-section">
+      <div class="container">
+        <div style="text-align: center; max-width: 750px; margin: 0 auto var(--sp-6);">
+          <span class="tag white">TIÊU CHUẨN CHẤT LƯỢNG</span>
+          <h2 class="section-title white" style="margin-inline: auto;">Kiểm Soát QA/QC Đạt Chuẩn ISO 9001:2015</h2>
+          <p class="section-desc white" style="margin-inline: auto;">Tại Sao Vàng, chất lượng không phải là cam kết bằng lời nói mà được định lượng bằng quy trình kiểm soát chặt chẽ từ vật tư đầu vào đến sản phẩm hoàn thiện bàn giao.</p>
+        </div>
+
+        <div class="qaqc-grid">
+          <div class="qaqc-card">
+            <h3>1. Kiểm soát vật tư đầu vào (CO/CQ)</h3>
+            <p>100% vật tư kim loại thép, thanh nhôm Xingfa Class A hay kính cường lực Hải Long đưa vào xưởng đều phải có chứng chỉ xuất xứ CO và chứng chỉ chất lượng CQ rõ ràng. Chúng tôi không sử dụng vật tư trôi nổi kém chất lượng.</p>
+          </div>
+
+          <div class="qaqc-card">
+            <h3>2. Thử nghiệm siêu âm mối hàn (UT/PT)</h3>
+            <p>Các kết cấu chịu lực quan trọng như dầm thép xương cá, cùm treo lan can du thuyền được thử nghiệm siêu âm mối hàn (Ultrasonic Testing) hoặc thấm thấu chất lỏng (Penetrant Testing) để loại bỏ hoàn toàn các vết nứt ngầm bên trong.</p>
+          </div>
+
+          <div class="qaqc-card">
+            <h3>3. Đo độ dày màng sơn tĩnh điện</h3>
+            <p>Bề mặt kim loại sau sơn lót epoxy chống ẩm và phủ màu được đo độ dày bằng thiết bị kỹ thuật số chuyên dụng. Độ dày tối thiểu phải đạt 80-120 micromet đối với sơn tĩnh điện và phủ PVDF kháng mặn ngoài trời.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7-STEP PROCESS -->
+    <section class="section bg-dark">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto var(--sp-4);">
+          <span class="tag white">QUY TRÌNH THI CÔNG</span>
+          <h2 class="section-title white" style="margin-inline: auto;">Quy Trình Triển Khai Chuyên Nghiệp 7 Bước</h2>
+          <p class="section-desc white" style="margin-inline: auto;">Sự phối hợp nhịp nhàng giữa đội ngũ thiết kế, chế tác tại xưởng và thợ lắp đặt hiện trường giúp đảm bảo tiến độ và chất lượng vượt trội.</p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <div class="process-step">01</div>
+            <div class="process-num">1</div>
+            <h3 class="process-title">Tiếp Nhận Bản Vẽ</h3>
+            <p class="process-desc">Khách hàng gửi bản vẽ kiến trúc hoặc yêu cầu thiết kế ban đầu. Đội ngũ kỹ sư sẽ tư vấn phương án vật liệu tối ưu nhất.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step">02</div>
+            <div class="process-num">2</div>
+            <h3 class="process-title">Khảo Sát &amp; Đo Đạc</h3>
+            <p class="process-desc">Kỹ sư Sao Vàng mang thiết bị quét laser chuyên dụng đo đạc hiện trạng tại công trình, xác định dung sai mặt sàn và góc nghiêng.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step">03</div>
+            <div class="process-num">3</div>
+            <h3 class="process-title">Thiết Kế 3D CAD</h3>
+            <p class="process-desc">Dựng chi tiết kết cấu trên bản vẽ 3D Tekla/Revit, tính toán chịu lực trọng tải, thống nhất cùng chủ đầu tư trước khi cắt phôi.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step">04</div>
+            <div class="process-num">4</div>
+            <h3 class="process-title">Chế Tác Tại Xưởng</h3>
+            <p class="process-desc">Cắt CNC laser, rèn uốn hoa văn nóng ở 1100°C và hàn liên kết khí Argon. Xử lý phun cát tẩy xỉ bề mặt và mạ kẽm nóng chống gỉ.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step">05</div>
+            <div class="process-num">5</div>
+            <h3 class="process-title">Kiểm Định Chất Lượng</h3>
+            <p class="process-desc">Kỹ sư QC đo đạc dung sai cơ khí, kiểm tra bề dày màng sơn lót chống rỉ và nước sơn phủ màu mạ titan sang trọng.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step">06</div>
+            <div class="process-num">6</div>
+            <h3 class="process-title">Lắp Đặt Hoàn Thiện</h3>
+            <p class="process-desc">Vận chuyển các module chế tác sẵn cẩu ráp an toàn tại công trình, thực hiện liên kết cơ học vững chắc và cân chỉnh thăng bằng.</p>
+          </div>
+
+          <div class="process-card">
+            <div class="process-step">07</div>
+            <div class="process-num">7</div>
+            <h3 class="process-title">Bàn Giao &amp; Bảo Hành</h3>
+            <p class="process-desc">Nghiệm thu thực tế cùng chủ đầu tư, vệ sinh sạch sẽ và bàn giao hồ sơ kỹ thuật kèm sổ bảo hành kết cấu 5 năm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INLINE CONTACT FORM -->
+    <section class="section bg-gray">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+          <div style="text-align: center; margin-bottom: var(--sp-6);">
+            <span class="tag">LIÊN HỆ GỬI BẢN VẼ</span>
+            <h2 class="section-title" style="margin-inline: auto;">Yêu Cầu Thiết Kế &amp; Báo Giá Thực Tế</h2>
+            <p class="section-desc" style="margin-inline: auto;">Hãy gửi cho chúng tôi bản vẽ thiết kế 2D/3D hoặc hình ảnh phác thảo ý tưởng của bạn. Đội ngũ kỹ sư sẽ phân tích kỹ thuật và phản hồi báo giá chi tiết trong vòng 24 giờ.</p>
+          </div>
+
+          <form class="quote-inline-form" id="capabilityForm" enctype="multipart/form-data">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="capName">Họ và Tên *</label>
+                <input type="text" id="capName" name="name" required placeholder="Ví dụ: Nguyễn Văn A" />
+              </div>
+              <div class="form-group">
+                <label for="capPhone">Số Điện Thoại *</label>
+                <input type="tel" id="capPhone" name="phone" required placeholder="Ví dụ: 0912345678" />
+              </div>
+            </div>
+            
+            <div class="form-row">
+              <div class="form-group">
+                <label for="capService">Hạng mục quan tâm</label>
+                <select id="capService" name="service">
+                  <option value="co-khi-nghe-thuat">Cơ khí nghệ thuật (Cổng, Mái che, Sắt rèn)</option>
+                  <option value="cau-thang-xoan">Cầu thang xoắn &amp; Lan can nghệ thuật</option>
+                  <option value="cua-nhom-kinh">Cửa nhôm kính Class A / Slim Panorama</option>
+                  <option value="vach-kinh-mat-dung">Vách kính mặt dựng Unitized / Spider</option>
+                  <option value="lan-can-kinh">Lan can kính cường lực / Ban công</option>
+                  <option value="khac">Yêu cầu gia công cơ khí khác</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="capFile">Đính kèm Bản vẽ / Phác thảo</label>
+                <div class="file-upload-wrapper">
+                  <input type="file" id="capFile" name="attachment" class="file-upload-input" accept=".pdf,.dwg,.zip,.rar,.png,.jpg,.jpeg" />
+                  <div class="file-upload-btn">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="margin-right:6px;"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/></svg>
+                    Tải file bản vẽ lên...
+                  </div>
+                  <span class="file-name" id="capFileName">Chưa chọn file (tối đa 20MB)</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="capMessage">Chi tiết yêu cầu kỹ thuật</label>
+              <textarea id="capMessage" name="message" rows="4" placeholder="Mô tả kích thước sơ bộ, loại vật tư mong muốn hoặc tiến độ lắp đặt công trình..."></textarea>
+            </div>
+
+            <div style="text-align: center; margin-top: 24px;">
+              <button type="submit" class="btn btn-gold btn-block-xs">Gửi Bản Vẽ &amp; Nhận Tư Vấn Kỹ Thuật</button>
+            </div>
+            
+            <div id="formAlert" style="margin-top:16px; padding:12px; border-radius:3px; display:none; font-size:13px; text-align:center;"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER PLACEHOLDER - WILL BE PATCHED -->
+  <footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom:18px;">
+          <span class="logo-badge">SV</span>
+          <span class="logo-name">Cơ Khí Sao Vàng</span>
+        </a>
+        <p style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.7); margin-bottom:16px;">
+          <strong>Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng</strong><br>
+          MST: 0110461829 — Sở KH&ĐT Hà Nội cấp năm 2024.<br>
+          📍 Văn phòng: Tầng 3, TT7-35 KĐT Văn Phú, Hà Đông, Hà Nội.<br>
+          ⚙️ Nhà xưởng: Đường CN 6, KCN Bắc Từ Liêm, Hà Nội.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="social-link" aria-label="YouTube"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+          <a href="https://zalo.me/0869590279" class="social-link" aria-label="Zalo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><text y="17" font-size="12" font-weight="bold" font-family="Arial">Zalo</text></svg></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Dịch Vụ</h4>
+        <ul>
+          <li><a href="linh-vuc-hoat-dong.html#co-khi-division">Cơ khí nghệ thuật</a></li>
+          <li><a href="linh-vuc-hoat-dong.html#cua-nhom-cua-so">Cửa nhôm cao cấp</a></li>
+          <li><a href="linh-vuc-hoat-dong.html#vach-kinh-mat-dung">Vách kính &amp; Mặt dựng</a></li>
+          <li><a href="linh-vuc-hoat-dong.html#cau-thang-lan-can">Cầu thang uốn xoắn</a></li>
+          <li><a href="linh-vuc-hoat-dong.html#cong-hang-rao">Cổng nhôm đúc</a></li>
+          <li><a href="linh-vuc-hoat-dong.html#bao-tri-dich-vu">Bảo trì &amp; Kỹ thuật</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Công Ty</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+          <li><a href="du-an.html">Dự án thực hiện</a></li>
+          <li><a href="san-pham.html">Sản phẩm cao cấp</a></li>
+          <li><a href="tin-tuc.html">Tin tức &amp; Sự kiện</a></li>
+          <li><a href="lien-he.html">Liên hệ trực tiếp</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Bản Đồ</h4>
+        <div style="width:100%; border-radius:6px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); height:130px; margin-top:8px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.688172083984!2d105.77583627589578!3d20.965037990069354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adc71e3b2e3b%3A0xe5a3c2cf7e3c1b82!2zS0RUIFbEg24gUGjDugEsIEjDoCDEkMO0bmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1718712345678!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <span>© 2026 Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng. Bảo lưu mọi quyền.</span>
+      <span>Thiết kế &amp; phát triển bởi Sao Vàng Tech</span>
+    </div>
+  </div>
+</footer>
+
+  <script src="assets/js/cms-client.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Handle drawing upload form
+    const capFile = document.getElementById('capFile');
+    const capFileName = document.getElementById('capFileName');
+    capFile.addEventListener('change', (e) => {
+      if(e.target.files.length > 0) {
+        capFileName.textContent = e.target.files[0].name;
+      } else {
+        capFileName.textContent = "Chưa chọn file (tối đa 20MB)";
+      }
+    });
+
+    const form = document.getElementById('capabilityForm');
+    const formAlert = document.getElementById('formAlert');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      formAlert.style.display = 'block';
+      formAlert.style.background = '#fef3c7';
+      formAlert.style.color = '#92400e';
+      formAlert.textContent = 'Đang xử lý dữ liệu bản vẽ và gửi đi...';
+
+      const formData = new FormData(form);
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          body: formData
+        });
+        const result = await response.json();
+        if(response.ok) {
+          formAlert.style.background = '#d1fae5';
+          formAlert.style.color = '#065f46';
+          formAlert.textContent = 'Gửi thông tin thành công! Các kỹ sư Sao Vàng sẽ liên hệ phản hồi báo giá bản vẽ trong vòng 24 giờ làm việc.';
+          form.reset();
+          capFileName.textContent = "Chưa chọn file (tối đa 20MB)";
+        } else {
+          throw new Error(result.error || 'Có lỗi xảy ra khi gửi dữ liệu.');
+        }
+      } catch(err) {
+        formAlert.style.background = '#fee2e2';
+        formAlert.style.color = '#991b1b';
+        formAlert.textContent = err.message || 'Lỗi kết nối máy chủ, vui lòng thử lại sau.';
+      }
+    });
+  </script>
+</body>
+</html>

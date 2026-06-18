@@ -1521,3 +1521,162 @@ input, select, textarea { font: inherit; }
     max-width: 100%;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   CAPABILITY & LANDING PAGES CUSTOM STYLES
+   - Xưởng sản xuất, Hệ thống máy móc CNC
+   - Quy trình thi công 7 bước chuyên nghiệp
+   - Bảng báo giá chi tiết dịch vụ
+══════════════════════════════════════════════════════════════ */
+
+/* --- Machinery & Factory --- */
+.machinery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--sp-6);
+  margin-top: var(--sp-6);
+}
+.machine-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all 0.3s var(--ease);
+  display: flex;
+  flex-direction: column;
+}
+.machine-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  border-color: var(--gold);
+}
+.machine-img {
+  height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+.machine-info {
+  padding: var(--sp-5);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.machine-title {
+  font-family: var(--ff-head);
+  font-size: var(--fs-h3);
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: var(--sp-2);
+}
+.machine-desc {
+  font-size: var(--fs-sm);
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* --- 7-Step Process Section --- */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--sp-5);
+  margin-top: var(--sp-7);
+}
+.process-card {
+  position: relative;
+  background: var(--dark-2);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: var(--radius-md);
+  padding: var(--sp-5);
+  transition: all 0.3s var(--ease);
+}
+.process-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-3px);
+}
+.process-step {
+  position: absolute;
+  top: var(--sp-4);
+  right: var(--sp-4);
+  font-family: var(--ff-head);
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(212,175,55,0.1);
+  line-height: 1;
+}
+.process-num {
+  width: 36px;
+  height: 36px;
+  background: var(--gold);
+  color: var(--white);
+  font-family: var(--ff-head);
+  font-weight: 700;
+  font-size: var(--fs-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: var(--sp-4);
+}
+.process-title {
+  font-family: var(--ff-head);
+  font-size: var(--fs-body-lg);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--sp-2);
+}
+.process-desc {
+  font-size: var(--fs-sm);
+  color: var(--gray-400);
+  line-height: 1.6;
+}
+
+/* --- Pricing Tables --- */
+.price-table-wrapper {
+  overflow-x: auto;
+  margin-block: var(--sp-6);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-md);
+}
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  min-width: 600px;
+}
+.price-table th, .price-table td {
+  padding: var(--sp-4) var(--sp-5);
+  border-bottom: 1px solid var(--gray-200);
+}
+.price-table th {
+  background: var(--dark-2);
+  color: var(--white);
+  font-family: var(--ff-head);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.price-table tr:last-child td {
+  border-bottom: none;
+}
+.price-table tbody tr:hover {
+  background: var(--gray-50);
+}
+.price-type {
+  font-weight: 700;
+  color: var(--red);
+}
+.price-val {
+  font-weight: 700;
+  color: var(--gold-a11y);
+  white-space: nowrap;
+}
+
+/* --- Highlight elements --- */
+.text-highlight {
+  border-left: 4px solid var(--red);
+  padding-left: var(--sp-4);
+  margin-block: var(--sp-4);
+  font-style: italic;
+  color: var(--gray-600);
+}
