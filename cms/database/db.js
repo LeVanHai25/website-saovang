@@ -199,7 +199,7 @@ function _insertDefaults(sqljs) {
     ['youtube_url',      '',                                  'text',  'YouTube URL',             'social'],
     ['zalo_url',         '',                                  'text',  'Zalo URL',                'social'],
     ['seo_title_suffix', '| SAO VÀNG',                        'text',  'SEO title suffix',        'seo'],
-    ['seo_description',  'Chuyên thiết kế & thi công cơ khí nghệ thuật, nhôm kính kiến trúc cao cấp từ năm 2017', 'text', 'Default meta description', 'seo'],
+    ['seo_description',  'Chuyên thiết kế & thi công cơ khí nghệ thuật, nhôm kính kiến trúc cao cấp từ năm 2024', 'text', 'Default meta description', 'seo'],
     ['cdn_enabled',      '0',                                 'bool',  'CDN enabled',             'cdn'],
     ['cdn_base_url',     '',                                  'text',  'CDN Base URL',            'cdn'],
     ['smtp_host',        '',                                  'text',  'SMTP Host',               'email'],

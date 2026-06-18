@@ -14,8 +14,8 @@ const WEBSITE_DIR = path.join(__dirname, '../../website');
 const BASE_URL = 'https://saovang.vn';
 
 const PAGES = {
-  'index.html':              { title: 'SAO VÀNG — Thiết Kế & Thi Công Cơ Khí Nhà Ở & Du Thuyền Cao Cấp', desc: 'Công ty TNHH Sao Vàng — Thiết kế, gia công và lắp đặt cơ khí nhà ở, biệt thự và du thuyền cao cấp từ năm 2017. 300+ công trình, 50+ du thuyền, bảo hành 5 năm.' },
-  'gioi-thieu.html':         { title: 'Giới Thiệu Công Ty | SAO VÀNG', desc: 'Công ty Sao Vàng thành lập 2017, đội ngũ 120+ kỹ sư, xưởng sản xuất 5,000m², chứng nhận quốc tế AWS và ASME.' },
+  'index.html':              { title: 'SAO VÀNG — Thiết Kế & Thi Công Cơ Khí Nhà Ở & Du Thuyền Cao Cấp', desc: 'Công ty TNHH Sao Vàng — Thiết kế, gia công và lắp đặt cơ khí nhà ở, biệt thự và du thuyền cao cấp từ năm 2024. 300+ công trình, 50+ du thuyền, bảo hành 5 năm.' },
+  'gioi-thieu.html':         { title: 'Giới Thiệu Công Ty | SAO VÀNG', desc: 'Công ty Sao Vàng thành lập 2024, đội ngũ 120+ kỹ sư, xưởng sản xuất 5,000m², chứng nhận quốc tế AWS và ASME.' },
   'linh-vuc-hoat-dong.html': { title: 'Lĩnh Vực Hoạt Động | SAO VÀNG', desc: 'Cơ khí nhà ở, du thuyền, cầu thang & lan can, cổng & hàng rào, cửa & vách kính, bảo trì.' },
   'du-an.html':              { title: 'Dự Án Đã Thực Hiện | SAO VÀNG', desc: '300+ công trình từ biệt thự đến du thuyền cao cấp tại TP.HCM, Hà Nội, Đà Lạt và Vịnh Hạ Long.' },
   'san-pham.html':           { title: 'Sản Phẩm | SAO VÀNG', desc: 'Catalog sản phẩm cơ khí cao cấp: inox 316, kính cường lực, nhôm định hình, hàng rào và lan can.' },
@@ -33,8 +33,8 @@ const SCHEMA_LD = `
   "alternateName": "Sao Vàng Tech",
   "url": "https://saovang.vn",
   "logo": "https://saovang.vn/assets/images/logo.png",
-  "description": "Chuyên thiết kế, gia công và lắp đặt kết cấu cơ khí nhà ở, biệt thự và du thuyền hạng sang từ năm 2017.",
-  "foundingDate": "2017",
+  "description": "Chuyên thiết kế, gia công và lắp đặt kết cấu cơ khí nhà ở, biệt thự và du thuyền hạng sang từ năm 2024.",
+  "foundingDate": "2024",
   "telephone": "+84937729909",
   "email": "info@saovang.vn",
   "address": {

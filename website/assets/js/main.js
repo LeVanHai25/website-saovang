@@ -403,7 +403,21 @@
           const rawPhone = phone.replace(/\D/g, '');
           document.querySelectorAll('a[href^="tel:"]').forEach(el => {
             el.href = `tel:${rawPhone}`;
-            // Preserve child SVG if any
+            
+            // Do not append text to floating circle buttons
+            if (el.classList.contains('float-phone') || el.closest('.floats')) {
+              const svg = el.querySelector('svg');
+              el.textContent = '';
+              if (svg) el.appendChild(svg);
+              return;
+            }
+            
+            // Do not alter text in sticky CTA bars
+            if (el.closest('.sticky-cta-bar') || el.closest('.hero-cta-bar')) {
+              return;
+            }
+            
+            // Update standard hotline links (header, footer, etc.)
             const svg = el.querySelector('svg');
             el.textContent = '';
             if (svg) el.appendChild(svg);
