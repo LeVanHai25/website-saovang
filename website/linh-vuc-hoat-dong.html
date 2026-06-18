@@ -4,247 +4,137 @@
   <meta charset="UTF-8" />
   <meta name="theme-color" content="#A50000" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lĩnh Vực Hoạt Động — Cơ Khí Nhà Ở & Du Thuyền | SAO VÀNG</title>
-  <meta name="description" content="Sao Vàng cung cấp dịch vụ cơ khí toàn diện: thiết kế nhà ở, du thuyền cao cấp, cầu thang lan can inox, cổng hàng rào, cửa vách kính và bảo trì." />
-  <link rel="preload" as="image" href="assets/images/hero-services.png" />
-    <meta property="og:title" content="Lĩnh Vực Hoạt Động | SAO VÀNG" />
-  <meta property="og:description" content="Cơ khí nhà ở, du thuyền, cầu thang & lan can, cổng & hàng rào, cửa & vách kính, bảo trì." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://saovang.vn/linh-vuc-hoat-dong.html" />
-  <meta property="og:image" content="https://saovang.vn/assets/images/hero-interior.png" />
-  <meta property="og:locale" content="vi_VN" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <title>Lĩnh Vực Hoạt Động | Cơ Khí & Nhôm Kính | SAO VÀNG</title>
+  <meta name="description" content="Sao Vàng cung cấp 2 lĩnh vực cốt lõi: Cơ khí chế tác nghệ thuật cho Dinh thự và Hệ thống cửa Nhôm Kính kiến trúc cao cấp." />
   <link rel="stylesheet" href="assets/css/main.css" />
   <style>
-  /* ══ SERVICE DETAIL CARDS ════════════════════════════════════ */
-  .svc-detail {
-    padding-block: clamp(48px, 8vw, 96px);
-    border-bottom: 1px solid rgba(0,0,0,0.04);
-  }
-  .svc-detail.bg-gray {
-    background: #fcfbfa; /* Warm luxury off-white background */
-  }
-  .svc-detail-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: clamp(24px, 4vw, 48px);
-    align-items: center;
-  }
-  .svc-img-wrap {
-    border-radius: 12px;
-    overflow: hidden;
-    aspect-ratio: 16/10.5;
-    box-shadow: 0 16px 48px rgba(0,0,0,0.08);
-    border: 1px solid rgba(0,0,0,0.04);
-    position: relative;
-  }
-  .svc-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
-  }
-  .svc-img-wrap::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.15) 100%);
-    pointer-events: none;
-  }
-  .svc-img-wrap:hover img {
-    transform: scale(1.05);
-  }
-  
-  .svc-num {
-    font-family: var(--ff-head);
-    font-size: clamp(24px, 4vw, 36px);
-    font-weight: 900;
-    color: var(--gold-light);
-    line-height: 1;
-    margin-bottom: 8px;
-    display: block;
-    opacity: 0.8;
-  }
-  .svc-title-line {
-    width: 50px;
-    height: 3px;
-    background: var(--gold);
-    margin-bottom: 20px;
-    border-radius: 2px;
-  }
-  .svc-detail-title {
-    font-family: var(--ff-head);
-    font-size: clamp(22px, 2.5vw, 32px);
-    font-weight: 800;
-    color: var(--dark);
-    line-height: 1.25;
-    margin-bottom: 16px;
-    letter-spacing: -0.01em;
-  }
-  .svc-detail-desc {
-    font-size: clamp(14px, 1.8vw, 15.5px);
-    color: var(--gray-600);
-    line-height: 1.8;
-    margin-bottom: 24px;
-    font-weight: 400;
-  }
-  
-  .svc-features {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-    margin-block: 28px;
-    padding-top: 20px;
-    border-top: 1px dashed rgba(0,0,0,0.1);
-  }
-  .svc-feature-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-  }
-  .svc-feature-item svg {
-    color: var(--gold);
-    margin-top: 3px;
-    flex-shrink: 0;
-  }
-  .svc-feature-item span {
-    font-size: var(--fs-body);
-    color: var(--gray-700);
-    line-height: 1.5;
-    font-weight: 500;
-  }
-
-  /* Process timeline */
-  .process-list { display: flex; flex-direction: column; gap: clamp(16px, 3vw, 24px); margin-top: var(--sp-5); }
-  .process-item { display: flex; gap: clamp(14px, 2.5vw, 20px); align-items: flex-start; }
-  .process-item-num {
-    width: clamp(36px, 5vw, 44px); height: clamp(36px, 5vw, 44px);
-    min-width: clamp(36px, 5vw, 44px);
-    border-radius: 50%; background: var(--red); color: var(--white);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--ff-head); font-size: 13px; font-weight: 800;
-  }
-  .process-item-text strong { display: block; font-family: var(--ff-head); font-size: var(--fs-body); font-weight: 700; color: var(--dark); margin-bottom: 4px; }
-  .process-item-text p { font-size: var(--fs-sm); color: var(--gray-500); line-height: 1.65; margin: 0; }
-
-  /* Service cards grid */
-  .services-overview {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: clamp(12px, 3vw, 24px);
-  }
-  .svc-overview-card {
-    border: 1px solid var(--gray-200); border-radius: var(--radius-md);
-    padding: clamp(20px, 4vw, 32px) clamp(16px, 3vw, 28px);
-    transition: all .25s var(--ease);
-    cursor: pointer; background: var(--white);
-  }
-  .svc-overview-card:hover { border-color: var(--gold); box-shadow: 0 6px 24px rgba(200,134,10,.1); transform: translateY(-3px); }
-  .svc-ov-icon { width: 48px; height: 48px; border-radius: var(--radius); background: rgba(139,0,0,.07); display: flex; align-items: center; justify-content: center; color: var(--red); margin-bottom: var(--sp-4); }
-  .svc-overview-card h3 { font-family: var(--ff-head); font-size: clamp(14px, 1.5vw, 16px); font-weight: 700; color: var(--dark); margin-bottom: var(--sp-2); }
-  .svc-overview-card p { font-size: var(--fs-sm); color: var(--gray-500); line-height: 1.7; }
-
-  /* ══ RESPONSIVE ══════════════════════════════════════════════ */
-  @media (min-width: 480px)  { .svc-features { grid-template-columns: 1fr 1fr; } }
-  @media (min-width: 640px)  { .services-overview { grid-template-columns: 1fr 1fr; } }
-  @media (min-width: 1024px) {
-    .svc-detail-grid { grid-template-columns: 1.15fr 0.85fr; gap: clamp(40px, 6vw, 80px); }
-    .svc-detail-grid.reverse { grid-template-columns: 0.85fr 1.15fr; }
-    .svc-detail-grid.reverse > .svc-img-wrap { order: 2; }
-    .svc-detail-grid.reverse > div:not(.svc-img-wrap) { order: 1; }
-    .svc-img-wrap  { aspect-ratio: 4/3; }
-    .services-overview { grid-template-columns: repeat(3, 1fr); }
-  }
-  @media (min-width: 1440px) { .services-overview { grid-template-columns: repeat(3, 1fr); } }
-
-  /* ── Division Tabs ────────────────────────────────────────── */
-  .division-select-section {
-    background: var(--white);
-    padding-block: 16px;
-    border-bottom: 1px solid rgba(0,0,0,0.06);
-    position: sticky;
-    top: var(--header-h);
-    z-index: 100;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-  }
-  .division-tabs {
-    display: flex;
-    justify-content: center;
-    gap: clamp(8px, 2vw, 16px);
-  }
-  .division-tab {
-    font-family: var(--ff-head);
-    font-size: clamp(11px, 1.6vw, 13px);
-    font-weight: 800;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--gray-500);
-    padding: 8px 20px;
-    border-radius: 40px;
-    border: 1.5px solid var(--gray-200);
-    transition: all 0.25s var(--ease);
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .division-tab:hover {
-    color: var(--gold);
-    border-color: var(--gold);
-  }
-  .division-tab.active {
-    background: var(--gold);
-    color: var(--white);
-    border-color: var(--gold);
-    box-shadow: 0 4px 15px rgba(200,134,10,0.22);
-  }
-  
-  /* Division Section Headers */
-  .division-header {
-    text-align: center;
-    padding-top: clamp(40px, 6vw, 64px);
-    padding-bottom: clamp(12px, 2vw, 24px);
-    max-width: 800px;
-    margin-inline: auto;
-  }
-  .division-tag {
-    font-family: var(--ff-head);
-    font-size: 10px;
-    font-weight: 800;
-    color: var(--gold);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    display: inline-block;
-    margin-bottom: 10px;
-    background: rgba(200, 134, 10, 0.08);
-    padding: 4px 12px;
-    border-radius: 30px;
-  }
-  .division-header h2 {
-    font-family: var(--ff-head);
-    font-size: clamp(20px, 3vw, 28px);
-    font-weight: 900;
-    color: var(--dark);
-    line-height: 1.25;
-    margin-bottom: 10px;
-    letter-spacing: -0.01em;
-  }
-  .division-header p {
-    font-size: clamp(13px, 1.8vw, 15px);
-    color: var(--gray-500);
-    line-height: 1.65;
-    font-weight: 300;
-  }
-
-  /* ── prefers-reduced-motion ─────────────────────────────── */
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      transition-duration: 0.01ms !important;
+    /* PAGE SPECIFIC CSS */
+    .hub-hero {
+      position: relative;
+      padding: 140px 20px 80px;
+      text-align: center;
+      background: var(--dark);
+      color: var(--white);
     }
-    [data-reveal] { opacity: 1 !important; transform: none !important; }
+    .hub-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('assets/images/hero-services.png') center/cover;
+      opacity: 0.2;
+      z-index: 0;
+    }
+    .hub-hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hub-title {
+      font-size: clamp(32px, 5vw, 48px);
+      font-family: var(--font-heading);
+      margin-bottom: 20px;
+    }
+    .hub-desc {
+      font-size: 16px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.6;
+    }
+
+    .hub-pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      background: var(--dark);
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .hub-pillar {
+      position: relative;
+      min-height: 65vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 60px 40px;
+      text-decoration: none;
+      overflow: hidden;
+    }
+    .hub-pillar-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hub-pillar-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s var(--ease);
+    }
+    .hub-pillar::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%);
+      z-index: 1;
+      transition: opacity 0.4s;
+    }
+    .hub-pillar:hover .hub-pillar-bg img {
+      transform: scale(1.05);
+    }
+    .hub-pillar:hover::after {
+      opacity: 0.8;
+    }
+    .hub-pillar-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hub-pillar-content h2 {
+      font-size: clamp(28px, 4vw, 40px);
+      color: var(--white);
+      margin-bottom: 16px;
+      font-family: var(--font-heading);
+    }
+    .hub-pillar-content p {
+      color: rgba(255,255,255,0.7);
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 24px;
+      max-width: 90%;
+    }
+    .hub-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .hub-arrow svg {
+      transition: transform 0.3s;
+    }
+    .hub-pillar:hover .hub-arrow svg {
+      transform: translateX(6px);
+    }
+  
+  /* ══ STICKY BOTTOM CTA (mobile) ══════════════════════════════ */
+  .sticky-cta-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 890;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: #111;
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding: 10px 16px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -4px 24px rgba(0,0,0,.4);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
   }
-</style>
-  <link rel="canonical" href="https://saovang.vn/linh-vuc-hoat-dong.html" />
+  .sticky-cta-bar .btn { flex: 1; justify-content: center; min-height: 40px; }
+  @media (min-width: 1024px) { .sticky-cta-bar { display: none !important; } }
+  </style>
 </head>
 <body>
 
@@ -262,30 +152,14 @@
           LĨNH VỰC
           <svg class="chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </a>
-        <div class="dropdown-menu">
-          <a href="co-khi-nghe-thuat.html" class="dropdown-item">
-            <span class="dropdown-title">Cơ Khí Nghệ Thuật</span>
-            <span class="dropdown-desc">Mái kính, sắt nghệ thuật uốn tay, inox marine 316L</span>
+        <div class="dropdown-menu" style="min-width: 300px;">
+          <a href="linh-vuc-co-khi.html" class="dropdown-item" style="padding: 16px 20px;">
+            <span class="dropdown-title" style="font-size: 16px; margin-bottom: 6px;">Cơ Khí Biệt Thự &amp; Lâu Đài</span>
+            <span class="dropdown-desc" style="font-size: 13px; opacity: 0.8;">Cổng đúc, Hàng rào, Mái kính, Cầu thang nghệ thuật</span>
           </a>
-          <a href="cau-thang-xoan.html" class="dropdown-item">
-            <span class="dropdown-title">Cầu Thang Xoắn</span>
-            <span class="dropdown-desc">Cầu thang xoắn ốc thép uốn, xương cá nghệ thuật</span>
-          </a>
-          <a href="cong-nghe-thuat.html" class="dropdown-item">
-            <span class="dropdown-title">Cổng &amp; Hàng Rào</span>
-            <span class="dropdown-desc">Cổng nhôm đúc chân không, cổng sắt mỹ thuật rèn tay</span>
-          </a>
-          <a href="cua-nhom-kinh.html" class="dropdown-item">
-            <span class="dropdown-title">Cửa Nhôm Kính</span>
-            <span class="dropdown-desc">Hệ cửa nhôm Slim profile, Xingfa Class A phủ PVDF</span>
-          </a>
-          <a href="vach-kinh.html" class="dropdown-item">
-            <span class="dropdown-title">Vách Kính Mặt Dựng</span>
-            <span class="dropdown-desc">Vách kính Unitized khổ lớn, vách kính chịu lực ngắm cảnh</span>
-          </a>
-          <a href="lan-can-kinh.html" class="dropdown-item">
-            <span class="dropdown-title">Lan Can Kính</span>
-            <span class="dropdown-desc">Lan can kính cường lực, ban công sắt uốn nghệ thuật</span>
+          <a href="linh-vuc-nhom-kinh.html" class="dropdown-item" style="padding: 16px 20px;">
+            <span class="dropdown-title" style="font-size: 16px; margin-bottom: 6px;">Nhôm Kính Kiến Trúc Cao Cấp</span>
+            <span class="dropdown-desc" style="font-size: 13px; opacity: 0.8;">Cửa nhôm Slim, Xingfa, Vách dựng Unitized, Lan can kính</span>
           </a>
         </div>
       </div>
@@ -308,200 +182,41 @@
 </header>
 <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
-<section class="page-hero">
-  <div class="page-hero-bg"><img src="assets/images/hero-services.png" alt="Lĩnh vực hoạt động Sao Vàng" /><div class="page-hero-overlay"></div></div>
-  <div class="container page-hero-content">
-    <span class="tag">Dịch Vụ</span>
-    <h1 class="page-hero-title">Lĩnh Vực Hoạt Động</h1>
-    <p class="page-hero-sub">Cơ khí thiết kế nhà ở &amp; du thuyền cao cấp</p>
-    <nav class="breadcrumb"><a href="index.html">Trang chủ</a><span class="sep"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span><span class="current">Lĩnh vực hoạt động</span></nav>
-  </div>
-</section>
-
-
-<section class="division-select-section">
-  <div class="container">
-    <div class="division-tabs">
-      <a href="#co-khi-division" class="division-tab active" id="tab-co-khi">
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-        Cơ Khí Nghệ Thuật
-      </a>
-      <a href="#nhom-kinh-division" class="division-tab" id="tab-nhom-kinh">
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-        Nhôm Kính Kiến Trúc
-      </a>
+<main>
+  <section class="hub-hero">
+    <div class="hub-hero-inner">
+      <span class="badge badge-gold" style="margin-bottom: 20px;">Lĩnh Vực Hoạt Động</span>
+      <h1 class="hub-title">Giải Pháp Toàn Diện Cho Công Trình Đẳng Cấp</h1>
+      <p class="hub-desc">Cơ Khí Sao Vàng là đơn vị tổng thầu chuyên sâu với 2 lĩnh vực cốt lõi: Chế tác Cơ Khí Nghệ Thuật & Cung cấp hệ thống Nhôm Kính Kiến Trúc cao cấp.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ═══ DIVISION I: CƠ KHÍ & SẮT MỸ THUẬT ═══ -->
-<div class="division-header container" id="co-khi-division">
-  <span class="division-tag">PHÂN KHU I</span>
-  <h2>CƠ KHÍ & SẮT MỸ THUẬT CHẾ TÁC</h2>
-  <p>Các tác phẩm sắt nghệ thuật rèn thủ công, kết cấu thép xoắn phức tạp và nhôm đúc mỹ nghệ đẳng cấp cho biệt thự, dinh thự và lâu đài.</p>
-</div>
-
-<!-- ═══ SERVICE 01 ══ -->
-<section class="svc-detail" id="co-khi-nghe-thuat">
-  <div class="container">
-    <div class="svc-detail-grid">
-      <div class="svc-img-wrap" data-reveal><img src="assets/images/service-mechanical-art.png" alt="Chế tác Cơ khí Nghệ thuật Sao Vàng" loading="lazy"></div>
-      <div data-reveal data-reveal-delay="2">
-        <div class="svc-num">01</div>
-        <div class="svc-title-line"></div>
-        <h2 class="svc-detail-title">Chế Tác Cơ Khí Nghệ Thuật</h2>
-        <p class="svc-detail-desc">Chúng tôi cung cấp dịch vụ tư vấn, thiết kế, gia công chế tác các cấu kiện cơ khí mỹ thuật tinh xảo. Đội ngũ nghệ nhân rèn và kỹ sư giàu kinh nghiệm của Sao Vàng sẽ tạo nên các sản phẩm sắt uốn thủ công nghệ thuật, chi tiết uốn lượn cổ điển tinh xảo cho lâu đài, biệt thự, nâng tầm giá trị thẩm mỹ của toàn bộ công trình.</p>
-        <div class="svc-features">
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Phác thảo bản vẽ 3D chi tiết</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Sắt nghệ thuật uốn tay thủ công</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Mái che kính nghệ thuật tinh xảo</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Mạ kẽm nhúng nóng chống ăn mòn</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Sơn tĩnh điện chống UV 4 lớp</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Lắp đặt và bảo hành 5 năm</span></div>
-        </div>
-        <a href="lien-he.html" class="btn btn-gold">Yêu Cầu Báo Giá <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+  <section class="hub-pillars">
+    <!-- PILLAR 1 -->
+    <a href="linh-vuc-co-khi.html" class="hub-pillar">
+      <div class="hub-pillar-bg">
+        <img src="assets/images/project-mansion-gate.png" alt="Cơ Khí Biệt Thự & Lâu Đài" onerror="this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80'">
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ SERVICE 02 (Originally 04) ══ -->
-<section class="svc-detail bg-gray" id="cau-thang-lan-can">
-  <div class="container">
-    <div class="svc-detail-grid reverse">
-      <div data-reveal>
-        <div class="svc-num">02</div>
-        <div class="svc-title-line"></div>
-        <h2 class="svc-detail-title">Cầu Thang &amp; Lan Can Nghệ Thuật</h2>
-        <p class="svc-detail-desc">Chuyên sản xuất lắp ráp cầu thang xoắn kết cấu thép uốn cong phức tạp bằng lốc CNC tấm dày, kết hợp lan can sắt nghệ thuật rèn nguội hoặc inox marine 316L hàng hải siêu bền bỉ mạ vàng titan chân không thẩm mỹ cao.</p>
-        <div class="svc-features">
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Cầu thang xoắn thép tấm lốc CNC</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Lan can inox marine 316L bóng hairline</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Công nghệ mạ vàng titan PVD cực bền</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Lan can kính dán cường lực 15.38mm</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Hàn TIG bảo vệ argon mài phẳng mịn</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Thiết kế mềm mại ôm sát thực tế</span></div>
-        </div>
-        <a href="lien-he.html" class="btn btn-gold">Yêu Cầu Báo Giá <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      <div class="hub-pillar-content">
+        <h2>Cơ Khí Dinh Thự<br><span style="color:var(--gold);">Tuyệt Tác Hoàng Gia</span></h2>
+        <p>Gia công cổng nhôm đúc, cổng sắt rèn, cầu thang xoắn ốc và lan can nghệ thuật. Sự kết hợp giữa kỹ nghệ đúc chân không và rèn tay truyền thống.</p>
+        <span class="hub-arrow">Khám Phá Cơ Khí <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
       </div>
-      <div class="svc-img-wrap" data-reveal data-reveal-delay="2"><img src="assets/images/service-artistic-stairs.png" alt="Cầu thang lan can nghệ thuật Sao Vàng" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ SERVICE 03 (Originally 05) ══ -->
-<section class="svc-detail" id="cong-hang-rao">
-  <div class="container">
-    <div class="svc-detail-grid">
-      <div class="svc-img-wrap" data-reveal><img src="assets/images/service-cast-gates.png" alt="Cổng nhôm đúc hàng rào Sao Vàng" loading="lazy"></div>
-      <div data-reveal data-reveal-delay="2">
-        <div class="svc-num">03</div>
-        <div class="svc-title-line"></div>
-        <h2 class="svc-detail-title">Cổng Nhôm Đúc &amp; Hàng Rào</h2>
-        <p class="svc-detail-desc">Đơn vị gia công đúc chân không hợp kim nhôm nguyên khối cho hệ cổng chính sang trọng, hàng rào sắt rèn mỹ nghệ thủ công mạ kẽm nhúng nóng. Tích hợp động cơ motor cổng thông minh mở tự động điều khiển qua điện thoại tiện lợi.</p>
-        <div class="svc-features">
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Nhôm đúc chân không sắc nét 3D</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Sắt rèn nguội uốn tay mạ kẽm nóng</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Motor âm sàn tự động mở thông minh</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Sơn phủ đồng giả cổ 5 lớp siêu bền</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Hàng rào kiên cố chống đột nhập</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Đo đạc thi công chuẩn xác hoàn toàn</span></div>
-        </div>
-        <a href="lien-he.html" class="btn btn-gold">Yêu Cầu Báo Giá <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+    </a>
+    
+    <!-- PILLAR 2 -->
+    <a href="linh-vuc-nhom-kinh.html" class="hub-pillar">
+      <div class="hub-pillar-bg">
+        <img src="assets/images/project-showroom-auto.png" alt="Nhôm Kính Kiến Trúc" onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80'">
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ DIVISION II: CỬA NHÔM & KÍNH KIẾN TRÚC ═══ -->
-<div class="division-header container" id="nhom-kinh-division">
-  <span class="division-tag">PHÂN KHU II</span>
-  <h2>CỬA NHÔM & KÍNH KIẾN TRÚC CAO CẤP</h2>
-  <p>Hệ thống cửa nhôm Class A phủ PVDF kháng muối biển, nhôm kính Slim profile panorama siêu mảnh và vách kính mặt dựng cản nhiệt Low-E.</p>
-</div>
-
-<!-- ═══ SERVICE 04 (Originally 02) ══ -->
-<section class="svc-detail bg-gray" id="cua-nhom-cua-so">
-  <div class="container">
-    <div class="svc-detail-grid reverse">
-      <div data-reveal>
-        <div class="svc-num">04</div>
-        <div class="svc-title-line"></div>
-        <h2 class="svc-detail-title">Cửa Nhôm &amp; Cửa Sổ Cao Cấp</h2>
-        <p class="svc-detail-desc">Đơn vị chuyên sâu về hệ thống cửa nhôm kính cao cấp cho biệt thự, dinh thự và căn hộ hạng sang. Chúng tôi nhập khẩu, sản xuất và lắp đặt các hệ nhôm cao cấp chuẩn Class A như Xingfa Class A phủ PVDF kháng muối biển, các hệ nhôm Slim siêu mảnh tinh tế cho cửa đi và cửa sổ lùa trượt nhẹ nhàng.</p>
-        <div class="svc-features">
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Nhôm Xingfa Class A cao cấp</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Hệ cửa trượt lùa Slim panorama</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Phụ kiện Cogo, Hafele đồng bộ</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Gioăng EPDM 3 lớp khít kín nước</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Cách âm &amp; Cách nhiệt tối đa</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Hệ cửa trượt nâng giảm chấn sang trọng</span></div>
-        </div>
-        <a href="lien-he.html" class="btn btn-gold">Yêu Cầu Báo Giá <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
+      <div class="hub-pillar-content">
+        <h2>Nhôm Kính Kiến Trúc<br><span style="color:var(--gold);">Giải Pháp Tương Lai</span></h2>
+        <p>Sản xuất và thi công hệ cửa nhôm cao cấp (Xingfa Class A, Civro), vách mặt dựng Unitized, cửa trượt Slim và các giải pháp kính cường lực an toàn.</p>
+        <span class="hub-arrow">Khám Phá Nhôm Kính <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
       </div>
-      <div class="svc-img-wrap" data-reveal data-reveal-delay="2"><img src="assets/images/service-aluminum-doors.png" alt="Cửa nhôm kính cao cấp Sao Vàng" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ SERVICE 05 (Originally 03) ══ -->
-<section class="svc-detail" id="vach-kinh-mat-dung">
-  <div class="container">
-    <div class="svc-detail-grid">
-      <div class="svc-img-wrap" data-reveal><img src="assets/images/service-glass-facades.png" alt="Vách kính và mặt dựng kiến trúc Sao Vàng" loading="lazy"></div>
-      <div data-reveal data-reveal-delay="2">
-        <div class="svc-num">05</div>
-        <div class="svc-title-line"></div>
-        <h2 class="svc-detail-title">Vách Kính &amp; Mặt Dựng Kiến Trúc</h2>
-        <p class="svc-detail-desc">Giải pháp tổng thể về vách dựng Unitized khổ lớn cách âm cách nhiệt vượt trội cho văn phòng, tòa nhà cao tầng và biệt thự. Cung cấp cabin kính tắm, vách ngăn phòng kính văn phòng tạo không gian xuyên suốt, hiện đại và sang trọng tối đa.</p>
-        <div class="svc-features">
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Hệ mặt dựng Unitized module hóa</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Kính Low-E cản nhiệt, UV tới 99%</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Cabin phòng tắm kính cường lực</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Hệ vách kính ngăn phòng làm việc</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Keo silicone kết cấu chuyên dụng</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Thi công lắp ráp an toàn chuẩn ISO</span></div>
-        </div>
-        <a href="lien-he.html" class="btn btn-gold">Yêu Cầu Báo Giá <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══ SERVICE 06 ══ -->
-<section class="svc-detail bg-gray" id="bao-tri-dich-vu">
-  <div class="container">
-    <div class="svc-detail-grid reverse">
-      <div data-reveal>
-        <div class="svc-num">06</div>
-        <div class="svc-title-line"></div>
-        <h2 class="svc-detail-title">Bảo Trì &amp; Dịch Vụ Kỹ Thuật</h2>
-        <p class="svc-detail-desc">Dịch vụ sau bán hàng ưu việt của Sao Vàng. Chúng tôi bảo trì, bảo dưỡng định kỳ hệ thống cửa nhôm kính, vách dựng, xử lý chống thấm dột vách kính mặt ngoài, thay thế phụ kiện (khóa, bản lề, khóa vân tay) và tẩy gỉ inox marine.</p>
-        <div class="svc-features">
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Kiểm tra cân chỉnh hành trình cửa định kỳ</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Thay thế phụ kiện Cogo/Hafele chính hãng</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Xử lý chống dột thấm nước vách dựng</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Tẩy rửa tẩy gỉ đánh bóng inox marine</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Đội kỹ thuật phản ứng nhanh 24/7</span></div>
-          <div class="svc-feature-item"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Hợp đồng bảo dưỡng định kỳ cho tòa nhà</span></div>
-        </div>
-        <a href="lien-he.html" class="btn btn-gold">Yêu Cầu Báo Giá <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>
-      </div>
-      <div class="svc-img-wrap" data-reveal data-reveal-delay="2"><img src="assets/images/service-maintenance.png" alt="Bảo trì và dịch vụ kỹ thuật Sao Vàng" loading="lazy"></div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-red">
-  <div class="container">
-    <h2>Cần Tư Vấn Dịch Vụ?</h2>
-    <p>Liên hệ ngay để được tư vấn miễn phí và nhận báo giá trong vòng 24 giờ làm việc</p>
-    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-      <a href="lien-he.html" class="btn btn-gold"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Gửi Yêu Cầu Tư Vấn</a>
-      <a href="tel:0869590279" class="btn btn-outline"><svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>0869 590 279</a>
-    </div>
-  </div>
-</section>
+    </a>
+  </section>
+</main>
 
 <footer class="footer" role="contentinfo">
   <div class="container">
@@ -525,23 +240,21 @@
       </div>
       
       <div class="footer-col">
-        <h4>Dịch Vụ</h4>
+        <h4>Lĩnh Vực Chuyên Sâu</h4>
         <ul>
-          <li><a href="linh-vuc-hoat-dong.html#co-khi-division">Cơ khí nghệ thuật</a></li>
-          <li><a href="linh-vuc-hoat-dong.html#cua-nhom-cua-so">Cửa nhôm cao cấp</a></li>
-          <li><a href="linh-vuc-hoat-dong.html#vach-kinh-mat-dung">Vách kính &amp; Mặt dựng</a></li>
-          <li><a href="linh-vuc-hoat-dong.html#cau-thang-lan-can">Cầu thang uốn xoắn</a></li>
-          <li><a href="linh-vuc-hoat-dong.html#cong-hang-rao">Cổng nhôm đúc</a></li>
-          <li><a href="linh-vuc-hoat-dong.html#bao-tri-dich-vu">Bảo trì &amp; Kỹ thuật</a></li>
+          <li><a href="linh-vuc-co-khi.html">Cơ Khí Biệt Thự &amp; Lâu Đài</a></li>
+          <li><a href="linh-vuc-nhom-kinh.html">Nhôm Kính Kiến Trúc Cao Cấp</a></li>
+          <li><a href="du-an.html?cat=gia-cong-du-thuyen">Gia Công Inox Du Thuyền</a></li>
+          <li><a href="san-pham.html">Sản Phẩm Trang Trí</a></li>
         </ul>
       </div>
       
       <div class="footer-col">
         <h4>Công Ty</h4>
         <ul>
-          <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+          <li><a href="gioi-thieu.html">Về Cơ Khí Sao Vàng</a></li>
           <li><a href="du-an.html">Dự án thực hiện</a></li>
-          <li><a href="san-pham.html">Sản phẩm cao cấp</a></li>
+          <li><a href="nang-luc.html">Hồ sơ năng lực</a></li>
           <li><a href="tin-tuc.html">Tin tức &amp; Sự kiện</a></li>
           <li><a href="lien-he.html">Liên hệ trực tiếp</a></li>
         </ul>
@@ -560,96 +273,8 @@
       <span>Thiết kế &amp; phát triển bởi Sao Vàng Tech</span>
     </div>
   </div>
-</footer><!-- FLOATING BUTTONS -->
-<div class="floats" role="complementary" aria-label="Liên hệ nhanh">
-  <a href="https://zalo.me/0869590279" class="float-btn float-chat" aria-label="Chat Zalo" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
-  </a>
-  <a href="tel:0869590279" class="float-btn float-phone" aria-label="Gọi 0869 590 279">
-    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-  </a>
-</div>
-<a href="lien-he.html" class="float-support" aria-label="Hỗ trợ kỹ thuật">
-  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
-</a>
-
-
-
-
-
-
-
-
-
+</footer>
 
 <script src="assets/js/main.js"></script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const tabCoKhi = document.getElementById('tab-co-khi');
-  const tabNhomKinh = document.getElementById('tab-nhom-kinh');
-  const secCoKhi = document.getElementById('co-khi-division');
-  const secNhomKinh = document.getElementById('nhom-kinh-division');
-  
-  if (!tabCoKhi || !tabNhomKinh || !secCoKhi || !secNhomKinh) return;
-
-  function setActiveTab(tab) {
-    tabCoKhi.classList.remove('active');
-    tabNhomKinh.classList.remove('active');
-    tab.classList.add('active');
-  }
-
-  const options = {
-    root: null,
-    rootMargin: '-120px 0px -50% 0px',
-    threshold: 0
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        if (entry.target.id === 'co-khi-division') {
-          setActiveTab(tabCoKhi);
-        } else if (entry.target.id === 'nhom-kinh-division') {
-          setActiveTab(tabNhomKinh);
-        }
-      }
-    });
-  }, options);
-
-  observer.observe(secCoKhi);
-  observer.observe(secNhomKinh);
-
-  const tabs = [tabCoKhi, tabNhomKinh];
-  tabs.forEach(tab => {
-    tab.addEventListener('click', function(e) {
-      e.preventDefault();
-      const targetId = this.getAttribute('href');
-      const targetEl = document.querySelector(targetId);
-      if (targetEl) {
-        const headerH = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-h')) || 70;
-        const selectSec = document.querySelector('.division-select-section');
-        const selectSecH = selectSec ? selectSec.offsetHeight : 50;
-        const totalOffset = headerH + selectSecH + 10;
-        
-        window.scrollTo({
-          top: targetEl.getBoundingClientRect().top + window.scrollY - totalOffset,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-});
-</script>
-
-
-<!-- STICKY MOBILE CTA BAR -->
-<div class="sticky-cta-bar" id="stickyCtaBar" role="complementary" aria-label="Liên hệ nhanh">
-  <a href="tel:0869590279" class="btn btn-gold btn-sm">
-    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-    Gọi Ngay
-  </a>
-  <a href="https://zalo.me/0869590279" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
-  <a href="bao-gia.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
-</div>
 </body>
 </html>

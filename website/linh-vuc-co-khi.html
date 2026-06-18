@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="theme-color" content="#A50000" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cơ Khí Biệt Thự & Lâu Đài | Cổng đúc, Hàng rào, Mái kính | Sao Vàng</title>
+  <meta name="description" content="Chuyên tư vấn, thiết kế và thi công cơ khí nghệ thuật dành riêng cho Biệt thự, Dinh thự: Cổng nhôm đúc nguyên khối, hàng rào sắt uốn mỹ thuật, mái kính cường lực, lan can và cầu thang xoắn.">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <style>
+    /* PAGE SPECIFIC CSS */
+    .hero-co-khi {
+      position: relative;
+      min-height: 85vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 20px;
+      overflow: hidden;
+      background-color: var(--dark);
+    }
+    .hero-co-khi-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+    .hero-co-khi-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+    .hero-co-khi::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(13,13,13,0.8) 0%, rgba(13,13,13,0.3) 50%, rgba(13,13,13,0.9) 100%);
+      z-index: 1;
+    }
+    .hero-co-khi-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      color: var(--white);
+    }
+    .hero-co-khi-badge {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(200, 134, 10, 0.2);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      border-radius: 30px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+    .hero-co-khi-content h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      line-height: 1.1;
+      margin-bottom: 24px;
+      font-family: var(--font-heading);
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+    .hero-co-khi-content h1 span {
+      color: var(--gold);
+      display: block;
+    }
+    .hero-co-khi-content p {
+      font-size: clamp(16px, 2vw, 20px);
+      color: rgba(255,255,255,0.8);
+      max-width: 700px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    /* GRID CATEGORIES */
+    .co-khi-cats {
+      padding: 80px 20px;
+      background: var(--gray-50);
+    }
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .cat-card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+      transition: all 0.4s var(--ease);
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+    .cat-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      border-color: var(--gold);
+    }
+    .cat-img {
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      position: relative;
+    }
+    .cat-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease);
+    }
+    .cat-card:hover .cat-img img {
+      transform: scale(1.05);
+    }
+    .cat-body {
+      padding: 30px;
+    }
+    .cat-body h3 {
+      font-size: 22px;
+      color: var(--dark);
+      margin-bottom: 12px;
+    }
+    .cat-body p {
+      color: var(--gray-600);
+      line-height: 1.6;
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    .cat-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px 0;
+    }
+    .cat-features li {
+      position: relative;
+      padding-left: 24px;
+      font-size: 14px;
+      color: var(--dark);
+      margin-bottom: 8px;
+    }
+    .cat-features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: bold;
+    }
+
+    /* PROCESS SECTION */
+    .process-section {
+      padding: 80px 20px;
+      background: var(--dark);
+      color: var(--white);
+    }
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 60px auto 0;
+      counter-reset: step;
+    }
+    .process-step {
+      position: relative;
+      padding: 30px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+    }
+    .process-step::before {
+      counter-increment: step;
+      content: "0" counter(step);
+      position: absolute;
+      top: -20px;
+      left: 30px;
+      background: var(--gold);
+      color: var(--dark);
+      font-weight: 800;
+      font-size: 20px;
+      padding: 4px 16px;
+      border-radius: 20px;
+    }
+    .process-step h4 {
+      font-size: 20px;
+      margin-bottom: 16px;
+      color: var(--gold);
+    }
+    .process-step p {
+      color: rgba(255,255,255,0.7);
+      line-height: 1.6;
+      font-size: 15px;
+    }
+  
+  /* ══ STICKY BOTTOM CTA (mobile) ══════════════════════════════ */
+  .sticky-cta-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 890;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: #111;
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding: 10px 16px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -4px 24px rgba(0,0,0,.4);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+  .sticky-cta-bar .btn { flex: 1; justify-content: center; min-height: 40px; }
+  @media (min-width: 1024px) { .sticky-cta-bar { display: none !important; } }
+  </style>
+</head>
+<body>
+
+<header class="header" id="header" role="banner">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Cơ Khí Sao Vàng — Trang chủ">
+      <span class="logo-badge" aria-hidden="true">SV</span>
+      <span class="logo-name">Cơ Khí Sao Vàng</span>
+    </a>
+    <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
+      <a href="index.html" class="nav-item">TRANG CHỦ</a>
+      <a href="gioi-thieu.html" class="nav-item">GIỚI THIỆU</a>
+      <div class="nav-dropdown">
+        <a href="linh-vuc-hoat-dong.html" class="nav-item active" aria-current="page">
+          LĨNH VỰC
+          <svg class="chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </a>
+        <div class="dropdown-menu" style="min-width: 300px;">
+          <a href="linh-vuc-co-khi.html" class="dropdown-item" style="padding: 16px 20px;">
+            <span class="dropdown-title" style="font-size: 16px; margin-bottom: 6px;">Cơ Khí Biệt Thự &amp; Lâu Đài</span>
+            <span class="dropdown-desc" style="font-size: 13px; opacity: 0.8;">Cổng đúc, Hàng rào, Mái kính, Cầu thang nghệ thuật</span>
+          </a>
+          <a href="linh-vuc-nhom-kinh.html" class="dropdown-item" style="padding: 16px 20px;">
+            <span class="dropdown-title" style="font-size: 16px; margin-bottom: 6px;">Nhôm Kính Kiến Trúc Cao Cấp</span>
+            <span class="dropdown-desc" style="font-size: 13px; opacity: 0.8;">Cửa nhôm Slim, Xingfa, Vách dựng Unitized, Lan can kính</span>
+          </a>
+        </div>
+      </div>
+      <a href="du-an.html" class="nav-item">DỰ ÁN</a>
+      <a href="nang-luc.html" class="nav-item">NĂNG LỰC</a>
+      <a href="san-pham.html" class="nav-item">SẢN PHẨM</a>
+      <a href="tin-tuc.html" class="nav-item">TIN TỨC</a>
+      <a href="lien-he.html" class="nav-item">LIÊN HỆ</a>
+      <a href="bao-gia.html" class="nav-item" style="color:var(--gold);font-weight:700">BÁO GIÁ</a>
+      <a href="san-pham.html" class="nav-item premium">+ CAO CẤP</a>
+    </nav>
+    <a href="tel:0869590279" class="header-phone" aria-label="Gọi hotline 0869 590 279">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      0869 590 279
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero-co-khi">
+    <div class="hero-co-khi-bg">
+      <img src="assets/images/project-mansion-gate.png" alt="Cổng dinh thự hoàng gia" onerror="this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80'">
+    </div>
+    <div class="hero-co-khi-content">
+      <span class="hero-co-khi-badge">Cơ Khí Biệt Thự & Lâu Đài</span>
+      <h1>Tuyệt Tác Cơ Khí <span>Khẳng Định Vị Thế Hoàng Gia</span></h1>
+      <p>Cơ Khí Sao Vàng là đơn vị tiên phong chế tác nghệ thuật cơ khí thủ công và đúc nguyên khối, mang tới sự vương giả và uy nghi cho các dinh thự, biệt thự triệu đô.</p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+        <a href="#danh-muc" class="btn btn-gold">Khám Phá Hạng Mục</a>
+        <a href="#du-an" class="btn btn-outline">Dự Án Tiêu Biểu</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HẠNG MỤC -->
+  <section id="danh-muc" class="co-khi-cats">
+    <div class="container text-center" style="margin-bottom: 60px;">
+      <h2 class="section-title">Hạng Mục Cơ Khí Siêu Sang</h2>
+      <p style="color:var(--gray-600); max-width:700px; margin:0 auto;">Mỗi hạng mục là một tác phẩm nghệ thuật được đo ni đóng giày, phù hợp hoàn hảo với phong cách kiến trúc Tân Cổ Điển, Cổ Điển hay Hiện Đại của dinh thự.</p>
+    </div>
+    <div class="cat-grid">
+      <!-- Item 1 -->
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="assets/images/product-gate.png" alt="Cổng Nhôm Đúc & Sắt Nghệ Thuật" onerror="this.src='https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?w=600&q=80'">
+        </div>
+        <div class="cat-body">
+          <h3>Cổng Nhôm Đúc &amp; Sắt Mỹ Nghệ</h3>
+          <p>Mặt tiền uy nghi thể hiện đẳng cấp gia chủ. Chế tác đúc chân không hợp kim nhôm hoặc rèn sắt thủ công ở nhiệt độ 1100°C.</p>
+          <ul class="cat-features">
+            <li>Đúc nguyên khối, hoa văn 3D sắc sảo</li>
+            <li>Sắt rèn gai cổ điển, không mối hàn</li>
+            <li>Sơn giả cổ tĩnh điện 5 lớp PVDF</li>
+            <li>Tích hợp motor âm sàn tự động 100%</li>
+          </ul>
+          <a href="lien-he.html" class="btn btn-sm btn-outline-dark">Nhận báo giá <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <!-- Item 2 -->
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="assets/images/service-mechanical-art.png" alt="Hàng Rào & Lan Can Ban Công" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80'">
+        </div>
+        <div class="cat-body">
+          <h3>Hàng Rào &amp; Lan Can Ban Công</h3>
+          <p>Hệ thống bao che vững chắc nhưng đầy tính thẩm mỹ nghệ thuật, kết nối không gian sân vườn và nội thất mở.</p>
+          <ul class="cat-features">
+            <li>Thiết kế liền mạch bao quanh khuôn viên</li>
+            <li>Hợp kim nhôm đúc hoặc gang đúc chống rỉ</li>
+            <li>Lan can bụng cong phong cách hoàng gia Pháp</li>
+            <li>Mạ kẽm nhúng nóng, độ bền màu trên 20 năm</li>
+          </ul>
+          <a href="lien-he.html" class="btn btn-sm btn-outline-dark">Nhận báo giá <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <!-- Item 3 -->
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="assets/images/project-penthouse.png" alt="Cầu Thang Xoắn & Cầu Thang Xương Cá" onerror="this.src='https://images.unsplash.com/photo-1505069190533-da1c9af13346?w=600&q=80'">
+        </div>
+        <div class="cat-body">
+          <h3>Cầu Thang Xoắn &amp; Xương Cá</h3>
+          <p>Điểm nhấn nghệ thuật tại giếng trời thông tầng, tối ưu diện tích và phô diễn kỹ thuật cơ khí tạo hình siêu việt.</p>
+          <ul class="cat-features">
+            <li>Thép tấm lốc xoắn 3D chính xác tuyệt đối</li>
+            <li>Lan can kính uốn cong hoặc sắt mỹ thuật</li>
+            <li>Tay vịn bọc Inox mạ PVD Titan vàng gương</li>
+            <li>Kết cấu treo chịu lực không rung chấn</li>
+          </ul>
+          <a href="lien-he.html" class="btn btn-sm btn-outline-dark">Nhận báo giá <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <!-- Item 4 -->
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="assets/images/service-glass-facades.png" alt="Mái Kính Nghệ Thuật" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80'">
+        </div>
+        <div class="cat-body">
+          <h3>Mái Kính Nghệ Thuật &amp; Sảnh</h3>
+          <p>Mái che sảnh chính, hiên nhà hay giếng trời đón sáng kết hợp hệ khung thép uốn hoa văn cổ điển độc bản.</p>
+          <ul class="cat-features">
+            <li>Khung thép hộp/đặc chịu lực khẩu độ lớn</li>
+            <li>Kính dán an toàn cường lực 2 lớp</li>
+            <li>Hoa văn cắt Laser hoặc rèn thủ công</li>
+            <li>Ron chống thấm Silicone Structural</li>
+          </ul>
+          <a href="lien-he.html" class="btn btn-sm btn-outline-dark">Nhận báo giá <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <!-- Item 5 -->
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="assets/images/workshop_cnc.png" alt="Tiểu Cảnh Ngoại Thất" onerror="this.src='https://images.unsplash.com/photo-1599551465913-68f44ffcd494?w=600&q=80'">
+        </div>
+        <div class="cat-body">
+          <h3>Trang Trí Ngoại Thất Tùy Chỉnh</h3>
+          <p>Các hạng mục cá nhân hóa tô điểm thêm cho sân vườn: nhà chòi nghỉ (gazebo), xích đu, khung vòm hoa (pergola).</p>
+          <ul class="cat-features">
+            <li>Gazebo nhôm đúc nguyên khối ngoài trời</li>
+            <li>Giàn pergola thép hộp mạ kẽm</li>
+            <li>Gia công CNC họa tiết theo gia huy/logo</li>
+            <li>Khung bảo vệ cửa sổ chống trộm nghệ thuật</li>
+          </ul>
+          <a href="lien-he.html" class="btn btn-sm btn-outline-dark">Nhận báo giá <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <!-- Item 6 -->
+      <div class="cat-card">
+        <div class="cat-img">
+          <img src="assets/images/project-saobien-yacht.png" alt="Gia Công Inox Du Thuyền" onerror="this.src='https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?w=600&q=80'">
+        </div>
+        <div class="cat-body">
+          <h3>Gia Công Inox Du Thuyền</h3>
+          <p>Ứng dụng kỹ thuật cơ khí hàng hải cao cấp nhất vào các công trình cận biển, chống ăn mòn siêu việt.</p>
+          <ul class="cat-features">
+            <li>Inox Marine 316L chuyên dụng hàng hải</li>
+            <li>Đánh bóng điện hóa Hairline/Mirror 800-grit</li>
+            <li>Lan can, tay vịn hồ bơi, phụ kiện bến thuyền</li>
+            <li>Hàn TIG argon không tỳ vết</li>
+          </ul>
+          <a href="lien-he.html" class="btn btn-sm btn-outline-dark">Nhận báo giá <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process-section">
+    <div class="container text-center">
+      <span class="section-subtitle" style="color:var(--gold);">Tinh Hoa Chế Tác</span>
+      <h2 class="section-title" style="color:var(--white);">Quy Trình Thi Công Chuẩn Quốc Tế</h2>
+      <p style="color:rgba(255,255,255,0.7); max-width:700px; margin:0 auto;">Tại Sao Vàng, mỗi sản phẩm là sự kết hợp giữa máy móc CNC hiện đại và bàn tay tài hoa của nghệ nhân lâu năm.</p>
+      
+      <div class="process-grid text-left">
+        <div class="process-step">
+          <h4>Khảo Sát &amp; Quét 3D</h4>
+          <p>Sử dụng máy quét Laser 3D đo đạc hiện trạng thực tế, đảm bảo sai số khi lên bản vẽ kết cấu dưới 1mm.</p>
+        </div>
+        <div class="process-step">
+          <h4>Mô Phỏng &amp; Duyệt Mẫu</h4>
+          <p>Thiết kế 3D Tekla/Revit mô phỏng khả năng chịu lực. Duyệt mẫu vật liệu, màu sơn và hoa văn đúc/rèn trực tiếp với gia chủ.</p>
+        </div>
+        <div class="process-step">
+          <h4>Chế Tác Tại Xưởng</h4>
+          <p>Cắt CNC Fiber, đúc chân không, uốn rèn tay. Xử lý bề mặt mạ kẽm nhúng nóng và sơn tĩnh điện/mạ PVD cao cấp.</p>
+        </div>
+        <div class="process-step">
+          <h4>Lắp Đặt &amp; Bàn Giao</h4>
+          <p>Đội ngũ kỹ sư vận chuyển và cẩu lắp ráp an toàn tại công trình. Vệ sinh công nghiệp và bàn giao với chế độ bảo hành 5 năm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DỰ ÁN TIÊU BIỂU (Dynamic CMS) -->
+  <section id="du-an" style="padding: 100px 20px; background:var(--white);">
+    <div class="container text-center">
+      <span class="section-subtitle">Minh Chứng Năng Lực</span>
+      <h2 class="section-title">Các Công Trình Cơ Khí Đã Thực Hiện</h2>
+      <div class="projects-grid" id="projectsGrid" style="margin-top:50px;">
+        <!-- Loading skeletons -->
+        <div class="proj-skeleton"></div><div class="proj-skeleton"></div><div class="proj-skeleton"></div>
+      </div>
+      <div style="margin-top: 40px;">
+        <a href="du-an.html?cat=co-khi-nghe-thuat" class="btn btn-outline-dark">Xem Toàn Bộ Dự Án Cơ Khí <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Liên hệ -->
+  <section class="cta-banner" style="background:var(--red); color:white; padding:80px 20px; text-align:center;">
+    <div class="container">
+      <h2 style="font-size:36px; margin-bottom:20px;">Dinh Thự Của Bạn Xứng Đáng Với Tuyệt Tác Tốt Nhất</h2>
+      <p style="font-size:18px; margin-bottom:40px; opacity:0.9;">Gửi bản vẽ kiến trúc hoặc yêu cầu khảo sát, kỹ sư Sao Vàng sẽ đến tận nơi tư vấn giải pháp cơ khí thẩm mỹ cao nhất.</p>
+      <div style="display:flex; justify-content:center; gap:16px;">
+        <a href="tel:0869590279" class="btn btn-gold">Gọi: 0869 590 279</a>
+        <a href="lien-he.html" class="btn btn-outline" style="border-color:white; color:white;">Để Lại Yêu Cầu</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" style="margin-bottom:18px;">
+          <span class="logo-badge">SV</span>
+          <span class="logo-name">Cơ Khí Sao Vàng</span>
+        </a>
+        <p style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.7); margin-bottom:16px;">
+          <strong>Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng</strong><br>
+          MST: 0110461829 — Sở KH&ĐT Hà Nội cấp năm 2024.<br>
+          📍 Văn phòng: Tầng 3, TT7-35 KĐT Văn Phú, Hà Đông, Hà Nội.<br>
+          ⚙️ Nhà xưởng: Đường CN 6, KCN Bắc Từ Liêm, Hà Nội.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="#" class="social-link" aria-label="YouTube"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
+          <a href="https://zalo.me/0869590279" class="social-link" aria-label="Zalo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><text y="17" font-size="12" font-weight="bold" font-family="Arial">Zalo</text></svg></a>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Lĩnh Vực Chuyên Sâu</h4>
+        <ul>
+          <li><a href="linh-vuc-co-khi.html">Cơ Khí Biệt Thự &amp; Lâu Đài</a></li>
+          <li><a href="linh-vuc-nhom-kinh.html">Nhôm Kính Kiến Trúc Cao Cấp</a></li>
+          <li><a href="du-an.html?cat=gia-cong-du-thuyen">Gia Công Inox Du Thuyền</a></li>
+          <li><a href="san-pham.html">Sản Phẩm Trang Trí</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Công Ty</h4>
+        <ul>
+          <li><a href="gioi-thieu.html">Về Cơ Khí Sao Vàng</a></li>
+          <li><a href="du-an.html">Dự án thực hiện</a></li>
+          <li><a href="nang-luc.html">Hồ sơ năng lực</a></li>
+          <li><a href="tin-tuc.html">Tin tức &amp; Sự kiện</a></li>
+          <li><a href="lien-he.html">Liên hệ trực tiếp</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col">
+        <h4>Bản Đồ</h4>
+        <div style="width:100%; border-radius:6px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); height:130px; margin-top:8px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.688172083984!2d105.77583627589578!3d20.965037990069354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adc71e3b2e3b%3A0xe5a3c2cf7e3c1b82!2zS0RUIFbEg24gUGjDugEsIEjDoCDEkMO0bmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1718712345678!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <span>© 2026 Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng. Bảo lưu mọi quyền.</span>
+      <span>Thiết kế &amp; phát triển bởi Sao Vàng Tech</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/cms-client.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  // Load 6 featured mechanical projects
+  document.addEventListener('DOMContentLoaded', async () => {
+    const grid = document.getElementById('projectsGrid');
+    try {
+      const { data } = await CMS.getProjects({ limit: 50, page: 1 });
+      const mechanicalKeywords = ['cơ khí', 'cầu thang', 'cổng', 'lan can', 'du thuyền', 'hàng rào'];
+      
+      const mechProjects = data.filter(p => {
+        const cat = (p.category || '').toLowerCase();
+        return mechanicalKeywords.some(kw => cat.includes(kw));
+      }).slice(0, 6);
+
+      if (mechProjects.length === 0) {
+        grid.innerHTML = '<p>Dự án đang được cập nhật...</p>';
+        return;
+      }
+
+      grid.innerHTML = mechProjects.map((p) => {
+        const imgSrc = p.thumbnail ? CMS.imgUrl(p.thumbnail) : 'assets/images/project-villa.png';
+        return \`<a href="du-an-chi-tiet.html?slug=\${p.slug || p.id}" class="proj-item">
+          <img src="\${CMS.esc(imgSrc)}" alt="\${CMS.esc(p.title)}" loading="lazy" />
+          <div class="proj-info">
+            <span class="proj-info-cat">\${CMS.esc(p.category)}</span>
+            <h3>\${CMS.esc(p.title)}</h3>
+            <p>\${CMS.esc((p.excerpt || '').slice(0, 100))}...</p>
+          </div>
+        </a>\`;
+      }).join('');
+    } catch (err) {
+      console.error(err);
+      grid.innerHTML = '<p>Không thể tải dự án lúc này.</p>';
+    }
+  });
+</script>
+</body>
+</html>
