@@ -1,508 +1,1932 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="theme-color" content="#A50000" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nhôm Kính Kiến Trúc Cao Cấp | Cửa nhôm Slim, Vách Unitized | Sao Vàng</title>
-  <meta name="description" content="Tổng thầu thi công giải pháp Nhôm Kính Kiến Trúc cao cấp. Chuyên hệ cửa nhôm Xingfa Class A, Civro, Maxpro, vách mặt dựng Unitized, kính Low-E cản nhiệt cho Tòa nhà, Biệt thự.">
-  <link rel="stylesheet" href="assets/css/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1E3A5F" />
+  <title>SAO VANG FACADE SYSTEMS — Hệ thống Nhôm Kính Kiến Trúc | Tiêu Chuẩn Châu Âu</title>
+  <meta name="description" content="SAO VANG FACADE SYSTEMS — Chuyên thi công vách kính mặt dựng Unitized, Stick, cửa nhôm Slim, Civro, Maxpro cách nhiệt châu Âu. Tiêu chuẩn ISO 9001:2015. Hotline: 0869 590 279." />
+  <meta property="og:title" content="SAO VANG FACADE SYSTEMS — Hệ thống Nhôm Kính Kiến Trúc" />
+  <meta property="og:description" content="Hệ thống nhôm kính kiến trúc tiêu chuẩn Châu Âu. Mặt dựng cản nhiệt Low-E, Cửa nhôm Slim cầu cách nhiệt. ISO 9001:2015 · QUACERT." />
+  <meta property="og:image" content="https://www.CoKhiSaoVang.com/assets/images/hero-doors.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.CoKhiSaoVang.com/linh-vuc-nhom-kinh.html" />
+  <link rel="canonical" href="https://www.CoKhiSaoVang.com/linh-vuc-nhom-kinh.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <!-- Schema.org JSON-LD — Facade Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "SAO VANG FACADE SYSTEMS — Hệ thống Nhôm Kính Kiến Trúc",
+    "serviceType": "Facade Engineering & Architectural Aluminum Glass",
+    "provider": {
+      "@type": "Organization",
+      "name": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG",
+      "taxID": "0110808047",
+      "url": "https://www.CoKhiSaoVang.com",
+      "logo": "https://www.CoKhiSaoVang.com/assets/images/logo-sv-main.png",
+      "telephone": "+84869590279",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tầng 3, TT7-35 KĐT Văn Phú",
+        "addressLocality": "Hà Đông",
+        "addressRegion": "Hà Nội",
+        "addressCountry": "VN"
+      },
+      "hasCredential": [
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "ISO 9001:2015" },
+        { "@type": "EducationalOccupationalCredential", "credentialCategory": "QUACERT" }
+      ]
+    },
+    "areaServed": { "@type": "Country", "name": "Vietnam" },
+    "description": "Chế tạo & lắp dựng mặt dựng nhôm kính kiến trúc cao cấp: Stick, Unitized, cửa nhôm Slim, vách kính cách âm Low-E, kiểm soát chất lượng chuẩn ISO 9001:2015.",
+    "offers": [
+      { "@type": "Offer", "name": "Mặt dựng Unitized cản nhiệt", "category": "Mặt dựng Facade" },
+      { "@type": "Offer", "name": "Stick Facade kết cấu lớn", "category": "Mặt dựng Facade" },
+      { "@type": "Offer", "name": "Cửa nhôm Slim profile cách nhiệt", "category": "Cửa nhôm cao cấp" },
+      { "@type": "Offer", "name": "Vách kính partition & cabin tắm PVD", "category": "Vách kính kiến trúc" }
+    ]
+  }
+  </script>
+
   <style>
-    /* PAGE SPECIFIC CSS */
-    .hero-nhom-kinh {
+    /* ════════════════════════════════════════════════
+       PAGE-SPECIFIC: linh-vuc-nhom-kinh.html
+       Theme: Steel Blue / Indigo (#1E3A5F)
+    ════════════════════════════════════════════════ */
+    :root {
+      --facade-brand: #1E3A5F;
+      --facade-hover: #12253F;
+      --facade-blue: #3A7FBF;
+      --facade-light: #EBF3FC;
+    }
+
+    /* ── Hero: Full-screen image background ──────────────── */
+    .hero-facade {
       position: relative;
-      min-height: 85vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 100px 20px;
       overflow: hidden;
-      background-color: var(--dark);
+      background-color: var(--dark-industrial);
+      padding-top: var(--header-h);
     }
-    .hero-nhom-kinh-bg {
+
+    .hero-facade-bg {
       position: absolute;
       inset: 0;
       z-index: 0;
     }
-    .hero-nhom-kinh-bg img {
+
+    .hero-facade-bg img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      opacity: 0.6;
+      opacity: 0.5;
     }
-    .hero-nhom-kinh::after {
-      content: '';
+
+    .hero-facade-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to bottom, rgba(13,13,13,0.7) 0%, rgba(13,13,13,0.2) 50%, rgba(13,13,13,0.9) 100%);
       z-index: 1;
+      background: linear-gradient(
+        160deg,
+        rgba(15,17,21,0.85) 0%,
+        rgba(15,17,21,0.6) 50%,
+        rgba(15,17,21,0.9) 100%
+      );
     }
-    .hero-nhom-kinh-content {
+
+    .hero-facade-content {
       position: relative;
       z-index: 2;
-      max-width: 900px;
-      color: var(--white);
+      max-width: 860px;
+      padding: var(--space-8) var(--space-6);
     }
-    .hero-nhom-kinh-badge {
-      display: inline-block;
-      padding: 6px 16px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255,255,255,0.3);
-      color: var(--white);
-      border-radius: 30px;
+
+    .hero-breadcrumb {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      font-family: var(--ff-header);
+      font-size: var(--text-xs);
       font-weight: 600;
-      letter-spacing: 2px;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      font-size: 13px;
-      margin-bottom: 24px;
-      backdrop-filter: blur(4px);
+      color: rgba(255,255,255,0.5);
+      margin-bottom: var(--space-6);
     }
-    .hero-nhom-kinh-content h1 {
-      font-size: clamp(36px, 6vw, 64px);
-      line-height: 1.1;
-      margin-bottom: 24px;
-      font-family: var(--font-heading);
+
+    .hero-breadcrumb a {
+      color: rgba(255,255,255,0.5);
+      transition: color 0.2s;
+    }
+    .hero-breadcrumb a:hover { color: var(--facade-blue); }
+
+    .hero-breadcrumb-sep {
+      display: inline-flex;
+      align-items: center;
+      color: rgba(255,255,255,0.25);
+    }
+
+    .hero-breadcrumb-current {
+      color: var(--facade-blue);
+    }
+
+    .hero-division-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      font-family: var(--ff-header);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
-      letter-spacing: -1px;
+      color: var(--facade-blue);
+      border: 1px solid rgba(58,127,191,0.4);
+      background: rgba(58,127,191,0.08);
+      padding: var(--space-2) var(--space-6);
+      border-radius: 2px;
+      margin-bottom: var(--space-6);
     }
-    .hero-nhom-kinh-content p {
-      font-size: clamp(16px, 2vw, 20px);
-      color: rgba(255,255,255,0.9);
-      max-width: 700px;
-      margin: 0 auto 40px;
+
+    .hero-facade-title {
+      font-family: var(--ff-header);
+      font-size: var(--text-hero);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      text-transform: uppercase;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: var(--space-4);
+    }
+
+    .hero-facade-title .division-name {
+      display: block;
+      color: var(--facade-blue);
+    }
+
+    .hero-facade-subtitle {
+      font-size: var(--text-lg);
+      color: rgba(255,255,255,0.75);
+      line-height: 1.65;
+      max-width: 640px;
+      margin: 0 auto var(--space-8);
+      font-weight: 300;
+    }
+
+    .hero-facade-ctas {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-4);
+      flex-wrap: wrap;
+    }
+
+    .hero-scroll-indicator {
+      position: absolute;
+      bottom: var(--space-8);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2);
+      color: rgba(255,255,255,0.4);
+      font-size: var(--text-xs);
+      font-family: var(--ff-header);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.4));
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(1); }
+      50% { opacity: 0.8; transform: scaleY(1.2); }
+    }
+
+    /* ── Pain Section ────────────────────────────────── */
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-12);
+    }
+
+    .pain-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      padding: var(--space-8);
+      transition: var(--transition-smooth);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pain-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--facade-brand), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .pain-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(30,58,95,0.07);
+      border-color: rgba(30,58,95,0.15);
+    }
+
+    .pain-card:hover::before { opacity: 1; }
+
+    .pain-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-sm);
+      background: rgba(30,58,95,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--facade-brand);
+      margin-bottom: var(--space-4);
+    }
+
+    .pain-title {
+      font-family: var(--ff-header);
+      font-size: var(--text-md);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: var(--space-3);
+      line-height: 1.3;
+    }
+
+    .pain-desc {
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+      line-height: 1.65;
+    }
+
+    .pain-transition {
+      text-align: center;
+      margin-top: var(--space-12);
+      padding: var(--space-8) var(--space-8);
+      background: linear-gradient(135deg, rgba(30,58,95,0.04), rgba(58,127,191,0.04));
+      border: 1px solid rgba(30,58,95,0.12);
+      border-radius: var(--radius-md);
+    }
+
+    .pain-transition-text {
+      font-family: var(--ff-header);
+      font-size: var(--text-xl);
+      font-weight: 800;
+      color: var(--gray-900);
+      line-height: 1.3;
+    }
+
+    .pain-transition-text .accent {
+      color: var(--facade-brand);
+    }
+
+    /* ── Solution Section ────────────────────────────── */
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-12);
+    }
+
+    .solution-card {
+      background: var(--dark-panel);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-md);
+      padding: var(--space-8);
+      display: flex;
+      gap: var(--space-6);
+      align-items: flex-start;
+      transition: var(--transition-smooth);
+    }
+
+    .solution-card:hover {
+      border-color: rgba(58,127,191,0.2);
+      background: rgba(255,255,255,0.02);
+      transform: translateY(-4px);
+    }
+
+    .solution-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: var(--radius-sm);
+      background: rgba(58,127,191,0.1);
+      color: var(--facade-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .solution-title {
+      font-family: var(--ff-header);
+      font-size: var(--text-md);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: var(--space-2);
+      line-height: 1.3;
+    }
+
+    .solution-spec {
+      display: inline-block;
+      font-family: var(--ff-header);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--facade-blue);
+      margin-bottom: var(--space-3);
+    }
+
+    .solution-desc {
+      font-size: var(--text-sm);
+      color: var(--gray-400);
       line-height: 1.6;
     }
 
-    /* GRID CATEGORIES */
-    .nhom-kinh-cats {
-      padding: 80px 20px;
-      background: var(--white);
-    }
-    .cat-grid {
+    /* Stats Row */
+    .stats-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .cat-card {
-      background: var(--gray-50);
-      border-radius: 12px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-1);
+      margin-top: var(--space-12);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-md);
       overflow: hidden;
-      transition: all 0.4s var(--ease);
-      border: 1px solid rgba(0,0,0,0.05);
     }
-    .cat-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+
+    .stat-cell {
+      padding: var(--space-8) var(--space-6);
+      text-align: center;
+      background: var(--dark-panel);
+      border-right: 1px solid rgba(255,255,255,0.05);
     }
-    .cat-img {
-      aspect-ratio: 16/10;
+
+    .stat-cell:last-child { border-right: none; }
+
+    .stat-num {
+      font-family: var(--ff-header);
+      font-size: var(--text-xxl);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1;
+      margin-bottom: var(--space-2);
+    }
+
+    .stat-num .unit {
+      font-size: var(--text-lg);
+      color: var(--facade-blue);
+      font-weight: 700;
+    }
+
+    .stat-lbl {
+      font-family: var(--ff-header);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray-500);
+    }
+
+    /* ── Products/Systems Section ────────────────────── */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-12);
+    }
+
+    .product-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
       overflow: hidden;
+      transition: var(--transition-smooth);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+      border-color: rgba(58,127,191,0.25);
+    }
+
+    .product-img {
       position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: var(--gray-100);
     }
-    .cat-img img {
+
+    .product-img img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.6s var(--ease);
-    }
-    .cat-card:hover .cat-img img {
-      transform: scale(1.05);
-    }
-    .cat-body {
-      padding: 30px;
-    }
-    .cat-body h3 {
-      font-size: 22px;
-      color: var(--dark);
-      margin-bottom: 12px;
-    }
-    .cat-body p {
-      color: var(--gray-600);
-      line-height: 1.6;
-      font-size: 15px;
-      margin-bottom: 20px;
-    }
-    .cat-features {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 24px 0;
-    }
-    .cat-features li {
-      position: relative;
-      padding-left: 24px;
-      font-size: 14px;
-      color: var(--dark);
-      margin-bottom: 8px;
-    }
-    .cat-features li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--red);
-      font-weight: bold;
+      transition: transform 0.6s ease;
     }
 
-    /* BRANDS SECTION */
-    .brands-section {
-      padding: 80px 20px;
-      background: var(--dark);
-      color: var(--white);
-      text-align: center;
+    .product-card:hover .product-img img {
+      transform: scale(1.05);
     }
-    .brands-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: 50px auto 0;
-      align-items: center;
-    }
-    .brand-logo {
-      background: rgba(255,255,255,0.05);
-      padding: 30px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.1);
-      transition: all 0.3s;
-    }
-    .brand-logo:hover {
-      background: rgba(255,255,255,0.1);
-      transform: translateY(-5px);
-    }
-    .brand-logo h4 {
-      font-size: 24px;
-      margin-bottom: 8px;
-      color: var(--white);
-      letter-spacing: 1px;
-    }
-    .brand-logo p {
-      font-size: 13px;
-      color: rgba(255,255,255,0.6);
-      margin: 0;
+
+    .product-img-badge {
+      position: absolute;
+      top: var(--space-4);
+      left: var(--space-4);
+      font-family: var(--ff-header);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      color: var(--white);
+      background: var(--facade-brand);
+      padding: 4px 10px;
+      border-radius: 1px;
+      z-index: 2;
     }
-  
-  /* ══ STICKY BOTTOM CTA (mobile) ══════════════════════════════ */
-  .sticky-cta-bar {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    z-index: 890;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    background: #111;
-    border-top: 1px solid rgba(255,255,255,.1);
-    padding: 10px 16px;
-    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
-    box-shadow: 0 -4px 24px rgba(0,0,0,.4);
-    transform: translateY(100%);
-    transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
-  }
-  .sticky-cta-bar .btn { flex: 1; justify-content: center; min-height: 40px; }
-  @media (min-width: 1024px) { .sticky-cta-bar { display: none !important; } }
+
+    .product-body {
+      padding: var(--space-6);
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .product-title {
+      font-family: var(--ff-header);
+      font-size: var(--text-md);
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: var(--space-4);
+      line-height: 1.35;
+    }
+
+    .product-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: var(--space-6);
+    }
+
+    .product-tag {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--gray-600);
+      background: var(--gray-100);
+      padding: 4px 8px;
+      border-radius: 2px;
+    }
+
+    /* ── Portfolio Section ───────────────────────────── */
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-12);
+    }
+
+    .portfolio-card {
+      position: relative;
+      aspect-ratio: 3 / 2;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: block;
+      cursor: pointer;
+    }
+
+    .portfolio-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(15,17,21,0.95) 0%, rgba(15,17,21,0.4) 60%, transparent 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: var(--space-8);
+      z-index: 2;
+    }
+
+    .portfolio-card:hover img {
+      transform: scale(1.06);
+    }
+
+    .portfolio-tag {
+      font-family: var(--ff-header);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--facade-blue);
+      margin-bottom: var(--space-2);
+    }
+
+    .portfolio-title {
+      font-family: var(--ff-header);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: var(--space-2);
+      line-height: 1.25;
+    }
+
+    .portfolio-meta {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      font-size: var(--text-xs);
+      color: var(--gray-400);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: var(--space-3);
+      margin-top: var(--space-2);
+    }
+
+    .portfolio-meta span {
+      display: flex;
+      align-items: center;
+      gap: var(--space-1);
+    }
+
+    /* ── Quote CTA Section ───────────────────────────── */
+    .quote-section {
+      background: linear-gradient(135deg, var(--dark-industrial) 0%, #0c1624 60%, #0d1219 100%);
+      padding-block: var(--space-24);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote-section::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--facade-brand) 0%, var(--facade-blue) 50%, var(--facade-brand) 100%);
+    }
+
+    .quote-section::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(58,127,191,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .quote-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: var(--space-16);
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .quote-pitch-kicker {
+      font-family: var(--ff-header);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--facade-blue);
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      margin-bottom: var(--space-4);
+    }
+
+    .quote-pitch-kicker::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 2px;
+      background: var(--facade-blue);
+    }
+
+    .quote-pitch-title {
+      font-family: var(--ff-header);
+      font-size: var(--text-xxl);
+      font-weight: 900;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      text-transform: uppercase;
+      margin-bottom: var(--space-6);
+    }
+
+    .quote-pitch-title span {
+      color: var(--facade-blue);
+    }
+
+    .quote-pitch-desc {
+      font-size: var(--text-md);
+      color: var(--gray-400);
+      line-height: 1.7;
+      margin-bottom: var(--space-8);
+    }
+
+    .trust-badges {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-3);
+    }
+
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: var(--radius-sm);
+      padding: var(--space-3) var(--space-4);
+    }
+
+    .trust-badge-icon {
+      color: var(--facade-blue);
+      flex-shrink: 0;
+    }
+
+    .trust-badge-text {
+      font-family: var(--ff-header);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: var(--gray-300);
+      letter-spacing: 0.04em;
+      line-height: 1.3;
+    }
+
+    /* Quote Form */
+    .quote-form-wrapper {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-md);
+      padding: var(--space-8);
+    }
+
+    .quote-form-header {
+      margin-bottom: var(--space-6);
+      padding-bottom: var(--space-4);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .quote-form-title {
+      font-family: var(--ff-header);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--white);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .quote-form-subtitle {
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+      margin-top: var(--space-1);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-label {
+      font-family: var(--ff-header);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+    }
+
+    .form-label .req {
+      color: var(--facade-blue);
+      margin-left: 2px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      font-family: var(--ff-body);
+      font-size: var(--text-sm);
+      color: var(--white);
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-sm);
+      padding: var(--space-3) var(--space-4);
+      transition: border-color 0.2s, background 0.2s;
+      outline: none;
+      width: 100%;
+    }
+
+    .form-input::placeholder,
+    .form-textarea::placeholder {
+      color: var(--gray-600);
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: rgba(58,127,191,0.5);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .form-select {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='14' height='14' fill='none' stroke='%236B7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right var(--space-4) center;
+      padding-right: var(--space-12);
+    }
+
+    .form-select option {
+      background: var(--dark-panel);
+      color: var(--white);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 90px;
+      line-height: 1.6;
+    }
+
+    /* File upload */
+    .file-upload-wrapper {
+      position: relative;
+    }
+
+    .file-upload-label {
+      display: flex;
+      align-items: center;
+      gap: var(--space-4);
+      border: 1px dashed rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.02);
+      border-radius: var(--radius-sm);
+      padding: var(--space-4);
+      cursor: pointer;
+      transition: var(--transition-smooth);
+    }
+
+    .file-upload-label:hover {
+      border-color: rgba(58,127,191,0.4);
+      background: rgba(58,127,191,0.02);
+    }
+
+    .file-upload-icon {
+      color: var(--facade-blue);
+      flex-shrink: 0;
+    }
+
+    .file-upload-text {
+      font-size: var(--text-sm);
+      font-weight: 500;
+      color: var(--gray-300);
+    }
+
+    .file-name {
+      font-size: var(--text-xs);
+      color: var(--gray-600);
+      margin-top: 2px;
+      word-break: break-all;
+    }
+
+    .file-upload-input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      z-index: 2;
+    }
+
+    .form-submit-btn {
+      grid-column: 1 / -1;
+      width: 100%;
+      padding-block: var(--space-4);
+      font-size: var(--text-sm);
+      letter-spacing: 0.1em;
+      justify-content: center;
+      background: var(--facade-brand);
+      border-color: var(--facade-brand);
+      color: var(--white);
+      margin-top: var(--space-4);
+    }
+
+    .form-submit-btn:hover {
+      background: var(--facade-hover);
+      border-color: var(--facade-hover);
+    }
+
+    /* ── Footer: Facade specific ───────────────────── */
+    .footer-facade {
+      background-color: #0b0c0e;
+      border-top: 1px solid var(--gray-800);
+      padding-top: var(--space-20);
+      padding-bottom: var(--space-8);
+    }
+
+    .footer-facade-inner {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: var(--space-16);
+      margin-bottom: var(--space-16);
+    }
+
+    .footer-brand-col {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .footer-brand-desc {
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+      line-height: 1.65;
+    }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+    }
+
+    .footer-contact-item svg {
+      color: var(--facade-blue);
+      flex-shrink: 0;
+    }
+
+    .footer-col-title {
+      font-family: var(--ff-header);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: var(--space-6);
+    }
+
+    .footer-nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+    }
+
+    .footer-nav-list a {
+      font-size: var(--text-sm);
+      color: var(--gray-500);
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      transition: color 0.2s;
+    }
+
+    .footer-nav-list a:hover {
+      color: var(--facade-blue);
+    }
+
+    .footer-nav-list a svg {
+      color: rgba(255,255,255,0.15);
+      transition: transform 0.2s, color 0.2s;
+    }
+
+    .footer-nav-list a:hover svg {
+      transform: translateX(3px);
+      color: var(--facade-blue);
+    }
+
+    .footer-bottom-bar {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: var(--space-8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+    }
+
+    .footer-copyright {
+      font-size: var(--text-xs);
+      color: var(--gray-600);
+    }
+
+    .footer-bottom-links {
+      display: flex;
+      gap: var(--space-6);
+    }
+
+    .footer-bottom-links a {
+      font-size: var(--text-xs);
+      color: var(--gray-600);
+      transition: color 0.2s;
+    }
+
+    .footer-bottom-links a:hover {
+      color: var(--facade-blue);
+    }
+
+    /* ── Responsive adjustments ────────────────────── */
+    @media (max-width: 1023px) {
+      .quote-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-12);
+      }
+      .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 767px) {
+      .pain-grid {
+        grid-template-columns: 1fr;
+      }
+      .solution-grid {
+        grid-template-columns: 1fr;
+      }
+      .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-facade-inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-8);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+      .stats-row {
+        grid-template-columns: 1fr;
+      }
+      .hero-facade-ctas .btn {
+        width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
 
-<header class="header" id="header" role="banner">
-  <div class="header-inner">
-    <a href="index.html" class="logo" aria-label="Cơ Khí Sao Vàng — Trang chủ">
-      <span class="logo-badge" aria-hidden="true">SV</span>
-      <span class="logo-name">Cơ Khí Sao Vàng</span>
-    </a>
-    <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
-      <a href="index.html" class="nav-item">TRANG CHỦ</a>
-      <a href="gioi-thieu.html" class="nav-item">GIỚI THIỆU</a>
-      <div class="nav-dropdown">
-        <a href="linh-vuc-hoat-dong.html" class="nav-item active" aria-current="page">
-          LĨNH VỰC
-          <svg class="chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
-        <div class="dropdown-menu" style="min-width: 300px;">
-          <a href="linh-vuc-co-khi.html" class="dropdown-item" style="padding: 16px 20px;">
-            <span class="dropdown-title" style="font-size: 16px; margin-bottom: 6px;">Cơ Khí Biệt Thự &amp; Lâu Đài</span>
-            <span class="dropdown-desc" style="font-size: 13px; opacity: 0.8;">Cổng đúc, Hàng rào, Mái kính, Cầu thang nghệ thuật</span>
-          </a>
-          <a href="linh-vuc-nhom-kinh.html" class="dropdown-item" style="padding: 16px 20px;">
-            <span class="dropdown-title" style="font-size: 16px; margin-bottom: 6px;">Nhôm Kính Kiến Trúc Cao Cấp</span>
-            <span class="dropdown-desc" style="font-size: 13px; opacity: 0.8;">Cửa nhôm Slim, Xingfa, Vách dựng Unitized, Lan can kính</span>
-          </a>
-        </div>
-      </div>
-      <a href="du-an.html" class="nav-item">DỰ ÁN</a>
-      <a href="nang-luc.html" class="nav-item">NĂNG LỰC</a>
-      <a href="san-pham.html" class="nav-item">SẢN PHẨM</a>
-      <a href="tin-tuc.html" class="nav-item">TIN TỨC</a>
-      <a href="lien-he.html" class="nav-item">LIÊN HỆ</a>
-      <a href="bao-gia.html" class="nav-item" style="color:var(--gold);font-weight:700">BÁO GIÁ</a>
-      <a href="san-pham.html" class="nav-item premium">+ CAO CẤP</a>
-    </nav>
-    <a href="tel:0869590279" class="header-phone" aria-label="Gọi hotline 0869 590 279">
-      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-      0869 590 279
-    </a>
-    <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  <a href="#main-content" class="skip-link">Bỏ qua điều hướng</a>
 
-<main>
-  <!-- HERO -->
-  <section class="hero-nhom-kinh">
-    <div class="hero-nhom-kinh-bg">
-      <img src="assets/images/project-showroom-auto.png" alt="Giải pháp vách kính mặt dựng" onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80'">
-    </div>
-    <div class="hero-nhom-kinh-content">
-      <span class="hero-nhom-kinh-badge">Nhôm Kính Kiến Trúc</span>
-      <h1>Giải Pháp Nhôm Kính <span>Khai Mở Không Gian</span></h1>
-      <p>Cung cấp giải pháp tổng thể về Cửa nhôm cao cấp, Vách kính mặt dựng và Kính kiến trúc. Đáp ứng tiêu chuẩn kỹ thuật khắt khe nhất cho Tòa nhà văn phòng, Khách sạn và Biệt thự hiện đại.</p>
-      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
-        <a href="#giai-phap" class="btn btn-gold">Xem Giải Pháp</a>
-        <a href="#doi-tac" class="btn btn-outline" style="border-color:white; color:white;">Thương Hiệu Đối Tác</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- GIẢI PHÁP NHÔM KÍNH -->
-  <section id="giai-phap" class="nhom-kinh-cats">
-    <div class="container text-center" style="margin-bottom: 60px;">
-      <h2 class="section-title">Hệ Thống Sản Phẩm &amp; Giải Pháp</h2>
-      <p style="color:var(--gray-600); max-width:700px; margin:0 auto;">Sự kết hợp hoàn hảo giữa Profile nhôm rãnh C tiêu chuẩn Châu Âu, kính tiết kiệm năng lượng và hệ phụ kiện kim khí đồng bộ.</p>
-    </div>
-    <div class="cat-grid">
-      <!-- Item 1 -->
-      <div class="cat-card">
-        <div class="cat-img">
-          <img src="assets/images/service-aluminum-doors.png" alt="Cửa Đi Nhôm Kính" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?w=600&q=80'">
-        </div>
-        <div class="cat-body">
-          <h3>Hệ Cửa Đi Mở Quay &amp; Trượt</h3>
-          <p>Tối đa hóa diện tích lối đi, cách âm cách nhiệt vượt trội. Đa dạng phương án mở đáp ứng mọi nhu cầu.</p>
-          <ul class="cat-features">
-            <li>Cửa trượt nâng (Lift-sliding) ray inox êm ái</li>
-            <li>Cửa xếp trượt (Folding) mở rộng 100% không gian</li>
-            <li>Cửa mở quay đa điểm khóa chống cạy phá</li>
-            <li>Profile nhôm cầu cách nhiệt (Thermal Break)</li>
-          </ul>
-          <a href="lien-he.html" class="btn btn-sm btn-outline-dark">Tư vấn cấu hình <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        </div>
-      </div>
-      <!-- Item 2 -->
-      <div class="cat-card">
-        <div class="cat-img">
-          <img src="assets/images/service-glass-facades.png" alt="Vách Kính Mặt Dựng" onerror="this.src='https://images.unsplash.com/photo-1497215848520-25211910d6e6?w=600&q=80'">
-        </div>
-        <div class="cat-body">
-          <h3>Vách Kính Mặt Dựng (Facades)</h3>
-          <p>Giải pháp bao che tòa nhà cao tầng, mang lại vẻ đẹp hiện đại và tối ưu ánh sáng tự nhiên, giảm tải trọng công trình.</p>
-          <ul class="cat-features">
-            <li>Hệ Unitized lắp ghép nguyên mảng tại xưởng</li>
-            <li>Hệ Stick linh hoạt cho bề mặt phức tạp</li>
-            <li>Hệ Spider (Chân nhện) lấy sáng tối đa</li>
-            <li>Chịu áp lực gió bão cấp 12, chống rung chấn</li>
-          </ul>
-          <a href="lien-he.html" class="btn btn-sm btn-outline-dark">Tư vấn cấu hình <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        </div>
-      </div>
-      <!-- Item 3 -->
-      <div class="cat-card">
-        <div class="cat-img">
-          <img src="assets/images/project-villa.png" alt="Cửa Sổ Nhôm Kính" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80'">
-        </div>
-        <div class="cat-body">
-          <h3>Hệ Cửa Sổ Thông Minh</h3>
-          <p>Thiết kế hệ gioăng EPDM 3 lớp đảm bảo kín khít tuyệt đối, chống nước mưa hắt ngược và cản bụi hiệu quả.</p>
-          <ul class="cat-features">
-            <li>Cửa sổ mở hất (Awning) chống mưa hắt</li>
-            <li>Cửa sổ mở quay - lật kép (Turn-Tilt) tiêu chuẩn Đức</li>
-            <li>Hệ lưới chống muỗi Inox tích hợp ẩn</li>
-            <li>Bản lề chữ A Inox 304 chịu tải lên đến 100kg/cánh</li>
-          </ul>
-          <a href="lien-he.html" class="btn btn-sm btn-outline-dark">Tư vấn cấu hình <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        </div>
-      </div>
-      <!-- Item 4 -->
-      <div class="cat-card">
-        <div class="cat-img">
-          <img src="assets/images/service-mechanical-art.png" alt="Lan Can Kính & Cabin Tắm" onerror="this.src='https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=600&q=80'">
-        </div>
-        <div class="cat-body">
-          <h3>Lan Can Kính &amp; Cabin Tắm</h3>
-          <p>Ứng dụng kính cường lực an toàn tạo ra không gian mở không giới hạn tầm nhìn cho ban công và nội thất.</p>
-          <ul class="cat-features">
-            <li>Lan can âm sàn u-inox không trụ đứng</li>
-            <li>Tay vịn nhôm xi mạ Anode chống bám vân tay</li>
-            <li>Cabin tắm kính cong nghệ thuật</li>
-            <li>Phụ kiện đồng bộ VVP, Hafele mạ PVD</li>
-          </ul>
-          <a href="lien-he.html" class="btn btn-sm btn-outline-dark">Tư vấn cấu hình <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ĐỐI TÁC VÀ THƯƠNG HIỆU -->
-  <section id="doi-tac" class="brands-section">
-    <div class="container">
-      <span class="section-subtitle" style="color:var(--gold);">Vật Tư Cao Cấp</span>
-      <h2 class="section-title" style="color:var(--white);">Hệ Thống Thương Hiệu Đối Tác</h2>
-      <p style="color:rgba(255,255,255,0.7); max-width:700px; margin:0 auto;">Cơ Khí Sao Vàng chỉ sử dụng Profile nhôm và hệ Phụ kiện kim khí từ các thương hiệu hàng đầu thế giới, đảm bảo độ bền vượt thời gian.</p>
+  <!-- ══ HEADER ══════════════════════════════════════════════════ -->
+  <header class="header" id="header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="SAO VÀNG GROUP — Trang chủ">
+        <img src="assets/images/logo-sv-main.png" alt="SAO VÀNG GROUP" height="44" style="height:44px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <span class="logo-badge" aria-hidden="true" style="display:none;">SV</span>
+      </a>
       
-      <div class="brands-grid">
-        <div class="brand-logo">
-          <h4>CIVRO</h4>
-          <p>Nhôm Hệ Cầu Cách Nhiệt - Đức</p>
-        </div>
-        <div class="brand-logo">
-          <h4>MAXPRO.JP</h4>
-          <p>Nhôm Xi Mạ Anode - Nhật Bản</p>
-        </div>
-        <div class="brand-logo">
-          <h4>XINGFA Class A</h4>
-          <p>Nhôm Rãnh C Châu Âu - PVDF</p>
-        </div>
-        <div class="brand-logo">
-          <h4>CMECH</h4>
-          <p>Phụ Kiện Kim Khí - Mỹ</p>
-        </div>
-        <div class="brand-logo">
-          <h4>HOPO</h4>
-          <p>Giải Pháp Phụ Kiện Đồng Bộ</p>
-        </div>
-        <div class="brand-logo">
-          <h4>HẢI LONG</h4>
-          <p>Kính An Toàn & Kính Hộp Low-E</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DỰ ÁN TIÊU BIỂU (Dynamic CMS) -->
-  <section id="du-an" style="padding: 100px 20px; background:var(--gray-50);">
-    <div class="container text-center">
-      <span class="section-subtitle">Minh Chứng Năng Lực</span>
-      <h2 class="section-title">Các Công Trình Nhôm Kính Đã Thực Hiện</h2>
-      <div class="projects-grid" id="projectsGrid" style="margin-top:50px;">
-        <!-- Loading skeletons -->
-        <div class="proj-skeleton"></div><div class="proj-skeleton"></div><div class="proj-skeleton"></div>
-      </div>
-      <div style="margin-top: 40px;">
-        <a href="du-an.html?cat=cua-nhom-cua-so" class="btn btn-outline-dark">Xem Toàn Bộ Dự Án Nhôm Kính <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="margin-left:4px"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Liên hệ -->
-  <section class="cta-banner" style="background:var(--red); color:white; padding:80px 20px; text-align:center;">
-    <div class="container">
-      <h2 style="font-size:36px; margin-bottom:20px;">Trải Nghiệm Đẳng Cấp Sống Trọn Vẹn</h2>
-      <p style="font-size:18px; margin-bottom:40px; opacity:0.9;">Hệ nhôm kính cao cấp không chỉ bảo vệ ngôi nhà mà còn là ranh giới trong suốt kết nối con người với thiên nhiên.</p>
-      <div style="display:flex; justify-content:center; gap:16px;">
-        <a href="tel:0869590279" class="btn btn-gold">Hotline Tư Vấn: 0869 590 279</a>
-        <a href="lien-he.html" class="btn btn-outline" style="border-color:white; color:white;">Nhận File Catalog</a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="logo" style="margin-bottom:18px;">
-          <span class="logo-badge">SV</span>
-          <span class="logo-name">Cơ Khí Sao Vàng</span>
-        </a>
-        <p style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.7); margin-bottom:16px;">
-          <strong>Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng</strong><br>
-          MST: 0110461829 — Sở KH&ĐT Hà Nội cấp năm 2024.<br>
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 4px; display: inline-block; vertical-align: middle; color: var(--gold);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Văn phòng: Tầng 3, TT7-35 KĐT Văn Phú, Hà Đông, Hà Nội.<br>
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 4px; display: inline-block; vertical-align: middle; color: var(--gold);"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> Nhà xưởng: Đường CN 6, KCN Bắc Từ Liêm, Hà Nội.
-        </p>
-        <div class="footer-socials">
-          <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-          <a href="#" class="social-link" aria-label="YouTube"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
-          <a href="https://zalo.me/0869590279" class="social-link" aria-label="Zalo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><text y="17" font-size="12" font-weight="bold" font-family="Arial">Zalo</text></svg></a>
-        </div>
-      </div>
-      
-      <div class="footer-col">
-        <h4>Lĩnh Vực Chuyên Sâu</h4>
-        <ul>
-          <li><a href="linh-vuc-co-khi.html">Cơ Khí Biệt Thự &amp; Lâu Đài</a></li>
-          <li><a href="linh-vuc-nhom-kinh.html">Nhôm Kính Kiến Trúc Cao Cấp</a></li>
-          <li><a href="du-an.html?cat=gia-cong-du-thuyen">Gia Công Inox Du Thuyền</a></li>
-          <li><a href="san-pham.html">Sản Phẩm Trang Trí</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h4>Công Ty</h4>
-        <ul>
-          <li><a href="gioi-thieu.html">Về Cơ Khí Sao Vàng</a></li>
-          <li><a href="du-an.html">Dự án thực hiện</a></li>
-          <li><a href="nang-luc.html">Hồ sơ năng lực</a></li>
-          <li><a href="tin-tuc.html">Tin tức &amp; Sự kiện</a></li>
-          <li><a href="lien-he.html">Liên hệ trực tiếp</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h4>Bản Đồ</h4>
-        <div style="width:100%; border-radius:6px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); height:130px; margin-top:8px;">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.688172083984!2d105.77583627589578!3d20.965037990069354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adc71e3b2e3b%3A0xe5a3c2cf7e3c1b82!2zS0RUIFbEg24gUGjDugEsIEjDoCDEkMO0bmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1718712345678!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <span>© 2026 Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng. Bảo lưu mọi quyền.</span>
-      <span>Thiết kế &amp; phát triển bởi Sao Vàng Tech</span>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/js/cms-client.js"></script>
-<script src="assets/js/main.js"></script>
-<script>
-  // Load 6 featured aluminum/glass projects
-  document.addEventListener('DOMContentLoaded', async () => {
-    const grid = document.getElementById('projectsGrid');
-    try {
-      const { data } = await CMS.getProjects({ limit: 50, page: 1 });
-      const glassKeywords = ['nhôm', 'kính', 'cửa sổ', 'mặt dựng', 'facade'];
-      
-      const glassProjects = data.filter(p => {
-        const cat = (p.category || '').toLowerCase();
-        return glassKeywords.some(kw => cat.includes(kw));
-      }).slice(0, 6);
-
-      if (glassProjects.length === 0) {
-        grid.innerHTML = '<p>Dự án đang được cập nhật...</p>';
-        return;
-      }
-
-      grid.innerHTML = glassProjects.map((p) => {
-        const imgSrc = p.thumbnail ? CMS.imgUrl(p.thumbnail) : 'assets/images/project-showroom-auto.png';
-        return \`<a href="du-an-chi-tiet.html?slug=\${p.slug || p.id}" class="proj-item">
-          <img src="\${CMS.esc(imgSrc)}" alt="\${CMS.esc(p.title)}" loading="lazy" />
-          <div class="proj-info">
-            <span class="proj-info-cat">\${CMS.esc(p.category)}</span>
-            <h3>\${CMS.esc(p.title)}</h3>
-            <p>\${CMS.esc((p.excerpt || '').slice(0, 100))}...</p>
+      <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-item">TRANG CHỦ</a>
+        
+        <div class="nav-dropdown">
+          <a href="linh-vuc-co-khi.html" class="nav-item">CƠ KHÍ</a>
+          <div class="dropdown-menu">
+            <a href="cau-thang-xoan.html" class="dropdown-item">
+              <span class="dropdown-title">Cầu thang nghệ thuật</span>
+              <span class="dropdown-desc">Xoắn ốc thép bản CNC, lan can kính cong mỹ thuật</span>
+            </a>
+            <a href="lan-can-kinh.html" class="dropdown-item">
+              <span class="dropdown-title">Lan can ban công</span>
+              <span class="dropdown-desc">Inox 316, kính cường lực an toàn</span>
+            </a>
+            <a href="cong-nghe-thuat.html" class="dropdown-item">
+              <span class="dropdown-title">Cổng nhôm đúc</span>
+              <span class="dropdown-desc">Đúc chân không nguyên khối sơn mạ đồng giả cổ</span>
+            </a>
+            <a href="co-khi-nghe-thuat.html" class="dropdown-item">
+              <span class="dropdown-title">Inox du thuyền</span>
+              <span class="dropdown-desc">Gia công inox Marine 316L đánh bóng gương chống ăn mòn</span>
+            </a>
           </div>
-        </a>\`;
-      }).join('');
-    } catch (err) {
-      console.error(err);
-      grid.innerHTML = '<p>Không thể tải dự án lúc này.</p>';
+        </div>
+
+        <div class="nav-dropdown">
+          <a href="linh-vuc-nhom-kinh.html" class="nav-item active" aria-current="page">NHÔM KÍNH</a>
+          <div class="dropdown-menu">
+            <a href="cua-nhom-kinh.html" class="dropdown-item">
+              <span class="dropdown-title">Cửa nhôm cao cấp</span>
+              <span class="dropdown-desc">Hệ Slim, Civro, Maxpro profile nhôm Châu Âu</span>
+            </a>
+            <a href="vach-kinh.html" class="dropdown-item">
+              <span class="dropdown-title">Vách kính &amp; Cabin tắm</span>
+              <span class="dropdown-desc">Hệ vách ngăn kính cường lực khổ lớn, cabin mạ vàng PVD</span>
+            </a>
+            <a href="linh-vuc-nhom-kinh.html#he-thong" class="dropdown-item">
+              <span class="dropdown-title">Vách mặt dựng (Facade)</span>
+              <span class="dropdown-desc">Mặt dựng Unitized, Stick cản nhiệt Low-E tòa nhà</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="du-an.html" class="nav-item">DỰ ÁN</a>
+        <a href="nang-luc.html" class="nav-item">NĂNG LỰC</a>
+        <a href="tin-tuc.html" class="nav-item">TIN TỨC</a>
+        <a href="lien-he.html" class="nav-item">LIÊN HỆ</a>
+      </nav>
+
+      <div style="display: flex; align-items: center;">
+        <a href="tel:0869590279" class="header-phone" aria-label="Gọi hotline 0869 590 279">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          <span>0869 590 279</span>
+        </a>
+        
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="vi">VI</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="jp">JP</button>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+
+  <main id="main-content">
+    
+    <!-- ══ SECTION 1: HERO BANNER ═════════════════════════════════ -->
+    <section class="hero-facade" aria-labelledby="hero-title">
+      <div class="hero-facade-bg">
+        <img src="assets/images/hero-doors.png" alt="Hệ thống nhôm kính mặt dựng" />
+      </div>
+      <div class="hero-facade-overlay"></div>
+      
+      <div class="hero-facade-content">
+        <nav class="hero-breadcrumb" aria-label="Đường dẫn trang">
+          <a href="index.html">SAO VANG GROUP</a>
+          <span class="hero-breadcrumb-sep" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3"><polyline points="9 18 15 12 9 6"/></svg>
+          </span>
+          <span class="hero-breadcrumb-current">FACADE SYSTEMS DIVISION</span>
+        </nav>
+
+        <div class="hero-division-badge">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" style="margin-right:4px;"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          DIVISION 02
+        </div>
+
+        <h1 class="hero-facade-title" id="hero-title">
+          SAO VANG<br><span class="division-name">FACADE SYSTEMS</span>
+        </h1>
+        
+        <p class="hero-facade-subtitle">
+          Hệ thống bao che mặt dựng &amp; nhôm kính kiến trúc tiêu chuẩn Châu Âu — Giải pháp toàn diện cho tòa nhà cao tầng và villa cao cấp.
+        </p>
+
+        <div class="hero-facade-ctas">
+          <a href="#bao-gia" class="btn btn-primary" style="background-color: var(--facade-brand); border-color: var(--facade-brand);">
+            NHẬN TƯ VẤN KỸ THUẬT
+          </a>
+          <a href="assets/downloads/profile_saovang.pdf" class="btn btn-outline" download style="color: var(--white); border-color: rgba(255,255,255,0.4);">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-right: 6px;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            TẢI HỒ SƠ NĂNG LỰC
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-scroll-indicator" onclick="document.getElementById('rui-ro').scrollIntoView({behavior:'smooth'})" style="cursor:pointer;">
+        <span>Giải pháp kỹ thuật</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ══ SECTION 2: PAIN POINTS ═════════════════════════════════ -->
+    <section class="section-light" id="rui-ro" aria-labelledby="pain-title">
+      <div class="section-container">
+        
+        <div class="section-header" data-reveal>
+          <span class="tag">Rủi ro dự án</span>
+          <h2 class="section-title" id="pain-title">
+            Những rủi ro đặc thù<br><span class="accent">Trong dự án Facade / Nhôm kính</span>
+          </h2>
+          <div class="gold-rule"><div class="gold-rule-diamond" style="background-color: var(--facade-brand);"></div></div>
+        </div>
+
+        <div class="pain-grid">
+          
+          <!-- Pain 1 -->
+          <article class="pain-card" data-reveal data-reveal-delay="1">
+            <div class="pain-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <h3 class="pain-title">Hệ thống Profile không tương thích</h3>
+            <p class="pain-desc">
+              Sử dụng profile nhôm giá rẻ hoặc không phù hợp với khí hậu đặc thù tại Việt Nam (nhiệt đới ẩm gió mùa, nồng độ muối biển cao) dẫn đến hiện tượng oxy hóa bề mặt, thấm nước mưa và xệ cánh sau 1-2 năm vận hành.
+            </p>
+          </article>
+
+          <!-- Pain 2 -->
+          <article class="pain-card" data-reveal data-reveal-delay="2">
+            <div class="pain-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <h3 class="pain-title">Khả năng cách nhiệt chưa kiểm định</h3>
+            <p class="pain-desc">
+              Hệ thống cửa kính thông thường hấp thụ nhiệt lượng mặt trời rất lớn, làm tăng tải hệ thống điều hòa lên 40%. Thiếu hệ cầu cách nhiệt (thermal break) tiêu chuẩn gây ra hiện tượng ngưng tụ sương trên bề mặt nhôm.
+            </p>
+          </article>
+
+          <!-- Pain 3 -->
+          <article class="pain-card" data-reveal data-reveal-delay="3">
+            <div class="pain-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+            <h3 class="pain-title">Bản vẽ thiết kế thiếu tính toán kết cấu</h3>
+            <p class="pain-desc">
+              Nhiều nhà thầu bỏ qua bước tính toán áp lực gió tĩnh/động (Wind Load) và tính toán ứng suất kính chịu uốn. Khi gặp bão lớn hoặc chuyển vị tòa nhà, hệ mặt dựng kính dễ bị rạn nứt hoặc mất liên kết liên kết cấu.
+            </p>
+          </article>
+
+        </div><!-- /.pain-grid -->
+
+        <div class="pain-transition" data-reveal>
+          <p class="pain-transition-text">
+            SAO VANG FACADE SYSTEMS <span class="accent">Giải quyết trọn vẹn</span> tất cả những rủi ro trên
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ SECTION 3: SOLUTIONS ═══════════════════════════════════ -->
+    <section class="section-dark" id="giai-phap" aria-labelledby="solution-title">
+      <div class="section-container">
+        
+        <div class="section-header" data-reveal>
+          <span class="tag">Năng lực cốt lõi</span>
+          <h2 class="section-title" id="solution-title">
+            Công nghệ &amp; Quy trình<br><span class="accent">Facade Tiêu Chuẩn Châu Âu</span>
+          </h2>
+          <div class="gold-rule"><div class="gold-rule-diamond" style="background-color: var(--facade-blue);"></div></div>
+        </div>
+
+        <div class="solution-grid">
+          
+          <!-- Solution 1 -->
+          <div class="solution-card" data-reveal data-reveal-delay="1">
+            <div class="solution-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="solution-body">
+              <span class="solution-spec">Hệ nhôm Châu Âu · Cách nhiệt 60%</span>
+              <h3 class="solution-title">Hệ Profile Nhôm Cầu Cách Nhiệt (Thermal Break)</h3>
+              <p class="solution-desc">Tích hợp dải polyamide cản nhiệt giúp triệt tiêu hiện tượng truyền nhiệt qua khung nhôm. Giảm tải điện năng làm mát tòa nhà vượt trội, tối ưu hệ số truyền nhiệt U-value đạt mức dưới 1.8 W/m²K.</p>
+            </div>
+          </div>
+
+          <!-- Solution 2 -->
+          <div class="solution-card" data-reveal data-reveal-delay="2">
+            <div class="solution-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+            </div>
+            <div class="solution-body">
+              <span class="solution-spec">Low-E đa lớp · Chống UV 99%</span>
+              <h3 class="solution-title">Kính Hộp Low-E Cản Nhiệt &amp; Chống Tia Cực Tím</h3>
+              <p class="solution-desc">Sử dụng hệ kính hộp Low-E 2 hoặc 3 lớp bơm khí trơ Argon. Lớp phủ nano bạc phản xạ nhiệt lượng mặt trời nhưng cho ánh sáng truyền qua, giảm độ chói và triệt tiêu tia UV gây hại nội thất.</p>
+            </div>
+          </div>
+
+          <!-- Solution 3 -->
+          <div class="solution-card" data-reveal data-reveal-delay="3">
+            <div class="solution-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>
+            </div>
+            <div class="solution-body">
+              <span class="solution-spec">Wind Load 2400Pa · Bản tính kết cấu</span>
+              <h3 class="solution-title">Bản Vẽ Shop Drawing Tích Hợp Thuyết Minh Kết Cấu</h3>
+              <p class="solution-desc">Đội ngũ kỹ sư kết cấu sử dụng phần mềm SAP2000 và Mepla để tính toán ứng suất vách kính, hệ số cản gió và tải trọng động. Đảm bảo toàn bộ bu-lông liên kết và bản mã định vị chịu bão cấp 12.</p>
+            </div>
+          </div>
+
+          <!-- Solution 4 -->
+          <div class="solution-card" data-reveal data-reveal-delay="4">
+            <div class="solution-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <div class="solution-body">
+              <span class="solution-spec">QC 3 Lớp · Thử nước tại xưởng</span>
+              <h3 class="solution-title">Kiểm Tra Khớp Nối &amp; Độ Kín Khít Trước Khi Xuất Xưởng</h3>
+              <p class="solution-desc">Toàn bộ mô-đun Unitized và cấu kiện Stick đều được kiểm tra độ khít cơ học của gioăng EPDM và thử kín nước bằng súng phun áp lực cao theo tiêu chuẩn ASTM E331 trước khi chuyển tới công trường.</p>
+            </div>
+          </div>
+
+        </div><!-- /.solution-grid -->
+
+        <!-- Stats Row -->
+        <div class="stats-row" data-reveal>
+          <div class="stat-cell">
+            <div class="stat-num">
+              <span data-counter>100000</span><span class="unit">m²</span>
+            </div>
+            <div class="stat-lbl">Diện tích mặt dựng hoàn thành</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">
+              <span data-counter>80</span><span class="unit">+</span>
+            </div>
+            <div class="stat-lbl">Tòa nhà cao tầng &amp; công trình lớn</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">
+              <span data-counter>30</span>
+            </div>
+            <div class="stat-lbl">Kỹ sư facade &amp; chuyên viên thiết kế</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-num">
+              <span data-counter>100</span><span class="unit">%</span>
+            </div>
+            <div class="stat-lbl">Kiểm định ISO 9001:2015 &amp; QUACERT</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ SECTION 4: SYSTEMS ═════════════════════════════════════ -->
+    <section class="section-light" id="he-thong" aria-labelledby="systems-title">
+      <div class="section-container">
+        
+        <div class="section-header" data-reveal>
+          <span class="tag">Danh mục hệ thống</span>
+          <h2 class="section-title" id="systems-title">
+            Hệ Thống Nhôm Kính<br><span class="accent">Kiến Trúc Mặt Dựng</span>
+          </h2>
+          <p class="section-desc" style="margin-top:var(--space-4);">
+            Các giải pháp mặt dựng và cửa nhôm cách nhiệt cao cấp được đồng bộ hóa từ khâu gia công tự động tại nhà máy đến lắp đặt chuẩn xác tại công trình.
+          </p>
+          <div class="gold-rule"><div class="gold-rule-diamond" style="background-color: var(--facade-brand);"></div></div>
+        </div>
+
+        <div class="products-grid">
+          
+          <!-- System 1 -->
+          <article class="product-card" data-reveal data-reveal-delay="1">
+            <div class="product-img">
+              <img
+                src="assets/images/service-glass-facades.png"
+                alt="Mặt dựng Unitized cản nhiệt"
+                loading="lazy"
+                onerror="this.src='assets/images/product-glass.png'"
+              />
+              <span class="product-img-badge">Unitized</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Mặt Dựng Nhôm Kính Hệ Unitized</h3>
+              <div class="product-tags">
+                <span class="product-tag">Khổ kính lớn</span>
+                <span class="product-tag">Lắp ghép modul</span>
+                <span class="product-tag">Chống nước cấp 12</span>
+                <span class="product-tag">Low-E cản nhiệt</span>
+              </div>
+              <a href="vach-kinh.html" class="btn btn-outline" style="justify-content:center;font-size:var(--text-xs);border-color:var(--facade-blue);color:var(--facade-brand);">
+                XEM CHI TIẾT
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- System 2 -->
+          <article class="product-card" data-reveal data-reveal-delay="2">
+            <div class="product-img">
+              <img
+                src="assets/images/product-glass.png"
+                alt="Stick Facade kết cấu"
+                loading="lazy"
+              />
+              <span class="product-img-badge">Stick Facade</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Hệ Mặt Dựng Nhôm Kính Stick</h3>
+              <div class="product-tags">
+                <span class="product-tag">Biên dạng phức tạp</span>
+                <span class="product-tag">Chịu áp lực gió</span>
+                <span class="product-tag">Lắp đặt tại công trình</span>
+                <span class="product-tag">U-value: 2.0 W/m²K</span>
+              </div>
+              <a href="vach-kinh.html" class="btn btn-outline" style="justify-content:center;font-size:var(--text-xs);border-color:var(--facade-blue);color:var(--facade-brand);">
+                XEM CHI TIẾT
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- System 3 -->
+          <article class="product-card" data-reveal data-reveal-delay="3">
+            <div class="product-img">
+              <img
+                src="assets/images/service-aluminum-doors.png"
+                alt="Cửa nhôm Slim châu Âu"
+                loading="lazy"
+                onerror="this.src='assets/images/hero-doors.png'"
+              />
+              <span class="product-img-badge">Slim system</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Cửa Nhôm Slim &amp; Bản Lề Ẩn</h3>
+              <div class="product-tags">
+                <span class="product-tag">Profile 45-80mm</span>
+                <span class="product-tag">Cầu cách nhiệt</span>
+                <span class="product-tag">Phụ kiện Cmech</span>
+                <span class="product-tag">Nhôm Maxpro.jp</span>
+              </div>
+              <a href="cua-nhom-kinh.html" class="btn btn-outline" style="justify-content:center;font-size:var(--text-xs);border-color:var(--facade-blue);color:var(--facade-brand);">
+                XEM CHI TIẾT
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- System 4 -->
+          <article class="product-card" data-reveal data-reveal-delay="4">
+            <div class="product-img">
+              <img
+                src="assets/images/product-railing.png"
+                alt="Vách ngăn kính & cabin tắm"
+                loading="lazy"
+              />
+              <span class="product-img-badge">Partition</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Vách Kính Khổ Lớn &amp; Cabin PVD</h3>
+              <div class="product-tags">
+                <span class="product-tag">Kính cường lực 12-19mm</span>
+                <span class="product-tag">Phụ kiện Hafele</span>
+                <span class="product-tag">Mạ Titan PVD</span>
+                <span class="product-tag">Cách âm 38dB</span>
+              </div>
+              <a href="vach-kinh.html" class="btn btn-outline" style="justify-content:center;font-size:var(--text-xs);border-color:var(--facade-blue);color:var(--facade-brand);">
+                XEM CHI TIẾT
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div><!-- /.products-grid -->
+
+      </div>
+    </section>
+
+    <!-- ══ SECTION 5: PORTFOLIO ════════════════════════════════════ -->
+    <section class="section-dark" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="section-container">
+        
+        <div class="section-header" data-reveal>
+          <span class="tag">Công trình thực tế</span>
+          <h2 class="section-title" id="portfolio-title">
+            Dự Án Nhôm Kính<br><span class="accent">Tiêu Biểu Hoàn Thành</span>
+          </h2>
+          <div class="gold-rule"><div class="gold-rule-diamond" style="background-color: var(--facade-blue);"></div></div>
+        </div>
+
+        <div class="portfolio-grid">
+          
+          <!-- Project 1 -->
+          <a href="du-an-chi-tiet.html?slug=penthouse-the-matrix-one" class="portfolio-card" data-reveal data-reveal-delay="1">
+            <img src="assets/images/project-penthouse.png" alt="Penthouse The Matrix One" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Mặt dựng unitized · Hà Nội</span>
+              <h3 class="portfolio-title">Penthouse The Matrix One</h3>
+              <div class="portfolio-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Hà Nội
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  2024
+                </span>
+                <span>800m² Vách Kính Low-E</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project 2 -->
+          <a href="du-an-chi-tiet.html?slug=biet-thu-vinhomes-imperia" class="portfolio-card" data-reveal data-reveal-delay="2">
+            <img src="assets/images/project-vinhomes-villa.png" alt="Biệt thự Vinhomes Imperia" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Cửa slim &amp; Vách kính · Hải Phòng</span>
+              <h3 class="portfolio-title">Biệt Thự Vinhomes Imperia</h3>
+              <div class="portfolio-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Hải Phòng
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  2023
+                </span>
+                <span>Hệ Cửa Nhôm Slim Civro</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Project 3 -->
+          <a href="du-an-chi-tiet.html?slug=villa-ho-xuan-huong-da-lat" class="portfolio-card" data-reveal data-reveal-delay="3">
+            <img src="assets/images/project-dalat-villa.png" alt="Villa Hồ Xuân Hương" loading="lazy" />
+            <div class="portfolio-overlay">
+              <span class="portfolio-tag">Facade nhôm kính · Đà Lạt</span>
+              <h3 class="portfolio-title">Villa Hồ Xuân Hương</h3>
+              <div class="portfolio-meta">
+                <span>
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  Đà Lạt
+                </span>
+                <span>
+                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                  2024
+                </span>
+                <span>Profile Maxpro.jp Anode</span>
+              </div>
+            </div>
+          </a>
+
+        </div><!-- /.portfolio-grid -->
+
+        <div style="text-align:center;margin-top:var(--space-8);" data-reveal>
+          <a href="du-an.html?cat=nhom-kinh" class="btn btn-outline-white" style="font-size:var(--text-sm);padding:var(--space-4) var(--space-8);border-color:var(--facade-blue);color:var(--white);">
+            Xem Toàn Bộ Portfolio Nhôm Kính
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══ SECTION 6: QUOTE CTA ════════════════════════════════════ -->
+    <section class="quote-section" id="bao-gia" aria-labelledby="quote-title">
+      <div class="section-container">
+        <div class="quote-layout">
+          
+          <!-- Left: Pitch -->
+          <div class="quote-pitch" data-reveal>
+            <span class="quote-pitch-kicker">Kỹ thuật &amp; dự toán</span>
+            <h2 class="quote-pitch-title" id="quote-title">
+              Tư Vấn Kỹ Thuật<br><span>Báo Giá Thuyết Minh</span><br>Chi Tiết
+            </h2>
+            <p class="quote-pitch-desc">
+              Gửi yêu cầu thiết kế facade của bạn. Kỹ sư kết cấu và dự toán SAO VANG FACADE SYSTEMS sẽ phân tích mặt bằng mặt cắt, tính toán sơ bộ chuyển vị ứng suất và gửi bảng phản hồi giải pháp tối ưu kèm dự toán trong vòng 2 giờ.
+            </p>
+
+            <div class="trust-badges">
+              <div class="trust-badge">
+                <span class="trust-badge-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </span>
+                <span class="trust-badge-text">ISO 9001:2015<br>Nhà máy quy chuẩn</span>
+              </div>
+              <div class="trust-badge">
+                <span class="trust-badge-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+                </span>
+                <span class="trust-badge-text">QUACERT<br>Sản phẩm kiểm định</span>
+              </div>
+              <div class="trust-badge" style="grid-column: 1 / -1;">
+                <span class="trust-badge-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                </span>
+                <span class="trust-badge-text">Nhà cung cấp Profile được ủy quyền chính thức (Schüco, Civro, Maxpro)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Quote Form -->
+          <div class="quote-form-wrapper" data-reveal data-reveal-delay="2">
+            <div class="quote-form-header">
+              <h3 class="quote-form-title">Yêu Cầu Báo Giá Facade</h3>
+              <p class="quote-form-subtitle">Điền thông số dự án để kỹ sư lên phương án kết cấu</p>
+            </div>
+
+            <form id="contactForm" action="/api/contact" method="POST" enctype="multipart/form-data" novalidate>
+              <input type="hidden" name="source" value="linh-vuc-nhom-kinh" />
+              <input type="hidden" name="division" value="SAO VANG FACADE SYSTEMS" />
+
+              <div class="form-grid">
+                
+                <!-- Họ tên -->
+                <div class="form-group">
+                  <label class="form-label" for="facadeName">
+                    Họ và tên<span class="req" aria-label="bắt buộc">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="facadeName"
+                    name="name"
+                    class="form-input"
+                    placeholder="Nguyễn Văn A"
+                    required
+                    autocomplete="name"
+                  />
+                </div>
+
+                <!-- Số điện thoại -->
+                <div class="form-group">
+                  <label class="form-label" for="facadePhone">
+                    Số điện thoại<span class="req" aria-label="bắt buộc">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    id="facadePhone"
+                    name="phone"
+                    class="form-input"
+                    placeholder="0869 590 279"
+                    required
+                    autocomplete="tel"
+                    pattern="[0-9\s\-\+\(\)]{9,15}"
+                  />
+                </div>
+
+                <!-- Loại hệ thống nhôm kính -->
+                <div class="form-group">
+                  <label class="form-label" for="facadeSystem">Loại hệ thống</label>
+                  <select id="facadeSystem" name="system_type" class="form-select">
+                    <option value="" disabled selected>-- Chọn hệ thống --</option>
+                    <option value="mat-dung-unitized">Mặt dựng Unitized</option>
+                    <option value="mat-dung-stick">Hệ Stick Facade</option>
+                    <option value="cua-nhom-slim">Cửa nhôm Slim / Cầu cách nhiệt</option>
+                    <option value="vach-kinh-cabin">Vách kính / Cabin tắm</option>
+                    <option value="tat-ca">Tất cả hệ thống</option>
+                  </select>
+                </div>
+
+                <!-- Loại kính yêu cầu -->
+                <div class="form-group">
+                  <label class="form-label" for="facadeGlass">Loại kính yêu cầu</label>
+                  <select id="facadeGlass" name="glass_type" class="form-select">
+                    <option value="" disabled selected>-- Chọn loại kính --</option>
+                    <option value="kinh-hop-lowe">Kính hộp Low-E bơm Argon</option>
+                    <option value="kinh-dan-an-toan">Kính dán an toàn Laminated</option>
+                    <option value="kinh-cuong-luc">Kính cường lực Tempered</option>
+                    <option value="chua-xac-dinh">Chưa xác định / Kỹ sư tư vấn</option>
+                  </select>
+                </div>
+
+                <!-- Diện tích dự kiến -->
+                <div class="form-group">
+                  <label class="form-label" for="facadeArea">Diện tích tương đối (m²)</label>
+                  <input
+                    type="text"
+                    id="facadeArea"
+                    name="area"
+                    class="form-input"
+                    placeholder="VD: 500m²"
+                  />
+                </div>
+
+                <!-- Số tầng công trình -->
+                <div class="form-group">
+                  <label class="form-label" for="facadeFloors">Số tầng công trình</label>
+                  <input
+                    type="number"
+                    id="facadeFloors"
+                    name="floors"
+                    class="form-input"
+                    placeholder="VD: 5"
+                    min="1"
+                  />
+                </div>
+
+                <!-- Đính kèm bản vẽ -->
+                <div class="form-group full-width">
+                  <label class="form-label" for="facadeDrawing">
+                    Mặt bằng, mặt cắt bản vẽ thiết kế
+                    <span style="font-weight:400;text-transform:none;color:var(--gray-600);letter-spacing:0;">(PDF, DWG, ZIP — Tối đa 20MB)</span>
+                  </label>
+                  <div class="file-upload-wrapper">
+                    <label class="file-upload-label" for="facadeDrawing">
+                      <span class="file-upload-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                      </span>
+                      <div>
+                        <div class="file-upload-text">Kéo thả bản vẽ hoặc chọn file</div>
+                        <div class="file-name" id="facadeFileName">Chưa chọn file nào</div>
+                      </div>
+                    </label>
+                    <input
+                      type="file"
+                      id="facadeDrawing"
+                      name="drawing"
+                      class="file-upload-input"
+                      accept=".pdf,.dwg,.dxf,.zip,.rar"
+                    />
+                  </div>
+                </div>
+
+                <!-- Ghi chú kết cấu -->
+                <div class="form-group full-width">
+                  <label class="form-label" for="facadeNote">Yêu cầu kỹ thuật &amp; Ghi chú</label>
+                  <textarea
+                    id="facadeNote"
+                    name="technical_note"
+                    class="form-textarea"
+                    rows="4"
+                    placeholder="Ghi chú về yêu cầu cản nhiệt, thông số cản gió thiết kế, hệ profile yêu cầu, địa chỉ công trình..."
+                  ></textarea>
+                </div>
+
+              </div><!-- /.form-grid -->
+
+              <button type="submit" class="btn btn-primary form-submit-btn" aria-label="Gửi yêu cầu tư vấn kỹ thuật nhôm kính">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                GỬI YÊU CẦU TƯ VẤN
+              </button>
+
+              <p style="font-size:var(--text-xs);color:var(--gray-600);text-align:center;margin-top:var(--space-3);line-height:1.5;">
+                Hồ sơ kỹ thuật của bạn được bảo mật hoàn toàn. Đội ngũ kỹ sư sẽ liên hệ trực tiếp trong vòng 2 giờ.
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ══════════════════════════════════════════════════ -->
+  <footer class="footer-facade" role="contentinfo" aria-label="Thông tin công ty">
+    <div class="section-container">
+      <div class="footer-facade-inner">
+        
+        <!-- Brand Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-logo-link" aria-label="SAO VÀNG GROUP — Trang chủ">
+            <img src="assets/images/logo-sv-main.png" alt="SAO VÀNG GROUP" height="40" />
+          </a>
+          <p class="footer-brand-desc">
+            <strong style="color:var(--gray-300);display:block;margin-bottom:4px;">CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG</strong>
+            MST: 0110808047 — Đăng ký kinh doanh Sở KH&amp;ĐT Hà Nội.<br />
+            Chuyên sâu tư vấn, sản xuất và thi công hệ nhôm kính mặt dựng.<br />
+            Chứng nhận ISO 9001:2015 · Kiểm định QUACERT.
+          </p>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Văn phòng: Tầng 3, TT7-35 KĐT Văn Phú, Hà Đông, Hà Nội</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Nhà máy: Đường CN 6, KCN Bắc Từ Liêm, Hà Nội</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+            <a href="tel:0869590279" style="color:var(--gray-500);transition:color 0.2s;" onmouseover="this.style.color='var(--facade-blue)'" onmouseout="this.style.color='var(--gray-500)'">0869 590 279</a>
+          </div>
+        </div>
+
+        <!-- Sectors Column -->
+        <div>
+          <h4 class="footer-col-title">Facade &amp; Nhôm Kính</h4>
+          <ul class="footer-nav-list">
+            <li>
+              <a href="linh-vuc-nhom-kinh.html">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                Tổng quan Facade Systems
+              </a>
+            </li>
+            <li>
+              <a href="cua-nhom-kinh.html">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                Cửa nhôm Slim Châu Âu
+              </a>
+            </li>
+            <li>
+              <a href="vach-kinh.html">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                Vách mặt dựng Unitized / Stick
+              </a>
+            </li>
+            <li>
+              <a href="vach-kinh.html">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                Vách ngăn kính &amp; Cabin tắm PVD
+              </a>
+            </li>
+            <li>
+              <a href="linh-vuc-co-khi.html">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                Khối cơ khí Mechanical
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Group Column -->
+        <div>
+          <h4 class="footer-col-title">SAO VANG GROUP</h4>
+          <ul class="footer-nav-list">
+            <li>
+              <a href="gioi-thieu.html">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                Giới thiệu tập đoàn
+              </a>
+            </li>
+            <li>
+              <a href="nang-luc.html">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                Năng lực thi công &amp; nhà máy
+              </a>
+            </li>
+            <li>
+              <a href="du-an.html">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                Thư viện dự án hoàn thành
+              </a>
+            </li>
+            <li>
+              <a href="tin-tuc.html">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                Tin tức ngành &amp; Kỹ thuật
+              </a>
+            </li>
+            <li>
+              <a href="lien-he.html">
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                Liên hệ tư vấn B2B
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div><!-- /.footer-facade-inner -->
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <p class="footer-copyright">
+          &copy; 2026 Công ty Cổ phần Sản xuất Cơ Khí Sao Vàng. Bảo lưu mọi quyền.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="index.html">Trang chủ Group</a>
+          <a href="lien-he.html">Chính sách bảo mật</a>
+          <a href="lien-he.html">Điều khoản dịch vụ</a>
+          <a href="https://www.CoKhiSaoVang.com" target="_blank" rel="noopener">www.CoKhiSaoVang.com</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ══ STICKY MOBILE CTA BAR ═══════════════════════════════════ -->
+  <div class="sticky-cta-bar" id="stickyCtaBar" role="complementary" aria-label="Liên hệ nhanh">
+    <a href="tel:0869590279" class="btn btn-outline-white" aria-label="Gọi ngay hotline">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      GỌI NGAY
+    </a>
+    <a href="#bao-gia" class="btn btn-primary" aria-label="Nhận báo giá nhôm kính" style="background-color: var(--facade-brand); border-color: var(--facade-brand);">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      BÁO GIÁ NHÔM KÍNH
+    </a>
+  </div>
+
+  <!-- ══ SCRIPTS ═════════════════════════════════════════════════ -->
+  <script src="assets/js/main.js"></script>
+  <script type="module">
+    /* ── File upload name sync ────────────────────────── */
+    const facadeDrawingInput = document.getElementById('facadeDrawing');
+    const facadeFileName     = document.getElementById('facadeFileName');
+    if (facadeDrawingInput && facadeFileName) {
+      facadeDrawingInput.addEventListener('change', (e) => {
+        const file = e.target.files[0];
+        facadeFileName.textContent = file ? file.name : 'Chưa chọn file nào';
+      });
     }
-  });
-</script>
+
+    /* ── Facade Form Submission ───────────────────────── */
+    const facadeForm = document.getElementById('contactForm');
+    if (facadeForm) {
+      facadeForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const submitBtn = facadeForm.querySelector('[type="submit"]');
+        const originalHTML = submitBtn.innerHTML;
+
+        // Validate name & phone
+        const name  = document.getElementById('facadeName')?.value?.trim();
+        const phone = document.getElementById('facadePhone')?.value?.trim();
+        if (!name || !phone) {
+          submitBtn.style.background = '#7A0000';
+          submitBtn.textContent = 'Vui lòng điền đầy đủ họ tên và số điện thoại';
+          setTimeout(() => {
+            submitBtn.innerHTML  = originalHTML;
+            submitBtn.style.background = '';
+          }, 3000);
+          return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = `
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:spin 1s linear infinite;" aria-hidden="true">
+            <circle cx="12" cy="12" r="10" stroke-opacity="0.25"/>
+            <path d="M12 2a10 10 0 0 1 10 10" stroke-opacity="1"/>
+          </svg>
+          Đang gửi...
+        `;
+
+        try {
+          const formData = new FormData(facadeForm);
+
+          const response = await fetch('/api/contact', {
+            method: 'POST',
+            body: formData,
+          });
+
+          let result = {};
+          try { result = await response.json(); } catch (_) {}
+
+          if (response.ok || result.success) {
+            submitBtn.style.background = '#166534';
+            submitBtn.innerHTML = `
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Đã gửi — Kỹ sư sẽ phản hồi trong 2 giờ!
+            `;
+            facadeForm.reset();
+            if (facadeFileName) facadeFileName.textContent = 'Chưa chọn file nào';
+            setTimeout(() => {
+              submitBtn.innerHTML  = originalHTML;
+              submitBtn.style.background = '';
+              submitBtn.disabled  = false;
+            }, 5000);
+          } else {
+            throw new Error(result.error || `HTTP ${response.status}`);
+          }
+        } catch (err) {
+          console.error('[FacadeForm] Submit error:', err);
+          submitBtn.style.background = '#7A0000';
+          submitBtn.innerHTML = `
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Lỗi kết nối — Vui lòng thử lại
+          `;
+          setTimeout(() => {
+            submitBtn.innerHTML  = originalHTML;
+            submitBtn.style.background = '';
+            submitBtn.disabled  = false;
+          }, 3500);
+        }
+      });
+    }
+
+    /* ── Scroll-reveal tags set ───────────────────────── */
+    document.querySelectorAll('.portfolio-card').forEach((card, i) => {
+      card.setAttribute('data-reveal', '');
+      card.setAttribute('data-reveal-delay', String(i + 1));
+    });
+  </script>
 </body>
 </html>

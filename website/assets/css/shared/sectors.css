@@ -13,22 +13,47 @@
 .sector-card {
   background: var(--white);
   border: 1px solid var(--gray-200);
+  border-top: 3px solid var(--gold-primary);
   border-radius: var(--radius-md);
-  padding: var(--space-12);
+  padding: var(--space-10);
   display: flex;
   flex-direction: column;
   transition: var(--transition-smooth);
+  gap: 0;
 }
 
 .sector-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-top-color: var(--gold-metallic);
 }
 
+/* Old emoji icon — kept for legacy compatibility */
 .sector-icon {
   font-size: 40px;
   margin-bottom: var(--space-4);
+}
+
+/* New SVG icon wrapper (replaces .sector-icon) */
+.sector-icon-wrap {
+  width: 72px;
+  height: 72px;
+  border-radius: var(--radius-sm);
+  border: 2px solid var(--gold-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-6);
   color: var(--gold-metallic);
+  fill: var(--gold-metallic);
+  background: rgba(212, 175, 55, 0.06);
+  flex-shrink: 0;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.sector-card:hover .sector-icon-wrap {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--gold-metallic);
 }
 
 .sector-title {
@@ -64,10 +89,11 @@
   font-weight: 500;
 }
 
-.sector-item::before {
-  content: "✔";
+/* SVG check icon within .sector-item — no emoji */
+.sector-item svg {
+  flex-shrink: 0;
   color: var(--gold-metallic);
-  font-weight: 900;
+  fill: var(--gold-metallic);
 }
 
 /* SECTION 4: ABOUT CORPORATE (60/40 Layout) */

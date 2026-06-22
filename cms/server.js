@@ -121,6 +121,23 @@ async function bootstrap() {
 
       const attachment = req.file ? `/uploads${getRelativePath(req.file.path).replace(/\\/g, '/')}` : null;
 
+      // Merge extra details (material, surface_finish, system_type, glass_type, dimensions, quantity, floors, area, etc.) into final note
+      let finalNote = note || '';
+      const standardFields = ['name', 'phone', 'email', 'province', 'budget', 'services', 'note', 'source', 'division'];
+      const extraDetails = [];
+      for (const [key, value] of Object.entries(req.body)) {
+        if (!standardFields.includes(key) && value) {
+          const label = key.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+          extraDetails.push(`- ${label}: ${value}`);
+        }
+      }
+      if (req.body.division) {
+        extraDetails.unshift(`- Bộ phận: ${req.body.division}`);
+      }
+      if (extraDetails.length > 0) {
+        finalNote = `${finalNote ? finalNote + '\n\n' : ''}📌 [Thông tin kỹ thuật B2B]:\n` + extraDetails.join('\n');
+      }
+
       const insert = db.prepare(`
         INSERT INTO leads (name, phone, email, province, budget, services, note, source, attachment)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
@@ -129,7 +146,7 @@ async function bootstrap() {
         name, phone, email || null, province || null,
         budget || null,
         Array.isArray(services) ? services.join(',') : (services || null),
-        note || null, source, attachment
+        finalNote || null, source, attachment
       );
 
       console.log(`[LEAD] New lead #${info.lastInsertRowid}: ${name} — ${phone} (${source}) ${attachment ? 'with attachment' : ''}`);

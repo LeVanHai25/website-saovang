@@ -101,7 +101,7 @@ export const quoteEngine = {
         const modal = document.querySelector('#b2bQuoteModal');
         if (modal) {
           // Pre-select service option based on sector if matches
-          const serviceSelect = modal.querySelector('#homeService');
+          const serviceSelect = modal.querySelector('#modalService') || modal.querySelector('#homeService');
           if (serviceSelect) {
             if (targetSector === 'mechanical') {
               serviceSelect.value = 'co-khi-nghe-thuat';
