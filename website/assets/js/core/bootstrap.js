@@ -107,7 +107,31 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Close nav on click outside or links click
   document.querySelectorAll('.nav-item').forEach(link => {
-    link.addEventListener('click', closeNav);
+    link.addEventListener('click', (e) => {
+      const dropdownParent = link.closest('.nav-dropdown');
+      if (dropdownParent && window.innerWidth < 1024) {
+        // Mobile dropdown toggle logic
+        if (!dropdownParent.classList.contains('active')) {
+          e.preventDefault();
+          // Close other dropdowns
+          document.querySelectorAll('.nav-dropdown').forEach(d => {
+            if (d !== dropdownParent) d.classList.remove('active');
+          });
+          dropdownParent.classList.add('active');
+        } else {
+          // If already open, let the click proceed to link.href
+          closeNav();
+        }
+      } else {
+        // Regular nav item click
+        closeNav();
+      }
+    });
+  });
+
+  // Close nav on sub-link click
+  document.querySelectorAll('.dropdown-item').forEach(subLink => {
+    subLink.addEventListener('click', closeNav);
   });
 
   // Handle split hero click/hover redirection & persona alignment

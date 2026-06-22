@@ -70,9 +70,32 @@
     nav.id = 'navMenu';
     nav.setAttribute('role', 'navigation');
     nav.setAttribute('aria-label', 'Menu chính');
-    // Close on link click
+    // Close on link click (with mobile dropdown support)
     nav.querySelectorAll('.nav-item').forEach(link => {
-      link.addEventListener('click', closeNav);
+      link.addEventListener('click', (e) => {
+        const dropdownParent = link.closest('.nav-dropdown');
+        if (dropdownParent && window.innerWidth < 1024) {
+          // Mobile dropdown toggle logic
+          if (!dropdownParent.classList.contains('active')) {
+            e.preventDefault();
+            // Close other dropdowns
+            nav.querySelectorAll('.nav-dropdown').forEach(d => {
+              if (d !== dropdownParent) d.classList.remove('active');
+            });
+            dropdownParent.classList.add('active');
+          } else {
+            // If already open, let the click proceed
+            closeNav();
+          }
+        } else {
+          closeNav();
+        }
+      });
+    });
+
+    // Close on sub-link click
+    nav.querySelectorAll('.dropdown-item').forEach(subLink => {
+      subLink.addEventListener('click', closeNav);
     });
     // Trap Escape key
     document.addEventListener('keydown', e => {
