@@ -122,15 +122,54 @@
   /* ── Active nav item ────────────────────────────────────────── */
   const currentPath = window.location.pathname;
   const currentFile = currentPath.split('/').pop() || 'index.html';
+  
+  // First, remove active class from all links to prevent multiple highlighted items
+  document.querySelectorAll('.nav-item').forEach(link => {
+    link.classList.remove('active');
+    link.removeAttribute('aria-current');
+  });
+
   document.querySelectorAll('.nav-item[href]').forEach(link => {
     const href = link.getAttribute('href');
     if (!href) return;
     const hrefFile = href.split('/').pop().split('?')[0];
     const isHome = (currentFile === '' || currentFile === 'index.html');
     const linkIsHome = (hrefFile === 'index.html' || hrefFile === '');
+    
+    let isMatch = false;
     if (isHome && linkIsHome) {
+      isMatch = true;
+    } else if (!isHome && !linkIsHome) {
+      if (currentFile.startsWith(hrefFile.replace('.html', ''))) {
+        isMatch = true;
+      } else {
+        // Highlight dropdown parent if active page is a sub-page of this section
+        const dropdownParent = link.closest('.nav-dropdown');
+        if (dropdownParent) {
+          const subLinks = dropdownParent.querySelectorAll('.dropdown-item[href]');
+          subLinks.forEach(sub => {
+            const subHref = sub.getAttribute('href');
+            if (subHref && subHref.split('/').pop().split('?')[0] === currentFile) {
+              isMatch = true;
+            }
+          });
+        }
+      }
+    }
+    
+    if (isMatch) {
       link.classList.add('active');
-    } else if (!isHome && !linkIsHome && currentFile.startsWith(hrefFile.replace('.html', ''))) {
+      link.setAttribute('aria-current', 'page');
+    }
+  });
+
+  // Highlight active dropdown items
+  document.querySelectorAll('.dropdown-item[href]').forEach(link => {
+    link.classList.remove('active');
+    const href = link.getAttribute('href');
+    if (!href) return;
+    const hrefFile = href.split('/').pop().split('?')[0];
+    if (currentFile === hrefFile) {
       link.classList.add('active');
     }
   });

@@ -148,7 +148,8 @@
   transition: var(--transition-smooth);
 }
 
-.dropdown-item:hover {
+.dropdown-item:hover,
+.dropdown-item.active {
   background-color: var(--gray-50);
   color: var(--red-brand);
 }

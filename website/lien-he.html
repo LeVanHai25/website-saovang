@@ -182,49 +182,86 @@
 </head>
 <body>
 
-<header class="header" id="header" role="banner">
-  <div class="header-inner">
-    <a href="index.html" class="logo" aria-label="Cơ Khí Sao Vàng — Trang chủ">
-      <span class="logo-badge" aria-hidden="true">SV</span>
-      <span class="logo-name">Cơ Khí Sao Vàng</span>
-    </a>
-    <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
-      <a href="index.html" class="nav-item">TRANG CHỦ</a>
-      <a href="gioi-thieu.html" class="nav-item">GIỚI THIỆU</a>
-      <div class="nav-dropdown">
-        <a href="linh-vuc-hoat-dong.html" class="nav-item">
-          LĨNH VỰC
-          <svg class="chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-        </a>
-        <div class="dropdown-menu" style="min-width: 300px;">
-          <a href="linh-vuc-co-khi.html" class="dropdown-item" style="padding: 16px 20px;">
-            <span class="dropdown-title" style="font-size: 16px; margin-bottom: 6px;">Cơ Khí Biệt Thự &amp; Lâu Đài</span>
-            <span class="dropdown-desc" style="font-size: 13px; opacity: 0.8;">Cổng đúc, Hàng rào, Mái kính, Cầu thang nghệ thuật</span>
+<!-- SECTION 1 - HEADER -->
+  <header class="header" id="header" role="banner">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Cơ Khí Sao Vàng — Trang chủ">
+        <img src="assets/images/logo-sv-main.png" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" height="44" style="height:44px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <span class="logo-badge" aria-hidden="true" style="display:none;">SV</span>
+      </a>
+      
+      <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-item active" aria-current="page" data-i18n="nav_home">TRANG CHỦ</a>
+        
+        <div class="nav-dropdown">
+          <a href="linh-vuc-co-khi.html" class="nav-item" data-i18n="nav_mechanical">
+            CƠ KHÍ
           </a>
-          <a href="linh-vuc-nhom-kinh.html" class="dropdown-item" style="padding: 16px 20px;">
-            <span class="dropdown-title" style="font-size: 16px; margin-bottom: 6px;">Nhôm Kính Kiến Trúc Cao Cấp</span>
-            <span class="dropdown-desc" style="font-size: 13px; opacity: 0.8;">Cửa nhôm Slim, Xingfa, Vách dựng Unitized, Lan can kính</span>
-          </a>
+          <div class="dropdown-menu">
+            <a href="cau-thang-xoan.html" class="dropdown-item">
+              <span class="dropdown-title">Cầu thang nghệ thuật</span>
+              <span class="dropdown-desc">Xoắn ốc thép bản CNC, lan can kính cong mỹ thuật</span>
+            </a>
+            <a href="lan-can-kinh.html" class="dropdown-item">
+              <span class="dropdown-title">Lan can ban công</span>
+              <span class="dropdown-desc">Inox 316, kính cường lực an toàn</span>
+            </a>
+            <a href="cong-nghe-thuat.html" class="dropdown-item">
+              <span class="dropdown-title">Cổng nhôm đúc</span>
+              <span class="dropdown-desc">Đúc chân không nguyên khối sơn mạ đồng giả cổ</span>
+            </a>
+            <a href="co-khi-nghe-thuat.html" class="dropdown-item">
+              <span class="dropdown-title">Inox du thuyền</span>
+              <span class="dropdown-desc">Gia công inox Marine 316L đánh bóng gương chống ăn mòn</span>
+            </a>
+          </div>
         </div>
+
+        <div class="nav-dropdown">
+          <a href="linh-vuc-nhom-kinh.html" class="nav-item" data-i18n="nav_facade">
+            NHÔM KÍNH
+          </a>
+          <div class="dropdown-menu">
+            <a href="cua-nhom-kinh.html" class="dropdown-item">
+              <span class="dropdown-title">Cửa nhôm cao cấp</span>
+              <span class="dropdown-desc">Hệ Slim, Civro, Maxpro profile nhôm Châu Âu</span>
+            </a>
+            <a href="vach-kinh.html" class="dropdown-item">
+              <span class="dropdown-title">Vách kính &amp; Cabin tắm</span>
+              <span class="dropdown-desc">Hệ vách ngăn kính cường lực khổ lớn, cabin mạ vàng PVD</span>
+            </a>
+            <a href="linh-vuc-nhom-kinh.html#giai-phap" class="dropdown-item">
+              <span class="dropdown-title">Vách mặt dựng (Facade)</span>
+              <span class="dropdown-desc">Mặt dựng Unitized, Stick cản nhiệt Low-E tòa nhà</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="du-an.html" class="nav-item" data-i18n="nav_projects">DỰ ÁN</a>
+        <a href="nang-luc.html" class="nav-item" data-i18n="nav_capacity">NĂNG LỰC</a>
+        <a href="tin-tuc.html" class="nav-item" data-i18n="nav_news">TIN TỨC</a>
+        <a href="lien-he.html" class="nav-item" data-i18n="nav_contact">LIÊN HỆ</a>
+      </nav>
+
+      <div style="display: flex; align-items: center;">
+        <a href="tel:0869590279" class="header-phone" aria-label="Gọi hotline 0869 590 279">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          <span data-i18n="nav_hotline">0869 590 279</span>
+        </a>
+        
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="vi">VI</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="jp">JP</button>
+        </div>
+
+        <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
-      <a href="du-an.html" class="nav-item">DỰ ÁN</a>
-      <a href="nang-luc.html" class="nav-item">NĂNG LỰC</a>
-      <a href="san-pham.html" class="nav-item">SẢN PHẨM</a>
-      <a href="tin-tuc.html" class="nav-item">TIN TỨC</a>
-      <a href="lien-he.html" class="nav-item active" aria-current="page">LIÊN HỆ</a>
-      <a href="bao-gia.html" class="nav-item" style="color:var(--gold);font-weight:700">BÁO GIÁ</a>
-      <a href="san-pham.html" class="nav-item premium">+ CAO CẤP</a>
-    </nav>
-    <a href="tel:0869590279" class="header-phone" aria-label="Gọi hotline 0869 590 279">
-      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-      0869 590 279
-    </a>
-    <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</header>
-<div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
 
 <!-- PAGE HERO -->
 <section class="page-hero">
@@ -398,63 +435,64 @@
   </iframe>
 </div>
 
-<!-- FOOTER -->
-<footer class="footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="logo" style="margin-bottom:18px;">
-          <span class="logo-badge">SV</span>
-          <span class="logo-name">Cơ Khí Sao Vàng</span>
-        </a>
-        <p style="font-size:13px; line-height:1.6; color:rgba(255,255,255,0.7); margin-bottom:16px;">
-          <strong>Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng</strong><br>
-          MST: 0110461829 — Sở KH&ĐT Hà Nội cấp năm 2024.<br>
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 4px; display: inline-block; vertical-align: middle; color: var(--gold);"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> Văn phòng: Tầng 3, TT7-35 KĐT Văn Phú, Hà Đông, Hà Nội.<br>
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="margin-right: 4px; display: inline-block; vertical-align: middle; color: var(--gold);"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg> Nhà xưởng: Đường CN 6, KCN Bắc Từ Liêm, Hà Nội.
-        </p>
-        <div class="footer-socials">
-          <a href="#" class="social-link" aria-label="Facebook"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-          <a href="#" class="social-link" aria-label="YouTube"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58a2.78 2.78 0 001.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58zM9.75 15.02V8.98L15.5 12l-5.75 3.02z"/></svg></a>
-          <a href="https://zalo.me/0869590279" class="social-link" aria-label="Zalo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><text y="17" font-size="12" font-weight="bold" font-family="Arial">Zalo</text></svg></a>
+<!-- FOOTER (4 columns + Map) -->
+  <footer class="footer section-dark" style="background-color: #0b0c0e; border-top: 1px solid var(--gray-800); padding-top: var(--space-16); padding-bottom: var(--space-8);">
+    <div class="section-container">
+      <div style="display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: var(--space-8); margin-bottom: var(--space-12);">
+        
+        <!-- Col 1: Logo and MST info -->
+        <div>
+          <a href="index.html" class="logo" style="margin-bottom: var(--space-4);">
+            <span class="logo-badge">SV</span>
+            <span class="logo-name" style="color: var(--white);">Sao Vàng Group</span>
+          </a>
+          <p style="font-size: var(--text-sm); color: var(--gray-400); line-height: 1.6;">
+            <strong>CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG</strong><br>
+            MST: 0110461829 — Sở KH&ĐT Hà Nội cấp.<br>
+            📍 VP: Tầng 3, TT7-35 KĐT Văn Phú, Hà Đông, Hà Nội.<br>
+            🏭 Xưởng: Đường CN 6, KCN Bắc Từ Liêm, Hà Nội.
+          </p>
         </div>
-      </div>
-      
-      <div class="footer-col">
-        <h4>Lĩnh Vực Chuyên Sâu</h4>
-        <ul>
-          <li><a href="linh-vuc-co-khi.html">Cơ Khí Biệt Thự &amp; Lâu Đài</a></li>
-          <li><a href="linh-vuc-nhom-kinh.html">Nhôm Kính Kiến Trúc Cao Cấp</a></li>
-          <li><a href="du-an.html?cat=gia-cong-du-thuyen">Gia Công Inox Du Thuyền</a></li>
-          <li><a href="san-pham.html">Sản Phẩm Trang Trí</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h4>Công Ty</h4>
-        <ul>
-          <li><a href="gioi-thieu.html">Về Cơ Khí Sao Vàng</a></li>
-          <li><a href="du-an.html">Dự án thực hiện</a></li>
-          <li><a href="nang-luc.html">Hồ sơ năng lực</a></li>
-          <li><a href="tin-tuc.html">Tin tức &amp; Sự kiện</a></li>
-          <li><a href="lien-he.html">Liên hệ trực tiếp</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-col">
-        <h4>Bản Đồ</h4>
-        <div style="width:100%; border-radius:6px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); height:130px; margin-top:8px;">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.688172083984!2d105.77583627589578!3d20.965037990069354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adc71e3b2e3b%3A0xe5a3c2cf7e3c1b82!2zS0RUIFbEg24gUGjDugEsIEjDoCDEkMO0bmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1718712345678!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        <!-- Col 2: Sectors links -->
+        <div>
+          <h4 style="font-family: var(--ff-header); font-size: var(--text-sm); color: var(--white); text-transform: uppercase; margin-bottom: var(--space-4);">Ngành Hàng</h4>
+          <ul style="display: flex; flex-direction: column; gap: var(--space-2); font-size: var(--text-sm); color: var(--gray-400);">
+            <li><a href="linh-vuc-co-khi.html" style="color: inherit;">Gia công cơ khí biệt thự</a></li>
+            <li><a href="linh-vuc-nhom-kinh.html" style="color: inherit;">Nhôm kính kiến trúc</a></li>
+            <li><a href="co-khi-nghe-thuat.html" style="color: inherit;">Inox du thuyền 316L</a></li>
+            <li><a href="cong-nghe-thuat.html" style="color: inherit;">Cổng đúc hợp kim</a></li>
+          </ul>
         </div>
+
+        <!-- Col 3: Company links -->
+        <div>
+          <h4 style="font-family: var(--ff-header); font-size: var(--text-sm); color: var(--white); text-transform: uppercase; margin-bottom: var(--space-4);">Liên Kết</h4>
+          <ul style="display: flex; flex-direction: column; gap: var(--space-2); font-size: var(--text-sm); color: var(--gray-400);">
+            <li><a href="gioi-thieu.html" style="color: inherit;">Về chúng tôi</a></li>
+            <li><a href="du-an.html" style="color: inherit;">Hồ sơ dự án</a></li>
+            <li><a href="nang-luc.html" style="color: inherit;">Năng lực sản xuất</a></li>
+            <li><a href="lien-he.html" style="color: inherit;">Hệ thống liên hệ</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Google Map -->
+        <div>
+          <h4 style="font-family: var(--ff-header); font-size: var(--text-sm); color: var(--white); text-transform: uppercase; margin-bottom: var(--space-4);">Bản Đồ Nhà Máy</h4>
+          <div style="border-radius: var(--radius-sm); overflow: hidden; height: 130px; border: 1px solid rgba(255,255,255,0.08);">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.688172083984!2d105.77583627589578!3d20.965037990069354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135adc71e3b2e3b%3A0xe5a3c2cf7e3c1b82!2zS0RUIFbEg24gUGjDugEsIEjDoCDEkMO0bmcsIEjDoCBO4buZaSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1718712345678!5m2!1svi!2s" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Copyright block -->
+      <div style="display: flex; justify-content: space-between; border-top: 1px solid var(--gray-800); padding-top: var(--space-4); font-size: var(--text-xs); color: var(--gray-500); flex-wrap: wrap; gap: var(--space-3);">
+        <span>© 2026 CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG. All rights reserved.</span>
+        <span>Thiết kế &amp; vận hành bởi Sao Vàng Technical Division</span>
       </div>
     </div>
-    
-    <div class="footer-bottom">
-      <span>© 2026 Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng. Bảo lưu mọi quyền.</span>
-      <span>Thiết kế &amp; phát triển bởi Sao Vàng Tech</span>
-    </div>
-  </div>
-</footer><!-- FLOATING BUTTONS -->
+  </footer><!-- FLOATING BUTTONS -->
 <div class="floats" role="complementary" aria-label="Liên hệ nhanh">
   <a href="https://zalo.me/0869590279" class="float-btn float-chat" aria-label="Chat Zalo" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>

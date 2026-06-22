@@ -59,4 +59,35 @@
   --header-h: 80px;
   --header-scrolled-h: 64px;
   --safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* Backward Compatibility Variables for Legacy Pages */
+  --red:                  var(--red-brand);
+  --red-dark:             var(--red-hover);
+  --red-light:            #C21E1E;
+  --gold:                 var(--gold-metallic);
+  --gold-light:           #F3CD5B;
+  --gold-dark:            var(--gold-metallic-hover);
+  --gold-a11y:            #B8860B;
+  --dark:                 var(--dark-industrial);
+  --dark-2:               var(--dark-panel);
+  --dark-3:               #222630;
+  --gray-light:           var(--light-zinc);
+  --gray-mid:             var(--gray-300);
+  --gray-text:            var(--gray-600);
+  --text:                 var(--gray-900);
+  --font-head:            var(--ff-header);
+  --font-body:            var(--ff-body);
+  --ff-head:              var(--ff-header);
+  --transition:           var(--transition-smooth);
+  --shadow:               0 4px 20px rgba(0,0,0,0.08);
+  --shadow-lg:            0 12px 30px rgba(0,0,0,0.15);
+  
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 48px;
 }
