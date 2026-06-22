@@ -13,6 +13,7 @@
 @import url('./shared/projects-tabs.css');
 @import url('./shared/process.css');
 @import url('./shared/mobile-cta.css');
+@import url('./shared/filter-bar.css');
 
 /* Shared Scroll Reveal Animation states */
 [data-reveal] {
