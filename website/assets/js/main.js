@@ -513,21 +513,25 @@
 
         document.querySelectorAll('.logo').forEach(logoEl => {
           if (siteLogo) {
-            const existingImg = logoEl.querySelector('img.dynamic-logo');
+            const existingImg = logoEl.querySelector('img') || logoEl.querySelector('img.dynamic-logo');
             if (existingImg) {
               existingImg.src = siteLogo;
               existingImg.alt = companyShort;
+              existingImg.style.display = 'block';
+              const badgeEl = logoEl.querySelector('.logo-badge');
+              if (badgeEl) badgeEl.style.display = 'none';
             } else {
-              logoEl.innerHTML = `<img src="${siteLogo}" alt="${companyShort}" class="dynamic-logo" style="height:38px; object-fit:contain; max-width:180px;" />`;
+              logoEl.innerHTML = `<img src="${siteLogo}" alt="${companyShort}" class="dynamic-logo" style="height:44px; object-fit:contain; max-width:180px;" />`;
             }
           } else {
-            let badgeEl = logoEl.querySelector('.logo-badge');
-            let nameEl = logoEl.querySelector('.logo-name');
-            if (!badgeEl || !nameEl) {
-              logoEl.innerHTML = `<span class="logo-badge" aria-hidden="true">${logoBadge}</span><span class="logo-name">${companyShort}</span>`;
-            } else {
+            // Keep the default static image logo intact
+            const imgEl = logoEl.querySelector('img');
+            if (imgEl) {
+              imgEl.alt = companyShort;
+            }
+            const badgeEl = logoEl.querySelector('.logo-badge');
+            if (badgeEl) {
               badgeEl.textContent = logoBadge;
-              nameEl.textContent = companyShort;
             }
           }
         });
