@@ -1,0 +1,189 @@
+{
+  "taxonomy": {
+    "sectors": ["mechanical", "facade"],
+    "systems": ["gate", "staircase", "balustrade", "structural-inox", "window-door", "curtain-wall"],
+    "materials": ["stainless-steel-316", "wrought-iron", "cast-aluminum", "anodized-aluminum", "low-e-glass", "tempered-glass"]
+  },
+  "projects": [
+    {
+      "id": "sv-proj-001",
+      "sector": "mechanical",
+      "system": "gate",
+      "materials": ["cast-aluminum"],
+      "image": "assets/images/project-mansion-gate.png",
+      "translations": {
+        "vi": {
+          "title": "Cổng Đúc Biệt Thự Lâu Đài Tây Hồ",
+          "description": "Chế tác cổng nhôm đúc chân không hợp kim nguyên khối sơn mạ đồng giả cổ.",
+          "location": "Tây Hồ, Hà Nội",
+          "scale": "Cửa cổng cao 3.8m, nặng 1.2 tấn",
+          "value": "1.2 Tỷ VNĐ"
+        },
+        "en": {
+          "title": "Cast Aluminum Gate - West Lake Mansion",
+          "description": "Vacuum-cast single-block aluminum alloy gates with antique bronze coating.",
+          "location": "West Lake, Hanoi",
+          "scale": "3.8m height gate, weight 1.2 tons",
+          "value": "$52,000 USD"
+        },
+        "jp": {
+          "title": "西湖マンション アルミ鋳物正門",
+          "description": "真空鋳造によるアルミ合金製大型門扉、アンティークブロンズ塗装仕上げ。",
+          "location": "ハノイ、タイホー区",
+          "scale": "門扉高さ3.8m、重量1.2t",
+          "value": "780万円"
+        }
+      }
+    },
+    {
+      "id": "sv-proj-002",
+      "sector": "mechanical",
+      "system": "structural-inox",
+      "materials": ["stainless-steel-316"],
+      "image": "assets/images/project-saobien-yacht.png",
+      "translations": {
+        "vi": {
+          "title": "Gia Công Inox Du Thuyền 28m 'Sao Biển'",
+          "description": "Lan can, tay vịn, cầu thang inox Marine 316L uốn cong đánh bóng gương gương cao cấp.",
+          "location": "Vịnh Hạ Long, Quảng Ninh",
+          "scale": "Hơn 120m lan can cong 3D",
+          "value": "1.8 Tỷ VNĐ"
+        },
+        "en": {
+          "title": "Marine Stainless Steel - 28m Yacht 'Sao Bien'",
+          "description": "Premium 3D bent and mirror-polished Marine 316L stainless steel railings and stairs.",
+          "location": "Ha Long Bay, Quang Ninh",
+          "scale": "Over 120m of 3D bent railings",
+          "value": "$78,000 USD"
+        },
+        "jp": {
+          "title": "28m豪華ヨット「サオヴィエト」ステンレス艤装",
+          "description": "高度な3D曲げ加工と鏡面研磨を施した海洋グレードMarine 316Lステンレス手すり。",
+          "location": "クアンニン省ハロン湾",
+          "scale": "3D手すり総延長120m以上",
+          "value": "1,170万円"
+        }
+      }
+    },
+    {
+      "id": "sv-proj-003",
+      "sector": "mechanical",
+      "system": "staircase",
+      "materials": ["wrought-iron", "tempered-glass"],
+      "image": "assets/images/project-penthouse.png",
+      "translations": {
+        "vi": {
+          "title": "Cầu Thang Xoắn Ốc Penthouse Sky Garden",
+          "description": "Cấu trúc xương cá thép bản cắt CNC uốn lượn kết hợp lan can kính cường lực cong ôm.",
+          "location": "Quận 7, TP. HCM",
+          "scale": "Cầu thang cao 4.2m kết cấu chịu lực độc lập",
+          "value": "850 Triệu VNĐ"
+        },
+        "en": {
+          "title": "Spiral Staircase - Sky Garden Penthouse",
+          "description": "CNC-cut steel plate spine structure with curved structural glass balustrades.",
+          "location": "District 7, HCMC",
+          "scale": "4.2m height cantilevered structural stairs",
+          "value": "$36,000 USD"
+        },
+        "jp": {
+          "title": "スカイガーデン・ペントハウス 螺旋階段",
+          "description": "CNC切断による特殊鋼板構造に曲げ強化ガラスの手すりを組み合わせたデザイン階段。",
+          "location": "ホーチミン市7区",
+          "scale": "高さ4.2m 自立式構造体",
+          "value": "550万円"
+        }
+      }
+    },
+    {
+      "id": "sv-proj-004",
+      "sector": "facade",
+      "system": "curtain-wall",
+      "materials": ["low-e-glass", "anodized-aluminum"],
+      "image": "assets/images/project-dalat-villa.png",
+      "translations": {
+        "vi": {
+          "title": "Mặt Dựng Vách Kính Villa Đà Lạt",
+          "description": "Vách dựng kính Unitized kết hợp kính hộp Low-E cản nhiệt, cách âm vượt trội cho villa đồi.",
+          "location": "Đà Lạt, Lâm Đồng",
+          "scale": "350 m² kính mặt dựng khổ lớn",
+          "value": "2.5 Tỷ VNĐ"
+        },
+        "en": {
+          "title": "Glass Facade Curtain Wall - Da Lat Hill Villa",
+          "description": "Unitized glass facade with insulated Low-E glass panels for optimal thermal control.",
+          "location": "Da Lat, Lam Dong",
+          "scale": "350 m² of large-span glass facade",
+          "value": "$108,000 USD"
+        },
+        "jp": {
+          "title": "ダラット・ヒルヴィラ ガラスファサード",
+          "description": "高断熱Low-Eペアガラスと高強度アルミサッシによるユニット式カーテンウォール。",
+          "location": "ラムドン省ダラット市",
+          "scale": "大スパンガラスファサード 350 m²",
+          "value": "1,620万円"
+        }
+      }
+    },
+    {
+      "id": "sv-proj-005",
+      "sector": "facade",
+      "system": "window-door",
+      "materials": ["anodized-aluminum", "tempered-glass"],
+      "image": "assets/images/project-vinhomes-villa.png",
+      "translations": {
+        "vi": {
+          "title": "Hệ Cửa Nhôm Slim Biệt Thự Vinhomes Riverside",
+          "description": "Hệ thống cửa đi lùa Slim profile siêu mỏng góc nhìn panorama rộng, đóng mở êm ái tích hợp giảm chấn.",
+          "location": "Long Biên, Hà Nội",
+          "scale": "Trọn gói cửa biệt thự 3 tầng",
+          "value": "1.5 Tỷ VNĐ"
+        },
+        "en": {
+          "title": "Slim Profile Aluminum Doors - Vinhomes Riverside Villa",
+          "description": "Ultra-thin profile sliding doors for panorama views, integrated with soft-close hardware.",
+          "location": "Long Bien, Hanoi",
+          "scale": "Entire sliding door system for a 3-story villa",
+          "value": "$65,000 USD"
+        },
+        "jp": {
+          "title": "ビンホームズ・リバーサイド 高級スリムアルミサッシ",
+          "description": "パノラマビューを実現する極細プロファイルの引き戸システム、ソフトクローズ機能付。",
+          "location": "ハノイ、ロンビエン区",
+          "scale": "3階建てヴィラ全体サッシ工事一式",
+          "value": "970万円"
+        }
+      }
+    },
+    {
+      "id": "sv-proj-006",
+      "sector": "facade",
+      "system": "balustrade",
+      "materials": ["tempered-glass", "stainless-steel-316"],
+      "image": "assets/images/project-villa.png",
+      "translations": {
+        "vi": {
+          "title": "Lan Can Kính Âm Sàn Penthouse Sunshine",
+          "description": "Lan can kính âm sàn không trụ đứng tối ưu tầm nhìn, phụ kiện Hafele inox 316 đánh bóng gương.",
+          "location": "Tây Hồ, Hà Nội",
+          "scale": "80m lan can kính ban công ngoài trời",
+          "value": "600 Triệu VNĐ"
+        },
+        "en": {
+          "title": "Frameless Glass Balustrades - Sunshine Penthouse",
+          "description": "U-channel recessed glass balustrades with Hafele mirror-polished Marine 316 fittings.",
+          "location": "West Lake, Hanoi",
+          "scale": "80m of outdoor balcony glass balustrades",
+          "value": "$26,000 USD"
+        },
+        "jp": {
+          "title": "サンシャイン・ペントハウス フレームレスガラス手すり",
+          "description": "床埋込式Uチャンネル固定による柱のない手すり、ヘフェレ社製金具使用。",
+          "location": "ハノイ、タイホー区",
+          "scale": "屋外バルコニー用ガラス手すり 80m",
+          "value": "390万円"
+        }
+      }
+    }
+  ]
+}

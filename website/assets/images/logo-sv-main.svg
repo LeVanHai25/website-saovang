@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 720" width="1060" height="720">
+  <defs>
+    <!-- Gold metallic gradient chính -->
+    <linearGradient id="goldMain" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#FFF0A0"/>
+      <stop offset="15%"  stop-color="#F5D050"/>
+      <stop offset="35%"  stop-color="#D4AF37"/>
+      <stop offset="50%"  stop-color="#B8941E"/>
+      <stop offset="65%"  stop-color="#D4AF37"/>
+      <stop offset="85%"  stop-color="#F0C830"/>
+      <stop offset="100%" stop-color="#C8A020"/>
+    </linearGradient>
+
+    <!-- Gold gradient cho ngôi sao (sáng hơn) -->
+    <linearGradient id="goldStar" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#FFF5B0"/>
+      <stop offset="25%"  stop-color="#F0C830"/>
+      <stop offset="50%"  stop-color="#C8920A"/>
+      <stop offset="75%"  stop-color="#E8B820"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+
+    <!-- 3D highlight cho chữ S -->
+    <linearGradient id="goldS" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#FFFDE0"/>
+      <stop offset="10%"  stop-color="#F8E060"/>
+      <stop offset="30%"  stop-color="#D4AF37"/>
+      <stop offset="48%"  stop-color="#8B6914"/>
+      <stop offset="52%"  stop-color="#8B6914"/>
+      <stop offset="70%"  stop-color="#D4AF37"/>
+      <stop offset="90%"  stop-color="#F0C830"/>
+      <stop offset="100%" stop-color="#B8941E"/>
+    </linearGradient>
+
+    <!-- 3D highlight cho chữ V -->
+    <linearGradient id="goldV" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#FFFDE0"/>
+      <stop offset="15%"  stop-color="#F8E060"/>
+      <stop offset="40%"  stop-color="#D4AF37"/>
+      <stop offset="60%"  stop-color="#A07820"/>
+      <stop offset="80%"  stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#C8920A"/>
+    </linearGradient>
+
+    <!-- Drop shadow filter -->
+    <filter id="shadow3d" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="4" dy="6" stdDeviation="6" flood-color="#6B4E00" flood-opacity="0.6"/>
+    </filter>
+
+    <!-- Glow filter cho ngôi sao -->
+    <filter id="starGlow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="2" dy="3" stdDeviation="4" flood-color="#8B6914" flood-opacity="0.5"/>
+    </filter>
+
+    <!-- Stroke gradient -->
+    <linearGradient id="strokeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#FFF0A0"/>
+      <stop offset="50%"  stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ════════ NGÔI SAO (Star outline - thick stroke) ════════ -->
+  <!--
+    Ngôi sao 5 cánh với tâm tại (310, 280), bán kính ngoài 270, bán kính trong 108
+    Điểm đỉnh (đúng chuẩn 5-point star):
+    Top:    (310, 10)
+    TR:     (560, 208)
+    BR-right: (465, 500)
+    BL-left:  (155, 500)
+    TL:     (60, 208)
+    Inner points ở góc: tỉ lệ 0.4
+  -->
+  <g filter="url(#starGlow)">
+    <polygon
+      points="
+        310,18
+        386,208  570,208
+        435,322  486,510
+        310,388  134,510
+        185,322  50,208
+        234,208
+      "
+      fill="none"
+      stroke="url(#goldStar)"
+      stroke-width="38"
+      stroke-linejoin="round"
+      stroke-linecap="round"
+    />
+  </g>
+
+  <!-- Viền sáng mỏng phía trên ngôi sao (highlight 3D) -->
+  <polygon
+    points="
+      310,18
+      386,208  570,208
+      435,322  486,510
+      310,388  134,510
+      185,322  50,208
+      234,208
+    "
+    fill="none"
+    stroke="#FFF8C0"
+    stroke-width="4"
+    stroke-linejoin="round"
+    stroke-dasharray="1,1"
+    opacity="0.5"
+  />
+
+  <!-- ════════ CHỮ "S" ════════ -->
+  <g filter="url(#shadow3d)">
+    <text
+      x="276"
+      y="440"
+      font-family="'Arial Black', 'Impact', 'Haettenschweiler', sans-serif"
+      font-size="320"
+      font-weight="900"
+      font-style="italic"
+      fill="url(#goldS)"
+      stroke="#8B6914"
+      stroke-width="3"
+      letter-spacing="-10"
+    >S</text>
+  </g>
+  <!-- Highlight line trên S -->
+  <rect x="282" y="265" width="155" height="16" rx="8" fill="#FFF8A0" opacity="0.6" transform="skewX(-8)"/>
+  <rect x="282" y="368" width="155" height="16" rx="8" fill="#FFF8A0" opacity="0.4" transform="skewX(-8)"/>
+
+  <!-- ════════ CHỮ "V" ════════ -->
+  <g filter="url(#shadow3d)">
+    <text
+      x="450"
+      y="440"
+      font-family="'Arial Black', 'Impact', 'Haettenschweiler', sans-serif"
+      font-size="320"
+      font-weight="900"
+      font-style="italic"
+      fill="url(#goldV)"
+      stroke="#8B6914"
+      stroke-width="3"
+    >V</text>
+  </g>
+
+  <!-- ════════ TAGLINE ════════ -->
+  <text
+    x="530"
+    y="620"
+    font-family="'Montserrat', 'Arial', sans-serif"
+    font-size="36"
+    font-weight="700"
+    fill="url(#goldMain)"
+    text-anchor="middle"
+    letter-spacing="8"
+  >— KIẾN TẠO GIÁ TRỊ BỀN VỮNG —</text>
+
+</svg>

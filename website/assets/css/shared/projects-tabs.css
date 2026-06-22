@@ -1,0 +1,89 @@
+/* ════════════════════════════════════════════════════════════════
+   SAO VÀNG — Section 6: Projects Tabs & Grid styles
+   ════════════════════════════════════════════════════════════════ */
+
+.projects-tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-12);
+}
+
+.tab-btn {
+  font-family: var(--ff-header);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: var(--space-3) var(--space-6);
+  border-radius: 30px;
+  border: 1px solid var(--gray-300);
+  background: var(--white);
+  color: var(--gray-600);
+  transition: var(--transition-smooth);
+}
+
+.tab-btn:hover {
+  color: var(--gray-900);
+  border-color: var(--gray-500);
+}
+
+/* Category specific active styles */
+.tab-btn.active[data-target="mechanical"] {
+  background-color: var(--red-brand);
+  color: var(--white);
+  border-color: var(--red-brand);
+  box-shadow: 0 4px 12px rgba(165,0,0,0.25);
+}
+
+.tab-btn.active[data-target="facade"] {
+  background-color: var(--dark-industrial);
+  color: var(--white);
+  border-color: var(--dark-industrial);
+  box-shadow: 0 4px 12px rgba(15,17,21,0.25);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  min-height: 350px;
+}
+
+/* Transition class for smooth project swapping */
+.projects-grid.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.projects-grid.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+@media (max-width: 1023px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+  
+  .projects-tabs-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2);
+    padding-inline: var(--space-4);
+  }
+  
+  .tab-btn {
+    text-align: center;
+  }
+}
