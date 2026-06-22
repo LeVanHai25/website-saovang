@@ -4,12 +4,13 @@
 
 .page-hero {
   position: relative;
-  min-height: clamp(220px, 35vw, 380px);
+  min-height: clamp(280px, 35vw, 440px);
   display: flex;
   align-items: flex-end;
   padding-bottom: var(--space-8);
+  padding-top: calc(var(--header-h) + var(--space-12));
   overflow: hidden;
-  margin-top: var(--header-h);
+  margin-top: 0;
 }
 
 .page-hero-bg {

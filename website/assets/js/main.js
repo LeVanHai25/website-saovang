@@ -18,7 +18,7 @@
   const mainEl = document.querySelector('main, section, .hero, .page-hero, [id="about"]');
   if (mainEl && !mainEl.id) mainEl.id = 'main-content';
 
-  /* ── Header scroll ──────────────────────────────────────────── */
+  /* ── Header scroll & Active Nav ─────────────────────────────── */
   const header = document.querySelector('.header');
   if (header) {
     const onScroll = () => {
@@ -26,6 +26,52 @@
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll(); // apply on load
+
+    // Highlight active menu item based on current page URL
+    const navItems = header.querySelectorAll('.nav-item, .dropdown-item');
+    if (navItems.length > 0) {
+      const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+      let matched = false;
+
+      // Reset all active classes first
+      navItems.forEach(item => {
+        item.classList.remove('active');
+        const parentDropdown = item.closest('.nav-dropdown');
+        if (parentDropdown) {
+          const parentLink = parentDropdown.querySelector('.nav-item');
+          parentLink?.classList.remove('active');
+        }
+      });
+
+      // Match exact path or relative filename
+      navItems.forEach(item => {
+        const href = item.getAttribute('href');
+        if (href && (href === currentPath || (currentPath === 'index.html' && href === './') || (href === 'index.html' && currentPath === ''))) {
+          item.classList.add('active');
+          const parentDropdown = item.closest('.nav-dropdown');
+          if (parentDropdown) {
+            const parentLink = parentDropdown.querySelector('.nav-item');
+            parentLink?.classList.add('active');
+          }
+          matched = true;
+        }
+      });
+
+      // Fallback matching for sub-pages or sections
+      if (!matched) {
+        navItems.forEach(item => {
+          const href = item.getAttribute('href');
+          if (href && href !== 'index.html' && href !== './' && (currentPath.includes(href.replace('.html', '')) || href.includes(currentPath.replace('.html', '')))) {
+            item.classList.add('active');
+            const parentDropdown = item.closest('.nav-dropdown');
+            if (parentDropdown) {
+              const parentLink = parentDropdown.querySelector('.nav-item');
+              parentLink?.classList.add('active');
+            }
+          }
+        });
+      }
+    }
   }
 
   /* ── Mobile Navigation Drawer ───────────────────────────────── */
