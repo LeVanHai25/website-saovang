@@ -34,6 +34,32 @@ fs.mkdirSync(UPLOADS_PATH, { recursive: true });
 
 app.use('/uploads', express.static(UPLOADS_PATH, { maxAge: '7d' }));
 
+// ── Smart Asset & Uploads Resolver for Deep/Nested Paths ────────────────
+app.use((req, res, next) => {
+  // Resolve static assets in nested URLs
+  const assetsIdx = req.path.indexOf('/assets/');
+  if (assetsIdx !== -1) {
+    const relativeAssetPath = req.path.substring(assetsIdx + 1);
+    const fullAssetPath = path.join(WEBSITE_PATH, relativeAssetPath);
+    if (fs.existsSync(fullAssetPath)) {
+      return res.sendFile(fullAssetPath);
+    }
+  }
+
+  // Resolve upload files in nested URLs
+  const uploadsIdx = req.path.indexOf('/uploads/');
+  if (uploadsIdx !== -1) {
+    const relativeUploadPath = req.path.substring(uploadsIdx + 1);
+    const cleanUploadPath = relativeUploadPath.replace(/^uploads\//, '');
+    const fullUploadPath = path.join(UPLOADS_PATH, cleanUploadPath);
+    if (fs.existsSync(fullUploadPath)) {
+      return res.sendFile(fullUploadPath);
+    }
+  }
+
+  next();
+});
+
 // ── Bootstrap async (DB init → routes → listen) ──────────────
 async function bootstrap() {
   console.log('\n  Initializing SAO VÀNG CMS...');
@@ -199,8 +225,63 @@ async function bootstrap() {
     app.use('/', express.static(WEBSITE_PATH));
     app.get('*', (req, res, next) => {
       if (req.path.startsWith('/api') || req.path.startsWith('/admin') || req.path.startsWith('/uploads')) return next();
-      const idx = path.join(WEBSITE_PATH, 'index.html');
-      if (fs.existsSync(idx)) res.sendFile(idx); else next();
+      
+      const cleanPath = req.path.toLowerCase().replace(/\/$/, '');
+      let fileToServe = 'index.html';
+      
+      // Map deep preview and clean URLs to their corresponding physical HTML files
+      if (cleanPath.endsWith('/thu-vien-san-pham') || cleanPath.endsWith('/thu-vien-sp') || cleanPath.endsWith('/thu-vien-sp.html')) {
+        fileToServe = 'thu-vien-sp.html';
+      } else if (cleanPath.endsWith('/du-an') || cleanPath.endsWith('/du-an.html')) {
+        fileToServe = 'du-an.html';
+      } else if (cleanPath.endsWith('/san-pham') || cleanPath.endsWith('/san-pham.html')) {
+        fileToServe = 'san-pham.html';
+      } else if (cleanPath.endsWith('/tin-tuc') || cleanPath.endsWith('/tin-tuc.html')) {
+        fileToServe = 'tin-tuc.html';
+      } else if (cleanPath.endsWith('/lien-he') || cleanPath.endsWith('/lien-he.html')) {
+        fileToServe = 'lien-he.html';
+      } else if (cleanPath.endsWith('/bao-gia') || cleanPath.endsWith('/bao-gia.html')) {
+        fileToServe = 'bao-gia.html';
+      } else if (cleanPath.endsWith('/co-khi-sao-vang') || cleanPath.endsWith('/co-khi-sao-vang.html')) {
+        fileToServe = 'co-khi-sao-vang.html';
+      } else if (cleanPath.endsWith('/nhom-sao-vang') || cleanPath.endsWith('/nhom-sao-vang.html')) {
+        fileToServe = 'nhom-sao-vang.html';
+      } else if (cleanPath.endsWith('/linh-vuc-hoat-dong') || cleanPath.endsWith('/linh-vuc-hoat-dong.html')) {
+        fileToServe = 'linh-vuc-hoat-dong.html';
+      } else if (cleanPath.endsWith('/linh-vuc-co-khi') || cleanPath.endsWith('/linh-vuc-co-khi.html')) {
+        fileToServe = 'linh-vuc-co-khi.html';
+      } else if (cleanPath.endsWith('/linh-vuc-nhom-kinh') || cleanPath.endsWith('/linh-vuc-nhom-kinh.html')) {
+        fileToServe = 'linh-vuc-nhom-kinh.html';
+      } else if (cleanPath.endsWith('/gioi-thieu') || cleanPath.endsWith('/gioi-thieu.html')) {
+        fileToServe = 'gioi-thieu.html';
+      } else if (cleanPath.endsWith('/nang-luc') || cleanPath.endsWith('/nang-luc.html')) {
+        fileToServe = 'nang-luc.html';
+      } else if (cleanPath.endsWith('/cua-nhom-kinh') || cleanPath.endsWith('/cua-nhom-kinh.html')) {
+        fileToServe = 'cua-nhom-kinh.html';
+      } else if (cleanPath.endsWith('/vach-kinh') || cleanPath.endsWith('/vach-kinh.html')) {
+        fileToServe = 'vach-kinh.html';
+      } else if (cleanPath.endsWith('/lan-can-kinh') || cleanPath.endsWith('/lan-can-kinh.html')) {
+        fileToServe = 'lan-can-kinh.html';
+      } else if (cleanPath.endsWith('/cau-thang-xoan') || cleanPath.endsWith('/cau-thang-xoan.html')) {
+        fileToServe = 'cau-thang-xoan.html';
+      } else if (cleanPath.endsWith('/co-khi-nghe-thuat') || cleanPath.endsWith('/co-khi-nghe-thuat.html')) {
+        fileToServe = 'co-khi-nghe-thuat.html';
+      } else if (cleanPath.endsWith('/cong-nghe-thuat') || cleanPath.endsWith('/cong-nghe-thuat.html')) {
+        fileToServe = 'cong-nghe-thuat.html';
+      } else if (cleanPath.endsWith('/san-pham-chi-tiet') || cleanPath.endsWith('/san-pham-chi-tiet.html')) {
+        fileToServe = 'san-pham-chi-tiet.html';
+      } else if (cleanPath.endsWith('/du-an-chi-tiet') || cleanPath.endsWith('/du-an-chi-tiet.html')) {
+        fileToServe = 'du-an-chi-tiet.html';
+      } else if (cleanPath.endsWith('/tin-tuc-chi-tiet') || cleanPath.endsWith('/tin-tuc-chi-tiet.html')) {
+        fileToServe = 'tin-tuc-chi-tiet.html';
+      }
+      
+      const targetFile = path.join(WEBSITE_PATH, fileToServe);
+      if (fs.existsSync(targetFile)) {
+        res.sendFile(targetFile);
+      } else {
+        next();
+      }
     });
   }
 
