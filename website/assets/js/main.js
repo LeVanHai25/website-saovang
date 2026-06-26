@@ -314,9 +314,9 @@
     document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
   }
 
-  /* ── Contact Form ───────────────────────────────────────────── */
+  /* ── Contact Form (Legacy Fallback) ─────────────────────────── */
   const form = document.getElementById('contactForm');
-  if (form) {
+  if (form && !form.hasAttribute('novalidate') && !form._svFormBound) {
     form.addEventListener('submit', e => {
       e.preventDefault();
       const btn  = form.querySelector('[type="submit"]');
@@ -333,6 +333,7 @@
       }, 4500);
     });
   }
+
 
   /* ── Smooth Anchor Scroll ───────────────────────────────────── */
   document.querySelectorAll('a[href^="#"]').forEach(a => {

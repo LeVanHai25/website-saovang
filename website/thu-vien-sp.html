@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#9B1C1C" />
+  <title>Thư Viện Sản Phẩm &amp; Công Trình | SAO VÀNG</title>
+  <meta name="description" content="Thư viện hình ảnh sản phẩm cơ khí CNC chính xác, cửa nhôm kính cao cấp, cổng đúc, lan can kính và công trình thực tế của Sao Vàng." />
+  <meta name="keywords" content="thư viện ảnh sao vàng, hình ảnh cửa nhôm kính, hình ảnh cổng đúc, hình ảnh cơ khí" />
+  <meta property="og:title" content="Thư Viện Sản Phẩm &amp; Công Trình | SAO VÀNG" />
+  <meta property="og:description" content="Hình ảnh sản phẩm cơ khí chính xác CNC, cửa nhôm kính cao cấp, cổng đúc, lan can và công trình thực tế." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.CoKhiSaoVang.com/thu-vien-sp.html" />
+  <meta property="og:image" content="assets/images/project-dalat-villa.png" />
+  <link rel="canonical" href="https://www.CoKhiSaoVang.com/thu-vien-sp.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Pacifico&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+
+  <!-- Design System v2 -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <!-- Page-specific styles -->
+  <style>
+    /* Page Hero (50vh) */
+    .page-hero {
+      position: relative;
+      height: 45vh;
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: var(--sv-dark-900);
+      color: var(--sv-white);
+      padding-top: var(--sv-navbar-h);
+      overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+    .page-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.25);
+    }
+    .page-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding-inline: var(--sv-container-px);
+    }
+    .page-hero-title {
+      font-family: var(--sv-font-head);
+      font-size: var(--sv-fs-2xl);
+      font-weight: 900;
+      letter-spacing: -0.01em;
+      margin-bottom: var(--sv-sp-2);
+    }
+    .page-hero-desc {
+      font-size: var(--sv-fs-sm);
+      color: rgba(255,255,255,0.7);
+      max-width: 500px;
+      margin-inline: auto;
+      font-weight: 300;
+    }
+
+    /* Gallery Section */
+    .gallery-section {
+      padding-block: var(--sv-section-py);
+      background: var(--sv-white);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--sv-sp-4);
+      margin-top: var(--sv-sp-8);
+    }
+    @media (max-width: 1200px) {
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .gallery-item {
+      position: relative;
+      aspect-ratio: 4/3;
+      border-radius: var(--sv-radius-md);
+      overflow: hidden;
+      box-shadow: var(--sv-shadow-sm);
+      cursor: pointer;
+      background: var(--sv-dark-900);
+      transition: var(--sv-transition);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .gallery-item:hover img {
+      transform: scale(1.08);
+      filter: brightness(0.75);
+    }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: var(--sv-sp-4);
+    }
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    .gallery-title {
+      font-family: var(--sv-font-head);
+      color: var(--sv-white);
+      font-size: var(--sv-fs-sm);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .gallery-tag {
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--sv-gold-600);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Lightbox Modal */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.95);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .lightbox.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 80vh;
+      object-fit: contain;
+      border-radius: var(--sv-radius-sm);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: none;
+      border: none;
+      color: var(--sv-white);
+      font-size: 32px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .lightbox-close:hover {
+      transform: scale(1.1);
+    }
+    .lightbox-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.05);
+      border: none;
+      color: var(--sv-white);
+      font-size: 30px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--sv-transition);
+    }
+    .lightbox-btn:hover {
+      background: rgba(255,255,255,0.15);
+    }
+    .lightbox-btn-prev { left: 24px; }
+    .lightbox-btn-next { right: 24px; }
+    @media (max-width: 768px) {
+      .lightbox-btn {
+        width: 44px; height: 44px;
+        font-size: 20px;
+      }
+      .lightbox-btn-prev { left: 12px; }
+      .lightbox-btn-next { right: 12px; }
+    }
+    .lightbox-caption {
+      margin-top: var(--sv-sp-4);
+      text-align: center;
+      color: var(--sv-white);
+    }
+    .lightbox-caption-title {
+      font-family: var(--sv-font-head);
+      font-size: var(--sv-fs-md);
+      font-weight: 700;
+    }
+    .lightbox-caption-tag {
+      font-size: var(--sv-fs-xs);
+      color: var(--sv-gold-600);
+      text-transform: uppercase;
+      margin-top: 4px;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Skip link for accessibility -->
+  <a href="#main-content" class="skip-link">Bỏ qua điều hướng</a>
+
+  <!-- ════════════════════════════════════════════
+       SECTION 1: NAVBAR
+  ════════════════════════════════════════════ -->
+  <header class="header-v2" id="navbar" role="banner">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="Sao Vàng — Trang chủ">
+        <div class="nav-logo-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+          </svg>
+        </div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">SAO VÀNG</span>
+          <span class="nav-logo-sub">Cơ Khí &amp; Nhôm Kính</span>
+        </div>
+      </a>
+
+      <!-- Desktop nav menu -->
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html"            class="nav-menu-link">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html"  class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html"    class="nav-menu-link">Nhôm Sao Vàng</a>
+
+        <!-- Dropdown -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-co-khi.html"   class="nav-dropdown-item" role="menuitem">Cơ Khí Chính Xác CNC</a>
+            <a href="cau-thang-xoan.html"    class="nav-dropdown-item" role="menuitem">Cầu Thang &amp; Lan Can</a>
+            <a href="cong-nghe-thuat.html"   class="nav-dropdown-item" role="menuitem">Cổng Nhôm Đúc Nghệ Thuật</a>
+            <a href="co-khi-nghe-thuat.html" class="nav-dropdown-item" role="menuitem">Inox Marine Du Thuyền</a>
+            <a href="cua-nhom-kinh.html"     class="nav-dropdown-item" role="menuitem">Cửa Nhôm Kính</a>
+            <a href="vach-kinh.html"         class="nav-dropdown-item" role="menuitem">Vách Kính &amp; Mặt Dựng</a>
+            <a href="lan-can-kinh.html"      class="nav-dropdown-item" role="menuitem">Lan Can Kính Cường Lực</a>
+          </div>
+        </div>
+
+        <a href="du-an.html"       class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="san-pham.html"    class="nav-menu-link">Sản Phẩm</a>
+        <a href="thu-vien-sp.html" class="nav-menu-link active">Thư Viện SP</a>
+        <a href="tin-tuc.html"     class="nav-menu-link">Tin Tức</a>
+        <a href="lien-he.html"     class="nav-menu-link">Liên Hệ</a>
+      </nav>
+
+      <!-- Hotline + Hamburger -->
+      <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+        <a href="tel:0869590279" class="nav-hotline" aria-label="Gọi hotline 0869 590 279">
+          <i class="ri-phone-fill" aria-hidden="true"></i>
+          <span>0869 590 279</span>
+        </a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html"              class="nav-drawer-link">Trang Chủ</a>
+    <a href="co-khi-sao-vang.html"   class="nav-drawer-link">Cơ Khí Sao Vàng</a>
+    <a href="nhom-sao-vang.html"     class="nav-drawer-link">Nhôm Sao Vàng</a>
+    <a href="linh-vuc-hoat-dong.html" class="nav-drawer-link">Lĩnh Vực Hoạt Động</a>
+    <a href="du-an.html"             class="nav-drawer-link">Dự Án Đã Thực Hiện</a>
+    <a href="san-pham.html"          class="nav-drawer-link">Sản Phẩm</a>
+    <a href="thu-vien-sp.html"       class="nav-drawer-link active">Thư Viện SP</a>
+    <a href="tin-tuc.html"           class="nav-drawer-link">Tin Tức</a>
+    <a href="lien-he.html"           class="nav-drawer-link">Liên Hệ</a>
+    <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
+      <i class="ri-phone-fill"></i> 0869 590 279
+    </a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- ════════════════════════════════════════════
+         SECTION 2: PAGE HERO
+    ════════════════════════════════════════════ -->
+    <section class="page-hero" aria-label="Thư viện ảnh Hero Banner">
+      <div class="page-hero-bg" aria-hidden="true">
+        <img src="assets/images/project-dalat-villa.png" alt="Công trình biệt thự kính đồi thông" />
+      </div>
+      <div class="page-hero-content">
+        <h1 class="page-hero-title">THƯ VIỆN SẢN PHẨM &amp; DỰ ÁN</h1>
+        <p class="page-hero-desc">Hình ảnh thực tế về hệ thống sản phẩm gia công cơ khí tinh xảo &amp; các công trình nhôm kính kiến trúc đã bàn giao.</p>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════
+         SECTION 3: IMAGE GALLERY WITH FILTER
+    ════════════════════════════════════════════ -->
+    <section class="gallery-section" aria-label="Thư viện hình ảnh">
+      <div class="sv-container">
+        
+        <!-- Filter Tabs -->
+        <div class="sv-filter-tabs" style="justify-content:center; flex-wrap:wrap; gap:8px;" data-sv-reveal>
+          <button class="sv-filter-tab active" data-filter="all">Tất cả</button>
+          <button class="sv-filter-tab" data-filter="cnc">Cơ Khí CNC</button>
+          <button class="sv-filter-tab" data-filter="stair">Cầu Thang &amp; Lan Can</button>
+          <button class="sv-filter-tab" data-filter="gate">Cổng Nhôm Đúc</button>
+          <button class="sv-filter-tab" data-filter="window">Cửa Nhôm Cao Cấp</button>
+          <button class="sv-filter-tab" data-filter="facade">Mặt Dựng &amp; Vách Kính</button>
+          <button class="sv-filter-tab" data-filter="marine">Inox Du Thuyền</button>
+        </div>
+
+        <!-- Grid -->
+        <div class="gallery-grid" id="galleryGrid">
+          
+          <!-- Item 1: CNC -->
+          <div class="gallery-item" data-category="cnc" data-sv-reveal data-sv-delay="1">
+            <img src="assets/images/workshop_cnc.png" alt="Trung tâm máy phay CNC hiện đại" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Cơ Khí CNC</span>
+              <h3 class="gallery-title">Máy Phay CNC 5 Trục</h3>
+            </div>
+          </div>
+
+          <!-- Item 2: CNC -->
+          <div class="gallery-item" data-category="cnc" data-sv-reveal data-sv-delay="2">
+            <img src="assets/images/laser_cutting.png" alt="Cắt laser kim loại tấm CNC" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Cơ Khí CNC</span>
+              <h3 class="gallery-title">Laser Cắt Kim Loại Tấm</h3>
+            </div>
+          </div>
+
+          <!-- Item 3: CNC -->
+          <div class="gallery-item" data-category="cnc" data-sv-reveal data-sv-delay="3">
+            <img src="assets/images/welding_work.png" alt="Hàn Tig/Mig inox chính xác" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Cơ Khí CNC</span>
+              <h3 class="gallery-title">Hàn Kỹ Thuật Cao TIG</h3>
+            </div>
+          </div>
+
+          <!-- Item 4: Stair -->
+          <div class="gallery-item" data-category="stair" data-sv-reveal data-sv-delay="4">
+            <img src="assets/images/service-artistic-stairs.png" alt="Cầu thang xoắn ốc uốn lượn nghệ thuật" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Cầu Thang &amp; Lan Can</span>
+              <h3 class="gallery-title">Cầu Thang Xoắn Ốc Thép Bản</h3>
+            </div>
+          </div>
+
+          <!-- Item 5: Stair -->
+          <div class="gallery-item" data-category="stair" data-sv-reveal data-sv-delay="5">
+            <img src="assets/images/product-railing.png" alt="Lan can ban công inox cao cấp" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Cầu Thang &amp; Lan Can</span>
+              <h3 class="gallery-title">Lan Can Ban Công Inox 304</h3>
+            </div>
+          </div>
+
+          <!-- Item 6: Gate -->
+          <div class="gallery-item" data-category="gate" data-sv-reveal data-sv-delay="6">
+            <img src="assets/images/service-cast-gates.png" alt="Cổng hợp kim nhôm đúc nguyên khối" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Cổng Nhôm Đúc</span>
+              <h3 class="gallery-title">Cổng Nhôm Đúc Chân Không</h3>
+            </div>
+          </div>
+
+          <!-- Item 7: Gate -->
+          <div class="gallery-item" data-category="gate" data-sv-reveal data-sv-delay="7">
+            <img src="assets/images/project-mansion-gate.png" alt="Cổng đúc mạ vàng lâu đài" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Cổng Nhôm Đúc</span>
+              <h3 class="gallery-title">Cổng Biệt Thự Hoàng Gia</h3>
+            </div>
+          </div>
+
+          <!-- Item 8: Window -->
+          <div class="gallery-item" data-category="window" data-sv-reveal data-sv-delay="8">
+            <img src="assets/images/service-aluminum-doors.png" alt="Cửa nhôm Slim trượt mở quay" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Cửa Nhôm Cao Cấp</span>
+              <h3 class="gallery-title">Cửa Nhôm Cầu Cách Nhiệt Civro</h3>
+            </div>
+          </div>
+
+          <!-- Item 9: Window -->
+          <div class="gallery-item" data-category="window" data-sv-reveal data-sv-delay="9">
+            <img src="assets/images/project-dalat-villa.png" alt="Biệt thự kính đồi thông Đà Lạt" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Cửa Nhôm Cao Cấp</span>
+              <h3 class="gallery-title">Hệ Cửa Trượt Slim Góc Quay</h3>
+            </div>
+          </div>
+
+          <!-- Item 10: Facade -->
+          <div class="gallery-item" data-category="facade" data-sv-reveal data-sv-delay="10">
+            <img src="assets/images/service-glass-facades.png" alt="Thi công mặt dựng kính tòa nhà" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Mặt Dựng &amp; Vách Kính</span>
+              <h3 class="gallery-title">Mặt Dựng Kính Tòa Nhà</h3>
+            </div>
+          </div>
+
+          <!-- Item 11: Facade -->
+          <div class="gallery-item" data-category="facade" data-sv-reveal data-sv-delay="11">
+            <img src="assets/images/product-glass.png" alt="Vách kính phòng tắm mạ vàng PVD" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Mặt Dựng &amp; Vách Kính</span>
+              <h3 class="gallery-title">Cabin Tắm Kính Cường Lực</h3>
+            </div>
+          </div>
+
+          <!-- Item 12: Facade -->
+          <div class="gallery-item" data-category="facade" data-sv-reveal data-sv-delay="12">
+            <img src="assets/images/project-penthouse.png" alt="Vách thông tầng kính hộp Low-E" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Mặt Dựng &amp; Vách Kính</span>
+              <h3 class="gallery-title">Vách Kính Thông Tầng Penthouse</h3>
+            </div>
+          </div>
+
+          <!-- Item 13: Marine -->
+          <div class="gallery-item" data-category="marine" data-sv-reveal data-sv-delay="13">
+            <img src="assets/images/project-yacht.png" alt="Lan can du thuyền inox bóng gương" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Inox Du Thuyền</span>
+              <h3 class="gallery-title">Inox Marine 316 Đánh Bóng Gương</h3>
+            </div>
+          </div>
+
+          <!-- Item 14: Marine -->
+          <div class="gallery-item" data-category="marine" data-sv-reveal data-sv-delay="14">
+            <img src="assets/images/hero-yacht.png" alt="Phụ kiện inox lan can mạn du thuyền" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Inox Du Thuyền</span>
+              <h3 class="gallery-title">Chế Tác Chi Tiết Inox Hàng Hải</h3>
+            </div>
+          </div>
+
+          <!-- Item 15: Marine -->
+          <div class="gallery-item" data-category="marine" data-sv-reveal data-sv-delay="15">
+            <img src="assets/images/project-resort-yacht.png" alt="Đội tàu du lịch biển inox 316L" loading="lazy" />
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Inox Du Thuyền</span>
+              <h3 class="gallery-title">Lan Can Boong Tàu Biển</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════════
+       LIGHTBOX CONTAINER
+  ════════════════════════════════════════════ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Xem ảnh lớn">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Đóng">&times;</button>
+    <button class="lightbox-btn lightbox-btn-prev" id="lightboxPrev" aria-label="Ảnh trước"><i class="ri-arrow-left-s-line"></i></button>
+    
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+    </div>
+    
+    <button class="lightbox-btn lightbox-btn-next" id="lightboxNext" aria-label="Ảnh kế tiếp"><i class="ri-arrow-right-s-line"></i></button>
+    
+    <div class="lightbox-caption">
+      <p class="lightbox-caption-title" id="lightboxTitle"></p>
+      <p class="lightbox-caption-tag" id="lightboxTag"></p>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       SECTION 10: FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="footer-v2" role="contentinfo">
+    <div class="sv-container">
+      <div class="footer-v2-grid">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <div class="footer-logo-wrap">
+            <div class="footer-logo-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
+            </div>
+            <span class="footer-logo-name">SAO VÀNG</span>
+          </div>
+          <p class="footer-address">
+            Công Ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng<br>
+            MST: 0110808047<br>
+            171 Đi Bộ Hà Nội, Hà Nội
+          </p>
+          <div class="footer-socials" aria-label="Mạng xã hội">
+            <a href="#" class="footer-social" aria-label="Facebook Sao Vàng"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="YouTube Sao Vàng"><i class="ri-youtube-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="TikTok Sao Vàng"><i class="ri-tiktok-fill" aria-hidden="true"></i></a>
+            <a href="https://zalo.me/0869590279" class="footer-social" aria-label="Zalo Sao Vàng" target="_blank" rel="noopener"><i class="ri-message-3-fill" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Cơ Khí -->
+        <div>
+          <h4 class="footer-col-title">Cơ Khí Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="cau-thang-xoan.html"    class="footer-link">Cầu Thang Nghệ Thuật</a>
+            <a href="lan-can-kinh.html"      class="footer-link">Lan Can Ban Công</a>
+            <a href="cong-nghe-thuat.html"   class="footer-link">Cổng Nhôm Đúc</a>
+            <a href="co-khi-nghe-thuat.html" class="footer-link">Inox Du Thuyền</a>
+            <a href="linh-vuc-co-khi.html"   class="footer-link">Kết Cấu Thép</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Nhôm Kính -->
+        <div>
+          <h4 class="footer-col-title">Nhôm Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="cua-nhom-kinh.html"          class="footer-link">Cửa Nhôm Kính</a>
+            <a href="vach-kinh.html"               class="footer-link">Vách Kính Cường Lực</a>
+            <a href="linh-vuc-nhom-kinh.html"      class="footer-link">Mặt Dựng Facade</a>
+            <a href="lan-can-kinh.html"            class="footer-link">Lan Can Kính</a>
+            <a href="linh-vuc-nhom-kinh.html"      class="footer-link">Mái Kính Nhôm</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Công ty -->
+        <div>
+          <h4 class="footer-col-title">Công Ty</h4>
+          <div class="footer-links">
+            <a href="gioi-thieu.html" class="footer-link">Giới Thiệu</a>
+            <a href="du-an.html"      class="footer-link">Dự Án Thực Hiện</a>
+            <a href="san-pham.html"   class="footer-link">Sản Phẩm</a>
+            <a href="tin-tuc.html"    class="footer-link">Tin Tức</a>
+            <a href="lien-he.html"    class="footer-link">Liên Hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-fill" aria-hidden="true"></i>
+              <span>Tầng 1, 171 Đi Bộ Hà Nội, Hà Nội</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-fill" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color:inherit;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-fill" aria-hidden="true"></i>
+              <a href="mailto:info@saovang.vn" style="color:inherit;">info@saovang.vn</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-global-line" aria-hidden="true"></i>
+              <span>www.CoKhiSaoVang.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>T2–T7: 7:30–17:30</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /footer-v2-grid -->
+
+      <!-- Copyright -->
+      <div class="footer-bottom">
+        <span>© 2024 Sao Vàng. Bảo lưu mọi quyền.</span>
+        <span>Thiết kế bởi Sao Vàng Technical Division</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════
+       FLOATING BUTTONS
+  ════════════════════════════════════════════ -->
+  <div class="floating-left" aria-label="Kênh liên hệ nhanh">
+    <a href="https://zalo.me/0869590279" class="float-btn float-btn-zalo"
+       target="_blank" rel="noopener" aria-label="Chat Zalo" title="Zalo: 0869 590 279">
+      <i class="ri-message-3-fill" aria-hidden="true"></i>
+    </a>
+    <a href="tel:0869590279" class="float-btn float-btn-phone"
+       aria-label="Gọi điện 0869 590 279" title="Gọi ngay">
+      <i class="ri-phone-fill" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="floating-right">
+    <button class="float-btn float-btn-top" id="scrollTopBtn" aria-label="Cuộn lên đầu trang" title="Lên đầu trang">
+      <i class="ri-arrow-up-line" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════════════════ -->
+  <!-- navbar.js handles this -->
+  <script src="assets/js/modules/navbar.js"></script>
+  <script src="assets/js/modules/lightbox.js"></script>
+</body>
+</html>

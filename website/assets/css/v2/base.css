@@ -1,0 +1,514 @@
+/* ════════════════════════════════════════════════════════════════
+   SAO VÀNG — Base & Layout System v2.0
+   Reset + Typography + Container + Utility Classes
+   ════════════════════════════════════════════════════════════════ */
+
+
+/* ──────────────────────────────────────────────────────────────
+   1. CSS RESET (Modern — Eric Meyer + Josh Comeau inspired)
+   ────────────────────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
+  /* Tắt scroll ngang */
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--sv-font-body);
+  font-size: var(--sv-text-base);
+  color: var(--sv-text);
+  background-color: var(--sv-white);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: var(--sv-leading-relaxed);
+}
+
+/* Images */
+img, video {
+  display: block;
+  max-width: 100%;
+}
+
+img { height: auto; }
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color var(--sv-transition-fast);
+}
+
+/* Lists */
+ul, ol { list-style: none; }
+
+/* Interactive */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font: inherit;
+  transition: var(--sv-transition-base);
+}
+
+/* Form elements */
+input, select, textarea {
+  font: inherit;
+  outline: none;
+  width: 100%;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* SVG */
+svg { display: block; }
+
+
+/* ──────────────────────────────────────────────────────────────
+   2. ACCESSIBILITY
+   ────────────────────────────────────────────────────────────── */
+
+/* Skip to main content */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 9999;
+  padding: 8px 20px;
+  background: var(--sv-red-600);
+  color: var(--sv-white);
+  font-family: var(--sv-font-head);
+  font-weight: 700;
+  font-size: var(--sv-text-sm);
+  transition: top 0.2s ease;
+}
+.skip-link:focus { top: 0; }
+
+/* Focus rings */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--sv-gold-600);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   3. LAYOUT — Container System
+   ────────────────────────────────────────────────────────────── */
+
+/* Main container */
+.sv-container,
+.section-container,
+.container {
+  width: 100%;
+  max-width: var(--sv-container-max);
+  margin-inline: auto;
+  padding-inline: var(--sv-container-px);
+}
+
+/* Wider container cho full-bleed sections */
+.sv-container-wide {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
+  padding-inline: var(--sv-container-px);
+}
+
+/* Narrow container cho text-heavy content */
+.sv-container-narrow {
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: var(--sv-container-px);
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   4. SECTION WRAPPERS
+   ────────────────────────────────────────────────────────────── */
+
+/* Base section */
+.sv-section {
+  padding-block: var(--sv-section-py);
+}
+
+.sv-section-sm {
+  padding-block: var(--sv-section-py-sm);
+}
+
+.sv-section-lg {
+  padding-block: var(--sv-section-py-lg);
+}
+
+/* Background variants */
+.sv-section-white {
+  background-color: var(--sv-white);
+}
+
+.sv-section-gray {
+  background-color: var(--sv-gray-025);
+}
+
+.sv-section-dark {
+  background-color: var(--sv-dark-700);
+  color: var(--sv-white);
+}
+
+.sv-section-red {
+  background-color: var(--sv-red-600);
+  color: var(--sv-white);
+}
+
+.sv-section-gold {
+  background-color: var(--sv-gold-600);
+  color: var(--sv-white);
+}
+
+/* Legacy compat */
+.section-light {
+  background-color: var(--sv-gray-025);
+  color: var(--sv-dark-700);
+  padding-block: var(--sv-section-py);
+  border-bottom: 1px solid var(--sv-gray-100);
+}
+
+.section-dark {
+  background-color: var(--sv-dark-700);
+  color: var(--sv-white);
+  padding-block: var(--sv-section-py);
+}
+
+.section {
+  padding-block: var(--sv-section-py);
+}
+
+.bg-dark  { background-color: var(--sv-dark-700); }
+.bg-light { background-color: var(--sv-gray-025); }
+.bg-gray  { background-color: var(--sv-gray-025); }
+
+
+/* ──────────────────────────────────────────────────────────────
+   5. TYPOGRAPHY SYSTEM
+   ────────────────────────────────────────────────────────────── */
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--sv-font-head);
+  font-weight: 800;
+  line-height: var(--sv-leading-tight);
+  color: var(--sv-dark-700);
+}
+
+h1 { font-size: var(--sv-text-3xl); }
+h2 { font-size: var(--sv-text-2xl); }
+h3 { font-size: var(--sv-text-xl); }
+h4 { font-size: var(--sv-text-lg); }
+h5 { font-size: var(--sv-text-md); }
+h6 { font-size: var(--sv-text-base); }
+
+p {
+  font-size: var(--sv-text-base);
+  line-height: var(--sv-leading-relaxed);
+  color: var(--sv-text-muted);
+}
+
+
+/* Section Typography Components */
+
+/* Label tag (badge nhỏ trên section) */
+.sv-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--sv-font-head);
+  font-size: var(--sv-text-xs);
+  font-weight: 700;
+  letter-spacing: var(--sv-tracking-widest);
+  text-transform: uppercase;
+  color: var(--sv-gold-600);
+  margin-bottom: var(--sv-sp-3);
+}
+
+.sv-section-label::before {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--sv-gold-600);
+  flex-shrink: 0;
+}
+
+/* Variant với viền trái */
+.sv-section-label-bordered {
+  display: inline-block;
+  font-family: var(--sv-font-head);
+  font-size: var(--sv-text-xs);
+  font-weight: 700;
+  letter-spacing: var(--sv-tracking-widest);
+  text-transform: uppercase;
+  color: var(--sv-gold-600);
+  border-left: 3px solid var(--sv-gold-600);
+  padding-left: 12px;
+  margin-bottom: var(--sv-sp-4);
+}
+
+/* Section title */
+.sv-section-title {
+  font-family: var(--sv-font-head);
+  font-size: var(--sv-text-2xl);
+  font-weight: 800;
+  line-height: var(--sv-leading-snug);
+  color: var(--sv-dark-700);
+  margin-bottom: var(--sv-sp-4);
+  text-transform: uppercase;
+  letter-spacing: var(--sv-tracking-tight);
+}
+
+.sv-section-title .sv-gold { color: var(--sv-gold-600); }
+.sv-section-title .sv-red  { color: var(--sv-red-600);  }
+
+/* Light variant */
+.sv-section-title-light,
+.sv-section-dark .sv-section-title,
+.sv-section-red .sv-section-title {
+  color: var(--sv-white);
+}
+
+/* Section description */
+.sv-section-desc {
+  font-size: var(--sv-text-md);
+  line-height: var(--sv-leading-relaxed);
+  color: var(--sv-gray-300);
+  max-width: 640px;
+  margin-bottom: var(--sv-sp-12);
+}
+
+.sv-section-desc-center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.sv-section-dark .sv-section-desc,
+.sv-section-red .sv-section-desc {
+  color: rgba(255,255,255,0.72);
+}
+
+/* Section header group */
+.sv-section-header {
+  margin-bottom: var(--sv-sp-12);
+}
+
+.sv-section-header-center {
+  text-align: center;
+  margin-bottom: var(--sv-sp-12);
+}
+
+/* Legacy compat */
+.section-tag {
+  display: inline-block;
+  font-family: var(--sv-font-head);
+  font-size: var(--sv-text-xs);
+  font-weight: 700;
+  letter-spacing: var(--sv-tracking-widest);
+  text-transform: uppercase;
+  color: var(--sv-gold-600);
+  border-left: 3px solid var(--sv-gold-600);
+  padding-left: 12px;
+  margin-bottom: var(--sv-sp-4);
+}
+
+.section-tag.light { color: var(--sv-gold-400); border-color: var(--sv-gold-400); }
+
+.section-title {
+  font-family: var(--sv-font-head);
+  font-size: var(--sv-text-2xl);
+  font-weight: 800;
+  line-height: var(--sv-leading-snug);
+  color: var(--sv-dark-700);
+  margin-bottom: var(--sv-sp-4);
+}
+
+.section-title.light { color: var(--sv-white); }
+.section-title span.accent { color: var(--sv-gold-600); }
+
+.section-desc {
+  font-size: var(--sv-text-md);
+  font-weight: 300;
+  color: var(--sv-gray-300);
+  max-width: 640px;
+  line-height: var(--sv-leading-relaxed);
+  margin-bottom: var(--sv-sp-12);
+}
+
+.section-desc.light { color: rgba(255,255,255,0.75); }
+.section-desc.text-center { margin-inline: auto; text-align: center; }
+
+.body-text {
+  font-size: var(--sv-text-base);
+  line-height: var(--sv-leading-relaxed);
+  color: var(--sv-gray-300);
+  margin-bottom: var(--sv-sp-4);
+}
+
+.tag {
+  display: inline-block;
+  font-family: var(--sv-font-head);
+  font-size: var(--sv-text-xs);
+  font-weight: 700;
+  letter-spacing: var(--sv-tracking-widest);
+  text-transform: uppercase;
+  color: var(--sv-gold-600);
+  margin-bottom: var(--sv-sp-3);
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   6. UTILITY CLASSES
+   ────────────────────────────────────────────────────────────── */
+
+/* Colors */
+.sv-gold       { color: var(--sv-gold-600); }
+.sv-red        { color: var(--sv-red-600);  }
+.sv-white      { color: var(--sv-white);    }
+.sv-muted      { color: var(--sv-gray-300); }
+.sv-dark       { color: var(--sv-dark-700); }
+
+/* Legacy */
+.gold          { color: var(--sv-gold-600); }
+.light         { color: var(--sv-white);    }
+
+/* Background colors */
+.sv-bg-red     { background-color: var(--sv-red-600);  }
+.sv-bg-gold    { background-color: var(--sv-gold-600); }
+.sv-bg-dark    { background-color: var(--sv-dark-700); }
+.sv-bg-gray    { background-color: var(--sv-gray-025); }
+.sv-bg-white   { background-color: var(--sv-white);    }
+
+/* Text alignment */
+.text-left     { text-align: left;   }
+.text-center   { text-align: center; }
+.text-right    { text-align: right;  }
+
+/* Display */
+.d-flex        { display: flex; }
+.d-grid        { display: grid; }
+.d-block       { display: block; }
+.d-none        { display: none; }
+
+/* Flex shortcuts */
+.flex-center   { display: flex; align-items: center; justify-content: center; }
+.flex-between  { display: flex; align-items: center; justify-content: space-between; }
+.flex-start    { display: flex; align-items: center; justify-content: flex-start; }
+.flex-col      { display: flex; flex-direction: column; }
+.flex-wrap     { flex-wrap: wrap; }
+
+/* Spacing */
+.mt-auto   { margin-top: auto; }
+.mb-0      { margin-bottom: 0; }
+.full-width { width: 100%; }
+
+/* Overflow */
+.overflow-hidden { overflow: hidden; }
+.overflow-x-hidden { overflow-x: hidden; }
+
+/* Position */
+.relative { position: relative; }
+.absolute { position: absolute; }
+.fixed    { position: fixed; }
+
+/* Responsive visibility */
+.hide-mobile  { display: block; }
+.show-mobile  { display: none; }
+
+@media (max-width: 768px) {
+  .hide-mobile { display: none; }
+  .show-mobile { display: block; }
+}
+
+/* Divider */
+.sv-divider {
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--sv-gold-600);
+  margin-block: var(--sv-sp-4);
+}
+
+.sv-divider-center {
+  margin-inline: auto;
+}
+
+.sv-divider-red {
+  background: var(--sv-red-600);
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   7. GRID SYSTEM
+   ────────────────────────────────────────────────────────────── */
+
+/* Auto-fill responsive grids */
+.sv-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--sv-sp-8);
+}
+
+.sv-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sv-sp-6);
+}
+
+.sv-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--sv-sp-6);
+}
+
+/* Responsive auto grids */
+.sv-grid-auto-md {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--sv-sp-6);
+}
+
+.sv-grid-auto-sm {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--sv-sp-4);
+}
+
+/* Responsive collapse */
+@media (max-width: 768px) {
+  .sv-grid-2,
+  .sv-grid-3,
+  .sv-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .sv-grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .sv-grid-4 { grid-template-columns: repeat(2, 1fr); }
+}

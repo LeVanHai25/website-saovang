@@ -1,0 +1,445 @@
+/* ════════════════════════════════════════════════════════════════
+   SAO VÀNG — Animation Library v2.0
+   Keyframes + Utility Classes + Intersection Observer Hooks
+
+   Triết lý:
+   - Mọi animation đều có fallback cho prefers-reduced-motion
+   - Sử dụng transform + opacity (composite layers = 60fps)
+   - Không animate layout properties (width, height, margin, padding)
+   - Duration phải nhất quán: fast=150ms, base=300ms, slow=600ms
+   ════════════════════════════════════════════════════════════════ */
+
+
+/* ──────────────────────────────────────────────────────────────
+   1. CORE KEYFRAMES
+   ────────────────────────────────────────────────────────────── */
+
+/* Fade animations */
+@keyframes sv-fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes sv-fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Directional entrance animations */
+@keyframes sv-fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sv-fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sv-fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes sv-fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale animations */
+@keyframes sv-scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes sv-scaleOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+/* Hero zoom ken burns effect */
+@keyframes sv-heroZoom {
+  0%   { transform: scale(1.0); }
+  100% { transform: scale(1.08); }
+}
+
+/* Scroll bounce indicator */
+@keyframes sv-bounce {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(8px);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+/* Floating elements */
+@keyframes sv-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* Pulse/heartbeat — nút floating phone */
+@keyframes sv-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(201,162,39,0.4);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 12px rgba(201,162,39,0);
+  }
+}
+
+/* Pulse ring — effect vòng tròn lan tỏa */
+@keyframes sv-pulseRing {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  80%, 100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+/* Gold shimmer — loading state */
+@keyframes sv-shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Progress bar fill */
+@keyframes sv-progressFill {
+  from { width: 0; }
+  to   { width: var(--progress-target, 100%); }
+}
+
+/* Navbar slide down on load */
+@keyframes sv-slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Underline expand (nav links) */
+@keyframes sv-underlineExpand {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+/* Spinner */
+@keyframes sv-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Number counter odometer effect */
+@keyframes sv-countUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Gradient shift — background gradient animation */
+@keyframes sv-gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Typing cursor blink */
+@keyframes sv-blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Card hover lift */
+@keyframes sv-liftUp {
+  from { transform: translateY(0); box-shadow: var(--sv-shadow-sm); }
+  to   { transform: translateY(-8px); box-shadow: var(--sv-shadow-xl); }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   2. ANIMATION UTILITY CLASSES
+   Dùng trực tiếp trên HTML elements qua class
+   ────────────────────────────────────────────────────────────── */
+
+/* Base animation utilities */
+.sv-animate-fadeIn    { animation: sv-fadeIn    var(--sv-dur, 0.5s) var(--sv-ease-out) both; }
+.sv-animate-fadeUp    { animation: sv-fadeUp    var(--sv-dur, 0.6s) var(--sv-ease-out) both; }
+.sv-animate-fadeDown  { animation: sv-fadeDown  var(--sv-dur, 0.6s) var(--sv-ease-out) both; }
+.sv-animate-fadeLeft  { animation: sv-fadeLeft  var(--sv-dur, 0.6s) var(--sv-ease-out) both; }
+.sv-animate-fadeRight { animation: sv-fadeRight var(--sv-dur, 0.6s) var(--sv-ease-out) both; }
+.sv-animate-scaleIn   { animation: sv-scaleIn   var(--sv-dur, 0.4s) var(--sv-ease-spring) both; }
+.sv-animate-float     { animation: sv-float     3s ease-in-out infinite; }
+.sv-animate-pulse     { animation: sv-pulse     2s ease-in-out infinite; }
+.sv-animate-bounce    { animation: sv-bounce    1.5s infinite; }
+.sv-animate-spin      { animation: sv-spin      1s linear infinite; }
+
+/* Duration modifiers */
+.sv-dur-fast   { --sv-dur: 0.2s; }
+.sv-dur-base   { --sv-dur: 0.4s; }
+.sv-dur-slow   { --sv-dur: 0.8s; }
+.sv-dur-slower { --sv-dur: 1.2s; }
+
+/* Delay utilities */
+.sv-delay-0   { animation-delay: 0s; }
+.sv-delay-1   { animation-delay: 0.1s; }
+.sv-delay-2   { animation-delay: 0.2s; }
+.sv-delay-3   { animation-delay: 0.3s; }
+.sv-delay-4   { animation-delay: 0.4s; }
+.sv-delay-5   { animation-delay: 0.5s; }
+.sv-delay-6   { animation-delay: 0.6s; }
+.sv-delay-7   { animation-delay: 0.7s; }
+.sv-delay-8   { animation-delay: 0.8s; }
+.sv-delay-10  { animation-delay: 1.0s; }
+.sv-delay-12  { animation-delay: 1.2s; }
+
+
+/* ──────────────────────────────────────────────────────────────
+   3. SCROLL REVEAL SYSTEM (IntersectionObserver-driven)
+   JS sẽ thêm class `.sv-revealed` khi element vào viewport
+   ────────────────────────────────────────────────────────────── */
+
+/* Default state: ẩn, dịch xuống */
+[data-sv-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity  0.7s var(--sv-ease-out),
+    transform 0.7s var(--sv-ease-out);
+}
+
+/* Variant: slide từ trái */
+[data-sv-reveal="left"] {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+/* Variant: slide từ phải */
+[data-sv-reveal="right"] {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+/* Variant: scale in */
+[data-sv-reveal="scale"] {
+  opacity: 0;
+  transform: scale(0.92);
+}
+
+/* Variant: không dịch chuyển, chỉ fade */
+[data-sv-reveal="fade"] {
+  opacity: 0;
+  transform: none;
+}
+
+/* Revealed state (tất cả variants) */
+[data-sv-reveal].sv-revealed {
+  opacity: 1;
+  transform: translateY(0) translateX(0) scale(1);
+}
+
+/* Stagger delays — tự động tạo hiệu ứng cascade */
+[data-sv-reveal][data-sv-delay="1"]  { transition-delay: 0.1s; }
+[data-sv-reveal][data-sv-delay="2"]  { transition-delay: 0.2s; }
+[data-sv-reveal][data-sv-delay="3"]  { transition-delay: 0.3s; }
+[data-sv-reveal][data-sv-delay="4"]  { transition-delay: 0.4s; }
+[data-sv-reveal][data-sv-delay="5"]  { transition-delay: 0.5s; }
+[data-sv-reveal][data-sv-delay="6"]  { transition-delay: 0.6s; }
+[data-sv-reveal][data-sv-delay="7"]  { transition-delay: 0.7s; }
+[data-sv-reveal][data-sv-delay="8"]  { transition-delay: 0.8s; }
+
+/* Legacy compat — hỗ trợ data-reveal cũ */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity  0.8s var(--sv-ease-out),
+    transform 0.8s var(--sv-ease-out);
+}
+[data-reveal].revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+[data-reveal-delay="1"] { transition-delay: 0.1s; }
+[data-reveal-delay="2"] { transition-delay: 0.2s; }
+[data-reveal-delay="3"] { transition-delay: 0.3s; }
+[data-reveal-delay="4"] { transition-delay: 0.4s; }
+[data-reveal-delay="5"] { transition-delay: 0.5s; }
+[data-reveal-delay="6"] { transition-delay: 0.6s; }
+
+
+/* ──────────────────────────────────────────────────────────────
+   4. TRANSITION UTILITY CLASSES
+   ────────────────────────────────────────────────────────────── */
+
+.sv-transition         { transition: var(--sv-transition-base); }
+.sv-transition-fast    { transition: var(--sv-transition-fast); }
+.sv-transition-slow    { transition: var(--sv-transition-slow); }
+.sv-transition-spring  { transition: var(--sv-transition-spring); }
+.sv-transition-none    { transition: none !important; }
+
+/* Common hover patterns */
+.sv-hover-lift {
+  transition: transform var(--sv-transition-base),
+              box-shadow var(--sv-transition-base);
+}
+.sv-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sv-shadow-lg);
+}
+
+.sv-hover-lift-sm:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--sv-shadow-md);
+}
+
+.sv-hover-lift-lg:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--sv-shadow-2xl);
+}
+
+.sv-hover-scale {
+  transition: transform var(--sv-transition-base);
+}
+.sv-hover-scale:hover { transform: scale(1.03); }
+
+.sv-hover-opacity {
+  transition: opacity var(--sv-transition-base);
+}
+.sv-hover-opacity:hover { opacity: 0.85; }
+
+.sv-hover-gold:hover { color: var(--sv-gold-600) !important; }
+.sv-hover-red:hover  { color: var(--sv-red-600) !important; }
+
+
+/* ──────────────────────────────────────────────────────────────
+   5. LOADING & SKELETON
+   ────────────────────────────────────────────────────────────── */
+
+/* Page preloader */
+.sv-preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--sv-dark-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.sv-preloader.sv-loaded {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.sv-preloader-logo {
+  width: 64px;
+  height: 64px;
+  border: 3px solid rgba(201,162,39,0.2);
+  border-top-color: var(--sv-gold-600);
+  border-radius: 50%;
+  animation: sv-spin 0.8s linear infinite;
+}
+
+/* Shimmer skeleton */
+.sv-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--sv-gray-100) 25%,
+    var(--sv-gray-050) 50%,
+    var(--sv-gray-100) 75%
+  );
+  background-size: 200% 100%;
+  animation: sv-shimmer 1.5s infinite;
+  border-radius: var(--sv-radius-sm);
+}
+
+/* Spinner */
+.sv-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: var(--sv-white);
+  border-radius: 50%;
+  animation: sv-spin 0.6s linear infinite;
+  display: inline-block;
+}
+.sv-spinner-gold {
+  border-color: rgba(201,162,39,0.3);
+  border-top-color: var(--sv-gold-600);
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   6. REDUCED MOTION — Accessibility
+   Tắt toàn bộ animation cho người dùng có nhu cầu đặc biệt
+   ────────────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-sv-reveal],
+  [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .sv-preloader { display: none !important; }
+}

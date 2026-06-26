@@ -2,6 +2,22 @@
    SAO VÀNG — Filter Bar & Category Buttons
    ════════════════════════════════════════════════════════════════ */
 
+.filter-section {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  padding: clamp(12px, 2vw, 16px) 0;
+  position: sticky;
+  top: 64px;
+  z-index: 90;
+}
+
+.filter-section .container {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 20px);
+  flex-wrap: wrap;
+}
+
 .filter-bar {
   display: flex;
   align-items: center;

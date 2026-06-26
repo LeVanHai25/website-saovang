@@ -1,0 +1,20 @@
+/* ════════════════════════════════════════════════════════════════
+   SAO VÀNG — Design System v2.0  |  Entry Point
+   
+   Load order (quan trọng - KHÔNG thay đổi):
+   1. tokens.css     — Custom Properties (phải load TRƯỚC TIÊN)
+   2. base.css       — Reset + Layout + Typography + Utilities
+   3. animations.css — Keyframes + Scroll Reveal + Transitions
+   4. components.css — UI Components (Button, Card, Form, Slider...)
+   
+   Sử dụng:
+   <link rel="stylesheet" href="assets/css/v2/index.css">
+   
+   Kiến trúc: File này thay thế assets/css/core/tokens.css
+   Tất cả file CSS cũ (shared/*.css) vẫn hoạt động nhờ alias tokens
+   ════════════════════════════════════════════════════════════════ */
+
+@import url('./tokens.css');
+@import url('./base.css');
+@import url('./animations.css');
+@import url('./components.css');

@@ -1,0 +1,275 @@
+/* ════════════════════════════════════════════════════════════════
+   SAO VÀNG — Design Token System v2.0
+   Clone target: readdy.cc/preview/4450340e.../11341392
+   
+   Kiến trúc: Single Source of Truth cho toàn bộ Design System
+   Tất cả giá trị visual đều định nghĩa tại đây, KHÔNG hardcode
+   ════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Pacifico&display=swap');
+
+:root {
+
+  /* ── 1. BRAND COLOR PALETTE ──────────────────────────────────── */
+  /*
+   * Màu đỏ đậm — chủ đạo navbar, footer, nút CTA Nhôm
+   * Lấy từ screenshot: #9B1C1C (đỏ tối chính)
+   */
+  --sv-red-900:         #5C0A0A;  /* Tối nhất — hover trạng thái deep */
+  --sv-red-800:         #7B1212;  /* Đỏ tối — footer background */
+  --sv-red-700:         #8B1515;  /* Đỏ đậm — navbar primary */
+  --sv-red-600:         #9B1C1C;  /* Đỏ brand chính ← MAIN */
+  --sv-red-500:         #B52020;  /* Đỏ trung — hover btn */
+  --sv-red-400:         #C83232;  /* Đỏ sáng — accents */
+  --sv-red-100:         rgba(155,28,28,0.08);  /* Tint nhạt — backgrounds */
+
+  /*
+   * Màu vàng gold — CTA chính, highlights, số liệu, accents
+   * Lấy từ screenshot: #C9A227 (vàng gold đặc trưng)
+   */
+  --sv-gold-900:        #7A5E10;  /* Vàng tối nhất */
+  --sv-gold-800:        #9A7818;  /* Vàng tối — hover states */
+  --sv-gold-700:        #B38F1C;  /* Vàng đậm */
+  --sv-gold-600:        #C9A227;  /* Vàng gold chính ← MAIN */
+  --sv-gold-500:        #D9B53A;  /* Vàng trung */
+  --sv-gold-400:        #E8C84F;  /* Vàng sáng — light accents */
+  --sv-gold-300:        #F2D87A;  /* Vàng nhạt */
+  --sv-gold-100:        rgba(201,162,39,0.10);  /* Tint — icon backgrounds */
+  --sv-gold-glow:       rgba(201,162,39,0.30);  /* Glow — box-shadows */
+
+  /* Neutral / Grayscale */
+  --sv-black:           #000000;
+  --sv-dark-950:        #080808;
+  --sv-dark-900:        #0A0A0A;  /* Nền Hero section */
+  --sv-dark-800:        #111111;  /* Overlay Hero */
+  --sv-dark-700:        #1A1A1A;  /* Text rất tối */
+  --sv-dark-600:        #222222;  /* Text tối */
+  --sv-dark-500:        #333333;
+  --sv-gray-400:        #555555;
+  --sv-gray-300:        #777777;  /* Text phụ */
+  --sv-gray-200:        #AAAAAA;  /* Placeholder */
+  --sv-gray-100:        #DDDDDD;  /* Border nhạt */
+  --sv-gray-050:        #F0F0F0;  /* Background nhạt */
+  --sv-gray-025:        #F7F7F7;  /* Background rất nhạt */
+  --sv-white:           #FFFFFF;
+
+  /* Semantic Color Aliases */
+  --sv-primary:         var(--sv-red-600);
+  --sv-primary-dark:    var(--sv-red-700);
+  --sv-primary-hover:   var(--sv-red-500);
+  --sv-accent:          var(--sv-gold-600);
+  --sv-accent-dark:     var(--sv-gold-800);
+  --sv-accent-hover:    var(--sv-gold-500);
+  --sv-surface:         var(--sv-white);
+  --sv-surface-gray:    var(--sv-gray-025);
+  --sv-hero-bg:         var(--sv-dark-900);
+  --sv-footer-bg:       var(--sv-red-800);
+  --sv-text:            var(--sv-dark-700);
+  --sv-text-muted:      var(--sv-gray-300);
+  --sv-text-light:      var(--sv-white);
+  --sv-border:          var(--sv-gray-100);
+  --sv-border-gold:     rgba(201,162,39,0.35);
+
+  /* ── 2. TYPOGRAPHY ───────────────────────────────────────────── */
+  --sv-font-head:       'Montserrat', 'Arial', sans-serif;
+  --sv-font-body:       'Inter', 'Arial', sans-serif;
+  --sv-font-brand:      'Pacifico', cursive;  /* Dùng cho logo accent */
+
+  /*
+   * Fluid Type Scale — clamp(min, preferred, max)
+   * min: mobile, max: desktop
+   */
+  --sv-text-2xs:    clamp(0.625rem,  0.58rem + 0.12vw, 0.75rem);   /* 10–12px */
+  --sv-text-xs:     clamp(0.6875rem, 0.65rem + 0.12vw, 0.8125rem); /* 11–13px */
+  --sv-text-sm:     clamp(0.75rem,   0.72rem + 0.15vw, 0.875rem);  /* 12–14px */
+  --sv-text-base:   clamp(0.875rem,  0.85rem + 0.15vw, 1rem);      /* 14–16px */
+  --sv-text-md:     clamp(1rem,      0.95rem + 0.25vw, 1.125rem);  /* 16–18px */
+  --sv-text-lg:     clamp(1.125rem,  1rem + 0.5vw,     1.375rem);  /* 18–22px */
+  --sv-text-xl:     clamp(1.375rem,  1.1rem + 1.0vw,   1.875rem);  /* 22–30px */
+  --sv-text-2xl:    clamp(1.75rem,   1.3rem + 1.8vw,   2.5rem);    /* 28–40px */
+  --sv-text-3xl:    clamp(2rem,      1.5rem + 2.5vw,   3.25rem);   /* 32–52px */
+  --sv-text-hero:   clamp(2.5rem,    1.8rem + 5vw,     5.5rem);    /* 40–88px */
+
+  /* Line heights */
+  --sv-leading-tight:   1.1;
+  --sv-leading-snug:    1.25;
+  --sv-leading-normal:  1.5;
+  --sv-leading-relaxed: 1.7;
+  --sv-leading-loose:   1.9;
+
+  /* Letter spacing */
+  --sv-tracking-tighter: -0.03em;
+  --sv-tracking-tight:   -0.01em;
+  --sv-tracking-normal:   0em;
+  --sv-tracking-wide:     0.05em;
+  --sv-tracking-wider:    0.1em;
+  --sv-tracking-widest:   0.2em;
+
+  /* ── 3. SPACING SCALE ────────────────────────────────────────── */
+  /* Base unit: 4px */
+  --sv-sp-1:    4px;
+  --sv-sp-2:    8px;
+  --sv-sp-3:    12px;
+  --sv-sp-4:    16px;
+  --sv-sp-5:    20px;
+  --sv-sp-6:    24px;
+  --sv-sp-7:    28px;
+  --sv-sp-8:    32px;
+  --sv-sp-10:   40px;
+  --sv-sp-12:   48px;
+  --sv-sp-14:   56px;
+  --sv-sp-16:   64px;
+  --sv-sp-20:   80px;
+  --sv-sp-24:   96px;
+  --sv-sp-32:   128px;
+  --sv-sp-40:   160px;
+
+  /* Section vertical padding */
+  --sv-section-py:      clamp(60px, 8vw, 96px);
+  --sv-section-py-sm:   clamp(40px, 5vw, 64px);
+  --sv-section-py-lg:   clamp(80px, 10vw, 120px);
+
+  /* ── 4. LAYOUT ───────────────────────────────────────────────── */
+  --sv-container-max:   1280px;
+  --sv-container-px:    clamp(16px, 3vw, 32px);
+  --sv-navbar-h:        72px;
+  --sv-navbar-h-sm:     60px;  /* Thu nhỏ khi scroll */
+
+  /* ── 5. BORDER RADIUS ────────────────────────────────────────── */
+  --sv-radius-xs:       2px;
+  --sv-radius-sm:       4px;
+  --sv-radius-md:       8px;
+  --sv-radius-lg:       16px;
+  --sv-radius-xl:       24px;
+  --sv-radius-2xl:      32px;
+  --sv-radius-full:     9999px;
+  --sv-radius-card:     6px;   /* Radius chuẩn cho cards */
+  --sv-radius-btn:      4px;   /* Radius chuẩn cho buttons */
+
+  /* ── 6. SHADOWS ──────────────────────────────────────────────── */
+  --sv-shadow-xs:   0 1px 4px  rgba(0,0,0,0.06);
+  --sv-shadow-sm:   0 2px 10px rgba(0,0,0,0.08);
+  --sv-shadow-md:   0 4px 20px rgba(0,0,0,0.12);
+  --sv-shadow-lg:   0 8px 32px rgba(0,0,0,0.18);
+  --sv-shadow-xl:   0 16px 48px rgba(0,0,0,0.24);
+  --sv-shadow-2xl:  0 24px 64px rgba(0,0,0,0.32);
+
+  /* Colored shadows */
+  --sv-shadow-red:  0 4px 20px rgba(155,28,28,0.30);
+  --sv-shadow-gold: 0 4px 20px rgba(201,162,39,0.30);
+  --sv-shadow-gold-lg: 0 8px 32px rgba(201,162,39,0.25);
+
+  /* Navbar shadow */
+  --sv-shadow-nav:  0 2px 16px rgba(0,0,0,0.25);
+
+  /* ── 7. TRANSITIONS & ANIMATIONS ────────────────────────────── */
+  --sv-ease-out:    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --sv-ease-in:     cubic-bezier(0.55, 0.06, 0.68, 0.19);
+  --sv-ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --sv-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  --sv-transition-fast:   0.15s var(--sv-ease-out);
+  --sv-transition-base:   0.3s  var(--sv-ease-out);
+  --sv-transition-slow:   0.5s  var(--sv-ease-out);
+  --sv-transition-spring: 0.5s  var(--sv-ease-spring);
+
+  /* ── 8. Z-INDEX SCALE ────────────────────────────────────────── */
+  --sv-z-below:     -1;
+  --sv-z-base:       0;
+  --sv-z-raised:     10;
+  --sv-z-dropdown:   100;
+  --sv-z-sticky:     200;
+  --sv-z-overlay:    500;
+  --sv-z-navbar:     900;
+  --sv-z-modal:      1000;
+  --sv-z-toast:      1100;
+  --sv-z-tooltip:    1200;
+
+  /* ── 9. BREAKPOINTS (dùng trong JS, docs) ────────────────────── */
+  /* xs: 380px | sm: 600px | md: 900px | lg: 1024px | xl: 1280px */
+
+  /* ── 10. BACKWARD COMPATIBILITY ─────────────────────────────── */
+  /*
+   * Alias toàn bộ token v1 → token v2
+   * Đảm bảo các file CSS cũ không bị vỡ khi chuyển sang v2
+   */
+  --red:              var(--sv-red-600);
+  --red-dark:         var(--sv-red-700);
+  --red-light:        var(--sv-red-500);
+  --red-brand:        var(--sv-red-600);
+  --red-hover:        var(--sv-red-500);
+  --gold:             var(--sv-gold-600);
+  --gold-light:       var(--sv-gold-400);
+  --gold-dark:        var(--sv-gold-800);
+  --gold-metallic:    var(--sv-gold-600);
+  --gold-metallic-hover: var(--sv-gold-800);
+  --gold-a11y:        var(--sv-gold-800);
+  --white:            var(--sv-white);
+  --black:            var(--sv-dark-900);
+  --dark:             var(--sv-dark-700);
+  --dark-2:           var(--sv-dark-800);
+  --dark-3:           var(--sv-dark-600);
+  --dark-industrial:  var(--sv-dark-700);
+  --dark-panel:       var(--sv-dark-800);
+  --gray-light:       var(--sv-gray-025);
+  --gray-mid:         var(--sv-gray-100);
+  --gray-text:        var(--sv-gray-300);
+  --gray-100:         var(--sv-gray-025);
+  --gray-200:         var(--sv-gray-100);
+  --gray-300:         var(--sv-gray-200);
+  --gray-400:         var(--sv-gray-300);
+  --gray-500:         var(--sv-gray-300);
+  --gray-600:         var(--sv-gray-400);
+  --gray-700:         var(--sv-dark-500);
+  --gray-800:         var(--sv-dark-600);
+  --gray-900:         var(--sv-dark-700);
+  --light-zinc:       var(--sv-gray-025);
+  --text:             var(--sv-text);
+  --font-head:        var(--sv-font-head);
+  --font-body:        var(--sv-font-body);
+  --ff-header:        var(--sv-font-head);
+  --ff-body:          var(--sv-font-body);
+  --ff-head:          var(--sv-font-head);
+  --header-h:         var(--sv-navbar-h);
+  --header-scrolled-h: var(--sv-navbar-h-sm);
+  --transition:           var(--sv-transition-base);
+  --transition-smooth:    var(--sv-transition-base);
+  --transition-spring:    var(--sv-transition-spring);
+  --shadow:               var(--sv-shadow-md);
+  --shadow-lg:            var(--sv-shadow-xl);
+  --radius-sm:            var(--sv-radius-sm);
+  --radius-md:            var(--sv-radius-md);
+  --radius-lg:            var(--sv-radius-lg);
+
+  /* Legacy spacing aliases */
+  --space-1:  var(--sv-sp-1);
+  --space-2:  var(--sv-sp-2);
+  --space-3:  var(--sv-sp-3);
+  --space-4:  var(--sv-sp-4);
+  --space-6:  var(--sv-sp-6);
+  --space-8:  var(--sv-sp-8);
+  --space-12: var(--sv-sp-12);
+  --space-16: var(--sv-sp-16);
+  --space-24: var(--sv-sp-24);
+  --space-32: var(--sv-sp-32);
+  --sp-1: var(--sv-sp-1);
+  --sp-2: var(--sv-sp-2);
+  --sp-3: var(--sv-sp-3);
+  --sp-4: var(--sv-sp-4);
+  --sp-5: var(--sv-sp-5);
+  --sp-6: var(--sv-sp-6);
+  --sp-7: var(--sv-sp-8);
+  --sp-8: var(--sv-sp-12);
+
+  /* Legacy text scale aliases */
+  --text-xs:    var(--sv-text-xs);
+  --text-sm:    var(--sv-text-sm);
+  --text-md:    var(--sv-text-base);
+  --text-lg:    var(--sv-text-md);
+  --text-xl:    var(--sv-text-lg);
+  --text-xxl:   var(--sv-text-2xl);
+  --text-hero:  var(--sv-text-hero);
+
+  /* Legacy safe-area */
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
