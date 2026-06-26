@@ -86,6 +86,30 @@
       margin-inline: auto;
       font-weight: 300;
     }
+    .page-hero.nhom-hero {
+      height: 40vw;
+      min-height: 280px;
+      max-height: 540px;
+      padding-top: 0;
+    }
+    .page-hero.nhom-hero .page-hero-bg img {
+      filter: none;
+      transform: none;
+      animation: none;
+      object-fit: cover;
+    }
+    @media (max-width: 768px) {
+      .page-hero.nhom-hero {
+        height: 45vw;
+        min-height: 220px;
+      }
+    }
+    @media (max-width: 480px) {
+      .page-hero.nhom-hero {
+        height: 50vw;
+        min-height: 160px;
+      }
+    }
 
     /* Sub Navigation */
     .brand-intro {
@@ -341,11 +365,11 @@
     <!-- ════════════════════════════════════════════
          SECTION 2: PAGE HERO
     ════════════════════════════════════════════ -->
-    <section class="page-hero" aria-label="Nhôm Sao Vàng Hero Banner">
+    <section class="page-hero nhom-hero" aria-label="Nhôm Sao Vàng Hero Banner">
       <div class="page-hero-bg" aria-hidden="true">
-        <img src="assets/images/service-aluminum-doors.png" alt="Showroom cửa nhôm kính cao cấp Sao Vàng" />
+        <img src="assets/images/banner-nhom.png" alt="SV ALUMINIUM — Nhôm Sao Vàng — Door & Window" />
       </div>
-      <div class="page-hero-content">
+      <div class="page-hero-content sr-only" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">
         <span class="page-hero-tag">Thương Hiệu Thành Viên</span>
         <h1 class="page-hero-title">NHÔM SAO VÀNG</h1>
         <p class="page-hero-desc">Giải pháp hệ cửa nhôm Slim, nhôm cầu cách nhiệt và vách mặt dựng Facade Unitized khổ lớn thông minh cho kiến trúc hiện đại.</p>
