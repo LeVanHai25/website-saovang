@@ -9,30 +9,17 @@ const dbPath = path.join(__dirname, 'cms/database/db.sqlite');
 
 async function run() {
   if (!fs.existsSync(dbPath)) {
-    console.log('🗃️ Database not found. Seeding database first...');
-    // run seed.js
-    const seedProcess = spawn('node', ['cms/database/seed.js'], { stdio: 'inherit', shell: true });
+    console.log('🗃️ Database not found. Seeding database with Readdy.cc aligned data...');
+    // run seed-readdy.js
+    const seedProcess = spawn('node', ['cms/database/seed-readdy.js'], { stdio: 'inherit', shell: true });
     
     await new Promise((resolve, reject) => {
       seedProcess.on('close', (code) => {
         if (code === 0) {
-          console.log('✅ Base seeding completed.');
+          console.log('✅ Database seeding completed successfully.');
           resolve();
         } else {
-          reject(new Error(`Base seeding failed with exit code: ${code}`));
-        }
-      });
-    });
-
-    console.log('🗃️ Upgrading database with 15 premium projects...');
-    const upgradeProcess = spawn('node', ['cms/database/reset-db-content.js'], { stdio: 'inherit', shell: true });
-    await new Promise((resolve, reject) => {
-      upgradeProcess.on('close', (code) => {
-        if (code === 0) {
-          console.log('✅ Premium projects seeded successfully.');
-          resolve();
-        } else {
-          reject(new Error(`Premium seeding failed with exit code: ${code}`));
+          reject(new Error(`Database seeding failed with exit code: ${code}`));
         }
       });
     });

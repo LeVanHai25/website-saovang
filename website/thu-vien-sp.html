@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#9B1C1C" />
-  <title>Thư Viện Sản Phẩm &amp; Công Trình | SAO VÀNG</title>
-  <meta name="description" content="Thư viện hình ảnh sản phẩm cơ khí CNC chính xác, cửa nhôm kính cao cấp, cổng đúc, lan can kính và công trình thực tế của Sao Vàng." />
-  <meta name="keywords" content="thư viện ảnh sao vàng, hình ảnh cửa nhôm kính, hình ảnh cổng đúc, hình ảnh cơ khí" />
-  <meta property="og:title" content="Thư Viện Sản Phẩm &amp; Công Trình | SAO VÀNG" />
-  <meta property="og:description" content="Hình ảnh sản phẩm cơ khí chính xác CNC, cửa nhôm kính cao cấp, cổng đúc, lan can và công trình thực tế." />
+  <title>Thư Viện Kỹ Thuật &amp; Hệ Sản Phẩm | SAO VÀNG</title>
+  <meta name="description" content="Tra cứu thông số kỹ thuật nhôm Xingfa, PMI, JMA, Topal, Hyundai, thương hiệu phụ kiện, độ dày, màu sắc và bảng so sánh các hệ nhôm kính cao cấp của Sao Vàng." />
+  <meta name="keywords" content="thông số cửa nhôm, kỹ thuật nhôm kính, nhôm xingfa, nhôm pmi, nhôm jma, phụ kiện cửa nhôm, so sánh nhôm kính" />
+  <meta property="og:title" content="Thư Viện Kỹ Thuật &amp; Hệ Sản Phẩm | SAO VÀNG" />
+  <meta property="og:description" content="Tra cứu thông số kỹ thuật, thương hiệu phụ kiện, độ dày màu sắc và bảng so sánh các hệ nhôm kính cao cấp." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.CoKhiSaoVang.com/thu-vien-sp.html" />
   <meta property="og:image" content="assets/images/project-dalat-villa.png" />
@@ -27,11 +27,11 @@
 
   <!-- Page-specific styles -->
   <style>
-    /* Page Hero (50vh) */
+    /* Page Hero (Compact Premium) */
     .page-hero {
       position: relative;
-      height: 45vh;
-      min-height: 320px;
+      height: 38vh;
+      min-height: 280px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -50,7 +50,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(0.25);
+      filter: brightness(0.2);
     }
     .page-hero-content {
       position: relative;
@@ -60,188 +60,420 @@
     }
     .page-hero-title {
       font-family: var(--sv-font-head);
-      font-size: var(--sv-fs-2xl);
+      font-size: clamp(24px, 4vw, 38px);
       font-weight: 900;
       letter-spacing: -0.01em;
       margin-bottom: var(--sv-sp-2);
+      text-transform: uppercase;
     }
     .page-hero-desc {
       font-size: var(--sv-fs-sm);
-      color: rgba(255,255,255,0.7);
-      max-width: 500px;
+      color: rgba(255,255,255,0.75);
+      max-width: 600px;
       margin-inline: auto;
       font-weight: 300;
+      line-height: 1.6;
     }
 
-    /* Gallery Section */
-    .gallery-section {
-      padding-block: var(--sv-section-py);
-      background: var(--sv-white);
+    /* Stats bar */
+    .catalog-stats-sec {
+      background: var(--sv-gray-100);
+      padding-block: var(--sv-sp-10);
+      border-bottom: 1px solid var(--sv-gray-200);
     }
-    .gallery-grid {
+    .catalog-stats-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: var(--sv-sp-4);
-      margin-top: var(--sv-sp-8);
     }
-    @media (max-width: 1200px) {
-      .gallery-grid {
+    @media (max-width: 992px) {
+      .catalog-stats-grid {
         grid-template-columns: repeat(3, 1fr);
       }
     }
-    @media (max-width: 768px) {
-      .gallery-grid {
+    @media (max-width: 576px) {
+      .catalog-stats-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
-    @media (max-width: 480px) {
-      .gallery-grid {
+    .cstat-card {
+      background: var(--sv-white);
+      border: 1px solid var(--sv-gray-200);
+      border-radius: var(--sv-radius-md);
+      padding: var(--sv-sp-5) var(--sv-sp-4);
+      text-align: center;
+      box-shadow: var(--sv-shadow-sm);
+      transition: var(--sv-transition);
+    }
+    .cstat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--sv-shadow-md);
+      border-color: var(--sv-gold-500);
+    }
+    .cstat-num {
+      font-family: var(--sv-font-head);
+      font-size: var(--sv-fs-2xl);
+      font-weight: 900;
+      color: var(--sv-red-700);
+      line-height: 1.1;
+      margin-bottom: var(--sv-sp-2);
+      display: block;
+    }
+    .cstat-lbl {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--sv-dark-700);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Sticky Quick Jump Nav */
+    .quick-jump-bar {
+      position: sticky;
+      top: var(--sv-navbar-h);
+      z-index: 100;
+      background: var(--sv-white);
+      border-bottom: 1px solid var(--sv-gray-200);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+    .quick-jump-inner {
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none; /* Firefox */
+      padding-block: var(--sv-sp-3);
+    }
+    .quick-jump-inner::-webkit-scrollbar {
+      display: none; /* Safari/Chrome */
+    }
+    .quick-jump-link {
+      color: var(--sv-dark-700);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      padding: var(--sv-sp-2) var(--sv-sp-4);
+      border-radius: var(--sv-radius-sm);
+      margin-inline: var(--sv-sp-1);
+      transition: var(--sv-transition);
+    }
+    .quick-jump-link:hover, .quick-jump-link.active {
+      background: rgba(139, 0, 0, 0.06);
+      color: var(--sv-red-700);
+    }
+
+    /* Catalog Sections */
+    .catalog-sec {
+      padding-block: var(--sv-section-py);
+      border-bottom: 1px solid var(--sv-gray-200);
+    }
+    .catalog-sec:nth-child(even) {
+      background: #faf9f8;
+    }
+    .catalog-sec-title {
+      text-align: center;
+      margin-bottom: var(--sv-sp-8);
+    }
+
+    /* Systems Switcher Interactivity */
+    .systems-switcher {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: var(--sv-sp-8);
+    }
+    .sys-tab-btn {
+      background: var(--sv-white);
+      border: 1px solid var(--sv-gray-300);
+      border-radius: var(--sv-radius-md);
+      padding: var(--sv-sp-3) var(--sv-sp-6);
+      font-family: var(--sv-font-head);
+      font-weight: 700;
+      color: var(--sv-dark-700);
+      cursor: pointer;
+      box-shadow: var(--sv-shadow-sm);
+      transition: var(--sv-transition);
+    }
+    .sys-tab-btn:hover {
+      border-color: var(--sv-red-500);
+      color: var(--sv-red-700);
+    }
+    .sys-tab-btn.active {
+      background: var(--sv-red-700);
+      border-color: var(--sv-red-700);
+      color: var(--sv-white);
+    }
+
+    /* System Spec Cards Grid */
+    .specs-display {
+      position: relative;
+      min-height: 250px;
+    }
+    .specs-panel {
+      display: none;
+      animation: fadeIn 0.4s ease forwards;
+    }
+    .specs-panel.active {
+      display: block;
+    }
+    .specs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sv-sp-5);
+    }
+    @media (max-width: 992px) {
+      .specs-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 576px) {
+      .specs-grid {
         grid-template-columns: 1fr;
       }
     }
-
-    .gallery-item {
-      position: relative;
-      aspect-ratio: 4/3;
+    .spec-card {
+      background: var(--sv-white);
+      border: 1px solid var(--sv-gray-200);
       border-radius: var(--sv-radius-md);
-      overflow: hidden;
+      padding: var(--sv-sp-5);
       box-shadow: var(--sv-shadow-sm);
-      cursor: pointer;
-      background: var(--sv-dark-900);
       transition: var(--sv-transition);
     }
-    .gallery-item img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    .spec-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--sv-gold-500);
+      box-shadow: var(--sv-shadow-md);
     }
-    .gallery-item:hover img {
-      transform: scale(1.08);
-      filter: brightness(0.75);
+    .spec-card-icon {
+      font-size: 24px;
+      color: var(--sv-gold-600);
+      margin-bottom: var(--sv-sp-3);
     }
-    .gallery-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 60%, transparent 100%);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: var(--sv-sp-4);
-    }
-    .gallery-item:hover .gallery-overlay {
-      opacity: 1;
-    }
-    .gallery-title {
+    .spec-card-title {
       font-family: var(--sv-font-head);
-      color: var(--sv-white);
       font-size: var(--sv-fs-sm);
       font-weight: 700;
-      margin-bottom: 2px;
-    }
-    .gallery-tag {
-      font-size: 10px;
-      font-weight: 700;
-      color: var(--sv-gold-600);
+      color: var(--sv-dark-900);
+      margin-bottom: var(--sv-sp-2);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.02em;
+    }
+    .spec-card-val {
+      font-size: 13.5px;
+      color: var(--sv-gray-text);
+      line-height: 1.6;
     }
 
-    /* Lightbox Modal */
-    .lightbox {
-      position: fixed;
-      inset: 0;
-      z-index: 1000;
-      background: rgba(0, 0, 0, 0.95);
+    /* Accessory Brands Grid */
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--sv-sp-4);
+    }
+    @media (max-width: 992px) {
+      .brands-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 576px) {
+      .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .brand-card {
+      background: var(--sv-white);
+      border: 1px solid var(--sv-gray-200);
+      border-radius: var(--sv-radius-md);
+      padding: var(--sv-sp-5);
+      text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-    }
-    .lightbox.open {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .lightbox-content {
-      position: relative;
-      max-width: 90%;
-      max-height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .lightbox-img {
-      max-width: 100%;
-      max-height: 80vh;
-      object-fit: contain;
-      border-radius: var(--sv-radius-sm);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-    }
-    .lightbox-close {
-      position: absolute;
-      top: 24px;
-      right: 24px;
-      background: none;
-      border: none;
-      color: var(--sv-white);
-      font-size: 32px;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-    .lightbox-close:hover {
-      transform: scale(1.1);
-    }
-    .lightbox-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255,255,255,0.05);
-      border: none;
-      color: var(--sv-white);
-      font-size: 30px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      box-shadow: var(--sv-shadow-sm);
       transition: var(--sv-transition);
     }
-    .lightbox-btn:hover {
-      background: rgba(255,255,255,0.15);
+    .brand-card:hover {
+      border-color: var(--sv-red-500);
+      box-shadow: var(--sv-shadow-md);
     }
-    .lightbox-btn-prev { left: 24px; }
-    .lightbox-btn-next { right: 24px; }
-    @media (max-width: 768px) {
-      .lightbox-btn {
-        width: 44px; height: 44px;
-        font-size: 20px;
-      }
-      .lightbox-btn-prev { left: 12px; }
-      .lightbox-btn-next { right: 12px; }
-    }
-    .lightbox-caption {
-      margin-top: var(--sv-sp-4);
-      text-align: center;
-      color: var(--sv-white);
-    }
-    .lightbox-caption-title {
+    .brand-logo-text {
       font-family: var(--sv-font-head);
-      font-size: var(--sv-fs-md);
-      font-weight: 700;
+      font-size: var(--sv-fs-lg);
+      font-weight: 900;
+      color: var(--sv-dark-900);
+      letter-spacing: 0.05em;
     }
-    .lightbox-caption-tag {
-      font-size: var(--sv-fs-xs);
+    .brand-origin {
+      font-size: 11px;
+      font-weight: 700;
       color: var(--sv-gold-600);
       text-transform: uppercase;
-      margin-top: 4px;
+      margin-top: var(--sv-sp-1);
+    }
+    .brand-desc {
+      font-size: 12px;
+      color: var(--sv-gray-text);
+      margin-top: var(--sv-sp-2);
+      line-height: 1.5;
+    }
+
+    /* Swatches Grid */
+    .swatches-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: var(--sv-sp-10);
+    }
+    @media (max-width: 992px) {
+      .swatches-layout {
+        grid-template-columns: 1fr;
+        gap: var(--sv-sp-8);
+      }
+    }
+    .swatch-group-title {
+      font-family: var(--sv-font-head);
+      font-size: var(--sv-fs-md);
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: var(--sv-sp-4);
+      border-bottom: 2px solid var(--sv-red-700);
+      padding-bottom: var(--sv-sp-2);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .swatch-group-title i {
+      color: var(--sv-red-700);
+    }
+    
+    /* Thickness list */
+    .thickness-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .thickness-item {
+      background: var(--sv-white);
+      border: 1px solid var(--sv-gray-200);
+      border-radius: var(--sv-radius-sm);
+      padding: var(--sv-sp-3) var(--sv-sp-4);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--sv-shadow-sm);
+    }
+    .thick-val {
+      font-family: var(--sv-font-head);
+      font-weight: 800;
+      color: var(--sv-red-700);
+      font-size: var(--sv-fs-sm);
+      background: rgba(139,0,0,0.05);
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .thick-desc {
+      font-size: 13px;
+      color: var(--sv-gray-text);
+      font-weight: 500;
+      text-align: right;
+    }
+
+    /* Color Swatches Grid */
+    .colors-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 480px) {
+      .colors-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    .color-card {
+      background: var(--sv-white);
+      border: 1px solid var(--sv-gray-200);
+      border-radius: var(--sv-radius-sm);
+      padding: 8px;
+      text-align: center;
+      box-shadow: var(--sv-shadow-sm);
+    }
+    .color-preview {
+      height: 48px;
+      border-radius: 4px;
+      margin-bottom: 6px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    .color-lbl {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--sv-dark-900);
+      display: block;
+    }
+    .color-desc {
+      font-size: 10px;
+      color: var(--sv-gray-400);
+      display: block;
+    }
+
+    /* Comparison Table Styling */
+    .comp-table-wrap {
+      overflow-x: auto;
+      background: var(--sv-white);
+      border: 1px solid var(--sv-gray-200);
+      border-radius: var(--sv-radius-md);
+      box-shadow: var(--sv-shadow-sm);
+    }
+    .comp-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13.5px;
+    }
+    .comp-table th, .comp-table td {
+      padding: var(--sv-sp-4);
+      border-bottom: 1px solid var(--sv-gray-200);
+    }
+    .comp-table th {
+      background: var(--sv-dark-900);
+      color: var(--sv-white);
+      font-family: var(--sv-font-head);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 12px;
       letter-spacing: 0.05em;
+    }
+    .comp-table th:first-child {
+      background: var(--sv-red-700);
+    }
+    .comp-table tr:hover td {
+      background: rgba(139, 0, 0, 0.015);
+    }
+    .comp-table td:first-child {
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      background: var(--sv-gray-100);
+      width: 15%;
+    }
+    .comp-table-badge {
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 10px;
+      text-transform: uppercase;
+    }
+    .comp-table-badge.gold {
+      background: rgba(201, 162, 39, 0.12);
+      color: var(--sv-gold-600);
+    }
+    .comp-table-badge.red {
+      background: rgba(139, 0, 0, 0.08);
+      color: var(--sv-red-700);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -333,194 +565,509 @@
     ════════════════════════════════════════════ -->
     <section class="page-hero" aria-label="Thư viện ảnh Hero Banner">
       <div class="page-hero-bg" aria-hidden="true">
-        <img src="assets/images/project-dalat-villa.png" alt="Công trình biệt thự kính đồi thông" />
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80" alt="Hệ mặt dựng nhôm kính cao cấp" />
       </div>
       <div class="page-hero-content">
-        <h1 class="page-hero-title">THƯ VIỆN SẢN PHẨM &amp; DỰ ÁN</h1>
-        <p class="page-hero-desc">Hình ảnh thực tế về hệ thống sản phẩm gia công cơ khí tinh xảo &amp; các công trình nhôm kính kiến trúc đã bàn giao.</p>
+        <h1 class="page-hero-title">Thư Viện Kỹ Thuật &amp; Catalog</h1>
+        <p class="page-hero-desc">Hệ thống thư viện thông số kỹ thuật chuẩn hóa, bảng so sánh và đặc tính kỹ thuật của các hệ nhôm kính cao cấp và phụ kiện đồng bộ kiến tạo công trình.</p>
       </div>
     </section>
 
+    <!-- ════════════════════════════════════════════
+         SECTION 3: STATS STRIP
+    ════════════════════════════════════════════ -->
+    <section class="catalog-stats-sec" aria-label="Số liệu hệ sản phẩm">
+      <div class="sv-container">
+        <div class="catalog-stats-grid" data-sv-reveal>
+          <div class="cstat-card">
+            <span class="cstat-num">5+</span>
+            <span class="cstat-lbl">Hệ Nhôm Cao Cấp</span>
+          </div>
+          <div class="cstat-card">
+            <span class="cstat-num">8+</span>
+            <span class="cstat-lbl">Thương Hiệu Phụ Kiện</span>
+          </div>
+          <div class="cstat-card">
+            <span class="cstat-num">12+</span>
+            <span class="cstat-lbl">Màu Sắc Tiêu Chuẩn</span>
+          </div>
+          <div class="cstat-card">
+            <span class="cstat-num">7</span>
+            <span class="cstat-lbl">Phân Loại Độ Dày</span>
+          </div>
+          <div class="cstat-card">
+            <span class="cstat-num">10</span>
+            <span class="cstat-lbl">Năm Bảo Hành Hãng</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- ════════════════════════════════════════════
-         SECTION 3: IMAGE GALLERY WITH FILTER
+         SECTION 4: STICKY QUICK JUMP SUB-NAV
     ════════════════════════════════════════════ -->
-    <section class="gallery-section" aria-label="Thư viện hình ảnh">
+    <nav class="quick-jump-bar" aria-label="Menu nhảy nhanh">
       <div class="sv-container">
-        
-        <!-- Filter Tabs -->
-        <div class="sv-filter-tabs" style="justify-content:center; flex-wrap:wrap; gap:8px;" data-sv-reveal>
-          <button class="sv-filter-tab active" data-filter="all">Tất cả</button>
-          <button class="sv-filter-tab" data-filter="cnc">Cơ Khí CNC</button>
-          <button class="sv-filter-tab" data-filter="stair">Cầu Thang &amp; Lan Can</button>
-          <button class="sv-filter-tab" data-filter="gate">Cổng Nhôm Đúc</button>
-          <button class="sv-filter-tab" data-filter="window">Cửa Nhôm Cao Cấp</button>
-          <button class="sv-filter-tab" data-filter="facade">Mặt Dựng &amp; Vách Kính</button>
-          <button class="sv-filter-tab" data-filter="marine">Inox Du Thuyền</button>
+        <div class="quick-jump-inner">
+          <a href="#he-nhom" class="quick-jump-link active">Hệ Nhôm Cao Cấp</a>
+          <a href="#phu-kien" class="quick-jump-link">Thương Hiệu Phụ Kiện</a>
+          <a href="#do-day-mau" class="quick-jump-link">Độ Dày &amp; Màu Sắc</a>
+          <a href="#so-sanh" class="quick-jump-link">Bảng So Sánh</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 5: INTERACTIVE SYSTEMS SWITCHER
+    ════════════════════════════════════════════ -->
+    <section class="catalog-sec" id="he-nhom" aria-label="Hệ nhôm cao cấp">
+      <div class="sv-container">
+        <div class="sv-section-header-combo center" data-sv-reveal>
+          <span class="sv-section-label">Hệ Nhôm</span>
+          <h2 class="sv-section-title">Hệ Nhôm Định Hình <span class="sv-gold">Cao Cấp</span></h2>
+          <p class="sv-section-desc sv-section-desc-center">
+            Sao Vàng cung cấp 5 hệ nhôm chất lượng cao nhập khẩu chính hãng và sản xuất trong nước, đáp ứng mọi phân khúc kiến trúc.
+          </p>
         </div>
 
-        <!-- Grid -->
-        <div class="gallery-grid" id="galleryGrid">
+        <!-- Switcher Buttons -->
+        <div class="systems-switcher" data-sv-reveal data-sv-delay="2">
+          <button class="sys-tab-btn active" data-target="xingfa">XINGFA (QUẢNG ĐÔNG)</button>
+          <button class="sys-tab-btn" data-target="pmi">PMI (MALAYSIA)</button>
+          <button class="sys-tab-btn" data-target="topal">TOPAL (AUSTDOOR)</button>
+          <button class="sys-tab-btn" data-target="jma">JMA (QUẢNG ĐÔNG)</button>
+          <button class="sys-tab-btn" data-target="hyundai">HYUNDAI (HÀN QUỐC)</button>
+        </div>
+
+        <!-- Spec Cards Display -->
+        <div class="specs-display" data-sv-reveal data-sv-delay="3">
+
+          <!-- Xingfa Panel -->
+          <div class="specs-panel active" id="panel-xingfa">
+            <div class="specs-grid">
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-flag-line"></i></div>
+                <h3 class="spec-card-title">Xuất xứ &amp; Bảo hành</h3>
+                <p class="spec-card-val">Nhập khẩu chính hãng từ Quảng Đông (Trung Quốc). Bảo hành chính hãng 10 năm cho bề mặt thanh Profile.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-ruler-2-line"></i></div>
+                <h3 class="spec-card-title">Độ dày profile</h3>
+                <p class="spec-card-val">Độ dày tiêu chuẩn từ 1.2mm đến 2.0mm, đặc biệt một số hệ cửa đi lùa/mặt dựng dày lên đến 3.0mm.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-palette-line"></i></div>
+                <h3 class="spec-card-title">Màu sắc tiêu chuẩn</h3>
+                <p class="spec-card-val">Cung cấp 8 màu sắc sang trọng: Xám ghi, Đen cát, Trắng sữa, Vân gỗ lim, Champagne, Ánh kim, Nâu cafe.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-shield-check-line"></i></div>
+                <h3 class="spec-card-title">Hợp kim &amp; Công nghệ</h3>
+                <p class="spec-card-val">Sử dụng hợp kim nhôm tiêu chuẩn quốc tế 6063-T5 cực kỳ cứng cáp và xử lý mạ sơn tĩnh điện PVDF.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-grid-line"></i></div>
+                <h3 class="spec-card-title">Hệ profile phổ biến</h3>
+                <p class="spec-card-val">Phổ biến nhất là hệ Xingfa 55 (cửa đi/cửa sổ mở quay), hệ 93 (cửa trượt lùa), và hệ 65 (mặt dựng kính dựng).</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-temp-cold-line"></i></div>
+                <h3 class="spec-card-title">Cầu cách nhiệt</h3>
+                <p class="spec-card-val">Có tùy chọn hệ nhôm cầu cách nhiệt cao cấp với dải polyamide PA66 GF25 giúp cản nhiệt vượt trội 40%.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PMI Panel -->
+          <div class="specs-panel" id="panel-pmi">
+            <div class="specs-grid">
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-flag-line"></i></div>
+                <h3 class="spec-card-title">Xuất xứ &amp; Bảo hành</h3>
+                <p class="spec-card-val">Nhập khẩu chính hãng từ tập đoàn Press Metal (Malaysia). Thời gian bảo hành profile lên đến 15 năm.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-ruler-2-line"></i></div>
+                <h3 class="spec-card-title">Độ dày profile</h3>
+                <p class="spec-card-val">Dao động từ 1.4mm đến 2.2mm, đảm bảo độ cứng vững kết cấu và chịu tải lực gió cực tốt.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-palette-line"></i></div>
+                <h3 class="spec-card-title">Màu sắc tiêu chuẩn</h3>
+                <p class="spec-card-val">Cung cấp 5 màu sơn tĩnh điện cao cấp bóng/mờ mịn: Xám ánh bạc, Đen mịn, Trắng sứ, Champagne, Vân gỗ hương.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-shield-check-line"></i></div>
+                <h3 class="spec-card-title">Hợp kim &amp; Công nghệ</h3>
+                <p class="spec-card-val">Hợp kim nhôm cao cấp 6063-T6 đạt độ cứng vượt trội, bề mặt sơn tĩnh điện AkzoNobel kháng muối biển.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-grid-line"></i></div>
+                <h3 class="spec-card-title">Hệ profile phổ biến</h3>
+                <p class="spec-card-val">Bao gồm hệ PMI 45 (cửa mở quay mở hất), hệ 50, hệ 70 (cửa xếp trượt xếp lùa), hệ 95 (cửa trượt nâng lùa).</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-temp-cold-line"></i></div>
+                <h3 class="spec-card-title">Cầu cách nhiệt</h3>
+                <p class="spec-card-val">Thiết kế cầu cách nhiệt đa khoang kết hợp chất liệu cầu Technopoly cao cấp triệt tiêu âm thanh và nhiệt lượng.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Topal Panel -->
+          <div class="specs-panel" id="panel-topal">
+            <div class="specs-grid">
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-flag-line"></i></div>
+                <h3 class="spec-card-title">Xuất xứ &amp; Bảo hành</h3>
+                <p class="spec-card-val">Được nghiên cứu và sản xuất 100% tại Việt Nam bởi Tập đoàn Austdoor. Bảo hành chính hãng 5 năm.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-ruler-2-line"></i></div>
+                <h3 class="spec-card-title">Độ dày profile</h3>
+                <p class="spec-card-val">Thiết kế tối ưu độ dày từ 1.2mm đến 2.0mm tùy thuộc vào hệ và ứng dụng cửa đi hay cửa sổ sổ lùa.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-palette-line"></i></div>
+                <h3 class="spec-card-title">Màu sắc tiêu chuẩn</h3>
+                <p class="spec-card-val">Cung cấp 4 màu cơ bản phù hợp thẩm mỹ Việt Nam: Xám ghi cát, Trắng ánh ngọc, Nâu mờ, Vân gỗ đỏ.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-shield-check-line"></i></div>
+                <h3 class="spec-card-title">Hợp kim &amp; Công nghệ</h3>
+                <p class="spec-card-val">Sử dụng phôi nhôm nguyên chất 6063-T5, sản xuất trên dây chuyền ép đùn công nghệ tiên tiến đạt TCVN.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-grid-line"></i></div>
+                <h3 class="spec-card-title">Hệ profile phổ biến</h3>
+                <p class="spec-card-val">Hệ Topal Prima (hệ cao cấp nhất mở quay rãnh C), Topal Slim (khung viền siêu mỏng), Topal Hume.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-temp-cold-line"></i></div>
+                <h3 class="spec-card-title">Cầu cách nhiệt</h3>
+                <p class="spec-card-val">Hầu hết là hệ không cầu cách nhiệt nhưng thiết kế gioăng EPDM kép khít kín tốt đem lại khả năng cách âm tốt.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- JMA Panel -->
+          <div class="specs-panel" id="panel-jma">
+            <div class="specs-grid">
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-flag-line"></i></div>
+                <h3 class="spec-card-title">Xuất xứ &amp; Bảo hành</h3>
+                <p class="spec-card-val">Nhập khẩu từ Guangdong JMA Aluminium (Trung Quốc) - một trong những thương hiệu nhôm lớn thế giới. Bảo hành 10 năm.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-ruler-2-line"></i></div>
+                <h3 class="spec-card-title">Độ dày profile</h3>
+                <p class="spec-card-val">Độ dày thành nhôm trung bình từ 1.2mm đến 2.0mm, được thiết kế đồng bộ với hệ tiêu chuẩn châu Âu.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-palette-line"></i></div>
+                <h3 class="spec-card-title">Màu sắc tiêu chuẩn</h3>
+                <p class="spec-card-val">Các màu sơn mờ cao cấp: Xám ghi titan, Đen cát nhám, Trắng ngọc trai, Champange metallic, Vân gỗ sồi.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-shield-check-line"></i></div>
+                <h3 class="spec-card-title">Hợp kim &amp; Công nghệ</h3>
+                <p class="spec-card-val">Hợp kim nhôm 6063-T5 bền bỉ, công nghệ phủ bề mặt Anodized hoặc tĩnh điện AkzoNobel bền đẹp.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-grid-line"></i></div>
+                <h3 class="spec-card-title">Hệ profile phổ biến</h3>
+                <p class="spec-card-val">Bao gồm hệ JMA 50 (cửa mở quay), hệ JMA 55 (vát cạnh sang trọng), hệ JMA 60, hệ JMA 65 (mặt dựng).</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-temp-cold-line"></i></div>
+                <h3 class="spec-card-title">Cầu cách nhiệt</h3>
+                <p class="spec-card-val">Có dòng sản phẩm JMA cầu cách nhiệt rãnh C tiêu chuẩn châu Âu hạn chế tối đa truyền âm truyền nhiệt.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hyundai Panel -->
+          <div class="specs-panel" id="panel-hyundai">
+            <div class="specs-grid">
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-flag-line"></i></div>
+                <h3 class="spec-card-title">Xuất xứ &amp; Bảo hành</h3>
+                <p class="spec-card-val">Sản xuất bởi liên doanh Hyundai Aluminium VINA (Hàn Quốc - Việt Nam). Thời gian bảo hành profile 10 năm.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-ruler-2-line"></i></div>
+                <h3 class="spec-card-title">Độ dày profile</h3>
+                <p class="spec-card-val">Biên độ dày từ 1.2mm đến 2.3mm, đặc trưng thiết kế gân tăng cứng cáp cho cánh cửa rộng lớn.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-palette-line"></i></div>
+                <h3 class="spec-card-title">Màu sắc tiêu chuẩn</h3>
+                <p class="spec-card-val">Các màu sơn tĩnh điện sắc nét: Xám đen, Trắng mờ, Champagne nhạt, Vân gỗ đỏ tự nhiên, Vân gỗ óc chó.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-shield-check-line"></i></div>
+                <h3 class="spec-card-title">Hợp kim &amp; Công nghệ</h3>
+                <p class="spec-card-val">Sử dụng hợp kim chất lượng cao 6063-T6 đạt chuẩn KS của Hàn Quốc, đùn ép lực lớn tăng độ bền cơ học.</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-grid-line"></i></div>
+                <h3 class="spec-card-title">Hệ profile phổ biến</h3>
+                <p class="spec-card-val">Hệ Hyundai 70, hệ 80 (cửa mở xếp trượt lùa), hệ 100 (cửa lùa bản rộng), hệ 120 (mặt dựng vách kính dựng).</p>
+              </div>
+              <div class="spec-card">
+                <div class="spec-card-icon"><i class="ri-temp-cold-line"></i></div>
+                <h3 class="spec-card-title">Cầu cách nhiệt</h3>
+                <p class="spec-card-val">Chủ yếu phân phối hệ nhôm hộp không cầu cách nhiệt truyền thống nhưng sở hữu khoang chứa ke góc rất vững chãi.</p>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /specsDisplay -->
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 6: ACCESSORY BRANDS GRID
+    ════════════════════════════════════════════ -->
+    <section class="catalog-sec" id="phu-kien" aria-label="Thương hiệu phụ kiện">
+      <div class="sv-container">
+        <div class="sv-section-header-combo center" data-sv-reveal>
+          <span class="sv-section-label">Phụ Kiện</span>
+          <h2 class="sv-section-title">Thương Hiệu Phụ Kiện <span class="sv-gold">Đồng Bộ</span></h2>
+          <p class="sv-section-desc sv-section-desc-center">
+            Hệ phụ kiện quyết định 80% độ bền vận hành và khả năng khít kín của cửa nhôm. Sao Vàng chỉ sử dụng các hãng danh tiếng.
+          </p>
+        </div>
+
+        <div class="brands-grid" data-sv-reveal data-sv-delay="2">
           
-          <!-- Item 1: CNC -->
-          <div class="gallery-item" data-category="cnc" data-sv-reveal data-sv-delay="1">
-            <img src="assets/images/workshop_cnc.png" alt="Trung tâm máy phay CNC hiện đại" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Cơ Khí CNC</span>
-              <h3 class="gallery-title">Máy Phay CNC 5 Trục</h3>
+          <div class="brand-card">
+            <span class="brand-logo-text">COGO</span>
+            <span class="brand-origin">ĐỨC / CHINA</span>
+            <p class="brand-desc">Hệ phụ kiện rãnh C cao cấp, kháng muối biển cực tốt chuyên lắp cho các công trình ven biển và biệt thự.</p>
+          </div>
+
+          <div class="brand-card">
+            <span class="brand-logo-text">KINLONG</span>
+            <span class="brand-origin">TRUNG QUỐC</span>
+            <p class="brand-desc">Thương hiệu quốc dân đồng bộ với nhôm Xingfa. Phổ biến nhất tại Việt Nam nhờ giá thành hợp lý và độ bền tốt.</p>
+          </div>
+
+          <div class="brand-card">
+            <span class="brand-logo-text">SIGICO</span>
+            <span class="brand-origin">ĐỨC / TAIWAN</span>
+            <p class="brand-desc">Phong cách thiết kế châu Âu hiện đại, tay nắm hoàn thiện anode bóng bẩy sang trọng cùng cơ cấu khóa êm ái.</p>
+          </div>
+
+          <div class="brand-card">
+            <span class="brand-logo-text">HOPO</span>
+            <span class="brand-origin">MỸ / CHINA</span>
+            <p class="brand-desc">Chuyên gia phụ kiện cho hệ cửa trượt lùa bản rộng, cửa trượt nâng và hệ cửa chống bão chịu lực siêu nặng.</p>
+          </div>
+
+          <div class="brand-card">
+            <span class="brand-logo-text">ROTO</span>
+            <span class="brand-origin">ĐỨC</span>
+            <p class="brand-desc">Thương hiệu xa xỉ hàng đầu thế giới của Đức. Độ bền vận hành trên 100,000 lần đóng mở, bảo hành 10 năm.</p>
+          </div>
+
+          <div class="brand-card">
+            <span class="brand-logo-text">BOGO</span>
+            <span class="brand-origin">ĐỨC / VIETNAM</span>
+            <p class="brand-desc">Công nghệ Anodized bề mặt tay nắm mang lại khả năng chống phai màu, chống trầy xước và bám vân tay tuyệt vời.</p>
+          </div>
+
+          <div class="brand-card">
+            <span class="brand-logo-text">HUY HOÀNG</span>
+            <span class="brand-origin">VIỆT NAM</span>
+            <p class="brand-desc">Thương hiệu khóa đồng Việt Nam nổi tiếng. Dòng khóa cửa nhôm kính Huy Hoàng mang lại độ bền cơ học cao.</p>
+          </div>
+
+          <div class="brand-card">
+            <span class="brand-logo-text">DRAHO</span>
+            <span class="brand-origin">TRUNG QUỐC</span>
+            <p class="brand-desc">Phân khúc phụ kiện thông minh rãnh K rãnh C, vận hành ổn định và giá thành tối ưu cho nhà phố hiện đại.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════════════════════════════════════════
+         SECTION 7: THICKNESS & COLORS SWATCHES
+    ════════════════════════════════════════════ -->
+    <section class="catalog-sec" id="do-day-mau" aria-label="Độ dày và màu sắc">
+      <div class="sv-container">
+        <div class="swatches-layout">
+          
+          <!-- Left: Thickness -->
+          <div data-sv-reveal="left">
+            <h3 class="swatch-group-title"><i class="ri-ruler-2-line"></i> 7 Phân Loại Độ Dày Tiêu Chuẩn</h3>
+            <div class="thickness-list">
+              <div class="thickness-item">
+                <span class="thick-val">1.2 mm</span>
+                <span class="thick-desc">Hệ cửa sổ mở quay, cửa sổ lùa Xingfa và Hyundai</span>
+              </div>
+              <div class="thickness-item">
+                <span class="thick-val">1.4 mm</span>
+                <span class="thick-desc">Hệ cửa đi mở quay PMI, JMA và hệ cửa sổ Xingfa</span>
+              </div>
+              <div class="thickness-item">
+                <span class="thick-val">1.6 mm</span>
+                <span class="thick-desc">Hệ cửa lùa trượt rãnh C châu Âu của Topal Prima</span>
+              </div>
+              <div class="thickness-item">
+                <span class="thick-val">1.8 mm</span>
+                <span class="thick-desc">Hệ cửa đi mở quay Xingfa nhập khẩu chính hãng</span>
+              </div>
+              <div class="thickness-item">
+                <span class="thick-val">2.0 mm</span>
+                <span class="thick-desc">Hệ cửa đi mở quay Xingfa Class A và hệ PMI cao cấp</span>
+              </div>
+              <div class="thickness-item">
+                <span class="thick-val">2.2 mm</span>
+                <span class="thick-desc">Hệ cửa đi trượt nâng lùa PMI, hệ nhôm cầu cách nhiệt</span>
+              </div>
+              <div class="thickness-item">
+                <span class="thick-val">3.0 mm</span>
+                <span class="thick-desc">Hệ mặt dựng kính dựng Unitized/Stick và cửa đi siêu rộng</span>
+              </div>
             </div>
           </div>
 
-          <!-- Item 2: CNC -->
-          <div class="gallery-item" data-category="cnc" data-sv-reveal data-sv-delay="2">
-            <img src="assets/images/laser_cutting.png" alt="Cắt laser kim loại tấm CNC" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Cơ Khí CNC</span>
-              <h3 class="gallery-title">Laser Cắt Kim Loại Tấm</h3>
+          <!-- Right: Colors -->
+          <div data-sv-reveal="right" data-sv-delay="2">
+            <h3 class="swatch-group-title"><i class="ri-palette-line"></i> 12+ Màu Sắc Sang Trọng</h3>
+            <div class="colors-grid">
+              
+              <div class="color-card">
+                <div class="color-preview" style="background:#555a60;"></div>
+                <span class="color-lbl">Xám Ghi</span>
+                <span class="color-desc">Tĩnh điện cát nhám</span>
+              </div>
+
+              <div class="color-card">
+                <div class="color-preview" style="background:#1e1f21;"></div>
+                <span class="color-lbl">Đen Cát</span>
+                <span class="color-desc">Mờ mịn sang trọng</span>
+              </div>
+
+              <div class="color-card">
+                <div class="color-preview" style="background:#f4f5f7;"></div>
+                <span class="color-lbl">Trắng Sữa</span>
+                <span class="color-desc">Bóng sáng dễ lau chùi</span>
+              </div>
+
+              <div class="color-card">
+                <div class="color-preview" style="background:#8b5a2b;"></div>
+                <span class="color-lbl">Vân Gỗ Hương</span>
+                <span class="color-desc">Đỏ vân gỗ tự nhiên</span>
+              </div>
+
+              <div class="color-card">
+                <div class="color-preview" style="background:#5c3a21;"></div>
+                <span class="color-lbl">Vân Gỗ Lim</span>
+                <span class="color-desc">Vân gỗ đậm sâu trầm</span>
+              </div>
+
+              <div class="color-card">
+                <div class="color-preview" style="background:#b5a642;"></div>
+                <span class="color-lbl">Champagne</span>
+                <span class="color-desc">Vàng rượu sâm banh</span>
+              </div>
+
+              <div class="color-card">
+                <div class="color-preview" style="background:#c5b358;"></div>
+                <span class="color-lbl">Vàng Gold</span>
+                <span class="color-desc">Mạ gương titan PVD</span>
+              </div>
+
+              <div class="color-card">
+                <div class="color-preview" style="background:#e5e4e2;"></div>
+                <span class="color-lbl">Ánh Kim</span>
+                <span class="color-desc">Metallic bạc lấp lánh</span>
+              </div>
+
+              <div class="color-card">
+                <div class="color-preview" style="background:#4e3629;"></div>
+                <span class="color-lbl">Nâu Cafe</span>
+                <span class="color-desc">Mờ mịn ấm cúng</span>
+              </div>
+
             </div>
           </div>
 
-          <!-- Item 3: CNC -->
-          <div class="gallery-item" data-category="cnc" data-sv-reveal data-sv-delay="3">
-            <img src="assets/images/welding_work.png" alt="Hàn Tig/Mig inox chính xác" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Cơ Khí CNC</span>
-              <h3 class="gallery-title">Hàn Kỹ Thuật Cao TIG</h3>
-            </div>
-          </div>
+        </div>
+      </div>
+    </section>
 
-          <!-- Item 4: Stair -->
-          <div class="gallery-item" data-category="stair" data-sv-reveal data-sv-delay="4">
-            <img src="assets/images/service-artistic-stairs.png" alt="Cầu thang xoắn ốc uốn lượn nghệ thuật" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Cầu Thang &amp; Lan Can</span>
-              <h3 class="gallery-title">Cầu Thang Xoắn Ốc Thép Bản</h3>
-            </div>
-          </div>
+    <!-- ════════════════════════════════════════════
+         SECTION 8: SYSTEMS COMPARISON TABLE
+    ════════════════════════════════════════════ -->
+    <section class="catalog-sec" id="so-sanh" aria-label="Bảng so sánh">
+      <div class="sv-container">
+        <div class="sv-section-header-combo center" data-sv-reveal>
+          <span class="sv-section-label">So Sánh</span>
+          <h2 class="sv-section-title">Bảng So Sánh <span class="sv-gold">Các Hệ Nhôm</span></h2>
+          <p class="sv-section-desc sv-section-desc-center">
+            Tra cứu nhanh đặc tính đối chiếu giữa 3 hệ nhôm nhập khẩu hàng đầu hiện nay để chọn lựa phương án tốt nhất cho công trình.
+          </p>
+        </div>
 
-          <!-- Item 5: Stair -->
-          <div class="gallery-item" data-category="stair" data-sv-reveal data-sv-delay="5">
-            <img src="assets/images/product-railing.png" alt="Lan can ban công inox cao cấp" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Cầu Thang &amp; Lan Can</span>
-              <h3 class="gallery-title">Lan Can Ban Công Inox 304</h3>
-            </div>
-          </div>
-
-          <!-- Item 6: Gate -->
-          <div class="gallery-item" data-category="gate" data-sv-reveal data-sv-delay="6">
-            <img src="assets/images/service-cast-gates.png" alt="Cổng hợp kim nhôm đúc nguyên khối" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Cổng Nhôm Đúc</span>
-              <h3 class="gallery-title">Cổng Nhôm Đúc Chân Không</h3>
-            </div>
-          </div>
-
-          <!-- Item 7: Gate -->
-          <div class="gallery-item" data-category="gate" data-sv-reveal data-sv-delay="7">
-            <img src="assets/images/project-mansion-gate.png" alt="Cổng đúc mạ vàng lâu đài" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Cổng Nhôm Đúc</span>
-              <h3 class="gallery-title">Cổng Biệt Thự Hoàng Gia</h3>
-            </div>
-          </div>
-
-          <!-- Item 8: Window -->
-          <div class="gallery-item" data-category="window" data-sv-reveal data-sv-delay="8">
-            <img src="assets/images/service-aluminum-doors.png" alt="Cửa nhôm Slim trượt mở quay" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Cửa Nhôm Cao Cấp</span>
-              <h3 class="gallery-title">Cửa Nhôm Cầu Cách Nhiệt Civro</h3>
-            </div>
-          </div>
-
-          <!-- Item 9: Window -->
-          <div class="gallery-item" data-category="window" data-sv-reveal data-sv-delay="9">
-            <img src="assets/images/project-dalat-villa.png" alt="Biệt thự kính đồi thông Đà Lạt" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Cửa Nhôm Cao Cấp</span>
-              <h3 class="gallery-title">Hệ Cửa Trượt Slim Góc Quay</h3>
-            </div>
-          </div>
-
-          <!-- Item 10: Facade -->
-          <div class="gallery-item" data-category="facade" data-sv-reveal data-sv-delay="10">
-            <img src="assets/images/service-glass-facades.png" alt="Thi công mặt dựng kính tòa nhà" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Mặt Dựng &amp; Vách Kính</span>
-              <h3 class="gallery-title">Mặt Dựng Kính Tòa Nhà</h3>
-            </div>
-          </div>
-
-          <!-- Item 11: Facade -->
-          <div class="gallery-item" data-category="facade" data-sv-reveal data-sv-delay="11">
-            <img src="assets/images/product-glass.png" alt="Vách kính phòng tắm mạ vàng PVD" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Mặt Dựng &amp; Vách Kính</span>
-              <h3 class="gallery-title">Cabin Tắm Kính Cường Lực</h3>
-            </div>
-          </div>
-
-          <!-- Item 12: Facade -->
-          <div class="gallery-item" data-category="facade" data-sv-reveal data-sv-delay="12">
-            <img src="assets/images/project-penthouse.png" alt="Vách thông tầng kính hộp Low-E" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Mặt Dựng &amp; Vách Kính</span>
-              <h3 class="gallery-title">Vách Kính Thông Tầng Penthouse</h3>
-            </div>
-          </div>
-
-          <!-- Item 13: Marine -->
-          <div class="gallery-item" data-category="marine" data-sv-reveal data-sv-delay="13">
-            <img src="assets/images/project-yacht.png" alt="Lan can du thuyền inox bóng gương" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Inox Du Thuyền</span>
-              <h3 class="gallery-title">Inox Marine 316 Đánh Bóng Gương</h3>
-            </div>
-          </div>
-
-          <!-- Item 14: Marine -->
-          <div class="gallery-item" data-category="marine" data-sv-reveal data-sv-delay="14">
-            <img src="assets/images/hero-yacht.png" alt="Phụ kiện inox lan can mạn du thuyền" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Inox Du Thuyền</span>
-              <h3 class="gallery-title">Chế Tác Chi Tiết Inox Hàng Hải</h3>
-            </div>
-          </div>
-
-          <!-- Item 15: Marine -->
-          <div class="gallery-item" data-category="marine" data-sv-reveal data-sv-delay="15">
-            <img src="assets/images/project-resort-yacht.png" alt="Đội tàu du lịch biển inox 316L" loading="lazy" />
-            <div class="gallery-overlay">
-              <span class="gallery-tag">Inox Du Thuyền</span>
-              <h3 class="gallery-title">Lan Can Boong Tàu Biển</h3>
-            </div>
-          </div>
-
+        <div class="comp-table-wrap" data-sv-reveal data-sv-delay="2">
+          <table class="comp-table" role="table">
+            <thead>
+              <tr role="row">
+                <th role="columnheader">Tiêu Chí</th>
+                <th role="columnheader">XINGFA (QUẢNG ĐÔNG)</th>
+                <th role="columnheader">PMI (MALAYSIA)</th>
+                <th role="columnheader">JMA (QUẢNG ĐÔNG)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr role="row">
+                <td role="cell">Xuất xứ</td>
+                <td role="cell">Quảng Đông, Trung Quốc (Hãng Xingfa Group)</td>
+                <td role="cell">Malaysia (Hãng Press Metal Group)</td>
+                <td role="cell">Quảng Đông, Trung Quốc (Hãng JMA Aluminium)</td>
+              </tr>
+              <tr role="row">
+                <td role="cell">Thời gian bảo hành</td>
+                <td role="cell"><span class="comp-table-badge red">10 Năm</span> bề mặt profile</td>
+                <td role="cell"><span class="comp-table-badge gold">15 Năm</span> bề mặt profile</td>
+                <td role="cell"><span class="comp-table-badge red">10 Năm</span> bề mặt profile</td>
+              </tr>
+              <tr role="row">
+                <td role="cell">Độ dày trung bình</td>
+                <td role="cell">1.4mm - 2.0mm (Độ dày gân lớn chịu tải gió)</td>
+                <td role="cell">1.4mm - 2.2mm (Kết cấu hộp bo viền tròn tinh tế)</td>
+                <td role="cell">1.2mm - 2.0mm (Vát cạnh chéo rãnh C chuẩn Âu)</td>
+              </tr>
+              <tr role="row">
+                <td role="cell">Phân khúc giá</td>
+                <td role="cell">Trung - Cao cấp (Khách hàng Việt ưa chuộng nhất)</td>
+                <td role="cell">Cao cấp (Phù hợp dinh thự, villa đơn lập siêu sang)</td>
+                <td role="cell">Trung cấp (Phù hợp nhà phố, khu đô thị hiện đại)</td>
+              </tr>
+              <tr role="row">
+                <td role="cell">Phụ kiện đi kèm</td>
+                <td role="cell">Cogo, Kinlong, Sigico, Hopo đồng bộ</td>
+                <td role="cell">Hopo, Roto, Sigico, Bogo đồng bộ châu Âu</td>
+                <td role="cell">Kinlong, Draho, Bogo đồng bộ rãnh C</td>
+              </tr>
+              <tr role="row">
+                <td role="cell">Ứng dụng tối ưu</td>
+                <td role="cell">Cửa đi, cửa sổ, vách kính mặt dựng cho biệt thự tầm trung</td>
+                <td role="cell">Hệ cửa trượt lùa nâng siêu rộng, hệ cửa nhôm có cầu cách nhiệt</td>
+                <td role="cell">Hệ thống cửa sổ lùa, vách chia văn phòng, cửa đi nhà phố sang trọng</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
   </main>
-
-  <!-- ════════════════════════════════════════════
-       LIGHTBOX CONTAINER
-  ════════════════════════════════════════════ -->
-  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Xem ảnh lớn">
-    <button class="lightbox-close" id="lightboxClose" aria-label="Đóng">&times;</button>
-    <button class="lightbox-btn lightbox-btn-prev" id="lightboxPrev" aria-label="Ảnh trước"><i class="ri-arrow-left-s-line"></i></button>
-    
-    <div class="lightbox-content">
-      <img src="" alt="" class="lightbox-img" id="lightboxImg" />
-    </div>
-    
-    <button class="lightbox-btn lightbox-btn-next" id="lightboxNext" aria-label="Ảnh kế tiếp"><i class="ri-arrow-right-s-line"></i></button>
-    
-    <div class="lightbox-caption">
-      <p class="lightbox-caption-title" id="lightboxTitle"></p>
-      <p class="lightbox-caption-tag" id="lightboxTag"></p>
-    </div>
-  </div>
 
   <!-- ════════════════════════════════════════════
        SECTION 10: FOOTER
@@ -592,7 +1139,7 @@
           <div class="footer-contact-items">
             <div class="footer-contact-item">
               <i class="ri-map-pin-2-fill" aria-hidden="true"></i>
-              <span>Tầng 1, 171 Đi Bộ Hà Nội, Hà Nội</span>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội</span>
             </div>
             <div class="footer-contact-item">
               <i class="ri-phone-fill" aria-hidden="true"></i>
@@ -608,7 +1155,7 @@
             </div>
             <div class="footer-contact-item">
               <i class="ri-time-line" aria-hidden="true"></i>
-              <span>T2–T7: 7:30–17:30</span>
+              <span>T2–T7: 8:00–17:00</span>
             </div>
           </div>
         </div>
@@ -617,7 +1164,7 @@
 
       <!-- Copyright -->
       <div class="footer-bottom">
-        <span>© 2024 Sao Vàng. Bảo lưu mọi quyền.</span>
+        <span>© 2025 Sao Vàng. Bảo lưu mọi quyền.</span>
         <span>Thiết kế bởi Sao Vàng Technical Division</span>
       </div>
     </div>
@@ -646,8 +1193,8 @@
   <!-- ════════════════════════════════════════════
        JAVASCRIPT
   ════════════════════════════════════════════ -->
-  <!-- navbar.js handles this -->
   <script src="assets/js/modules/navbar.js"></script>
-  <script src="assets/js/modules/lightbox.js"></script>
+  <!-- Interactive Switcher controller for Technical Catalog -->
+  <script src="assets/js/modules/cms-pages/library.js"></script>
 </body>
 </html>

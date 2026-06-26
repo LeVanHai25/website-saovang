@@ -263,6 +263,12 @@
         }
       });
     }
+
+    // Auto open modal if slug is in URL
+    const slugParam = new URLSearchParams(window.location.search).get('slug');
+    if (slugParam) {
+      setTimeout(() => openModal(slugParam), 300);
+    }
   }
 
   document.addEventListener('DOMContentLoaded', init);
