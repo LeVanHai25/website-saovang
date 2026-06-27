@@ -6,6 +6,16 @@
 (function () {
   'use strict';
 
+  // Inject Google Fonts link
+  function injectGoogleFonts() {
+    if (document.getElementById('header-ext-fonts')) return;
+    const link = document.createElement('link');
+    link.id = 'header-ext-fonts';
+    link.rel = 'stylesheet';
+    link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap';
+    document.head.appendChild(link);
+  }
+
   // Inject Styles into document head
   function injectStyles() {
     if (document.getElementById('header-ext-styles')) return;
@@ -13,6 +23,19 @@
     const styleSheet = document.createElement('style');
     styleSheet.id = 'header-ext-styles';
     styleSheet.textContent = `
+      /* ── Montserrat Global Font applications ── */
+      .header-top-bar,
+      .brand-text-block,
+      .header-top-contact-right,
+      .nav-menu-link,
+      .footer-col-title,
+      .footer-logo-name,
+      .sticky-callback-title,
+      .sticky-callback-btn,
+      .sticky-callback-hotline-link {
+        font-family: 'Montserrat', 'Inter', sans-serif !important;
+      }
+
       /* ── Header Top Bar ── */
       .header-top-bar {
         width: 100%;
@@ -70,7 +93,6 @@
         text-align: left;
       }
       .brand-row-1 {
-        font-family: var(--ff-header, sans-serif);
         font-size: 13px;
         font-weight: 700;
         color: #c8860a;
@@ -78,7 +100,6 @@
         line-height: 1;
       }
       .brand-row-2 {
-        font-family: var(--ff-header, sans-serif);
         font-size: 21px;
         font-weight: 900;
         color: #7B1212;
@@ -105,7 +126,6 @@
         font-size: 8px;
       }
       .brand-row-3 {
-        font-family: var(--ff-header, sans-serif);
         font-size: 9.5px;
         font-weight: 700;
         color: #c8860a;
@@ -159,6 +179,54 @@
         font-weight: 300;
       }
 
+      /* ── Main Menu Red Background Image ── */
+      .header, .header-v2 {
+        background-image: linear-gradient(rgba(123, 18, 18, 0.12), rgba(123, 18, 18, 0.12)), url('assets/images/bg-red-header.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        border-bottom: 1px solid rgba(226, 177, 60, 0.3) !important;
+      }
+      .nav-menu-link {
+        color: rgba(255, 255, 255, 0.95) !important;
+        font-weight: 700 !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
+        letter-spacing: 0.02em !important;
+      }
+      .nav-menu-link:hover, .nav-menu-link.active {
+        color: #E2B13C !important;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
+      }
+
+      /* ── Footer Red Background Image ── */
+      .footer-v2, footer, .footer {
+        background-image: linear-gradient(rgba(12, 12, 12, 0.62), rgba(12, 12, 12, 0.62)), url('assets/images/bg-red-footer.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        position: relative;
+        border-top: 3px solid #E2B13C !important;
+      }
+      .footer-v2, footer, .footer,
+      .footer-address, .footer-contact-item, .footer-link,
+      .footer-bottom, .footer-bottom span, .footer-bottom a {
+        color: rgba(255, 255, 255, 0.8) !important;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+      }
+      .footer-col-title, .footer-logo-name {
+        color: #E2B13C !important;
+        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
+        font-weight: 800 !important;
+      }
+      .footer-link:hover {
+        color: #fff !important;
+        text-shadow: 0 1px 5px rgba(226, 177, 60, 0.5) !important;
+      }
+      .footer-social {
+        background: rgba(255, 255, 255, 0.1) !important;
+        border-color: rgba(255, 255, 255, 0.18) !important;
+      }
+
       /* ── Sticky Callback Bar ── */
       .sticky-callback-bar {
         position: fixed;
@@ -191,7 +259,6 @@
         font-size: 13px;
         font-weight: 600;
         white-space: nowrap;
-        font-family: var(--ff-header, sans-serif);
       }
       .sticky-callback-title strong {
         color: #E2B13C;
@@ -235,7 +302,6 @@
         display: flex;
         align-items: center;
         gap: 6px;
-        font-family: var(--ff-header, sans-serif);
       }
       .sticky-callback-btn:hover {
         background: #E2B13C;
@@ -265,7 +331,6 @@
         color: #fff;
         font-size: 12px;
         font-weight: 500;
-        font-family: var(--ff-header, sans-serif);
       }
       .sticky-callback-hotline-link strong {
         color: #E2B13C;
@@ -506,11 +571,37 @@
     });
   }
 
+  // Dynamic Logo Replacement for navbar and footer
+  function setupLogos() {
+    // 1. Replace desktop menu / mobile navbar logos with white transparent company logo
+    document.querySelectorAll('.nav-logo img, .logo img').forEach(img => {
+      img.src = 'assets/images/logo-cty-white.png';
+      img.style.height = '48px';
+      img.style.width = 'auto';
+    });
+
+    // 2. Replace footer logos with white transparent company logo
+    document.querySelectorAll('.footer-logo img, .footer-logo-wrap img').forEach(img => {
+      img.src = 'assets/images/logo-cty-white.png';
+      img.style.height = '62px';
+      img.style.width = 'auto';
+      // Remove any border circle surrounding it to let the logo shine clean
+      const iconWrap = img.closest('.footer-logo-icon');
+      if (iconWrap) {
+        iconWrap.style.border = 'none';
+        iconWrap.style.width = 'auto';
+        iconWrap.style.height = 'auto';
+      }
+    });
+  }
+
   // Initialize on load
   function init() {
+    injectGoogleFonts();
     injectStyles();
     renderHeaderTopBar();
     renderStickyCallbackBar();
+    setupLogos();
   }
 
   if (document.readyState === 'loading') {
