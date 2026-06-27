@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#9B1C1C" />
+  <title>Phụ Kiện Nhôm Kính Cao Cấp — Draho, Bogo, KinLong, Janus | SAO VÀNG</title>
+  <meta name="description" content="Cơ Khí Sao Vàng cung cấp đầy đủ phụ kiện nhôm kính cao cấp: Draho, Bogo, KinLong, Janus, Cmech, Huy Hoàng, Candy, Hafele, khóa điện tử và nhiều thương hiệu uy tín. Tư vấn miễn phí." />
+  <meta name="keywords" content="phụ kiện nhôm kính, phụ kiện cửa nhôm, draho, bogo, kinlong, janus, cmech, hafele, khóa điện tử" />
+  <meta property="og:title" content="Phụ Kiện Nhôm Kính Cao Cấp | SAO VÀNG" />
+  <meta property="og:description" content="Đầy đủ phụ kiện nhôm kính thương hiệu uy tín: Draho, Bogo, KinLong, Janus, Candy, Hafele..." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.CoKhiSaoVang.com/phu-kien.html" />
+  <link rel="canonical" href="https://www.CoKhiSaoVang.com/phu-kien.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+
+  <!-- Design System v2 -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    /* ══ Page: phu-kien.html ══ */
+    :root {
+      --pk-red: #9B1C1C;
+      --pk-gold: #d4af37;
+      --pk-dark: #0f1115;
+      --pk-card-bg: #fff;
+    }
+
+    /* ── Hero ── */
+    .page-hero {
+      position: relative;
+      height: 42vh;
+      min-height: 300px;
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      background: var(--pk-dark);
+      padding-top: var(--sv-navbar-h, 72px);
+      overflow: hidden;
+    }
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      opacity: 0.22;
+    }
+    .page-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(150deg, rgba(155,28,28,0.75) 0%, rgba(15,17,21,0.90) 100%);
+    }
+    .page-hero-content { position: relative; z-index: 2; padding: 40px 20px; }
+    .page-hero-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--pk-gold);
+      margin-bottom: 12px;
+    }
+    .page-hero-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(30px, 5vw, 56px); font-weight: 900;
+      color: #fff; line-height: 1.08; margin-bottom: 14px;
+    }
+    .page-hero-title span { color: var(--pk-gold); }
+    .page-hero-desc {
+      font-size: 15px; color: rgba(255,255,255,0.72);
+      max-width: 520px; margin: 0 auto 20px; line-height: 1.7;
+    }
+    .page-hero-breadcrumb {
+      display: flex; align-items: center; justify-content: center;
+      gap: 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 14px;
+    }
+    .page-hero-breadcrumb a { color: rgba(255,255,255,0.4); text-decoration: none; }
+    .page-hero-breadcrumb a:hover { color: var(--pk-gold); }
+    .page-hero-breadcrumb .sep { color: rgba(255,255,255,0.2); }
+    .page-hero-breadcrumb .current { color: var(--pk-gold); }
+
+    /* ── Stats bar ── */
+    .stats-bar {
+      background: var(--pk-red);
+      padding: 18px 0;
+    }
+    .stats-bar-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+    }
+    .stat-pill {
+      display: flex; align-items: center; gap: 10px;
+      color: #fff; font-family: 'Montserrat', sans-serif;
+    }
+    .stat-pill i { font-size: 22px; color: var(--pk-gold); }
+    .stat-pill-num { font-size: 22px; font-weight: 900; line-height: 1; }
+    .stat-pill-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; opacity: 0.8; }
+
+    /* ── Filter tabs ── */
+    .filter-section { background: #f8f8f8; border-bottom: 1px solid #e8e8e8; position: sticky; top: var(--sv-navbar-h, 72px); z-index: 80; }
+    .filter-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; gap: 0; overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .filter-inner::-webkit-scrollbar { display: none; }
+    .filter-tab {
+      flex-shrink: 0;
+      padding: 14px 18px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: #555;
+      border: none; background: none; cursor: pointer;
+      border-bottom: 3px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .filter-tab:hover { color: var(--pk-red); }
+    .filter-tab.active { color: var(--pk-red); border-bottom-color: var(--pk-red); }
+
+    /* ── Main layout ── */
+    .pk-layout {
+      max-width: 1200px; margin: 0 auto; padding: 48px 24px 80px;
+    }
+
+    /* ── Category section ── */
+    .pk-category {
+      margin-bottom: 64px;
+    }
+    .pk-category-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 28px; padding-bottom: 16px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .pk-category-title {
+      display: flex; align-items: center; gap: 12px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(18px, 2.5vw, 24px); font-weight: 800; color: #1a1a1a;
+    }
+    .pk-category-badge {
+      width: 8px; height: 32px;
+      background: var(--pk-red);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .pk-category-brand-tag {
+      display: inline-flex; align-items: center;
+      background: var(--pk-red); color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 3px 8px; border-radius: 2px;
+    }
+    .pk-viewall {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--pk-red);
+      text-decoration: none; display: flex; align-items: center; gap: 6px;
+      transition: gap 0.2s;
+    }
+    .pk-viewall:hover { gap: 10px; }
+
+    /* ── Product grid ── */
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    /* ── Product card ── */
+    .pk-card {
+      background: #fff;
+      border: 1px solid #f0f0f0;
+      border-radius: 4px;
+      overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+      cursor: pointer;
+    }
+    .pk-card:hover {
+      box-shadow: 0 8px 32px rgba(155,28,28,0.1);
+      transform: translateY(-4px);
+      border-color: #f0d0d0;
+    }
+    .pk-card-img {
+      position: relative; overflow: hidden;
+      aspect-ratio: 1 / 1;
+      background: #f5f5f5;
+    }
+    .pk-card-img img {
+      width: 100%; height: 100%; object-fit: contain;
+      padding: 12px;
+      transition: transform 0.5s ease;
+    }
+    .pk-card:hover .pk-card-img img { transform: scale(1.08); }
+    .pk-card-badge {
+      position: absolute; top: 8px; left: 8px;
+      background: var(--pk-red); color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.1em;
+      padding: 2px 6px; border-radius: 2px; text-transform: uppercase;
+    }
+    .pk-card-body { padding: 14px 14px 16px; }
+    .pk-card-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 600; color: #1a1a1a;
+      line-height: 1.45; margin-bottom: 10px;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+    }
+    .pk-card-btn {
+      display: inline-flex; align-items: center; gap: 5px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--pk-red); text-decoration: none;
+      padding: 6px 0;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .pk-card-btn:hover { border-bottom-color: var(--pk-red); }
+
+    /* ── CTA banner ── */
+    .cta-banner {
+      background: linear-gradient(135deg, #7b1212 0%, var(--pk-red) 60%, #b91c1c 100%);
+      padding: 64px 24px; text-align: center; position: relative; overflow: hidden;
+    }
+    .cta-banner::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .cta-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
+    .cta-eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--pk-gold); margin-bottom: 12px;
+    }
+    .cta-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(24px, 4vw, 38px); font-weight: 900;
+      color: #fff; line-height: 1.15; margin-bottom: 14px;
+    }
+    .cta-desc { font-size: 15px; color: rgba(255,255,255,0.78); margin-bottom: 32px; line-height: 1.7; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--pk-gold); color: #1a1a1a;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 800; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 14px 28px;
+      border: none; cursor: pointer; text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      border-radius: 2px;
+    }
+    .btn-gold:hover { background: #b8942e; transform: translateY(-2px); color: #1a1a1a; }
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.06em;
+      text-transform: uppercase; padding: 13px 28px;
+      border: 2px solid rgba(255,255,255,0.5); cursor: pointer; text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+      border-radius: 2px;
+    }
+    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); color: #fff; }
+
+    /* ── Brand logos ── */
+    .brands-section { background: #fff; padding: 48px 24px; border-top: 1px solid #f0f0f0; }
+    .brands-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
+      text-transform: uppercase; color: #aaa; text-align: center; margin-bottom: 28px;
+    }
+    .brands-grid {
+      max-width: 1000px; margin: 0 auto;
+      display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+    }
+    .brand-chip {
+      padding: 8px 18px;
+      border: 2px solid #e8e8e8; border-radius: 100px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 700; color: #555;
+      cursor: pointer; transition: all 0.2s; text-decoration: none;
+    }
+    .brand-chip:hover, .brand-chip.active {
+      border-color: var(--pk-red); color: var(--pk-red);
+      background: rgba(155,28,28,0.04);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .pk-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .stats-bar-inner { gap: 24px; }
+      .pk-category-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    }
+    @media (max-width: 480px) {
+      .pk-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── HEADER ── -->
+  <header class="header-v2" id="navbar" role="banner">
+    <div class="nav-inner">
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="Trang chủ Sao Vàng">
+        <img src="assets/images/logo-sv-main.svg" alt="Cơ Khí Sao Vàng" class="nav-logo-img" width="44" height="44" />
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">SAO VÀNG</span>
+          <span class="nav-logo-sub">Cơ Khí & Nhôm Kính</span>
+        </div>
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="nav-menu" role="navigation" aria-label="Menu chính">
+        <a href="index.html"           class="nav-menu-link">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html"   class="nav-menu-link">Nhôm Sao Vàng</a>
+        <div class="nav-dropdown-wrap" role="none">
+          <button class="nav-menu-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
+            Lĩnh Vực Hoạt Động <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
+          </button>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan</a>
+            <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"   class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
+          </div>
+        </div>
+        <a href="du-an.html"       class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="san-pham.html"    class="nav-menu-link">Sản Phẩm</a>
+        <a href="thu-vien-sp.html" class="nav-menu-link">Thư Viện SP</a>
+        <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
+        <a href="tin-tuc.html"     class="nav-menu-link">Tin Tức</a>
+        <a href="lien-he.html"     class="nav-menu-link">Liên Hệ</a>
+      </nav>
+
+      <!-- Hotline + Hamburger -->
+      <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+        <a href="tel:0869590279" class="nav-hotline" aria-label="Gọi hotline 0869 590 279">
+          <i class="ri-phone-fill" aria-hidden="true"></i>
+          <span>0869 590 279</span>
+        </a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html"              class="nav-drawer-link">Trang Chủ</a>
+    <a href="co-khi-sao-vang.html"   class="nav-drawer-link">Cơ Khí Sao Vàng</a>
+    <a href="nhom-sao-vang.html"     class="nav-drawer-link">Nhôm Sao Vàng</a>
+    <a href="linh-vuc-hoat-dong.html" class="nav-drawer-link">Lĩnh Vực Hoạt Động</a>
+    <a href="du-an.html"             class="nav-drawer-link">Dự Án Đã Thực Hiện</a>
+    <a href="san-pham.html"          class="nav-drawer-link">Sản Phẩm</a>
+    <a href="thu-vien-sp.html"       class="nav-drawer-link">Thư Viện SP</a>
+    <a href="thu-vien-profile-nhom.html"  class="nav-drawer-link">Profile Nhôm</a>
+    <a href="tin-tuc.html"           class="nav-drawer-link">Tin Tức</a>
+    <a href="lien-he.html"           class="nav-drawer-link">Liên Hệ</a>
+    <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
+      <i class="ri-phone-fill"></i> 0869 590 279
+    </a>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow">PHỤ KIỆN NHÔM KÍNH CAO CẤP</div>
+      <h1 class="page-hero-title">Phụ Kiện <span>Chính Hãng</span><br>Đa Thương Hiệu</h1>
+      <p class="page-hero-desc">Draho · Bogo · KinLong · Janus · Cmech · Candy · Hafele và nhiều thương hiệu uy tín hàng đầu</p>
+      <div class="page-hero-breadcrumb">
+        <a href="index.html">Trang Chủ</a>
+        <span class="sep">›</span>
+        <span class="current">Phụ Kiện</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── STATS BAR ── -->
+  <div class="stats-bar">
+    <div class="stats-bar-inner">
+      <div class="stat-pill">
+        <i class="ri-medal-line"></i>
+        <div>
+          <div class="stat-pill-num">17+</div>
+          <div class="stat-pill-label">Thương Hiệu</div>
+        </div>
+      </div>
+      <div class="stat-pill">
+        <i class="ri-box-3-line"></i>
+        <div>
+          <div class="stat-pill-num">500+</div>
+          <div class="stat-pill-label">Mã Sản Phẩm</div>
+        </div>
+      </div>
+      <div class="stat-pill">
+        <i class="ri-shield-check-line"></i>
+        <div>
+          <div class="stat-pill-num">100%</div>
+          <div class="stat-pill-label">Chính Hãng</div>
+        </div>
+      </div>
+      <div class="stat-pill">
+        <i class="ri-truck-line"></i>
+        <div>
+          <div class="stat-pill-num">24h</div>
+          <div class="stat-pill-label">Giao Hàng HN</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FILTER TABS ── -->
+  <div class="filter-section">
+    <div class="filter-inner">
+      <button class="filter-tab active" data-filter="all">Tất Cả</button>
+      <button class="filter-tab" data-filter="slim">Cửa Slim</button>
+      <button class="filter-tab" data-filter="truot-quay">Trượt Quay</button>
+      <button class="filter-tab" data-filter="papo">Papo</button>
+      <button class="filter-tab" data-filter="opk">OPK</button>
+      <button class="filter-tab" data-filter="draho">Draho</button>
+      <button class="filter-tab" data-filter="bogo">Bogo</button>
+      <button class="filter-tab" data-filter="cmech">Cmech</button>
+      <button class="filter-tab" data-filter="huy-hoang">Huy Hoàng</button>
+      <button class="filter-tab" data-filter="kinlong">KinLong</button>
+      <button class="filter-tab" data-filter="janus">Janus</button>
+      <button class="filter-tab" data-filter="khoa-dt">Khóa Điện Tử</button>
+      <button class="filter-tab" data-filter="candy">Candy</button>
+      <button class="filter-tab" data-filter="sigico">Sigico</button>
+      <button class="filter-tab" data-filter="cua-kinh">Cửa Kính</button>
+      <button class="filter-tab" data-filter="hafele">Hafele</button>
+    </div>
+  </div>
+
+  <!-- ── MAIN CONTENT ── -->
+  <main id="main-content">
+    <div class="pk-layout">
+
+      <!-- ══ 1. PHỤ KIỆN CỬA SLIM ══ -->
+      <div class="pk-category" data-cat="slim">
+        <div class="pk-category-header">
+          <h2 class="pk-category-title">
+            <div class="pk-category-badge"></div>
+            Phụ Kiện Cửa Slim
+            <span class="pk-category-brand-tag">Slim System</span>
+          </h2>
+          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="pk-grid">
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim_546835771787/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim.webp" alt="Bộ Khóa Có Chìa Cửa Lùa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge">Slim</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bộ Khóa Có Chìa Cửa Lùa Slim</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-giam-chan-cua-lua-slim_377335539699/phu-kien-cua-slim-banh-xe-giam-chan-cua-lua-slim.webp" alt="Bánh Xe Giảm Chấn Cửa Lùa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bánh Xe Giảm Chấn Cửa Lùa Slim</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-treo-cua-lua-slim_093533615914/phu-kien-cua-slim-banh-xe-treo-cua-lua-slim.webp" alt="Bánh Xe Treo Cửa Lùa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bánh Xe Treo Cửa Lùa Slim</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-lua-ray-duoi-cua-slim_871152100477/phu-kien-cua-slim-banh-xe-lua-ray-duoi-cua-slim.webp" alt="Bánh Xe Lùa Ray Dưới Cửa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bánh Xe Lùa Ray Dưới Cửa Slim</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-dan-huong-duoi-nen-cua-lua-slim_735361595727/phu-kien-cua-slim-banh-xe-dan-huong-duoi-nen-cua-lua-slim.webp" alt="Bánh Xe Dẫn Hướng Dưới Nền Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bánh Xe Dẫn Hướng Dưới Nền Slim</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-slim-bat-dai-treo-banh-xe-co-day-curoa-cho-cua-lua-slim_441839919951/phu-kien-cua-slim-bat-dai-treo-banh-xe-co-day-curoa-cho-cua-lua-slim.webp" alt="Bát Dài Treo Bánh Xe Có Dây Curoa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bát Dài Treo Bánh Xe Có Dây Curoa Slim</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ 2. PHỤ KIỆN CỬA TRƯỢT QUAY ══ -->
+      <div class="pk-category" data-cat="truot-quay">
+        <div class="pk-category-header">
+          <h2 class="pk-category-title">
+            <div class="pk-category-badge"></div>
+            Phụ Kiện Cửa Trượt Quay
+          </h2>
+          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="pk-grid">
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-ban-le-cua-truot-quay-mau-bac_040378089022/phu-kien-cua-truot-quay-ban-le-cua-truot-quay-mau-bac.webp" alt="Bản Lề Cửa Trượt Quay Màu Bạc" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề Cửa Trượt Quay Màu Bạc</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-ban-le-cua-truot-quay-mau-den_441739774000/phu-kien-cua-truot-quay-ban-le-cua-truot-quay-mau-den.webp" alt="Bản Lề Cửa Trượt Quay Màu Đen" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề Cửa Trượt Quay Màu Đen</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-banh-xe-dan-huong-duoi-cua-truot-quay_158671608771/phu-kien-cua-truot-quay-banh-xe-dan-huong-duoi-cua-truot-quay.webp" alt="Bánh Xe Dẫn Hướng Dưới Cửa Trượt Quay" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bánh Xe Dẫn Hướng Dưới Cửa Trượt Quay</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-bo-chuyen-doi-tu-mo-sang-truot-cua-truot-quay_338268378578/phu-kien-cua-truot-quay-bo-chuyen-doi-tu-mo-sang-truot-cua-truot-quay.webp" alt="Bộ Chuyển Đổi Từ Mở Sang Trượt" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bộ Chuyển Đổi Từ Mở Sang Trượt</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ 3. PHỤ KIỆN DRAHO ══ -->
+      <div class="pk-category" data-cat="draho">
+        <div class="pk-category-header">
+          <h2 class="pk-category-title">
+            <div class="pk-category-badge"></div>
+            Phụ Kiện Draho
+            <span class="pk-category-brand-tag">DRAHO</span>
+          </h2>
+          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="pk-grid">
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-nam-cua-so-f34a-f34eu30-_411206676397/tay-nam-cua-so-f34a-f34eu30-.webp" alt="Tay Nắm Cửa Sổ F34A" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge">Draho</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Tay Nắm Cửa Sổ F34A (F34EU30)</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-thanh-truyen-dong-lg12_998645536953/phu-kien-draho-thanh-truyen-dong-lg12.webp" alt="Thanh Truyền Động LG12 Draho" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Thanh Truyền Động LG12 Draho</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-vau-ham-chot-cua-f14ci_903359436215/phu-kien-draho-vau-ham-chot-cua-f14ci.webp" alt="Vấu Hãm Chốt Cửa F14CI" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Vấu Hãm Chốt Cửa F14CI</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-tay-nam-cua-di-pm-23_088443078249/phu-kien-draho-tay-nam-cua-di-pm-23.webp" alt="Tay Nắm Cửa Đi PM-23" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Tay Nắm Cửa Đi PM-23</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-bung-khoa-da-diem-cua-di-2885c1_878510258593/phu-kien-draho-bung-khoa-da-diem-cua-di-2885c1.webp" alt="Bụng Khóa Đa Điểm 2885C1" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bụng Khóa Đa Điểm Cửa Đi 2885C1</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-loi-khoa-2-dau-chia-cua-di-draho_551097456721/phu-kien-draho-loi-khoa-2-dau-chia-cua-di-draho.webp" alt="Lõi Khóa 2 Đầu Chìa Cửa Đi Draho" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Lõi Khóa 2 Đầu Chìa Cửa Đi Draho</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ 4. PHỤ KIỆN BOGO ══ -->
+      <div class="pk-category" data-cat="bogo">
+        <div class="pk-category-header">
+          <h2 class="pk-category-title">
+            <div class="pk-category-badge"></div>
+            Phụ Kiện Bogo
+            <span class="pk-category-brand-tag">BOGO</span>
+          </h2>
+          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="pk-grid">
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d--wd24--canh-voi-khung-va-wd25--canh-voi-canh---dung-cho-he-nhom-xingfa_759119042241/ban-le-4d-wd24-canh-voi-khung-va-wd25-canh-voi-canh--dung-cho-nhom-xingfa.jpg" alt="Bản Lề 4D WD24 Cánh Khung Xingfa" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge">Bogo</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề 4D WD24 Cánh–Khung Nhôm Xingfa</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-3d-wd15--canh-khung-va-wd14--canh-canh-dung-cho-he-xingfa_537708600518/ban-le-3d-wd15-canh-khung-va-wd14-canh-canh-dung-cho-nhom-xingfa.jpg" alt="Bản Lề 3D WD15 Cánh Khung Xingfa" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề 3D WD15 Cánh–Khung Nhôm Xingfa</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d--wd12---dung-cho-nhom-he-topal-prima_551901166763/ban-le-4d-wd12--dung-cho-nhom-he-topal-prima.jpg" alt="Bản Lề 4D WD12 Nhôm Topal Prima" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề 4D WD12 Nhôm Hệ Topal Prima</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-khoa-cua-di-bogo-mau-bac-cho-cac-he-xingfa-prima-maxpro-maxal-jma60-_879423086449/bo-khoa-cua-di-bogo-mau-bac-cho-cac-he-xingfa-prima-maxpro-maxal-jma60-.jpg" alt="Bộ Khóa Cửa Đi Bogo Màu Bạc" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bộ Khóa Cửa Đi Bogo Màu Bạc (Xingfa/Prima/Maxpro)</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-khoa-mo-quay-he-slim-co-chia-bl9935a_066209420244/bo-khoa-mo-quay-he-slim-co-chia-bl9935a.webp" alt="Bộ Khóa Mở Quay Hệ Slim BL9935A" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bộ Khóa Mở Quay Hệ Slim Có Chìa BL9935A</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ 5. PHỤ KIỆN KINLONG ══ -->
+      <div class="pk-category" data-cat="kinlong">
+        <div class="pk-category-header">
+          <h2 class="pk-category-title">
+            <div class="pk-category-badge"></div>
+            Phụ Kiện KinLong
+            <span class="pk-category-brand-tag">KIN LONG</span>
+          </h2>
+          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="pk-grid">
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/thanh-truyen-dong-chinh-hcdg614_653155184627/thanh-truyen-dong-hcdg614.jpg" alt="Thanh Truyền Động HCDG614 KinLong" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge">KinLong</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Thanh Truyền Động HCDG614</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/thanh-truyen-dong-hcdg613_050488046465/thanh-truyen-dong-hcdg613.jpg" alt="Thanh Truyền Động HCDG613 KinLong" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Thanh Truyền Động HCDG613</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/chot-bat-300-giu-canh-phu-kinlong_087369851130/chot-bat-300-giu-canh-phu-kinlong.jpg" alt="Chốt Bật 300 Giữ Cánh Phụ KinLong" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Chốt Bật 300 Giữ Cánh Phụ KinLong</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-xep-truot-kinlong_224410042250/phu-kien-cua-xep-truot-kinlong.jpg" alt="Phụ Kiện Cửa Xếp Trượt KinLong" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Phụ Kiện Cửa Xếp Trượt KinLong</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-nam-cua-di-kinlong-mzs20_520301202277/tay-nam-cua-di-kinlong-mzs20.jpg" alt="Tay Nắm Cửa Đi KinLong MZS20" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Tay Nắm Cửa Đi KinLong MZS20</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-chu-a-kinlong-fc200_873717917356/ban-le-chu-a-kinlong-fc200.jpg" alt="Bản Lề Chữ A KinLong FC200" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề Chữ A KinLong FC200</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ 6. PHỤ KIỆN JANUS ══ -->
+      <div class="pk-category" data-cat="janus">
+        <div class="pk-category-header">
+          <h2 class="pk-category-title">
+            <div class="pk-category-badge"></div>
+            Phụ Kiện Janus
+            <span class="pk-category-brand-tag">JANUS</span>
+          </h2>
+          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="pk-grid">
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-canh-canh-mau-den_662265680180/phu-kien-ban-le-4d-janus-canh-canh-mau-den.webp" alt="Bản Lề 4D Janus Cánh-Cánh Màu Đen" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge">Janus</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề 4D Janus Cánh–Cánh Màu Đen</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-khung-canh-mau-den_433592559544/phu-kien-ban-le-4d-janus-khung-canh-mau-den.webp" alt="Bản Lề 4D Janus Khung-Cánh Màu Đen" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề 4D Janus Khung–Cánh Màu Đen</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-canh-canh-mau-bac_822732252256/phu-kien-ban-le-4d-janus-canh-canh-mau-bac.webp" alt="Bản Lề 4D Janus Cánh-Cánh Màu Bạc" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề 4D Janus Cánh–Cánh Màu Bạc</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-khung-canh-mau-bac_012057637236/phu-kien-ban-le-4d-janus-khung-canh-mau-bac.webp" alt="Bản Lề 4D Janus Khung-Cánh Màu Bạc" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề 4D Janus Khung–Cánh Màu Bạc</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d-janus-canh-canh-mau-xam_669803897148/phu-kien-ban-le-4d-janus-canh-canh-mau-xam.webp" alt="Bản Lề 4D Janus Cánh-Cánh Màu Xám" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề 4D Janus Cánh–Cánh Màu Xám</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-khung-canh-mau-xam_183317442702/phu-kien-ban-le-4d-janus-khung-canh-mau-xam.webp" alt="Bản Lề 4D Janus Khung-Cánh Màu Xám" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề 4D Janus Khung–Cánh Màu Xám</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ 7. PHỤ KIỆN HUY HOÀNG ══ -->
+      <div class="pk-category" data-cat="huy-hoang">
+        <div class="pk-category-header">
+          <h2 class="pk-category-title">
+            <div class="pk-category-badge"></div>
+            Phụ Kiện Huy Hoàng
+            <span class="pk-category-brand-tag">HUY HOÀNG</span>
+          </h2>
+          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="pk-grid">
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-hc-66_507984006743/khoa-tay-nam-da-diem-huy-hoang-hc-66.jpg" alt="Khóa Tay Nắm Đa Điểm HC 66" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge">Huy Hoàng</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Khóa Tay Nắm Đa Điểm HC 66</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-hc-68_414258927636/khoa-tay-nam-da-diem-huy-hoang-hc-68.jpg" alt="Khóa Tay Nắm Đa Điểm HC 68" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Khóa Tay Nắm Đa Điểm HC 68</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-apex66-ma-dong-den-american_513200872944/khoa-tay-nam-da-diem-apex66-ma-dong-den-american.jpg" alt="Khóa APEX66 Mạ Đồng Đen American" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Khóa APEX66 Mạ Đồng Đen American</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-80-ma-titan-bac_066899137126/khoa-tay-nam-da-diem-huy-hoang-80-ma-titan-bac.jpg" alt="Khóa Tay Nắm Đa Điểm HH 80 Mạ Titan Bạc" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Khóa HH 80 Mạ Titan Bạc</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ 8. PHỤ KIỆN CMECH ══ -->
+      <div class="pk-category" data-cat="cmech">
+        <div class="pk-category-header">
+          <h2 class="pk-category-title">
+            <div class="pk-category-badge"></div>
+            Phụ Kiện Cmech
+            <span class="pk-category-brand-tag">CMECH</span>
+          </h2>
+          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="pk-grid">
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/dau-khoa-bien-chiu-luc-cmech-co-num-that-dk1_133538820391/dau-kho-a-bien-8-5mm-co-truc-xoay-cmech-a090032.jpg" alt="Đầu Khóa Biên 8.5mm Cmech A090032" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge">Cmech</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Đầu Khóa Biên 8.5mm Cmech A090032</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-cua-so-cmech-ma-sat-tren-c-groove_212516217403/phu-kien-cmech-ban-le-cua-so-chu-a-60kg.webp" alt="Bản Lề Cửa Sổ Chữ A 60kg Cmech" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề Cửa Sổ Chữ A 60kg Cmech</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-thanh-truyen-dong-khoa-cua-gan-be-mat-b1_622006418921/thanh-truyen-dong-tich-hop-dau-khoa-bien-cmech-cmech-a020050.webp" alt="Thanh Truyền Động Tích Hợp Cmech A020050" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Thanh Truyền Động Tích Hợp Cmech A020050</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-ca-tay-nam-cua-so-quay-hat-c1_667821215494/luoi-ga-tay-nam-cua-so-quay-hat-dai-53mm-cmech-a110105.webp" alt="Lưỡi Gà Tay Nắm Cửa Sổ Cmech A110105" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Lưỡi Gà Tay Nắm Cửa Sổ Cmech A110105</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ 9. KHÓA ĐIỆN TỬ ══ -->
+      <div class="pk-category" data-cat="khoa-dt">
+        <div class="pk-category-header">
+          <h2 class="pk-category-title">
+            <div class="pk-category-badge"></div>
+            Khóa Điện Tử
+            <span class="pk-category-brand-tag">SMART LOCK</span>
+          </h2>
+          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="pk-grid">
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e_015859246278/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e.webp" alt="Khóa Điện Tử Xingfa 6-in-1 Viro VR-S30E" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge">Smart</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Khóa Điện Tử Xingfa 6-in-1 Viro Smartlock VR-S30E</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ 10. PHỤ KIỆN CANDY ══ -->
+      <div class="pk-category" data-cat="candy">
+        <div class="pk-category-header">
+          <h2 class="pk-category-title">
+            <div class="pk-category-badge"></div>
+            Phụ Kiện Candy
+            <span class="pk-category-brand-tag">CANDY</span>
+          </h2>
+          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="pk-grid">
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-xam-xam-anh-kim-den-bong-den-nham-nau-trang-sua-loai-moi_708874228621/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-xam-xam-anh-kim-den-bong-den-nham-nau-trang-sua-loai-moi.webp" alt="Bản Lề Lá Lớn Candy Đa Màu" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge">Candy</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề Lá Lớn Candy Đa Màu (Xám/Đen/Nâu/Trắng Sữa)</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-vang-gold-loai-moi_683947609574/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-vang-gold-loai-moi.webp" alt="Bản Lề Lá Lớn Candy Màu Vàng Gold" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề Lá Lớn Candy Màu Vàng Gold</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ 11. PHỤ KIỆN OPK ══ -->
+      <div class="pk-category" data-cat="opk">
+        <div class="pk-category-header">
+          <h2 class="pk-category-title">
+            <div class="pk-category-badge"></div>
+            Phụ Kiện OPK
+            <span class="pk-category-brand-tag">OPK</span>
+          </h2>
+          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div class="pk-grid">
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-opk-phu-kien-cua-lua-slim-1-canh-giam-chan-2-dau_623491083600/phu-kien-opk-phu-kien-cua-lua-slim-1-canh-giam-chan-2-dau.webp" alt="OPK Cửa Lùa Slim 1 Cánh Giảm Chấn 2 Đầu" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge">OPK</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">OPK Cửa Lùa Slim 1 Cánh Giảm Chấn 2 Đầu</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+          <div class="pk-card">
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-opk-phu-kien-cua-nhom-slim-opk-lua-2-canh_974529964333/phu-kien-opk-phu-kien-cua-nhom-slim-opk-lua-2-canh.webp" alt="OPK Cửa Nhôm Slim Lùa 2 Cánh" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">OPK Cửa Nhôm Slim Lùa 2 Cánh</div>
+              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end pk-layout -->
+
+    <!-- ── BRAND CHIPS ── -->
+    <div class="brands-section">
+      <div class="brands-title">Các thương hiệu phụ kiện chúng tôi cung cấp</div>
+      <div class="brands-grid">
+        <a href="lien-he.html" class="brand-chip">Draho</a>
+        <a href="lien-he.html" class="brand-chip">Bogo</a>
+        <a href="lien-he.html" class="brand-chip">KinLong</a>
+        <a href="lien-he.html" class="brand-chip">Janus</a>
+        <a href="lien-he.html" class="brand-chip">Cmech</a>
+        <a href="lien-he.html" class="brand-chip">Huy Hoàng</a>
+        <a href="lien-he.html" class="brand-chip">Candy</a>
+        <a href="lien-he.html" class="brand-chip">Papo</a>
+        <a href="lien-he.html" class="brand-chip">OPK</a>
+        <a href="lien-he.html" class="brand-chip">Sigico</a>
+        <a href="lien-he.html" class="brand-chip">Hafele</a>
+        <a href="lien-he.html" class="brand-chip">YKEBR</a>
+        <a href="lien-he.html" class="brand-chip">3H</a>
+        <a href="lien-he.html" class="brand-chip">Viro Smartlock</a>
+        <a href="lien-he.html" class="brand-chip">Slim System</a>
+      </div>
+    </div>
+
+    <!-- ── CTA BANNER ── -->
+    <section class="cta-banner">
+      <div class="cta-inner">
+        <div class="cta-eyebrow">TƯ VẤN MIỄN PHÍ</div>
+        <h2 class="cta-title">Cần Tư Vấn Chọn Phụ Kiện<br>Phù Hợp Công Trình?</h2>
+        <p class="cta-desc">Đội ngũ kỹ thuật Sao Vàng sẽ tư vấn miễn phí loại phụ kiện phù hợp với từng hệ nhôm, tải trọng và điều kiện sử dụng cụ thể.</p>
+        <div class="cta-btns">
+          <a href="tel:0869590279" class="btn-gold">
+            <i class="ri-phone-fill"></i> 0869 590 279
+          </a>
+          <a href="lien-he.html" class="btn-outline">
+            <i class="ri-mail-send-line"></i> Gửi Yêu Cầu
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner section-container">
+      <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.5fr;gap:40px;">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="index.html" class="footer-brand" aria-label="Trang chủ Sao Vàng">
+            <img src="assets/images/logo-sv-main.svg" alt="Sao Vàng Logo" width="52" height="52" />
+            <div>
+              <div class="footer-brand-name">SAO VÀNG</div>
+              <div class="footer-brand-tagline">Cơ Khí & Nhôm Kính</div>
+            </div>
+          </a>
+          <p class="footer-desc">Cung cấp đầy đủ phụ kiện nhôm kính chính hãng từ các thương hiệu uy tín hàng đầu. Tư vấn miễn phí, giao hàng nhanh tại Hà Nội.</p>
+        </div>
+
+        <!-- Col 2: Phụ kiện -->
+        <div>
+          <h4 class="footer-col-title">Phụ Kiện</h4>
+          <div class="footer-links">
+            <a href="phu-kien.html" class="footer-link">Tất Cả Phụ Kiện</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện Draho</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện Bogo</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện KinLong</a>
+            <a href="lien-he.html" class="footer-link">Khóa Điện Tử</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Sản phẩm -->
+        <div>
+          <h4 class="footer-col-title">Sản Phẩm</h4>
+          <div class="footer-links">
+            <a href="co-khi-sao-vang.html" class="footer-link">Cơ Khí Sao Vàng</a>
+            <a href="nhom-sao-vang.html" class="footer-link">Nhôm Sao Vàng</a>
+            <a href="san-pham.html" class="footer-link">Sản Phẩm</a>
+            <a href="du-an.html" class="footer-link">Dự Án</a>
+            <a href="tin-tuc.html" class="footer-link">Tin Tức</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Hỗ trợ -->
+        <div>
+          <h4 class="footer-col-title">Hỗ Trợ</h4>
+          <div class="footer-links">
+            <a href="gioi-thieu.html" class="footer-link">Giới thiệu</a>
+            <a href="linh-vuc-hoat-dong.html" class="footer-link">Lĩnh vực hoạt động</a>
+            <a href="thu-vien-sp.html" class="footer-link">Thư viện SP</a>
+            <a href="bao-gia.html" class="footer-link">Báo giá</a>
+            <a href="lien-he.html" class="footer-link">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội.</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-line" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color: inherit; text-decoration: none;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <a href="mailto:info@cokhisaovang.com" style="color: inherit; text-decoration: none;">info@cokhisaovang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>Thứ 2 - Thứ 7: 8:00 - 17:00</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. MST: 0110808047.</span>
+        <span>Phụ Kiện Nhôm Kính Chính Hãng</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── SCRIPTS ── -->
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/modules/navbar.js" defer></script>
+  <script>
+    // Filter tab interaction
+    document.querySelectorAll('.filter-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        document.querySelectorAll('.pk-category').forEach(cat => {
+          if (filter === 'all' || cat.dataset.cat === filter) {
+            cat.style.display = '';
+          } else {
+            cat.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
