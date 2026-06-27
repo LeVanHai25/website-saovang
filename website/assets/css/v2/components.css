@@ -1393,6 +1393,15 @@
   transition: opacity var(--sv-transition-fast), transform var(--sv-transition-fast);
   z-index: var(--sv-z-dropdown);
 }
+.nav-dropdown-menu::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: transparent;
+}
 .nav-dropdown-wrap:hover .nav-dropdown-menu {
   opacity: 1;
   pointer-events: auto;
