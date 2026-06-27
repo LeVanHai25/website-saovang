@@ -614,6 +614,9 @@
         body {
           padding-top: 190px !important;
         }
+        main {
+          padding-top: 0 !important;
+        }
         .header, .header-v2 {
           position: fixed !important;
           top: 120px !important;
