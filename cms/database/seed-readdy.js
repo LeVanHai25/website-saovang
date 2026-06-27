@@ -59,7 +59,7 @@ async function seed() {
 
     { name: 'Kính cường lực & Phụ kiện', slug: 'kinh-cuong-luc', content_type: 'product', color: '#1a3a5c' },
     { name: 'Sắt mỹ thuật chế tác', slug: 'sat-my-thuat-che-tac', content_type: 'product', color: '#8B0000' },
-    { name: 'Inox & Phụ kiện du thuyền', slug: 'inox-phu-kien-du-thuyen', content_type: 'product', color: '#c8860a' },
+    { name: 'Gia công Inox', slug: 'gia-cong-inox', content_type: 'product', color: '#c8860a' },
     
     // Article categories
     { name: 'Xu hướng kiến trúc', slug: 'xu-huong-kien-truc', content_type: 'article', color: '#c8860a' },
@@ -358,11 +358,11 @@ async function seed() {
     { type:'product', title:'Cổng nhôm đúc chân không hoàng gia', slug:'cong-nhom-duc-hoang-gia',     status:'published', category:'Sắt mở rộng', excerpt:'Đúc chân không nguyên khối hợp kim nhôm, sơn phủ đồng cổ sang trọng chống chịu thời tiết.', thumbnail:'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80' },
     { type:'product', title:'Cầu thang xoắn lốc uốn nghệ thuật', slug:'cau-thang-xoan-uon-my-thuat',  status:'published', category:'Sắt mở rộng', excerpt:'Cầu thang kết cấu thép uốn nghệ thuật, tay vịn bọc đồng hoặc mạ vàng titan đẳng cấp.', thumbnail:'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80' },
     { type:'product', title:'Lan can kính cường lực pad âm sàn',   slug:'lan-can-kinh-pad-am',         status:'published', category:'Kính cường lực & Phụ kiện', excerpt:'Lan can kính không tay vịn sử dụng pad inox 304 bắt âm sàn, kính dán 2 lớp cường lực 15.38mm.', thumbnail:'/assets/images/product-railing.png' },
-    { type:'product', title:'Ống inox & Phụ kiện Marine 316L',    slug:'inox-marine-316l',            status:'published', category:'Inox & Phụ kiện du thuyền', excerpt:'Ống inox 316L chống ăn mòn lỗ trong môi trường nước biển, bề mặt bóng gương tinh xảo.', thumbnail:'/assets/images/product-inox-pipe.png' },
+     { type:'product', title:'Ống inox & Phụ kiện Inox Công Nghiệp',    slug:'inox-marine-316l',            status:'published', category:'Gia công Inox', excerpt:'Ống inox 316L, 304 tiêu chuẩn công nghiệp và vi sinh, khả năng chịu áp lực cao, kháng axit vượt trội.', thumbnail:'/assets/images/product-inox-pipe.png' },
     
     // Articles (Preserve existing high-quality articles)
     { type:'article', title:'Xu hướng sử dụng nhôm kính kiến trúc 2026', slug:'xu-huong-nhom-kinh-2026', status:'published', category:'Xu hướng kiến trúc', excerpt:'Tổng hợp các xu hướng thiết kế vách kính tràn viền và nhôm slim hiện đại.' },
-    { type:'article', title:'Tại sao Inox 316L lại bắt buộc cho du thuyền?',  slug:'tai-sao-inox-316l-du-thuyen', status:'published', category:'Kiến thức kỹ thuật', excerpt:'Phân tích khoa học sự kết hợp hoàn hảo giữa thẩm mỹ bóng bẩy và khả năng kháng nước biển mặn ăn mòn lỗ.' },
+    { type:'article', title:'Tại sao Inox 316L lại bắt buộc cho bồn chứa vi sinh?',  slug:'tai-sao-inox-316l-du-thuyen', status:'published', category:'Kiến thức kỹ thuật', excerpt:'Phân tích tính chất hóa học và độ nhẵn bề mặt của Inox 316L giúp chống bám bẩn vi khuẩn trong chế biến thực phẩm.' },
     { type:'article', title:'Sao Vàng bàn giao tổ hợp nhôm kính đảo Vinhomes', slug:'ban-giao-to-hop-nhom-kinh', status:'published', category:'Tin tức Sao Vàng', excerpt:'Bàn giao thành công gói thầu hơn 10 tỷ đồng nhôm kính cao cấp biệt thự sinh thái cao cấp.' }
   ];
 

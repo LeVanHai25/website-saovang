@@ -40,27 +40,27 @@
       "sector": "mechanical",
       "system": "structural-inox",
       "materials": ["stainless-steel-316"],
-      "image": "assets/images/project-saobien-yacht.png",
+      "image": "assets/images/welding_work.png",
       "translations": {
         "vi": {
-          "title": "Gia Công Inox Du Thuyền 28m 'Sao Biển'",
-          "description": "Lan can, tay vịn, cầu thang inox Marine 316L uốn cong đánh bóng gương gương cao cấp.",
-          "location": "Vịnh Hạ Long, Quảng Ninh",
-          "scale": "Hơn 120m lan can cong 3D",
+          "title": "Gia Công Bồn Bể &amp; Hệ Thống Inox Vi Sinh",
+          "description": "Chế tạo bồn bể chứa áp lực inox 304/316L, hệ thống đường ống inox vi sinh kết cấu hàn TIG độ thẩm mỹ cao cho nhà máy.",
+          "location": "KCN Bắc Từ Liêm, Hà Nội",
+          "scale": "Tổ hợp 8 bồn chứa vi sinh công nghiệp",
           "value": "1.8 Tỷ VNĐ"
         },
         "en": {
-          "title": "Marine Stainless Steel - 28m Yacht 'Sao Bien'",
-          "description": "Premium 3D bent and mirror-polished Marine 316L stainless steel railings and stairs.",
-          "location": "Ha Long Bay, Quang Ninh",
-          "scale": "Over 120m of 3D bent railings",
+          "title": "Industrial Stainless Steel Tank &amp; Piping System",
+          "description": "Fabrication of 304/316L stainless steel pressure tanks and sanitary piping with high-quality TIG welding.",
+          "location": "North Tu Liem IP, Hanoi",
+          "scale": "Assembly of 8 industrial sanitary tanks",
           "value": "$78,000 USD"
         },
         "jp": {
-          "title": "28m豪華ヨット「サオヴィエト」ステンレス艤装",
-          "description": "高度な3D曲げ加工と鏡面研磨を施した海洋グレードMarine 316Lステンレス手すり。",
-          "location": "クアンニン省ハロン湾",
-          "scale": "3D手すり総延長120m以上",
+          "title": "産業用ステンレス製タンク・配管システム",
+          "description": "製薬・食品工場向けの高品質TIG溶接によるステンレス製圧力タンクおよびサニタリー配管の製造。",
+          "location": "ハノイ市バクツリエム工業団地",
+          "scale": "産業用サニタリータンク8基組立",
           "value": "1,170万円"
         }
       }
