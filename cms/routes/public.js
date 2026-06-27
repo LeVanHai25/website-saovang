@@ -42,12 +42,25 @@ router.get('/projects', (req, res) => {
   const params = [];
 
   if (category && category !== 'all') {
-    // Match by name OR by slug of the linked category row
-    where.push(`(c.category = ? OR EXISTS (
-      SELECT 1 FROM categories cat
-      WHERE cat.name = c.category AND cat.slug = ? AND cat.content_type = 'project'
-    ))`);
-    params.push(category, category);
+    if (category === 'co-khi') {
+      where.push(`EXISTS (
+        SELECT 1 FROM categories cat
+        WHERE cat.name = c.category AND cat.content_type = 'project'
+        AND (cat.slug LIKE '%co-khi%' OR cat.slug LIKE '%sat%' OR cat.slug LIKE '%thep%' OR cat.slug LIKE '%inox%' OR cat.slug LIKE '%cau-thang%' OR cat.slug LIKE '%lan-can%' OR cat.slug LIKE '%cong%' OR cat.slug LIKE '%hang-rao%')
+      )`);
+    } else if (category === 'nhom-kinh') {
+      where.push(`EXISTS (
+        SELECT 1 FROM categories cat
+        WHERE cat.name = c.category AND cat.content_type = 'project'
+        AND (cat.slug LIKE '%nhom%' OR cat.slug LIKE '%kinh%' OR cat.slug LIKE '%cua%' OR cat.slug LIKE '%vach%')
+      )`);
+    } else {
+      where.push(`(c.category = ? OR EXISTS (
+        SELECT 1 FROM categories cat
+        WHERE cat.name = c.category AND cat.slug = ? AND cat.content_type = 'project'
+      ))`);
+      params.push(category, category);
+    }
   }
 
   const rows = db.prepare(`

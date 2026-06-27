@@ -20,93 +20,38 @@
   .projects-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: clamp(16px, 3.5vw, 32px);
+    gap: clamp(20px, 3.5vw, 32px);
   }
   .proj-item {
     position: relative; 
-    border-radius: 12px; 
+    border-radius: 16px; 
     overflow: hidden;
     cursor: pointer; 
-    aspect-ratio: 4/3; 
-    background: var(--dark-2);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
     transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    text-decoration: none;
+    color: inherit;
   }
   .proj-item:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
   }
   .proj-item img { 
     width: 100%; 
     height: 100%; 
     object-fit: cover; 
-    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.8s; 
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); 
   }
   .proj-item:hover img { 
-    transform: scale(1.05); 
-    filter: brightness(0.9);
+    transform: scale(1.04); 
   }
   .proj-info {
-    position: absolute; 
-    inset: 0;
-    background: linear-gradient(0deg, rgba(13,13,13,0.96) 0%, rgba(13,13,13,0.5) 60%, transparent 100%);
-    display: flex; 
-    flex-direction: column; 
-    justify-content: flex-end;
-    padding: clamp(16px, 3vw, 26px); 
-    color: var(--white);
-    opacity: 0; 
-    transform: translateY(15px);
-    transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+    display: none; /* Hide old hover overlay */
   }
-  .proj-item:hover .proj-info { 
-    opacity: 1; 
-    transform: translateY(0);
-  }
-  .proj-info-cat { 
-    font-family: var(--ff-head); 
-    font-size: 9px; 
-    font-weight: 800; 
-    letter-spacing: .15em; 
-    text-transform: uppercase; 
-    color: var(--gold-light); 
-    margin-bottom: 8px; 
-    background: rgba(200, 134, 10, 0.15);
-    padding: 3px 10px;
-    border-radius: 20px;
-    display: inline-block;
-    width: fit-content;
-  }
-  .proj-info h3 { 
-    font-family: var(--ff-head); 
-    font-size: clamp(14px, 2vw, 17px); 
-    font-weight: 700; 
-    line-height: 1.35; 
-    margin-bottom: 6px; 
-    color: var(--white);
-  }
-  .proj-info p { 
-    font-size: 12px; 
-    color: rgba(255,255,255,0.7); 
-    font-weight: 300; 
-    line-height: 1.5;
-  }
-  .proj-info-link { 
-    display: inline-flex; 
-    align-items: center; 
-    gap: 6px; 
-    font-family: var(--ff-head); 
-    font-size: 10px; 
-    font-weight: 800; 
-    color: var(--gold-light); 
-    margin-top: 14px; 
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  /* Featured project (first card) */
-  .proj-item.featured { aspect-ratio: 16/9; }
 
   /* Stats bar */
   .project-stats {
