@@ -12,13 +12,27 @@ async function runSeed() {
   console.log('🗃️ Running database seeder (idempotent — safe to always run)...');
   const seedProcess = spawn('node', ['cms/database/seed-readdy.js'], { stdio: 'inherit', shell: true });
   
-  return new Promise((resolve, reject) => {
+  await new Promise((resolve, reject) => {
     seedProcess.on('close', (code) => {
       if (code === 0) {
-        console.log('✅ Database seeding completed successfully.');
+        console.log('✅ Database seeding (readdy) completed.');
         resolve();
       } else {
-        reject(new Error(`Database seeding failed with exit code: ${code}`));
+        reject(new Error(`Database seeding (readdy) failed with exit code: ${code}`));
+      }
+    });
+  });
+
+  console.log('📰 Running news seeder...');
+  const newsProcess = spawn('node', ['cms/database/seed-news-daiphuc.js'], { stdio: 'inherit', shell: true });
+  
+  await new Promise((resolve, reject) => {
+    newsProcess.on('close', (code) => {
+      if (code === 0) {
+        console.log('✅ News seeding completed successfully.');
+        resolve();
+      } else {
+        reject(new Error(`News seeding failed with exit code: ${code}`));
       }
     });
   });
