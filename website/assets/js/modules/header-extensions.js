@@ -1,6 +1,7 @@
 /* ════════════════════════════════════════════════════════════════
    SAO VÀNG — modules/header-extensions.js
-   Tự động tích hợp Thanh thông tin đầu trang và Thanh gửi số điện thoại liên hệ nhanh (Callback Bar)
+   Tự động tích hợp Thanh thông tin đầu trang, Thanh gửi số điện thoại liên hệ nhanh (Callback Bar),
+   và Footer đồng bộ thiết kế mới (Dai Phuc Style) trên toàn bộ hệ thống
    ════════════════════════════════════════════════════════════════ */
 
 (function () {
@@ -28,8 +29,10 @@
       .brand-text-block,
       .header-top-contact-right,
       .nav-menu-link,
-      .footer-col-title,
-      .footer-logo-name,
+      .footer-column-title,
+      .partners-title,
+      .partner-label,
+      .footer-bottom-copyright,
       .sticky-callback-title,
       .sticky-callback-btn,
       .sticky-callback-hotline-link {
@@ -198,7 +201,7 @@
         text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6) !important;
       }
 
-      /* ── Footer Red Background Image ── */
+      /* ── Footer Red Background Image & Layout (Dai Phuc Style) ── */
       .footer-v2, footer, .footer {
         background-image: linear-gradient(rgba(12, 12, 12, 0.62), rgba(12, 12, 12, 0.62)), url('assets/images/bg-red-footer.jpg') !important;
         background-size: cover !important;
@@ -206,25 +209,180 @@
         background-repeat: no-repeat !important;
         position: relative;
         border-top: 3px solid #E2B13C !important;
-      }
-      .footer-v2, footer, .footer,
-      .footer-address, .footer-contact-item, .footer-link,
-      .footer-bottom, .footer-bottom span, .footer-bottom a {
         color: rgba(255, 255, 255, 0.8) !important;
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
+        padding-top: 40px !important;
+        padding-bottom: 24px !important;
       }
-      .footer-col-title, .footer-logo-name {
-        color: #E2B13C !important;
-        text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7) !important;
-        font-weight: 800 !important;
+
+      /* ── Footer Partners Section ── */
+      .footer-partners-section {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        padding-bottom: 24px;
+        margin-bottom: 30px;
+        text-align: center;
       }
-      .footer-link:hover {
-        color: #fff !important;
-        text-shadow: 0 1px 5px rgba(226, 177, 60, 0.5) !important;
+      .partners-title {
+        font-size: 15px;
+        font-weight: 800;
+        color: #E2B13C;
+        letter-spacing: 0.15em;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        margin-top: 0;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
       }
-      .footer-social {
-        background: rgba(255, 255, 255, 0.1) !important;
-        border-color: rgba(255, 255, 255, 0.18) !important;
+      .partners-slider-container {
+        overflow-x: auto;
+        padding-bottom: 8px;
+      }
+      .partners-slider-container::-webkit-scrollbar {
+        height: 6px;
+      }
+      .partners-slider-container::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 3px;
+      }
+      .partners-slider-container::-webkit-scrollbar-thumb {
+        background: rgba(226, 177, 60, 0.3);
+        border-radius: 3px;
+      }
+      .partners-track {
+        display: flex;
+        gap: 12px;
+        justify-content: space-between;
+        min-width: 1040px;
+      }
+      .partner-card {
+        background: #fff;
+        border-radius: 6px;
+        padding: 8px;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-sizing: border-box;
+      }
+      .partner-logo-box {
+        height: 48px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f5f5f5;
+        border-radius: 4px;
+        font-size: 13.5px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        border: 1px solid #e0e0e0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif !important;
+      }
+      .partner-label {
+        font-size: 11.5px;
+        color: #333;
+        font-weight: 700;
+        margin-top: 6px;
+        text-align: center;
+      }
+
+      /* ── Footer Columns Grid ── */
+      .footer-columns-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 32px;
+        margin-bottom: 30px;
+        text-align: left;
+      }
+      .footer-column {
+        display: flex;
+        flex-direction: column;
+      }
+      .footer-column-title {
+        font-size: 14px;
+        font-weight: 800;
+        color: #E2B13C;
+        letter-spacing: 0.12em;
+        margin-bottom: 18px;
+        text-transform: uppercase;
+        border-left: 3px solid #E2B13C;
+        padding-left: 8px;
+        line-height: 1.2;
+        margin-top: 0;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+      }
+      .footer-contact-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .contact-list-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+        font-size: 13px;
+        color: rgba(255,255,255,0.85);
+        line-height: 1.5;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      }
+      .contact-list-item i {
+        color: #E2B13C;
+        font-size: 15px;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .footer-links-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .footer-links-list a {
+        font-size: 13px;
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        transition: color 0.25s ease, padding-left 0.25s ease;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+      }
+      .footer-links-list a:hover {
+        color: #E2B13C;
+        padding-left: 4px;
+      }
+      .footer-social-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.08);
+        border: 1px solid rgba(255,255,255,0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        text-decoration: none;
+        font-size: 14px;
+        transition: all 0.25s ease;
+      }
+      .footer-social-icon:hover {
+        background: #E2B13C !important;
+        border-color: #E2B13C !important;
+        color: #121212 !important;
+        transform: translateY(-2px);
+      }
+
+      /* ── Footer Bottom Copyright ── */
+      .footer-bottom-copyright {
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        padding-top: 20px;
+        text-align: center;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.6);
+        line-height: 1.6;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+      }
+      .footer-bottom-copyright a {
+        color: inherit;
+        text-decoration: none;
       }
 
       /* ── Sticky Callback Bar (Căn lề trái & Rút gọn khoảng trống) ── */
@@ -416,6 +574,24 @@
         body {
           padding-bottom: 90px !important;
         }
+        .footer-columns-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 24px;
+        }
+      }
+      @media (max-width: 600px) {
+        .footer-columns-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .partners-track {
+          min-width: auto;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .partner-card {
+          flex: 0 0 calc(50% - 6px);
+        }
       }
     `;
     document.head.appendChild(styleSheet);
@@ -579,6 +755,171 @@
     });
   }
 
+  // Render unified Footer (Dai Phuc Style with Sao Vang info & Partners)
+  function renderFooter() {
+    const footerEl = document.querySelector('.footer-v2, footer, .footer');
+    if (!footerEl) return;
+
+    footerEl.innerHTML = `
+      <div class="sv-container" style="max-width: 1360px; margin-inline: auto; padding-inline: 24px; box-sizing: border-box;">
+        
+        <!-- 1. PARTNERS SECTION -->
+        <div class="footer-partners-section">
+          <h3 class="partners-title">ĐƠN VỊ ĐỐI TÁC CỦA CHÚNG TÔI</h3>
+          <div class="partners-slider-container">
+            <div class="partners-track">
+              <div class="partner-card">
+                <div class="partner-logo-box" style="font-weight: 900; color: #555;">NHA XINH</div>
+                <div class="partner-label">Nội thất nhà xinh</div>
+              </div>
+              <div class="partner-card">
+                <div class="partner-logo-box" style="font-weight: 800; color: #e05206; font-style: italic;">DRAHO</div>
+                <div class="partner-label">Phụ kiện Draho</div>
+              </div>
+              <div class="partner-card">
+                <div class="partner-logo-box" style="font-weight: 800; color: #333; letter-spacing: 1px;">bogo</div>
+                <div class="partner-label">Phụ kiện Bogo</div>
+              </div>
+              <div class="partner-card">
+                <div class="partner-logo-box" style="font-weight: 800; color: #8B0000;">ZHONGKAI</div>
+                <div class="partner-label">Nhôm Zongkai</div>
+              </div>
+              <div class="partner-card">
+                <div class="partner-logo-box" style="font-weight: 800; color: #d67d00;">ADLER</div>
+                <div class="partner-label">Phụ kiện Adler</div>
+              </div>
+              <div class="partner-card">
+                <div class="partner-logo-box" style="font-weight: 900; color: #b21f1f;">XINGFA</div>
+                <div class="partner-label">Nhôm Xingfa</div>
+              </div>
+              <div class="partner-card">
+                <div class="partner-logo-box" style="font-weight: 800; color: #0e5a37;">COTECCONS</div>
+                <div class="partner-label">Nhà thầu Coteccons</div>
+              </div>
+              <div class="partner-card">
+                <div class="partner-logo-box" style="font-weight: 900; color: #0b4182;">KIN LONG</div>
+                <div class="partner-label">Phụ kiện KinLong</div>
+              </div>
+              <div class="partner-card">
+                <div class="partner-logo-box" style="font-weight: 900; color: #033a8c; font-style: italic;">APOLLO</div>
+                <div class="partner-label">Silicone Apollo</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. FOUR COLUMNS SECTION -->
+        <div class="footer-columns-grid">
+          
+          <!-- Column 1: THÔNG TIN LIÊN HỆ -->
+          <div class="footer-column">
+            <h4 class="footer-column-title">THÔNG TIN LIÊN HỆ</h4>
+            <div class="footer-contact-list">
+              <div class="contact-list-item">
+                <i class="ri-building-4-fill"></i>
+                <strong style="color: #fff;">CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG</strong>
+              </div>
+              <div class="contact-list-item">
+                <i class="ri-map-pin-2-fill"></i>
+                <span>Địa chỉ: Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam</span>
+              </div>
+              <div class="contact-list-item">
+                <i class="ri-file-list-3-fill"></i>
+                <span>Mã số thuế: 0110808047</span>
+              </div>
+              <div class="contact-list-item">
+                <i class="ri-phone-fill"></i>
+                <span>Hotline: <a href="tel:0869590279" style="color: inherit; text-decoration: none; font-weight: 700;">0869 590 279</a></span>
+              </div>
+              <div class="contact-list-item">
+                <i class="ri-mail-fill"></i>
+                <span>Email: <a href="mailto:cokhisaovangvn@gmail.com" style="color: inherit; text-decoration: none;">cokhisaovangvn@gmail.com</a></span>
+              </div>
+              <div class="contact-list-item">
+                <i class="ri-global-fill"></i>
+                <span>Website: <a href="https://www.CoKhiSaoVang.com" target="_blank" style="color: inherit; text-decoration: none;">www.CoKhiSaoVang.com</a></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 2: ĐIỀU KHOẢN SỬ DỤNG -->
+          <div class="footer-column">
+            <h4 class="footer-column-title">ĐIỀU KHOẢN SỬ DỤNG</h4>
+            <div class="footer-links-list">
+              <a href="#">Chính sách và Quy định chung</a>
+              <a href="#">Quy định và hình thức thanh toán</a>
+              <a href="#">Chính sách vận chuyển và giao hàng</a>
+              <a href="#">Chính sách bảo mật thông tin</a>
+              <a href="#">Chính sách đổi trả và bảo hành</a>
+              <a href="#">Hướng dẫn mua hàng online</a>
+            </div>
+            <div class="footer-badges-row" style="display: flex; gap: 10px; margin-top: 15px; align-items: center;">
+              <a href="#" target="_blank" rel="noopener" title="Đã đăng ký Bộ Công Thương">
+                <img src="https://images.squarespace-cdn.com/content/v1/5ebd210bf9b2e04db140f8bf/1618476298514-W8FUP0G71J8VZZDCOB4A/logoSaleNoti.png" alt="Bộ Công Thương" style="height: 36px; width: auto; background: transparent;" />
+              </a>
+              <a href="#" target="_blank" rel="noopener" title="DMCA Protected">
+                <img src="https://images.dmca.com/Badges/dmca_protected_sml_120m.png" alt="DMCA Protected" style="height: 36px; width: auto;" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 3: SẢN PHẨM -->
+          <div class="footer-column">
+            <h4 class="footer-column-title">SẢN PHẨM</h4>
+            <div class="footer-links-list">
+              <a href="cua-nhom-kinh.html">Cửa Nhôm Xingfa</a>
+              <a href="cua-nhom-kinh.html">Cửa Trượt Quay</a>
+              <a href="cua-nhom-kinh.html">Cửa Nhôm Hệ Slim</a>
+              <a href="cua-nhom-kinh.html">Cửa Nhôm Slim Cover</a>
+              <a href="lan-can-kinh.html">Cửa Kính Cường Lực</a>
+              <a href="cua-nhom-kinh.html">Cửa Nhôm Thủy Lực</a>
+              <a href="cua-nhom-kinh.html">Cửa Nhôm Maxpro.JP</a>
+              <a href="vach-kinh.html">Phòng Tắm Kính</a>
+              <a href="cau-thang-xoan.html">Cầu Thang - Lan Can Kính</a>
+              <a href="cua-nhom-kinh.html">Cửa Tự Động</a>
+            </div>
+          </div>
+
+          <!-- Column 4: GỬI THÔNG TIN TƯ VẤN -->
+          <div class="footer-column">
+            <h4 class="footer-column-title">GỬI THÔNG TIN TƯ VẤN</h4>
+            <p style="font-size: 13px; color: rgba(255,255,255,0.75); line-height: 1.5; margin-bottom: 12px; margin-top: 0;">
+              Hãy để lại địa chỉ email của bạn để nhận thông tin tư vấn, báo giá sản phẩm.
+            </p>
+            <form class="footer-newsletter-form" style="display: flex; align-items: stretch; gap: 6px; margin-bottom: 15px;">
+              <input type="email" placeholder="Email của bạn..." required style="flex: 1; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); border-radius: 4px; padding: 8px 12px; color: #fff; font-size: 13px; outline: none;" />
+              <button type="submit" style="background: #7B1212; color: #fff; border: none; border-radius: 4px; padding: 0 16px; font-weight: 700; font-size: 12px; cursor: pointer; transition: background 0.2s;">GỬI</button>
+            </form>
+            <div class="footer-social-row" style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.75);">
+              <span>Social:</span>
+              <a href="#" class="footer-social-icon" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+              <a href="#" class="footer-social-icon" aria-label="Twitter"><i class="ri-twitter-fill"></i></a>
+              <a href="#" class="footer-social-icon" aria-label="Google"><i class="ri-google-fill"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 3. COPYRIGHT BOTTOM BAR -->
+        <div class="footer-bottom-copyright">
+          <span>Copyright © 2026 - Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng - MST 0110808047 cấp bởi Sở KHĐT TP.Hà Nội. Đã đăng ký Bộ Công Thương, được bảo hộ bản quyền tác giả bởi đạo luật DMCA Hoa Kỳ; Vui lòng không sao chép nội dung dưới mọi hình thức.</span>
+        </div>
+
+      </div>
+    `;
+
+    // Form submit handler
+    const form = footerEl.querySelector('.footer-newsletter-form');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const input = form.querySelector('input');
+        alert('Cảm ơn bạn đã để lại thông tin liên hệ! Chúng tôi sẽ gửi báo giá sớm nhất tới email ' + input.value);
+        input.value = '';
+      });
+    }
+  }
+
   // Dynamic Logo Replacement for navbar and footer
   function setupLogos() {
     // 1. Replace desktop menu / mobile navbar logos with white transparent company logo
@@ -593,7 +934,6 @@
       img.src = 'assets/images/logo-cty-white.png';
       img.style.height = '62px';
       img.style.width = 'auto';
-      // Remove any border circle surrounding it to let the logo shine clean
       const iconWrap = img.closest('.footer-logo-icon');
       if (iconWrap) {
         iconWrap.style.border = 'none';
@@ -609,6 +949,7 @@
     injectStyles();
     renderHeaderTopBar();
     renderStickyCallbackBar();
+    renderFooter();
     setupLogos();
   }
 
