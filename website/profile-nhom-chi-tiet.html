@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#9B1C1C" />
+  <title id="page-title">Profile Nhôm Chi Tiết — Bảng Tính Giá | Sao Vàng</title>
+  <meta name="description" content="Xem chi tiết profile nhôm: bảng tính giá chính xác, mã nhôm, mặt cắt, tỷ trọng kg/m, số lượng thanh và thành tiền." />
+  <link rel="canonical" href="https://www.CoKhiSaoVang.com/profile-nhom-chi-tiet.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <!-- Lightbox -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <style>
+    /* ── Layout ── */
+    .detail-wrapper {
+      max-width: 1280px;
+      margin-inline: auto;
+      padding: 32px 24px 60px;
+    }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb-bar {
+      background: #f8f9fa;
+      border-bottom: 1px solid #e9ecef;
+      padding: 12px 0;
+    }
+    .breadcrumb-inner {
+      max-width: 1280px;
+      margin-inline: auto;
+      padding-inline: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #6c757d;
+    }
+    .breadcrumb-inner a { color: #6c757d; text-decoration: none; }
+    .breadcrumb-inner a:hover { color: #c0392b; }
+
+    /* ── Page Header ── */
+    .detail-header {
+      text-align: center;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 2px solid #edf0f4;
+    }
+    .detail-header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(22px, 4vw, 36px);
+      font-weight: 900;
+      color: #1a2940;
+      margin-bottom: 8px;
+    }
+    .detail-header .detail-sub {
+      font-size: 14px;
+      color: #888;
+    }
+    .detail-ornament {
+      display: block;
+      margin: 10px auto 0;
+      width: 48px;
+      height: 3px;
+      background: linear-gradient(90deg, #c0392b, #e74c3c);
+      border-radius: 2px;
+    }
+
+    /* ── Calculator Box ── */
+    .calculator-box {
+      background: linear-gradient(135deg, #0e7566 0%, #1a8a75 100%);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 6px 24px rgba(14,117,102,0.25);
+      color: #fff;
+    }
+    .calculator-box h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      text-align: center;
+      letter-spacing: 0.04em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    .calc-fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.5fr auto;
+      gap: 16px;
+      align-items: end;
+    }
+    @media (max-width: 768px) { .calc-fields { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .calc-fields { grid-template-columns: 1fr; } }
+
+    .calc-field label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 6px;
+      color: rgba(255,255,255,0.85);
+    }
+    .calc-field input {
+      width: 100%;
+      padding: 11px 14px;
+      border-radius: 8px;
+      border: 2px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      box-sizing: border-box;
+    }
+    .calc-field input:focus {
+      border-color: rgba(255,255,255,0.7);
+      background: rgba(255,255,255,0.25);
+    }
+    .calc-field input[readonly] {
+      background: rgba(255,255,255,0.08);
+      cursor: not-allowed;
+    }
+    .calc-field input::placeholder { color: rgba(255,255,255,0.5); }
+
+    .btn-export {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      background: #27ae60;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      white-space: nowrap;
+    }
+    .btn-export:hover { background: #219a52; transform: translateY(-1px); }
+
+    .calc-note {
+      margin-top: 14px;
+      text-align: center;
+      font-size: 12px;
+      font-style: italic;
+      color: rgba(255,255,255,0.75);
+    }
+
+    /* ── Table ── */
+    .table-box {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e4e9f0;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      margin-bottom: 36px;
+    }
+    .table-responsive { overflow-x: auto; }
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .spec-table thead {
+      background: linear-gradient(135deg, #1a2940 0%, #243b55 100%);
+      color: #fff;
+    }
+    .spec-table thead th {
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    .spec-table thead th:nth-child(1) { width: 44px; text-align: center; }
+    .spec-table thead th:nth-child(2) { width: 100px; }
+    .spec-table thead th:nth-child(3) { width: 120px; }
+    .spec-table thead th:nth-child(5) { width: 120px; text-align: center; }
+    .spec-table thead th:nth-child(6) { width: 120px; text-align: center; }
+    .spec-table thead th:nth-child(7) { width: 140px; text-align: right; }
+
+    .spec-table tbody tr {
+      border-bottom: 1px solid #f0f3f7;
+      transition: background 0.15s;
+    }
+    .spec-table tbody tr:hover { background: #f7fbff; }
+    .spec-table tbody tr.row-selected { background: #eff8ff; }
+
+    .spec-table td {
+      padding: 12px 16px;
+      vertical-align: middle;
+    }
+    .spec-table td:nth-child(1) { text-align: center; }
+    .spec-table td:nth-child(5) { text-align: center; font-weight: 600; color: #1a6a8a; }
+    .spec-table td:nth-child(7) { text-align: right; font-weight: 600; color: #c0392b; }
+
+    .ma-nhom {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #1a2940;
+      background: #edf2fa;
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .mat-cat-img {
+      width: 80px;
+      height: 60px;
+      object-fit: contain;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid #e4e9f0;
+      padding: 4px;
+      background: #f8f9fa;
+    }
+    .mat-cat-img:hover { transform: scale(1.1); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+
+    .soluong-input {
+      width: 70px;
+      padding: 6px 10px;
+      border: 2px solid #e0e0e0;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      transition: border-color 0.2s;
+    }
+    .soluong-input:focus { outline: none; border-color: #1a6a8a; }
+
+    .check-input { width: 16px; height: 16px; cursor: pointer; accent-color: #1a6a8a; }
+
+    .thanhtien-span {
+      font-size: 14px;
+      font-weight: 700;
+      color: #c0392b;
+    }
+
+    /* ── Table Select All row ── */
+    .table-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      background: #f7f8fa;
+      border-bottom: 1px solid #e4e9f0;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .table-toolbar label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #444;
+      cursor: pointer;
+    }
+    .selected-total {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a6a8a;
+    }
+
+    /* ── Content Article ── */
+    .article-content {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+    .article-content h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: #1a2940;
+      margin: 28px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #edf0f4;
+    }
+    .article-content h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1a3a55;
+      margin: 18px 0 8px;
+    }
+    .article-content p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #444;
+      margin-bottom: 12px;
+    }
+    .article-content ul, .article-content ol {
+      padding-left: 22px;
+      margin-bottom: 14px;
+    }
+    .article-content li {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 5px;
+    }
+    .article-content hr {
+      border: none;
+      border-top: 1px solid #e4e9f0;
+      margin: 24px 0;
+    }
+
+    /* ── Print styles ── */
+    @media print {
+      header, footer, .floating-left, .floating-right,
+      .breadcrumb-bar, .btn-export, .soluong-input,
+      .check-input, .calculator-box .calc-field:last-child { display: none !important; }
+      .spec-table tbody tr:not(.row-selected) { display: none; }
+      .calculator-box { background: #f0f0f0 !important; color: #000 !important; }
+      .calc-field input { border: 1px solid #ccc !important; background: #fff !important; color: #000 !important; }
+    }
+
+    /* ── Active nav ── */
+    .header-v2 .nav-menu-link[href="thu-vien-profile-nhom.html"] {
+      color: var(--sv-gold-600);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Bỏ qua điều hướng</a>
+
+  <!-- NAVBAR -->
+  <header class="header-v2" id="navbar" role="banner">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Sao Vàng — Trang chủ">
+        <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 48px; width: auto; display: block;" />
+      </a>
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html"            class="nav-menu-link">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html"  class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html"    class="nav-menu-link">Nhôm Sao Vàng</a>
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-co-khi.html"   class="nav-dropdown-item" role="menuitem">Cơ Khí Chính Xác CNC</a>
+            <a href="cau-thang-xoan.html"    class="nav-dropdown-item" role="menuitem">Cầu Thang &amp; Lan Can</a>
+            <a href="cong-nghe-thuat.html"   class="nav-dropdown-item" role="menuitem">Cổng Nhôm Đúc Nghệ Thuật</a>
+            <a href="co-khi-nghe-thuat.html" class="nav-dropdown-item" role="menuitem">Inox Marine Du Thuyền</a>
+            <a href="cua-nhom-kinh.html"     class="nav-dropdown-item" role="menuitem">Cửa Nhôm Kính</a>
+            <a href="vach-kinh.html"         class="nav-dropdown-item" role="menuitem">Vách Kính &amp; Mặt Dựng</a>
+            <a href="lan-can-kinh.html"      class="nav-dropdown-item" role="menuitem">Lan Can Kính Cường Lực</a>
+          </div>
+        </div>
+        <a href="du-an.html"                    class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="san-pham.html"                 class="nav-menu-link">Sản Phẩm</a>
+        <a href="thu-vien-sp.html"              class="nav-menu-link">Thư Viện SP</a>
+        <a href="thu-vien-profile-nhom.html"    class="nav-menu-link">Profile Nhôm</a>
+        <a href="tin-tuc.html"                  class="nav-menu-link">Tin Tức</a>
+        <a href="lien-he.html"                  class="nav-menu-link">Liên Hệ</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+        <a href="tel:0869590279" class="nav-hotline">
+          <i class="ri-phone-fill"></i><span>0869 590 279</span>
+        </a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html"                   class="nav-drawer-link">Trang Chủ</a>
+    <a href="co-khi-sao-vang.html"        class="nav-drawer-link">Cơ Khí Sao Vàng</a>
+    <a href="nhom-sao-vang.html"          class="nav-drawer-link">Nhôm Sao Vàng</a>
+    <a href="thu-vien-profile-nhom.html"  class="nav-drawer-link active">Profile Nhôm</a>
+    <a href="san-pham.html"               class="nav-drawer-link">Sản Phẩm</a>
+    <a href="lien-he.html"                class="nav-drawer-link">Liên Hệ</a>
+    <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
+      <i class="ri-phone-fill"></i> 0869 590 279
+    </a>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-inner">
+      <a href="index.html">Trang chủ</a>
+      <i class="ri-arrow-right-s-line"></i>
+      <a href="thu-vien-profile-nhom.html">Profile nhôm</a>
+      <i class="ri-arrow-right-s-line"></i>
+      <span id="breadcrumb-current">Chi tiết</span>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <div class="detail-wrapper">
+
+      <!-- PAGE HEADER -->
+      <div class="detail-header">
+        <h1 id="profile-name">Đang tải...</h1>
+        <span class="detail-ornament"></span>
+        <p class="detail-sub">Bảng tính giá nhôm định hình · Mã nhôm · Mặt cắt · Tỷ trọng</p>
+      </div>
+
+      <!-- CALCULATOR BOX -->
+      <div class="calculator-box">
+        <h2>🧮 BẢNG TÍNH GIÁ NHÔM VÀ XUẤT TỔNG HỢP NHÔM</h2>
+        <div class="calc-fields">
+          <div class="calc-field">
+            <label for="dongia">Đơn giá (vnđ/kg)</label>
+            <input type="text" id="dongia" value="115,000" placeholder="Đơn giá nhôm" autocomplete="off" />
+          </div>
+          <div class="calc-field">
+            <label for="khovattu">Khổ nhôm (mm)</label>
+            <input type="number" id="khovattu" value="5800" placeholder="Khổ nhôm" min="100" max="12000" />
+          </div>
+          <div class="calc-field">
+            <label for="tongcong">Tổng cộng (vnđ)</label>
+            <input type="text" id="tongcong" value="0" readonly placeholder="Tổng tiền" />
+          </div>
+          <div class="calc-field">
+            <label style="height:18px;display:block;"></label>
+            <button class="btn-export" id="btnExport" onclick="exportNhom()">
+              <i class="ri-printer-line"></i> Xuất nhôm
+            </button>
+          </div>
+        </div>
+        <p class="calc-note">* Đơn giá nhôm chỉ mang tính tham khảo. Vui lòng xác nhận giá thực tế với nhà máy hoặc đại lý cung cấp.</p>
+      </div>
+
+      <!-- SPEC TABLE -->
+      <div class="table-box" id="tableBox">
+        <div class="table-toolbar">
+          <label>
+            <input type="checkbox" id="checkAll" class="check-input" /> Chọn tất cả
+          </label>
+          <span class="selected-total">Tổng đã chọn: <strong id="selectedTotal">0 đ</strong></span>
+        </div>
+        <div class="table-responsive">
+          <table class="spec-table" id="specTable">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Mã nhôm</th>
+                <th>Mặt cắt</th>
+                <th>Tên nhôm</th>
+                <th>Tỷ trọng (kg/m)</th>
+                <th>Số lượng (thanh)</th>
+                <th>Thành tiền (vnđ)</th>
+              </tr>
+            </thead>
+            <tbody id="specTableBody">
+              <tr><td colspan="7" style="text-align:center;padding:40px;color:#aaa;">Đang tải dữ liệu profile nhôm...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ARTICLE CONTENT -->
+      <div class="article-content" id="articleContent">
+        <!-- Filled by JS -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner sv-container">
+      <div>
+        <div style="margin-bottom:16px;">
+          <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height:54px;width:auto;display:block;" />
+        </div>
+        <p style="font-size:13px;color:rgba(255,255,255,0.65);line-height:1.6;margin-bottom:20px;">
+          Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng — chuyên cơ khí chính xác &amp; nhôm kính cao cấp.
+        </p>
+        <div class="footer-socials">
+          <a href="#" class="footer-social"><i class="ri-facebook-fill"></i></a>
+          <a href="#" class="footer-social"><i class="ri-youtube-fill"></i></a>
+          <a href="tel:0869590279" class="footer-social"><i class="ri-phone-fill"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Profile Nhôm</h4>
+        <div class="footer-links">
+          <a href="thu-vien-profile-nhom.html" class="footer-link">Thư viện Profile Nhôm</a>
+          <a href="thu-vien-sp.html" class="footer-link">Thư viện sản phẩm</a>
+          <a href="cua-nhom-kinh.html" class="footer-link">Cửa nhôm kính</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Liên Hệ</h4>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="ri-phone-line"></i>
+            <a href="tel:0869590279" style="color:inherit;text-decoration:none;">0869 590 279</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ri-mail-line"></i>
+            <a href="mailto:cokhisaovangvn@gmail.com" style="color:inherit;text-decoration:none;">cokhisaovangvn@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <div class="floating-left">
+    <a href="https://zalo.me/0869590279" class="float-btn float-btn-zalo" target="_blank" rel="noopener"><i class="ri-message-3-fill"></i></a>
+    <a href="tel:0869590279" class="float-btn float-btn-phone"><i class="ri-phone-fill"></i></a>
+  </div>
+  <div class="floating-right">
+    <button class="float-btn float-btn-top" id="scrollTopBtn"><i class="ri-arrow-up-line"></i></button>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/modules/navbar.js"></script>
+  <script>
+// ════════════════════════════════════════════════════════════
+//  PROFILE NHÔM DETAIL PAGE — Senior Software Architect v2.0
+// ════════════════════════════════════════════════════════════
+
+const DAIPHUC_BASE = 'https://nhomkinhdaiphuc.com/';
+
+// ── All profile data: slug → { name, defaultPrice, defaultKho, items[], content }
+const PROFILE_DATA = {
+
+  'nhom-xingfa-quang-dong-mau-xam-ghi-14': {
+    name: 'Profile Nhôm Xingfa Quảng Đông màu xám ghi',
+    defaultPrice: 115000,
+    defaultKho: 5800,
+    items: [
+      { ma: 'C5409', img: 'upload/nhom/C5409-17183.webp',                    ten: 'Ray âm cửa xếp trượt',                         ty: 0.595 },
+      { ma: 'F6029', img: 'upload/nhom/F6029-762265994383.webp',             ten: 'Nẹp kính cánh xếp trượt',                      ty: 0.276 },
+      { ma: 'C3225', img: 'upload/nhom/C3225-342909335546.webp',             ten: 'Nẹp kính hộp dùng cho khung cửa chia vách',    ty: 0.211 },
+      { ma: 'C1697', img: 'upload/nhom/C1697-825368062966.webp',             ten: 'Ke góc',                                        ty: 0.400 },
+      { ma: 'C3208', img: 'upload/nhom/C3208-79989.webp',                    ten: 'Đảo chiều khung bao',                           ty: 0.760 },
+      { ma: 'F4116', img: 'upload/nhom/F4116-352975190857.webp',             ten: 'Khung bao xếp trượt (khóa đa điểm)',           ty: 1.056 },
+      { ma: 'F4117', img: 'upload/nhom/F4117-384028117274.webp',             ten: 'Cánh xếp trượt không lỗ vít (khóa đa điểm)',  ty: 1.269 },
+      { ma: 'F417',  img: 'upload/nhom/F417-336901773873.webp',              ten: 'Ke xếp trượt đơn điểm',                        ty: 5.228 },
+      { ma: 'F519',  img: 'upload/nhom/F519-981814675551.webp',              ten: 'Ốp che nước mưa',                               ty: 0.177 },
+      { ma: 'F522',  img: 'upload/nhom/F522-604689521110.webp',              ten: 'Cánh xếp trượt có lỗ vít (khóa đơn điểm)',    ty: 1.336 },
+      { ma: 'F523',  img: 'upload/nhom/F523-256561099591.webp',              ten: 'Cánh xếp trượt không lỗ vít (khóa đơn điểm)',ty: 1.254 },
+      { ma: 'F520',  img: 'upload/nhom/F520-094739221158.webp',              ten: 'Đố động xếp trượt',                            ty: 0.241 },
+      { ma: 'F521',  img: 'upload/nhom/F521-547361486774.webp',              ten: 'Nẹp kính',                                     ty: 0.222 },
+      { ma: 'F560',  img: 'upload/nhom/F560-280737911631.webp',              ten: 'Đố chia ô trên cánh xếp trượt',               ty: 1.142 },
+      { ma: 'F609',  img: 'upload/nhom/F609-965822322590.webp',              ten: 'Ke liên kết khung đứng với ray dưới xếp trượt', ty: 1.377 },
+      { ma: 'F608',  img: 'upload/nhom/F608-919014783174.webp',              ten: 'Ke lên kết khung đứng với ray trên xếp trượt', ty: 1.440 },
+      { ma: 'F2435', img: 'upload/nhom/F2435-901965800250.webp',             ten: 'Ray dưới xếp trượt (ray âm)',                  ty: 1.351 },
+      { ma: 'F607',  img: 'upload/nhom/F607-051194522555.webp',              ten: 'Ray dưới xếp trượt (có gờ)',                   ty: 1.053 },
+      { ma: 'F606',  img: 'upload/nhom/F606-803047226637.webp',              ten: 'Khung bao đứng xếp trượt',                     ty: 1.027 },
+      { ma: 'F605',  img: 'upload/nhom/F605-188384276123.webp',              ten: 'Ray trên xếp trượt',                           ty: 3.107 },
+      { ma: 'E1283', img: 'upload/nhom/E1283-049167549470.webp',             ten: 'Khung lá sách',                                ty: 0.290 },
+      { ma: 'E192',  img: 'upload/nhom/E192-184774717641.webp',              ten: 'Lá sách',                                      ty: 0.317 },
+      { ma: 'D3213', img: 'upload/nhom/D3213-799455245042.webp',             ten: 'Khung bao đứng (3 ray) hệ 93',                 ty: 1.367 },
+      { ma: 'D3212', img: 'upload/nhom/D3212-457691048620.webp',             ten: 'Khung ngang dưới (3 ray) hệ 93',              ty: 2.295 },
+      { ma: 'D3211', img: 'upload/nhom/D3211-007538910817.webp',             ten: 'Khung ngang trên (3 ray) hệ 93',              ty: 1.959 },
+      { ma: 'D1779', img: 'upload/nhom/D1779-739755048470.webp',             ten: 'Nẹp kính hộp hệ 93',                          ty: 0.100 },
+      { ma: 'D1548A',img: 'upload/nhom/D1548A-605066230344.webp',            ten: 'Nẹp đối đầu hệ 93',                           ty: 0.620 },
+      { ma: 'D1544A',img: 'upload/nhom/D1544A-210134669933.webp',            ten: 'Cánh ngang trên hệ 93',                       ty: 0.990 },
+      { ma: 'D1551A',img: 'upload/nhom/D1551A-385026667325.webp',            ten: 'Đố chia cửa lùa với vách kính trên hệ 93',   ty: 1.230 },
+    ],
+    content: `
+      <h2>1. Giới Thiệu Profile Nhôm Xingfa Quảng Đông Màu Xám Ghi</h2>
+      <p><strong>Profile Nhôm Xingfa Quảng Đông màu xám ghi</strong> là dòng sản phẩm cao cấp nhập khẩu từ Trung Quốc, được đánh giá cao trong ngành xây dựng và kiến trúc. Sản phẩm này nổi bật nhờ thiết kế thẩm mỹ, khả năng chịu lực tốt và tính năng cách âm, cách nhiệt ưu việt. Với màu xám ghi hiện đại, nhôm Xingfa không chỉ mang đến vẻ ngoài sang trọng mà còn có ý nghĩa phong thủy, tạo ra không gian hài hòa và thịnh vượng cho gia chủ.</p>
+      <hr/>
+      <h2>2. Cấu Tạo Và Độ Dày</h2>
+      <h3>Hệ 55</h3>
+      <ul>
+        <li><strong>Ứng dụng:</strong> Dùng cho cửa mở quay (cửa đi và cửa sổ).</li>
+        <li><strong>Độ dày:</strong> 1.4mm – 2.0mm.</li>
+        <li><strong>Đặc điểm:</strong> Phù hợp cho cửa đơn hoặc cửa nhỏ trong nhà, thiết kế linh hoạt.</li>
+      </ul>
+      <h3>Hệ 63</h3>
+      <ul>
+        <li><strong>Ứng dụng:</strong> Cửa đi lớn hoặc cửa trượt.</li>
+        <li><strong>Độ dày:</strong> 1.8mm – 2.0mm.</li>
+        <li><strong>Đặc điểm:</strong> Được thiết kế để chịu lực tốt, thích hợp cho các cửa ra vào có kích thước lớn.</li>
+      </ul>
+      <h3>Hệ 65</h3>
+      <ul>
+        <li><strong>Ứng dụng:</strong> Vách kính lớn hoặc mặt dựng tòa nhà.</li>
+        <li><strong>Độ dày:</strong> 2.0mm.</li>
+        <li><strong>Đặc điểm:</strong> Khả năng chịu lực cao, phù hợp cho công trình cao tầng.</li>
+      </ul>
+      <h3>Hệ 93</h3>
+      <ul>
+        <li><strong>Ứng dụng:</strong> Cửa lùa 3 ray (cửa xếp trượt) cao cấp.</li>
+        <li><strong>Độ dày:</strong> 1.8mm – 2.0mm.</li>
+        <li><strong>Đặc điểm:</strong> Tối ưu cho không gian rộng, có thể tích hợp 3 cánh lùa.</li>
+      </ul>
+      <hr/>
+      <h2>3. Ưu Điểm Vượt Trội</h2>
+      <ul>
+        <li><strong>Bền và nhẹ:</strong> Dễ dàng vận chuyển và lắp đặt mà không ảnh hưởng đến độ bền.</li>
+        <li><strong>Chống ăn mòn:</strong> Công nghệ anod hóa giúp bảo vệ nhôm khỏi tác động môi trường.</li>
+        <li><strong>Cách âm tốt:</strong> Cấu trúc khoang kép giảm thiểu tạp âm từ bên ngoài.</li>
+        <li><strong>Thân thiện môi trường:</strong> Nhôm có thể tái chế 100% mà không làm mất đi các đặc tính ban đầu.</li>
+      </ul>
+      <hr/>
+      <h2>4. Câu Hỏi Thường Gặp</h2>
+      <ol>
+        <li><strong>Nhôm Xingfa Quảng Đông có bền không?</strong><br/>Có, sản phẩm được phủ sơn tĩnh điện và anod hóa, đảm bảo tuổi thọ cao trong điều kiện khắc nghiệt.</li>
+        <li><strong>Công thức tính giá nhôm?</strong><br/>Thành tiền = Đơn giá (vnđ/kg) × Tỷ trọng (kg/m) × Chiều dài thanh (m) × Số lượng thanh.</li>
+        <li><strong>Nhôm màu xám ghi có dễ phai màu không?</strong><br/>Không, lớp sơn tĩnh điện cao cấp giúp giữ màu bền lâu và chống phai màu hiệu quả.</li>
+      </ol>
+    `
+  },
+
+  'nhom-xingfa-taiwan-day-1-8mm-mau-xam-ghi-25': {
+    name: 'Profile Nhôm Xingfa Taiwan dày 1.8mm màu xám ghi',
+    defaultPrice: 89000,
+    defaultKho: 6000,
+    items: [
+      { ma: 'C3332', img: 'upload/nhom/C3332-154174748112.webp', ten: 'Cánh cửa đi mở trong (có gân)',    ty: 1.300 },
+      { ma: 'C3303', img: 'upload/nhom/C3303-972642705608.webp', ten: 'Cánh cửa đi mở ngoài (có gân)',   ty: 1.300 },
+      { ma: 'C3328', img: 'upload/nhom/C3328-240924693811.webp', ten: 'Khung bao cửa đi',                ty: 1.152 },
+    ],
+    content: `
+      <h2>1. Giới Thiệu Profile Nhôm Xingfa Taiwan Dày 1.8mm Màu Xám Ghi</h2>
+      <p><strong>Profile nhôm Xingfa Taiwan dày 1.8mm màu xám ghi</strong> là dòng sản phẩm nhôm cao cấp, mang đến sự bền bỉ và tính thẩm mỹ cao cho các công trình hiện đại. Với lớp sơn tĩnh điện bền màu và khả năng chịu lực tốt, sản phẩm này là lựa chọn hàng đầu cho cửa đi, cửa sổ và vách kính.</p>
+      <hr/>
+      <h2>2. Ưu Điểm Vượt Trội</h2>
+      <h3>2.1. Độ bền và khả năng chống ăn mòn cao</h3>
+      <p>Nhôm được phủ <strong>sơn tĩnh điện cao cấp</strong>, giúp sản phẩm chống lại oxy hóa và giữ màu sắc bền lâu.</p>
+      <h3>2.2. Khả năng cách âm và cách nhiệt tối ưu</h3>
+      <p>Với cấu trúc nhiều khoang kết hợp với kính cường lực, mang lại khả năng cách âm và cách nhiệt tuyệt vời.</p>
+      <h3>2.3. Đa dạng ứng dụng</h3>
+      <p>Phù hợp với cửa đi mở quay, cửa sổ mở hất, cửa lùa và các hệ vách kính.</p>
+      <hr/>
+      <h2>3. Bảng Giá Tham Khảo</h2>
+      <ul>
+        <li><strong>Cửa đi mở quay:</strong> 2.150.000 – 2.350.000 VNĐ/m²</li>
+        <li><strong>Cửa sổ mở lùa:</strong> 1.900.000 – 2.100.000 VNĐ/m²</li>
+        <li><strong>Vách kính cố định:</strong> 1.200.000 – 1.350.000 VNĐ/m²</li>
+      </ul>
+    `
+  },
+
+  'nhom-xingfa-taiwan-day-1-4mm-mau-xam-ghi-26': {
+    name: 'Profile Nhôm Xingfa Taiwan dày 1.4mm màu xám ghi',
+    defaultPrice: 82000,
+    defaultKho: 6000,
+    items: [
+      { ma: 'C3332', img: 'upload/nhom/C3332-154174748112.webp', ten: 'Cánh cửa đi mở trong (1.4mm)',   ty: 1.050 },
+      { ma: 'C3303', img: 'upload/nhom/C3303-972642705608.webp', ten: 'Cánh cửa đi mở ngoài (1.4mm)',  ty: 1.050 },
+      { ma: 'C3328', img: 'upload/nhom/C3328-240924693811.webp', ten: 'Khung bao cửa đi (1.4mm)',       ty: 0.920 },
+    ],
+    content: `
+      <h2>Profile Nhôm Xingfa Taiwan Dày 1.4mm Màu Xám Ghi</h2>
+      <p><strong>Profile nhôm Xingfa Taiwan dày 1.4mm</strong> là lựa chọn tiết kiệm chi phí nhưng vẫn đảm bảo chất lượng cho các công trình dân dụng vừa và nhỏ. Phù hợp cho cửa đi, cửa sổ thông thường với tải trọng không quá lớn.</p>
+      <hr/>
+      <h2>Ứng Dụng</h2>
+      <ul>
+        <li>Cửa sổ phòng ngủ, phòng bếp, nhà vệ sinh</li>
+        <li>Cửa đi đơn cho phòng nội thất</li>
+        <li>Vách ngăn nhẹ trong không gian nội thất</li>
+      </ul>
+    `
+  },
+
+  'nhom-xingfa-taiwan-day-1-2mm-mau-xam-ghi-20': {
+    name: 'Profile Nhôm Xingfa Taiwan dày 1.2mm màu xám ghi',
+    defaultPrice: 75000,
+    defaultKho: 6000,
+    items: [
+      { ma: 'C3332', img: 'upload/nhom/C3332-154174748112.webp', ten: 'Cánh cửa đi mở trong (1.2mm)',   ty: 0.900 },
+      { ma: 'C3303', img: 'upload/nhom/C3303-972642705608.webp', ten: 'Cánh cửa đi mở ngoài (1.2mm)',  ty: 0.900 },
+    ],
+    content: `
+      <h2>Profile Nhôm Xingfa Taiwan Dày 1.2mm Màu Xám Ghi</h2>
+      <p><strong>Profile nhôm Xingfa Taiwan dày 1.2mm</strong> là dòng phổ thông, phù hợp cho các công trình nhà ở giá rẻ, cửa phòng nội thất, vách ngăn nhẹ.</p>
+    `
+  },
+
+  'nhom-xingfa-taiwan-day-2-0mm-mau-xam-ghi-24': {
+    name: 'Profile Nhôm Xingfa Taiwan dày 2.0mm màu xám ghi',
+    defaultPrice: 95000,
+    defaultKho: 6000,
+    items: [
+      { ma: 'C3332', img: 'upload/nhom/C3332-154174748112.webp', ten: 'Cánh cửa đi mở trong (2.0mm)',   ty: 1.550 },
+      { ma: 'C3303', img: 'upload/nhom/C3303-972642705608.webp', ten: 'Cánh cửa đi mở ngoài (2.0mm)',  ty: 1.550 },
+      { ma: 'C3328', img: 'upload/nhom/C3328-240924693811.webp', ten: 'Khung bao cửa đi (2.0mm)',       ty: 1.380 },
+    ],
+    content: `
+      <h2>Profile Nhôm Xingfa Taiwan Dày 2.0mm Màu Xám Ghi</h2>
+      <p><strong>Profile nhôm Xingfa Taiwan dày 2.0mm</strong> là dòng cao cấp nhất trong series Taiwan, phù hợp cho công trình thương mại, văn phòng và các dự án đòi hỏi độ bền cao nhất.</p>
+      <hr/>
+      <h2>Ưu Điểm</h2>
+      <ul>
+        <li>Độ dày 2.0mm đảm bảo chịu lực tốt nhất trong dòng Xingfa Taiwan</li>
+        <li>Phù hợp cho cửa kích thước lớn, chịu tải trọng lớn</li>
+        <li>Màu xám ghi hiện đại, sang trọng</li>
+      </ul>
+    `
+  },
+};
+
+// ── Default profile for unknown slugs
+function getDefaultProfile(slug, name) {
+  return {
+    name: name || 'Profile Nhôm',
+    defaultPrice: 115000,
+    defaultKho: 5800,
+    items: [
+      { ma: 'C5409', img: 'upload/nhom/C5409-17183.webp',  ten: 'Ray âm cửa xếp trượt',           ty: 0.595 },
+      { ma: 'F6029', img: 'upload/nhom/F6029-762265994383.webp', ten: 'Nẹp kính cánh xếp trượt', ty: 0.276 },
+      { ma: 'F606',  img: 'upload/nhom/F606-803047226637.webp',  ten: 'Khung bao đứng xếp trượt', ty: 1.027 },
+      { ma: 'F605',  img: 'upload/nhom/F605-188384276123.webp',  ten: 'Ray trên xếp trượt',        ty: 3.107 },
+      { ma: 'F607',  img: 'upload/nhom/F607-051194522555.webp',  ten: 'Ray dưới xếp trượt',        ty: 1.053 },
+    ],
+    content: `<h2>Profile Nhôm Định Hình</h2><p>Vui lòng liên hệ để được tư vấn chi tiết về profile nhôm và bảng tính giá chính xác.</p><p><strong>Hotline:</strong> <a href="tel:0869590279">0869 590 279</a></p>`
+  };
+}
+
+// ── UTILS ──
+function fmtVND(n) {
+  return Math.round(n).toLocaleString('vi-VN') + ' đ';
+}
+function parseDonGia() {
+  return parseFloat(document.getElementById('dongia').value.replace(/[^0-9]/g, '')) || 0;
+}
+function parseKho() {
+  return parseFloat(document.getElementById('khovattu').value) / 1000 || 0;
+}
+
+// ── FORMAT dongia input
+document.getElementById('dongia').addEventListener('input', function() {
+  const raw = this.value.replace(/[^0-9]/g,'');
+  if (raw) this.value = parseInt(raw).toLocaleString('vi-VN');
+  recalcAll();
+});
+document.getElementById('khovattu').addEventListener('input', recalcAll);
+
+// ── CALCULATE row ──
+function calcRow(item, dongia, kho, soluong) {
+  return Math.round(dongia * (item.ty || 0) * kho * soluong);
+}
+
+// ── RECALC ALL ──
+function recalcAll() {
+  const dongia = parseDonGia();
+  const kho = parseKho();
+  let tongAll = 0;
+  let tongSelected = 0;
+
+  document.querySelectorAll('#specTableBody tr[data-idx]').forEach(row => {
+    const idx = parseInt(row.dataset.idx);
+    const profile = window._currentProfile;
+    if (!profile || !profile.items[idx]) return;
+    const item = profile.items[idx];
+    const soluong = parseInt(row.querySelector('.soluong-input').value) || 1;
+    const val = calcRow(item, dongia, kho, soluong);
+    const span = row.querySelector('.thanhtien-span');
+    if (span) span.textContent = fmtVND(val);
+
+    const checked = row.querySelector('.check-input').checked;
+    if (checked) tongSelected += val;
+    tongAll += val;
+  });
+
+  document.getElementById('tongcong').value = fmtVND(tongAll);
+  document.getElementById('selectedTotal').textContent = fmtVND(tongSelected);
+}
+
+// ── RENDER TABLE ──
+function renderTable(profile) {
+  const tbody = document.getElementById('specTableBody');
+  if (!profile.items || !profile.items.length) {
+    tbody.innerHTML = '<tr><td colspan="7" style="text-align:center;padding:32px;color:#aaa;">Không có dữ liệu mã nhôm cho profile này.</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = profile.items.map((item, i) => `
+    <tr data-idx="${i}" class="spec-row">
+      <td>
+        <input type="checkbox" class="check-input" id="chk${i}" onchange="onCheck()" />
+      </td>
+      <td><label for="chk${i}" class="ma-nhom">${item.ma}</label></td>
+      <td>
+        <a href="${DAIPHUC_BASE}${item.img}" data-fancybox="profile" data-caption="${item.ma} — ${item.ten}" title="Xem mặt cắt ${item.ma}">
+          <img
+            src="${DAIPHUC_BASE}${item.img}"
+            alt="${item.ma} — ${item.ten}"
+            class="mat-cat-img"
+            onerror="this.style.display='none'"
+            loading="lazy"
+          />
+        </a>
+      </td>
+      <td>${item.ten}</td>
+      <td><strong>${item.ty}</strong></td>
+      <td>
+        <input
+          type="number"
+          min="1"
+          step="1"
+          value="1"
+          class="soluong-input"
+          id="sl${i}"
+          oninput="recalcAll()"
+          aria-label="Số lượng ${item.ma}"
+        />
+      </td>
+      <td><span class="thanhtien-span" id="tt${i}">0 đ</span></td>
+    </tr>
+  `).join('');
+
+  recalcAll();
+}
+
+function onCheck() {
+  recalcAll();
+  // Update check-all state
+  const allCbs = document.querySelectorAll('#specTableBody .check-input');
+  const checkedCbs = document.querySelectorAll('#specTableBody .check-input:checked');
+  const checkAll = document.getElementById('checkAll');
+  checkAll.indeterminate = checkedCbs.length > 0 && checkedCbs.length < allCbs.length;
+  checkAll.checked = checkedCbs.length === allCbs.length;
+}
+
+// Check All toggle
+document.getElementById('checkAll').addEventListener('change', function() {
+  document.querySelectorAll('#specTableBody .check-input').forEach(cb => {
+    cb.checked = this.checked;
+    const row = cb.closest('tr');
+    if (row) row.classList.toggle('row-selected', this.checked);
+  });
+  recalcAll();
+});
+
+// ── EXPORT (PRINT) ──
+function exportNhom() {
+  // Highlight selected rows before printing
+  document.querySelectorAll('#specTableBody .check-input').forEach(cb => {
+    cb.closest('tr').classList.toggle('row-selected', cb.checked);
+  });
+  window.print();
+}
+
+// ── INIT PAGE ──
+function initPage() {
+  const params = new URLSearchParams(location.search);
+  const slug = params.get('slug') || 'nhom-xingfa-quang-dong-mau-xam-ghi-14';
+
+  let profile = PROFILE_DATA[slug];
+  if (!profile) {
+    // Build a friendly name from slug
+    const friendlyName = slug
+      .replace(/-\d+$/, '')
+      .split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+    profile = getDefaultProfile(slug, 'Profile ' + friendlyName);
+  }
+
+  window._currentProfile = profile;
+
+  // Update DOM
+  document.title = profile.name + ' — Bảng Tính Giá Nhôm | Sao Vàng';
+  document.getElementById('profile-name').textContent = profile.name.toUpperCase();
+  document.getElementById('breadcrumb-current').textContent = profile.name;
+
+  // Set defaults
+  document.getElementById('dongia').value = profile.defaultPrice.toLocaleString('vi-VN');
+  document.getElementById('khovattu').value = profile.defaultKho;
+
+  // Render table
+  renderTable(profile);
+
+  // Render article
+  document.getElementById('articleContent').innerHTML = profile.content || '';
+
+  // Init Fancybox if available
+  if (window.jQuery && window.jQuery.fn.fancybox) {
+    jQuery('[data-fancybox="profile"]').fancybox({ buttons: ['zoom','download','close'] });
+  }
+}
+
+// Run after DOM ready
+document.addEventListener('DOMContentLoaded', initPage);
+  </script>
+
+  <!-- Fancybox jQuery (for lightbox on cross-section images) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+</body>
+</html>

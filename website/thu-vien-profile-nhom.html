@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#9B1C1C" />
+  <title>Thư Viện Profile Nhôm — Bảng Tính Giá Nhôm Thanh Định Hình | Sao Vàng</title>
+  <meta name="description" content="Thư viện profile nhôm định hình đầy đủ: Xingfa Quảng Đông, Xingfa Taiwan, Maxpro.JP, QueenViet, Alugood, Owin. Bảng tính giá nhôm chính xác theo tỷ trọng." />
+  <meta name="keywords" content="profile nhôm, thư viện nhôm, bảng tính giá nhôm, nhôm xingfa, mặt cắt nhôm" />
+  <meta property="og:title" content="Thư Viện Profile Nhôm — Sao Vàng" />
+  <meta property="og:description" content="Thư viện profile nhôm định hình đầy đủ với bảng tính giá chính xác." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.CoKhiSaoVang.com/thu-vien-profile-nhom.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    /* ── Page Hero ── */
+    .profile-hero {
+      position: relative;
+      height: 38vh;
+      min-height: 260px;
+      max-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0f2027 0%, #1a3a4a 50%, #0d2233 100%);
+    }
+    .profile-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://nhomkinhdaiphuc.com/upload/app/profile-nhom_231921731178.webp') center/cover no-repeat;
+      opacity: 0.35;
+    }
+    .profile-hero-content {
+      position: relative;
+      z-index: 2;
+      padding-inline: 24px;
+    }
+    .profile-hero-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      color: #f5c842;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 12px;
+    }
+    .profile-hero-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      margin-bottom: 12px;
+    }
+    .profile-hero-desc {
+      font-size: clamp(13px, 2vw, 16px);
+      color: rgba(255,255,255,0.75);
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb-bar {
+      background: #f8f9fa;
+      border-bottom: 1px solid #e9ecef;
+      padding: 12px 0;
+    }
+    .breadcrumb-inner {
+      max-width: 1280px;
+      margin-inline: auto;
+      padding-inline: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #6c757d;
+    }
+    .breadcrumb-inner a { color: #6c757d; text-decoration: none; }
+    .breadcrumb-inner a:hover { color: #c0392b; }
+    .breadcrumb-inner i { font-size: 10px; }
+
+    /* ── Filter Tabs ── */
+    .filter-section {
+      background: #fff;
+      padding: 32px 0 0;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .filter-inner {
+      max-width: 1280px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+    .filter-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #1a2940;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .filter-title span {
+      color: #c0392b;
+    }
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding-bottom: 0;
+      justify-content: center;
+    }
+    .filter-tab {
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid #e0e0e0;
+      background: #fff;
+      color: #555;
+      transition: all 0.2s;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.02em;
+    }
+    .filter-tab:hover { border-color: #c0392b; color: #c0392b; }
+    .filter-tab.active {
+      background: #c0392b;
+      border-color: #c0392b;
+      color: #fff;
+    }
+
+    /* ── Profile Grid ── */
+    .profile-grid-section {
+      background: #f7f8fa;
+      padding: 40px 0 60px;
+    }
+    .profile-grid-inner {
+      max-width: 1280px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px) { .profile-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .profile-grid { grid-template-columns: 1fr; } }
+
+    .profile-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      transition: transform 0.25s, box-shadow 0.25s;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #edf0f4;
+    }
+    .profile-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    }
+    .profile-card.hidden { display: none; }
+
+    .profile-card-img {
+      background: linear-gradient(135deg, #e8f4f8 0%, #d6eaf7 100%);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 220px;
+      overflow: hidden;
+    }
+    .profile-card-img img {
+      max-width: 100%;
+      max-height: 180px;
+      object-fit: contain;
+      transition: transform 0.3s;
+    }
+    .profile-card:hover .profile-card-img img {
+      transform: scale(1.05);
+    }
+
+    .profile-card-body {
+      padding: 18px 20px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .profile-card-brand {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #1a6a8a;
+      margin-bottom: 6px;
+    }
+    .profile-card-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a2940;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+    .profile-card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 18px;
+      background: transparent;
+      border: 2px solid #1a6a8a;
+      color: #1a6a8a;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-family: 'Montserrat', sans-serif;
+      align-self: flex-start;
+    }
+    .profile-card-btn:hover {
+      background: #1a6a8a;
+      color: #fff;
+    }
+    .profile-card-btn i { font-size: 14px; }
+
+    /* ── Results count ── */
+    .results-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .results-count {
+      font-size: 14px;
+      color: #666;
+    }
+    .results-count strong { color: #1a2940; }
+
+    /* ── No results ── */
+    .no-results {
+      text-align: center;
+      padding: 60px 24px;
+      color: #999;
+      font-size: 16px;
+      display: none;
+    }
+
+    /* ── SEO Content ── */
+    .seo-section {
+      background: #fff;
+      padding: 48px 0;
+      border-top: 1px solid #edf0f4;
+    }
+    .seo-inner {
+      max-width: 900px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+    .seo-inner h2 { font-size: 22px; font-weight: 700; color: #1a2940; margin: 28px 0 12px; }
+    .seo-inner h3 { font-size: 17px; font-weight: 600; color: #1a3a55; margin: 20px 0 8px; }
+    .seo-inner p { font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 12px; }
+    .seo-inner ul, .seo-inner ol { padding-left: 22px; margin-bottom: 12px; }
+    .seo-inner li { font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 4px; }
+    .seo-inner hr { border: none; border-top: 1px solid #e8ecf0; margin: 24px 0; }
+
+    /* ── Active nav highlight ── */
+    .header-v2 .nav-menu-link[href="thu-vien-profile-nhom.html"] {
+      color: var(--sv-gold-600);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Bỏ qua điều hướng</a>
+
+  <!-- NAVBAR -->
+  <header class="header-v2" id="navbar" role="banner">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Sao Vàng — Trang chủ">
+        <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 48px; width: auto; display: block;" />
+      </a>
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html"            class="nav-menu-link">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html"  class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html"    class="nav-menu-link">Nhôm Sao Vàng</a>
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-co-khi.html"   class="nav-dropdown-item" role="menuitem">Cơ Khí Chính Xác CNC</a>
+            <a href="cau-thang-xoan.html"    class="nav-dropdown-item" role="menuitem">Cầu Thang &amp; Lan Can</a>
+            <a href="cong-nghe-thuat.html"   class="nav-dropdown-item" role="menuitem">Cổng Nhôm Đúc Nghệ Thuật</a>
+            <a href="co-khi-nghe-thuat.html" class="nav-dropdown-item" role="menuitem">Inox Marine Du Thuyền</a>
+            <a href="cua-nhom-kinh.html"     class="nav-dropdown-item" role="menuitem">Cửa Nhôm Kính</a>
+            <a href="vach-kinh.html"         class="nav-dropdown-item" role="menuitem">Vách Kính &amp; Mặt Dựng</a>
+            <a href="lan-can-kinh.html"      class="nav-dropdown-item" role="menuitem">Lan Can Kính Cường Lực</a>
+          </div>
+        </div>
+        <a href="du-an.html"                    class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="san-pham.html"                 class="nav-menu-link">Sản Phẩm</a>
+        <a href="thu-vien-sp.html"              class="nav-menu-link">Thư Viện SP</a>
+        <a href="thu-vien-profile-nhom.html"    class="nav-menu-link active">Profile Nhôm</a>
+        <a href="tin-tuc.html"                  class="nav-menu-link">Tin Tức</a>
+        <a href="lien-he.html"                  class="nav-menu-link">Liên Hệ</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+        <a href="tel:0869590279" class="nav-hotline" aria-label="Gọi hotline 0869 590 279">
+          <i class="ri-phone-fill" aria-hidden="true"></i>
+          <span>0869 590 279</span>
+        </a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html"                   class="nav-drawer-link">Trang Chủ</a>
+    <a href="co-khi-sao-vang.html"        class="nav-drawer-link">Cơ Khí Sao Vàng</a>
+    <a href="nhom-sao-vang.html"          class="nav-drawer-link">Nhôm Sao Vàng</a>
+    <a href="linh-vuc-hoat-dong.html"     class="nav-drawer-link">Lĩnh Vực Hoạt Động</a>
+    <a href="du-an.html"                  class="nav-drawer-link">Dự Án Đã Thực Hiện</a>
+    <a href="san-pham.html"               class="nav-drawer-link">Sản Phẩm</a>
+    <a href="thu-vien-sp.html"            class="nav-drawer-link">Thư Viện SP</a>
+    <a href="thu-vien-profile-nhom.html"  class="nav-drawer-link active">Profile Nhôm</a>
+    <a href="tin-tuc.html"                class="nav-drawer-link">Tin Tức</a>
+    <a href="lien-he.html"                class="nav-drawer-link">Liên Hệ</a>
+    <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
+      <i class="ri-phone-fill"></i> 0869 590 279
+    </a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="profile-hero" aria-label="Thư Viện Profile Nhôm">
+      <div class="profile-hero-bg" aria-hidden="true"></div>
+      <div class="profile-hero-content">
+        <span class="profile-hero-tag">Kỹ Thuật Nhôm Cao Cấp</span>
+        <h1 class="profile-hero-title">THƯ VIỆN PROFILE NHÔM</h1>
+        <p class="profile-hero-desc">Bảng tính giá nhôm định hình đầy đủ — Mã nhôm · Mặt cắt · Tỷ trọng kg/m · Số lượng · Thành tiền</p>
+      </div>
+    </section>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-bar">
+      <div class="breadcrumb-inner">
+        <a href="index.html">Trang chủ</a>
+        <i class="ri-arrow-right-s-line"></i>
+        <span>Thư Viện Profile Nhôm</span>
+      </div>
+    </div>
+
+    <!-- FILTER TABS -->
+    <div class="filter-section">
+      <div class="filter-inner">
+        <h2 class="filter-title">Thư Viện <span>Profile Nhôm</span> Định Hình</h2>
+        <div class="filter-tabs" id="filterTabs" role="tablist">
+          <button class="filter-tab active" data-brand="all" role="tab" aria-selected="true">Tất Cả</button>
+          <button class="filter-tab" data-brand="xingfa-quang-dong" role="tab">Xingfa Quảng Đông</button>
+          <button class="filter-tab" data-brand="xingfa-taiwan" role="tab">Xingfa Taiwan</button>
+          <button class="filter-tab" data-brand="maxpro-jp" role="tab">Maxpro.JP</button>
+          <button class="filter-tab" data-brand="queenviet" role="tab">QueenViet</button>
+          <button class="filter-tab" data-brand="alugood" role="tab">Alugood Slim</button>
+          <button class="filter-tab" data-brand="owin" role="tab">Owin</button>
+          <button class="filter-tab" data-brand="other" role="tab">Khác</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROFILE GRID -->
+    <section class="profile-grid-section" aria-label="Danh sách profile nhôm">
+      <div class="profile-grid-inner">
+        <div class="results-bar">
+          <p class="results-count">Hiển thị <strong id="resultCount">47</strong> profile nhôm</p>
+        </div>
+        <div class="profile-grid" id="profileGrid">
+          <!-- Cards are rendered by JS below -->
+        </div>
+        <div class="no-results" id="noResults">
+          <i class="ri-search-line" style="font-size:48px; color:#ddd; display:block; margin-bottom:12px;"></i>
+          Không tìm thấy profile phù hợp.
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO CONTENT -->
+    <section class="seo-section" aria-label="Thông tin Profile Nhôm Định Hình">
+      <div class="seo-inner">
+        <h2>1. Giới Thiệu về Profile Nhôm Định Hình</h2>
+        <p><strong>Profile nhôm định hình</strong> là sản phẩm được chế tạo thông qua quá trình đùn ép, tạo thành các thanh nhôm có hình dạng cố định với đặc tính chịu lực tốt, nhẹ và dễ gia công. Vật liệu này không chỉ giúp tối ưu hóa trong xây dựng và công nghiệp mà còn góp phần nâng cao thẩm mỹ cho các sản phẩm nội thất.</p>
+        <hr />
+        <h2>2. Phân Loại Profile Nhôm Định Hình</h2>
+        <h3>2.1. Theo Kích Thước</h3>
+        <ul>
+          <li><strong>20x20 mm:</strong> Dùng cho khung giá kệ và băng tải nhỏ.</li>
+          <li><strong>40x80 mm:</strong> Phù hợp làm khung chịu lực cho các hệ thống máy móc, năng lượng mặt trời.</li>
+          <li><strong>50x100 mm:</strong> Sử dụng cho các thiết bị yêu cầu độ ổn định cao, giúp giảm rung lắc trong quá trình vận hành.</li>
+        </ul>
+        <h3>2.2. Theo Chức Năng</h3>
+        <ul>
+          <li><strong>Nhôm nội thất:</strong> Ứng dụng trong tủ bếp, cửa sổ, và hệ thống đèn LED.</li>
+          <li><strong>Nhôm công nghiệp:</strong> Được dùng để làm khung máy, băng tải và hệ thống tản nhiệt.</li>
+        </ul>
+        <hr />
+        <h2>3. Ưu Điểm của Profile Nhôm Định Hình</h2>
+        <ul>
+          <li><strong>Bền và nhẹ:</strong> Dễ dàng vận chuyển và lắp đặt mà không ảnh hưởng đến độ bền.</li>
+          <li><strong>Chống ăn mòn:</strong> Công nghệ anod hóa giúp bảo vệ nhôm khỏi tác động môi trường.</li>
+          <li><strong>Thân thiện môi trường:</strong> Nhôm có thể tái chế mà không làm mất đi các đặc tính ban đầu.</li>
+        </ul>
+        <hr />
+        <h2>4. Bảng Tính Giá Nhôm Thanh Định Hình</h2>
+        <p>Công thức tính giá nhôm chính xác: <strong>Thành tiền = Đơn giá (VNĐ/kg) × Tỷ trọng (kg/m) × Khổ nhôm (m) × Số lượng (thanh)</strong></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner sv-container">
+      <div>
+        <div style="margin-bottom: 16px;">
+          <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 54px; width: auto; display: block;" />
+        </div>
+        <p class="footer-address" style="font-size: var(--sv-text-sm); color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 20px;">
+          Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng — chuyên cơ khí chính xác &amp; nhôm kính cao cấp.
+        </p>
+        <div class="footer-socials" aria-label="Mạng xã hội">
+          <a href="#" class="footer-social" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+          <a href="#" class="footer-social" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+          <a href="#" class="footer-social" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+          <a href="tel:0869590279" class="footer-social" aria-label="Hotline"><i class="ri-phone-fill"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Nhôm Sao Vàng</h4>
+        <div class="footer-links">
+          <a href="cua-nhom-kinh.html" class="footer-link">Cửa nhôm kính cao cấp</a>
+          <a href="vach-kinh.html" class="footer-link">Vách kính mặt dựng</a>
+          <a href="lan-can-kinh.html" class="footer-link">Lan can kính</a>
+          <a href="thu-vien-profile-nhom.html" class="footer-link">Thư viện Profile Nhôm</a>
+          <a href="thu-vien-sp.html" class="footer-link">Thư viện sản phẩm</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Cơ Khí Sao Vàng</h4>
+        <div class="footer-links">
+          <a href="linh-vuc-co-khi.html" class="footer-link">Gia công cơ khí chính xác</a>
+          <a href="cau-thang-xoan.html" class="footer-link">Lan can, cầu thang</a>
+          <a href="cong-nghe-thuat.html" class="footer-link">Cổng &amp; hàng rào</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Liên Hệ</h4>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="ri-map-pin-2-line"></i>
+            <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội.</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ri-phone-line"></i>
+            <a href="tel:0869590279" style="color:inherit;text-decoration:none;">0869 590 279</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ri-mail-line"></i>
+            <a href="mailto:cokhisaovangvn@gmail.com" style="color:inherit;text-decoration:none;">cokhisaovangvn@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <div class="floating-left">
+    <a href="https://zalo.me/0869590279" class="float-btn float-btn-zalo" target="_blank" rel="noopener" aria-label="Chat Zalo">
+      <i class="ri-message-3-fill"></i>
+    </a>
+    <a href="tel:0869590279" class="float-btn float-btn-phone" aria-label="Gọi điện">
+      <i class="ri-phone-fill"></i>
+    </a>
+  </div>
+  <div class="floating-right">
+    <button class="float-btn float-btn-top" id="scrollTopBtn" aria-label="Lên đầu trang">
+      <i class="ri-arrow-up-line"></i>
+    </button>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/modules/navbar.js"></script>
+  <script>
+  // ═══════════════════════════════════════════════════
+  //  PROFILE NHÔM DATA — All 47 profiles from Đại Phúc
+  // ═══════════════════════════════════════════════════
+  const BASE = 'https://nhomkinhdaiphuc.com/';
+  const PROFILES = [
+    // Xingfa Quảng Đông
+    { slug: 'nhom-xingfa-quang-dong-mau-xam-ghi-14',       name: 'Profile Nhôm Xingfa Quảng Đông màu xám ghi',                    brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-xam-ghi_878588/nhom-xingfa-quang-dong-mau-xam-ghi.webp' },
+    { slug: 'nhom-xingfa-quang-dong-mau-trang-15',         name: 'Profile Nhôm Xingfa Quảng Đông màu trắng',                      brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-trang_967078/nhom-xingfa-quang-dong-mau-trang.webp' },
+    { slug: 'nhom-xingfa-quang-dong-mau-den-16',           name: 'Profile Nhôm Xingfa Quảng Đông màu đen',                        brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-den_528658/nhom-xingfa-quang-dong-mau-den.webp' },
+    { slug: 'nhom-xingfa-quang-dong-mau-nau-ca-phe-17',    name: 'Profile Nhôm Xingfa Quảng Đông màu nâu cà phê',                 brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-nau-ca-phe_558423/nhom-xingfa-quang-dong-mau-nau-ca-phe.webp' },
+    { slug: 'nhom-xingfa-quang-dong-mau-van-go-lim-18',    name: 'Profile Nhôm Xingfa Quảng Đông màu vân gỗ lim',                 brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-van-go-lim_039828/nhom-xingfa-quang-dong-mau-van-go-lim.webp' },
+    { slug: 'nhom-xingfa-quang-dong-mau-van-go-trac-19',   name: 'Profile Nhôm Xingfa Quảng Đông màu vân gỗ trắc',                brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-van-go-trac_346025/nhom-xingfa-quang-dong-mau-van-go-trac.webp' },
+    { slug: 'nhom-xingfa-quang-dong-mau-xam-ghi',          name: 'Profile Nhôm Xingfa Quảng Đông màu xám ghi (cơ bản)',           brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-xam-ghi_878588/nhom-xingfa-quang-dong-mau-xam-ghi.webp' },
+    { slug: 'nhom-xingfa-quang-dong-mat-dung-he-65-mau-xam-ghi-21', name: 'Profile Nhôm Xingfa Quảng Đông mặt dựng hệ 65 màu xám ghi', brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mat-dung-he-65-mau-xam-ghi_484652/nhom-xingfa-quang-dong-mat-dung-he-65-mau-xam-ghi.webp' },
+    { slug: 'nhom-xingfa-quang-dong-cua-di-cua-so-cau-cach-nhiet-he-55-mau-xam-ghi-22', name: 'Profile Nhôm Xingfa Quảng Đông cầu cách nhiệt hệ 55 màu xám ghi', brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-cua-di-cua-so-cau-cach-nhiet-he-55-mau-xam-ghi_458792/nhom-xingfa-quang-dong-cua-di-cua-so-cau-cach-nhiet-he-55-mau-xam-ghi.webp' },
+    { slug: 'nhom-xinga-quang-dong-cua-lua-cau-cach-nhiet-he-sc80-mau-xam-ghi-23', name: 'Profile Nhôm Xingfa Quảng Đông cửa lùa cầu cách nhiệt hệ SC80 màu xám ghi', brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xinga-quang-dong-cua-lua-cau-cach-nhiet-he-sc80-mau-xam-ghi_989782/nhom-xinga-quang-dong-cua-lua-cau-cach-nhiet-he-sc80-mau-xam-ghi.webp' },
+    // Xingfa Taiwan
+    { slug: 'nhom-xingfa-taiwan-day-2-0mm-mau-xam-ghi-24', name: 'Profile Nhôm Xingfa Taiwan dày 2.0mm màu xám ghi',              brand: 'xingfa-taiwan', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-taiwan-day-2-0mm-mau-xam-ghi_907287/nhom-xingfa-taiwan-day-2-0mm-mau-xam-ghi.webp' },
+    { slug: 'nhom-xingfa-taiwan-day-1-8mm-mau-xam-ghi-25', name: 'Profile Nhôm Xingfa Taiwan dày 1.8mm màu xám ghi',              brand: 'xingfa-taiwan', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-taiwan-day-1-8mm-mau-xam-ghi_523246/nhom-xingfa-taiwan-day-1-8mm-mau-xam-ghi.webp' },
+    { slug: 'nhom-xingfa-taiwan-day-1-4mm-mau-xam-ghi-26', name: 'Profile Nhôm Xingfa Taiwan dày 1.4mm màu xám ghi',              brand: 'xingfa-taiwan', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-taiwan-day-1-4mm-mau-xam-ghi_132465/nhom-xingfa-taiwan-day-1-4mm-mau-xam-ghi.webp' },
+    { slug: 'nhom-xingfa-taiwan-day-1-2mm-mau-xam-ghi-20', name: 'Profile Nhôm Xingfa Taiwan dày 1.2mm màu xám ghi',              brand: 'xingfa-taiwan', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-taiwan-day-1-2mm-mau-xam-ghi_914890/nhom-xingfa-taiwan-day-1-2mm-mau-xam-ghi.webp' },
+    // Maxpro.JP
+    { slug: 'nhom-maxpro-jp-mau-nau-thu-27',                name: 'Profile Nhôm Maxpro.JP màu nâu thu',                             brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-mau-nau-thu_207582/nhom-maxpro-jp-mau-nau-thu.webp' },
+    { slug: 'nhom-maxpro-jp-he-lan-can-mau-nau-thu-30',     name: 'Profile Nhôm Maxpro.JP hệ lan can màu nâu thu',                  brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-lan-can-mau-nau-thu_794291/nhom-maxpro-jp-he-lan-can-mau-nau-thu.webp' },
+    { slug: 'nhom-truot-quay-queenviet-mau-xam-ghi-31',     name: 'Profile Nhôm trượt quay QueenViet màu xám ghi',                  brand: 'queenviet', img: 'thumb/350x350/1/upload/henhom/nhom-truot-quay-queenviet-mau-xam-ghi_058391/nhom-truot-quay-queenviet-mau-xam-ghi.webp' },
+    { slug: 'nhom-slim-alugood-mau-den-nham-32',            name: 'Profile Nhôm Slim Alugood màu đen nhám',                         brand: 'alugood', img: 'thumb/350x350/1/upload/henhom/nhom-slim-alugood-mau-den-nham_046760/nhom-slim-alugood-mau-den-nham.webp' },
+    { slug: 'nhom-slim-alugood-mau-trang-33',               name: 'Profile Nhôm Slim Alugood màu trắng',                            brand: 'alugood', img: 'thumb/350x350/1/upload/henhom/nhom-slim-alugood-mau-trang_209227/nhom-slim-alugood-mau-trang.webp' },
+    { slug: 'nhom-slim-alugood-mau-vang-xuoc-34',           name: 'Profile Nhôm Slim Alugood màu vàng xước',                        brand: 'alugood', img: 'thumb/350x350/1/upload/henhom/nhom-slim-alugood-mau-vang-xuoc_828510/nhom-slim-alugood-mau-vang-xuoc.webp' },
+    { slug: 'nhom-truot-quay-queenviet-mau-van-go-35',      name: 'Profile Nhôm trượt quay QueenViet màu vân gỗ',                   brand: 'queenviet', img: 'thumb/350x350/1/upload/henhom/nhom-truot-quay-queenviet-mau-van-go_818152/nhom-truot-quay-queenviet-mau-van-go.webp' },
+    { slug: 'nhom-maxpro-jp-mau-sam-banh-36',               name: 'Profile Nhôm Maxpro.JP màu sâm banh',                            brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-mau-sam-banh_705349/nhom-maxpro-jp-mau-sam-banh.webp' },
+    { slug: 'nhom-maxpro-jp-mau-den-min-37',                name: 'Profile Nhôm Maxpro.JP màu đen mịn',                             brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-mau-den-min_264913/nhom-maxpro-jp-mau-den-min.webp' },
+    { slug: 'nhom-maxpro-jp-he-mat-dung-65-mau-sam-banh-38', name: 'Profile Nhôm Maxpro.JP hệ mặt dựng 65 màu sâm banh',           brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-mat-dung-65-mau-sam-banh_318778/nhom-maxpro-jp-he-mat-dung-65-mau-sam-banh.webp' },
+    { slug: 'nhom-maxpro-jp-he-mat-dung-65-mau-den-min-39', name: 'Profile Nhôm Maxpro.JP hệ mặt dựng 65 màu đen mịn',             brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-mat-dung-65-mau-den-min_505542/nhom-maxpro-jp-he-mat-dung-65-mau-den-min.webp' },
+    { slug: 'nhom-maxpro-jp-he-lan-can-mau-sam-banh-40',    name: 'Profile Nhôm Maxpro.JP hệ lan can màu sâm banh',                 brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-lan-can-mau-sam-banh_859178/nhom-maxpro-jp-he-lan-can-mau-sam-banh.webp' },
+    { slug: 'nhom-maxpro-jp-he-lan-can-mau-den-min-41',     name: 'Profile Nhôm Maxpro.JP hệ lan can màu đen mịn',                  brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-lan-can-mau-den-min_934368/nhom-maxpro-jp-he-lan-can-mau-den-min.webp' },
+    { slug: 'nhom-maxpro-jp-mau-trang-42',                  name: 'Profile Nhôm Maxpro.JP màu trắng',                               brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-mau-trang_646646/nhom-maxpro-jp-mau-trang.webp' },
+    { slug: 'nhom-xingfa-owin-mau-van-go-trac-43',          name: 'Profile Nhôm Xingfa Owin màu vân gỗ trắc',                       brand: 'owin', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-owin-mau-van-go-trac_/nhom-xingfa-owin-mau-van-go-trac.webp' },
+    { slug: 'nhom-noi-that-owin-mau-go-trac-44',            name: 'Profile Nhôm nội thất Owin màu gỗ trắc',                         brand: 'owin', img: 'thumb/350x350/1/upload/henhom/nhom-noi-that-owin-mau-go-trac_758628/nhom-noi-that-owin-mau-go-trac.webp' },
+    { slug: 'nhom-thuy-luc-owin-mau-go-trac-45',            name: 'Profile Nhôm thủy lực Owin màu gỗ trắc',                         brand: 'owin', img: 'thumb/350x350/1/upload/henhom/nhom-thuy-luc-owin-mau-go-trac_/nhom-thuy-luc-owin-mau-go-trac.webp' },
+    { slug: 'nhom-truong-thanh-mau-go-lim-46',              name: 'Profile Nhôm Trường Thành màu gỗ lim',                           brand: 'other', img: 'thumb/350x350/1/upload/henhom/nhom-truong-thanh-mau-go-lim_006931/nhom-truong-thanh-mau-go-lim.webp' },
+    { slug: 'mat-cat-nhom-slim-cover-47',                   name: 'Profile Mặt cắt nhôm Slim Cover',                                brand: 'other', img: 'thumb/350x350/1/upload/henhom/mat-cat-nhom-slim-cover_307357/mat-cat-nhom-slim-cover.webp' },
+    { slug: 'nhom-maxpro-jp-he-lan-can-mau-nau-thu-30',     name: 'Profile Nhôm Maxpro.JP hệ lan can màu nâu thu',                  brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-lan-can-mau-nau-thu_794291/nhom-maxpro-jp-he-lan-can-mau-nau-thu.webp' },
+    { slug: 'nhom-maxpro-jp-he-mat-dung-65-mau-nau-thu-29', name: 'Profile Nhôm Maxpro.JP hệ mặt dựng 65 màu nâu thu',             brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-mat-dung-65-mau-nau-thu_330791/nhom-maxpro-jp-he-mat-dung-65-mau-nau-thu.webp' },
+  ];
+
+  const BRAND_LABELS = {
+    'xingfa-quang-dong': 'Xingfa Quảng Đông',
+    'xingfa-taiwan':     'Xingfa Taiwan',
+    'maxpro-jp':         'Maxpro.JP',
+    'queenviet':         'QueenViet',
+    'alugood':           'Alugood Slim',
+    'owin':              'Owin',
+    'other':             'Khác',
+  };
+
+  function renderCards(brand) {
+    const grid = document.getElementById('profileGrid');
+    const noRes = document.getElementById('noResults');
+    const countEl = document.getElementById('resultCount');
+    let filtered = brand === 'all' ? PROFILES : PROFILES.filter(p => p.brand === brand);
+    // Remove duplicates by slug
+    const seen = new Set();
+    filtered = filtered.filter(p => { if(seen.has(p.slug)) return false; seen.add(p.slug); return true; });
+    countEl.textContent = filtered.length;
+    if (!filtered.length) {
+      grid.innerHTML = '';
+      noRes.style.display = 'block';
+      return;
+    }
+    noRes.style.display = 'none';
+    grid.innerHTML = filtered.map(p => `
+      <article class="profile-card" data-brand="${p.brand}">
+        <div class="profile-card-img">
+          <img
+            src="${BASE}${p.img}"
+            alt="${p.name}"
+            loading="lazy"
+            onerror="this.src='assets/images/no-image.png'"
+          />
+        </div>
+        <div class="profile-card-body">
+          <div class="profile-card-brand">${BRAND_LABELS[p.brand] || p.brand}</div>
+          <h3 class="profile-card-name">${p.name}</h3>
+          <a href="profile-nhom-chi-tiet.html?slug=${p.slug}" class="profile-card-btn">
+            <i class="ri-eye-line"></i> Xem chi tiết
+          </a>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  // Filter tabs
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected','true');
+      renderCards(tab.dataset.brand);
+    });
+  });
+
+  // Initial render
+  renderCards('all');
+  </script>
+</body>
+</html>

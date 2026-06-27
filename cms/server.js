@@ -232,6 +232,10 @@ async function bootstrap() {
       // Map deep preview and clean URLs to their corresponding physical HTML files
       if (cleanPath.endsWith('/thu-vien-san-pham') || cleanPath.endsWith('/thu-vien-sp') || cleanPath.endsWith('/thu-vien-sp.html')) {
         fileToServe = 'thu-vien-sp.html';
+      } else if (cleanPath.endsWith('/thu-vien-profile-nhom') || cleanPath.endsWith('/thu-vien-profile-nhom.html')) {
+        fileToServe = 'thu-vien-profile-nhom.html';
+      } else if (cleanPath.endsWith('/profile-nhom-chi-tiet') || cleanPath.endsWith('/profile-nhom-chi-tiet.html')) {
+        fileToServe = 'profile-nhom-chi-tiet.html';
       } else if (cleanPath.endsWith('/du-an') || cleanPath.endsWith('/du-an.html')) {
         fileToServe = 'du-an.html';
       } else if (cleanPath.endsWith('/san-pham') || cleanPath.endsWith('/san-pham.html')) {
