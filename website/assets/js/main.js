@@ -670,11 +670,21 @@
     });
   };
 
+  const setupPageHeroSlider = () => {
+    const hero = document.querySelector('.page-hero');
+    if (hero && !hero.querySelector('.page-hero-slides')) {
+      const script = document.createElement('script');
+      script.src = 'assets/js/modules/page-hero-slider.js';
+      document.body.appendChild(script);
+    }
+  };
+
   // Run on load
   const init = () => {
     loadBrandingSettings();
     setupFileUploads();
     setupQuoteSubmit();
+    setupPageHeroSlider();
   };
 
   if (document.readyState === 'loading') {
