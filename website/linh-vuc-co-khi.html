@@ -4,2073 +4,611 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#B5121B" />
-  <title>SAO VANG MECHANICAL — Gia Công Cơ Khí Chế Tạo Nghệ Thuật | Chính Xác Công Nghiệp</title>
-  <meta name="description" content="SAO VANG MECHANICAL — Gia công cơ khí chế tạo nghệ thuật: Cổng nhôm đúc, Cầu thang CNC, Lan can Inox 316L, Robot hàn AWS. Dung sai ±0.1mm. ISO 9001:2015. Xưởng 2500m². Hotline: 0869 590 279." />
-  <meta property="og:title" content="SAO VANG MECHANICAL — Gia Công Cơ Khí Chế Tạo Nghệ Thuật" />
-  <meta property="og:description" content="Cơ khí chế tạo nghệ thuật tiêu chuẩn quốc tế. Laser CNC ±0.1mm, Robot hàn AWS, Sơn tĩnh điện bảo vệ 30 năm. ISO 9001:2015 · QUACERT." />
-  <meta property="og:image" content="https://www.CoKhiSaoVang.com/assets/images/workshop_cnc.png" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.CoKhiSaoVang.com/linh-vuc-co-khi.html" />
-  <link rel="canonical" href="https://www.CoKhiSaoVang.com/linh-vuc-co-khi.html" />
+  <title>Dịch Vụ Cơ Khí — Gia Công CNC, Kết Cấu Thép, Lan Can, Cổng | Sao Vàng</title>
+  <meta name="description" content="Sao Vàng cung cấp dịch vụ gia công cơ khí chính xác: CNC, kết cấu thép, lan can cầu thang, cổng hàng rào, inox & nhôm. Dung sai ±0.1mm. Hotline: 0869 590 279." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/main.css" />
-
-  <!-- Schema.org JSON-LD — Mechanical Service -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "SAO VANG MECHANICAL — Gia Công Cơ Khí Chế Tạo",
-    "serviceType": "Mechanical Fabrication & Artistic Metalwork",
-    "provider": {
-      "@type": "Organization",
-      "name": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG",
-      "taxID": "0110808047",
-      "url": "https://www.CoKhiSaoVang.com",
-      "logo": "https://www.CoKhiSaoVang.com/assets/images/logo-sv-main.svg",
-      "telephone": "+84869590279",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Tầng 3, TT7-35 KĐT Văn Phú",
-        "addressLocality": "Hà Đông",
-        "addressRegion": "Hà Nội",
-        "addressCountry": "VN"
-      },
-      "hasCredential": [
-        { "@type": "EducationalOccupationalCredential", "credentialCategory": "ISO 9001:2015" },
-        { "@type": "EducationalOccupationalCredential", "credentialCategory": "QUACERT" }
-      ]
-    },
-    "areaServed": { "@type": "Country", "name": "Vietnam" },
-    "description": "Gia công cơ khí chế tạo nghệ thuật: Laser CNC dung sai ±0.1mm, Robot hàn AWS, sơn tĩnh điện bảo vệ 30 năm, kiểm soát chất lượng ISO 9001:2015.",
-    "offers": [
-      { "@type": "Offer", "name": "Cổng nhôm đúc chân không", "category": "Cơ khí nghệ thuật" },
-      { "@type": "Offer", "name": "Cầu thang nghệ thuật xoắn CNC", "category": "Cơ khí nghệ thuật" },
-      { "@type": "Offer", "name": "Lan can & Inox Marine 316L", "category": "Cơ khí nghệ thuật" },
-      { "@type": "Offer", "name": "Nội thất cơ khí & Trang trí", "category": "Cơ khí nghệ thuật" }
-    ]
-  }
-  </script>
-
   <style>
-    /* ════════════════════════════════════════════════
-       PAGE-SPECIFIC: linh-vuc-co-khi.html
-       All structural tokens come from main.css
-    ════════════════════════════════════════════════ */
+    /* ══ Page: linh-vuc-co-khi.html ══ */
+    :root { --page-brand: #B5121B; --page-brand-dark: #8a0c12; }
 
-    /* ── Hero: Full-screen video poster ──────────────── */
-    .hero-mech {
+    /* ── Hero ── */
+    .page-hero {
       position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      overflow: hidden;
-      background-color: var(--dark-industrial);
-      padding-top: var(--header-h);
-    }
-
-    .hero-mech-video {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-
-    .hero-mech-video video,
-    .hero-mech-video img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.45;
-    }
-
-    .hero-mech-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
-      background: linear-gradient(
-        160deg,
-        rgba(15,17,21,0.82) 0%,
-        rgba(15,17,21,0.55) 50%,
-        rgba(15,17,21,0.88) 100%
-      );
-    }
-
-    .hero-mech-content {
-      position: relative;
-      z-index: 2;
-      max-width: 860px;
-      padding: var(--space-8) var(--space-6);
-    }
-
-    .hero-breadcrumb {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--space-2);
-      font-family: var(--ff-header);
-      font-size: var(--text-xs);
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: var(--space-6);
-    }
-
-    .hero-breadcrumb a {
-      color: rgba(255,255,255,0.5);
-      transition: color 0.2s;
-    }
-    .hero-breadcrumb a:hover { color: var(--gold-metallic); }
-
-    .hero-breadcrumb-sep {
-      display: inline-flex;
-      align-items: center;
-      color: rgba(255,255,255,0.25);
-    }
-
-    .hero-breadcrumb-current {
-      color: var(--gold-metallic);
-    }
-
-    .hero-division-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: var(--space-2);
-      font-family: var(--ff-header);
-      font-size: var(--text-xs);
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold-metallic);
-      border: 1px solid rgba(212,175,55,0.4);
-      background: rgba(212,175,55,0.08);
-      padding: var(--space-2) var(--space-6);
-      border-radius: 2px;
-      margin-bottom: var(--space-6);
-    }
-
-    .hero-mech-title {
-      font-family: var(--ff-header);
-      font-size: var(--text-hero);
-      font-weight: 900;
-      letter-spacing: -0.03em;
-      text-transform: uppercase;
-      color: var(--white);
-      line-height: 1.05;
-      margin-bottom: var(--space-4);
-    }
-
-    .hero-mech-title .division-name {
-      display: block;
-      color: var(--gold-metallic);
-    }
-
-    .hero-mech-subtitle {
-      font-size: var(--text-lg);
-      color: rgba(255,255,255,0.75);
-      line-height: 1.65;
-      max-width: 640px;
-      margin: 0 auto var(--space-8);
-      font-weight: 300;
-    }
-
-    .hero-mech-ctas {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--space-4);
-      flex-wrap: wrap;
-    }
-
-    .hero-scroll-indicator {
-      position: absolute;
-      bottom: var(--space-8);
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--space-2);
-      color: rgba(255,255,255,0.4);
-      font-size: var(--text-xs);
-      font-family: var(--ff-header);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .scroll-line {
-      width: 1px;
-      height: 40px;
-      background: linear-gradient(to bottom, transparent, rgba(255,255,255,0.4));
-      animation: scrollPulse 2s ease-in-out infinite;
-    }
-
-    @keyframes scrollPulse {
-      0%, 100% { opacity: 0.3; transform: scaleY(1); }
-      50% { opacity: 0.8; transform: scaleY(1.2); }
-    }
-
-    /* ── Pain Section ────────────────────────────────── */
-    .pain-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-6);
-      margin-top: var(--space-12);
-    }
-
-    .pain-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-md);
-      padding: var(--space-8);
-      transition: var(--transition-smooth);
-      position: relative;
+      min-height: 380px;
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      background: #0f1115;
+      padding-top: var(--header-h, 80px);
       overflow: hidden;
     }
-
-    .pain-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--red-brand), transparent);
-      opacity: 0;
-      transition: opacity 0.3s;
+    .page-hero-bg {
+      position: absolute; inset: 0;
+      background: url('assets/images/hero-workshop.jpg') center/cover no-repeat;
+      opacity: 0.35;
     }
-
-    .pain-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(165,0,0,0.07);
-      border-color: rgba(165,0,0,0.15);
+    .page-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, rgba(181,18,27,0.55) 0%, rgba(15,17,21,0.78) 100%);
     }
-
-    .pain-card:hover::before { opacity: 1; }
-
-    .pain-icon {
-      width: 52px;
-      height: 52px;
-      border-radius: var(--radius-sm);
-      background: rgba(165,0,0,0.06);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--red-brand);
-      margin-bottom: var(--space-4);
+    .page-hero-content { position: relative; z-index: 2; padding: 60px 20px 50px; }
+    .page-hero-eyebrow {
+      font-family: var(--ff-header, 'Montserrat', sans-serif);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold-metallic, #d4af37);
+      margin-bottom: 14px;
     }
-
-    .pain-title {
-      font-family: var(--ff-header);
-      font-size: var(--text-md);
-      font-weight: 700;
-      color: var(--gray-900);
-      margin-bottom: var(--space-3);
-      line-height: 1.3;
+    .page-hero-title {
+      font-family: var(--ff-header, 'Montserrat', sans-serif);
+      font-size: clamp(36px, 6vw, 64px); font-weight: 900;
+      color: #fff; line-height: 1.05; margin-bottom: 16px;
     }
-
-    .pain-desc {
-      font-size: var(--text-sm);
-      color: var(--gray-500);
-      line-height: 1.65;
+    .page-hero-desc {
+      font-size: 16px; color: rgba(255,255,255,0.75);
+      max-width: 560px; margin: 0 auto 24px; line-height: 1.7;
     }
-
-    .pain-transition {
-      text-align: center;
-      margin-top: var(--space-12);
-      padding: var(--space-8) var(--space-8);
-      background: linear-gradient(135deg, rgba(165,0,0,0.04), rgba(212,175,55,0.04));
-      border: 1px solid rgba(165,0,0,0.12);
-      border-radius: var(--radius-md);
+    .page-hero-breadcrumb {
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: rgba(255,255,255,0.5);
+      margin-top: 16px;
     }
+    .page-hero-breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+    .page-hero-breadcrumb a:hover { color: var(--gold-metallic, #d4af37); }
+    .page-hero-breadcrumb .sep { color: rgba(255,255,255,0.25); }
+    .page-hero-breadcrumb .current { color: var(--gold-metallic, #d4af37); }
 
-    .pain-transition-text {
-      font-family: var(--ff-header);
-      font-size: var(--text-xl);
-      font-weight: 800;
-      color: var(--gray-900);
-      line-height: 1.3;
+    /* ── Services section ── */
+    .services-section { padding: 80px 0; background: #fff; }
+    .service-item {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+      align-items: center; padding: 60px 0;
+      border-bottom: 1px solid #f0f0f0;
     }
+    .service-item:last-child { border-bottom: none; }
+    .service-item.reverse { direction: rtl; }
+    .service-item.reverse > * { direction: ltr; }
 
-    .pain-transition-text .accent {
-      color: var(--red-brand);
+    .service-img {
+      border-radius: 4px; overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
     }
-
-    /* ── Solution Section ────────────────────────────── */
-    .solution-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-6);
-      margin-top: var(--space-12);
-    }
-
-    .solution-card {
-      background: var(--dark-panel);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: var(--radius-md);
-      padding: var(--space-8);
-      display: flex;
-      gap: var(--space-6);
-      align-items: flex-start;
-      transition: var(--transition-smooth);
-    }
-
-    .solution-card:hover {
-      border-color: rgba(212,175,55,0.2);
-      background: rgba(255,255,255,0.02);
-      transform: translateY(-4px);
-    }
-
-    .solution-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: var(--radius-sm);
-      background: rgba(212,175,55,0.1);
-      color: var(--gold-metallic);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-
-    .solution-body {}
-
-    .solution-title {
-      font-family: var(--ff-header);
-      font-size: var(--text-md);
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: var(--space-2);
-      line-height: 1.3;
-    }
-
-    .solution-spec {
-      display: inline-block;
-      font-family: var(--ff-header);
-      font-size: var(--text-xs);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold-metallic);
-      margin-bottom: var(--space-3);
-    }
-
-    .solution-desc {
-      font-size: var(--text-sm);
-      color: var(--gray-400);
-      line-height: 1.6;
-    }
-
-    /* Stats Row */
-    .stats-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: var(--space-1);
-      margin-top: var(--space-12);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-    }
-
-    .stat-cell {
-      padding: var(--space-8) var(--space-6);
-      text-align: center;
-      background: var(--dark-panel);
-      border-right: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .stat-cell:last-child { border-right: none; }
-
-    .stat-num {
-      font-family: var(--ff-header);
-      font-size: var(--text-xxl);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1;
-      margin-bottom: var(--space-2);
-    }
-
-    .stat-num .unit {
-      font-size: var(--text-lg);
-      color: var(--gold-metallic);
-      font-weight: 700;
-    }
-
-    .stat-lbl {
-      font-family: var(--ff-header);
-      font-size: var(--text-xs);
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--gray-500);
-    }
-
-    /* ── Products Section ────────────────────────────── */
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: var(--space-6);
-      margin-top: var(--space-12);
-    }
-
-    .product-card {
-      background: var(--white);
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      transition: var(--transition-smooth);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
-    }
-
-    .product-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 40px rgba(0,0,0,0.08);
-      border-color: rgba(212,175,55,0.25);
-    }
-
-    .product-img {
-      position: relative;
-      aspect-ratio: 4 / 3;
-      overflow: hidden;
-      background: var(--gray-100);
-    }
-
-    .product-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .service-img img {
+      width: 100%; height: 300px; object-fit: cover; display: block;
       transition: transform 0.6s ease;
     }
+    .service-img:hover img { transform: scale(1.04); }
 
-    .product-card:hover .product-img img {
-      transform: scale(1.06);
+    .service-content {}
+    .service-number {
+      font-family: var(--ff-header, 'Montserrat', sans-serif);
+      font-size: 48px; font-weight: 900;
+      color: var(--gold-metallic, #d4af37); line-height: 1;
+      margin-bottom: 8px; display: flex; align-items: center; gap: 16px;
     }
-
-    .product-img-badge {
-      position: absolute;
-      top: var(--space-3);
-      left: var(--space-3);
-      font-family: var(--ff-header);
-      font-size: var(--text-xs);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      background: var(--dark-industrial);
-      color: var(--gold-metallic);
-      padding: 3px 10px;
-      border-radius: 2px;
-    }
-
-    .product-body {
-      padding: var(--space-6);
-    }
-
-    .product-title {
-      font-family: var(--ff-header);
-      font-size: var(--text-md);
-      font-weight: 700;
-      color: var(--gray-900);
-      margin-bottom: var(--space-3);
-      line-height: 1.3;
-    }
-
-    .product-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: var(--space-2);
-      margin-bottom: var(--space-4);
-    }
-
-    .product-tag {
-      font-family: var(--ff-header);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--gray-600);
-      background: var(--gray-100);
-      border: 1px solid var(--gray-200);
-      padding: 2px 8px;
-      border-radius: 2px;
-    }
-
-    .product-card .btn {
-      width: 100%;
-      margin-top: var(--space-2);
-    }
-
-    /* ── Portfolio Section ───────────────────────────── */
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--space-6);
-      margin-top: var(--space-12);
-    }
-
-    .portfolio-card {
-      position: relative;
-      border-radius: var(--radius-md);
-      overflow: hidden;
-      aspect-ratio: 4 / 3;
-      background: var(--dark-panel);
-      cursor: pointer;
-    }
-
-    .portfolio-card img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s ease;
-      filter: brightness(0.9);
-    }
-
-    .portfolio-card:hover img {
-      transform: scale(1.05);
-      filter: brightness(0.75);
-    }
-
-    .portfolio-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.1) 55%, transparent 100%);
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: var(--space-6);
-    }
-
-    .portfolio-tag {
-      font-family: var(--ff-header);
-      font-size: var(--text-xs);
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold-metallic);
-      margin-bottom: var(--space-2);
-    }
-
-    .portfolio-title {
-      font-family: var(--ff-header);
-      font-size: var(--text-lg);
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: var(--space-2);
-      line-height: 1.25;
-    }
-
-    .portfolio-meta {
-      display: flex;
-      align-items: center;
-      gap: var(--space-4);
-      font-size: var(--text-xs);
-      color: var(--gray-400);
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding-top: var(--space-3);
-      margin-top: var(--space-2);
-    }
-
-    .portfolio-meta span {
-      display: flex;
-      align-items: center;
-      gap: var(--space-1);
-    }
-
-    /* ── Quote CTA Section ───────────────────────────── */
-    .quote-section {
-      background: linear-gradient(135deg, var(--dark-industrial) 0%, #1a0a0a 60%, #0d1219 100%);
-      padding-block: var(--space-24);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .quote-section::before {
+    .service-number::after {
       content: '';
-      position: absolute;
-      top: -1px;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--red-brand) 0%, var(--gold-metallic) 50%, var(--red-brand) 100%);
-    }
-
-    .quote-section::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(165,0,0,0.06) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .quote-layout {
-      display: grid;
-      grid-template-columns: 1fr 1.6fr;
-      gap: var(--space-16);
-      align-items: start;
-      position: relative;
-      z-index: 1;
-    }
-
-    .quote-pitch {}
-
-    .quote-pitch-kicker {
-      font-family: var(--ff-header);
-      font-size: var(--text-xs);
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--red-brand);
-      display: flex;
-      align-items: center;
-      gap: var(--space-3);
-      margin-bottom: var(--space-4);
-    }
-
-    .quote-pitch-kicker::before {
-      content: '';
-      display: inline-block;
-      width: 24px;
-      height: 2px;
-      background: var(--red-brand);
-    }
-
-    .quote-pitch-title {
-      font-family: var(--ff-header);
-      font-size: var(--text-xxl);
-      font-weight: 900;
-      color: var(--white);
-      letter-spacing: -0.02em;
-      line-height: 1.2;
-      text-transform: uppercase;
-      margin-bottom: var(--space-6);
-    }
-
-    .quote-pitch-title span {
-      color: var(--gold-metallic);
-    }
-
-    .quote-pitch-desc {
-      font-size: var(--text-md);
-      color: var(--gray-400);
-      line-height: 1.7;
-      margin-bottom: var(--space-8);
-    }
-
-    .trust-badges {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-3);
-    }
-
-    .trust-badge {
-      display: flex;
-      align-items: center;
-      gap: var(--space-3);
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: var(--radius-sm);
-      padding: var(--space-3) var(--space-4);
-    }
-
-    .trust-badge-icon {
-      color: var(--gold-metallic);
+      display: block; width: 40px; height: 3px;
+      background: var(--gold-metallic, #d4af37);
       flex-shrink: 0;
     }
+    .service-title {
+      font-family: var(--ff-header, 'Montserrat', sans-serif);
+      font-size: clamp(22px, 3vw, 30px); font-weight: 700;
+      color: #1a1a1a; margin-bottom: 16px; line-height: 1.25;
+    }
+    .service-desc {
+      font-size: 15px; line-height: 1.75; color: #555;
+      margin-bottom: 24px;
+    }
+    .service-features {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 10px 20px;
+      margin-bottom: 28px;
+    }
+    .service-feature {
+      display: flex; align-items: flex-start; gap: 8px;
+      font-size: 14px; color: #333; font-weight: 500;
+    }
+    .service-feature::before {
+      content: '✓';
+      color: var(--gold-metallic, #d4af37); font-weight: 700;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .btn-quote {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold-metallic, #d4af37); color: #1a1a1a;
+      font-family: var(--ff-header, 'Montserrat', sans-serif);
+      font-size: 13px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 14px 28px;
+      border: none; cursor: pointer; text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-quote:hover { background: #b8942e; transform: translateY(-1px); }
+    .btn-quote svg { width: 16px; height: 16px; }
 
-    .trust-badge-text {
-      font-family: var(--ff-header);
-      font-size: var(--text-xs);
-      font-weight: 700;
-      color: var(--gray-300);
-      letter-spacing: 0.04em;
-      line-height: 1.3;
+    /* ── Process Section ── */
+    .process-section {
+      padding: 80px 0; background: #f7f8fa;
+    }
+    .section-eyebrow {
+      font-family: var(--ff-header, 'Montserrat', sans-serif);
+      font-size: 11px; font-weight: 700; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold-metallic, #d4af37);
+      text-align: center; margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: var(--ff-header, 'Montserrat', sans-serif);
+      font-size: clamp(28px, 4vw, 40px); font-weight: 800;
+      color: #1a1a1a; text-align: center; margin-bottom: 50px;
+    }
+    .process-grid {
+      display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px;
+    }
+    .process-step {
+      background: #fff; border-radius: 4px;
+      padding: 32px 20px 28px; text-align: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      transition: box-shadow 0.3s, transform 0.3s;
+    }
+    .process-step:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+      transform: translateY(-4px);
+    }
+    .process-num {
+      font-family: var(--ff-header, 'Montserrat', sans-serif);
+      font-size: 36px; font-weight: 900;
+      color: var(--gold-metallic, #d4af37);
+      line-height: 1; margin-bottom: 12px;
+    }
+    .process-step-title {
+      font-family: var(--ff-header, 'Montserrat', sans-serif);
+      font-size: 14px; font-weight: 700; color: #1a1a1a;
+      margin-bottom: 8px;
+    }
+    .process-step-desc {
+      font-size: 13px; color: #777; line-height: 1.6;
     }
 
-    /* Quote Form */
-    .quote-form-wrapper {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(255,255,255,0.08);
-      border-radius: var(--radius-md);
-      padding: var(--space-8);
+    /* ── CTA Banner ── */
+    .cta-banner {
+      background: var(--page-brand, #B5121B);
+      padding: 70px 0; text-align: center;
     }
-
-    .quote-form-header {
-      margin-bottom: var(--space-6);
-      padding-bottom: var(--space-4);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+    .cta-banner-title {
+      font-family: var(--ff-header, 'Montserrat', sans-serif);
+      font-size: clamp(26px, 4vw, 38px); font-weight: 800;
+      color: #fff; margin-bottom: 14px;
     }
-
-    .quote-form-title {
-      font-family: var(--ff-header);
-      font-size: var(--text-lg);
-      font-weight: 700;
-      color: var(--white);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+    .cta-banner-desc {
+      font-size: 16px; color: rgba(255,255,255,0.8);
+      margin-bottom: 36px;
     }
-
-    .quote-form-subtitle {
-      font-size: var(--text-sm);
-      color: var(--gray-500);
-      margin-top: var(--space-1);
+    .cta-banner-btns {
+      display: flex; align-items: center; justify-content: center;
+      gap: 16px; flex-wrap: wrap;
     }
-
-    .form-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--space-4);
+    .btn-cta-phone {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--gold-metallic, #d4af37); color: #1a1a1a;
+      font-family: var(--ff-header, 'Montserrat', sans-serif);
+      font-size: 15px; font-weight: 700;
+      padding: 16px 32px; text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
     }
-
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-2);
-    }
-
-    .form-group.full-width {
-      grid-column: 1 / -1;
-    }
-
-    .form-label {
-      font-family: var(--ff-header);
-      font-size: var(--text-xs);
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--gray-400);
-    }
-
-    .form-label .req {
-      color: var(--red-brand);
-      margin-left: 2px;
-    }
-
-    .form-input,
-    .form-select,
-    .form-textarea {
-      font-family: var(--ff-body);
-      font-size: var(--text-sm);
-      color: var(--white);
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: var(--radius-sm);
-      padding: var(--space-3) var(--space-4);
-      transition: border-color 0.2s, background 0.2s;
-      outline: none;
-      width: 100%;
-    }
-
-    .form-input::placeholder,
-    .form-textarea::placeholder {
-      color: var(--gray-600);
-    }
-
-    .form-input:focus,
-    .form-select:focus,
-    .form-textarea:focus {
-      border-color: rgba(212,175,55,0.5);
-      background: rgba(255,255,255,0.06);
-    }
-
-    .form-select {
-      cursor: pointer;
-      appearance: none;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='14' height='14' fill='none' stroke='%236B7280' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right var(--space-4) center;
-      padding-right: var(--space-12);
-    }
-
-    .form-select option {
-      background: var(--dark-panel);
-      color: var(--white);
-    }
-
-    .form-textarea {
-      resize: vertical;
-      min-height: 90px;
-      line-height: 1.6;
-    }
-
-    /* File Upload */
-    .file-upload-wrapper {
-      position: relative;
-    }
-
-    .file-upload-label {
-      display: flex;
-      align-items: center;
-      gap: var(--space-3);
-      padding: var(--space-3) var(--space-4);
-      background: rgba(255,255,255,0.04);
-      border: 1px dashed rgba(255,255,255,0.15);
-      border-radius: var(--radius-sm);
-      cursor: pointer;
+    .btn-cta-phone:hover { background: #b8942e; transform: translateY(-2px); }
+    .btn-cta-outline {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: transparent; color: #fff;
+      border: 2px solid rgba(255,255,255,0.6);
+      font-family: var(--ff-header, 'Montserrat', sans-serif);
+      font-size: 15px; font-weight: 700;
+      padding: 14px 32px; text-decoration: none;
       transition: border-color 0.2s, background 0.2s;
     }
+    .btn-cta-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
 
-    .file-upload-label:hover {
-      border-color: rgba(212,175,55,0.4);
-      background: rgba(255,255,255,0.06);
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .service-item { grid-template-columns: 1fr; gap: 30px; }
+      .service-item.reverse { direction: ltr; }
+      .process-grid { grid-template-columns: repeat(3, 1fr); }
     }
-
-    .file-upload-input {
-      position: absolute;
-      inset: 0;
-      opacity: 0;
-      cursor: pointer;
-      width: 100%;
-    }
-
-    .file-upload-icon {
-      color: var(--gold-metallic);
-      flex-shrink: 0;
-    }
-
-    .file-upload-text {
-      font-size: var(--text-sm);
-      color: var(--gray-400);
-      line-height: 1.3;
-    }
-
-    .file-name {
-      font-size: var(--text-xs);
-      color: var(--gray-500);
-      margin-top: var(--space-1);
-    }
-
-    .form-submit-btn {
-      width: 100%;
-      padding: var(--space-4) var(--space-8);
-      font-size: var(--text-md);
-      margin-top: var(--space-2);
-    }
-
-    /* ── Footer ──────────────────────────────────────── */
-    .footer-mech {
-      background-color: #080A0D;
-      border-top: 1px solid rgba(255,255,255,0.05);
-      padding-block: var(--space-12);
-    }
-
-    .footer-mech-inner {
-      display: grid;
-      grid-template-columns: 1.8fr 1fr 1fr;
-      gap: var(--space-12);
-      padding-bottom: var(--space-12);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-      margin-bottom: var(--space-8);
-    }
-
-    .footer-brand-col {}
-
-    .footer-logo-link {
-      display: inline-block;
-      margin-bottom: var(--space-4);
-    }
-
-    .footer-logo-link img {
-      height: 40px;
-      width: auto;
-      filter: brightness(0) invert(1);
-      opacity: 0.85;
-    }
-
-    .footer-brand-desc {
-      font-size: var(--text-sm);
-      color: var(--gray-500);
-      line-height: 1.7;
-      margin-bottom: var(--space-6);
-    }
-
-    .footer-contact-item {
-      display: flex;
-      align-items: flex-start;
-      gap: var(--space-3);
-      font-size: var(--text-sm);
-      color: var(--gray-500);
-      margin-bottom: var(--space-3);
-      line-height: 1.5;
-    }
-
-    .footer-contact-item svg {
-      color: var(--gold-metallic);
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .footer-col-title {
-      font-family: var(--ff-header);
-      font-size: var(--text-sm);
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--gray-300);
-      margin-bottom: var(--space-4);
-    }
-
-    .footer-nav-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-3);
-    }
-
-    .footer-nav-list a {
-      font-size: var(--text-sm);
-      color: var(--gray-500);
-      transition: color 0.2s;
-      display: flex;
-      align-items: center;
-      gap: var(--space-2);
-    }
-
-    .footer-nav-list a:hover {
-      color: var(--gold-metallic);
-    }
-
-    .footer-bottom-bar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: var(--space-4);
-    }
-
-    .footer-copyright {
-      font-size: var(--text-xs);
-      color: var(--gray-600);
-    }
-
-    .footer-bottom-links {
-      display: flex;
-      align-items: center;
-      gap: var(--space-6);
-    }
-
-    .footer-bottom-links a {
-      font-size: var(--text-xs);
-      color: var(--gray-600);
-      transition: color 0.2s;
-    }
-
-    .footer-bottom-links a:hover {
-      color: var(--gray-400);
-    }
-
-    /* ── Sticky Mobile CTA ───────────────────────────── */
-    .sticky-cta-bar {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      z-index: 890;
-      display: flex;
-      gap: var(--space-2);
-      align-items: center;
-      background: var(--dark-industrial);
-      border-top: 1px solid rgba(255,255,255,0.1);
-      padding: var(--space-3) var(--space-4);
-      padding-bottom: calc(var(--space-3) + var(--safe-bottom));
-      box-shadow: 0 -4px 24px rgba(0,0,0,0.4);
-      transform: translateY(100%);
-      transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
-    }
-
-    .sticky-cta-bar .btn {
-      flex: 1;
-      justify-content: center;
-      min-height: 44px;
-      font-size: var(--text-xs);
-    }
-
-    @media (min-width: 1024px) {
-      .sticky-cta-bar { display: none !important; }
-    }
-
-    /* ── Responsive Breakpoints ──────────────────────── */
-    @media (max-width: 1199px) {
-      .products-grid { grid-template-columns: repeat(2, 1fr); }
-      .quote-layout { grid-template-columns: 1fr; gap: var(--space-12); }
-      .trust-badges { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 1023px) {
-      .pain-grid { grid-template-columns: 1fr; gap: var(--space-4); }
-      .solution-grid { grid-template-columns: 1fr; }
-      .stats-row { grid-template-columns: repeat(2, 1fr); }
-      .stat-cell { border-bottom: 1px solid rgba(255,255,255,0.05); }
-      .portfolio-grid { grid-template-columns: 1fr; }
-      .form-grid { grid-template-columns: 1fr; }
-      .footer-mech-inner { grid-template-columns: 1fr 1fr; gap: var(--space-8); }
-    }
-
-    @media (max-width: 767px) {
-      .hero-mech { min-height: 85vh; }
-      .products-grid { grid-template-columns: 1fr; }
-      .stats-row { grid-template-columns: repeat(2, 1fr); }
-      .trust-badges { grid-template-columns: 1fr; }
-      .footer-mech-inner { grid-template-columns: 1fr; }
-      .footer-bottom-bar { flex-direction: column; text-align: center; }
-      .quote-form-wrapper { padding: var(--space-6); }
-    }
-
-    @media (max-width: 480px) {
-      .portfolio-grid { grid-template-columns: 1fr; }
-      .stats-row { grid-template-columns: 1fr; }
-    }
-
-    /* ── Section Header Alignment ────────────────────── */
-    .section-header {
-      text-align: center;
-      max-width: 720px;
-      margin-inline: auto;
-    }
-
-    .section-header .tag { display: block; }
-
-    /* ── Divider line decoration ─────────────────────── */
-    .gold-rule {
-      display: flex;
-      align-items: center;
-      gap: var(--space-3);
-      margin: var(--space-4) auto 0;
-      justify-content: center;
-      max-width: 120px;
-    }
-
-    .gold-rule::before,
-    .gold-rule::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--gold-metallic);
-      opacity: 0.4;
-    }
-
-    .gold-rule-diamond {
-      width: 6px;
-      height: 6px;
-      background: var(--gold-metallic);
-      transform: rotate(45deg);
+    @media (max-width: 600px) {
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .service-features { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
+  <!-- ── NAVIGATION ── -->
+  <header class="header-v2" id="navbar" role="banner">
+    <div class="nav-inner">
 
-  <a href="#main-content" class="skip-link">Bỏ qua điều hướng</a>
-
-  <!-- ══ SECTION 1: HEADER ═══════════════════════════════════════ -->
-  <!-- SECTION 1 - HEADER -->
-  <header class="header" id="header" role="banner">
-    <div class="header-inner">
-      <a href="index.html" class="logo" aria-label="Cơ Khí Sao Vàng — Trang chủ">
-        <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" height="44" style="height:44px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <span class="logo-badge" aria-hidden="true" style="display:none;">SV</span>
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="Sao Vàng — Trang chủ">
+        <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" style="height: 48px; width: auto; display: block;" />
       </a>
-      
-      <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
-        <a href="index.html" class="nav-item active" aria-current="page" data-i18n="nav_home">TRANG CHỦ</a>
-        
-        <div class="nav-dropdown">
-          <a href="linh-vuc-co-khi.html" class="nav-item" data-i18n="nav_mechanical">
-            CƠ KHÍ
-          </a>
-          <div class="dropdown-menu">
-            <a href="cau-thang-xoan.html" class="dropdown-item">
-              <span class="dropdown-title">Cầu thang nghệ thuật</span>
-              <span class="dropdown-desc">Xoắn ốc thép bản CNC, lan can kính cong mỹ thuật</span>
-            </a>
-            <a href="lan-can-kinh.html" class="dropdown-item">
-              <span class="dropdown-title">Lan can ban công</span>
-              <span class="dropdown-desc">Inox 316, kính cường lực an toàn</span>
-            </a>
-            <a href="cong-nghe-thuat.html" class="dropdown-item">
-              <span class="dropdown-title">Cổng nhôm đúc</span>
-              <span class="dropdown-desc">Đúc chân không nguyên khối sơn mạ đồng giả cổ</span>
-            </a>
-            <a href="co-khi-nghe-thuat.html" class="dropdown-item">
-              <span class="dropdown-title">Inox du thuyền</span>
-              <span class="dropdown-desc">Gia công inox Marine 316L đánh bóng gương chống ăn mòn</span>
-            </a>
+
+      <!-- Desktop nav menu -->
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html"            class="nav-menu-link">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html"  class="nav-menu-link active">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html"    class="nav-menu-link">Nhôm Sao Vàng</a>
+
+        <!-- Dropdown -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link active">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-co-khi.html"   class="nav-dropdown-item" role="menuitem">Cơ Khí Chính Xác CNC</a>
+            <a href="cau-thang-xoan.html"    class="nav-dropdown-item" role="menuitem">Cầu Thang &amp; Lan Can</a>
+            <a href="cong-nghe-thuat.html"   class="nav-dropdown-item" role="menuitem">Cổng Nhôm Đúc Nghệ Thuật</a>
+            <a href="co-khi-nghe-thuat.html" class="nav-dropdown-item" role="menuitem">Inox Marine Du Thuyền</a>
+            <a href="cua-nhom-kinh.html"     class="nav-dropdown-item" role="menuitem">Cửa Nhôm Kính</a>
+            <a href="vach-kinh.html"         class="nav-dropdown-item" role="menuitem">Vách Kính &amp; Mặt Dựng</a>
+            <a href="lan-can-kinh.html"      class="nav-dropdown-item" role="menuitem">Lan Can Kính Cường Lực</a>
           </div>
         </div>
 
-        <div class="nav-dropdown">
-          <a href="linh-vuc-nhom-kinh.html" class="nav-item" data-i18n="nav_facade">
-            NHÔM KÍNH
-          </a>
-          <div class="dropdown-menu">
-            <a href="cua-nhom-kinh.html" class="dropdown-item">
-              <span class="dropdown-title">Cửa nhôm cao cấp</span>
-              <span class="dropdown-desc">Hệ Slim, Civro, Maxpro profile nhôm Châu Âu</span>
-            </a>
-            <a href="vach-kinh.html" class="dropdown-item">
-              <span class="dropdown-title">Vách kính &amp; Cabin tắm</span>
-              <span class="dropdown-desc">Hệ vách ngăn kính cường lực khổ lớn, cabin mạ vàng PVD</span>
-            </a>
-            <a href="linh-vuc-nhom-kinh.html#giai-phap" class="dropdown-item">
-              <span class="dropdown-title">Vách mặt dựng (Facade)</span>
-              <span class="dropdown-desc">Mặt dựng Unitized, Stick cản nhiệt Low-E tòa nhà</span>
-            </a>
-          </div>
-        </div>
-
-        <a href="du-an.html" class="nav-item" data-i18n="nav_projects">DỰ ÁN</a>
-        <a href="nang-luc.html" class="nav-item" data-i18n="nav_capacity">NĂNG LỰC</a>
-        <a href="tin-tuc.html" class="nav-item" data-i18n="nav_news">TIN TỨC</a>
-        <a href="lien-he.html" class="nav-item" data-i18n="nav_contact">LIÊN HỆ</a>
+        <a href="du-an.html"       class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="san-pham.html"    class="nav-menu-link">Sản Phẩm</a>
+        <a href="thu-vien-sp.html" class="nav-menu-link"
+        <a href="thu-vien-profile-nhom.html"    class="nav-menu-link">Thư Viện SP</a>
+        <a href="tin-tuc.html"     class="nav-menu-link">Tin Tức</a>
+        <a href="lien-he.html"     class="nav-menu-link">Liên Hệ</a>
       </nav>
 
-      <div style="display: flex; align-items: center;">
-        <a href="tel:0869590279" class="header-phone" aria-label="Gọi hotline 0869 590 279">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-          <span data-i18n="nav_hotline">0869 590 279</span>
+      <!-- Hotline + Hamburger -->
+      <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+        <a href="tel:0869590279" class="nav-hotline" aria-label="Gọi hotline 0869 590 279">
+          <i class="ri-phone-fill" aria-hidden="true"></i>
+          <span>0869 590 279</span>
         </a>
-        
-        <div class="lang-switcher">
-          <button class="lang-btn" data-lang="vi">VI</button>
-          <button class="lang-btn" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="jp">JP</button>
-        </div>
-
-        <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navDrawer">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile drawer -->
   <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html"              class="nav-drawer-link">Trang Chủ</a>
+    <a href="co-khi-sao-vang.html"   class="nav-drawer-link active">Cơ Khí Sao Vàng</a>
+    <a href="nhom-sao-vang.html"     class="nav-drawer-link">Nhôm Sao Vàng</a>
+    <a href="linh-vuc-hoat-dong.html" class="nav-drawer-link">Lĩnh Vực Hoạt Động</a>
+    <a href="du-an.html"             class="nav-drawer-link">Dự Án Đã Thực Hiện</a>
+    <a href="san-pham.html"          class="nav-drawer-link">Sản Phẩm</a>
+    <a href="thu-vien-sp.html"       class="nav-drawer-link">Thư Viện SP</a>
+    <a href="thu-vien-profile-nhom.html"  class="nav-drawer-link">Profile Nhôm</a>
+    <a href="tin-tuc.html"           class="nav-drawer-link">Tin Tức</a>
+    <a href="lien-he.html"           class="nav-drawer-link">Liên Hệ</a>
+    <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
+      <i class="ri-phone-fill"></i> 0869 590 279
+    </a>
+  </nav>
 
-  <main id="main-content">
-
-    <!-- ══ SECTION 2: HERO ═════════════════════════════════════════ -->
-    <section class="hero-mech" aria-label="SAO VANG MECHANICAL — Hero">
-      <!-- Background Video / Poster -->
-      <div class="hero-mech-video" aria-hidden="true">
-        <video
-          autoplay
-          loop
-          muted
-          playsinline
-          poster="assets/images/workshop_cnc.png"
-          aria-hidden="true"
-        >
-          <source src="https://assets.mixkit.co/videos/preview/mixkit-robotic-welding-arm-in-action-at-factory-40348-large.mp4" type="video/mp4" />
-          <!-- Fallback poster if video fails -->
-          <img src="assets/images/workshop_cnc.png" alt="Xưởng cơ khí CNC SAO VANG" />
-        </video>
+  <!-- ── HERO ── -->
+  <section class="page-hero">
+    <div class="page-hero-bg"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <div class="page-hero-eyebrow">Cơ Khí Sao Vàng</div>
+      <h1 class="page-hero-title">Dịch Vụ Cơ Khí</h1>
+      <p class="page-hero-desc">Gia công CNC, kết cấu thép, lan can cầu thang, cổng hàng rào, inox & nhôm</p>
+      <div class="page-hero-breadcrumb">
+        <a href="index.html">Trang chủ</a>
+        <span class="sep">›</span>
+        <a href="co-khi-sao-vang.html">Cơ Khí Sao Vàng</a>
+        <span class="sep">›</span>
+        <span class="current">Dịch vụ</span>
       </div>
-      <div class="hero-mech-overlay" aria-hidden="true"></div>
+    </div>
+  </section>
 
-      <!-- Hero Content -->
-      <div class="hero-mech-content">
+  <!-- ── SERVICES ── -->
+  <section class="services-section">
+    <div class="container">
 
-        <!-- Breadcrumb -->
-        <nav class="hero-breadcrumb" aria-label="Điều hướng phân cấp">
-          <a href="index.html">SAO VANG GROUP</a>
-          <span class="hero-breadcrumb-sep" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-          </span>
-          <span class="hero-breadcrumb-current">Mechanical Division</span>
-        </nav>
-
-        <!-- Division Badge -->
-        <div class="hero-division-badge" data-reveal>
-          <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          DIVISION 01
+      <!-- 01 -->
+      <div class="service-item">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1563514227147-6d2ff665a6a0?auto=format&fit=crop&w=800&q=80" alt="Gia công cơ khí chính xác CNC" loading="lazy" />
         </div>
-
-        <!-- Title -->
-        <h1 class="hero-mech-title" data-reveal data-reveal-delay="1">
-          SAO VANG
-          <span class="division-name">MECHANICAL</span>
-        </h1>
-
-        <!-- Subtitle -->
-        <p class="hero-mech-subtitle" data-reveal data-reveal-delay="2">
-          Gia công cơ khí chế tạo nghệ thuật — Chính xác công nghiệp
-        </p>
-
-        <!-- CTAs -->
-        <div class="hero-mech-ctas" data-reveal data-reveal-delay="3">
-          <a href="#bao-gia" class="btn btn-primary" style="font-size:var(--text-sm);padding:var(--space-4) var(--space-8);">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            NHẬN BÁO GIÁ NGAY
-          </a>
-          <a href="#portfolio" class="btn btn-outline-white" style="font-size:var(--text-sm);padding:var(--space-4) var(--space-8);">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-            XEM DỰ ÁN
+        <div class="service-content">
+          <div class="service-number">01</div>
+          <h2 class="service-title">Gia Công Cơ Khí Chính Xác</h2>
+          <p class="service-desc">Chúng tôi cung cấp dịch vụ gia công cơ khí chính xác cao cho các chi tiết máy, kết cấu thép và linh kiện cơ khí theo yêu cầu. Với hệ thống máy CNC hiện đại, chúng tôi đảm bảo độ chính xác tuyệt đối cho từng sản phẩm.</p>
+          <div class="service-features">
+            <span class="service-feature">Dung sai ±0.1mm</span>
+            <span class="service-feature">Máy CNC 5 trục</span>
+            <span class="service-feature">Kiểm tra CMM</span>
+            <span class="service-feature">Vật liệu đa dạng</span>
+            <span class="service-feature">Bảo hành chất lượng</span>
+          </div>
+          <a href="lien-he.html" class="btn-quote">
+            YÊU CẦU BÁO GIÁ
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
 
-      <!-- Scroll Indicator -->
-      <div class="hero-scroll-indicator" aria-hidden="true">
-        <div class="scroll-line"></div>
-        <span>Cuộn</span>
-      </div>
-    </section>
-
-    <!-- ══ SECTION 3: PAIN / PROBLEM ══════════════════════════════ -->
-    <section class="section-light" id="van-de" aria-labelledby="pain-title">
-      <div class="section-container">
-
-        <div class="section-header" data-reveal>
-          <span class="tag">Thực trạng ngành</span>
-          <h2 class="section-title" id="pain-title">
-            Tại sao khó tìm nhà thầu cơ khí<br><span class="accent">đúng chuẩn?</span>
-          </h2>
-          <div class="gold-rule"><div class="gold-rule-diamond"></div></div>
+      <!-- 02 -->
+      <div class="service-item reverse">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=800&q=80" alt="Gia công CNC cắt plasma laser" loading="lazy" />
         </div>
-
-        <div class="pain-grid">
-
-          <!-- Pain 1 -->
-          <div class="pain-card" data-reveal data-reveal-delay="1">
-            <div class="pain-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"/>
-                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
-              </svg>
-            </div>
-            <h3 class="pain-title">Dung sai gia công không đạt</h3>
-            <p class="pain-desc">Nhiều nhà thầu thiếu máy CNC hiện đại, dẫn đến sai số ±2–5mm thay vì ±0.1mm theo yêu cầu kỹ thuật. Kết quả: lắp đặt sai lệch, phải gia công lại, đội chi phí và trễ tiến độ dự án.</p>
+        <div class="service-content">
+          <div class="service-number">02</div>
+          <h2 class="service-title">Gia Công CNC</h2>
+          <p class="service-desc">Dịch vụ gia công CNC toàn diện: cắt plasma CNC cho thép tấm dày đến 50mm, cắt laser fiber cho thép mỏng và inox, uốn CNC thủy lực chính xác. Phục vụ mọi nhu cầu từ chi tiết nhỏ đến kết cấu lớn.</p>
+          <div class="service-features">
+            <span class="service-feature">Cắt plasma CNC thép ≤50mm</span>
+            <span class="service-feature">Cắt laser fiber inox</span>
+            <span class="service-feature">Uốn CNC thủy lực</span>
+            <span class="service-feature">Khoan, phay, tiện CNC</span>
+            <span class="service-feature">Dung sai ±0.05mm</span>
           </div>
-
-          <!-- Pain 2 -->
-          <div class="pain-card" data-reveal data-reveal-delay="2">
-            <div class="pain-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14 2 14 8 20 8"/>
-                <line x1="9" y1="15" x2="15" y2="15"/>
-                <line x1="9" y1="11" x2="15" y2="11"/>
-              </svg>
-            </div>
-            <h3 class="pain-title">Thiếu bản vẽ shop drawing chuyên nghiệp</h3>
-            <p class="pain-desc">Phần lớn đơn vị cơ khí nhỏ lẻ không có đội kỹ sư vẽ shop drawing chuẩn AS/NZS hay EN. Tư liệu kỹ thuật rời rạc, không có IFC drawing, gây tranh chấp và khó kiểm soát chất lượng nghiệm thu.</p>
-          </div>
-
-          <!-- Pain 3 -->
-          <div class="pain-card" data-reveal data-reveal-delay="3">
-            <div class="pain-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
-                <line x1="12" y1="9" x2="12" y2="13"/>
-                <line x1="12" y1="17" x2="12.01" y2="17"/>
-              </svg>
-            </div>
-            <h3 class="pain-title">Không có chứng nhận chất lượng</h3>
-            <p class="pain-desc">Không có ISO 9001, không có quy trình kiểm tra NDT (hàn siêu âm), không có báo cáo kiểm tra vật liệu — không thể đáp ứng yêu cầu của chủ đầu tư nước ngoài, tổng thầu hay ngân hàng tài trợ dự án.</p>
-          </div>
-
-        </div><!-- /.pain-grid -->
-
-        <!-- Transition Statement -->
-        <div class="pain-transition" data-reveal>
-          <div style="display:flex;align-items:center;justify-content:center;gap:var(--space-3);margin-bottom:var(--space-3);">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" color="#A50000" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            <p class="pain-transition-text">
-              <span class="accent">SAO VANG MECHANICAL</span> giải quyết tất cả những vấn đề trên
-            </p>
-          </div>
-          <p style="font-size:var(--text-sm);color:var(--gray-500);max-width:640px;margin:0 auto;line-height:1.6;">
-            Với hệ thống máy CNC Fiber Laser ±0.1mm, đội ngũ 45 kỹ sư có bằng AWS/CWI, xưởng 2.500m² đạt chuẩn ISO 9001:2015 — chúng tôi là lựa chọn tin cậy cho các dự án đòi hỏi chất lượng công nghiệp thực sự.
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ══ SECTION 4: SOLUTION / CAPABILITIES ═════════════════════ -->
-    <section class="section-dark" id="giai-phap" aria-labelledby="solution-title">
-      <div class="section-container">
-
-        <div class="section-header" data-reveal>
-          <span class="tag">Năng lực vượt trội</span>
-          <h2 class="section-title" id="solution-title">
-            Công nghệ &amp; Quy trình<br><span class="accent">Tiêu chuẩn Quốc tế</span>
-          </h2>
-          <div class="gold-rule"><div class="gold-rule-diamond"></div></div>
-        </div>
-
-        <div class="solution-grid">
-
-          <!-- Solution 1: Laser CNC -->
-          <div class="solution-card" data-reveal data-reveal-delay="1">
-            <div class="solution-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="2"/>
-                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-              </svg>
-            </div>
-            <div class="solution-body">
-              <span class="solution-spec">Laser CNC · Dung sai ±0.1mm</span>
-              <h3 class="solution-title">Cắt Laser Fiber &amp; Gia Công CNC Chính Xác Tuyệt Đối</h3>
-              <p class="solution-desc">Hệ thống máy Laser Fiber 6kW và trung tâm gia công CNC 5-trục đạt dung sai ±0.1mm cho mọi vật liệu: thép carbon, inox, nhôm, đồng. Phù hợp sản xuất hàng loạt hoặc đơn chiếc theo bản vẽ CAD/CAM.</p>
-            </div>
-          </div>
-
-          <!-- Solution 2: Robot Welding -->
-          <div class="solution-card" data-reveal data-reveal-delay="2">
-            <div class="solution-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
-                <line x1="8" y1="21" x2="16" y2="21"/>
-                <line x1="12" y1="17" x2="12" y2="21"/>
-                <polyline points="9 8 12 11 15 8"/>
-              </svg>
-            </div>
-            <div class="solution-body">
-              <span class="solution-spec">Robot Hàn · Tiêu chuẩn AWS D1.1</span>
-              <h3 class="solution-title">Hệ Thống Robot Hàn Tự Động Tiêu Chuẩn AWS</h3>
-              <p class="solution-desc">Robot hàn MIG/TIG tự động kết hợp hàn thủ công TIG Argon do thợ hàn được chứng nhận AWS/CWI thực hiện. Mọi mối hàn kết cấu đều được kiểm tra NDT (siêu âm UT, chụp X-quang RT) theo ASTM E164.</p>
-            </div>
-          </div>
-
-          <!-- Solution 3: Powder Coat -->
-          <div class="solution-card" data-reveal data-reveal-delay="3">
-            <div class="solution-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-              </svg>
-            </div>
-            <div class="solution-body">
-              <span class="solution-spec">Sơn Tĩnh Điện · Bảo vệ 30 năm</span>
-              <h3 class="solution-title">Dây Chuyền Sơn Tĩnh Điện &amp; Xử Lý Bề Mặt Cao Cấp</h3>
-              <p class="solution-desc">Dây chuyền xử lý bề mặt khép kín: Phun bi làm sạch SA2.5, mạ kẽm nhúng nóng HDG, sơn tĩnh điện PVDF 5 lớp đạt tiêu chuẩn Qualicoat Class 2 — bảo vệ 30 năm, phù hợp môi trường biển và công nghiệp ăn mòn.</p>
-            </div>
-          </div>
-
-          <!-- Solution 4: ISO QC -->
-          <div class="solution-card" data-reveal data-reveal-delay="4">
-            <div class="solution-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-                <polyline points="22 4 12 14.01 9 11.01"/>
-              </svg>
-            </div>
-            <div class="solution-body">
-              <span class="solution-spec">ISO 9001:2015 · QUACERT Chứng nhận</span>
-              <h3 class="solution-title">Hệ Thống Kiểm Soát Chất Lượng ISO Toàn Trình</h3>
-              <p class="solution-desc">Quy trình QC 3 giai đoạn: Kiểm tra đầu vào vật liệu (IQC), kiểm tra trong quá trình (IPQC) và kiểm tra đầu ra hoàn chỉnh (OQC). Toàn bộ hồ sơ chất lượng (Mill Certificate, WPS, PQR) được lưu trữ số hóa theo ISO 10013.</p>
-            </div>
-          </div>
-
-        </div><!-- /.solution-grid -->
-
-        <!-- Stats Row -->
-        <div class="stats-row" data-reveal>
-          <div class="stat-cell">
-            <div class="stat-num">
-              <span data-counter>2500</span><span class="unit">m²</span>
-            </div>
-            <div class="stat-lbl">Diện tích xưởng sản xuất</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-num">
-              <span data-counter>200</span><span class="unit"> tấn</span>
-            </div>
-            <div class="stat-lbl">Công suất gia công mỗi tháng</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-num">
-              <span data-counter>45</span>
-            </div>
-            <div class="stat-lbl">Kỹ sư &amp; thợ kỹ thuật cao</div>
-          </div>
-          <div class="stat-cell">
-            <div class="stat-num">
-              <span data-counter>15</span><span class="unit"> năm</span>
-            </div>
-            <div class="stat-lbl">Kinh nghiệm chế tạo công nghiệp</div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ══ SECTION 5: PRODUCTS ═════════════════════════════════════ -->
-    <section class="section-light" id="san-pham" aria-labelledby="products-title">
-      <div class="section-container">
-
-        <div class="section-header" data-reveal>
-          <span class="tag">Danh mục sản phẩm</span>
-          <h2 class="section-title" id="products-title">
-            Sản Phẩm Cơ Khí<br><span class="accent">Nghệ Thuật Tiêu Chuẩn</span>
-          </h2>
-          <p class="section-desc" style="margin-top:var(--space-4);">
-            Mỗi sản phẩm là sự giao thoa giữa máy móc CNC hiện đại và bàn tay nghệ nhân — được thiết kế, chế tạo và hoàn thiện ngay tại xưởng Hà Nội.
-          </p>
-          <div class="gold-rule"><div class="gold-rule-diamond"></div></div>
-        </div>
-
-        <div class="products-grid">
-
-          <!-- Product 1: Cổng nhôm đúc -->
-          <article class="product-card" data-reveal data-reveal-delay="1">
-            <div class="product-img">
-              <img
-                src="assets/images/service-cast-gates.png"
-                alt="Cổng nhôm đúc chân không SAO VANG MECHANICAL"
-                loading="lazy"
-                onerror="this.src='assets/images/product-gate.png'"
-              />
-              <span class="product-img-badge">Đúc CNC</span>
-            </div>
-            <div class="product-body">
-              <h3 class="product-title">Cổng Nhôm Đúc Chân Không</h3>
-              <div class="product-tags">
-                <span class="product-tag">Hợp kim A380</span>
-                <span class="product-tag">Áp lực 800 bar</span>
-                <span class="product-tag">Sơn PVDF 5 lớp</span>
-                <span class="product-tag">Motor tự động</span>
-              </div>
-              <a href="cong-nghe-thuat.html" class="btn btn-outline" style="justify-content:center;font-size:var(--text-xs);">
-                XEM CHI TIẾT
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Product 2: Cầu thang xoắn -->
-          <article class="product-card" data-reveal data-reveal-delay="2">
-            <div class="product-img">
-              <img
-                src="assets/images/service-artistic-stairs.png"
-                alt="Cầu thang nghệ thuật xoắn CNC SAO VANG"
-                loading="lazy"
-                onerror="this.src='assets/images/product-staircase.png'"
-              />
-              <span class="product-img-badge">Laser CNC</span>
-            </div>
-            <div class="product-body">
-              <h3 class="product-title">Cầu Thang Nghệ Thuật Xoắn CNC</h3>
-              <div class="product-tags">
-                <span class="product-tag">Thép bản 10mm</span>
-                <span class="product-tag">Dung sai ±0.1mm</span>
-                <span class="product-tag">Mạ PVD vàng</span>
-                <span class="product-tag">Tải 500kg</span>
-              </div>
-              <a href="cau-thang-xoan.html" class="btn btn-outline" style="justify-content:center;font-size:var(--text-xs);">
-                XEM CHI TIẾT
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Product 3: Lan can inox -->
-          <article class="product-card" data-reveal data-reveal-delay="3">
-            <div class="product-img">
-              <img
-                src="assets/images/service-mechanical-art.png"
-                alt="Lan can Inox Marine 316L SAO VANG"
-                loading="lazy"
-                onerror="this.src='assets/images/product-railing.png'"
-              />
-              <span class="product-img-badge">Inox 316L</span>
-            </div>
-            <div class="product-body">
-              <h3 class="product-title">Lan Can &amp; Inox Marine 316L</h3>
-              <div class="product-tags">
-                <span class="product-tag">Marine 316L</span>
-                <span class="product-tag">Đánh bóng Mirror</span>
-                <span class="product-tag">Hàn TIG Argon</span>
-                <span class="product-tag">Chống ăn mòn biển</span>
-              </div>
-              <a href="lan-can-kinh.html" class="btn btn-outline" style="justify-content:center;font-size:var(--text-xs);">
-                XEM CHI TIẾT
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-            </div>
-          </article>
-
-          <!-- Product 4: Nội thất cơ khí -->
-          <article class="product-card" data-reveal data-reveal-delay="4">
-            <div class="product-img">
-              <img
-                src="assets/images/service-maintenance.png"
-                alt="Nội thất cơ khí và trang trí SAO VANG"
-                loading="lazy"
-                onerror="this.src='assets/images/product-inox.png'"
-              />
-              <span class="product-img-badge">Custom</span>
-            </div>
-            <div class="product-body">
-              <h3 class="product-title">Nội Thất Cơ Khí &amp; Trang Trí</h3>
-              <div class="product-tags">
-                <span class="product-tag">CNC Fiber cắt laser</span>
-                <span class="product-tag">Uốn CNC</span>
-                <span class="product-tag">Theo bản vẽ</span>
-                <span class="product-tag">Mạ đồng/vàng PVD</span>
-              </div>
-              <a href="co-khi-nghe-thuat.html" class="btn btn-outline" style="justify-content:center;font-size:var(--text-xs);">
-                XEM CHI TIẾT
-                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-            </div>
-          </article>
-
-        </div><!-- /.products-grid -->
-
-      </div>
-    </section>
-
-    <!-- ══ SECTION 6: PORTFOLIO ════════════════════════════════════ -->
-    <section class="section-dark" id="portfolio" aria-labelledby="portfolio-title">
-      <div class="section-container">
-
-        <div class="section-header" data-reveal>
-          <span class="tag">Dự án tiêu biểu</span>
-          <h2 class="section-title" id="portfolio-title">
-            Công Trình Đã<br><span class="accent">Thực Hiện</span>
-          </h2>
-          <p class="section-desc" style="margin-top:var(--space-4);">
-            Hơn 500 công trình cơ khí được thực hiện trên toàn quốc từ Hà Nội đến Hạ Long, Đà Lạt và các khu resort ven biển.
-          </p>
-          <div class="gold-rule"><div class="gold-rule-diamond"></div></div>
-        </div>
-
-        <div class="portfolio-grid">
-
-          <!-- Project 1 -->
-          <a href="du-an-chi-tiet.html?slug=cong-biet-thu-vinhomes-riverside" class="portfolio-card" data-reveal data-reveal-delay="1" data-lightbox="assets/images/project-mansion-gate.png" aria-label="Xem dự án cổng biệt thự Vinhomes Riverside">
-            <img
-              src="assets/images/project-mansion-gate.png"
-              alt="Cổng biệt thự Vinhomes Riverside — SAO VANG MECHANICAL"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <span class="portfolio-tag">Cổng nhôm đúc · Hà Nội</span>
-              <h3 class="portfolio-title">Cổng Biệt Thự Vinhomes Riverside</h3>
-              <div class="portfolio-meta">
-                <span>
-                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Hà Nội
-                </span>
-                <span>
-                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  2024
-                </span>
-                <span>Nhôm A380 Đúc Chân Không</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Project 2 -->
-          <a href="du-an-chi-tiet.html?slug=cau-thang-xoan-resort-dalat" class="portfolio-card" data-reveal data-reveal-delay="2" aria-label="Xem dự án cầu thang xoắn resort Đà Lạt">
-            <img
-              src="assets/images/project-villa.png"
-              alt="Cầu thang xoắn resort Đà Lạt — SAO VANG MECHANICAL"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <span class="portfolio-tag">Cầu thang xoắn CNC · Đà Lạt</span>
-              <h3 class="portfolio-title">Cầu Thang Xoắn Resort Đà Lạt</h3>
-              <div class="portfolio-meta">
-                <span>
-                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Đà Lạt
-                </span>
-                <span>
-                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  2023
-                </span>
-                <span>Thép Bản CNC · Mạ PVD Titan</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Project 3 -->
-          <a href="du-an-chi-tiet.html?slug=inox-du-thuyen-ha-long" class="portfolio-card" data-reveal data-reveal-delay="3" aria-label="Xem dự án inox du thuyền cao cấp Hạ Long">
-            <img
-              src="assets/images/project-resort-yacht.png"
-              alt="Gia công Inox du thuyền cao cấp Hạ Long — SAO VANG MECHANICAL"
-              loading="lazy"
-            />
-            <div class="portfolio-overlay">
-              <span class="portfolio-tag">Inox Marine 316L · Hạ Long</span>
-              <h3 class="portfolio-title">Inox Du Thuyền Cao Cấp</h3>
-              <div class="portfolio-meta">
-                <span>
-                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                  Hạ Long
-                </span>
-                <span>
-                  <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                  2024
-                </span>
-                <span>316L Hairline · Hàn TIG</span>
-              </div>
-            </div>
-          </a>
-
-        </div><!-- /.portfolio-grid -->
-
-        <div style="text-align:center;margin-top:var(--space-8);" data-reveal>
-          <a href="du-an.html?cat=co-khi" class="btn btn-outline-white" style="font-size:var(--text-sm);padding:var(--space-4) var(--space-8);">
-            Xem Toàn Bộ Portfolio Cơ Khí
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <a href="lien-he.html" class="btn-quote">
+            YÊU CẦU BÁO GIÁ
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
-
       </div>
-    </section>
 
-    <!-- ══ SECTION 7: QUOTE CTA ════════════════════════════════════ -->
-    <section class="quote-section" id="bao-gia" aria-labelledby="quote-title">
-      <div class="section-container">
-        <div class="quote-layout">
-
-          <!-- Left: Pitch -->
-          <div class="quote-pitch" data-reveal>
-            <span class="quote-pitch-kicker">Yêu cầu báo giá</span>
-            <h2 class="quote-pitch-title" id="quote-title">
-              Nhận Báo Giá<br><span>Cơ Khí Chính Xác</span><br>Trong 2 Giờ
-            </h2>
-            <p class="quote-pitch-desc">
-              Gửi yêu cầu kỹ thuật — bản vẽ, kích thước sơ bộ hoặc mô tả nhu cầu. Kỹ sư SAO VANG MECHANICAL sẽ phân tích và phản hồi báo giá chi tiết trong vòng 2 giờ làm việc. Miễn phí tư vấn kỹ thuật vật liệu và công nghệ bề mặt.
-            </p>
-
-            <div class="trust-badges" data-reveal data-reveal-delay="1">
-              <div class="trust-badge">
-                <span class="trust-badge-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </span>
-                <span class="trust-badge-text">ISO 9001:2015<br>Chứng nhận</span>
-              </div>
-              <div class="trust-badge">
-                <span class="trust-badge-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
-                </span>
-                <span class="trust-badge-text">QUACERT<br>Được kiểm định</span>
-              </div>
-              <div class="trust-badge">
-                <span class="trust-badge-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                </span>
-                <span class="trust-badge-text">15+ Năm<br>Kinh nghiệm</span>
-              </div>
-              <div class="trust-badge">
-                <span class="trust-badge-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </span>
-                <span class="trust-badge-text">500+<br>Công trình</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right: Quote Form (MECHANICAL-specific) -->
-          <div class="quote-form-wrapper" data-reveal data-reveal-delay="2">
-            <div class="quote-form-header">
-              <h3 class="quote-form-title">Yêu Cầu Báo Giá Cơ Khí</h3>
-              <p class="quote-form-subtitle">Điền thông tin kỹ thuật để nhận báo giá chính xác nhất</p>
-            </div>
-
-            <form id="contactForm" action="/api/contact" method="POST" enctype="multipart/form-data" novalidate>
-              <input type="hidden" name="source" value="linh-vuc-co-khi" />
-              <input type="hidden" name="division" value="SAO VANG MECHANICAL" />
-
-              <div class="form-grid">
-
-                <!-- Họ tên -->
-                <div class="form-group">
-                  <label class="form-label" for="mechName">
-                    Họ và tên<span class="req" aria-label="bắt buộc">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="mechName"
-                    name="name"
-                    class="form-input"
-                    placeholder="Nguyễn Văn A"
-                    required
-                    autocomplete="name"
-                  />
-                </div>
-
-                <!-- Số điện thoại -->
-                <div class="form-group">
-                  <label class="form-label" for="mechPhone">
-                    Số điện thoại<span class="req" aria-label="bắt buộc">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    id="mechPhone"
-                    name="phone"
-                    class="form-input"
-                    placeholder="0869 590 279"
-                    required
-                    autocomplete="tel"
-                    pattern="[0-9\s\-\+\(\)]{9,15}"
-                  />
-                </div>
-
-                <!-- Loại vật liệu -->
-                <div class="form-group">
-                  <label class="form-label" for="mechMaterial">Loại vật liệu</label>
-                  <select id="mechMaterial" name="material" class="form-select">
-                    <option value="" disabled selected>-- Chọn vật liệu --</option>
-                    <option value="inox-304">Inox 304</option>
-                    <option value="inox-316l">Inox 316L (Marine)</option>
-                    <option value="nhom-hop-kim">Nhôm hợp kim</option>
-                    <option value="thep-carbon">Thép carbon</option>
-                    <option value="dong">Đồng (Bronze/Copper)</option>
-                    <option value="hop-kim-khac">Hợp kim khác</option>
-                  </select>
-                </div>
-
-                <!-- Yêu cầu bề mặt -->
-                <div class="form-group">
-                  <label class="form-label" for="mechFinish">Yêu cầu bề mặt</label>
-                  <select id="mechFinish" name="surface_finish" class="form-select">
-                    <option value="" disabled selected>-- Chọn hoàn thiện --</option>
-                    <option value="danh-bong-guong">Đánh bóng gương (Mirror 800)</option>
-                    <option value="son-tinh-dien">Sơn tĩnh điện PVDF</option>
-                    <option value="ma-dong">Mạ đồng giả cổ</option>
-                    <option value="ma-vang-pvd">Mạ vàng PVD Titan</option>
-                    <option value="de-tho">Để thô / Mài Hairline</option>
-                  </select>
-                </div>
-
-                <!-- Kích thước sơ bộ -->
-                <div class="form-group">
-                  <label class="form-label" for="mechDimensions">Kích thước sơ bộ</label>
-                  <input
-                    type="text"
-                    id="mechDimensions"
-                    name="dimensions"
-                    class="form-input"
-                    placeholder="VD: 3m x 2m x 5cm"
-                  />
-                </div>
-
-                <!-- Số lượng -->
-                <div class="form-group">
-                  <label class="form-label" for="mechQty">Số lượng / bộ</label>
-                  <input
-                    type="number"
-                    id="mechQty"
-                    name="quantity"
-                    class="form-input"
-                    placeholder="VD: 1"
-                    min="1"
-                    step="1"
-                  />
-                </div>
-
-                <!-- Upload bản vẽ -->
-                <div class="form-group full-width">
-                  <label class="form-label" for="mechDrawing">
-                    Upload bản vẽ kỹ thuật
-                    <span style="font-weight:400;text-transform:none;color:var(--gray-600);letter-spacing:0;">(PDF, DWG, ZIP — Tối đa 20MB)</span>
-                  </label>
-                  <div class="file-upload-wrapper">
-                    <label class="file-upload-label" for="mechDrawing">
-                      <span class="file-upload-icon" aria-hidden="true">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                      </span>
-                      <div>
-                        <div class="file-upload-text">Kéo thả file hoặc nhấn để chọn</div>
-                        <div class="file-name" id="mechFileName">Chưa chọn file nào</div>
-                      </div>
-                    </label>
-                    <input
-                      type="file"
-                      id="mechDrawing"
-                      name="drawing"
-                      class="file-upload-input"
-                      accept=".pdf,.dwg,.dxf,.zip,.rar"
-                    />
-                  </div>
-                </div>
-
-                <!-- Ghi chú kỹ thuật -->
-                <div class="form-group full-width">
-                  <label class="form-label" for="mechNote">Ghi chú kỹ thuật</label>
-                  <textarea
-                    id="mechNote"
-                    name="technical_note"
-                    class="form-textarea"
-                    rows="4"
-                    placeholder="Mô tả chi tiết yêu cầu: tiêu chuẩn vật liệu, tiêu chuẩn hàn, yêu cầu kiểm tra NDT, tiến độ dự án, địa chỉ công trình..."
-                  ></textarea>
-                </div>
-
-              </div><!-- /.form-grid -->
-
-              <button type="submit" class="btn btn-primary form-submit-btn" aria-label="Gửi yêu cầu báo giá cơ khí">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                GỬI YÊU CẦU BÁO GIÁ
-              </button>
-
-              <p style="font-size:var(--text-xs);color:var(--gray-600);text-align:center;margin-top:var(--space-3);line-height:1.5;">
-                Thông tin của bạn được bảo mật tuyệt đối. Chúng tôi sẽ phản hồi trong vòng 2 giờ trong giờ hành chính (7:30–17:30, Thứ 2–Thứ 7).
-              </p>
-
-            </form>
-          </div><!-- /.quote-form-wrapper -->
-
-        </div><!-- /.quote-layout -->
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ══ FOOTER ══════════════════════════════════════════════════ -->
-  <footer class="footer-mech" role="contentinfo" aria-label="Thông tin công ty">
-    <div class="section-container">
-
-      <div class="footer-mech-inner">
-
-        <!-- Brand Column -->
-        <div class="footer-brand-col">
-          <a href="index.html" class="footer-logo-link" aria-label="SAO VÀNG GROUP — Trang chủ">
-            <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG GROUP" height="40" />
-          </a>
-          <p class="footer-brand-desc">
-            <strong style="color:var(--gray-300);display:block;margin-bottom:4px;">CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG</strong>
-            MST: 0110808047 — Sở KH&amp;ĐT Hà Nội cấp.<br />
-            Nhà thầu cơ khí chế tạo và nhôm kính kiến trúc cao cấp.<br />
-            Tiêu chuẩn ISO 9001:2015 · QUACERT · AWS Certified.
-          </p>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Văn phòng: Tầng 3, TT7-35 KĐT Văn Phú, Hà Đông, Hà Nội</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Xưởng SX: Đường CN 6, KCN Bắc Từ Liêm, Hà Nội</span>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-            <a href="tel:0869590279" style="color:var(--gray-500);transition:color 0.2s;" onmouseover="this.style.color='var(--gold-metallic)'" onmouseout="this.style.color='var(--gray-500)'">0869 590 279</a>
-          </div>
-          <div class="footer-contact-item">
-            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            <a href="mailto:info@cokhi-saovang.vn" style="color:var(--gray-500);transition:color 0.2s;" onmouseover="this.style.color='var(--gold-metallic)'" onmouseout="this.style.color='var(--gray-500)'">info@cokhi-saovang.vn</a>
-          </div>
+      <!-- 03 -->
+      <div class="service-item">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?auto=format&fit=crop&w=800&q=80" alt="Kết cấu thép cầu thang lan can inox" loading="lazy" />
         </div>
+        <div class="service-content">
+          <div class="service-number">03</div>
+          <h2 class="service-title">Kết Cấu Thép & Lan Can</h2>
+          <p class="service-desc">Thiết kế và thi công kết cấu thép cho nhà xưởng, tòa nhà và công trình dân dụng. Sản xuất lan can cầu thang inox 304/316L cao cấp, lan can kính cường lực theo tiêu chuẩn TCVN và quốc tế.</p>
+          <div class="service-features">
+            <span class="service-feature">Kết cấu thép chịu lực</span>
+            <span class="service-feature">Lan can inox 304/316L</span>
+            <span class="service-feature">Lan can kính cường lực</span>
+            <span class="service-feature">Hàn TIG/MIG/MMA chuẩn AWS</span>
+            <span class="service-feature">Sơn tĩnh điện bền bỉ</span>
+          </div>
+          <a href="lien-he.html" class="btn-quote">
+            YÊU CẦU BÁO GIÁ
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
 
-        <!-- Products Column -->
+      <!-- 04 -->
+      <div class="service-item reverse">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80" alt="Cổng hàng rào sắt nghệ thuật" loading="lazy" />
+        </div>
+        <div class="service-content">
+          <div class="service-number">04</div>
+          <h2 class="service-title">Cổng & Hàng Rào Nghệ Thuật</h2>
+          <p class="service-desc">Thiết kế và chế tác cổng nhôm đúc, cổng sắt rèn mỹ thuật, hàng rào sắt nghệ thuật theo yêu cầu kiến trúc. Sản phẩm được xử lý chống gỉ, sơn tĩnh điện hoặc phun mạ kẽm bền bỉ ngoài trời.</p>
+          <div class="service-features">
+            <span class="service-feature">Cổng nhôm đúc chân không</span>
+            <span class="service-feature">Cổng sắt rèn mỹ thuật</span>
+            <span class="service-feature">Hàng rào CNC định hình</span>
+            <span class="service-feature">Mạ kẽm nhúng nóng</span>
+            <span class="service-feature">Sơn tĩnh điện UV</span>
+          </div>
+          <a href="lien-he.html" class="btn-quote">
+            YÊU CẦU BÁO GIÁ
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 05 -->
+      <div class="service-item">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1610484826917-0f101a7bf7f4?auto=format&fit=crop&w=800&q=80" alt="Inox du thuyền 316L marine grade" loading="lazy" />
+        </div>
+        <div class="service-content">
+          <div class="service-number">05</div>
+          <h2 class="service-title">Inox Cao Cấp & Phụ Kiện Du Thuyền</h2>
+          <p class="service-desc">Chuyên sản xuất và lắp đặt các sản phẩm inox 304 và 316L (Marine Grade) cho công trình ven biển, du thuyền, bể bơi. Bề mặt đánh bóng gương hoặc mờ satin theo yêu cầu.</p>
+          <div class="service-features">
+            <span class="service-feature">Inox 316L Marine Grade</span>
+            <span class="service-feature">Tay vịn du thuyền</span>
+            <span class="service-feature">Lan can hồ bơi biển</span>
+            <span class="service-feature">Đánh bóng gương/satin</span>
+            <span class="service-feature">Kháng ăn mòn muối biển</span>
+          </div>
+          <a href="lien-he.html" class="btn-quote">
+            YÊU CẦU BÁO GIÁ
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 06 -->
+      <div class="service-item reverse">
+        <div class="service-img">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80" alt="Bảo trì sửa chữa cơ khí công trình" loading="lazy" />
+        </div>
+        <div class="service-content">
+          <div class="service-number">06</div>
+          <h2 class="service-title">Bảo Trì & Sửa Chữa Cơ Khí</h2>
+          <p class="service-desc">Dịch vụ bảo trì định kỳ và sửa chữa khẩn cấp cho các hệ thống cơ khí, cửa nhôm kính, lan can, kết cấu thép. Đội kỹ thuật có mặt trong vòng 24 giờ tại Hà Nội và các tỉnh lân cận.</p>
+          <div class="service-features">
+            <span class="service-feature">Bảo trì định kỳ</span>
+            <span class="service-feature">Sửa chữa khẩn cấp 24/7</span>
+            <span class="service-feature">Thay phụ kiện chính hãng</span>
+            <span class="service-feature">Bảo hành dài hạn</span>
+            <span class="service-feature">Cam kết đúng tiến độ</span>
+          </div>
+          <a href="lien-he.html" class="btn-quote">
+            YÊU CẦU BÁO GIÁ
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── QUY TRÌNH LÀM VIỆC ── -->
+  <section class="process-section">
+    <div class="container">
+      <div class="section-eyebrow">QUY TRÌNH</div>
+      <h2 class="section-title">Quy Trình Làm Việc</h2>
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-num">01</div>
+          <div class="process-step-title">Tư vấn & Khảo sát</div>
+          <div class="process-step-desc">Tiếp nhận yêu cầu và khảo sát thực tế công trình</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">02</div>
+          <div class="process-step-title">Thiết kế & Báo giá</div>
+          <div class="process-step-desc">Lập bản vẽ 3D và báo giá chi tiết minh bạch</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">03</div>
+          <div class="process-step-title">Gia công tại xưởng</div>
+          <div class="process-step-desc">Gia công chính xác tại xưởng với máy móc hiện đại</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">04</div>
+          <div class="process-step-title">Lắp đặt & Hoàn thiện</div>
+          <div class="process-step-desc">Lắp đặt tại công trình, hoàn thiện bề mặt</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">05</div>
+          <div class="process-step-title">Bàn giao & Bảo hành</div>
+          <div class="process-step-desc">Nghiệm thu, bàn giao và bảo hành dài hạn</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA BANNER ── -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="cta-banner-title">Cần Tư Vấn Dịch Vụ Cơ Khí?</h2>
+      <p class="cta-banner-desc">Liên hệ ngay để nhận báo giá và tư vấn miễn phí về gia công cơ khí chính xác.</p>
+      <div class="cta-banner-btns">
+        <a href="tel:0869590279" class="btn-cta-phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.13 9.83a19.79 19.79 0 01-3.07-8.67A2 2 0 012.04 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          093 7729 909
+        </a>
+        <a href="lien-he.html" class="btn-cta-outline">
+          GỬI YÊU CẦU
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer-v2" role="contentinfo">
+    <div class="sv-container">
+      <div class="footer-v2-grid">
+
+        <!-- Col 1: Brand -->
         <div>
-          <h4 class="footer-col-title">Cơ Khí Mechanical</h4>
-          <ul class="footer-nav-list">
-            <li>
-              <a href="linh-vuc-co-khi.html">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-                Tổng quan Mechanical
-              </a>
-            </li>
-            <li>
-              <a href="cong-nghe-thuat.html">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-                Cổng nhôm đúc nghệ thuật
-              </a>
-            </li>
-            <li>
-              <a href="cau-thang-xoan.html">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-                Cầu thang xoắn CNC
-              </a>
-            </li>
-            <li>
-              <a href="lan-can-kinh.html">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-                Lan can &amp; Inox 316L
-              </a>
-            </li>
-            <li>
-              <a href="co-khi-nghe-thuat.html">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-                Inox du thuyền Marine
-              </a>
-            </li>
-            <li>
-              <a href="linh-vuc-nhom-kinh.html">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-                Nhôm Kính Facade
-              </a>
-            </li>
-          </ul>
+          <div class="footer-logo-wrap" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+            <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 54px; width: auto; display: block;" />
+          </div>
+          <p class="footer-address" style="font-size: var(--sv-text-sm); color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 20px;">
+            Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng — chuyên cơ khí chính xác &amp; nhôm kính cao cấp.
+          </p>
+          <div class="footer-socials" aria-label="Mạng xã hội">
+            <a href="#" class="footer-social" aria-label="Facebook Sao Vàng"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="YouTube Sao Vàng"><i class="ri-youtube-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn Sao Vàng"><i class="ri-linkedin-fill" aria-hidden="true"></i></a>
+            <a href="tel:0869590279" class="footer-social" aria-label="Gọi hotline Sao Vàng"><i class="ri-phone-fill" aria-hidden="true"></i></a>
+          </div>
         </div>
 
-        <!-- Company Column -->
+        <!-- Col 2: Cơ Khí Sao Vàng -->
         <div>
-          <h4 class="footer-col-title">SAO VANG GROUP</h4>
-          <ul class="footer-nav-list">
-            <li>
-              <a href="gioi-thieu.html">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-                Giới thiệu Tập đoàn
-              </a>
-            </li>
-            <li>
-              <a href="nang-luc.html">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-                Hồ sơ năng lực
-              </a>
-            </li>
-            <li>
-              <a href="du-an.html">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-                Portfolio dự án
-              </a>
-            </li>
-            <li>
-              <a href="tin-tuc.html">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-                Tin tức &amp; Công nghệ
-              </a>
-            </li>
-            <li>
-              <a href="bao-gia.html">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-                Yêu cầu báo giá
-              </a>
-            </li>
-            <li>
-              <a href="lien-he.html">
-                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
-                Liên hệ trực tiếp
-              </a>
-            </li>
-          </ul>
+          <h4 class="footer-col-title">Cơ Khí Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công cơ khí chính xác</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công CNC</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Kết cấu thép</a>
+            <a href="cau-thang-xoan.html" class="footer-link">Lan can, cầu thang, mái kính</a>
+            <a href="cong-nghe-thuat.html" class="footer-link">Cổng &amp; hàng rào</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công inox &amp; nhôm</a>
+          </div>
         </div>
 
-      </div><!-- /.footer-mech-inner -->
-
-      <!-- Footer Bottom Bar -->
-      <div class="footer-bottom-bar">
-        <p class="footer-copyright">
-          &copy; 2026 Công ty Cổ phần Sản xuất Cơ Khí Sao Vàng (MST: 0110808047). Bảo lưu mọi quyền.
-        </p>
-        <div class="footer-bottom-links">
-          <a href="index.html">Trang chủ Group</a>
-          <a href="lien-he.html">Chính sách bảo mật</a>
-          <a href="lien-he.html">Điều khoản sử dụng</a>
-          <a href="https://www.CoKhiSaoVang.com" target="_blank" rel="noopener">www.CoKhiSaoVang.com</a>
+        <!-- Col 3: Nhôm Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Nhôm Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="cua-nhom-kinh.html" class="footer-link">Cửa nhôm kính cao cấp</a>
+            <a href="vach-kinh.html" class="footer-link">Vách kính mặt dựng</a>
+            <a href="lan-can-kinh.html" class="footer-link">Lan can kính</a>
+            <a href="thu-vien-profile-nhom.html" class="footer-link">Thư viện Profile Nhôm</a>
+            <a href="vach-kinh.html" class="footer-link">Phòng tắm kính</a>
+            <a href="vach-kinh.html" class="footer-link">Mái kính cường lực</a>
+            <a href="linh-vuc-nhom-kinh.html" class="footer-link">Phụ kiện nhôm kính</a>
+          </div>
         </div>
+
+        <!-- Col 4: Công ty -->
+        <div>
+          <h4 class="footer-col-title">Công Ty</h4>
+          <div class="footer-links">
+            <a href="gioi-thieu.html" class="footer-link">Giới thiệu</a>
+            <a href="linh-vuc-hoat-dong.html" class="footer-link">Lĩnh vực hoạt động</a>
+            <a href="du-an.html" class="footer-link">Dự án đã thực hiện</a>
+            <a href="san-pham.html" class="footer-link">Sản phẩm</a>
+            <a href="tin-tuc.html" class="footer-link">Tin tức</a>
+            <a href="lien-he.html" class="footer-link">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam.</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-line" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color: inherit; text-decoration: none;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <a href="mailto:info@cokhisaovang.com" style="color: inherit; text-decoration: none;">info@cokhisaovang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>Thứ 2 - Thứ 7: 8:00 - 17:00</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-global-line" aria-hidden="true"></i>
+              <a href="https://www.CoKhiSaoVang.com" target="_blank" style="color: inherit; text-decoration: none;">www.CoKhiSaoVang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-file-list-3-line" aria-hidden="true"></i>
+              <span>MST: 0110808047</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. All Rights Reserved. MST: 0110808047.</span>
+        <span>Design by <a href="https://readdy.ai" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; font-weight: 500;">Readdy.ai</a></span>
       </div>
 
     </div>
   </footer>
 
-  <!-- ══ STICKY MOBILE CTA BAR ═══════════════════════════════════ -->
-  <div class="sticky-cta-bar" id="stickyCtaBar" role="complementary" aria-label="Liên hệ nhanh">
-    <a href="tel:0869590279" class="btn btn-outline-white" aria-label="Gọi ngay 0869 590 279">
-      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-      GỌI NGAY
-    </a>
-    <a href="#bao-gia" class="btn btn-primary" aria-label="Nhận báo giá cơ khí">
-      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-      BÁO GIÁ CƠ KHÍ
-    </a>
-  </div>
-
-  <!-- ══ SCRIPTS ═════════════════════════════════════════════════ -->
-  <script src="assets/js/main.js"></script>
-  <script type="module">
-    /* ── File upload label sync ─────────────────────────── */
-    const mechDrawingInput = document.getElementById('mechDrawing');
-    const mechFileName     = document.getElementById('mechFileName');
-    if (mechDrawingInput && mechFileName) {
-      mechDrawingInput.addEventListener('change', (e) => {
-        const file = e.target.files[0];
-        mechFileName.textContent = file ? file.name : 'Chưa chọn file nào';
-      });
-    }
-
-    /* ── Mechanical Quote Form Submission ───────────────── */
-    const mechForm = document.getElementById('contactForm');
-    if (mechForm) {
-      mechForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-
-        const submitBtn = mechForm.querySelector('[type="submit"]');
-        const originalHTML = submitBtn.innerHTML;
-
-        // Validate required fields
-        const name  = document.getElementById('mechName')?.value?.trim();
-        const phone = document.getElementById('mechPhone')?.value?.trim();
-        if (!name || !phone) {
-          submitBtn.style.background = '#7A0000';
-          submitBtn.textContent = 'Vui lòng điền đầy đủ họ tên và số điện thoại';
-          setTimeout(() => {
-            submitBtn.innerHTML  = originalHTML;
-            submitBtn.style.background = '';
-          }, 3000);
-          return;
-        }
-
-        // Loading state
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = `
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" style="animation:spin 1s linear infinite;" aria-hidden="true">
-            <circle cx="12" cy="12" r="10" stroke-opacity="0.25"/>
-            <path d="M12 2a10 10 0 0 1 10 10" stroke-opacity="1"/>
-          </svg>
-          Đang gửi...
-        `;
-
-        try {
-          const formData = new FormData(mechForm);
-
-          const response = await fetch('/api/contact', {
-            method: 'POST',
-            body: formData,
-          });
-
-          let result = {};
-          try { result = await response.json(); } catch (_) {}
-
-          if (response.ok || result.success) {
-            submitBtn.style.background = '#166534';
-            submitBtn.innerHTML = `
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-              Đã gửi — Kỹ sư sẽ phản hồi trong 2 giờ!
-            `;
-            mechForm.reset();
-            if (mechFileName) mechFileName.textContent = 'Chưa chọn file nào';
-            setTimeout(() => {
-              submitBtn.innerHTML  = originalHTML;
-              submitBtn.style.background = '';
-              submitBtn.disabled  = false;
-            }, 5000);
-          } else {
-            throw new Error(result.error || `HTTP ${response.status}`);
-          }
-        } catch (err) {
-          console.error('[MechForm] Submit error:', err);
-          submitBtn.style.background = '#7A0000';
-          submitBtn.innerHTML = `
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-            Lỗi kết nối — Vui lòng thử lại
-          `;
-          setTimeout(() => {
-            submitBtn.innerHTML  = originalHTML;
-            submitBtn.style.background = '';
-            submitBtn.disabled  = false;
-          }, 3500);
-        }
-      });
-    }
-
-    /* ── Scroll-reveal for dynamically late-mounted elements ── */
-    document.querySelectorAll('.portfolio-card').forEach((card, i) => {
-      card.setAttribute('data-reveal', '');
-      card.setAttribute('data-reveal-delay', String(i + 1));
-    });
-  </script>
+  <!-- ── SCRIPTS ── -->
+  <script src="assets/js/main.js" defer></script>
 </body>
 </html>

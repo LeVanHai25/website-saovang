@@ -252,9 +252,9 @@ async function bootstrap() {
         fileToServe = 'nhom-sao-vang.html';
       } else if (cleanPath.endsWith('/linh-vuc-hoat-dong') || cleanPath.endsWith('/linh-vuc-hoat-dong.html')) {
         fileToServe = 'linh-vuc-hoat-dong.html';
-      } else if (cleanPath.endsWith('/linh-vuc-co-khi') || cleanPath.endsWith('/linh-vuc-co-khi.html')) {
+      } else if (cleanPath.endsWith('/linh-vuc-co-khi') || cleanPath.endsWith('/linh-vuc-co-khi.html') || cleanPath.endsWith('/linh-vuc-hoat-dong/co-khi')) {
         fileToServe = 'linh-vuc-co-khi.html';
-      } else if (cleanPath.endsWith('/linh-vuc-nhom-kinh') || cleanPath.endsWith('/linh-vuc-nhom-kinh.html')) {
+      } else if (cleanPath.endsWith('/linh-vuc-nhom-kinh') || cleanPath.endsWith('/linh-vuc-nhom-kinh.html') || cleanPath.endsWith('/linh-vuc-hoat-dong/nhom-kinh')) {
         fileToServe = 'linh-vuc-nhom-kinh.html';
       } else if (cleanPath.endsWith('/gioi-thieu') || cleanPath.endsWith('/gioi-thieu.html')) {
         fileToServe = 'gioi-thieu.html';
