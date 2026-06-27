@@ -36,6 +36,17 @@ app.use('/uploads', express.static(UPLOADS_PATH, { maxAge: '7d' }));
 
 // ── Smart Asset & Uploads Resolver for Deep/Nested Paths ────────────────
 app.use((req, res, next) => {
+  // Redirect preview URLs to clean URLs
+  if (req.path.includes('/preview/')) {
+    const cleanTarget = req.path.replace(/\/preview\/[^/]+\/[^/]+/, '');
+    return res.redirect(301, cleanTarget || '/');
+  }
+
+  // Serve company gold logo as favicon
+  if (req.path === '/favicon.ico') {
+    return res.sendFile(path.join(WEBSITE_PATH, 'assets/images/logo-sv-main.svg'));
+  }
+
   // Resolve static assets in nested URLs
   const assetsIdx = req.path.indexOf('/assets/');
   if (assetsIdx !== -1) {
