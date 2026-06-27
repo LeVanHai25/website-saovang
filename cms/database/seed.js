@@ -4,6 +4,7 @@
 require('dotenv').config({ path: require('path').join(__dirname, '../.env') });
 const bcrypt   = require('bcryptjs');
 const { initDb } = require('./db');
+const { seedDaiphucProducts } = require('./seed-daiphuc-products');
 
 async function seed() {
   console.log('🗃️  Initializing database...');
@@ -271,6 +272,13 @@ async function seed() {
     db.prepare('INSERT INTO forms (name, slug, description, fields, settings, created_by) VALUES (?,?,?,?,?,?)')
       .run('Form Liên Hệ','lien-he','Form tư vấn khách hàng', fields, JSON.stringify({ submit_msg:'Cảm ơn! Chúng tôi sẽ liên hệ sớm.', email_notify:'info@saovang.vn' }), adminId);
     console.log('✅ Sample form: Form Liên Hệ');
+  }
+
+  // Seed 119 imported products from Dai Phuc
+  try {
+    await seedDaiphucProducts(db);
+  } catch (err) {
+    console.error('Error seeding Dai Phuc products:', err.message);
   }
 
   // Force persist
