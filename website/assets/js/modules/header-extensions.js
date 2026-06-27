@@ -227,32 +227,33 @@
         border-color: rgba(255, 255, 255, 0.18) !important;
       }
 
-      /* ── Sticky Callback Bar ── */
+      /* ── Sticky Callback Bar (Căn lề trái & Rút gọn khoảng trống) ── */
       .sticky-callback-bar {
         position: fixed;
         bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%) translateY(0);
+        left: 24px;
+        transform: none;
         z-index: 1000;
-        width: calc(100% - 48px);
-        max-width: 1200px;
+        width: auto;
+        max-width: 820px;
         background: rgba(18, 18, 18, 0.93);
         backdrop-filter: blur(16px);
         -webkit-backdrop-filter: blur(16px);
         border: 1px solid rgba(255, 255, 255, 0.12);
         border-radius: 50px;
-        padding: 8px 24px;
+        padding: 6px 18px;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
+        gap: 14px;
         box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
         transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.4s ease;
       }
       .sticky-callback-left {
         display: flex;
         align-items: center;
-        gap: 16px;
-        flex: 1;
+        gap: 12px;
+        flex: 0 0 auto;
       }
       .sticky-callback-title {
         color: #fff;
@@ -267,18 +268,18 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        flex: 1;
-        max-width: 440px;
+        width: 320px;
       }
       .sticky-callback-input {
         background: rgba(255, 255, 255, 0.08);
         border: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 30px;
-        padding: 8px 18px;
+        padding: 6px 14px;
         color: #fff;
         font-size: 13px;
         width: 100%;
         transition: all 0.3s ease;
+        box-sizing: border-box;
       }
       .sticky-callback-input:focus {
         outline: none;
@@ -293,7 +294,7 @@
         color: #fff;
         border: none;
         border-radius: 30px;
-        padding: 8px 22px;
+        padding: 6px 18px;
         font-size: 12px;
         font-weight: 700;
         cursor: pointer;
@@ -316,15 +317,16 @@
         display: flex;
         align-items: center;
         gap: 12px;
-        margin-left: 24px;
+        margin-left: 4px;
+        flex: 0 0 auto;
       }
       .sticky-callback-hotline-link {
         text-decoration: none;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
         background: rgba(255, 255, 255, 0.05);
-        padding: 6px 14px;
+        padding: 5px 12px;
         border-radius: 20px;
         border: 1px solid rgba(255, 255, 255, 0.1);
         transition: all 0.25s ease;
@@ -335,11 +337,11 @@
       .sticky-callback-hotline-link strong {
         color: #E2B13C;
         font-weight: 800;
-        font-size: 13.5px;
+        font-size: 13px;
       }
       .sticky-callback-hotline-link i {
         color: #E2B13C;
-        font-size: 14px;
+        font-size: 13px;
       }
       .sticky-callback-hotline-link:hover {
         background: rgba(226, 177, 60, 0.12);
@@ -364,6 +366,11 @@
         /* Hide logo and yellow hotline button from navigation bar on desktop since top bar has them */
         .logo, .nav-logo, .nav-hotline {
           display: none !important;
+        }
+        /* Shift floating Zalo and Phone buttons upward to avoid overlap with bottom-left callback bar */
+        .floating-left {
+          bottom: 96px !important;
+          left: 28px !important;
         }
       }
 
@@ -398,6 +405,7 @@
           text-align: center;
         }
         .sticky-callback-form {
+          width: 100%;
           max-width: 100%;
         }
         .sticky-callback-right {
