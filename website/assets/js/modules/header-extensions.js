@@ -1,7 +1,7 @@
 /* ════════════════════════════════════════════════════════════════
    SAO VÀNG — modules/header-extensions.js
    Tự động tích hợp Thanh thông tin đầu trang, Thanh gửi số điện thoại liên hệ nhanh (Callback Bar),
-   và Footer đồng bộ thiết kế mới (Dai Phuc Style) trên toàn bộ hệ thống
+   Footer đồng bộ thiết kế mới (Dai Phuc Style), và Slideshow biểu ngữ trang chủ mới.
    ════════════════════════════════════════════════════════════════ */
 
 (function () {
@@ -13,7 +13,7 @@
     const link = document.createElement('link');
     link.id = 'header-ext-fonts';
     link.rel = 'stylesheet';
-    link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap';
+    link.href = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap';
     document.head.appendChild(link);
   }
 
@@ -508,6 +508,107 @@
         border-color: #E2B13C;
       }
 
+      /* ── Homepage Hero Slides & Styles ── */
+      .hero-v2 {
+        min-height: clamp(330px, 38vw, 450px) !important;
+        padding-top: 10px !important;
+        padding-bottom: 20px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+      }
+      .hero-v2-content {
+        padding: 10px var(--sv-sp-6) !important;
+        margin-top: 15px !important;
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        max-width: 900px;
+        text-align: center;
+      }
+      .hero-v2-logo-wrap {
+        display: none !important; /* Logo đã có ở top bar */
+      }
+      .hero-v2-title {
+        font-size: clamp(1.8rem, 3.8vw, 3.2rem) !important;
+        margin-bottom: 8px !important;
+        line-height: 1.25 !important;
+        color: #ffffff !important;
+        font-weight: 900 !important;
+        text-transform: uppercase;
+        text-shadow: 0 2px 5px rgba(0,0,0,0.85) !important;
+        transition: opacity 0.5s ease-in-out;
+      }
+      .hero-v2-tagline {
+        font-family: 'Dancing Script', cursive !important;
+        font-size: clamp(26px, 4vw, 36px) !important;
+        color: #E2B13C !important;
+        text-transform: none !important;
+        font-weight: 700 !important;
+        margin-bottom: 10px !important;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.8) !important;
+        letter-spacing: 0 !important;
+        transition: opacity 0.5s ease-in-out;
+      }
+      .hero-v2-desc {
+        font-size: 13.5px !important;
+        max-width: 780px !important;
+        margin-inline: auto !important;
+        margin-bottom: 18px !important;
+        line-height: 1.55 !important;
+        color: rgba(255,255,255,0.9) !important;
+        text-shadow: 0 1px 3px rgba(0,0,0,0.8) !important;
+        transition: opacity 0.5s ease-in-out;
+      }
+      .hero-v2-cta {
+        margin-bottom: 0 !important;
+      }
+      .hero-v2-cta .sv-btn {
+        padding: 8px 20px !important;
+        font-size: 13px !important;
+      }
+      
+      /* Ẩn các số liệu & mũi tên cuộn thừa thãi để khớp hoàn toàn chiều cao nhỏ của banner con */
+      .hero-v2-stats,
+      .hero-v2-scroll {
+        display: none !important;
+      }
+
+      /* Cấu trúc ảnh slide chạy nền */
+      .hero-v2-slides {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .hero-v2-slide {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+        z-index: 0;
+      }
+      .hero-v2-slide.active {
+        opacity: 1;
+        z-index: 1;
+      }
+      .hero-v2-slide-bg {
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        filter: brightness(0.42);
+        transform: scale(1.02);
+        transition: transform 5.2s ease-out;
+      }
+      .hero-v2-slide.active .hero-v2-slide-bg {
+        transform: scale(1.08);
+      }
+
       /* ── Hide navigation bar logo & hotline on desktop ── */
       @media (min-width: 1024px) {
         body {
@@ -922,6 +1023,102 @@
     }
   }
 
+  // Render unified homepage slider
+  function setupHomepageSlider() {
+    const heroV2 = document.querySelector('.hero-v2');
+    if (!heroV2) return;
+
+    // Eliminate white gap dynamically by disabling top padding on main tag on homepage
+    const mainEl = document.querySelector('main');
+    if (mainEl) {
+      mainEl.style.paddingTop = '0';
+      mainEl.style.marginTop = '0';
+    }
+
+    // Remove existing background block
+    const oldBg = heroV2.querySelector('.hero-v2-bg');
+    if (oldBg) oldBg.remove();
+
+    // Define slide data
+    const slides = [
+      {
+        image: 'assets/images/hero-bg.jpg',
+        title: 'Cơ Khí Chính Xác<br>&amp; <span class="gold-text">Nhôm Kính</span> Cao Cấp',
+        tagline: '— Kiến Tạo Giá Trị Bền Vững —',
+        desc: 'Hai thương hiệu — một chất lượng. Chuyên gia công cơ khí chính xác CNC, kết cấu thép, cửa nhôm kính cao cấp cho mọi công trình.'
+      },
+      {
+        image: 'assets/images/laser_cutting.png',
+        title: 'Công Nghệ Cắt<br><span class="gold-text">Laser Fiber</span> CNC',
+        tagline: '— Kỹ Nghệ Tỉ Mỉ, Sắc Nét —',
+        desc: 'Hệ thống máy cắt công suất lớn gia công thép tấm, inox tấm với độ dung sai cực nhỏ dưới 0.1mm.'
+      },
+      {
+        image: 'assets/images/service-aluminum-doors.png',
+        title: 'Cửa Nhôm Kính<br>Cao Cấp <span class="gold-text">Nhập Khẩu</span>',
+        tagline: '— Không Gian Mở, Tầm Nhìn Rộng —',
+        desc: 'Hệ cửa nhôm slim panorama tối giản sang trọng, phụ kiện cao cấp nhập khẩu vận hành êm ái trơn tru.'
+      }
+    ];
+
+    // Create Slides wrapper
+    const slidesContainer = document.createElement('div');
+    slidesContainer.className = 'hero-v2-slides';
+    
+    slides.forEach((slideData, idx) => {
+      const slide = document.createElement('div');
+      slide.className = `hero-v2-slide ${idx === 0 ? 'active' : ''}`;
+      
+      const bgImg = document.createElement('div');
+      bgImg.className = 'hero-v2-slide-bg';
+      bgImg.style.backgroundImage = `url('${slideData.image}')`;
+      
+      const overlay = document.createElement('div');
+      overlay.className = 'hero-v2-overlay';
+      
+      slide.appendChild(bgImg);
+      slide.appendChild(overlay);
+      slidesContainer.appendChild(slide);
+    });
+
+    heroV2.insertBefore(slidesContainer, heroV2.firstChild);
+
+    // Slide transition logic
+    let currentIdx = 0;
+    const slideEls = slidesContainer.querySelectorAll('.hero-v2-slide');
+    const titleEl = heroV2.querySelector('.hero-v2-title');
+    const taglineEl = heroV2.querySelector('.hero-v2-tagline');
+    const descEl = heroV2.querySelector('.hero-v2-desc');
+
+    setInterval(() => {
+      // Fade out content slightly
+      if (titleEl) titleEl.style.opacity = '0';
+      if (taglineEl) taglineEl.style.opacity = '0';
+      if (descEl) descEl.style.opacity = '0';
+
+      setTimeout(() => {
+        // Transition slides
+        slideEls[currentIdx].classList.remove('active');
+        currentIdx = (currentIdx + 1) % slides.length;
+        slideEls[currentIdx].classList.add('active');
+
+        // Update content
+        if (titleEl) {
+          titleEl.innerHTML = slides[currentIdx].title;
+          titleEl.style.opacity = '1';
+        }
+        if (taglineEl) {
+          taglineEl.innerHTML = slides[currentIdx].tagline;
+          taglineEl.style.opacity = '1';
+        }
+        if (descEl) {
+          descEl.innerHTML = slides[currentIdx].desc;
+          descEl.style.opacity = '1';
+        }
+      }, 500); // sync with content transition
+    }, 5000); // 5 seconds interval
+  }
+
   // Dynamic Logo Replacement for navbar and footer
   function setupLogos() {
     // 1. Replace desktop menu / mobile navbar logos with white transparent company logo
@@ -952,6 +1149,7 @@
     renderHeaderTopBar();
     renderStickyCallbackBar();
     renderFooter();
+    setupHomepageSlider();
     setupLogos();
   }
 
