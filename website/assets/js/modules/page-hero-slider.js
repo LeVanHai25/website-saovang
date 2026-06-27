@@ -51,7 +51,7 @@
     const brandBadgeHtml = {
       'co-khi': `
         <div class="hero-brand-badge">
-          <img src="assets/images/logo-sv-main.svg" alt="Sao Vàng" class="hero-brand-logo" />
+          <img src="assets/images/logo-cty.png" alt="Sao Vàng" class="hero-brand-logo" />
           <div class="hero-brand-text">
             <span class="brand-title">CƠ KHÍ SAO VÀNG</span>
             <span class="brand-sub">CHẾ TÁC KIM LOẠI MỸ THUẬT & CNC</span>
@@ -60,7 +60,7 @@
       `,
       'nhom-kinh': `
         <div class="hero-brand-badge">
-          <img src="assets/images/logo-sv-main.svg" alt="Sao Vàng" class="hero-brand-logo" />
+          <img src="assets/images/logo-nhom.png" alt="SV Aluminium" class="hero-brand-logo" />
           <div class="hero-brand-text">
             <span class="brand-title" style="color: #E2B13C;">SV ALUMINIUM</span>
             <span class="brand-sub">DOOR & WINDOW</span>
@@ -69,7 +69,7 @@
       `,
       'corporate': `
         <div class="hero-brand-badge">
-          <img src="assets/images/logo-sv-main.svg" alt="Sao Vàng" class="hero-brand-logo" />
+          <img src="assets/images/logo-cty.png" alt="Sao Vàng" class="hero-brand-logo" />
           <div class="hero-brand-text">
             <span class="brand-title">SAO VÀNG</span>
             <span class="brand-sub">KỸ NGHỆ CƠ KHÍ & NHÔM KÍNH</span>

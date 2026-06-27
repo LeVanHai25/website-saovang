@@ -514,8 +514,15 @@
             el.href = `tel:${rawPhone}`;
             
             // Do not append text to floating circle buttons
-            if (el.classList.contains('float-phone') || el.closest('.floats')) {
-              const svg = el.querySelector('svg');
+            if (
+              el.classList.contains('float-phone') ||
+              el.classList.contains('float-btn-phone') ||
+              el.classList.contains('float-btn') ||
+              el.closest('.floats') ||
+              el.closest('.floating-left') ||
+              el.closest('.floating-right')
+            ) {
+              const svg = el.querySelector('svg') || el.querySelector('i');
               el.textContent = '';
               if (svg) el.appendChild(svg);
               return;

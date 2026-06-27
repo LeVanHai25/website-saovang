@@ -23,10 +23,17 @@
           linear-gradient(135deg, #fdfbf7 0%, #f5f2eb 100%);
         background-size: 24px 24px, 100% 100%;
         border-bottom: 2px solid #E2B13C;
-        position: relative;
-        z-index: 910;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
         display: flex;
         align-items: center;
+        transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      .header-top-bar.scrolled {
+        transform: translateY(-90px);
       }
       .header-top-inner {
         width: 100%;
@@ -44,7 +51,7 @@
         text-decoration: none;
       }
       .header-top-logo img {
-        height: 52px;
+        height: 54px;
         width: auto;
         display: block;
       }
@@ -58,7 +65,7 @@
         font-size: 15px;
         font-weight: 900;
         color: #7B1212;
-        letter-spacing: 0.03em;
+        letter-spacing: 0.02em;
         text-transform: uppercase;
         line-height: 1.25;
       }
@@ -239,18 +246,24 @@
         border-color: #E2B13C;
       }
 
-      /* ── Layout adjustments for desktop ── */
+      /* ── Hide navigation bar logo on desktop ── */
       @media (min-width: 1024px) {
         body {
           padding-top: 160px !important;
         }
         .header, .header-v2 {
+          position: fixed !important;
           top: 90px !important;
           box-shadow: none !important;
+          transition: top 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, height 0.3s ease !important;
         }
         .header.scrolled, .header-v2.scrolled {
           top: 0 !important;
           box-shadow: var(--sv-shadow-nav, 0 4px 20px rgba(0, 0, 0, 0.08)) !important;
+        }
+        /* Hide logo from navigation bar on desktop since top bar has it */
+        .logo, .nav-logo {
+          display: none !important;
         }
       }
 
@@ -292,7 +305,6 @@
           width: 100%;
           justify-content: center;
         }
-        /* Make sure it doesn't overlap the mobile footer area too much */
         body {
           padding-bottom: 90px !important;
         }
@@ -310,9 +322,9 @@
     topBar.innerHTML = `
       <div class="header-top-inner">
         <a href="index.html" class="header-top-logo">
-          <img src="assets/images/logo-sv-main.svg" alt="Sao Vàng Logo" />
+          <img src="assets/images/logo-cty.png" alt="Sao Vàng Logo" />
           <div class="header-top-brand">
-            <span class="brand-title">CÔNG TY TNHH CƠ KHÍ &amp; NHÔM KÍNH SAO VÀNG</span>
+            <span class="brand-title">CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG</span>
             <span class="brand-subtitle">Kiến tạo giá trị bền vững</span>
           </div>
         </a>
@@ -321,22 +333,22 @@
           <div class="info-item">
             <i class="ri-phone-line"></i>
             <div class="info-content">
-              <span class="info-label">Hotline 24/7</span>
+              <span class="info-label">Hotline tư vấn</span>
               <a href="tel:0869590279" class="info-value">0869 590 279</a>
             </div>
           </div>
           <div class="info-item">
             <i class="ri-mail-line"></i>
             <div class="info-content">
-              <span class="info-label">Email liên hệ</span>
-              <a href="mailto:info@saovang.vn" class="info-value">info@saovang.vn</a>
+              <span class="info-label">Mail liên hệ</span>
+              <a href="mailto:cokhisaovangvn@gmail.com" class="info-value">cokhisaovangvn@gmail.com</a>
             </div>
           </div>
           <div class="info-item">
             <i class="ri-map-pin-line"></i>
             <div class="info-content">
               <span class="info-label">Địa chỉ trụ sở chính</span>
-              <span class="info-value">Văn Phú, Hà Đông, Hà Nội</span>
+              <span class="info-value">Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam</span>
             </div>
           </div>
         </div>
@@ -350,6 +362,18 @@
     } else {
       document.body.insertBefore(topBar, document.body.firstChild);
     }
+
+    // Scroll sync logic
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        topBar.classList.add('scrolled');
+      } else {
+        topBar.classList.remove('scrolled');
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
   }
 
   // Render the Sticky Callback Bar at the bottom
