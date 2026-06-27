@@ -286,6 +286,111 @@
       color: var(--sv-gold-600);
       font-weight: 700;
     }
+
+    /* Hotline Banner Improvements */
+    .sv-banner-hotline {
+      background: var(--sv-dark-900);
+      color: var(--sv-white);
+      padding-block: var(--sv-sp-12);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    .hotline-banner-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--sv-sp-8);
+      flex-wrap: wrap;
+    }
+    .hotline-banner-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    .hotline-banner-text h3 {
+      font-family: var(--sv-font-head);
+      font-size: var(--sv-fs-xl);
+      font-weight: 800;
+      color: var(--sv-white);
+      margin-bottom: var(--sv-sp-2);
+    }
+    .hotline-banner-text p {
+      font-size: var(--sv-fs-sm);
+      color: rgba(255,255,255,0.7);
+      line-height: var(--sv-leading-relaxed);
+    }
+    .hotline-banner-form {
+      display: flex;
+      gap: var(--sv-sp-3);
+      flex-wrap: wrap;
+      align-items: center;
+      min-width: 320px;
+    }
+    .hotline-banner-form input {
+      padding: var(--sv-sp-3) var(--sv-sp-4);
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.08);
+      color: var(--sv-white);
+      border-radius: var(--sv-radius-md);
+      font-size: var(--sv-fs-sm);
+      width: 220px;
+      transition: all 0.2s;
+    }
+    .hotline-banner-form input:focus {
+      outline: none;
+      border-color: var(--sv-gold-500);
+      background: rgba(255,255,255,0.12);
+    }
+    .hotline-banner-form button {
+      background: var(--sv-gold-500);
+      color: var(--sv-dark-900);
+      padding: var(--sv-sp-3) var(--sv-sp-6);
+      border: none;
+      border-radius: var(--sv-radius-md);
+      font-weight: 700;
+      cursor: pointer;
+      font-size: var(--sv-fs-sm);
+      transition: all 0.2s;
+    }
+    .hotline-banner-form button:hover {
+      background: var(--sv-gold-600);
+      transform: translateY(-1px);
+    }
+    .hotline-banner-action {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      min-width: 200px;
+    }
+    .hotline-lbl {
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: var(--sv-sp-1);
+    }
+    .hotline-num {
+      color: var(--sv-gold-500);
+      font-size: var(--sv-fs-2xl);
+      font-weight: 900;
+      text-decoration: none;
+      font-family: var(--sv-font-head);
+      transition: color 0.2s;
+    }
+    .hotline-num:hover {
+      color: var(--sv-gold-600);
+    }
+    @media (max-width: 900px) {
+      .hotline-banner-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--sv-sp-6);
+      }
+      .hotline-banner-action {
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
@@ -575,8 +680,11 @@
             <h3 style="color:var(--sv-white);">Bạn Muốn Lắp Đặt Hệ Nhôm Kính Cách Âm Cách Nhiệt Tiêu Chuẩn?</h3>
             <p style="color:rgba(255,255,255,0.8);">Đội ngũ chuyên viên kỹ thuật Nhôm Sao Vàng luôn sẵn sàng đo đạc thực tế khảo sát công trình miễn phí.</p>
           </div>
-          <div class="hotline-banner-logo" aria-hidden="true" style="border: none; background: transparent; display: flex; align-items: center; justify-content: center; padding: 5px;">
-            <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="width: 100%; height: 100%; object-fit: contain;" />
+          <div class="hotline-banner-form">
+            <form id="nhomCallbackForm" onsubmit="handleBannerSubmit(event, 'nhomCallbackInput', 'Banner Nhôm Kính')" style="display: flex; gap: 10px; width: 100%;">
+              <input type="tel" id="nhomCallbackInput" placeholder="Số điện thoại của bạn..." required />
+              <button type="submit" style="background: var(--sv-white); color: var(--sv-red-600);">Gửi Ngay</button>
+            </form>
           </div>
           <div class="hotline-banner-action">
             <span class="hotline-lbl" style="color:rgba(255,255,255,0.7);">HOTLINE HỖ TRỢ ĐO ĐẠC THỰC TẾ</span>
@@ -719,5 +827,47 @@
   <script src="assets/js/main.js"></script>
   <!-- navbar.js handles this -->
   <script src="assets/js/modules/navbar.js"></script>
+  <script>
+    async function handleBannerSubmit(event, inputId, source) {
+      event.preventDefault();
+      const input = document.getElementById(inputId);
+      const phoneVal = input.value.trim();
+      const cleaned = phoneVal.replace(/\D/g, '');
+      if (cleaned.length < 9 || cleaned.length > 11) {
+        alert('Vui lòng nhập số điện thoại hợp lệ (từ 9 đến 11 chữ số).');
+        return;
+      }
+      
+      const btn = event.target.querySelector('button');
+      const origText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `<i class="ri-loader-4-line ri-spin"></i> GỬI...`;
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: 'Khách hàng liên hệ nhanh',
+            phone: phoneVal,
+            source: source,
+            note: `Khách hàng gửi số điện thoại từ hotline banner ${source} yêu cầu gọi lại tư vấn.`
+          })
+        });
+
+        if (response.ok) {
+          alert('Gửi số điện thoại thành công! Chúng tôi sẽ liên hệ lại ngay.');
+          input.value = '';
+        } else {
+          alert('Đã xảy ra lỗi, vui lòng thử lại sau.');
+        }
+      } catch (err) {
+        alert('Không thể kết nối tới máy chủ. Vui lòng thử lại.');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = origText;
+      }
+    }
+  </script>
 </body>
 </html>
