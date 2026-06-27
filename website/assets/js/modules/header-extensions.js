@@ -16,10 +16,10 @@
       /* ── Header Top Bar ── */
       .header-top-bar {
         width: 100%;
-        height: 110px;
+        height: 120px;
         background: linear-gradient(135deg, #fdfbf7 0%, #f5f2eb 100%);
         background-image: 
-          radial-gradient(rgba(226, 177, 60, 0.06) 1.5px, transparent 1.5px), 
+          radial-gradient(rgba(226, 177, 60, 0.05) 1.5px, transparent 1.5px), 
           linear-gradient(135deg, #fdfbf7 0%, #f5f2eb 100%);
         background-size: 24px 24px, 100% 100%;
         border-bottom: 2px solid #E2B13C;
@@ -34,7 +34,7 @@
         box-sizing: border-box;
       }
       .header-top-bar.scrolled {
-        transform: translateY(-110px);
+        transform: translateY(-120px);
       }
       .header-top-inner {
         width: 100%;
@@ -46,74 +46,115 @@
         align-items: center;
         box-sizing: border-box;
       }
-      .header-top-logo {
-        flex-shrink: 0;
-        text-decoration: none;
+      
+      /* ── Logo + Brand Layout (Giống biển hiệu thực tế) ── */
+      .header-top-brand-wrap {
         display: flex;
         align-items: center;
+        gap: 18px;
+        text-decoration: none;
+        flex-shrink: 0;
       }
-      .header-top-logo img {
-        height: 72px;
+      .brand-logo-img {
+        height: 86px;
         width: auto;
         display: block;
+        transition: transform 0.3s ease;
       }
-      .header-top-center {
-        flex-grow: 1;
-        text-align: center;
+      .brand-logo-img:hover {
+        transform: scale(1.05);
+      }
+      .brand-text-block {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding-inline: 40px;
-        box-sizing: border-box;
+        text-align: left;
       }
-      .header-top-center .company-name {
+      .brand-row-1 {
         font-family: var(--ff-header, sans-serif);
-        font-size: 19px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #c8860a;
+        letter-spacing: 0.15em;
+        line-height: 1;
+      }
+      .brand-row-2 {
+        font-family: var(--ff-header, sans-serif);
+        font-size: 21px;
         font-weight: 900;
         color: #7B1212;
-        letter-spacing: 0.04em;
+        letter-spacing: 0.05em;
+        margin-top: 3px;
+        line-height: 1.1;
         text-transform: uppercase;
-        margin: 0;
-        line-height: 1.2;
       }
-      .header-top-center .company-desc {
-        font-family: var(--ff-body, sans-serif);
-        font-size: 12px;
-        color: #666;
-        margin-top: 5px;
-        font-weight: 500;
-        letter-spacing: 0.02em;
-      }
-      .header-top-center .company-contact {
+      .brand-divider {
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 16px;
-        margin-top: 10px;
-        font-size: 13px;
-        color: #333;
-        font-weight: 600;
-        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 4px;
+        width: 100%;
+        box-sizing: border-box;
       }
-      .header-top-center .contact-item {
+      .divider-line {
+        height: 1px;
+        background: #E2B13C;
+        flex-grow: 1;
+      }
+      .divider-star {
+        color: #E2B13C;
+        font-size: 8px;
+      }
+      .brand-row-3 {
+        font-family: var(--ff-header, sans-serif);
+        font-size: 9.5px;
+        font-weight: 700;
+        color: #c8860a;
+        letter-spacing: 0.22em;
+        margin-top: 3px;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      /* ── Info Layout Bên Phải (2 hàng ở mép ngoài bên phải) ── */
+      .header-top-contact-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+      .contact-row-1 {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 13.5px;
+        color: #333;
+        font-weight: 700;
+      }
+      .contact-row-2 {
+        font-size: 13px;
+        color: #555;
+        font-weight: 500;
+      }
+      .contact-item {
         display: flex;
         align-items: center;
         gap: 6px;
       }
-      .header-top-center .contact-item i {
-        font-size: 14px;
+      .contact-item i {
+        font-size: 15px;
         color: #E2B13C;
       }
-      .header-top-center .contact-item a {
+      .contact-item a {
         color: inherit;
         text-decoration: none;
         transition: color 0.2s ease;
       }
-      .header-top-center .contact-item a:hover {
+      .contact-item a:hover {
         color: #7B1212;
       }
-      .header-top-center .contact-separator {
+      .contact-separator {
         color: rgba(226, 177, 60, 0.4);
         font-weight: 300;
       }
@@ -240,14 +281,14 @@
         border-color: #E2B13C;
       }
 
-      /* ── Hide navigation bar logo on desktop ── */
+      /* ── Hide navigation bar logo & hotline on desktop ── */
       @media (min-width: 1024px) {
         body {
-          padding-top: 180px !important;
+          padding-top: 190px !important;
         }
         .header, .header-v2 {
           position: fixed !important;
-          top: 110px !important;
+          top: 120px !important;
           box-shadow: none !important;
           transition: top 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, height 0.3s ease !important;
         }
@@ -255,8 +296,8 @@
           top: 0 !important;
           box-shadow: var(--sv-shadow-nav, 0 4px 20px rgba(0, 0, 0, 0.08)) !important;
         }
-        /* Hide logo from navigation bar on desktop since top bar has it */
-        .logo, .nav-logo {
+        /* Hide logo and yellow hotline button from navigation bar on desktop since top bar has them */
+        .logo, .nav-logo, .nav-hotline {
           display: none !important;
         }
       }
@@ -315,14 +356,22 @@
     topBar.className = 'header-top-bar';
     topBar.innerHTML = `
       <div class="header-top-inner">
-        <a href="index.html" class="header-top-logo">
-          <img src="assets/images/logo-cty.png" alt="Sao Vàng Logo" />
+        <a href="index.html" class="header-top-brand-wrap">
+          <img src="assets/images/logo-cty.png" alt="Sao Vàng Logo" class="brand-logo-img" />
+          <div class="brand-text-block">
+            <span class="brand-row-1">CÔNG TY CỔ PHẦN</span>
+            <span class="brand-row-2">SẢN XUẤT CƠ KHÍ SAO VÀNG</span>
+            <div class="brand-divider">
+              <span class="divider-line"></span>
+              <i class="ri-star-fill divider-star"></i>
+              <span class="divider-line"></span>
+            </div>
+            <span class="brand-row-3">GOLDEN STAR MECHANICAL JSC</span>
+          </div>
         </a>
         
-        <div class="header-top-center">
-          <h2 class="company-name">CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG</h2>
-          <div class="company-desc">Kiến tạo giá trị bền vững — Kỹ nghệ cơ khí chính xác & nhôm kính chất lượng cao</div>
-          <div class="company-contact">
+        <div class="header-top-contact-right">
+          <div class="contact-row-1">
             <span class="contact-item">
               <i class="ri-phone-fill"></i>
               <span>Hotline: </span>
@@ -331,10 +380,11 @@
             <span class="contact-separator">|</span>
             <span class="contact-item">
               <i class="ri-mail-fill"></i>
-              <span>Mail: </span>
+              <span>Email: </span>
               <a href="mailto:cokhisaovangvn@gmail.com">cokhisaovangvn@gmail.com</a>
             </span>
-            <span class="contact-separator">|</span>
+          </div>
+          <div class="contact-row-2">
             <span class="contact-item">
               <i class="ri-map-pin-fill"></i>
               <span>Địa chỉ: Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam</span>
