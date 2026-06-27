@@ -679,12 +679,21 @@
     }
   };
 
+  const setupHeaderExtensions = () => {
+    if (!document.querySelector('.header-top-bar')) {
+      const script = document.createElement('script');
+      script.src = 'assets/js/modules/header-extensions.js';
+      document.body.appendChild(script);
+    }
+  };
+
   // Run on load
   const init = () => {
     loadBrandingSettings();
     setupFileUploads();
     setupQuoteSubmit();
     setupPageHeroSlider();
+    setupHeaderExtensions();
   };
 
   if (document.readyState === 'loading') {
