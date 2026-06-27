@@ -43,12 +43,11 @@
       .header-top-bar {
         width: 100%;
         height: 120px;
-        background: linear-gradient(135deg, #fdfbf7 0%, #f5f2eb 100%);
-        background-image: 
-          radial-gradient(rgba(226, 177, 60, 0.05) 1.5px, transparent 1.5px), 
-          linear-gradient(135deg, #fdfbf7 0%, #f5f2eb 100%);
-        background-size: 24px 24px, 100% 100%;
-        border-bottom: 2px solid #E2B13C;
+        background-image: linear-gradient(rgba(123, 18, 18, 0.12), rgba(123, 18, 18, 0.12)), url('assets/images/bg-red-header.jpg') !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
+        border-bottom: 2px solid #E2B13C !important;
         position: fixed;
         top: 0;
         left: 0;
@@ -98,18 +97,19 @@
       .brand-row-1 {
         font-size: 13px;
         font-weight: 700;
-        color: #c8860a;
+        color: #E2B13C !important;
         letter-spacing: 0.15em;
         line-height: 1;
       }
       .brand-row-2 {
         font-size: 21px;
         font-weight: 900;
-        color: #7B1212;
+        color: #ffffff !important;
         letter-spacing: 0.05em;
         margin-top: 3px;
         line-height: 1.1;
         text-transform: uppercase;
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6) !important;
       }
       .brand-divider {
         display: flex;
@@ -131,7 +131,7 @@
       .brand-row-3 {
         font-size: 9.5px;
         font-weight: 700;
-        color: #c8860a;
+        color: #E2B13C !important;
         letter-spacing: 0.22em;
         margin-top: 3px;
         line-height: 1;
@@ -152,13 +152,15 @@
         align-items: center;
         gap: 16px;
         font-size: 13.5px;
-        color: #333;
+        color: #ffffff !important;
         font-weight: 700;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
       }
       .contact-row-2 {
         font-size: 13px;
-        color: #555;
+        color: rgba(255, 255, 255, 0.85) !important;
         font-weight: 500;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
       }
       .contact-item {
         display: flex;
@@ -175,7 +177,7 @@
         transition: color 0.2s ease;
       }
       .contact-item a:hover {
-        color: #7B1212;
+        color: #E2B13C !important;
       }
       .contact-separator {
         color: rgba(226, 177, 60, 0.4);
@@ -606,7 +608,7 @@
     topBar.innerHTML = `
       <div class="header-top-inner">
         <a href="index.html" class="header-top-brand-wrap">
-          <img src="assets/images/logo-cty.png" alt="Sao Vàng Logo" class="brand-logo-img" />
+          <img src="assets/images/logo-cty-white.png" alt="Sao Vàng Logo" class="brand-logo-img" />
           <div class="brand-text-block">
             <span class="brand-row-1">CÔNG TY CỔ PHẦN</span>
             <span class="brand-row-2">SẢN XUẤT CƠ KHÍ SAO VÀNG</span>
