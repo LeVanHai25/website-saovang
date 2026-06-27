@@ -40,8 +40,23 @@ async function seed() {
     { name: 'Cổng & Hàng rào', slug: 'cong-hang-rao', content_type: 'project', color: '#2d5a27' },
     { name: 'Nhôm Kính', slug: 'nhom-kinh', content_type: 'project', color: '#0d4e8a' },
     
-    // Product categories
-    { name: 'Cửa nhôm định hình', slug: 'cua-nhom-dinh-hinh', content_type: 'product', color: '#0d4e8a' },
+    // Product categories (Detailed Sub-categories)
+    { name: 'Cửa Nhôm Xingfa',          slug: 'cua-nhom-xingfa',          content_type: 'product', color: '#1a5c9e' },
+    { name: 'Cửa Nhôm Xingfa Class A',  slug: 'cua-nhom-xingfa-class-a',  content_type: 'product', color: '#155b8e' },
+    { name: 'Cửa Trượt Quay',           slug: 'cua-truot-quay',           content_type: 'product', color: '#2d8a5e' },
+    { name: 'Cửa Nhôm Slim',            slug: 'cua-nhom-slim',            content_type: 'product', color: '#4a4a7a' },
+    { name: 'Cửa Nhôm Thủy Lực',       slug: 'cua-nhom-thuy-luc',       content_type: 'product', color: '#7a4a1a' },
+    { name: 'Cửa Lưới Chống Muỗi',     slug: 'cua-luoi-chong-muoi',     content_type: 'product', color: '#2d7a3a' },
+    { name: 'Cửa Nhôm Kogen',           slug: 'cua-nhom-kogen',           content_type: 'product', color: '#7a5a1a' },
+    { name: 'Cửa Nhôm PMA',             slug: 'cua-nhom-pma',             content_type: 'product', color: '#1a5a7a' },
+    { name: 'Cửa Nhôm Yongxing',        slug: 'cua-nhom-yongxing',        content_type: 'product', color: '#5a1a7a' },
+    { name: 'Cửa Nhôm Owin',            slug: 'cua-nhom-owin',            content_type: 'product', color: '#7a1a5a' },
+    { name: 'Cửa Nhôm Topal',           slug: 'cua-nhom-topal',           content_type: 'product', color: '#1a7a5a' },
+    { name: 'Cửa Nhôm Kenwin',          slug: 'cua-nhom-kenwin',          content_type: 'product', color: '#5a7a1a' },
+    { name: 'Cửa Nhôm Tấm Tổ Ong',     slug: 'cua-nhom-tam-to-ong',     content_type: 'product', color: '#8B4513' },
+    { name: 'Cửa Tự Động',             slug: 'cua-tu-dong',             content_type: 'product', color: '#1a4a7a' },
+    { name: 'Cửa nhôm định hình',       slug: 'cua-nhom-dinh-hinh',       content_type: 'product', color: '#0d4e8a' },
+
     { name: 'Kính cường lực & Phụ kiện', slug: 'kinh-cuong-luc', content_type: 'product', color: '#1a3a5c' },
     { name: 'Sắt mỹ thuật chế tác', slug: 'sat-my-thuat-che-tac', content_type: 'product', color: '#8B0000' },
     { name: 'Inox & Phụ kiện du thuyền', slug: 'inox-phu-kien-du-thuyen', content_type: 'product', color: '#c8860a' },
@@ -2590,6 +2605,53 @@ async function seedNhomKinhProducts(db) {
   const now = new Date().toISOString();
   const dbNow = now.replace('T', ' ').substring(0, 19);
   
+  function classifyTitle(title) {
+    const t = (title || '').toLowerCase();
+    if ((t.includes('xingfa') || t.includes('xinfga')) && (t.includes('class a') || t.includes('class-a') || t.includes('classa'))) {
+      return 'Cửa Nhôm Xingfa Class A';
+    }
+    if (t.includes('xingfa') || t.includes('xinfga')) {
+      return 'Cửa Nhôm Xingfa';
+    }
+    if (t.includes('trượt quay') || t.includes('truot quay')) {
+      return 'Cửa Trượt Quay';
+    }
+    if (t.includes('slim')) {
+      return 'Cửa Nhôm Slim';
+    }
+    if (t.includes('thủy lực') || t.includes('thuy luc') || t.includes('maxpro')) {
+      return 'Cửa Nhôm Thủy Lực';
+    }
+    if (t.includes('lưới') || t.includes('luoi')) {
+      return 'Cửa Lưới Chống Muỗi';
+    }
+    if (t.includes('kogen')) {
+      return 'Cửa Nhôm Kogen';
+    }
+    if (t.includes('pma')) {
+      return 'Cửa Nhôm PMA';
+    }
+    if (t.includes('yongxing')) {
+      return 'Cửa Nhôm Yongxing';
+    }
+    if (t.includes('owin')) {
+      return 'Cửa Nhôm Owin';
+    }
+    if (t.includes('topal')) {
+      return 'Cửa Nhôm Topal';
+    }
+    if (t.includes('kenwin')) {
+      return 'Cửa Nhôm Kenwin';
+    }
+    if (t.includes('tổ ong') || t.includes('to ong') || t.includes('tấm tổ') || t.includes('tam to')) {
+      return 'Cửa Nhôm Tấm Tổ Ong';
+    }
+    if (t.includes('tự động') || t.includes('tu dong')) {
+      return 'Cửa Tự Động';
+    }
+    return 'Cửa nhôm định hình';
+  }
+
   for (const p of products) {
     const fs = require('fs');
     const path = require('path');
@@ -2598,15 +2660,21 @@ async function seedNhomKinhProducts(db) {
     const localImgPath = path.join(__dirname, '..', 'uploads', 'products', p.slug + '.webp');
     const thumbnail = fs.existsSync(localImgPath) ? p.localImg : p.remoteImg;
     
+    // Resolve dynamic category for aluminum doors
+    let category = p.category;
+    if (category === 'Cửa nhôm định hình') {
+      category = classifyTitle(p.title);
+    }
+
     const existing = db.prepare('SELECT id FROM content WHERE slug = ? AND type = ?').get(p.slug, 'product');
     let contentId;
     if (existing) {
-      // Update thumbnail and excerpt to latest
-      db.prepare('UPDATE content SET thumbnail = ?, excerpt = ?, updated_at = ? WHERE id = ?')
-        .run(thumbnail, p.excerpt, dbNow, existing.id);
+      // Update thumbnail, excerpt, and category to latest
+      db.prepare('UPDATE content SET thumbnail = ?, excerpt = ?, category = ?, updated_at = ? WHERE id = ?')
+        .run(thumbnail, p.excerpt, category, dbNow, existing.id);
       contentId = existing.id;
     } else {
-      const res = insertContent.run(p.title, p.slug, adminId, thumbnail, p.excerpt, p.category, now, dbNow, dbNow);
+      const res = insertContent.run(p.title, p.slug, adminId, thumbnail, p.excerpt, category, now, dbNow, dbNow);
       contentId = res.lastInsertRowid;
     }
     

@@ -13,13 +13,25 @@
   let _sort   = 'sort_order';
 
   /* ─── Category classification ───────────────────────────────── */
-  const CO_KHI_KEYS    = ['co-khi','sat','thep','inox','cau-thang','lan-can','cong','hang-rao','nhom-duc','ren','my-thuat','du-thuyen','yacht','marine','gate','railing','stair'];
-  const NHOM_KINH_KEYS  = ['nhom','kinh','cua','vach','glass','aluminum','window','door','facade','cabin','slim','xingfa'];
+  // Slug prefixes for each high-level group
+  const GROUP_NHOM = [
+    'cua-nhom-xingfa', 'cua-nhom-xingfa-class-a', 'cua-truot-quay',
+    'cua-nhom-slim', 'cua-nhom-thuy-luc', 'cua-luoi-chong-muoi',
+    'cua-nhom-kogen', 'cua-nhom-pma', 'cua-nhom-yongxing',
+    'cua-nhom-owin', 'cua-nhom-topal', 'cua-nhom-kenwin',
+    'cua-nhom-tam-to-ong', 'cua-tu-dong', 'cua-nhom-dinh-hinh',
+  ];
+  const GROUP_KINH = ['kinh-cuong-luc'];
+  const GROUP_COKHI = [
+    'co-khi', 'sat', 'inox', 'sat-my-thuat', 'inox-phu-kien',
+    'sat-my-thuat-che-tac', 'inox-phu-kien-du-thuyen',
+  ];
 
-  function classify(slug) {
+  function catGroup(slug) {
     const s = (slug || '').toLowerCase();
-    if (CO_KHI_KEYS.some(k => s.includes(k)))    return 'co-khi';
-    if (NHOM_KINH_KEYS.some(k => s.includes(k))) return 'nhom-kinh';
+    if (GROUP_NHOM.some(k  => s === k || s.startsWith(k)))   return 'nhom';
+    if (GROUP_KINH.some(k  => s === k || s.startsWith(k)))   return 'kinh';
+    if (GROUP_COKHI.some(k => s === k || s.startsWith(k)))   return 'cokhi';
     return 'other';
   }
 
@@ -43,30 +55,34 @@
     const bar = document.getElementById('filterBar');
     if (!bar) return;
 
-    const coKhi    = cats.filter(c => classify(c.slug) === 'co-khi');
-    const nhomKinh = cats.filter(c => classify(c.slug) === 'nhom-kinh');
-    const others   = cats.filter(c => classify(c.slug) === 'other');
+    const nhom  = cats.filter(c => catGroup(c.slug) === 'nhom');
+    const kinh  = cats.filter(c => catGroup(c.slug) === 'kinh');
+    const cokhi = cats.filter(c => catGroup(c.slug) === 'cokhi');
 
     const btnHtml = (c) =>
       `<button class="filter-btn ${_filter === c.slug ? 'active' : ''}" data-filter="${c.slug}" style="--cat-color:${c.color || '#C8A96A'}">${CMS.esc(c.name)}</button>`;
 
+    // SVG icons
+    const iconTool   = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>`;
+    const iconWindow = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>`;
+    const iconGlass  = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 19 22 19"/><line x1="12" y1="8" x2="12" y2="13"/><circle cx="12" cy="16" r="0.5" fill="currentColor"/></svg>`;
+
     let html = `<button class="filter-btn ${_filter === 'all' ? 'active' : ''}" data-filter="all">Tất cả</button>`;
 
-    if (coKhi.length) {
+    if (cokhi.length) {
       html += `<span class="filter-divider"></span>
-      <span class="filter-group-label">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-        Cơ Khí
-      </span>` + coKhi.map(btnHtml).join('');
+      <span class="filter-group-label">${iconTool} Cơ Khí</span>` + cokhi.map(btnHtml).join('');
     }
-    if (nhomKinh.length) {
+
+    if (kinh.length) {
       html += `<span class="filter-divider"></span>
-      <span class="filter-group-label">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
-        Nhôm Kính
-      </span>` + nhomKinh.map(btnHtml).join('');
+      <span class="filter-group-label">${iconGlass} Kính Cường Lực</span>` + kinh.map(btnHtml).join('');
     }
-    if (others.length) html += others.map(btnHtml).join('');
+
+    if (nhom.length) {
+      html += `<span class="filter-divider"></span>
+      <span class="filter-group-label">${iconWindow} Cửa Nhôm Kính</span>` + nhom.map(btnHtml).join('');
+    }
 
     bar.innerHTML = html;
 
