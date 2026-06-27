@@ -16,10 +16,10 @@
       /* ── Header Top Bar ── */
       .header-top-bar {
         width: 100%;
-        height: 90px;
+        height: 110px;
         background: linear-gradient(135deg, #fdfbf7 0%, #f5f2eb 100%);
         background-image: 
-          radial-gradient(rgba(226, 177, 60, 0.08) 1.5px, transparent 1.5px), 
+          radial-gradient(rgba(226, 177, 60, 0.06) 1.5px, transparent 1.5px), 
           linear-gradient(135deg, #fdfbf7 0%, #f5f2eb 100%);
         background-size: 24px 24px, 100% 100%;
         border-bottom: 2px solid #E2B13C;
@@ -31,9 +31,10 @@
         display: flex;
         align-items: center;
         transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        box-sizing: border-box;
       }
       .header-top-bar.scrolled {
-        transform: translateY(-90px);
+        transform: translateY(-110px);
       }
       .header-top-inner {
         width: 100%;
@@ -43,85 +44,78 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        box-sizing: border-box;
       }
       .header-top-logo {
+        flex-shrink: 0;
+        text-decoration: none;
         display: flex;
         align-items: center;
-        gap: 14px;
-        text-decoration: none;
       }
       .header-top-logo img {
-        height: 54px;
+        height: 72px;
         width: auto;
         display: block;
       }
-      .header-top-brand {
+      .header-top-center {
+        flex-grow: 1;
+        text-align: center;
         display: flex;
         flex-direction: column;
-        text-align: left;
+        align-items: center;
+        justify-content: center;
+        padding-inline: 40px;
+        box-sizing: border-box;
       }
-      .header-top-brand .brand-title {
+      .header-top-center .company-name {
         font-family: var(--ff-header, sans-serif);
-        font-size: 15px;
+        font-size: 19px;
         font-weight: 900;
         color: #7B1212;
-        letter-spacing: 0.02em;
+        letter-spacing: 0.04em;
         text-transform: uppercase;
-        line-height: 1.25;
+        margin: 0;
+        line-height: 1.2;
       }
-      .header-top-brand .brand-subtitle {
+      .header-top-center .company-desc {
         font-family: var(--ff-body, sans-serif);
-        font-size: 11px;
-        font-style: italic;
-        color: #c8860a;
-        font-weight: 600;
-        margin-top: 3px;
+        font-size: 12px;
+        color: #666;
+        margin-top: 5px;
+        font-weight: 500;
         letter-spacing: 0.02em;
       }
-      .header-top-right {
-        display: flex;
-        gap: 28px;
-        align-items: center;
-      }
-      .header-top-right .info-item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        text-align: left;
-      }
-      .header-top-right .info-item i {
-        font-size: 20px;
-        color: #E2B13C;
-        background: rgba(226, 177, 60, 0.08);
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
+      .header-top-center .company-contact {
         display: flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid rgba(226, 177, 60, 0.2);
-      }
-      .header-top-right .info-content {
-        display: flex;
-        flex-direction: column;
-      }
-      .header-top-right .info-label {
-        font-size: 9px;
-        text-transform: uppercase;
-        color: #666;
-        letter-spacing: 0.05em;
-        font-weight: 700;
-        line-height: 1.2;
-      }
-      .header-top-right .info-value {
+        gap: 16px;
+        margin-top: 10px;
         font-size: 13px;
-        font-weight: 700;
-        color: #1a1a1a;
-        text-decoration: none;
-        margin-top: 1px;
+        color: #333;
+        font-weight: 600;
+        flex-wrap: wrap;
       }
-      .header-top-right a.info-value:hover {
+      .header-top-center .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .header-top-center .contact-item i {
+        font-size: 14px;
+        color: #E2B13C;
+      }
+      .header-top-center .contact-item a {
+        color: inherit;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+      .header-top-center .contact-item a:hover {
         color: #7B1212;
+      }
+      .header-top-center .contact-separator {
+        color: rgba(226, 177, 60, 0.4);
+        font-weight: 300;
       }
 
       /* ── Sticky Callback Bar ── */
@@ -249,11 +243,11 @@
       /* ── Hide navigation bar logo on desktop ── */
       @media (min-width: 1024px) {
         body {
-          padding-top: 160px !important;
+          padding-top: 180px !important;
         }
         .header, .header-v2 {
           position: fixed !important;
-          top: 90px !important;
+          top: 110px !important;
           box-shadow: none !important;
           transition: top 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease, height 0.3s ease !important;
         }
@@ -323,33 +317,28 @@
       <div class="header-top-inner">
         <a href="index.html" class="header-top-logo">
           <img src="assets/images/logo-cty.png" alt="Sao Vàng Logo" />
-          <div class="header-top-brand">
-            <span class="brand-title">CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG</span>
-            <span class="brand-subtitle">Kiến tạo giá trị bền vững</span>
-          </div>
         </a>
         
-        <div class="header-top-right">
-          <div class="info-item">
-            <i class="ri-phone-line"></i>
-            <div class="info-content">
-              <span class="info-label">Hotline tư vấn</span>
-              <a href="tel:0869590279" class="info-value">0869 590 279</a>
-            </div>
-          </div>
-          <div class="info-item">
-            <i class="ri-mail-line"></i>
-            <div class="info-content">
-              <span class="info-label">Mail liên hệ</span>
-              <a href="mailto:cokhisaovangvn@gmail.com" class="info-value">cokhisaovangvn@gmail.com</a>
-            </div>
-          </div>
-          <div class="info-item">
-            <i class="ri-map-pin-line"></i>
-            <div class="info-content">
-              <span class="info-label">Địa chỉ trụ sở chính</span>
-              <span class="info-value">Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam</span>
-            </div>
+        <div class="header-top-center">
+          <h2 class="company-name">CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG</h2>
+          <div class="company-desc">Kiến tạo giá trị bền vững — Kỹ nghệ cơ khí chính xác & nhôm kính chất lượng cao</div>
+          <div class="company-contact">
+            <span class="contact-item">
+              <i class="ri-phone-fill"></i>
+              <span>Hotline: </span>
+              <a href="tel:0869590279">0869 590 279</a>
+            </span>
+            <span class="contact-separator">|</span>
+            <span class="contact-item">
+              <i class="ri-mail-fill"></i>
+              <span>Mail: </span>
+              <a href="mailto:cokhisaovangvn@gmail.com">cokhisaovangvn@gmail.com</a>
+            </span>
+            <span class="contact-separator">|</span>
+            <span class="contact-item">
+              <i class="ri-map-pin-fill"></i>
+              <span>Địa chỉ: Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam</span>
+            </span>
           </div>
         </div>
       </div>
@@ -418,7 +407,6 @@
       e.preventDefault();
       
       const phoneVal = input.value.trim();
-      // Basic validation for Vietnam phone numbers
       const cleaned = phoneVal.replace(/\D/g, '');
       if (cleaned.length < 9 || cleaned.length > 11) {
         alert('Vui lòng nhập số điện thoại hợp lệ (từ 9 đến 11 chữ số).');
