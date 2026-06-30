@@ -160,11 +160,15 @@
       const result = await res.json();
 
       if (result.success) {
-        showToast(result.message || 'Đã gửi thành công! Chúng tôi sẽ phản hồi trong 2 giờ.', 'success', 7000);
+        showToast(result.message || 'Đã gửi thành công! Đang chuyển hướng...', 'success', 3000);
         form.reset();
         // Reset file label
         const fileLabel = form.querySelector('.file-name');
         if (fileLabel) fileLabel.textContent = 'Chưa chọn file nào';
+        // Redirect sang Thank You Page để đo lường conversion GA4/Ads
+        setTimeout(() => {
+          window.location.href = 'thank-you.html';
+        }, 1200);
       } else {
         showToast(result.error || 'Có lỗi xảy ra, vui lòng thử lại.', 'error');
       }

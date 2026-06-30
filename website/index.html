@@ -1,8 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
 <head>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
   <meta charset="UTF-8" />
+  <!-- ═══ Google Tag Manager — Sprint 6 ═══
+       Thay GTM-XXXXXXX bằng Container ID thực của bạn
+       Lấy tại: tagmanager.google.com
+  ═══════════════════════════════════════ -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End Google Tag Manager -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#9B1C1C" />
   <title>SAO VÀNG — Cơ Khí Chính Xác & Nhôm Kính Cao Cấp | Kiến Tạo Giá Trị Bền Vững</title>
@@ -692,6 +702,10 @@
   </style>
 </head>
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <a href="#main-content" class="skip-link">Bỏ qua điều hướng</a>
 
@@ -1458,7 +1472,632 @@
 
 
   <!-- ════════════════════════════════════════════
-       SECTION 10: FOOTER
+       SECTION 10: TESTIMONIALS (Social Proof)
+  ════════════════════════════════════════════ -->
+  <section id="testimonials" aria-labelledby="testimonials-heading" style="background:#fff;padding:84px 0 96px;">
+    <style>
+      /* ── Testimonials ────────────────────────────────────── */
+      .sv-testimonials-header { text-align:center; margin-bottom: 56px; }
+      .sv-testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 28px;
+      }
+      @media(max-width:900px){ .sv-testimonials-grid{ grid-template-columns:1fr 1fr; } }
+      @media(max-width:580px){ .sv-testimonials-grid{ grid-template-columns:1fr; } }
+
+      .sv-tcard {
+        background: #fafafa;
+        border: 1px solid #f0f0f0;
+        border-radius: 16px;
+        padding: 28px 26px 24px;
+        position: relative;
+        display: flex; flex-direction: column;
+        transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+      }
+      .sv-tcard:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 16px 48px rgba(0,0,0,.09);
+        border-color: rgba(155,28,28,.15);
+      }
+
+      /* Quote icon */
+      .sv-tcard-quote {
+        font-size: 48px;
+        line-height: 1;
+        color: rgba(155,28,28,.12);
+        font-family: Georgia, serif;
+        margin-bottom: 8px;
+        user-select: none;
+      }
+      /* Stars */
+      .sv-tcard-stars {
+        display:flex; gap:3px; margin-bottom:14px;
+      }
+      .sv-tcard-stars i { color:#C9A227; font-size:15px; }
+
+      .sv-tcard-body {
+        font-size: 14.5px; color: #4B5563;
+        line-height: 1.8; flex: 1;
+        margin-bottom: 22px;
+        font-style: italic;
+      }
+      .sv-tcard-author {
+        display:flex; align-items:center; gap:12px;
+        border-top:1px solid #f0f0f0;
+        padding-top: 18px;
+      }
+      .sv-tcard-avatar {
+        width:44px; height:44px; border-radius:50%;
+        background: linear-gradient(135deg,#9B1C1C,#C9A227);
+        display:flex; align-items:center; justify-content:center;
+        font-family:'Montserrat',sans-serif;
+        font-size:16px; font-weight:800; color:#fff;
+        flex-shrink:0;
+      }
+      .sv-tcard-name {
+        font-family:'Montserrat',sans-serif;
+        font-size:13px; font-weight:700; color:#111827;
+        margin-bottom:2px;
+      }
+      .sv-tcard-role { font-size:12px; color:#9CA3AF; }
+
+      /* Badge nổi bật */
+      .sv-tcard-badge {
+        position:absolute; top:20px; right:20px;
+        background: linear-gradient(135deg,#9B1C1C,#b22222);
+        color:#fff;
+        font-family:'Montserrat',sans-serif;
+        font-size:9px; font-weight:800;
+        letter-spacing:.12em; text-transform:uppercase;
+        padding:3px 9px; border-radius:100px;
+      }
+    </style>
+
+    <div class="sv-container">
+      <div class="sv-testimonials-header">
+        <span class="sv-section-tag">Khách Hàng Nói Gì</span>
+        <h2 id="testimonials-heading" class="sv-section-title" style="margin-inline:auto;max-width:560px;">
+          Cảm Nhận Thực Tế Từ Khách Hàng
+        </h2>
+        <p style="color:#6B7280;font-size:15px;max-width:500px;margin:12px auto 0;line-height:1.7;">
+          Hàng trăm khách hàng đã tin tưởng Sao Vàng cho các công trình quan trọng nhất của họ.
+        </p>
+      </div>
+
+      <div class="sv-testimonials-grid">
+
+        <!-- Card 1 -->
+        <div class="sv-tcard" data-reveal>
+          <div class="sv-tcard-badge">Đã xác minh</div>
+          <div class="sv-tcard-quote" aria-hidden="true">&ldquo;</div>
+          <div class="sv-tcard-stars" aria-label="5 sao">
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+          </div>
+          <p class="sv-tcard-body">
+            "Cầu thang xoắn CNC thi công cực kỳ tỉ mỉ, đường nét sắc sảo vượt kỳ vọng. Đội kỹ sư chuyên nghiệp, bàn giao đúng hạn. Biệt thự của tôi hoàn toàn khác biệt với cầu thang này."
+          </p>
+          <div class="sv-tcard-author">
+            <div class="sv-tcard-avatar" aria-hidden="true">TH</div>
+            <div>
+              <div class="sv-tcard-name">Anh Trần Hải</div>
+              <div class="sv-tcard-role">Chủ đầu tư Biệt thự — Hà Nội</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="sv-tcard" data-reveal data-reveal-delay="1">
+          <div class="sv-tcard-quote" aria-hidden="true">&ldquo;</div>
+          <div class="sv-tcard-stars" aria-label="5 sao">
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+          </div>
+          <p class="sv-tcard-body">
+            "Thi công hệ cửa nhôm Xingfa cho toàn bộ showroom 1200m². Chất lượng lắp đặt xuất sắc, kín gió, cách âm tốt. Sao Vàng xứng đáng là đơn vị hàng đầu Hà Nội."
+          </p>
+          <div class="sv-tcard-author">
+            <div class="sv-tcard-avatar" aria-hidden="true">NL</div>
+            <div>
+              <div class="sv-tcard-name">Chị Nguyễn Linh</div>
+              <div class="sv-tcard-role">Giám đốc Showroom Ô tô — Hà Đông</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="sv-tcard" data-reveal data-reveal-delay="2">
+          <div class="sv-tcard-quote" aria-hidden="true">&ldquo;</div>
+          <div class="sv-tcard-stars" aria-label="5 sao">
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+          </div>
+          <p class="sv-tcard-body">
+            "Đặt gia công kết cấu thép inox cho du thuyền riêng. Sao Vàng là đơn vị duy nhất đủ năng lực đáp ứng yêu cầu đặc biệt. Tay nghề thợ hàn đẳng cấp, rất hài lòng."
+          </p>
+          <div class="sv-tcard-author">
+            <div class="sv-tcard-avatar" aria-hidden="true">PD</div>
+            <div>
+              <div class="sv-tcard-name">Ông Phạm Dũng</div>
+              <div class="sv-tcard-role">Doanh nhân — Dự án Du thuyền Sao Biển</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="sv-tcard" data-reveal>
+          <div class="sv-tcard-quote" aria-hidden="true">&ldquo;</div>
+          <div class="sv-tcard-stars" aria-label="5 sao">
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+          </div>
+          <p class="sv-tcard-body">
+            "Lan can kính cường lực và mặt dựng kính cho penthouse tầng 30. Thi công trên cao chuyên nghiệp, an toàn tuyệt đối. Giá cạnh tranh, chất lượng premium."
+          </p>
+          <div class="sv-tcard-author">
+            <div class="sv-tcard-avatar" aria-hidden="true">VT</div>
+            <div>
+              <div class="sv-tcard-name">Anh Vũ Tuấn</div>
+              <div class="sv-tcard-role">KTS — Dự án Penthouse Vinhomes</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="sv-tcard" data-reveal data-reveal-delay="1">
+          <div class="sv-tcard-quote" aria-hidden="true">&ldquo;</div>
+          <div class="sv-tcard-stars" aria-label="5 sao">
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+          </div>
+          <p class="sv-tcard-body">
+            "Cổng biệt thự CNC điêu khắc nghệ thuật — tác phẩm thực sự. Tư vấn thiết kế nhiệt tình, thi công nhanh, bảo hành chu đáo. Sẽ giới thiệu cho bạn bè."
+          </p>
+          <div class="sv-tcard-author">
+            <div class="sv-tcard-avatar" aria-hidden="true">ML</div>
+            <div>
+              <div class="sv-tcard-name">Chị Minh Lan</div>
+              <div class="sv-tcard-role">Chủ biệt thự — Khu đô thị Gamuda</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="sv-tcard" data-reveal data-reveal-delay="2">
+          <div class="sv-tcard-quote" aria-hidden="true">&ldquo;</div>
+          <div class="sv-tcard-stars" aria-label="5 sao">
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+            <i class="ri-star-fill" aria-hidden="true"></i>
+          </div>
+          <p class="sv-tcard-body">
+            "Gia công CNC chính xác linh kiện cho dây chuyền sản xuất. Dung sai ±0.01mm đạt 100%. Năng lực máy móc hiện đại, đội ngũ hiểu bản vẽ kỹ thuật rất tốt."
+          </p>
+          <div class="sv-tcard-author">
+            <div class="sv-tcard-avatar" aria-hidden="true">QH</div>
+            <div>
+              <div class="sv-tcard-name">Anh Quốc Hùng</div>
+              <div class="sv-tcard-role">Giám đốc KT — Công ty SX Cơ Điện</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /grid -->
+    </div><!-- /container -->
+  </section>
+
+
+  <!-- ════════════════════════════════════════════
+       SECTION 10B: PARTNERS & CATALOGUE CTA
+  ════════════════════════════════════════════ -->
+  <section id="partners" aria-label="Đối tác & Tải Catalogue" style="background:#111827;padding:72px 0;">
+    <style>
+      /* ── Partners ────────────────────────────────────────── */
+      .sv-partners-inner {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 64px;
+        align-items: center;
+      }
+      @media(max-width:900px){
+        .sv-partners-inner { grid-template-columns:1fr; gap:48px; text-align:center; }
+        .sv-catalogue-cta  { justify-content:center; }
+      }
+
+      .sv-partners-label {
+        font-family:'Montserrat',sans-serif;
+        font-size:10px; font-weight:800;
+        letter-spacing:.2em; text-transform:uppercase;
+        color:rgba(255,255,255,.35);
+        margin-bottom:24px;
+      }
+      .sv-partners-logos {
+        display:flex; flex-wrap:wrap;
+        align-items:center; gap:8px 20px;
+      }
+      .sv-partner-chip {
+        display:inline-flex; align-items:center; gap:7px;
+        background:rgba(255,255,255,.06);
+        border:1px solid rgba(255,255,255,.1);
+        border-radius:8px;
+        padding:8px 16px;
+        font-family:'Montserrat',sans-serif;
+        font-size:12px; font-weight:700;
+        color:rgba(255,255,255,.65);
+        letter-spacing:.04em;
+        transition: background .2s, border-color .2s, color .2s;
+        white-space:nowrap;
+      }
+      .sv-partner-chip:hover {
+        background:rgba(255,255,255,.12);
+        border-color:rgba(201,162,39,.4);
+        color:#fff;
+      }
+      .sv-partner-chip i { color:#C9A227; font-size:15px; }
+
+      /* Certifications row */
+      .sv-certs {
+        display:flex; flex-wrap:wrap;
+        align-items:center; gap:12px;
+        margin-top:24px;
+      }
+      .sv-cert-badge {
+        display:inline-flex; align-items:center; gap:6px;
+        background:rgba(201,162,39,.1);
+        border:1px solid rgba(201,162,39,.25);
+        border-radius:100px;
+        padding:5px 13px;
+        font-family:'Montserrat',sans-serif;
+        font-size:10px; font-weight:700;
+        letter-spacing:.1em; text-transform:uppercase;
+        color:#C9A227;
+      }
+
+      /* Catalogue CTA card */
+      .sv-catalogue-cta {
+        display:flex; flex-direction:column; align-items:flex-start;
+        gap:16px;
+      }
+      .sv-catalogue-card {
+        background:linear-gradient(135deg,rgba(155,28,28,.25) 0%,rgba(155,28,28,.1) 100%);
+        border:1px solid rgba(155,28,28,.35);
+        border-radius:16px;
+        padding:28px 28px 24px;
+        min-width:260px;
+        position:relative;
+        overflow:hidden;
+      }
+      .sv-catalogue-card::before {
+        content:'';
+        position:absolute;
+        top:-20px; right:-20px;
+        width:120px; height:120px;
+        border-radius:50%;
+        background:radial-gradient(circle,rgba(201,162,39,.15),transparent 70%);
+      }
+      .sv-catalogue-card-icon {
+        width:48px; height:48px;
+        border-radius:12px;
+        background:linear-gradient(135deg,#9B1C1C,#b22222);
+        display:flex; align-items:center; justify-content:center;
+        font-size:22px; color:#fff;
+        margin-bottom:14px;
+        box-shadow:0 4px 16px rgba(155,28,28,.4);
+      }
+      .sv-catalogue-card h3 {
+        font-family:'Montserrat',sans-serif;
+        font-size:15px; font-weight:800;
+        color:#fff; margin-bottom:6px;
+      }
+      .sv-catalogue-card p {
+        font-size:13px;
+        color:rgba(255,255,255,.55);
+        line-height:1.6; margin-bottom:18px;
+      }
+      .sv-btn-catalogue {
+        display:inline-flex; align-items:center; gap:8px;
+        background:linear-gradient(135deg,#C9A227,#d4ae3a);
+        color:#fff;
+        font-family:'Montserrat',sans-serif;
+        font-size:12px; font-weight:800;
+        letter-spacing:.1em; text-transform:uppercase;
+        padding:12px 22px; border-radius:8px;
+        text-decoration:none; border:none; cursor:pointer;
+        transition:all .25s ease;
+        box-shadow:0 4px 16px rgba(201,162,39,.35);
+        width:100%;
+        justify-content:center;
+      }
+      .sv-btn-catalogue:hover {
+        transform:translateY(-2px);
+        box-shadow:0 8px 28px rgba(201,162,39,.5);
+        background:linear-gradient(135deg,#d4ae3a,#C9A227);
+      }
+      .sv-catalogue-note {
+        font-size:11px; color:rgba(255,255,255,.3);
+        text-align:center;
+        font-family:'Montserrat',sans-serif;
+      }
+    </style>
+
+    <div class="sv-container">
+      <div class="sv-partners-inner">
+
+        <!-- Left: Partners & Certs -->
+        <div>
+          <p class="sv-partners-label">Vật tư & Đối tác tin cậy</p>
+          <div class="sv-partners-logos">
+            <div class="sv-partner-chip"><i class="ri-building-2-line" aria-hidden="true"></i>Xingfa Aluminium</div>
+            <div class="sv-partner-chip"><i class="ri-building-2-line" aria-hidden="true"></i>Eurowindow</div>
+            <div class="sv-partner-chip"><i class="ri-building-2-line" aria-hidden="true"></i>Guardian Glass</div>
+            <div class="sv-partner-chip"><i class="ri-building-2-line" aria-hidden="true"></i>AGC Glass</div>
+            <div class="sv-partner-chip"><i class="ri-building-2-line" aria-hidden="true"></i>Việt Pháp</div>
+            <div class="sv-partner-chip"><i class="ri-building-2-line" aria-hidden="true"></i>TID Aluminium</div>
+            <div class="sv-partner-chip"><i class="ri-building-2-line" aria-hidden="true"></i>Pilkington</div>
+            <div class="sv-partner-chip"><i class="ri-building-2-line" aria-hidden="true"></i>Schlage</div>
+          </div>
+
+          <div class="sv-certs">
+            <span class="sv-cert-badge"><i class="ri-shield-check-fill" aria-hidden="true"></i>ISO 9001:2015</span>
+            <span class="sv-cert-badge"><i class="ri-medal-line" aria-hidden="true"></i>7+ Năm Kinh Nghiệm</span>
+            <span class="sv-cert-badge"><i class="ri-tools-fill" aria-hidden="true"></i>Máy CNC Haas & DMG</span>
+            <span class="sv-cert-badge"><i class="ri-group-fill" aria-hidden="true"></i>50+ Kỹ Sư Lành Nghề</span>
+          </div>
+        </div>
+
+        <!-- Right: Catalogue CTA -->
+        <div class="sv-catalogue-cta">
+          <div class="sv-catalogue-card">
+            <div class="sv-catalogue-card-icon">
+              <i class="ri-file-pdf-2-line" aria-hidden="true"></i>
+            </div>
+            <h3>Tải Catalogue Sao Vàng</h3>
+            <p>Bộ catalogue đầy đủ sản phẩm, bảng giá tham khảo và profile kỹ thuật — miễn phí.</p>
+            <a href="lien-he.html?ref=catalogue"
+               class="sv-btn-catalogue"
+               id="btnDownloadCatalogue"
+               aria-label="Tải Catalogue Sao Vàng miễn phí">
+              <i class="ri-download-2-line" aria-hidden="true"></i>
+              Nhận Catalogue Miễn Phí
+            </a>
+          </div>
+          <p class="sv-catalogue-note">Không spam • Phản hồi trong 15 phút</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ════════════════════════════════════════════
+       SECTION 10: FAQ
+  ════════════════════════════════════════════ -->
+  <section id="faq" aria-labelledby="faq-heading" style="background:#f9f7f5;padding:80px 0;">
+    <style>
+      /* ── FAQ Accordion ───────────────────────── */
+      .faq-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0 48px;
+        align-items: start;
+        margin-top: 48px;
+      }
+      .faq-item {
+        border-bottom: 1px solid #e5e7eb;
+      }
+      .faq-question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        width: 100%;
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-align: left;
+        padding: 20px 0;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: #111827;
+        line-height: 1.4;
+        transition: color 0.2s;
+      }
+      .faq-question:hover { color: #9B1C1C; }
+      .faq-item.is-open .faq-question { color: #9B1C1C; }
+      .faq-question i {
+        flex-shrink: 0;
+        width: 28px; height: 28px;
+        border-radius: 50%;
+        background: rgba(155,28,28,0.08);
+        color: #9B1C1C;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 16px;
+        transition: background 0.2s, transform 0.3s;
+      }
+      .faq-item.is-open .faq-question i {
+        background: #9B1C1C;
+        color: #fff;
+        transform: rotate(45deg);
+      }
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1);
+      }
+      .faq-answer-inner {
+        padding: 0 0 20px;
+        font-size: 14.5px;
+        color: #4B5563;
+        line-height: 1.8;
+      }
+      .faq-answer-inner strong { color: #111827; }
+      @media (max-width: 768px) {
+        .faq-grid { grid-template-columns: 1fr; gap: 0; }
+      }
+    </style>
+
+    <div class="sv-container">
+
+      <!-- Section header -->
+      <div style="text-align:center;margin-bottom:8px;">
+        <span class="sv-section-tag">Giải Đáp Thắc Mắc</span>
+      </div>
+      <h2 id="faq-heading" class="sv-section-title" style="text-align:center;margin-inline:auto;max-width:600px;">
+        Câu Hỏi Thường Gặp
+      </h2>
+      <p style="text-align:center;color:#6B7280;font-size:15px;max-width:520px;margin:12px auto 0;">Những thắc mắc phổ biến nhất từ khách hàng khi làm việc với Sao Vàng.</p>
+
+      <!-- FAQ Items — 2 cột -->
+      <div class="faq-grid" data-faq-group="homepage" data-faq-open-first>
+
+        <!-- Cột trái -->
+        <div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Chi phí gia công cơ khí tại Sao Vàng như thế nào?
+              <i class="ri-add-circle-line" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Chi phí phụ thuộc vào <strong>vật liệu, độ phức tạp và số lượng</strong>. Sao Vàng cam kết báo giá minh bạch, không phát sinh thêm sau khi ký hợp đồng. Liên hệ hotline <strong>0869 590 279</strong> để nhận báo giá miễn phí trong 24 giờ.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Thời gian thi công trung bình là bao lâu?
+              <i class="ri-add-circle-line" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Thông thường: <strong>Cửa nhôm kính 5–10 ngày</strong>, kết cấu thép lớn 15–30 ngày, cầu thang xoắn nghệ thuật 20–45 ngày tuỳ độ phức tạp. Sao Vàng cam kết bàn giao đúng tiến độ hoặc bồi thường theo hợp đồng.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Sao Vàng có chế độ bảo hành không?
+              <i class="ri-add-circle-line" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Có. Tất cả sản phẩm được bảo hành từ <strong>2–10 năm</strong> tuỳ hạng mục: cửa nhôm kính bảo hành 5 năm, kết cấu thép và inox bảo hành 10 năm. Đội kỹ thuật hỗ trợ bảo trì định kỳ theo yêu cầu.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Quy trình làm việc cụ thể ra sao?
+              <i class="ri-add-circle-line" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Quy trình 5 bước: <strong>(1) Tiếp nhận yêu cầu → (2) Khảo sát thực tế miễn phí → (3) Thiết kế & báo giá → (4) Ký hợp đồng & sản xuất → (5) Lắp đặt & bàn giao có biên bản nghiệm thu</strong>. Toàn bộ quá trình được giám sát bởi kỹ sư có kinh nghiệm.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cột phải -->
+        <div>
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Sao Vàng có thi công toàn quốc không?
+              <i class="ri-add-circle-line" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Có. Sao Vàng có khả năng thi công <strong>toàn quốc</strong>. Đội ngũ kỹ thuật sẵn sàng di chuyển đến mọi tỉnh thành. Chi phí di chuyển sẽ được tính riêng và thỏa thuận rõ ràng trước trong hợp đồng.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Nhôm kính Sao Vàng sử dụng thương hiệu nào?
+              <i class="ri-add-circle-line" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Sao Vàng sử dụng profile nhôm từ các thương hiệu uy tín: <strong>Xingfa, Eurowindow, Việt Pháp, TID</strong>. Kính sử dụng từ <strong>Guardian, AGC, Pilkington</strong>. Khách hàng có thể chọn thương hiệu phù hợp ngân sách và yêu cầu kỹ thuật.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Có khảo sát tại công trình miễn phí không?
+              <i class="ri-add-circle-line" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                <strong>Hoàn toàn miễn phí</strong>. Kỹ sư của Sao Vàng sẽ đến tận công trình để đo đạc, tư vấn giải pháp kỹ thuật tối ưu và lập dự toán chi tiết không ràng buộc. Gọi <strong>0869 590 279</strong> để đặt lịch hẹn.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" aria-expanded="false">
+              Chính sách thanh toán như thế nào?
+              <i class="ri-add-circle-line" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Thông thường: <strong>30% đặt cọc</strong> khi ký hợp đồng, <strong>60% khi bàn giao sản phẩm</strong>, <strong>10% còn lại sau 30 ngày nghiệm thu</strong>. Linh hoạt theo thỏa thuận cho các dự án lớn. Hóa đơn VAT đầy đủ.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /faq-grid -->
+
+    </div><!-- /sv-container -->
+
+    <!-- FAQ Schema JSON-LD for Google Rich Results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"Chi phí gia công cơ khí tại Sao Vàng như thế nào?","acceptedAnswer":{"@type":"Answer","text":"Chi phí phụ thuộc vào vật liệu, độ phức tạp và số lượng. Sao Vàng cam kết báo giá minh bạch. Liên hệ 0869 590 279 để nhận báo giá miễn phí."}},
+        {"@type":"Question","name":"Thời gian thi công trung bình là bao lâu?","acceptedAnswer":{"@type":"Answer","text":"Cửa nhôm kính 5–10 ngày, kết cấu thép 15–30 ngày, cầu thang xoắn 20–45 ngày tuỳ độ phức tạp."}},
+        {"@type":"Question","name":"Sao Vàng có chế độ bảo hành không?","acceptedAnswer":{"@type":"Answer","text":"Có. Bảo hành 2–10 năm tuỳ hạng mục: cửa nhôm kính 5 năm, kết cấu thép và inox 10 năm."}},
+        {"@type":"Question","name":"Quy trình làm việc cụ thể ra sao?","acceptedAnswer":{"@type":"Answer","text":"5 bước: Tiếp nhận yêu cầu → Khảo sát miễn phí → Thiết kế & báo giá → Ký hợp đồng & sản xuất → Lắp đặt & bàn giao."}},
+        {"@type":"Question","name":"Sao Vàng có thi công toàn quốc không?","acceptedAnswer":{"@type":"Answer","text":"Có. Sao Vàng thi công toàn quốc, chi phí di chuyển thỏa thuận rõ ràng trong hợp đồng."}},
+        {"@type":"Question","name":"Nhôm kính Sao Vàng sử dụng thương hiệu nào?","acceptedAnswer":{"@type":"Answer","text":"Profile nhôm Xingfa, Eurowindow, Việt Pháp, TID. Kính Guardian, AGC, Pilkington."}},
+        {"@type":"Question","name":"Có khảo sát tại công trình miễn phí không?","acceptedAnswer":{"@type":"Answer","text":"Hoàn toàn miễn phí. Kỹ sư đến tận công trình đo đạc và tư vấn."}},
+        {"@type":"Question","name":"Chính sách thanh toán như thế nào?","acceptedAnswer":{"@type":"Answer","text":"30% đặt cọc, 60% khi bàn giao, 10% sau 30 ngày nghiệm thu. Hóa đơn VAT đầy đủ."}}
+      ]
+    }
+    </script>
+
+  </section>
+
+
+  <!-- ════════════════════════════════════════════
+       SECTION 11: FOOTER
   ════════════════════════════════════════════ -->
     <footer class="footer-v2" role="contentinfo">
     <div class="sv-container">
@@ -1555,8 +2194,11 @@
 
       <!-- Bottom Bar -->
       <div class="footer-bottom">
-        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. All Rights Reserved. MST: 0110808047.</span>
-        <span>Design by <a href="https://readdy.ai" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; font-weight: 500;">Readdy.ai</a></span>
+        <span>© 2026 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. All Rights Reserved. MST: 0110808047.</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;">
+          <a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a>
+          <a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a>
+        </nav>
       </div>
 
     </div>
@@ -1587,28 +2229,74 @@
   <div class="sv-toast-container" id="toastContainer" aria-live="polite" aria-atomic="true"></div>
 
 
-  <!-- Schema.org JSON-LD -->
+  <!-- Schema.org JSON-LD — Organization + LocalBusiness + WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Organization",
-        "@id": "https://www.CoKhiSaoVang.com/#organization",
+        "@id": "https://www.cokhi-saovang.vn/#organization",
         "name": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG",
         "alternateName": "SAO VANG MECHANICAL MANUFACTURING JOINT STOCK COMPANY",
         "legalName": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG",
         "taxID": "0110808047",
-        "url": "https://www.CoKhiSaoVang.com",
+        "url": "https://www.cokhi-saovang.vn",
+        "logo": "https://www.cokhi-saovang.vn/assets/images/logo-sv-main.svg",
         "slogan": "Kiến Tạo Giá Trị Bền Vững",
         "telephone": "+84-869-590-279",
+        "email": "info@cokhi-saovang.vn",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "171 Đi Bộ Hà Nội",
           "addressLocality": "Hà Nội",
           "addressCountry": "VN"
         },
-        "openingHours": "Mo-Sa 07:30-17:30"
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "07:30",
+          "closes": "17:30"
+        },
+        "sameAs": [
+          "https://www.facebook.com/CoKhiSaoVang",
+          "https://www.youtube.com/@CoKhiSaoVang"
+        ]
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://www.cokhi-saovang.vn/#localbusiness",
+        "name": "Cơ Khí Sao Vàng",
+        "image": "https://www.cokhi-saovang.vn/assets/images/hero-bg.jpg",
+        "url": "https://www.cokhi-saovang.vn",
+        "telephone": "+84-869-590-279",
+        "email": "info@cokhi-saovang.vn",
+        "priceRange": "$$",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "171 Đi Bộ Hà Nội",
+          "addressLocality": "Hà Nội",
+          "addressCountry": "VN"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+          "opens": "07:30",
+          "closes": "17:30"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Vietnam"
+        },
+        "description": "Chuyên gia gia công cơ khí chính xác CNC, kết cấu thép, inox, cửa nhôm kính, mặt dựng, lan can kính cường lực tại Hà Nội."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.cokhi-saovang.vn/#website",
+        "url": "https://www.cokhi-saovang.vn",
+        "name": "SAO VÀNG — Cơ Khí Chính Xác & Nhôm Kính Cao Cấp",
+        "publisher": {"@id": "https://www.cokhi-saovang.vn/#organization"},
+        "inLanguage": "vi-VN"
       }
     ]
   }
@@ -1620,6 +2308,23 @@
   <script src="assets/js/modules/counter.js"></script>
   <script src="assets/js/modules/form.js"></script>
   <script src="assets/js/modules/cms-pages/home.js"></script>
+  <!-- Sprint 2: Shared components -->
+  <script src="assets/js/shared/floating-widget.js"></script>
+  <script src="assets/js/shared/faq-accordion.js"></script>
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
 </body>
 </html>
 

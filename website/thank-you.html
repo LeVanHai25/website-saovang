@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <!-- ═══ Google Tag Manager — Sprint 6 ═══
+       Thay GTM-XXXXXXX bằng Container ID thực của bạn
+       Lấy tại: tagmanager.google.com
+  ═══════════════════════════════════════ -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#9B1C1C" />
+  <title>Cảm Ơn Bạn Đã Liên Hệ | SAO VÀNG</title>
+  <meta name="description" content="Cảm ơn bạn đã gửi yêu cầu tư vấn đến Sao Vàng. Chúng tôi sẽ liên hệ lại trong vòng 15 phút." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f8f7f5;
+      color: #111827;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ── TOP BAR ── */
+    .ty-topbar {
+      background: #9B1C1C;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+    .ty-topbar a {
+      display: flex; align-items: center; gap: 10px; text-decoration: none;
+    }
+    .ty-topbar img { height: 36px; }
+    .ty-topbar-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+    }
+    .ty-hotline {
+      display: flex; align-items: center; gap: 6px;
+      color: #fff; text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 700;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 8px 16px; border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .ty-hotline:hover { background: rgba(255,255,255,0.25); }
+
+    /* ── MAIN HERO ── */
+    .ty-hero {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
+    /* Success icon */
+    .success-icon-wrap {
+      width: 100px; height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #9B1C1C 0%, #b22222 100%);
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 2rem;
+      box-shadow: 0 0 0 12px rgba(155,28,28,0.1), 0 0 0 24px rgba(155,28,28,0.05);
+      animation: popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+    .success-icon-wrap i { font-size: 44px; color: #fff; }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.5); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    /* Gold badge */
+    .gold-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: linear-gradient(135deg, #C9A227, #d4ae3a);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px; font-weight: 800;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 100px;
+      margin-bottom: 1.25rem;
+      animation: fadeIn 0.5s 0.3s ease both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .ty-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      font-weight: 900;
+      color: #111827;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      animation: fadeIn 0.5s 0.4s ease both;
+    }
+    .ty-title .accent { color: #9B1C1C; }
+
+    .ty-subtitle {
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      color: #6B7280;
+      line-height: 1.7;
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+      animation: fadeIn 0.5s 0.5s ease both;
+    }
+
+    /* Promise cards */
+    .promise-row {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      max-width: 680px;
+      margin: 0 auto 3rem;
+      animation: fadeIn 0.5s 0.6s ease both;
+    }
+    .promise-card {
+      flex: 1;
+      min-width: 170px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 1.25rem 1rem;
+      text-align: center;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .promise-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.09);
+    }
+    .promise-card-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 0.75rem;
+      font-size: 20px;
+    }
+    .icon-red  { background: rgba(155,28,28,0.1); color: #9B1C1C; }
+    .icon-gold { background: rgba(201,162,39,0.1); color: #C9A227; }
+    .icon-blue { background: rgba(59,130,246,0.1); color: #3B82F6; }
+    .promise-card-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      color: #374151; margin-bottom: 4px;
+    }
+    .promise-card-desc {
+      font-size: 12px; color: #9CA3AF; line-height: 1.5;
+    }
+
+    /* Action buttons */
+    .ty-btn-group {
+      display: flex; align-items: center; justify-content: center;
+      gap: 0.75rem; flex-wrap: wrap;
+      animation: fadeIn 0.5s 0.7s ease both;
+      margin-bottom: 3rem;
+    }
+    .ty-btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #9B1C1C; color: #fff; text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 13px 26px; border-radius: 8px;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(155,28,28,0.3);
+    }
+    .ty-btn-primary:hover {
+      background: #b22222;
+      box-shadow: 0 6px 24px rgba(155,28,28,0.45);
+      transform: translateY(-2px);
+    }
+    .ty-btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #fff; color: #374151; text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 12px 22px; border-radius: 8px;
+      border: 1.5px solid #e5e7eb;
+      transition: all 0.25s ease;
+    }
+    .ty-btn-outline:hover {
+      border-color: #9B1C1C; color: #9B1C1C;
+      transform: translateY(-2px);
+    }
+
+    /* ── FOOTER STRIP ── */
+    .ty-footer {
+      background: #111827;
+      text-align: center;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .ty-footer-copy {
+      font-size: 12px; color: rgba(255,255,255,0.4);
+    }
+    .ty-footer-links {
+      display: flex; align-items: center; gap: 1.25rem;
+    }
+    .ty-footer-links a {
+      font-size: 12px; color: rgba(255,255,255,0.4);
+      text-decoration: none; transition: color 0.2s;
+    }
+    .ty-footer-links a:hover { color: #C9A227; }
+
+    /* Countdown */
+    .ty-countdown {
+      font-size: 13px; color: #9CA3AF;
+      margin-bottom: 0.5rem;
+      animation: fadeIn 0.5s 0.8s ease both;
+    }
+    .ty-countdown span { color: #9B1C1C; font-weight: 700; }
+
+    @media (max-width: 480px) {
+      .ty-topbar { padding: 0.875rem 1.25rem; }
+      .ty-topbar-name { display: none; }
+      .promise-card { min-width: 140px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Top bar -->
+  <header class="ty-topbar">
+    <a href="index.html" aria-label="Về trang chủ Sao Vàng">
+      <img src="assets/images/logo-sv-main.svg" alt="Logo Sao Vàng" />
+      <span class="ty-topbar-name">Sao Vàng</span>
+    </a>
+    <a href="tel:0869590279" class="ty-hotline">
+      <i class="ri-phone-fill" aria-hidden="true"></i>
+      0869 590 279
+    </a>
+  </header>
+
+  <!-- Main content -->
+  <main class="ty-hero">
+
+    <div class="success-icon-wrap" role="img" aria-label="Gửi thành công">
+      <i class="ri-check-line" aria-hidden="true"></i>
+    </div>
+
+    <div class="gold-badge">
+      <i class="ri-shield-check-fill" aria-hidden="true"></i>
+      Đã nhận yêu cầu của bạn
+    </div>
+
+    <h1 class="ty-title">
+      Cảm ơn bạn đã <span class="accent">liên hệ!</span>
+    </h1>
+
+    <p class="ty-subtitle">
+      Chúng tôi đã nhận được yêu cầu tư vấn của bạn.
+      Đội ngũ chuyên gia của <strong>Cơ Khí & Nhôm Kính Sao Vàng</strong>
+      sẽ liên hệ lại với bạn sớm nhất có thể.
+    </p>
+
+    <!-- Promise cards -->
+    <div class="promise-row">
+      <div class="promise-card">
+        <div class="promise-card-icon icon-red">
+          <i class="ri-time-line" aria-hidden="true"></i>
+        </div>
+        <div class="promise-card-title">Phản hồi nhanh</div>
+        <div class="promise-card-desc">Chúng tôi liên hệ trong vòng 15–30 phút trong giờ hành chính</div>
+      </div>
+      <div class="promise-card">
+        <div class="promise-card-icon icon-gold">
+          <i class="ri-money-dollar-circle-line" aria-hidden="true"></i>
+        </div>
+        <div class="promise-card-title">Tư vấn miễn phí</div>
+        <div class="promise-card-desc">Khảo sát, tư vấn giải pháp và báo giá hoàn toàn không thu phí</div>
+      </div>
+      <div class="promise-card">
+        <div class="promise-card-icon icon-blue">
+          <i class="ri-shield-check-line" aria-hidden="true"></i>
+        </div>
+        <div class="promise-card-title">Cam kết bảo mật</div>
+        <div class="promise-card-desc">Thông tin của bạn được bảo mật tuyệt đối, không chia sẻ bên thứ ba</div>
+      </div>
+    </div>
+
+    <!-- Countdown message -->
+    <p class="ty-countdown" id="countdownMsg">
+      Bạn sẽ được chuyển về trang chủ sau <span id="countdownNum">15</span> giây
+    </p>
+
+    <!-- Buttons -->
+    <div class="ty-btn-group">
+      <a href="index.html" class="ty-btn-primary">
+        <i class="ri-home-4-line" aria-hidden="true"></i>
+        Về Trang Chủ
+      </a>
+      <a href="du-an.html" class="ty-btn-outline">
+        <i class="ri-image-2-line" aria-hidden="true"></i>
+        Xem Dự Án
+      </a>
+      <a href="bao-gia.html" class="ty-btn-outline">
+        <i class="ri-price-tag-3-line" aria-hidden="true"></i>
+        Báo Giá
+      </a>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="ty-footer">
+    <span class="ty-footer-copy">© 2026 Cơ Khí Sao Vàng. MST: 0110808047.</span>
+    <nav class="ty-footer-links">
+      <a href="chinh-sach-bao-mat.html">Chính sách bảo mật</a>
+      <a href="lien-he.html">Liên hệ</a>
+    </nav>
+  </footer>
+
+  <script>
+    // Auto redirect countdown
+    let count = 15;
+    const el = document.getElementById('countdownNum');
+    const timer = setInterval(() => {
+      count--;
+      if (el) el.textContent = count;
+      if (count <= 0) {
+        clearInterval(timer);
+        window.location.href = 'index.html';
+      }
+    }, 1000);
+  </script>
+
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>

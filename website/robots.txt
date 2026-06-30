@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Chặn các thư mục không cần index
+Disallow: /admin/
+Disallow: /cms/
+Disallow: /assets/js/modules/cms-pages/
+Disallow: /data/
+
+# Sitemap
+Sitemap: https://www.cokhi-saovang.vn/sitemap.xml
