@@ -1,0 +1,16 @@
+HƯỚNG DẪN ĐỌC VÀ KHẢO SÁT THANH PROFILE NHÔM
+=================================================
+1. PHÂN TÍCH MẶT CẮT KỸ THUẬT:
+   - Bề rộng khung bao (Frame Depth): Xác định độ rộng tường cần thi công (Ví dụ: Hệ 55 rộng 55mm, Hệ 65 rộng 65mm).
+   - Chiều dày vách nhôm (Wall Thickness): 
+     * Hệ cửa sổ quay: 1.4mm - 1.6mm.
+     * Hệ cửa đi quay: 1.8mm - 2.0mm.
+     * Hệ chịu tải trọng gió bão / sảnh lớn: 2.2mm - 3.0mm.
+   - Rãnh lắp phụ kiện (Hardware Groove): 
+     * Rãnh C Châu Âu (C-slot 15/20mm): Tương thích CMECH, Roto, Siegenia.
+     * Rãnh 22mm: Dùng cho phụ kiện phổ thông Kinlong.
+
+2. CÁC KHOANG KỸ THUẬT:
+   - Khoang chứa dải Polyamide cách nhiệt (Thermal Break): Ngăn truyền nhiệt.
+   - Khoang thoát nước mưa: Có đột lỗ thoát nước một chiều kèm nắp che.
+   - Khoang chứa ke góc (Corner Joint): Chứa ke ép góc nhôm đúc đúc sẵn + bơm keo epoxy định hình.

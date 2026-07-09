@@ -1,0 +1,426 @@
+Source: https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-yangli-64.html
+
+=== PARAGRAPHS ===
+1: Catalogue Nhôm Yangli là một tài liệu toàn diện, cung cấp thông tin về các sản phẩm nhôm chất lượng cao từ nhà sản xuất uy tín tại Việt Nam. Với các dòng nhôm đa dạng, Catalogue Nhôm Yangli đáp ứng mọi nhu cầu về xây dựng và nội thất. Dưới đây là các dòng sản phẩm nổi bật trong Catalogue Nhôm Yangli, mang lại giải pháp tối ưu cho công trình hiện đại.
+
+2: Nhôm cửa Yangli được thiết kế theo tiêu chuẩn quốc tế, đảm bảo độ bền, an toàn và tính thẩm mỹ cao. Các sản phẩm nhôm cửa trong Catalogue Nhôm Yangli bao gồm các loại cửa đi, cửa sổ và cửa trượt, với khả năng cách âm, cách nhiệt tốt, thích hợp cho các công trình dân dụng và công nghiệp.
+
+3: Hệ mặt dựng nhôm kính trong Catalogue Nhôm Yangli là lựa chọn hàng đầu cho các công trình cao tầng. Với khả năng chịu lực tốt và độ bền cao, hệ mặt dựng này đáp ứng nhu cầu về an toàn và thẩm mỹ của các tòa nhà hiện đại.
+
+4: Hệ nhôm slim trong Catalogue Nhôm Yangli được thiết kế với khung nhôm siêu mỏng, giúp tiết kiệm diện tích và tối ưu hóa không gian. Hệ nhôm slim phù hợp cho các công trình yêu cầu tính thẩm mỹ cao, mang lại vẻ đẹp tinh tế, sang trọng.
+
+5: Nhôm hệ 60 và nhôm hệ 65 là hai dòng sản phẩm phổ biến trong các công trình xây dựng hiện đại được giới thiệu trong Catalogue Nhôm Yangli. Với thiết kế chắc chắn và độ bền cao, hai hệ nhôm này phù hợp cho cả công trình dân dụng và thương mại.
+
+6: Cửa lùa và cửa trượt trong Catalogue Nhôm Yangli là giải pháp lý tưởng cho các không gian yêu cầu sự linh hoạt, tiết kiệm diện tích. Các sản phẩm này có thiết kế tiện lợi, dễ dàng sử dụng và lắp đặt.
+
+7: Nhôm nội thất Yangli bao gồm các hệ nhôm thiết kế cho cửa lùa, cửa trượt, phù hợp với các không gian nội thất. Với sự kết hợp của tính năng chịu lực tốt và thẩm mỹ cao, nhôm nội thất trong Catalogue Nhôm Yangli là lựa chọn hoàn hảo cho ngôi nhà hiện đại.
+
+8: Phụ kiện nhập khẩu trong Catalogue Nhôm Yangli đảm bảo đồng bộ với các hệ nhôm, giúp tăng cường độ bền và tính thẩm mỹ cho sản phẩm. Các phụ kiện như bản lề, khóa, tay nắm được sản xuất từ chất liệu cao cấp, giúp quá trình sử dụng dễ dàng và an toàn.
+
+9: Catalogue Nhôm Yangli cung cấp chế độ bảo hành lên đến 15 năm cho bề mặt sơn của các sản phẩm. Điều này giúp khách hàng yên tâm về chất lượng và độ bền của sản phẩm trong suốt thời gian sử dụng.
+
+
+=== LIST ITEMS ===
+1: var base_url = 'https://nhomkinhdaiphuc.com';
+
+
+
+
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10979479051');
+
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-191434917-1');
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TJBQDZV');
+
+{
+"@context": "https://schema.org",
+"@type": "Organization",
+"url": "https://nhomkinhdaiphuc.com",
+"name": "Nhôm Kính Đại Phúc",
+"logo": "https://nhomkinhdaiphuc.com/thumb/900x675/1/assets/images/nhomkinhdaiphuc/nhom-kinh-dai-phuc.webp",
+"contactPoint" : [{
+"@type" : "ContactPoint",
+"telephone" : "+84899966699",
+"contactType" : "customer service",
+"areaServed": "VI"
+}],
+"sameAs" : [
+"https://www.facebook.com/nhomkinhdaiphuc",
+"https://www.youtube.com/@nhomkinhdaiphuc",
+"https://x.com/nhomkinhdaiphuc"
+]
+}
+
+
+{
+"@context":"http://schema.org",
+"@type":"BreadcrumbList",
+"itemListElement":[
+{
+"@type":"ListItem",
+"position":1,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com",
+"name":"Trang chủ"
+}
+},
+{ "@type":"ListItem",
+"position":2,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/cong-cu.html",
+"name":"Công cụ"
+}
+},
+{ "@type":"ListItem",
+"position":3,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/catalogue.html",
+"name":"Catalogue"
+}
+},
+{ "@type":"ListItem",
+"position":3,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-yangli-64.html",
+"name":"Catalogue Nhôm Yangli"
+}
+}
+]
+}
+
+
+{
+"@context":"http://schema.org",
+"@type":"NewsArticle",
+"mainEntityOfPage":{
+"@type":"WebPage",
+"@id":"https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-yangli-64.html" 
+},
+"headline":"Catalogue Nhôm Yangli",
+"description":"Catalogue Nhôm Yangli mang đến giải pháp nhôm chất lượng, đa dạng từ hệ nhôm cửa, slim, mặt dựng, và phụ kiện, đảm bảo bền đẹp cho mọi công trình hiện đại",
+"image":{
+"@type":"ImageObject",
+"url":"https://nhomkinhdaiphuc.com/upload/catalogue/catalogue-nhom-yangli_784792.webp",
+"width":900,
+"height":675 },
+"datePublished":"2024-11-09T18:33:09+07:00", 
+"dateModified":"2024-11-09T18:33:09+07:00", 
+"author":{ 
+"@type":"Person",
+"name":"Nhôm kính Đại Phúc",
+"url":"https://nhomkinhdaiphuc.com"
+},
+"publisher":{ 
+"@type": "Organization", 
+"name":"Nhôm kính Đại Phúc",
+"logo":{ 
+"@type":"ImageObject",
+"url":"https://nhomkinhdaiphuc.com/assets/images/nhomkinhdaiphuc.webp" 
+} 
+}
+}
+
+
+  {
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "priceRange":"650.000 VND - 2.300.000 VND",
+  "image":"https://nhomkinhdaiphuc.com/assets/images/nhomkinhdaiphuc.webp",
+  "name" : "Chuyên thi công nhôm kính cường lực, cửa nhôm kính trên toàn quốc...",
+  "telephone": "+84899966699",
+  "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "1/5 Đường số 5, Phường 17, Q. Gò Vấp, TP. Hồ Chí Minh",
+  "addressLocality": "Hồ Chí Minh"
+  }
+  }
+
+
+
+
+
+    
+        
+<a class="logo_header" href="https://nhomkinhdaiphuc.com"
+title="Công Ty TNHH Nhôm Kính Đại Phúc">
+
+
+
+Công Ty TNHH Nhôm Kính Đại Phúc
+Chuyên thi công, lắp đặt kính cường lực, cửa nhôm Xingfa. Giá cạnh tranh, thi công nhanh, chất lượng
+09.19.02.00.88 - 09.22.24.66.99
+daiphucnhomkinh@gmail.com
+1/5 Đường số 5, Phường Gò Vấp, TP. Hồ Chí Minh
+
+
+
+
+    var configUrl = "https://nhomkinhdaiphuc.com";
+    var activeClass = "";
+    let login = "login";
+    
+    let avatar = "assets/images/user.svg";
+    if(login == 'member'){
+        let quyen = 0;
+        var pcLoginLi = '\
+                        \
+                            \
+                            Trang thành viên\
+
+2: Trang quản trị
+
+3: \
+                    \
+                    ';
+                    if(quyen === 1){
+                        mLoginLi += 'Trang quản trị';
+                    }
+                    else{
+                        mLoginLi += 'Trang thành viên';
+                    }
+            mLoginLi += '\
+                    Đăng xuất\
+                    \
+
+4: \
+                        \
+                            \
+                            Đăng nhập\
+
+5: \
+                            Đăng ký\
+
+6: \
+                    \
+                    \
+                    \
+                    Đăng nhập\
+                    \
+                    \
+                    Đăng ký\
+                    \
+
+7: Sản phẩm
+                
+                        Cửa Nhôm Xingfa
+
+8: Cửa Trượt Quay
+
+9: Cửa Nhôm Hệ Slim
+
+10: Cửa Nhôm Slim Cover
+
+11: Cửa Kính Cường Lực
+
+12: Cửa Nhôm Thủy Lực
+
+13: Cửa Nhôm Maxpro.JP
+
+14: Phòng Tắm Kính
+
+15: Cầu Thang - Lan Can Kính
+
+16: Cửa Tự Động
+
+17: Vách Kính Cường Lực
+
+18: Cửa Lưới Chống Muỗi
+
+19: Cửa Nhôm Kogen
+
+20: Kính Xây Dựng
+
+21: Cửa Nhôm PMA
+
+22: Cửa Nhôm Xingfa Class A
+
+23: Cửa Nhôm Tấm Tổ Ong
+
+24: Cửa Nhôm Yongxing
+
+25: Tủ Cánh Kính
+
+26: Cửa Nhôm Owin
+
+27: Cửa Nhôm Topal
+
+28: Cửa Nhôm Kenwin
+
+29: Bảng kính văn phòng
+
+30: Phụ kiện
+                
+                        Phụ Kện Cửa Slim
+
+31: Phụ Kiện Cửa Trượt Quay
+
+32: Phụ Kiện Papo
+
+33: Phụ Kiện Opk
+
+34: Phụ Kiện Draho
+
+35: Phụ Kiện Bogo
+
+36: Phụ Kiện Cmech
+
+37: Phụ Kiện Huy Hoàng
+
+38: Phụ Kiện KinLong
+
+39: Phụ Kiện Janus
+
+40: Khóa Điện Tử
+
+41: Phụ Kiện Candy
+
+42: Phụ Kiện Sigico
+
+43: Phụ Kiện Cửa Kính
+
+44: Phụ Kiện Hafele
+
+45: Phụ Kiện YKEBR
+
+46: Phụ Kiện 3H
+
+47: Báo giá
+                
+                        Báo Giá Cửa Nhôm
+
+48: Báo Giá Cửa Kính Cường Lực
+
+49: Báo Giá Vách Kính Cường Lực
+
+50: Báo Giá Lan Can - Cầu Thang Kính
+
+51: Công cụ
+        
+            Tài liệu catalogue
+
+52: Thước lỗ ban
+
+53: Đọc số thành chữ
+
+54: Lịch vạn niên
+
+55: Xem tuổi xây nhà
+
+56: Công cụ tính thuế
+
+57: Profile nhôm
+
+58: Tối ưu cắt vật liệu
+
+59: Tin tức
+                
+                        Tin tức thị trường
+
+60: Kiến thức về kính
+
+61: Kiến thức về nhôm
+
+62: Kiến thức về phụ kiện
+
+63: Kiến thức phong thủy
+
+64: Thương hiệu nhôm
+
+65: Video
+                
+                        Video cửa nhôm Slim
+
+66: Video cửa nhôm trượt quay
+
+67: Video cửa kính cường lực
+
+68: Video cửa trượt quay slim
+
+69: Video Cửa Nhôm Xingfa
+
+70: Video Cửa Nhôm Thủy Lực
+
+71: Video hướng dẫn lắp đặt cửa nhôm slim
+
+72: Catalogue Nhôm Yangli
+
+73: Giới Thiệu Về Catalogue Nhôm Yangli
+
+Catalogue Nhôm Yangli là một tài liệu toàn diện, cung cấp thông tin về các sản phẩm nhôm chất lượng cao từ nhà sản xuất uy tín tại Việt Nam. Với các dòng nhôm đa dạng, Catalogue Nhôm Yangli đáp ứng mọi nhu cầu về xây dựng và nội thất. Dưới đây là các dòng sản phẩm nổi bật trong Catalogue Nhôm Yangli, mang lại giải pháp tối ưu cho công trình hiện đại.
+
+1. Nhôm Cửa Yangli – Sự Kết Hợp Giữa Thẩm Mỹ Và Độ Bền
+
+Tính Năng Nổi Bật Của Nhôm Cửa Yangli
+
+Nhôm cửa Yangli được thiết kế theo tiêu chuẩn quốc tế, đảm bảo độ bền, an toàn và tính thẩm mỹ cao. Các sản phẩm nhôm cửa trong Catalogue Nhôm Yangli bao gồm các loại cửa đi, cửa sổ và cửa trượt, với khả năng cách âm, cách nhiệt tốt, thích hợp cho các công trình dân dụng và công nghiệp.
+
+Ưu Điểm:
+
+
+	Độ bền cao, chịu lực tốt.
+
+74: Thiết kế hiện đại, phù hợp với xu hướng kiến trúc mới.
+
+75: Cách âm, cách nhiệt tối ưu, tiết kiệm năng lượng.
+
+76: Khả năng chống chịu thời tiết, thích hợp cho mọi điều kiện khí hậu.
+
+77: Đảm bảo an toàn với khả năng chịu lực cao.
+
+78: Tạo điểm nhấn kiến trúc cho tòa nhà, nâng cao giá trị công trình.
+
+79: Thiết kế mỏng, tinh tế, hiện đại.
+
+80: Phù hợp với không gian nhỏ hẹp, tạo cảm giác thoáng đãng.
+
+81: Đảm bảo độ bền và tính năng chịu lực.
+
+82: Khả năng chịu lực cao, phù hợp với các tòa nhà lớn.
+
+83: Dễ dàng lắp đặt, giảm chi phí thi công.
+
+84: Chống ăn mòn, đảm bảo độ bền lâu dài.
+
+85: Tiết kiệm không gian, phù hợp với các căn hộ nhỏ.
+
+86: Thiết kế sang trọng, dễ vận hành.
+
+87: Bề mặt sơn tĩnh điện, chống gỉ sét, bảo vệ lâu dài.
+
+88: Đa dạng về kiểu dáng và màu sắc, phù hợp với nhiều phong cách nội thất.
+
+89: Chống trầy xước, chịu lực tốt.
+
+90: Dễ dàng lắp đặt và bảo trì.
+
+91: Đảm bảo độ bền cao, chống ăn mòn.
+
+92: Đồng bộ với các hệ nhôm, dễ dàng lắp đặt.
+
+93: Thiết kế tinh tế, tăng tính thẩm mỹ cho sản phẩm.
+
+94: Trụ sở: 1/5 Đường Số 5, Phường 17, Quận Gò Vấp
+

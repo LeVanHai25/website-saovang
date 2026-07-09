@@ -1,0 +1,6 @@
+QUY CHUẨN TRA CỨU HỆ PROFILE NHÔM ĐỊNH HÌNH
+================================================
+1. Tất cả profile đùn ép phải thể hiện chuẩn độ dày thực tế (1.4mm - 2.0mm).
+2. Rãnh chèn gioăng EPDM phải đúng kích thước hình học 5.5mm - 6.2mm.
+3. Rãnh rơ-le phụ kiện rãnh C phải tuân thủ chuẩn Euro-Groove 15/20mm.
+4. Xem mặt cắt mẫu đính kèm: Profile_Khung_Bao_He_65.dxf và Profile_Canh_He_65.dxf.

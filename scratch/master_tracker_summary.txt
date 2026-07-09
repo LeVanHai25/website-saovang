@@ -1,0 +1,55 @@
+==================== Master_Tracker_HeCuaNhom.xlsx ====================
+
+--- Sheet: Master Tracker ---
+BẢNG TIẾN ĐỘ THU THẬP & PHÂN TÍCH THƯ VIỆN HỆ CỬA NHÔM (MASTER TRACKER) |  |  |  |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  | 
+ |  |  |  |  |  |  |  |  |  |  |  | 
+STT | Nhóm hệ | Tên hệ | Hãng tiêu biểu | Mã hệ | Loại sản phẩm | Catalog | CAD | Mặt cắt | Phụ kiện | Shopdrawing | Trạng thái | 
+1 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Hệ 45 | Xingfa, PMA, Viralwindow, Topal | XF55, PMA55, Viralwindow VRA55 | Cửa đi mở quay thường | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+2 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Hệ 50 | Schüco, Reynaers, Technal | ADS50, CS59, Soleal | Cửa đi mở quay cách nhiệt vừa | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+3 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Hệ 55 | Xingfa, PMA, Viralwindow, Topal | XF55, Platinum, Viralwindow VRA55 | Cửa đi mở quay tiêu chuẩn | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+4 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Hệ 60 | Schüco, Reynaers, Cortizo | ADS60, CS68, Millennium 60 | Cửa đi mở quay bản cánh vừa | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+5 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Hệ 65 | Schüco, Reynaers, Technal | ADS65, CS77, Soleal GY | Cửa đi mở quay cao cấp | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+6 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Hệ 70 | Schüco, Reynaers, Cortizo | ADS70, ML8, Millennium 70 | Cửa đi mở quay bản cánh lớn | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+7 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Hệ 75 | Schüco, Reynaers, Cortizo | ADS75, ML8, Millennium 75 | Cửa đi mở quay Luxury | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+8 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Hệ 80 | Schüco, Reynaers, Cortizo | ADS80, ML8, Millennium 80 | Cửa đi mở quay bản siêu dày | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+9 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Hệ 90 | Schüco, Reynaers, Wicona | ADS90, ML10, Wicstyle 90 | Cửa đi mở quay siêu khủng | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+10 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Cầu cách nhiệt | Schüco, Reynaers, Cortizo, Viralwindow | ADS 75.SI, ML8-HI, VRE65-TB | Cửa đi mở quay cách âm cách nhiệt | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+11 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Siêu kín khít | Schüco, Reynaers, Technal | ADS 90.SI, ML10-Passive | Cửa đi kín khí Passive House | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+12 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Chống cháy | Aluprof, Wicona, Cortizo | MB-78EI, Wicstyle 77FP | Cửa đi chống cháy chuyên dụng | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+13 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Chống đạn | Schüco, Cortizo, Reynaers | ADS 90.BR, Bullet-Proof | Cửa đi chống đạn an ninh cao | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+14 | I. HỆ CỬA ĐI | Cửa mở quay Casement - Chống bão | Schüco, Cortizo, Technal | ADS 90.HD, High-Performance | Cửa đi chịu áp lực gió bão biển | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+15 | I. HỆ CỬA ĐI | Cửa mở 2 chiều - Swing Door | Schüco, Reynaers, Technal | ADS 65 Swing, CS Swing | Cửa đi mở 2 chiều bản lề sàn | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+16 | I. HỆ CỬA ĐI | Cửa mở 2 chiều - Double Swing | Schüco, Reynaers, Technal | ADS 65 HD Double, CS Swing | Cửa đi 2 cánh mở 2 chiều | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+17 | I. HỆ CỬA ĐI | Cửa mở 2 chiều - Spring Door | Xingfa, PMA, Viralwindow | XF55 Spring, PMA Luxury | Cửa bản lề lò xo tự đóng | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+18 | I. HỆ CỬA ĐI | Cửa Pivot - Pivot thường | Schüco, Reynaers, Technal | ADS 75 Pivot, CS Pivot | Cửa xoay trục lệch tâm thường | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+19 | I. HỆ CỬA ĐI | Cửa Pivot - Pivot âm sàn | Cortizo, Reynaers, Viralwindow | Pivot XXL, ML Pivot, VR Pivot | Cửa xoay trục lực tải âm sàn | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+20 | I. HỆ CỬA ĐI | Cửa Pivot - Pivot siêu lớn | Cortizo, Reynaers, Schüco | Pivot XXL, Hi-Finity Pivot | Cửa xoay đại sảnh biệt thự | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+21 | I. HỆ CỬA ĐI | Cửa Pivot - Pivot biệt thự | Cortizo, Reynaers, Schüco | Pivot XXL, MasterLine Pivot | Cửa chính biệt thự sang trọng | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+22 | I. HỆ CỬA ĐI | Cửa trượt Sliding - 2 cánh lùa | Xingfa, PMA, Viralwindow, Topal | XF93, PMA93, Viralwindow VRA94 / VRE120, Topal XF | Cửa lùa 2 cánh trượt 2 ray | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+23 | I. HỆ CỬA ĐI | Cửa trượt Sliding - 3 cánh lùa | Xingfa, PMA, Viralwindow, Topal | XF93 3-Ray, PMA93 3-Ray | Cửa lùa 3 cánh trượt 3 ray | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+24 | I. HỆ CỬA ĐI | Cửa trượt Sliding - 4 cánh lùa | Xingfa, PMA, Viralwindow, Topal | XF93 4-Cánh, PMA93 4-Cánh | Cửa lùa 4 cánh trượt 2 ray | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+25 | I. HỆ CỬA ĐI | Cửa trượt Sliding - 6 cánh lùa | Xingfa, PMA, Viralwindow | XF93 6-Cánh, PMA93 6-Cánh | Cửa lùa 6 cánh trượt 3 ray | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+26 | I. HỆ CỬA ĐI | Cửa trượt Sliding - Pocket Door | Reynaers, Schüco, Cortizo | CP130 Pocket, ASS50 Pocket | Cửa trượt lùa âm tường hốc xây | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+27 | I. HỆ CỬA ĐI | Cửa trượt Sliding - Corner Sliding | Reynaers, Cortizo, Schüco | CP130-LS Corner, Cor Vision Corner | Cửa trượt góc 90 độ không cột | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+28 | I. HỆ CỬA ĐI | Cửa trượt Sliding - Slim Sliding | Alugood, QueenViet, Viralwindow, PMA | Slim Alugood, PMA Slim | Cửa lùa nhôm mảnh tối giản | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+29 | I. HỆ CỬA ĐI | Cửa trượt Sliding - Heavy Duty Sliding | Schüco, Reynaers, Cortizo | ASE80 HD, CP155 Heavy Duty | Cửa trượt chịu tải trọng nặng | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+30 | I. HỆ CỬA ĐI | Cửa trượt Sliding - Panorama Sliding | Schüco, Reynaers, Cortizo | ASS77 PD, Hi-Finity, Cor Vision Plus | Cửa trượt lùa vô cực đố 20mm | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+31 | I. HỆ CỬA ĐI | Lift & Slide - 2 ray trượt nâng | Schüco, Reynaers, Cortizo | ASE80 Lift, CP155 Lift | Cửa trượt nâng hạ 2 ray | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+32 | I. HỆ CỬA ĐI | Lift & Slide - 3 ray trượt nâng | Schüco, Reynaers, Cortizo | ASE80 3-Ray, CP155 3-Ray | Cửa trượt nâng hạ 3 ray | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+33 | I. HỆ CỬA ĐI | Lift & Slide - 4 ray trượt nâng | Reynaers, Cortizo, Wicona | CP155 4-Ray, 4600 Slider | Cửa trượt nâng hạ 4 ray | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+34 | I. HỆ CỬA ĐI | Lift & Slide - Góc trượt nâng | Schüco, Reynaers, Cortizo | ASE80 Corner, CP155 Corner | Cửa trượt nâng hạ vuông góc | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+35 | I. HỆ CỬA ĐI | Cửa xếp trượt - Folding Door | Schüco, Reynaers, Cortizo, Xingfa | ASS70 FD, CF77, XF63 | Cửa xếp gấp trượt xếp lùa | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+36 | I. HỆ CỬA ĐI | Cửa xếp trượt - Bi-fold | Cortizo, Wicona, Aluprof | Bi-Fold, Wicslide Folding | Cửa xếp trượt gấp kiểu Bi-fold | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+37 | I. HỆ CỬA ĐI | Cửa xếp trượt - Multi-fold | Schüco, Reynaers, Cortizo | ASS70 FD, CF77, Bi-Fold | Cửa xếp trượt nhiều cánh xếp ghép | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+38 | I. HỆ CỬA ĐI | Cửa xếp trượt - Accordion | Xingfa, PMA, Viralwindow | XF63 Accordion, PMA Folding | Cửa xếp gấp trượt kiểu xếp lớp | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+39 | I. HỆ CỬA ĐI | Cửa thủy lực - Khung nhôm | Owin, Xingfa, PMA | Owin thủy lực, XF Thủy lực | Cửa đi bản cánh lớn 180mm | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+40 | I. HỆ CỬA ĐI | Cửa thủy lực - Khung Slim | PMA, Viralwindow, QueenViet | PMA Slim thủy lực, Viralwindow VR Slim | Cửa đi bản cánh slim thủy lực | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+41 | I. HỆ CỬA ĐI | Cửa thủy lực - Khung lớn | Owin, Xingfa, PMA | Owin bản lớn mạ titan gold | Cửa thủy lực đại sảnh biệt thự | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+42 | I. HỆ CỬA ĐI | Cửa tự động - Trượt tự động | Schüco, Nabco, Hafele | ADS75 Auto, Nabco Sliding | Cửa lùa trượt mở bằng motor | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+43 | I. HỆ CỬA ĐI | Cửa tự động - Mở quay tự động | Schüco, Hafele, Nabco | ADS75 Auto Swing | Cửa mở quay tích hợp motor khuỷu | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+44 | I. HỆ CỬA ĐI | Cửa tự động - Cửa bệnh viện | Nabco, Hafele, Kaba | Hospital Door, Hermetic Door | Cửa tự động kín khít phòng mổ | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+45 | I. HỆ CỬA ĐI | Cửa tự động - Cửa siêu thị | Nabco, Hafele, Dorma | Supermarket Auto Door | Cửa tự động trượt lùa cảm biến | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+46 | II. HỆ CỬA SỔ | Cửa sổ mở quay - 1 cánh | Xingfa, PMA, Viralwindow, Topal | XF55, PMA55, Viralwindow VRA55 | Cửa sổ mở quay 1 cánh định vị A | Đã có | Đã có | Đã có | Đã có | Đã có | Kế hoạch | Đang thu thập
+=============================================
+

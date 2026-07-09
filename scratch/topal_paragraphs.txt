@@ -1,0 +1,447 @@
+Source: https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-topal-46.html
+
+=== PARAGRAPHS ===
+1: Nhôm Topal là một thương hiệu nhôm nổi bật thuộc tập đoàn Austdoor, cung cấp các sản phẩm nhôm định hình đồng bộ chất lượng cao. Catalogue Nhôm Topal mang đến các dòng sản phẩm nhôm tiên tiến như Topal Slima và Topal Prima, đáp ứng mọi nhu cầu xây dựng từ công trình nhà ở cho đến các dự án thương mại lớn.
+
+2: Nhôm Topal ra đời với sứ mệnh cung cấp các giải pháp nhôm chất lượng vượt trội, phù hợp cho nhiều loại công trình xây dựng. Nhờ quy trình sản xuất tiên tiến và sự kiểm soát chất lượng nghiêm ngặt, nhôm Topal đã đạt được nhiều chứng nhận trong ngành công nghiệp nhôm.
+
+3: Nhôm Topal sở hữu hệ thống 6 nhà máy trải dài từ Bắc đến Nam với quy mô lớn và công nghệ hiện đại:
+
+4: Quy trình sản xuất nhôm thanh định hình tại Topal tuân thủ các bước sau:
+
+5: Nhôm Topal thiết lập hệ thống phân phối ủy quyền trên toàn quốc với các đại lý được chọn lọc kỹ lưỡng, đảm bảo chất lượng và giá trị sản phẩm đến tay người tiêu dùng. Các đại lý cũng được chuyển giao công nghệ sản xuất và kiến thức sản phẩm đồng bộ.
+
+6: Catalogue Nhôm Topal cung cấp nhiều dòng sản phẩm như:
+
+7: Sản phẩm nhôm xây dựng Topal đáp ứng tiêu chuẩn cao về chất lượng, độ bền và tính thẩm mỹ, phù hợp cho các dự án dân dụng và thương mại.
+
+8: Với thiết kế hiện đại và đa dạng về màu sắc, nhôm trang trí Topal được sử dụng trong nhiều công trình cao cấp như biệt thự, khách sạn và resort.
+
+9: Nhôm Topal còn cung cấp các sản phẩm nhôm công nghiệp với khả năng chống mài mòn, độ cứng cao, phù hợp cho các ứng dụng trong sản xuất và gia công.
+
+10: Nhôm Topal có nhiều đặc điểm nổi bật, mang lại giá trị sử dụng cao:
+
+11: Nhôm Topal được thiết kế đồng bộ từ nguyên vật liệu, phụ kiện cho đến công nghệ sản xuất. Điều này giúp sản phẩm có tính ổn định và độ bền cao.
+
+12: Sử dụng gioăng EPDM kết hợp với khóa đa điểm, các dòng cửa nhôm Topal đạt độ kín nước tối đa, theo tiêu chuẩn châu Âu EN1027.
+
+13: Cửa nhôm Topal có khả năng giảm thiểu âm thanh hiệu quả, đạt chuẩn châu Âu EN140, giúp ngăn chặn tiếng ồn từ bên ngoài.
+
+14: Cửa nhôm Topal có thiết kế bản lớn, sang trọng, phù hợp với các công trình cao cấp như khách sạn, biệt thự và resort.
+
+15: Với thiết kế hiện đại, đạt tiêu chuẩn châu Âu, cửa nhôm Topal được sử dụng phổ biến trong các dự án chung cư và nhà phố.
+
+16: Cửa nhôm Topal được thiết kế sang trọng, bền bỉ, đáp ứng nhu cầu cho các công trình có yêu cầu cao về tính thẩm mỹ và độ an toàn.
+
+17: Nhôm Topal cung cấp nhiều tùy chọn màu sắc để đáp ứng nhu cầu của mọi công trình:
+
+18: Nhôm Topal với hệ thống sản xuất hiện đại và chất lượng cao, cùng hệ thống phân phối toàn quốc, đang khẳng định vị thế trên thị trường nhôm Việt Nam. Với những ưu điểm vượt trội về thẩm mỹ, độ bền và khả năng chống chịu thời tiết, Nhôm Topal là sự lựa chọn lý tưởng cho mọi công trình xây dựng.
+
+19: Nhôm Topal có phù hợp cho công trình ven biển không?
+
+20: Nhôm Topal có những loại phụ kiện nào đi kèm?
+
+21: Cửa nhôm Topal có chống ồn tốt không?
+
+22: Nhôm Topal có những tùy chọn màu sắc nào?
+
+23: Nhôm Topal có thể sử dụng cho công trình cao cấp không?
+
+
+=== LIST ITEMS ===
+1: var base_url = 'https://nhomkinhdaiphuc.com';
+
+
+
+
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10979479051');
+
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-191434917-1');
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TJBQDZV');
+
+{
+"@context": "https://schema.org",
+"@type": "Organization",
+"url": "https://nhomkinhdaiphuc.com",
+"name": "Nhôm Kính Đại Phúc",
+"logo": "https://nhomkinhdaiphuc.com/thumb/900x675/1/assets/images/nhomkinhdaiphuc/nhom-kinh-dai-phuc.webp",
+"contactPoint" : [{
+"@type" : "ContactPoint",
+"telephone" : "+84899966699",
+"contactType" : "customer service",
+"areaServed": "VI"
+}],
+"sameAs" : [
+"https://www.facebook.com/nhomkinhdaiphuc",
+"https://www.youtube.com/@nhomkinhdaiphuc",
+"https://x.com/nhomkinhdaiphuc"
+]
+}
+
+
+{
+"@context":"http://schema.org",
+"@type":"BreadcrumbList",
+"itemListElement":[
+{
+"@type":"ListItem",
+"position":1,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com",
+"name":"Trang chủ"
+}
+},
+{ "@type":"ListItem",
+"position":2,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/cong-cu.html",
+"name":"Công cụ"
+}
+},
+{ "@type":"ListItem",
+"position":3,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/catalogue.html",
+"name":"Catalogue"
+}
+},
+{ "@type":"ListItem",
+"position":3,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-topal-46.html",
+"name":"Catalogue nhôm Topal"
+}
+}
+]
+}
+
+
+{
+"@context":"http://schema.org",
+"@type":"NewsArticle",
+"mainEntityOfPage":{
+"@type":"WebPage",
+"@id":"https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-topal-46.html" 
+},
+"headline":"Catalogue nhôm Topal",
+"description":"Catalogue Nhôm Topal - sản phẩm nhôm chất lượng cao, đồng bộ, với các hệ nhôm và phụ kiện hiện đại. Catalogue Nhôm Topal giới thiệu profile nhôm Topal",
+"image":{
+"@type":"ImageObject",
+"url":"https://nhomkinhdaiphuc.com/upload/catalogue/catalogue-nhom-topal_551789.webp",
+"width":900,
+"height":675 },
+"datePublished":"2024-05-30T00:34:48+07:00", 
+"dateModified":"2024-10-03T17:14:04+07:00", 
+"author":{ 
+"@type":"Person",
+"name":"Nhôm kính Đại Phúc",
+"url":"https://nhomkinhdaiphuc.com"
+},
+"publisher":{ 
+"@type": "Organization", 
+"name":"Nhôm kính Đại Phúc",
+"logo":{ 
+"@type":"ImageObject",
+"url":"https://nhomkinhdaiphuc.com/assets/images/nhomkinhdaiphuc.webp" 
+} 
+}
+}
+
+
+  {
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "priceRange":"650.000 VND - 2.300.000 VND",
+  "image":"https://nhomkinhdaiphuc.com/assets/images/nhomkinhdaiphuc.webp",
+  "name" : "Chuyên thi công nhôm kính cường lực, cửa nhôm kính trên toàn quốc...",
+  "telephone": "+84899966699",
+  "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "1/5 Đường số 5, Phường 17, Q. Gò Vấp, TP. Hồ Chí Minh",
+  "addressLocality": "Hồ Chí Minh"
+  }
+  }
+
+
+
+
+
+    
+        
+<a class="logo_header" href="https://nhomkinhdaiphuc.com"
+title="Công Ty TNHH Nhôm Kính Đại Phúc">
+
+
+
+Công Ty TNHH Nhôm Kính Đại Phúc
+Chuyên thi công, lắp đặt kính cường lực, cửa nhôm Xingfa. Giá cạnh tranh, thi công nhanh, chất lượng
+09.19.02.00.88 - 09.22.24.66.99
+daiphucnhomkinh@gmail.com
+1/5 Đường số 5, Phường Gò Vấp, TP. Hồ Chí Minh
+
+
+
+
+    var configUrl = "https://nhomkinhdaiphuc.com";
+    var activeClass = "";
+    let login = "login";
+    
+    let avatar = "assets/images/user.svg";
+    if(login == 'member'){
+        let quyen = 0;
+        var pcLoginLi = '\
+                        \
+                            \
+                            Trang thành viên\
+
+2: Trang quản trị
+
+3: \
+                    \
+                    ';
+                    if(quyen === 1){
+                        mLoginLi += 'Trang quản trị';
+                    }
+                    else{
+                        mLoginLi += 'Trang thành viên';
+                    }
+            mLoginLi += '\
+                    Đăng xuất\
+                    \
+
+4: \
+                        \
+                            \
+                            Đăng nhập\
+
+5: \
+                            Đăng ký\
+
+6: \
+                    \
+                    \
+                    \
+                    Đăng nhập\
+                    \
+                    \
+                    Đăng ký\
+                    \
+
+7: Sản phẩm
+                
+                        Cửa Nhôm Xingfa
+
+8: Cửa Trượt Quay
+
+9: Cửa Nhôm Hệ Slim
+
+10: Cửa Nhôm Slim Cover
+
+11: Cửa Kính Cường Lực
+
+12: Cửa Nhôm Thủy Lực
+
+13: Cửa Nhôm Maxpro.JP
+
+14: Phòng Tắm Kính
+
+15: Cầu Thang - Lan Can Kính
+
+16: Cửa Tự Động
+
+17: Vách Kính Cường Lực
+
+18: Cửa Lưới Chống Muỗi
+
+19: Cửa Nhôm Kogen
+
+20: Kính Xây Dựng
+
+21: Cửa Nhôm PMA
+
+22: Cửa Nhôm Xingfa Class A
+
+23: Cửa Nhôm Tấm Tổ Ong
+
+24: Cửa Nhôm Yongxing
+
+25: Tủ Cánh Kính
+
+26: Cửa Nhôm Owin
+
+27: Cửa Nhôm Topal
+
+28: Cửa Nhôm Kenwin
+
+29: Bảng kính văn phòng
+
+30: Phụ kiện
+                
+                        Phụ Kện Cửa Slim
+
+31: Phụ Kiện Cửa Trượt Quay
+
+32: Phụ Kiện Papo
+
+33: Phụ Kiện Opk
+
+34: Phụ Kiện Draho
+
+35: Phụ Kiện Bogo
+
+36: Phụ Kiện Cmech
+
+37: Phụ Kiện Huy Hoàng
+
+38: Phụ Kiện KinLong
+
+39: Phụ Kiện Janus
+
+40: Khóa Điện Tử
+
+41: Phụ Kiện Candy
+
+42: Phụ Kiện Sigico
+
+43: Phụ Kiện Cửa Kính
+
+44: Phụ Kiện Hafele
+
+45: Phụ Kiện YKEBR
+
+46: Phụ Kiện 3H
+
+47: Báo giá
+                
+                        Báo Giá Cửa Nhôm
+
+48: Báo Giá Cửa Kính Cường Lực
+
+49: Báo Giá Vách Kính Cường Lực
+
+50: Báo Giá Lan Can - Cầu Thang Kính
+
+51: Công cụ
+        
+            Tài liệu catalogue
+
+52: Thước lỗ ban
+
+53: Đọc số thành chữ
+
+54: Lịch vạn niên
+
+55: Xem tuổi xây nhà
+
+56: Công cụ tính thuế
+
+57: Profile nhôm
+
+58: Tối ưu cắt vật liệu
+
+59: Tin tức
+                
+                        Tin tức thị trường
+
+60: Kiến thức về kính
+
+61: Kiến thức về nhôm
+
+62: Kiến thức về phụ kiện
+
+63: Kiến thức phong thủy
+
+64: Thương hiệu nhôm
+
+65: Video
+                
+                        Video cửa nhôm Slim
+
+66: Video cửa nhôm trượt quay
+
+67: Video cửa kính cường lực
+
+68: Video cửa trượt quay slim
+
+69: Video Cửa Nhôm Xingfa
+
+70: Video Cửa Nhôm Thủy Lực
+
+71: Video hướng dẫn lắp đặt cửa nhôm slim
+
+72: Catalogue nhôm Topal
+
+73: Nhôm Topal là một thương hiệu nhôm nổi bật thuộc tập đoàn Austdoor, cung cấp các sản phẩm nhôm định hình đồng bộ chất lượng cao. Catalogue Nhôm Topal mang đến các dòng sản phẩm nhôm tiên tiến như Topal Slima và Topal Prima, đáp ứng mọi nhu cầu xây dựng từ công trình nhà ở cho đến các dự án thương mại lớn.
+
+Giới Thiệu Về Nhôm Topal
+
+Nhôm Topal ra đời với sứ mệnh cung cấp các giải pháp nhôm chất lượng vượt trội, phù hợp cho nhiều loại công trình xây dựng. Nhờ quy trình sản xuất tiên tiến và sự kiểm soát chất lượng nghiêm ngặt, nhôm Topal đã đạt được nhiều chứng nhận trong ngành công nghiệp nhôm.
+
+Hệ Thống Sản Xuất Nhôm Topal
+
+Nhôm Topal sở hữu hệ thống 6 nhà máy trải dài từ Bắc đến Nam với quy mô lớn và công nghệ hiện đại:
+
+
+	Nhà máy Yên Mỹ, Hưng Yên: Diện tích 30.000m², năng suất 15.000 tấn/năm.
+
+74: Nhà máy Mỹ Hào, Hưng Yên: Diện tích 100.000m², năng suất 80.000 tấn/năm.
+
+75: Nhà máy Nhơn Trạch, Đồng Nai: Diện tích 50.000m², năng suất 30.000 tấn/năm.
+
+76: Gia nhiệt billet nhôm
+
+77: Xử lý bề mặt và sơn tĩnh điện
+
+78: Đóng gói và vận chuyển
+
+79: Nhôm Topal có phù hợp cho công trình ven biển không?
+
+	
+		Có, với khả năng chống ăn mòn và độ bền cao, nhôm Topal phù hợp cho cả các công trình ven biển.
+
+80: Nhôm Topal có những loại phụ kiện nào đi kèm?
+
+	
+		Nhôm Topal cung cấp đầy đủ phụ kiện như khóa đa điểm, gioăng EPDM và các phụ kiện nhôm đồng bộ khác.
+
+81: Cửa nhôm Topal có chống ồn tốt không?
+
+	
+		Cửa nhôm Topal đạt chuẩn châu Âu EN140, giúp giảm thiểu tiếng ồn hiệu quả.
+
+82: Nhôm Topal có những tùy chọn màu sắc nào?
+
+	
+		Nhôm Topal có nhiều lựa chọn màu sắc như trắng, ghi, vân gỗ, cafe, và xám đá.
+
+83: Nhôm Topal có thể sử dụng cho công trình cao cấp không?
+
+	
+		Có, nhôm Topal được thiết kế đặc biệt để phù hợp với các công trình cao cấp như biệt thự, resort và khách sạn.
+
+84: Trụ sở: 1/5 Đường Số 5, Phường 17, Quận Gò Vấp
+

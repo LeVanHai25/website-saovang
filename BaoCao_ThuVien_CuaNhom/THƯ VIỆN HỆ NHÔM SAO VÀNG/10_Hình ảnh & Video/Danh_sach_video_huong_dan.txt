@@ -1,0 +1,7 @@
+DANH SÁCH VIDEO HƯỚNG DẪN KỸ THUẬT VÀ LẮP ĐẶT
+================================================
+1. Video [01_Huong_dan_lap_giam_chan_Slim.mp4]: Mô phỏng hành trình piston thủy lực tự hãm cánh cửa lùa Slim.
+2. Video [02_Huong_dan_han_goc_seamless_PAG.mp4]: Hướng dẫn vận hành máy hàn nhiệt CNC liền khối không vết ghép.
+3. Video [03_Huong_dan_lap_cua_truot_quay_Owin.mp4]: Hướng dẫn căn chỉnh bản lề xoay định vị ray treo trên cửa trượt quay.
+4. Video [04_Huong_dan_bom_keo_ silicon_chong_tham.mp4]: Quy chuẩn đi đường keo silicon ngoài trời bóng mịn không răng cưa.
+5. Tất cả video được lưu hành nội bộ trên ổ đĩa mạng công ty.

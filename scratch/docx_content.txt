@@ -1,0 +1,160 @@
+
+==================== BaoCao_DinhHuong_Website_SaoVang.docx ====================
+BÁO CÁO PHƯƠNG ÁN TRIỂN KHAI & KIẾN TRÚC KỸ THUẬT WEBSITE SAO VÀNG
+PHẦN 1: Tổng Quan Dự Án 
+1. Mục tiêu chiến lược của Website
+Website Sao Vàng được định hướng xây dựng như một Cổng thông tin chuẩn hóa, đóng vai trò là nền tảng số hỗ trợ hoạt động kinh doanh đa lĩnh vực (Cơ khí & Nhôm kính) của công ty với hai mục tiêu cốt lõi:
+Tối ưu hóa tỷ lệ chuyển đổi (Lead Generation): Thu hút và chuyển đổi lượng truy cập từ các nguồn quảng cáo (Google Ads, Facebook Ads) thành khách hàng liên hệ thực tế thông qua các điểm chạm (hotline, Zalo, form đăng ký).
+Showroom năng lực trực tuyến: Cung cấp đầy đủ thông tin về quy mô sản xuất, trang thiết bị và các dự án thực tế, đóng vai trò như một bộ Hồ sơ năng lực (Profile) điện tử phục vụ các đối tác B2B và nhà thầu lớn.
+2. Lợi thế từ việc tự phát triển nội bộ
+Việc dự án được thực hiện bởi nhân sự nội bộ thay vì thuê ngoài (Agency) mang lại những giá trị thực tế cao:
+Tính xác thực của nội dung: Nhân sự nội bộ nắm rõ thông số kỹ thuật sản phẩm (các hệ nhôm kính Xingfa, PMI, kính cường lực...) và quy trình gia công cơ khí (kết cấu thép, sắt nghệ thuật, cầu thang xoắn), đảm bảo thông tin trên website chính xác và sát với năng lực thực tế của doanh nghiệp.
+Chủ động về tài nguyên truyền thông: Dễ dàng ghi nhận hình ảnh thực tế tại nhà xưởng và quá trình thi công tại công trình để làm tư liệu chân thực, nâng cao uy tín thương hiệu.
+PHẦN 2: Kiến Trúc Thông Tin & Trải Nghiệm Người Dùng (Information Architecture & UX)
+1. Sơ đồ cấu trúc Website (Sitemap)
+Cấu trúc website được phân cấp mạch lạc nhằm tối ưu hóa trải nghiệm tìm kiếm thông tin của người dùng trong vòng 3 lượt click:
+1. Trang Chủ
+
+1.1. Giới Thiệu & Năng Lực
+1.2. Lĩnh Vực Hoạt Động
+      - Cơ Khí Sao Vàng (Cơ khí nghệ thuật, Cầu thang xoắn)
+      - Nhôm Kính Sao Vàng (Cửa nhôm kính, Vách kính & Lan can)
+1.3. Sản Phẩm & Phụ Kiện
+1.4. Dự Án Thực Tế
+1.5. Bảng Báo Giá
+1.6. Liên Hệ
+2. Phân bổ luồng trải nghiệm khách hàng (User Flow)
+Luồng khách hàng Cơ khí (Trọng tâm B2B): Trang chủ → Lĩnh vực Cơ khí → Kiểm chứng năng lực sản xuất (Nhà xưởng, máy móc CNC) → Xem các dự án tiêu biểu → Tải Profile năng lực (PDF) / Gửi yêu cầu báo giá theo bản vẽ.
+Luồng khách hàng Nhôm kính (Trọng tâm B2C & Nhà thầu hoàn thiện): Trang chủ → Sản phẩm (Cửa nhôm/vách kính) → Xem thông số kỹ thuật & Phụ kiện → Tham khảo Bảng báo giá chi tiết → Xem hình ảnh lắp đặt thực tế → Bấm nút liên hệ nhanh (Hotline/Zalo) hẹn lịch khảo sát.
+3. Nguyên tắc bố cục trên trang Demo hiện tại
+Các khối nội dung (Blocks) trên trang chủ được sắp xếp theo hành trình tâm lý khách hàng:
+Khối 1 - Banner chính (Hero Section): Sử dụng hình ảnh trực quan về quy mô nhà xưởng thực tế của Sao Vàng nhằm tạo lòng tin bước đầu về năng lực sản xuất trực tiếp.
+Khối 2 - Phân luồng dịch vụ (Cơ khí & Nhôm kính): Đặt ngay đầu trang để người dùng nhanh chóng lựa chọn phân khúc quan tâm, tránh bị nhiễu thông tin.
+Khối 3 - Dự án & Năng lực sản xuất: Đóng vai trò làm bằng chứng thực tế (Social Proof), chứng minh năng lực thi công và độ thẩm mỹ của các công trình đã bàn giao.
+Khối 4 - Kêu gọi hành động (CTA) & Widget liên hệ: Đặt ở cuối trang và cố định góc màn hình để đón đầu hành vi liên hệ sau khi khách hàng đã được thuyết phục bởi năng lực của công ty.
+PHẦN 3: Giải Pháp Kỹ Thuật & Quy Trình Phát Triển (Technical Stack & AI Workflow)
+1. Công nghệ sử dụng (Tech Stack)
+Frontend: Sử dụng HTML5, CSS3 và Javascript thuần (Vanilla JS), tối ưu hóa hiển thị responsive 100% trên các thiết bị di động (Mobile First). Tránh sử dụng các framework nặng để đảm bảo tốc độ tải trang cực nhanh (tải dưới 1.5 giây, điểm PageSpeed đạt trên 95 điểm), tối ưu tối đa chi phí quảng cáo Google Ads.
+Backend & CMS: Xây dựng trên nền tảng Node.js (Express.js) kết hợp cơ sở dữ liệu gọn nhẹ để làm trang quản trị (Admin Panel), giúp nhân viên nội bộ chủ động cập nhật bài viết, hình ảnh dự án và quản lý dữ liệu khách hàng gửi về từ website.
+2. Quy trình phát triển ứng dụng AI (AI-Assisted Development)
+Dự án áp dụng quy trình phát triển có sự hỗ trợ của các công cụ trí tuệ nhân tạo (AI) nhằm tối ưu hóa hiệu suất và chất lượng mã nguồn:
+Kiểm soát chất lượng mã nguồn (Clean Code): Sử dụng AI hỗ trợ rà soát lỗi cú pháp, tối ưu cấu trúc các tệp tin CSS/JS để giảm dung lượng tải trang.
+Thiết kế cấu trúc dữ liệu: Ứng dụng AI phân tích và thiết kế sơ đồ cơ sở dữ liệu (Database Schema) tối giản cho hệ thống CMS.
+Tối ưu hóa nội dung (SEO Content): Dùng AI hỗ trợ chuẩn hóa cấu trúc bài viết kỹ thuật, lồng ghép từ khóa tối ưu hóa công cụ tìm kiếm (SEO) một cách tự nhiên.
+3. Khả năng tích hợp và mở rộng hệ thống
+Hệ thống được thiết kế theo cấu trúc module độc lập (Decoupled Architecture). Khi doanh nghiệp mở rộng quy mô hoặc phát triển thêm lĩnh vực mới, hệ thống cho phép tích hợp thêm các module hoặc kết nối API với các phần mềm quản lý nội bộ (CRM, ERP) một cách dễ dàng mà không ảnh hưởng đến cấu trúc hiện tại.
+PHẦN 4: Kế Hoạch Triển Khai & Đề Xuất Thảo Luận (Roadmap & Discussion)
+1. Lộ trình thực hiện (Timeline)
+Giai đoạn 1 (Hiện tại): Hoàn thiện khung giao diện tĩnh (Frontend), tối ưu hóa bố cục và trải nghiệm người dùng trên thiết bị di động.
+Giai đoạn 2 (Tiếp theo): Tích hợp dữ liệu thực tế (hình ảnh sản phẩm, thông số kỹ thuật, hình ảnh công trình) và hoàn thiện các tính năng tương tác (form liên hệ, kết nối Zalo/Hotline, trang quản trị CMS).
+Giai đoạn 3 (Nghiệm thu & Go-Live): Kiểm thử hệ thống, tối ưu hóa SEO on-page và cấu hình chạy chính thức trên tên miền của công ty.
+2. Các vấn đề kỹ thuật cần tham vấn ý kiến chuyên môn
+Để chuẩn bị tốt nhất cho giai đoạn phát triển tiếp theo, bộ phận kỹ thuật đề xuất thảo luận và xin ý kiến định hướng về hai vấn đề sau:
+Phương án xây dựng trang quản trị (CMS): Nên tự xây dựng một trang Admin tối giản bằng Node.js để kiểm soát hoàn toàn mã nguồn, hay nên tích hợp sử dụng một nền tảng Headless CMS có sẵn (như Strapi) để rút ngắn thời gian triển khai và tối ưu công tác bảo trì?
+Lựa chọn hạ tầng lưu trữ (Hosting/Cloud Server): Đề xuất giải pháp lưu trữ phù hợp với cấu trúc Node.js nhằm đảm bảo khả năng chịu tải tốt và tính ổn định cao khi triển khai các chiến dịch quảng cáo với lượng truy cập lớn, đồng thời tối ưu hóa chi phí vận hành cho công ty.
+=============================================
+
+
+==================== BaoCao_YTuong_NoiDung_Website_SaoVang.docx ====================
+BÁO CÁO Ý TƯỞNG THIẾT KẾ & ĐỊNH HƯỚNG NỘI DUNG WEBSITE SAO VÀNG
+PHẦN 1: Ý TƯỞNG CHỦ ĐẠO & PHONG CÁCH GIAO DIỆN (Core Concept)
+1. Định hướng Concept: "Từ Nhà Xưởng Đến Công Trình"
+Thay vì đi theo lối mòn của các trang web thương mại giới thiệu sản phẩm thông thường, Website Sao Vàng được thiết kế như một Showroom Công nghệ trực quan. Concept cốt lõi là kể câu chuyện về sự kết hợp giữa sức mạnh chế tạo cơ khí công nghiệp và độ tinh tế của các giải pháp kiến trúc nhôm kính.
+Mỗi trang nội dung không chỉ hiển thị thông số kỹ thuật khô khan mà phải thể hiện được hành trình: Vật liệu thô tại nhà xưởng lớn → Quy trình gia công tỉ mỉ bằng máy móc CNC hiện đại → Sản phẩm hoàn thiện thẩm mỹ tại công trình thực tế.
+2. Phong cách thiết kế giao diện (Visual Style)
+Tông màu chủ đạo: Sử dụng gam màu Xanh Navy đậm (Deep Navy) làm nền tảng biểu trưng cho tính kỹ thuật và sự vững chãi của ngành cơ khí; kết hợp với màu Ghi thép (Steel Gray) tạo cảm giác hiện đại, sạch sẽ của các hệ nhôm kính cao cấp. Màu Vàng Kim (Golden Yellow) của thương hiệu Sao Vàng được dùng làm màu nhấn cho các nút hành động (Call-to-Action) và các tiêu điểm quan trọng.
+Tài nguyên hình ảnh: Tuyệt đối hạn chế sử dụng ảnh mạng hoặc ảnh 3D dựng sẵn. Toàn bộ website ưu tiên sử dụng ảnh chụp thực tế tại nhà xưởng Sao Vàng (công nhân làm việc, máy móc đang hoạt động) và ảnh thực tế công trình sau khi lắp đặt để tạo độ tin cậy trực giác mạnh mẽ nhất.
+Kiểu chữ (Typography): Sử dụng phông chữ không chân (Sans-serif) hiện đại, nét chữ khỏe khoắn, độ tương phản cao để người dùng dễ dàng tiếp nhận các thông số kỹ thuật trên thiết bị di động.
+PHẦN 2: Ý TƯỞNG TRẢI NGHIỆM & ĐỊNH HƯỚNG NỘI DUNG TỪNG TRANG (Page Content)
+1. Trang Chủ (Homepage) - Điểm chạm lòng tin
+Trang chủ đóng vai trò dẫn dắt người dùng đi qua bộ lọc nhu cầu và chứng minh ngay năng lực của Sao Vàng qua bố cục 4 khối:
+Khối 1 (Hero Section): Hình ảnh xưởng sản xuất cơ khí quy mô kết hợp thông điệp: "Sao Vàng – Nhà thầu gia công cơ khí & lắp đặt nhôm kính chuyên nghiệp". Khách hàng lập tức cảm nhận được quy mô sản xuất trực tiếp của công ty.
+Khối 2 (Luồng dịch vụ): Hai banner động đặt song song: "Cơ Khí Chế Tạo & Mỹ Thuật" và "Giải Pháp Nhôm Kính Cao Cấp". Khách hàng nhấp vào bên nào sẽ được dẫn sâu vào trang chuyên biệt của lĩnh vực đó.
+Khối 3 (Chứng thực thực tế): Khu vực hiển thị các dự án lớn tiêu biểu kèm theo các con số biết nói (Diện tích nhà xưởng, số lượng dự án đã hoàn thành, số năm kinh nghiệm).
+Khối 4 (Chân trang): Form liên hệ nhanh thiết kế tinh gọn và bản đồ vị trí nhà xưởng để khách hàng tiện ghé thăm trực tiếp.
+2. Trang Lĩnh Vực Cơ Khí - Khẳng định sức mạnh kỹ thuật
+Trang này được thiết kế để thuyết phục các nhà thầu xây dựng và chủ đầu tư dự án lớn. Nội dung tập trung vào hai mảng chính:
+Cơ khí chế tạo & Kết cấu: Hình ảnh kết cấu thép nhà xưởng, khung đỡ chịu lực. Nội dung nhấn mạnh vào năng lực sản xuất (diện tích nhà xưởng, danh mục máy móc như máy cắt CNC, máy hàn laser) và quy trình kiểm soát chất lượng mối hàn.
+Cơ khí nghệ thuật & Độc bản: Tập trung giới thiệu các sản phẩm đòi hỏi tay nghề cao như Cầu thang xoắn, cửa cổng sắt nghệ thuật uốn lượn. Ý tưởng nội dung là hiển thị ảnh chụp cận cảnh các chi tiết uốn mỹ thuật và mối hàn được xử lý mịn màng, thể hiện tính nghệ thuật và độ tinh xảo cao.
+3. Trang Lĩnh Vực Nhôm Kính - Tối ưu tính ứng dụng và thẩm mỹ
+Trang này hướng tới cả khách hàng dự án lẫn khách hàng tư nhân (chủ biệt thự, nhà phố). Ý tưởng cốt lõi là trình bày giải pháp thay vì chỉ bán thanh nhôm:
+Sản phẩm cửa nhôm cao cấp (Xingfa, PMI...): Nội dung không chỉ đăng ảnh cửa mà phân loại rõ ràng theo công năng: Cửa đi mở quay, cửa lùa tiết kiệm diện tích, cửa xếp trượt góc rộng. Mỗi sản phẩm đều ghi rõ thông số độ dày nhôm, thương hiệu phụ kiện kết hợp (Kinlong, Cogo...) và khả năng cách âm, cách nhiệt.
+Vách kính & Lan can nghệ thuật: Hình ảnh các căn biệt thự sử dụng vách kính mặt dựng lớn đón ánh sáng tự nhiên. Nhấn mạnh vào tính an toàn của kính cường lực và tính thẩm mỹ hiện đại tối giản của hệ lan can kính không trụ.
+4. Trang Dự Án Thực Tế - Câu chuyện công trình (Social Proof)
+Thay vì chỉ đăng ảnh sản phẩm trơ trọi, trang Dự án sẽ được biên tập như một cuốn "Nhật ký thi công" để khách hàng thấy được năng lực thực tế của Sao Vàng:
+Thông tin dự án rõ ràng: Mỗi dự án gồm: Tên công trình, địa điểm, hạng mục thi công (ví dụ: Thi công 150m2 cửa nhôm PMI và cầu thang xoắn tại biệt thự đơn lập Hải Phòng).
+Hình ảnh trước và sau khi hoàn thiện: Đăng tải chuỗi ảnh từ lúc khung sắt/khung nhôm được lắp đặt tại công trình cho đến khi hoàn thiện bàn giao, giúp người xem thấy rõ sự chuyên nghiệp trong quy trình lắp đặt của đội ngũ thợ Sao Vàng.
+PHẦN 3: CÁC Ý TƯỞNG TÍNH NĂNG TƯƠNG TÁC ĐỂ GIỮ CHÂN KHÁCH HÀNG
+1. Công cụ ước tính báo giá nhanh (Interactive Quote)
+Một tính năng đột phá giúp tăng tỷ lệ khách hàng để lại thông tin trên web: Thiết kế một bảng tính trực quan cho phép khách hàng tự chọn loại sản phẩm (Ví dụ: Cửa nhôm Xingfa hệ 55, Lan can kính cường lực 12mm), nhập kích thước sơ bộ (chiều rộng, chiều cao) để hệ thống tự động tính toán khoảng giá ước tính.
+Để nhận bảng báo giá chi tiết đầy đủ kèm ưu đãi, khách hàng chỉ cần để lại số điện thoại. Điều này giúp bộ phận kinh doanh có ngay thông tin nhu cầu cụ thể của khách để gọi tư vấn.
+2. Widget liên hệ "1-Chạm" thông minh
+Nút Zalo và Hotline lơ lửng ở góc màn hình điện thoại sẽ được thiết lập thông minh:
+Phân luồng tư vấn viên: Khi khách bấm vào nút liên hệ tại trang Cơ khí, cuộc gọi hoặc tin nhắn sẽ được điều hướng trực tiếp đến kỹ thuật viên mảng cơ khí. Ngược lại, khi bấm ở trang Nhôm kính, khách sẽ kết nối thẳng với bộ phận chuyên trách nhôm kính để được tư vấn chính xác nhất mà không cần qua nhiều bước chuyển máy.
+PHẦN 4: ĐỊNH HƯỚNG XÂY DỰNG NỘI DUNG DÀI HẠN (Content Strategy)
+1. Chuyên mục "Góc Tư Vấn Kỹ Thuật" (Blog)
+Để đưa website lên top Google tự nhiên (SEO) và xây dựng uy tín chuyên gia trong ngành, trang web sẽ xây dựng chuyên mục tin tức tập trung vào các bài viết chia sẻ kinh nghiệm thực tế:
+Chủ đề Nhôm kính: "Cách phân biệt nhôm Xingfa nhập khẩu chính hãng và hàng nhái", "Kinh nghiệm chọn hệ cửa nhôm chống nước tốt cho mùa mưa bão", "Nên dùng kính cường lực độ dày bao nhiêu cho lan can ngoài trời?".
+Chủ đề Cơ khí: "Tại sao cầu thang xoắn là giải pháp tối ưu cho nhà phố diện tích hẹp?", "Quy trình chống gỉ sét cho cửa cổng sắt nghệ thuật ngoài trời".
+2. Trang thông tin Pháp lý và Cam kết dịch vụ
+Soạn thảo rõ ràng và đặt tại chân trang các chính sách giúp khách hàng yên tâm tuyệt đối khi hợp tác với Sao Vàng:
+Chính sách bảo hành: Cam kết bảo hành kết cấu khung sắt cơ khí trong vòng 5 năm, bảo hành kỹ thuật lắp đặt cửa nhôm kính 2 năm, bảo trì định kỳ.
+Quy trình làm việc 5 bước: Khảo sát đo đạc tận nơi → Thiết kế bản vẽ 2D/3D → Gia công tại xưởng → Lắp đặt tại công trình → Nghiệm thu và bàn giao.
+=============================================
+
+
+==================== BÁO CÁO Ý TƯỞNG THIẾT KẾ WEBSITE.docx ====================
+BÁO CÁO Ý TƯỞNG THIẾT KẾ, ĐỊNH HƯỚNG NỘI DUNG WEBSITE SAO VÀNG
+PHẦN I: TẦM NHÌN CHIẾN LƯỢC, VAI TRÒ & MỤC TIÊU CỦA WEBSITE
+1. Vai trò của website đối với doanh nghiệp Cơ Khí Sao Vàng
+Đối với Công ty Cơ Khí Sao Vàng – một đơn vị hoạt động đa lĩnh vực bao gồm gia công cơ khí kết cấu, cơ khí mỹ thuật và thi công nhôm kính cao cấp – website đóng vai trò là xương sống trong chiến lược chuyển đổi số và tiếp thị:
+Văn phòng đại diện số 24/7: Là bộ mặt thương hiệu chính thức của công ty trên Internet. Khách hàng, đối tác và nhà thầu có thể tìm hiểu toàn bộ thông tin pháp lý, cơ sở vật chất và hồ sơ năng lực của công ty bất kỳ lúc nào mà không cần gặp mặt trực tiếp.
+Kênh phễu thu hút khách hàng chủ động: Website đóng vai trò là đích đến của mọi chiến dịch quảng cáo. Đây là nơi tiếp nhận nhu cầu, phân loại thông tin khách hàng tiềm năng trước khi chuyển giao cho bộ phận kinh doanh xử lý.
+Công cụ tối ưu hóa quy trình tư vấn: Thay vì nhân viên phải gửi thủ công từng tệp ảnh sản phẩm hay tệp báo giá PDF nặng qua Zalo, website sẽ là thư viện mở chứa đầy đủ thông số kỹ thuật, bảng giá và hình ảnh thực tế được sắp xếp khoa học để gửi nhanh cho khách hàng.
+2. Mục tiêu chiến lược của website
+Mục tiêu ngắn hạn : Xây dựng hoàn thiện giao diện trực quan, thân thiện với di động; thiết lập các công cụ liên hệ nhanh và đo lường quảng cáo khi website vận hành.
+Mục tiêu trung hạn : Đạt vị trí cao trên công cụ tìm kiếm Google. Đưa website trở thành kênh tạo ra nguồn khách hàng tự nhiên ổn định.
+Mục tiêu dài hạn : Tích hợp sâu hệ thống website vào các công cụ quản lý nội bộ của công ty (CRM/ERP), đồng bộ hóa dữ liệu khách hàng và thông số sản phẩm.
+3. Định hướng phát triển thương hiệu Sao Vàng trên môi trường số
+Thương hiệu Sao Vàng trên website sẽ được định vị nhất quán qua hai giá trị cốt lõi:
+Mảng Cơ khí: Thể hiện qua hình ảnh các sản phẩm, dự án, công trình thực tế ,…..  để khẳng định sự chuyên nghiệp, đáng tin cậy, nhấn mạnh vào chất lượng kỹ thuật.
+Mảng Nhôm kính: Thể hiện qua hình ảnh các công trình biệt thự sang trọng, các mẫu cửa nhôm kính cao cấp và các hệ nhôm cao cấp , nhập khẩu . Mang lại không gian thoáng đạt, hiện đại, mang tính định hướng giải pháp không gian sống.
+PHẦN II: ĐỐI TƯỢNG PHỤC VỤ & PHÂN NHÓM NGƯỜI DÙNG 
+Website Cơ Khí Sao Vàng được thiết kế để phục vụ ba nhóm người dùng mục tiêu với những hành vi và nhu cầu thông tin chuyên biệt:
+1. Nhóm đối tác B2B (Nhà thầu xây dựng, Chủ đầu tư dự án, Kiến trúc sư)
+Đặc điểm hành vi: Đòi hỏi thông tin kỹ thuật chính xác, tính pháp lý rõ ràng và năng lực sản xuất thực tế để đánh giá rủi ro trước khi hợp tác.
+Thông tin cần tiếp cận: Hồ sơ năng lực (Profile công ty dưới dạng PDF để tải về), chứng chỉ chất lượng sản phẩm (CO/CQ), danh mục máy móc thiết bị nhà xưởng, danh sách các dự án lớn đã hoàn thành kèm theo hình ảnh thực tế tại công trường.
+2. Nhóm khách hàng lẻ B2C (Chủ đầu tư tư nhân, Chủ nhà)
+Đặc điểm hành vi: Quan tâm nhiều đến tính thẩm mỹ, sự phù hợp với không gian kiến trúc và giá cả. Thường truy cập bằng thiết bị di động vào buổi tối và cần sự tư vấn nhanh chóng.
+Thông tin cần tiếp cận: Hình ảnh thực tế lắp đặt tại các công trình dân dụng (ảnh chụp đẹp, trực quan), bảng báo giá chi tiết rõ ràng, công cụ tính giá sơ bộ, các mẫu thiết kế xu hướng và cổng liên hệ tư vấn trực tiếp (Zalo, Hotline).
+3. Đối tác liên kết cung ứng
+Đặc điểm hành vi: Cần thông tin cập nhật về chính sách chiết khấu, thông tin phụ kiện và danh mục sản phẩm mới.
+Thông tin cần tiếp cận: Danh mục chi tiết sản phẩm và phụ kiện , chính sách bảo hành chính thức của Cơ Khí Sao Vàng.
+PHẦN III: KIẾN TRÚC THÔNG TIN & SƠ ĐỒ WEBSITE 
+1. Sơ đồ cấu trúc Website 
+Website được tổ chức theo mô hình phân cấp tối ưu hóa trải nghiệm người dùng và SEO:
+Trang Chủ: Tóm tắt năng lực, phân luồng dịch vụ, hiển thị dự án tiêu biểu và form liên hệ nhanh.
+Trang Giới Thiệu & Năng Lực: Giới thiệu lịch sử thành lập, tầm nhìn sứ mệnh, hồ sơ năng lực sản xuất (nhà xưởng, máy móc) và chứng nhận chất lượng.
+Trang Lĩnh Vực Hoạt Động : Chia làm hai chuyên trang chuyên biệt:
+   - Lĩnh vực Cơ khí 
+   - Lĩnh vực Nhôm kính 
+Trang Sản Phẩm & Phụ Kiện: Trình bày chi tiết các mẫu cửa, mẫu cầu thang, lan can kèm theo danh mục phụ kiện đi kèm.
+Trang Dự Án Thực Tế: Thư viện lưu trữ các công trình đã thi công dưới dạng nhật ký hình ảnh thực tế.
+Trang Bảng Báo Giá: Bảng tra cứu đơn giá thi công sơ bộ các hạng mục nhôm kính và cơ khí.
+Trang Liên Hệ: Thông tin doanh nghiệp, văn phòng, số điện thoại hotline các bộ phận và form gửi yêu cầu.
+2. Chi tiết nội dung hiển thị tại các trang chính
+Trang Chủ: Banner lớn giới thiệu tổng quan nhà xưởng hoạt động; hai nút chuyển hướng lớn sang hai mảng Cơ khí và Nhôm kính; khối số liệu chứng minh năng lực; khối hiển thị 4 dự án gần nhất và form đăng ký tư vấn.
+Trang Lĩnh Vực Cơ Khí 
+Trang Lĩnh Vực Nhôm Kính: Phân loại cửa theo cách mở (mở quay, mở lùa, xếp trượt); thông tin chi tiết về độ dày thanh nhôm, loại kính sử dụng (kính hộp cách âm, kính cường lực) và hệ phụ kiện đi kèm.
+Trang Dự Án: Trình bày dưới dạng bài viết ngắn gọn bao gồm: Tên công trình, địa chỉ thi công, hạng mục thực hiện, hình ảnh trước/sau khi thi công và đánh giá ngắn từ chủ nhà hoặc đại diện nhà thầu.
+PHẦN IV: ĐỊNH HƯỚNG TRẢI NGHIỆM NGƯỜI DÙNG (UX) & CHIẾN LƯỢC NỘI DUNG
+1. Định hướng trải nghiệm người dùng 
+Thiết kế ưu tiên thiết bị di động (Mobile-First): Hơn 80% khách hàng lẻ tìm kiếm thông tin bằng điện thoại di động. Giao diện được tối ưu hóa để các nút bấm to rõ ràng, hình ảnh sản phẩm vuốt mượt mà và form đăng ký tối giản nhất.
+Tối ưu tốc độ tải trang cực nhanh: Loại bỏ toàn bộ các hiệu ứng chuyển động phức tạp không cần thiết và nén tối đa tài nguyên hình ảnh. Đảm bảo thời gian phản hồi trang dưới 1.5 giây để giữ chân người dùng và tối ưu điểm chất lượng quảng cáo.
+Hệ thống nút liên hệ 1-chạm thông minh: Widget Hotline và Zalo luôn hiển thị ở góc dưới màn hình di động, cho phép khách hàng kết nối ngay lập tức với nhân viên tư vấn mà không cần tìm kiếm thông tin liên hệ.
+Công cụ tính giá tương tác: Cho phép khách hàng tự nhập kích thước và loại nhôm/kính để nhận ngay mức giá dự toán tham khảo, tạo trải nghiệm tương tác thú vị và thúc đẩy khách hàng để lại thông tin tư vấn chi tiết.
+2. Chiến lược nội dung dài hạn (Content Strategy)
+Chuyên mục tư vấn kỹ thuật chuyên sâu (Blog): Liên tục cập nhật các bài viết giải đáp thắc mắc của khách hàng như: Cách phân biệt nhôm thật/nhái; Nên chọn cửa lùa hay cửa mở quay cho phòng ngủ; Các lưu ý kỹ thuật khi lắp đặt cầu thang xoắn ngoài trời... Điều này giúp website tự động lên top Google không tốn phí.
+Chuẩn hóa thông tin minh bạch: Đăng tải rõ ràng chính sách bảo hành sản phẩm (5 năm cho kết cấu cơ khí, 2 năm cho phụ kiện nhôm kính) và cam kết tiến độ thi công nhằm củng cố lòng tin của khách hàng đối với thương hiệu Cơ Khí Sao Vàng.
+=============================================
+

@@ -1,0 +1,17 @@
+QUY CHUẨN VẼ CAD HỆ CỬA NHÔM SAO VÀNG GROUP
+=================================================
+1. HỆ LAYER TIÊU CHUẨN:
+   - NET_THAY: Biên dạng nhôm chính (Màu 7 - Trắng/Đen, nét liền, nét 0.25mm)
+   - NET_KHUAT: Bộ phận khuất, tường bê tông (Màu 8 - Xám, nét đứt, nét 0.13mm)
+   - NET_KIEU: Đường tim kính, kính đơn/hộp (Màu 4 - Cyan, nét liền mảnh, nét 0.15mm)
+   - DIM_TEXT: Kích thước và chú thích (Màu 2 - Vàng, nét liền mảnh, nét 0.15mm)
+   - NET_GIOANG: Gioăng cao su và keo (Màu 1 - Đỏ, nét liền, nét 0.18mm)
+
+2. QUY CHUẨN HATCH NÉT KÍNH:
+   - Kính cường lực đơn: Hatch mẫu ANSI31, góc 45 độ, khoảng cách (scale) 10.
+   - Kính hộp (Double Glazing): Vẽ 2 lớp kính đơn song song, ở giữa hatch mẫu AR-SAND (scale 0.5) mô phỏng hạt hút ẩm khí trơ.
+
+3. KÝ HIỆU BẢN VẼ:
+   - Mặt cắt đứng: Đánh dấu kí hiệu A-A (Cắt ngang qua cánh và khung bao trên/dưới).
+   - Mặt cắt ngang: Đánh dấu kí hiệu B-B (Cắt ngang qua cánh và hai bên khung bao đứng).
+   - Chiều mở cửa: Đường nét đứt hình tam giác chỉ về phía bản lề mở quay.

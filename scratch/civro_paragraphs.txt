@@ -1,0 +1,410 @@
+Source: https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-civro-62.html
+
+=== PARAGRAPHS ===
+1: Civro GmbH, với trung tâm R&D và điều hành tại Würzburg, Đức, đã phát triển và cung cấp các hệ thống cửa nhôm và mặt dựng vượt trội cho các đối tác toàn cầu từ năm 1993. Với triết lý về an ninh, bảo vệ môi trường và tính bền vững, Catalogue nhôm Civro không ngừng mang đến nguồn cảm hứng thiết kế tuyệt vời cho các kiến trúc sư và nhà phát triển dự án.
+
+2: Catalogue nhôm Civro tập hợp các nguyên liệu và vật tư xuất sắc từ khắp nơi trên thế giới để tạo ra các hệ thống cửa nhôm với hiệu suất vượt trội, đáp ứng được các môi trường khắc nghiệt. Từ quá trình nấu chảy hợp kim, đùn ép, xử lý bề mặt cho đến sản xuất sản phẩm hoàn thiện, tất cả đều được thực hiện trong nhà máy của Civro để đảm bảo chất lượng tốt nhất và rút ngắn thời gian giao hàng.
+
+3: Civro đầu tư vào trung tâm thử nghiệm riêng để đảm bảo chất lượng sản phẩm thông qua các bài kiểm tra tiêu chuẩn quốc tế như độ bền cơ học, cách nhiệt, chống ăn mòn và khả năng chịu thời tiết. Các thông tin kiểm tra được chia sẻ với nhân viên và đối tác toàn cầu nhằm cung cấp sản phẩm và dịch vụ chất lượng cao cho từng thị trường.
+
+4: Hệ thống cửa nhôm của Catalogue nhôm Civro không chỉ là sự lắp ráp đơn giản của các thành phần khác nhau mà là một hệ thống tích hợp cao bao gồm thanh nhôm định hình, phụ kiện, kính, gioăng, vật tư phụ trợ và lắp đặt. Mỗi thành phần hoạt động hiệu quả như một đối tượng thiết kế duy nhất để đạt được hiệu suất mong đợi và trải nghiệm sử dụng tuyệt vời.
+
+5: Chống ồn và cách nhiệt vượt trội:
+
+6: Độ bền và an toàn cao:
+
+7: Lớp phủ MED độc quyền:
+
+8: Catalogue nhôm Civro không chỉ mang đến giải pháp cửa nhôm tiên tiến mà còn đáp ứng những nhu cầu khắt khe nhất của khách hàng. Với sự kết hợp của thiết kế thông minh và công nghệ tiên tiến, các sản phẩm của Catalogue nhôm Civro đảm bảo hiệu suất cao, bền bỉ và mang lại giá trị thẩm mỹ vượt trội cho mọi công trình.
+
+
+=== LIST ITEMS ===
+1: var base_url = 'https://nhomkinhdaiphuc.com';
+
+
+
+
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10979479051');
+
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-191434917-1');
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TJBQDZV');
+
+{
+"@context": "https://schema.org",
+"@type": "Organization",
+"url": "https://nhomkinhdaiphuc.com",
+"name": "Nhôm Kính Đại Phúc",
+"logo": "https://nhomkinhdaiphuc.com/thumb/900x675/1/assets/images/nhomkinhdaiphuc/nhom-kinh-dai-phuc.webp",
+"contactPoint" : [{
+"@type" : "ContactPoint",
+"telephone" : "+84899966699",
+"contactType" : "customer service",
+"areaServed": "VI"
+}],
+"sameAs" : [
+"https://www.facebook.com/nhomkinhdaiphuc",
+"https://www.youtube.com/@nhomkinhdaiphuc",
+"https://x.com/nhomkinhdaiphuc"
+]
+}
+
+
+{
+"@context":"http://schema.org",
+"@type":"BreadcrumbList",
+"itemListElement":[
+{
+"@type":"ListItem",
+"position":1,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com",
+"name":"Trang chủ"
+}
+},
+{ "@type":"ListItem",
+"position":2,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/cong-cu.html",
+"name":"Công cụ"
+}
+},
+{ "@type":"ListItem",
+"position":3,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/catalogue.html",
+"name":"Catalogue"
+}
+},
+{ "@type":"ListItem",
+"position":3,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-civro-62.html",
+"name":"Catalogue Nhôm Civro"
+}
+}
+]
+}
+
+
+{
+"@context":"http://schema.org",
+"@type":"NewsArticle",
+"mainEntityOfPage":{
+"@type":"WebPage",
+"@id":"https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-civro-62.html" 
+},
+"headline":"Catalogue Nhôm Civro",
+"description":"Khám phá Catalogue nhôm Civro 2023 với các hệ thống cửa nhôm tiên tiến, thiết kế hiện đại, chất lượng vượt trội, phù hợp cho mọi công trình xây dựng và kiến trúc.",
+"image":{
+"@type":"ImageObject",
+"url":"https://nhomkinhdaiphuc.com/upload/catalogue/catalogue-nhom-civro_330059.webp",
+"width":900,
+"height":675 },
+"datePublished":"2024-07-31T23:36:20+07:00", 
+"dateModified":"2024-07-31T23:37:33+07:00", 
+"author":{ 
+"@type":"Person",
+"name":"Nhôm kính Đại Phúc",
+"url":"https://nhomkinhdaiphuc.com"
+},
+"publisher":{ 
+"@type": "Organization", 
+"name":"Nhôm kính Đại Phúc",
+"logo":{ 
+"@type":"ImageObject",
+"url":"https://nhomkinhdaiphuc.com/assets/images/nhomkinhdaiphuc.webp" 
+} 
+}
+}
+
+
+  {
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "priceRange":"650.000 VND - 2.300.000 VND",
+  "image":"https://nhomkinhdaiphuc.com/assets/images/nhomkinhdaiphuc.webp",
+  "name" : "Chuyên thi công nhôm kính cường lực, cửa nhôm kính trên toàn quốc...",
+  "telephone": "+84899966699",
+  "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "1/5 Đường số 5, Phường 17, Q. Gò Vấp, TP. Hồ Chí Minh",
+  "addressLocality": "Hồ Chí Minh"
+  }
+  }
+
+
+
+
+
+    
+        
+<a class="logo_header" href="https://nhomkinhdaiphuc.com"
+title="Công Ty TNHH Nhôm Kính Đại Phúc">
+
+
+
+Công Ty TNHH Nhôm Kính Đại Phúc
+Chuyên thi công, lắp đặt kính cường lực, cửa nhôm Xingfa. Giá cạnh tranh, thi công nhanh, chất lượng
+09.19.02.00.88 - 09.22.24.66.99
+daiphucnhomkinh@gmail.com
+1/5 Đường số 5, Phường Gò Vấp, TP. Hồ Chí Minh
+
+
+
+
+    var configUrl = "https://nhomkinhdaiphuc.com";
+    var activeClass = "";
+    let login = "login";
+    
+    let avatar = "assets/images/user.svg";
+    if(login == 'member'){
+        let quyen = 0;
+        var pcLoginLi = '\
+                        \
+                            \
+                            Trang thành viên\
+
+2: Trang quản trị
+
+3: \
+                    \
+                    ';
+                    if(quyen === 1){
+                        mLoginLi += 'Trang quản trị';
+                    }
+                    else{
+                        mLoginLi += 'Trang thành viên';
+                    }
+            mLoginLi += '\
+                    Đăng xuất\
+                    \
+
+4: \
+                        \
+                            \
+                            Đăng nhập\
+
+5: \
+                            Đăng ký\
+
+6: \
+                    \
+                    \
+                    \
+                    Đăng nhập\
+                    \
+                    \
+                    Đăng ký\
+                    \
+
+7: Sản phẩm
+                
+                        Cửa Nhôm Xingfa
+
+8: Cửa Trượt Quay
+
+9: Cửa Nhôm Hệ Slim
+
+10: Cửa Nhôm Slim Cover
+
+11: Cửa Kính Cường Lực
+
+12: Cửa Nhôm Thủy Lực
+
+13: Cửa Nhôm Maxpro.JP
+
+14: Phòng Tắm Kính
+
+15: Cầu Thang - Lan Can Kính
+
+16: Cửa Tự Động
+
+17: Vách Kính Cường Lực
+
+18: Cửa Lưới Chống Muỗi
+
+19: Cửa Nhôm Kogen
+
+20: Kính Xây Dựng
+
+21: Cửa Nhôm PMA
+
+22: Cửa Nhôm Xingfa Class A
+
+23: Cửa Nhôm Tấm Tổ Ong
+
+24: Cửa Nhôm Yongxing
+
+25: Tủ Cánh Kính
+
+26: Cửa Nhôm Owin
+
+27: Cửa Nhôm Topal
+
+28: Cửa Nhôm Kenwin
+
+29: Bảng kính văn phòng
+
+30: Phụ kiện
+                
+                        Phụ Kện Cửa Slim
+
+31: Phụ Kiện Cửa Trượt Quay
+
+32: Phụ Kiện Papo
+
+33: Phụ Kiện Opk
+
+34: Phụ Kiện Draho
+
+35: Phụ Kiện Bogo
+
+36: Phụ Kiện Cmech
+
+37: Phụ Kiện Huy Hoàng
+
+38: Phụ Kiện KinLong
+
+39: Phụ Kiện Janus
+
+40: Khóa Điện Tử
+
+41: Phụ Kiện Candy
+
+42: Phụ Kiện Sigico
+
+43: Phụ Kiện Cửa Kính
+
+44: Phụ Kiện Hafele
+
+45: Phụ Kiện YKEBR
+
+46: Phụ Kiện 3H
+
+47: Báo giá
+                
+                        Báo Giá Cửa Nhôm
+
+48: Báo Giá Cửa Kính Cường Lực
+
+49: Báo Giá Vách Kính Cường Lực
+
+50: Báo Giá Lan Can - Cầu Thang Kính
+
+51: Công cụ
+        
+            Tài liệu catalogue
+
+52: Thước lỗ ban
+
+53: Đọc số thành chữ
+
+54: Lịch vạn niên
+
+55: Xem tuổi xây nhà
+
+56: Công cụ tính thuế
+
+57: Profile nhôm
+
+58: Tối ưu cắt vật liệu
+
+59: Tin tức
+                
+                        Tin tức thị trường
+
+60: Kiến thức về kính
+
+61: Kiến thức về nhôm
+
+62: Kiến thức về phụ kiện
+
+63: Kiến thức phong thủy
+
+64: Thương hiệu nhôm
+
+65: Video
+                
+                        Video cửa nhôm Slim
+
+66: Video cửa nhôm trượt quay
+
+67: Video cửa kính cường lực
+
+68: Video cửa trượt quay slim
+
+69: Video Cửa Nhôm Xingfa
+
+70: Video Cửa Nhôm Thủy Lực
+
+71: Video hướng dẫn lắp đặt cửa nhôm slim
+
+72: Catalogue Nhôm Civro
+
+73: Giới Thiệu Về Catalogue Nhôm Civro
+
+Civro GmbH, với trung tâm R&D và điều hành tại Würzburg, Đức, đã phát triển và cung cấp các hệ thống cửa nhôm và mặt dựng vượt trội cho các đối tác toàn cầu từ năm 1993. Với triết lý về an ninh, bảo vệ môi trường và tính bền vững, Catalogue nhôm Civro không ngừng mang đến nguồn cảm hứng thiết kế tuyệt vời cho các kiến trúc sư và nhà phát triển dự án.
+
+Hệ Thống Cửa Nhôm Civro
+
+Hệ Thống Cửa Sổ:
+
+
+	AW55IN: Cửa sổ mở vào trong
+
+74: AW55OU: Cửa sổ mở ra ngoài
+
+75: AW65IN: Cửa sổ mở vào trong
+
+76: AW65OU: Cửa sổ mở ra ngoài
+
+77: AW75IN: Cửa sổ mở vào trong
+
+78: AD55IN: Cửa đi mở vào trong
+
+79: AD55OU: Cửa đi mở ra ngoài
+
+80: AD65IN: Cửa đi mở vào trong
+
+81: AD65OU: Cửa đi mở ra ngoài
+
+82: AD75IN: Cửa đi mở vào trong
+
+83: AD75OU: Cửa đi mở ra ngoài
+
+84: Hệ thống gioăng tiêu chuẩn ngành hàng không Châu Âu, gồm 3 lớp gioăng, ngăn gió và nước hiệu quả.
+
+85: Khả năng cách âm lên đến 45dB với kính và gioăng hiệu suất cao.
+
+86: Hơn 100,000 chu kỳ mở cửa, chịu tải lên đến 170kg.
+
+87: Chống trộm đạt tiêu chuẩn EN RC2, tuổi thọ trên 30 năm.
+
+88: Bề mặt mịn, chống ăn mòn vượt trội, hiệu ứng mờ, bảo vệ thị lực.
+
+89: Trụ sở: 1/5 Đường Số 5, Phường 17, Quận Gò Vấp
+

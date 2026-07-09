@@ -1,0 +1,16 @@
+DANH MỤC THAM CHIẾU TÀI LIỆU GỐC CỦA CÁC HÃNG
+===================================================
+Thư mục này dùng để lưu trữ các file tài liệu gốc từ nhà sản xuất:
+1. Viralwindow (Việt Nam) - Catalogue & Hướng dẫn gia công hệ VRE, VRA
+2. Civro (Đức) - Catalogue kỹ thuật AW, AD, CSD, Lift Slide, MED coating
+3. Maxpro JP (Nhật Bản) - Catalogue hệ R, SD, SFD bền màu 40 năm
+4. Soco (Ý) - Catalogue hệ lùa 3 ray Soco 180, hệ Slim Soco
+5. PAG (Việt Nam) - Catalogue nhôm cầu cách nhiệt và Seamless Welded hàn góc CNC
+6. Owin (Việt Nam) - Catalogue cửa thủy lực Owin, cửa trượt quay Owin
+7. Topal (Austdoor) - Catalogue hệ Prima, Slima rãnh C Châu Âu
+8. EuroVN (QueenViet) - Catalogue hệ Gold, VIP vát cạnh 3D
+9. Yangli (Trung Quốc) - Catalogue hệ vát cạnh rãnh C tiết kiệm
+10. Xingfa (Trung Quốc) - Catalogue hệ mở quay 55, hệ lùa 93/95
+11. YKK AP (Nhật Bản) - Catalogue hệ YKK WS55, lùa SL90 chuẩn JIS
+12. Schüco (Đức) - Tài liệu hướng dẫn kỹ thuật AWS, ADS, ASS cao cấp
+13. Reynaers (Bỉ) - Tài liệu hệ CS60, CS77, CP155 cao cấp

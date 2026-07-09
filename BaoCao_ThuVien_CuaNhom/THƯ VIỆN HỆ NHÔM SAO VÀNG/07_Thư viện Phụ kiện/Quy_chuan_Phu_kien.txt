@@ -1,0 +1,14 @@
+TIÊU CHUẨN PHỐI HỢP PHỤ KIỆN VỚI HỆ CỬA NHÔM
+=================================================
+1. BẢN LỀ CỬA ĐI:
+   - Bản lề 3D CMECH (Đoạt chuẩn EU): Khả năng chịu lực 120kg/cánh, chỉnh hướng 3D.
+   - Bản lề thủy lực DICTATOR / Dorma: Dành cho cửa thủy lực bản rộng.
+   - Bản lề xếp lùa OPK / Roto: Cho cửa đi trượt gấp đa cánh.
+
+2. HỆ KHÓA ĐA ĐIỂM (MULTI-POINT LOCK):
+   - Phân tán lực khóa trên 3-5 điểm dọc khung bao giúp ép gioăng cao su tối đa, cách âm vượt trội.
+   - Tay nắm đồng bộ: Hoppe (Đức) sơn phủ xi mạ mờ, Giesse (Ý).
+
+3. HỆ GIOĂNG CAO SU (SEAL STRIPS):
+   - Gioăng EPDM đa khoang chống tia cực tím UV và lão hóa.
+   - Gioăng chèn kính: Gioăng trong và ngoài ôm chặt kính hạn chế nước thẩm thấu.

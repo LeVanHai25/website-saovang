@@ -1,0 +1,449 @@
+Source: https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-owin-63.html
+
+=== PARAGRAPHS ===
+1: Nhôm Owin là một trong những thương hiệu nổi bật trong lĩnh vực sản xuất nhôm định hình, với các dòng sản phẩm chất lượng cao được sử dụng rộng rãi trong các công trình xây dựng hiện đại. Catalogue Nhôm Owin cung cấp đầy đủ thông tin về các sản phẩm nhôm định hình, từ khung bao cửa, cửa sổ, cho đến các loại đố chia T, nẹp kính, và phụ kiện cửa nhôm. Bài viết này sẽ giới thiệu chi tiết về các sản phẩm nổi bật trong catalogue, đồng thời cung cấp thông tin hữu ích cho những ai đang tìm kiếm giải pháp nhôm cho công trình.
+
+2: Nhôm Owin mang đến nhiều lợi ích cho công trình, không chỉ về độ bền, tính thẩm mỹ mà còn cả khả năng chống chịu thời tiết. Một số lợi ích khi sử dụng nhôm Owin bao gồm:
+
+3: Catalogue nhôm Owin bao gồm nhiều loại sản phẩm khác nhau, từ các loại nhôm định hình đến các phụ kiện cửa nhôm. Dưới đây là một số sản phẩm chính:
+
+4: Khung bao cửa đi là một trong những sản phẩm chủ đạo của nhôm Owin. Được thiết kế để phù hợp với các loại cửa mở quay, cửa lùa, sản phẩm này đảm bảo độ chắc chắn và thẩm mỹ cho cửa nhôm:
+
+5: Ngoài cửa đi, nhôm Owin còn cung cấp khung bao cửa sổ với nhiều lựa chọn về kích thước và độ dày:
+
+6: Ngoài các sản phẩm nhôm định hình, catalogue còn cung cấp nhiều loại phụ kiện nhôm để hoàn thiện cửa và vách ngăn như:
+
+7: Nhôm Owin được sử dụng rộng rãi trong các công trình xây dựng dân dụng và thương mại. Dưới đây là một số ứng dụng phổ biến:
+
+8: Cửa nhôm kính là một trong những ứng dụng phổ biến cửa nhôm Owin, được sử dụng trong các công trình nhà ở và tòa nhà cao ốc.
+
+9: Ngoài cửa nhôm kính, nhôm Owin còn được sử dụng cho các vách ngăn kính, mang lại không gian mở và hiện đại cho công trình.
+
+10: Catalogue Nhôm Owin cung cấp đầy đủ thông tin về các sản phẩm nhôm, từ thông số kỹ thuật cho đến hình ảnh minh họa chi tiết, giúp người dùng dễ dàng chọn lựa sản phẩm phù hợp với nhu cầu của mình. Với sự đa dạng trong mẫu mã và chất lượng vượt trội, nhôm Owin là sự lựa chọn lý tưởng cho các công trình xây dựng hiện đại.
+
+11: Nhiều khách hàng đã tin dùng và có những nhận xét tích cực về sản phẩm nhôm Owin. Một số nhận xét nổi bật bao gồm:
+
+12: Catalogue Nhôm Owin là nguồn tài liệu hữu ích cho những ai đang tìm kiếm các sản phẩm nhôm định hình chất lượng cao cho công trình. Từ khung bao cửa đi, cửa sổ, đến các phụ kiện cửa nhôm, nhôm Owin mang đến giải pháp toàn diện, đảm bảo độ bền và thẩm mỹ cho mọi công trình. Nếu bạn đang tìm kiếm sản phẩm nhôm cho công trình của mình, đừng bỏ qua catalogue nhôm Owin.
+
+13: Nhôm Owin có phù hợp cho công trình ven biển không?
+
+14: Có những loại phụ kiện nào đi kèm với cửa nhôm Owin?
+
+15: Nhôm Owin có đa dạng về màu sắc không?
+
+16: Catalogue Nhôm Owin có sẵn hình ảnh minh họa không?
+
+17: Nhôm Owin có đảm bảo về chất lượng không?
+
+
+=== LIST ITEMS ===
+1: var base_url = 'https://nhomkinhdaiphuc.com';
+
+
+
+
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10979479051');
+
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-191434917-1');
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TJBQDZV');
+
+{
+"@context": "https://schema.org",
+"@type": "Organization",
+"url": "https://nhomkinhdaiphuc.com",
+"name": "Nhôm Kính Đại Phúc",
+"logo": "https://nhomkinhdaiphuc.com/thumb/900x675/1/assets/images/nhomkinhdaiphuc/nhom-kinh-dai-phuc.webp",
+"contactPoint" : [{
+"@type" : "ContactPoint",
+"telephone" : "+84899966699",
+"contactType" : "customer service",
+"areaServed": "VI"
+}],
+"sameAs" : [
+"https://www.facebook.com/nhomkinhdaiphuc",
+"https://www.youtube.com/@nhomkinhdaiphuc",
+"https://x.com/nhomkinhdaiphuc"
+]
+}
+
+
+{
+"@context":"http://schema.org",
+"@type":"BreadcrumbList",
+"itemListElement":[
+{
+"@type":"ListItem",
+"position":1,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com",
+"name":"Trang chủ"
+}
+},
+{ "@type":"ListItem",
+"position":2,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/cong-cu.html",
+"name":"Công cụ"
+}
+},
+{ "@type":"ListItem",
+"position":3,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/catalogue.html",
+"name":"Catalogue"
+}
+},
+{ "@type":"ListItem",
+"position":3,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-owin-63.html",
+"name":"Catalogue Nhôm Owin"
+}
+}
+]
+}
+
+
+{
+"@context":"http://schema.org",
+"@type":"NewsArticle",
+"mainEntityOfPage":{
+"@type":"WebPage",
+"@id":"https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-owin-63.html" 
+},
+"headline":"Catalogue Nhôm Owin",
+"description":"Catalogue Nhôm Owin cung cấp giải pháp nhôm định hình chất lượng cao cho công trình xây dựng, với đa dạng sản phẩm từ khung bao cửa đến phụ kiện cửa nhôm Owin",
+"image":{
+"@type":"ImageObject",
+"url":"https://nhomkinhdaiphuc.com/upload/catalogue/catalogue-nhom-owin_363800.webp",
+"width":900,
+"height":675 },
+"datePublished":"2024-10-03T13:51:16+07:00", 
+"dateModified":"2024-10-03T14:06:14+07:00", 
+"author":{ 
+"@type":"Person",
+"name":"Nhôm kính Đại Phúc",
+"url":"https://nhomkinhdaiphuc.com"
+},
+"publisher":{ 
+"@type": "Organization", 
+"name":"Nhôm kính Đại Phúc",
+"logo":{ 
+"@type":"ImageObject",
+"url":"https://nhomkinhdaiphuc.com/assets/images/nhomkinhdaiphuc.webp" 
+} 
+}
+}
+
+
+  {
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "priceRange":"650.000 VND - 2.300.000 VND",
+  "image":"https://nhomkinhdaiphuc.com/assets/images/nhomkinhdaiphuc.webp",
+  "name" : "Chuyên thi công nhôm kính cường lực, cửa nhôm kính trên toàn quốc...",
+  "telephone": "+84899966699",
+  "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "1/5 Đường số 5, Phường 17, Q. Gò Vấp, TP. Hồ Chí Minh",
+  "addressLocality": "Hồ Chí Minh"
+  }
+  }
+
+
+
+
+
+    
+        
+<a class="logo_header" href="https://nhomkinhdaiphuc.com"
+title="Công Ty TNHH Nhôm Kính Đại Phúc">
+
+
+
+Công Ty TNHH Nhôm Kính Đại Phúc
+Chuyên thi công, lắp đặt kính cường lực, cửa nhôm Xingfa. Giá cạnh tranh, thi công nhanh, chất lượng
+09.19.02.00.88 - 09.22.24.66.99
+daiphucnhomkinh@gmail.com
+1/5 Đường số 5, Phường Gò Vấp, TP. Hồ Chí Minh
+
+
+
+
+    var configUrl = "https://nhomkinhdaiphuc.com";
+    var activeClass = "";
+    let login = "login";
+    
+    let avatar = "assets/images/user.svg";
+    if(login == 'member'){
+        let quyen = 0;
+        var pcLoginLi = '\
+                        \
+                            \
+                            Trang thành viên\
+
+2: Trang quản trị
+
+3: \
+                    \
+                    ';
+                    if(quyen === 1){
+                        mLoginLi += 'Trang quản trị';
+                    }
+                    else{
+                        mLoginLi += 'Trang thành viên';
+                    }
+            mLoginLi += '\
+                    Đăng xuất\
+                    \
+
+4: \
+                        \
+                            \
+                            Đăng nhập\
+
+5: \
+                            Đăng ký\
+
+6: \
+                    \
+                    \
+                    \
+                    Đăng nhập\
+                    \
+                    \
+                    Đăng ký\
+                    \
+
+7: Sản phẩm
+                
+                        Cửa Nhôm Xingfa
+
+8: Cửa Trượt Quay
+
+9: Cửa Nhôm Hệ Slim
+
+10: Cửa Nhôm Slim Cover
+
+11: Cửa Kính Cường Lực
+
+12: Cửa Nhôm Thủy Lực
+
+13: Cửa Nhôm Maxpro.JP
+
+14: Phòng Tắm Kính
+
+15: Cầu Thang - Lan Can Kính
+
+16: Cửa Tự Động
+
+17: Vách Kính Cường Lực
+
+18: Cửa Lưới Chống Muỗi
+
+19: Cửa Nhôm Kogen
+
+20: Kính Xây Dựng
+
+21: Cửa Nhôm PMA
+
+22: Cửa Nhôm Xingfa Class A
+
+23: Cửa Nhôm Tấm Tổ Ong
+
+24: Cửa Nhôm Yongxing
+
+25: Tủ Cánh Kính
+
+26: Cửa Nhôm Owin
+
+27: Cửa Nhôm Topal
+
+28: Cửa Nhôm Kenwin
+
+29: Bảng kính văn phòng
+
+30: Phụ kiện
+                
+                        Phụ Kện Cửa Slim
+
+31: Phụ Kiện Cửa Trượt Quay
+
+32: Phụ Kiện Papo
+
+33: Phụ Kiện Opk
+
+34: Phụ Kiện Draho
+
+35: Phụ Kiện Bogo
+
+36: Phụ Kiện Cmech
+
+37: Phụ Kiện Huy Hoàng
+
+38: Phụ Kiện KinLong
+
+39: Phụ Kiện Janus
+
+40: Khóa Điện Tử
+
+41: Phụ Kiện Candy
+
+42: Phụ Kiện Sigico
+
+43: Phụ Kiện Cửa Kính
+
+44: Phụ Kiện Hafele
+
+45: Phụ Kiện YKEBR
+
+46: Phụ Kiện 3H
+
+47: Báo giá
+                
+                        Báo Giá Cửa Nhôm
+
+48: Báo Giá Cửa Kính Cường Lực
+
+49: Báo Giá Vách Kính Cường Lực
+
+50: Báo Giá Lan Can - Cầu Thang Kính
+
+51: Công cụ
+        
+            Tài liệu catalogue
+
+52: Thước lỗ ban
+
+53: Đọc số thành chữ
+
+54: Lịch vạn niên
+
+55: Xem tuổi xây nhà
+
+56: Công cụ tính thuế
+
+57: Profile nhôm
+
+58: Tối ưu cắt vật liệu
+
+59: Tin tức
+                
+                        Tin tức thị trường
+
+60: Kiến thức về kính
+
+61: Kiến thức về nhôm
+
+62: Kiến thức về phụ kiện
+
+63: Kiến thức phong thủy
+
+64: Thương hiệu nhôm
+
+65: Video
+                
+                        Video cửa nhôm Slim
+
+66: Video cửa nhôm trượt quay
+
+67: Video cửa kính cường lực
+
+68: Video cửa trượt quay slim
+
+69: Video Cửa Nhôm Xingfa
+
+70: Video Cửa Nhôm Thủy Lực
+
+71: Video hướng dẫn lắp đặt cửa nhôm slim
+
+72: Catalogue Nhôm Owin
+
+73: Nhôm Owin là một trong những thương hiệu nổi bật trong lĩnh vực sản xuất nhôm định hình, với các dòng sản phẩm chất lượng cao được sử dụng rộng rãi trong các công trình xây dựng hiện đại. Catalogue Nhôm Owin cung cấp đầy đủ thông tin về các sản phẩm nhôm định hình, từ khung bao cửa, cửa sổ, cho đến các loại đố chia T, nẹp kính, và phụ kiện cửa nhôm. Bài viết này sẽ giới thiệu chi tiết về các sản phẩm nổi bật trong catalogue, đồng thời cung cấp thông tin hữu ích cho những ai đang tìm kiếm giải pháp nhôm cho công trình.
+
+Lợi Ích Của Việc Sử Dụng Nhôm Owin Trong Xây Dựng
+
+Nhôm Owin mang đến nhiều lợi ích cho công trình, không chỉ về độ bền, tính thẩm mỹ mà còn cả khả năng chống chịu thời tiết. Một số lợi ích khi sử dụng nhôm Owin bao gồm:
+
+
+	Độ bền cao: Nhôm Owin được sản xuất từ chất liệu nhôm cao cấp, đảm bảo độ bền và khả năng chịu lực tốt.
+
+74: Chống ăn mòn: Với lớp phủ oxi hóa bề mặt, sản phẩm nhôm Owin có khả năng chống ăn mòn, phù hợp cho các công trình ven biển hoặc vùng có khí hậu khắc nghiệt.
+
+75: Thẩm mỹ hiện đại: Nhôm Owin có thiết kế đa dạng, với nhiều màu sắc và kiểu dáng phù hợp với các công trình hiện đại, từ nhà ở cho đến các tòa nhà cao ốc.
+
+76: OWIN - C3208: Trọng lượng 4.5 kg, chiều dài 6 mét, độ dày 1.2 mm.
+
+77: OWIN - C3329LS: Trọng lượng 2.7 kg, chiều dài 6 mét, độ dày 1.5 mm.
+
+78: OWIN - C3296: Trọng lượng 1.4 kg, chiều dài 6 mét, độ dày 1.0 mm.
+
+79: OWIN - C3304: Trọng lượng 11.5 kg, chiều dài 6 mét, độ dày 1.8 mm.
+
+80: OWIN - C3332D: Trọng lượng 8.9 kg, chiều dài 6 mét, độ dày 2.0 mm.
+
+81: OWIN - C3303D: Trọng lượng 8.9 kg, chiều dài 6 mét, độ dày 2.0 mm.
+
+82: OWIN - C3328D: Trọng lượng 7.6 kg, chiều dài 6 mét, độ dày 2.0 mm.
+
+83: OWIN - C3318: Trọng lượng 5.3 kg, chiều dài 6 mét, độ dày 1.4 mm.
+
+84: OWIN - C3202: Trọng lượng 6.0 kg, chiều dài 6 mét, độ dày 1.4 mm.
+
+85: OWIN - C3313: Trọng lượng 5.8 kg, chiều dài 6 mét, độ dày 1.2 mm.
+
+86: Độ bền cao: Khách hàng đánh giá cao độ bền của sản phẩm nhôm Owin, đặc biệt trong các điều kiện thời tiết khắc nghiệt.
+
+87: Thiết kế đẹp mắt: Sản phẩm có thiết kế hiện đại, phù hợp với nhiều phong cách kiến trúc.
+
+88: Nhôm Owin có phù hợp cho công trình ven biển không?
+
+	
+		Có, nhôm Owin có lớp phủ chống ăn mòn, rất phù hợp cho các công trình gần biển.
+
+89: Có những loại phụ kiện nào đi kèm với cửa nhôm Owin?
+
+	
+		Catalogue nhôm Owin cung cấp các phụ kiện như đố chia T, nẹp kính hộp, và khung bao cửa sổ.
+
+90: Nhôm Owin có đa dạng về màu sắc không?
+
+	
+		Có, nhôm Owin có nhiều lựa chọn màu sắc, từ xám, bạc đến đen, phù hợp với mọi công trình.
+
+91: Catalogue Nhôm Owin có sẵn hình ảnh minh họa không?
+
+	
+		Có, catalogue cung cấp hình ảnh minh họa chi tiết cho từng sản phẩm.
+
+92: Nhôm Owin có đảm bảo về chất lượng không?
+
+	
+		Nhôm Owin được sản xuất từ chất liệu cao cấp, đảm bảo chất lượng và độ bền theo thời gian.
+
+93: Trụ sở: 1/5 Đường Số 5, Phường 17, Quận Gò Vấp
+

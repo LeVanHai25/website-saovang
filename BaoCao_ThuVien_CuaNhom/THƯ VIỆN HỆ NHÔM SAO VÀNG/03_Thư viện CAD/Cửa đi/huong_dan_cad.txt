@@ -1,0 +1,11 @@
+QUY CHUẨN VẼ CAD HỆ CỬA: CỬA ĐI
+================================================
+1. Tỷ lệ bản vẽ (Scale): Vẽ tỷ lệ 1:1 trong Model Space, Block thể hiện 1:10 hoặc 1:5.
+2. Quản lý Layer:
+   - Layer 'CAD_Cua_di': Dùng nét mảnh để thể hiện khung cánh.
+   - Layer 'NET_THAY': Thể hiện các đường biên dạng của nhôm.
+   - Layer 'NET_KHUAT': Thể hiện đường bao khuất chèn bê tông hoặc gioăng cao su.
+   - Layer 'DIM_TEXT': Cho kích thước và ghi chú chữ.
+3. Quy chuẩn Hatch nét kính:
+   - Kính cường lực đơn: Hatch nét xiên 45 độ liền mảnh.
+   - Kính hộp chân không: Hatch 2 nét kính cách nhau 12mm chèn dải keo silicon đen.

@@ -1,0 +1,12 @@
+DANH MỤC VIDEO HƯỚNG DẪN KỸ THUẬT VÀ LẮP ĐẶT (MEDIA)
+===================================================
+1. VIDEO HƯỚNG DẪN LẮP ĐẶT (INTERNAL):
+   - [Video-01] Quy trình lắp đặt cửa trượt quay Owin ngoài công trình (Thời lượng 15:30)
+   - [Video-02] Hướng dẫn căn chỉnh ray giảm chấn cửa Slim nội thất liên động (Thời lượng 10:45)
+   - [Video-03] Thao tác ép góc CNC hệ nhôm cầu cách nhiệt PAG Seamless (Thời lượng 08:20)
+   - [Video-04] Hướng dẫn nêm đệm kính chống sệ cánh cho cửa đi chính AD65 Civro (Thời lượng 12:15)
+
+2. HÌNH ẢNH MẶT CẮT THỰC TẾ:
+   - [Image-01] Mặt cắt chi tiết thanh profile VRE65 có cầu cách nhiệt.png
+   - [Image-02] Hình ảnh thực tế bề mặt MED xi mạ của Civro màu mờ.jpg
+   - [Image-03] Cơ cấu góc ép và rãnh phụ kiện rãnh C Châu Âu thực tế.jpg

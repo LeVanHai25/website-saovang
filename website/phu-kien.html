@@ -572,26 +572,25 @@
       </a>
 
       <!-- Desktop nav -->
-      <nav class="nav-menu" role="navigation" aria-label="Menu chính">
-        <a href="index.html"           class="nav-menu-link">Trang Chủ</a>
+            <!-- Desktop nav menu (tinh gọn) -->
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-menu-link">Trang Chủ</a>
         <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
-        <a href="nhom-sao-vang.html"   class="nav-menu-link">Nhôm Sao Vàng</a>
-        <div class="nav-dropdown-wrap" role="none">
-          <button class="nav-menu-link nav-dropdown-trigger" aria-haspopup="true" aria-expanded="false">
-            Lĩnh Vực Hoạt Động <i class="ri-arrow-down-s-line" aria-hidden="true"></i>
-          </button>
+        <a href="nhom-sao-vang.html" class="nav-menu-link">Nhôm Sao Vàng</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
           <div class="nav-dropdown-menu" role="menu">
             <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan</a>
             <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
-            <a href="linh-vuc-nhom-kinh.html"   class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
           </div>
         </div>
-        <a href="du-an.html"       class="nav-menu-link">Dự Án Đã Thực Hiện</a>
-        <a href="san-pham.html"    class="nav-menu-link">Sản Phẩm</a>
-        <a href="thu-vien-sp.html" class="nav-menu-link">Thư Viện SP</a>
+        <a href="phu-kien.html" class="nav-menu-link active">Phụ Kiện</a>
         <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
-        <a href="tin-tuc.html"     class="nav-menu-link">Tin Tức</a>
-        <a href="lien-he.html"     class="nav-menu-link">Liên Hệ</a>
+        <a href="du-an.html" class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="lien-he.html" class="nav-menu-link">Liên Hệ</a>
       </nav>
 
       <!-- Hotline + Hamburger -->
@@ -609,17 +608,15 @@
 
   <!-- Mobile drawer -->
   <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
-  <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
-    <a href="index.html"              class="nav-drawer-link">Trang Chủ</a>
-    <a href="co-khi-sao-vang.html"   class="nav-drawer-link">Cơ Khí Sao Vàng</a>
-    <a href="nhom-sao-vang.html"     class="nav-drawer-link">Nhôm Sao Vàng</a>
+      <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html" class="nav-drawer-link">Trang Chủ</a>
+    <a href="co-khi-sao-vang.html" class="nav-drawer-link">Cơ Khí Sao Vàng</a>
+    <a href="nhom-sao-vang.html" class="nav-drawer-link">Nhôm Sao Vàng</a>
     <a href="linh-vuc-hoat-dong.html" class="nav-drawer-link">Lĩnh Vực Hoạt Động</a>
-    <a href="du-an.html"             class="nav-drawer-link">Dự Án Đã Thực Hiện</a>
-    <a href="san-pham.html"          class="nav-drawer-link">Sản Phẩm</a>
-    <a href="thu-vien-sp.html"       class="nav-drawer-link">Thư Viện SP</a>
-    <a href="thu-vien-profile-nhom.html"  class="nav-drawer-link">Profile Nhôm</a>
-    <a href="tin-tuc.html"           class="nav-drawer-link">Tin Tức</a>
-    <a href="lien-he.html"           class="nav-drawer-link">Liên Hệ</a>
+    <a href="phu-kien.html" class="nav-drawer-link active">Phụ Kiện</a>
+    <a href="thu-vien-profile-nhom.html" class="nav-drawer-link">Profile Nhôm</a>
+    <a href="du-an.html" class="nav-drawer-link">Dự Án Đã Thực Hiện</a>
+    <a href="lien-he.html" class="nav-drawer-link">Liên Hệ</a>
     <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
       <i class="ri-phone-fill"></i> 0869 590 279
     </a>
@@ -674,6 +671,209 @@
       </div>
     </div>
   </div>
+
+
+  <!-- ── BRAND INTRO SECTION ── -->
+  <section style="padding:72px 0; background:#fff;" aria-label="Giới thiệu thương hiệu phụ kiện">
+    <div class="sv-container">
+      <div style="text-align:center; margin-bottom:clamp(32px,5vw,52px);" data-sv-reveal>
+        <span class="sv-section-tag">3 THƯƠNG HIỆU NỒNG CỐT</span>
+        <h2 class="sv-section-title" style="margin-inline:auto;">Phụ Kiện Chính Hãng — Phân Tích Sâu Từng Dòng</h2>
+        <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); max-width:620px; margin-inline:auto; margin-top:var(--sv-sp-2); line-height:1.7;">
+          NKSV chỉ phân phối 3 thương hiệu cốt lõi — mỗi thương hiệu giải quyết một bài toán cụ thể khác nhau về hiệu năng, ngân sách và môi trường sử dụng.
+        </p>
+      </div>
+
+      <!-- CMECH -->
+      <div style="display:grid; grid-template-columns:340px 1fr; gap:clamp(24px,4vw,56px); align-items:center; margin-bottom:72px; padding-bottom:72px; border-bottom:1px solid #f0f0f0;" class="brand-row" data-sv-reveal>
+        <div style="background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%); border-radius:16px; padding:36px 28px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px; flex-shrink:0;">
+          <div style="width:72px; height:72px; background:rgba(212,175,55,0.15); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; color:#d4af37;">
+            <i class="ri-shield-star-line"></i>
+          </div>
+          <div style="font-family:var(--sv-font-head); font-size:28px; font-weight:900; color:#d4af37; letter-spacing:0.05em;">CMECH</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.6); font-weight:600; text-transform:uppercase; letter-spacing:0.1em;">Made in USA</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; width:100%; margin-top:8px;">
+            <div style="background:rgba(255,255,255,0.06); border-radius:8px; padding:12px 8px; text-align:center;">
+              <div style="font-family:var(--sv-font-head); font-size:20px; font-weight:900; color:#d4af37;">100K</div>
+              <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">Lần đóng mở</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.06); border-radius:8px; padding:12px 8px; text-align:center;">
+              <div style="font-family:var(--sv-font-head); font-size:20px; font-weight:900; color:#d4af37;">10x</div>
+              <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">Kháng muối mặn</div>
+            </div>
+          </div>
+          <a href="lien-he.html" style="display:inline-flex; align-items:center; gap:6px; background:#d4af37; color:#0f172a; padding:10px 20px; border-radius:8px; font-family:var(--sv-font-head); font-weight:800; font-size:13px; text-decoration:none; transition:all 0.2s; margin-top:4px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(212,175,55,0.4)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
+            Báo Giá CMECH <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+        <div>
+          <div style="display:inline-block; background:#fef3c7; color:#92400e; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; border-radius:4px; padding:4px 12px; margin-bottom:16px;">Phân Khúc Luxury &amp; Resort Biển</div>
+          <h3 style="font-family:var(--sv-font-head); font-size:clamp(20px,2.5vw,26px); font-weight:800; color:var(--sv-dark-900); margin-bottom:14px; line-height:1.3;">CMECH — Chí Lực Của Mỹ Để Giải Bài Toán Môi Trường Muối Biển</h3>
+          <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); line-height:1.7; margin-bottom:20px;">
+            CMECH (Hoa Kỳ) sử dụng công nghệ xử lý bề mặt độc quyền <strong>M-Treatment</strong> — lớp mạ đa tầng kích thước nano kháng muối NaCl gấp 10 lần so với tiêu chuẩn ASTM B117. Tất cả các tấm chất liệu cơ sở đều là hợp kim thau/inox 316L — không có thuyền thễ kếm chất lượng.
+          </p>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:24px;">
+            <div style="border:1px solid #e5e7eb; border-radius:8px; padding:14px 16px;">
+              <div style="font-size:11px; font-weight:700; color:var(--sv-red-600); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Dòng London Series</div>
+              <p style="font-size:12px; color:var(--sv-gray-text); line-height:1.5;">Tay nắm vô địch đa điểm khóa, dạng thẳng góc vuông, mạ PVD 18K Gold hoặc Black Chrome. Chuyên cho biệt thự Luxury và các khách sạn 5 sao.</p>
+            </div>
+            <div style="border:1px solid #e5e7eb; border-radius:8px; padding:14px 16px;">
+              <div style="font-size:11px; font-weight:700; color:var(--sv-red-600); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Dòng New York Series</div>
+              <p style="font-size:12px; color:var(--sv-gray-text); line-height:1.5;">Tay nắm kiểu dáng cửa đi văn phòng hiện đại, khóa 3 điểm kết hợp giải pháp chống vượt rào 2 cấp độ. Phù hợp cho cao ốc văn phòng và resort.</p>
+            </div>
+            <div style="border:1px solid #e5e7eb; border-radius:8px; padding:14px 16px;">
+              <div style="font-size:11px; font-weight:700; color:var(--sv-red-600); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Dòng Metro Series</div>
+              <p style="font-size:12px; color:var(--sv-gray-text); line-height:1.5;">Tay nắm mọng gon phù hợp cửa nhôm Slim 20-25mm. Bề mặt Matte Black hoặc Satin Nickel. Bảo hành 10 năm chống ăn mòn muối biển.</p>
+            </div>
+            <div style="border:1px solid #fef3c7; background:#fffbeb; border-radius:8px; padding:14px 16px;">
+              <div style="font-size:11px; font-weight:700; color:#92400e; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Cam Kết Chất Lượng</div>
+              <p style="font-size:12px; color:#78350f; line-height:1.5;"><strong>Bảo hành 100,000 lần đóng mở</strong> không hỏng. Test chuẩn ANSI/BHMA A156.2 Grade 1 — tiêu chuẩn cao nhất của Hoa Kỳ cho phụ kiện thương mại.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOGO -->
+      <div style="display:grid; grid-template-columns:1fr 340px; gap:clamp(24px,4vw,56px); align-items:center; margin-bottom:72px; padding-bottom:72px; border-bottom:1px solid #f0f0f0;" class="brand-row brand-row-reverse" data-sv-reveal>
+        <div>
+          <div style="display:inline-block; background:#dbeafe; color:#1e40af; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; border-radius:4px; padding:4px 12px; margin-bottom:16px;">Phân Khúc Cao Cấp &amp; Biệt Thự</div>
+          <h3 style="font-family:var(--sv-font-head); font-size:clamp(20px,2.5vw,26px); font-weight:800; color:var(--sv-dark-900); margin-bottom:14px; line-height:1.3;">BOGO — Bản Lề 4D Đức Quốc Chưa Từng Thất Bại Sau 15 Năm</h3>
+          <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); line-height:1.7; margin-bottom:20px;">
+            BOGO (Đức/OEM cao cấp) được chế tạo từ hợp kim nhôm đúc nguyên khối chất lượng đặc biệt, xi mạ Anodizing ngành Aerospace — cùng loại vật liệu được dùng trong công nghiệp hàng không. Bản lề 4D có thể điều chỉnh 4 hướng chỉnh cánh sau lắp đặt mà không cần tháo cửa.
+          </p>
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:24px;">
+            <div style="background:var(--sv-gray-025,#f9fafb); border-radius:8px; padding:14px; text-align:center;">
+              <div style="font-family:var(--sv-font-head); font-size:22px; font-weight:900; color:var(--sv-dark-900); margin-bottom:4px;">150kg</div>
+              <div style="font-size:11px; color:var(--sv-gray-text);">Chịu lực tải tối đa</div>
+            </div>
+            <div style="background:var(--sv-gray-025,#f9fafb); border-radius:8px; padding:14px; text-align:center;">
+              <div style="font-family:var(--sv-font-head); font-size:22px; font-weight:900; color:var(--sv-dark-900); margin-bottom:4px;">4D</div>
+              <div style="font-size:11px; color:var(--sv-gray-text);">Chỉnh hướng sau lắp</div>
+            </div>
+            <div style="background:var(--sv-gray-025,#f9fafb); border-radius:8px; padding:14px; text-align:center;">
+              <div style="font-family:var(--sv-font-head); font-size:22px; font-weight:900; color:var(--sv-dark-900); margin-bottom:4px;">15Y</div>
+              <div style="font-size:11px; color:var(--sv-gray-text);">Bảo hành độ chỉnh</div>
+            </div>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px;">
+            <span style="background:#eff6ff; color:#1e40af; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Bản lề 4D chính cánh 150kg</span>
+            <span style="background:#eff6ff; color:#1e40af; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Tay nắm Slim 18mm âm khóa</span>
+            <span style="background:#eff6ff; color:#1e40af; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Anodizing Aerospace grade</span>
+            <span style="background:#eff6ff; color:#1e40af; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Ren Rãnh C chuẩn Đức</span>
+          </div>
+          <a href="lien-he.html" class="sv-btn sv-btn-red">Báo Giá BOGO <i class="ri-arrow-right-line"></i></a>
+        </div>
+        <div style="background:linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 100%); border-radius:16px; padding:36px 28px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px; flex-shrink:0;">
+          <div style="width:72px; height:72px; background:rgba(255,255,255,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; color:#93c5fd;">
+            <i class="ri-settings-3-line"></i>
+          </div>
+          <div style="font-family:var(--sv-font-head); font-size:28px; font-weight:900; color:#fff; letter-spacing:0.05em;">BOGO</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.7); font-weight:600; text-transform:uppercase; letter-spacing:0.1em;">German Engineering / OEM</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; width:100%; margin-top:8px;">
+            <div style="background:rgba(255,255,255,0.1); border-radius:8px; padding:12px 8px; text-align:center;">
+              <div style="font-family:var(--sv-font-head); font-size:20px; font-weight:900; color:#bfdbfe;">150kg</div>
+              <div style="font-size:10px; color:rgba(255,255,255,0.6); margin-top:3px;">Tải trọng</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); border-radius:8px; padding:12px 8px; text-align:center;">
+              <div style="font-family:var(--sv-font-head); font-size:20px; font-weight:900; color:#bfdbfe;">4D</div>
+              <div style="font-size:10px; color:rgba(255,255,255,0.6); margin-top:3px;">Chỉnh hướng</div>
+            </div>
+          </div>
+          <a href="lien-he.html" style="display:inline-flex; align-items:center; gap:6px; background:#fff; color:#1e40af; padding:10px 20px; border-radius:8px; font-family:var(--sv-font-head); font-weight:800; font-size:13px; text-decoration:none; transition:all 0.2s; margin-top:4px;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='';">
+            Báo Giá BOGO <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- DRAHO -->
+      <div style="display:grid; grid-template-columns:340px 1fr; gap:clamp(24px,4vw,56px); align-items:center; margin-bottom:72px; padding-bottom:72px; border-bottom:1px solid #f0f0f0;" class="brand-row" data-sv-reveal>
+        <div style="background:linear-gradient(135deg,#065f46 0%,#059669 100%); border-radius:16px; padding:36px 28px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px; flex-shrink:0;">
+          <div style="width:72px; height:72px; background:rgba(255,255,255,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; color:#6ee7b7;">
+            <i class="ri-building-2-line"></i>
+          </div>
+          <div style="font-family:var(--sv-font-head); font-size:28px; font-weight:900; color:#fff; letter-spacing:0.05em;">DRAHO</div>
+          <div style="font-size:12px; color:rgba(255,255,255,0.7); font-weight:600; text-transform:uppercase; letter-spacing:0.1em;">China Premium OEM</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; width:100%; margin-top:8px;">
+            <div style="background:rgba(255,255,255,0.1); border-radius:8px; padding:12px 8px; text-align:center;">
+              <div style="font-family:var(--sv-font-head); font-size:20px; font-weight:900; color:#6ee7b7;">500+</div>
+              <div style="font-size:10px; color:rgba(255,255,255,0.6); margin-top:3px;">Mã sản phẩm</div>
+            </div>
+            <div style="background:rgba(255,255,255,0.1); border-radius:8px; padding:12px 8px; text-align:center;">
+              <div style="font-family:var(--sv-font-head); font-size:20px; font-weight:900; color:#6ee7b7;">-35%</div>
+              <div style="font-size:10px; color:rgba(255,255,255,0.6); margin-top:3px;">So với CMECH</div>
+            </div>
+          </div>
+          <a href="lien-he.html" style="display:inline-flex; align-items:center; gap:6px; background:#fff; color:#065f46; padding:10px 20px; border-radius:8px; font-family:var(--sv-font-head); font-weight:800; font-size:13px; text-decoration:none; transition:all 0.2s; margin-top:4px;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='';">
+            Báo Giá DRAHO <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+        <div>
+          <div style="display:inline-block; background:#dcfce7; color:#166534; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; border-radius:4px; padding:4px 12px; margin-bottom:16px;">Phân Khúc Trung Cấp &amp; Văn Phòng</div>
+          <h3 style="font-family:var(--sv-font-head); font-size:clamp(20px,2.5vw,26px); font-weight:800; color:var(--sv-dark-900); margin-bottom:14px; line-height:1.3;">DRAHO — Tối Ưu Chi Phí, Không Giảm Chất Lượng</h3>
+          <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); line-height:1.7; margin-bottom:20px;">
+            DRAHO là lựa chọn hàng đầu cho các công trình văn phòng, chung cư và nhà phố ưu tiên ngân sách. Đầy đủ chủng loại: bản lề 4D, thanh truyền động, con lăn bánh xe, tay nắm khóa đa điểm. Sản xuất tại nhà máy OEM ISO 9001 kiểm định bởi Bureau Veritas.
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px;">
+            <span style="background:#dcfce7; color:#166534; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Bản lề 4D tiêu chuẩn 80kg</span>
+            <span style="background:#dcfce7; color:#166534; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Thanh truyền động đa điểm</span>
+            <span style="background:#dcfce7; color:#166534; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Con lăn giảm chấn</span>
+            <span style="background:#dcfce7; color:#166534; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Tay nắm khóa đa dạng</span>
+            <span style="background:#dcfce7; color:#166534; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Giao hàng HN 24h</span>
+          </div>
+          <a href="lien-he.html" class="sv-btn sv-btn-red">Báo Giá DRAHO <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+
+      <!-- CAM KẾT CHÍNH HÃNG -->
+      <div style="background:linear-gradient(135deg,#7f1d1d 0%,#9b1c1c 100%); border-radius:20px; padding:clamp(32px,5vw,56px); color:#fff; display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,4vw,48px); align-items:center;" class="brand-row" data-sv-reveal>
+        <div>
+          <div style="font-size:11px; font-weight:800; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:12px;">CAM KẾT TỤ NKSV</div>
+          <h3 style="font-family:var(--sv-font-head); font-size:clamp(20px,2.5vw,28px); font-weight:900; color:#fff; margin-bottom:16px; line-height:1.25;">100% Chính Hãng — Đền Bù Gấp Đôi Nếu Phát Hiện Hàng Giả</h3>
+          <p style="font-size:var(--sv-fs-sm); color:rgba(255,255,255,0.8); line-height:1.7; margin-bottom:24px;">
+            NKSV cam kết: không tráo đổi phụ kiện loại 1 sang loại 2, không cung cấp hàng nhái hàng kém chất lượng. Mọi phụ kiện đều có tem chống giả và QR Code xác thực xuất xư. Nếu phát hiện sai phạm, NKSV đền bù <strong style="color:#fbbf24;">gấp đôi giá trị hợp đồng</strong>.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="lien-he.html" style="display:inline-flex; align-items:center; gap:8px; background:#d4af37; color:#0f172a; padding:13px 24px; border-radius:8px; font-family:var(--sv-font-head); font-weight:800; font-size:14px; text-decoration:none; transition:all 0.2s;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='';">
+              <i class="ri-phone-fill"></i> 0869 590 279
+            </a>
+            <a href="lien-he.html" style="display:inline-flex; align-items:center; gap:8px; background:transparent; color:#fff; padding:13px 24px; border-radius:8px; border:2px solid rgba(255,255,255,0.4); font-family:var(--sv-font-head); font-weight:700; font-size:14px; text-decoration:none; transition:all 0.2s;" onmouseover="this.style.borderColor='#fff'; this.style.background='rgba(255,255,255,0.1)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.4)'; this.style.background='transparent';">
+              Xem Chính Sách Bảo Hành <i class="ri-arrow-right-line"></i>
+            </a>
+          </div>
+        </div>
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:20px; text-align:center;">
+            <i class="ri-shield-check-line" style="font-size:28px; color:#fbbf24; display:block; margin-bottom:8px;"></i>
+            <div style="font-size:12px; font-weight:700; color:#fff; margin-bottom:4px;">Tem Chống Giả</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.6);">Tất cả sp đều có tem hologram chống sao chép</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:20px; text-align:center;">
+            <i class="ri-qr-code-line" style="font-size:28px; color:#fbbf24; display:block; margin-bottom:8px;"></i>
+            <div style="font-size:12px; font-weight:700; color:#fff; margin-bottom:4px;">QR Code Xác Thực</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.6);">Quét mã kiểm tra lô sản xuất thực tế</div>
+          </div>
+          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:20px; text-align:center;">
+            <i class="ri-file-list-3-line" style="font-size:28px; color:#fbbf24; display:block; margin-bottom:8px;"></i>
+            <div style="font-size:12px; font-weight:700; color:#fff; margin-bottom:4px;">CO/CQ Theo Lô</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.6);">Giấy chứng nhận xuất xứ kèm theo từng lô hàng</div>
+          </div>
+          <div style="background:rgba(255,215,0,0.15); border:1px solid rgba(255,215,0,0.3); border-radius:12px; padding:20px; text-align:center;">
+            <i class="ri-money-dollar-circle-line" style="font-size:28px; color:#fbbf24; display:block; margin-bottom:8px;"></i>
+            <div style="font-size:12px; font-weight:700; color:#fff; margin-bottom:4px;">Đền Bù Gấp Đôi</div>
+            <div style="font-size:11px; color:rgba(255,255,255,0.6);">Nếu phát hiện hàng không đúng nhãn hiệu đã cam kết</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @media (max-width: 900px) {
+        .brand-row { grid-template-columns: 1fr !important; }
+        .brand-row-reverse > div:first-child { order: 2; }
+        .brand-row-reverse > div:last-child { order: 1; }
+      }
+    </style>
+  </section>
 
   <!-- ── FILTER TABS ── -->
   <div class="filter-section">

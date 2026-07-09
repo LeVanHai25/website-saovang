@@ -1,0 +1,1520 @@
+Source: https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-eurovn-nhom-queenviet-19.html
+
+=== PARAGRAPHS ===
+1: Công ty QueenViet vừa ra mắt tài liệu Catalogue nhôm EuroVN, đây là một bước quan trọng để giới thiệu đến khách hàng về các sản phẩm nhôm chất lượng cao của EuroVN. Tài liệu này không chỉ cung cấp thông tin chi tiết về các sản phẩm nhôm mà còn hướng dẫn về quy trình sản xuất, giúp khách hàng hiểu rõ hơn về chất lượng và nguồn gốc của sản phẩm mình đang sử dụng.
+
+2: Trong tài liệu Catalogue nhôm EuroVN, bạn sẽ tìm thấy thông tin về các loại nhôm được sản xuất bởi EuroVN, từ nhôm hệ trượt quay, nhôm hệ thủy lực, nhôm hệ chấn song cho đến nhôm nội thất và nhiều sản phẩm khác. Mỗi sản phẩm đều được mô tả kỹ lưỡng với thông tin về kích thước, độ dày, màu sắc và tính năng đặc biệt, giúp khách hàng lựa chọn sản phẩm phù hợp với nhu cầu và ý thích của mình.
+
+3: Ngoài ra, tài liệu còn giới thiệu về quy trình sản xuất sản phẩm nhôm của EuroVN, từ giai đoạn nghiên cứu và thiết kế đến giai đoạn sản xuất và lắp đặt. Điều này giúp khách hàng hiểu rõ hơn về quá trình sản xuất, đảm bảo rằng sản phẩm nhôm mà họ sử dụng đạt được tiêu chuẩn chất lượng cao nhất.
+
+4: EuroVN luôn đặt chất lượng sản phẩm lên hàng đầu, với việc sử dụng nhôm cao cấp và công nghệ sản xuất hiện đại, sản phẩm nhôm của họ không chỉ bền bỉ mà còn mang lại vẻ đẹp estetik cao, phục vụ cho nhiều mục đích sử dụng khác nhau trong xây dựng và thiết kế nội thất.
+
+5: Tài liệu Catalogue nhôm EuroVN của công ty QueenViet không chỉ là một cẩm nang thông tin hữu ích mà còn là minh chứng rõ ràng về chất lượng sản phẩm của EuroVN. Khách hàng có thể yên tâm khi chọn mua sản phẩm nhôm của EuroVN, với đầy đủ thông tin và hướng dẫn chi tiết từ tài liệu này.Nhôm là một trong những vật liệu xây dựng phổ biến được sử dụng rộng rãi trong ngành công nghiệp xây dựng và thiết kế nội thất. Sản phẩm nhôm của EuroVN không chỉ có độ bền cao mà còn mang lại tính thẩm mỹ tinh tế, giúp tạo điểm nhấn cho không gian sống và làm việc.
+
+6: Với ứng dụng linh hoạt trong xây dựng và thiết kế nội thất, sản phẩm nhôm EuroVN được ưa chuộng bởi sự đa dạng trong màu sắc và kiểu dáng. Khách hàng có thể dễ dàng lựa chọn sản phẩm phù hợp với phong cách và không gian của mình, từ những sản phẩm cổ điển đến hiện đại, từ màu sắc truyền thống đến những gam màu mới lạ và đẳng cấp.
+
+7: Tài liệu Catalogue nhôm EuroVN không chỉ là nguồn thông tin hữu ích mà còn là cẩm nang tuyệt vời cho những ai quan tâm đến ngành nhôm kính. Qua đó, người đọc có thể hiểu rõ hơn về các sản phẩm nhôm chất lượng cao đang được EuroVN sản xuất và cung cấp trên thị trường. Đảm bảo chất lượng và đáp ứng đầy đủ các yêu cầu của khách hàng, sản phẩm nhôm EuroVN là sự lựa chọn hàng đầu cho các dự án xây dựng và trang trí nội thất.
+
+8: - Công dụng của tài liệu
+- Thông tin cơ bản về tài liệu
+
+9: - Giới thiệu về EuroVN
+- Các sản phẩm của EuroVN
+- Đặc điểm của sản phẩm nhôm EuroVN
+
+10: - Quy trình sản xuất sản phẩm nhôm EuroVN
+- Tiêu chuẩn chất lượng sản phẩm nhôm EuroVN
+
+11: - Độ bền và tính thẩm mỹ cao của sản phẩm
+- Ứng dụng trong xây dựng và thiết kế nội thất
+- Màu sắc đa dạng và đẳng cấp sang trọng
+
+12: V. Kết luận
+- Tài liệu Catalogue nhôm EuroVN là nguồn thông tin tuyệt vời cho người quan tâm đến ngành nhôm kính và muốn tìm hiểu về các sản phẩm nhôm đang được sản xuất bởi EuroVN.
+- Sản phẩm nhôm EuroVN đảm bảo chất lượng, đáp ứng đầy đủ các yêu cầu của khách hàng.
+
+
+=== LIST ITEMS ===
+1: var base_url = 'https://nhomkinhdaiphuc.com';
+
+
+
+
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10979479051');
+
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-191434917-1');
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TJBQDZV');
+
+{
+"@context": "https://schema.org",
+"@type": "Organization",
+"url": "https://nhomkinhdaiphuc.com",
+"name": "Nhôm Kính Đại Phúc",
+"logo": "https://nhomkinhdaiphuc.com/thumb/900x675/1/assets/images/nhomkinhdaiphuc/nhom-kinh-dai-phuc.webp",
+"contactPoint" : [{
+"@type" : "ContactPoint",
+"telephone" : "+84899966699",
+"contactType" : "customer service",
+"areaServed": "VI"
+}],
+"sameAs" : [
+"https://www.facebook.com/nhomkinhdaiphuc",
+"https://www.youtube.com/@nhomkinhdaiphuc",
+"https://x.com/nhomkinhdaiphuc"
+]
+}
+
+
+{
+"@context":"http://schema.org",
+"@type":"BreadcrumbList",
+"itemListElement":[
+{
+"@type":"ListItem",
+"position":1,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com",
+"name":"Trang chủ"
+}
+},
+{ "@type":"ListItem",
+"position":2,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/cong-cu.html",
+"name":"Công cụ"
+}
+},
+{ "@type":"ListItem",
+"position":3,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/catalogue.html",
+"name":"Catalogue"
+}
+},
+{ "@type":"ListItem",
+"position":3,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-eurovn-nhom-queenviet-19.html",
+"name":"Catalogue nhôm EuroVN, nhôm QueenViet"
+}
+}
+]
+}
+
+
+{
+"@context":"http://schema.org",
+"@type":"NewsArticle",
+"mainEntityOfPage":{
+"@type":"WebPage",
+"@id":"https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-eurovn-nhom-queenviet-19.html" 
+},
+"headline":"Catalogue nhôm EuroVN, nhôm QueenViet",
+"description":"Catalogue nhôm EuroVN, nhôm QueenViet. Catalogue nhôm EuroVN gồm nhiều thông tin hữu ích như loại nhôm, kích thước, độ dày, màu sắc và tính năng của nhôm EuroVN",
+"image":{
+"@type":"ImageObject",
+"url":"https://nhomkinhdaiphuc.com/upload/catalogue/catalogue-nhom-euvn-nhom-queen-viet_218116132426.webp",
+"width":900,
+"height":675 },
+"datePublished":"2023-02-24T06:25:28+07:00", 
+"dateModified":"2024-09-25T15:07:11+07:00", 
+"author":{ 
+"@type":"Person",
+"name":"Nhôm kính Đại Phúc",
+"url":"https://nhomkinhdaiphuc.com"
+},
+"publisher":{ 
+"@type": "Organization", 
+"name":"Nhôm kính Đại Phúc",
+"logo":{ 
+"@type":"ImageObject",
+"url":"https://nhomkinhdaiphuc.com/assets/images/nhomkinhdaiphuc.webp" 
+} 
+}
+}
+
+
+  {
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "priceRange":"650.000 VND - 2.300.000 VND",
+  "image":"https://nhomkinhdaiphuc.com/assets/images/nhomkinhdaiphuc.webp",
+  "name" : "Chuyên thi công nhôm kính cường lực, cửa nhôm kính trên toàn quốc...",
+  "telephone": "+84899966699",
+  "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "1/5 Đường số 5, Phường 17, Q. Gò Vấp, TP. Hồ Chí Minh",
+  "addressLocality": "Hồ Chí Minh"
+  }
+  }
+
+
+
+
+
+    
+        
+<a class="logo_header" href="https://nhomkinhdaiphuc.com"
+title="Công Ty TNHH Nhôm Kính Đại Phúc">
+
+
+
+Công Ty TNHH Nhôm Kính Đại Phúc
+Chuyên thi công, lắp đặt kính cường lực, cửa nhôm Xingfa. Giá cạnh tranh, thi công nhanh, chất lượng
+09.19.02.00.88 - 09.22.24.66.99
+daiphucnhomkinh@gmail.com
+1/5 Đường số 5, Phường Gò Vấp, TP. Hồ Chí Minh
+
+
+
+
+    var configUrl = "https://nhomkinhdaiphuc.com";
+    var activeClass = "";
+    let login = "login";
+    
+    let avatar = "assets/images/user.svg";
+    if(login == 'member'){
+        let quyen = 0;
+        var pcLoginLi = '\
+                        \
+                            \
+                            Trang thành viên\
+
+2: Trang quản trị
+
+3: \
+                    \
+                    ';
+                    if(quyen === 1){
+                        mLoginLi += 'Trang quản trị';
+                    }
+                    else{
+                        mLoginLi += 'Trang thành viên';
+                    }
+            mLoginLi += '\
+                    Đăng xuất\
+                    \
+
+4: \
+                        \
+                            \
+                            Đăng nhập\
+
+5: \
+                            Đăng ký\
+
+6: \
+                    \
+                    \
+                    \
+                    Đăng nhập\
+                    \
+                    \
+                    Đăng ký\
+                    \
+
+7: Sản phẩm
+                
+                        Cửa Nhôm Xingfa
+
+8: Cửa Trượt Quay
+
+9: Cửa Nhôm Hệ Slim
+
+10: Cửa Nhôm Slim Cover
+
+11: Cửa Kính Cường Lực
+
+12: Cửa Nhôm Thủy Lực
+
+13: Cửa Nhôm Maxpro.JP
+
+14: Phòng Tắm Kính
+
+15: Cầu Thang - Lan Can Kính
+
+16: Cửa Tự Động
+
+17: Vách Kính Cường Lực
+
+18: Cửa Lưới Chống Muỗi
+
+19: Cửa Nhôm Kogen
+
+20: Kính Xây Dựng
+
+21: Cửa Nhôm PMA
+
+22: Cửa Nhôm Xingfa Class A
+
+23: Cửa Nhôm Tấm Tổ Ong
+
+24: Cửa Nhôm Yongxing
+
+25: Tủ Cánh Kính
+
+26: Cửa Nhôm Owin
+
+27: Cửa Nhôm Topal
+
+28: Cửa Nhôm Kenwin
+
+29: Bảng kính văn phòng
+
+30: Phụ kiện
+                
+                        Phụ Kện Cửa Slim
+
+31: Phụ Kiện Cửa Trượt Quay
+
+32: Phụ Kiện Papo
+
+33: Phụ Kiện Opk
+
+34: Phụ Kiện Draho
+
+35: Phụ Kiện Bogo
+
+36: Phụ Kiện Cmech
+
+37: Phụ Kiện Huy Hoàng
+
+38: Phụ Kiện KinLong
+
+39: Phụ Kiện Janus
+
+40: Khóa Điện Tử
+
+41: Phụ Kiện Candy
+
+42: Phụ Kiện Sigico
+
+43: Phụ Kiện Cửa Kính
+
+44: Phụ Kiện Hafele
+
+45: Phụ Kiện YKEBR
+
+46: Phụ Kiện 3H
+
+47: Báo giá
+                
+                        Báo Giá Cửa Nhôm
+
+48: Báo Giá Cửa Kính Cường Lực
+
+49: Báo Giá Vách Kính Cường Lực
+
+50: Báo Giá Lan Can - Cầu Thang Kính
+
+51: Công cụ
+        
+            Tài liệu catalogue
+
+52: Thước lỗ ban
+
+53: Đọc số thành chữ
+
+54: Lịch vạn niên
+
+55: Xem tuổi xây nhà
+
+56: Công cụ tính thuế
+
+57: Profile nhôm
+
+58: Tối ưu cắt vật liệu
+
+59: Tin tức
+                
+                        Tin tức thị trường
+
+60: Kiến thức về kính
+
+61: Kiến thức về nhôm
+
+62: Kiến thức về phụ kiện
+
+63: Kiến thức phong thủy
+
+64: Thương hiệu nhôm
+
+65: Video
+                
+                        Video cửa nhôm Slim
+
+66: Video cửa nhôm trượt quay
+
+67: Video cửa kính cường lực
+
+68: Video cửa trượt quay slim
+
+69: Video Cửa Nhôm Xingfa
+
+70: Video Cửa Nhôm Thủy Lực
+
+71: Video hướng dẫn lắp đặt cửa nhôm slim
+
+72: Catalogue nhôm EuroVN, nhôm QueenViet
+
+73: Công ty QueenViet vừa ra mắt tài liệu Catalogue nhôm EuroVN, đây là một bước quan trọng để giới thiệu đến khách hàng về các sản phẩm nhôm chất lượng cao của EuroVN. Tài liệu này không chỉ cung cấp thông tin chi tiết về các sản phẩm nhôm mà còn hướng dẫn về quy trình sản xuất, giúp khách hàng hiểu rõ hơn về chất lượng và nguồn gốc của sản phẩm mình đang sử dụng.
+
+Trong tài liệu Catalogue nhôm EuroVN, bạn sẽ tìm thấy thông tin về các loại nhôm được sản xuất bởi EuroVN, từ nhôm hệ trượt quay, nhôm hệ thủy lực, nhôm hệ chấn song cho đến nhôm nội thất và nhiều sản phẩm khác. Mỗi sản phẩm đều được mô tả kỹ lưỡng với thông tin về kích thước, độ dày, màu sắc và tính năng đặc biệt, giúp khách hàng lựa chọn sản phẩm phù hợp với nhu cầu và ý thích của mình.
+
+Ngoài ra, tài liệu còn giới thiệu về quy trình sản xuất sản phẩm nhôm của EuroVN, từ giai đoạn nghiên cứu và thiết kế đến giai đoạn sản xuất và lắp đặt. Điều này giúp khách hàng hiểu rõ hơn về quá trình sản xuất, đảm bảo rằng sản phẩm nhôm mà họ sử dụng đạt được tiêu chuẩn chất lượng cao nhất.
+
+EuroVN luôn đặt chất lượng sản phẩm lên hàng đầu, với việc sử dụng nhôm cao cấp và công nghệ sản xuất hiện đại, sản phẩm nhôm của họ không chỉ bền bỉ mà còn mang lại vẻ đẹp estetik cao, phục vụ cho nhiều mục đích sử dụng khác nhau trong xây dựng và thiết kế nội thất.
+
+Tài liệu Catalogue nhôm EuroVN của công ty QueenViet không chỉ là một cẩm nang thông tin hữu ích mà còn là minh chứng rõ ràng về chất lượng sản phẩm của EuroVN. Khách hàng có thể yên tâm khi chọn mua sản phẩm nhôm của EuroVN, với đầy đủ thông tin và hướng dẫn chi tiết từ tài liệu này.Nhôm là một trong những vật liệu xây dựng phổ biến được sử dụng rộng rãi trong ngành công nghiệp xây dựng và thiết kế nội thất. Sản phẩm nhôm của EuroVN không chỉ có độ bền cao mà còn mang lại tính thẩm mỹ tinh tế, giúp tạo điểm nhấn cho không gian sống và làm việc.
+
+Với ứng dụng linh hoạt trong xây dựng và thiết kế nội thất, sản phẩm nhôm EuroVN được ưa chuộng bởi sự đa dạng trong màu sắc và kiểu dáng. Khách hàng có thể dễ dàng lựa chọn sản phẩm phù hợp với phong cách và không gian của mình, từ những sản phẩm cổ điển đến hiện đại, từ màu sắc truyền thống đến những gam màu mới lạ và đẳng cấp.
+
+Tài liệu Catalogue nhôm EuroVN không chỉ là nguồn thông tin hữu ích mà còn là cẩm nang tuyệt vời cho những ai quan tâm đến ngành nhôm kính. Qua đó, người đọc có thể hiểu rõ hơn về các sản phẩm nhôm chất lượng cao đang được EuroVN sản xuất và cung cấp trên thị trường. Đảm bảo chất lượng và đáp ứng đầy đủ các yêu cầu của khách hàng, sản phẩm nhôm EuroVN là sự lựa chọn hàng đầu cho các dự án xây dựng và trang trí nội thất.
+
+I. Giới thiệu về Tài liệu Catalogue nhôm EuroVN
+
+- Công dụng của tài liệu
+- Thông tin cơ bản về tài liệu
+
+II. Thông tin về sản phẩm nhôm EuroVN
+
+- Giới thiệu về EuroVN
+- Các sản phẩm của EuroVN
+- Đặc điểm của sản phẩm nhôm EuroVN
+
+III. Hướng dẫn chi tiết về quy trình sản xuất sản phẩm nhôm EuroVN
+
+- Quy trình sản xuất sản phẩm nhôm EuroVN
+- Tiêu chuẩn chất lượng sản phẩm nhôm EuroVN
+
+IV. Lợi ích của việc sử dụng sản phẩm nhôm EuroVN
+
+- Độ bền và tính thẩm mỹ cao của sản phẩm
+- Ứng dụng trong xây dựng và thiết kế nội thất
+- Màu sắc đa dạng và đẳng cấp sang trọng
+
+V. Kết luận
+- Tài liệu Catalogue nhôm EuroVN là nguồn thông tin tuyệt vời cho người quan tâm đến ngành nhôm kính và muốn tìm hiểu về các sản phẩm nhôm đang được sản xuất bởi EuroVN.
+- Sản phẩm nhôm EuroVN đảm bảo chất lượng, đáp ứng đầy đủ các yêu cầu của khách hàng.
+            
+
+            
+                
+                    Thông tin liên hệ:
+                    
+                        Công Ty TNHH Nhôm Kính Đại Phúc                    
+                    Address: 1/5 Đường số 5, Phường Gò Vấp, TP. Hồ Chí Minh
+                    
+                        Phone:  09.19.02.00.88                    
+                    
+                        Email: daiphucnhomkinh@gmail.com
+                    
+                
+            
+        
+    
+    
+    
+    
+        
+        Catalogue khác
+        
+            
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Trường Thành                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm xingfa nhập khẩu Quảng Đông                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Nhôm Maxpro JP năm 2023 đầy đủ các hệ nhôm                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Phụ Kiện Maxpro                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Cửa Nhôm Slim                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue phụ kiện 3H                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Nhôm Yangli                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue phụ kiện Cmech thương hiệu USA                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Topal                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Nhôm Owin                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Nhôm Civro                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Kenwin                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Nhôm Grando                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue phụ kiện Janus                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Phụ Kiện Sevendays                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue phụ kiện cửa kính Draho                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Keo Silicone Antas                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Slim Cover Xingfa                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Xingfa Quảng Đông                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Xingfa 55 sơn Anodized                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue phụ kiện cửa nhôm kính Huy Hoàng                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Nhôm BenLuxury                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Hondalex LongVanGroup                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm nội thất Omega                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm cánh kính Ocean Luxury                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue phụ kiện nhôm kính Draho                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Cửa Nhôm Tostem                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Soco                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue phụ kiện Fapim Italy                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue mái che nhôm Maxpro                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue phụ kiện Draho dành cho cửa thủy lực                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Topal hệ thủy lực                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Zhongkai                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Đông Á                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm cầu cách nhiệt PAG                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm HOPO                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue phụ kiện Sigico                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Nhôm Cánh Kính                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm PMI                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Xingfa Việt Nam                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Xingfa Window                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue phụ kiện Hafele cửa và ngũ kim                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Kinlong tiếng việt                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue phụ kiện Vickini                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue phòng tắm kính Gymek                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Namsung                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Tiến Đạt năm 2022                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Việt Pháp SHAL                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue Cửa Trượt Quay Eurotech                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm CAD                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Xingfa Class A                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Maxpro                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Yongxing                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm Kogen                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue nhôm PMA                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue cửa slim Papo                        
+                    
+                    Xem chi tết
+                    
+                
+                                
+                    
+                        
+                        
+                    
+                    
+                        
+                        Catalogue phụ kiện VVP Thái Lan                        
+                    
+                    Xem chi tết
+                    
+                
+                            
+            Xem tất cả
+        
+    
+    
+
+$(document).ready(function(){
+    // 1. Xử lý đếm lượt download
+    $('#download').click(function(){
+        var id = 19;
+        $.ajax({
+            type:"POST",
+            url:"ajax/xuly.php",
+            data:{act:'luot_download', table:'catalogue', id:id},
+            success:function(data){}
+        })
+    });
+
+    // 2. Chỉnh chiều cao ảnh thumbnail
+    var width = $(".item_product_content .images img").width();
+    if(width > 0) {
+        $(".item_product_content .images img").attr('height',width);
+    }
+
+    // 3. Cấu hình Flipbook
+    var pdfUrl = 'https://nhomkinhdaiphuc.com/upload/catalogue/catalogue-eurovn-2022-qv-008861.pdf';
+    
+    if($("#flipbookContainer").length){
+        var options = {
+            webgl: true,
+            webglShadow: true,
+            soundEnable: true,
+            showSearchControl: true,
+            height: 800, // QUAN TRỌNG: Set chiều cao để tránh lỗi hiển thị
+            autoEnableOutline: false,
+            autoEnableThumbnail: false,
+            overwritePDFOutline: false,
+            enableDownload: false,
+            duration: 800,
+            direction: DFLIP.DIRECTION.LTR,
+            pageMode: DFLIP.PAGE_MODE.AUTO,
+            singlePageMode: DFLIP.SINGLE_PAGE_MODE.AUTO,
+            backgroundColor: "#fff",
+            forceFit: true,
+            transparent: false,
+            hard: "none",
+            autoPlay: false, 
+            
+            // Dịch thuật
+            text: {
+                toggleSound: "Bật / tắt âm thanh",
+                toggleThumbnails: "Danh sách ảnh nhỏ",
+                toggleOutline: "Mục lục",
+                previousPage: "Trang trước",
+                nextPage: "Trang sau",
+                toggleFullscreen: "Chế độ toàn màn hình",
+                zoomIn: "Phóng to",
+                zoomOut: "Thu nhỏ",
+                toggleHelp: "Trợ giúp",
+                singlePageMode: "Chế độ trang đơn",
+                doublePageMode: "Chế độ trang kép",
+                downloadPDFFile: "Tải file PDF",
+                search: "Tìm kiếm",
+                loading: "Đang tải..."
+            },
+            allControls: "pageNumber,thumbnail,zoomIn,zoomOut,search,fullScreen,more,pageMode,startPage,endPage,sound"
+        };
+
+        // Khởi tạo sách
+        var flipBook = $("#flipbookContainer").flipBook(pdfUrl, options);
+
+        // ============================================================
+        // 4. TÍNH NĂNG: LĂN CHUỘT ĐỂ LẬT TRANG (KHÔNG TRÔI WEB)
+        // ============================================================
+        var container = document.getElementById('flipbookContainer');
+        var isFlipping = false;
+
+        // Sử dụng Javascript thuần để can thiệp sâu vào sự kiện cuộn (passive: false)
+        container.addEventListener('wheel', function(e) {
+            // Chặn trình duyệt cuộn trang
+            e.preventDefault();
+            e.stopPropagation();
+
+            if(isFlipping) return;
+
+            var delta = e.deltaY;
+            var $container = $(container);
+            var $nextBtn = $container.find('.df-ui-next');
+            var $prevBtn = $container.find('.df-ui-prev');
+
+            // Lăn xuống -> Next
+            if (delta > 0) {
+                if($nextBtn.length && !$nextBtn.hasClass('disabled')) {
+                    $nextBtn.trigger('click');
+                }
+            } 
+            // Lăn lên -> Prev
+            else {
+                if($prevBtn.length && !$prevBtn.hasClass('disabled')) {
+                    $prevBtn.trigger('click');
+                }
+            }
+
+            // Debounce: Chặn lật liên tục trong 0.5s
+            isFlipping = true;
+            setTimeout(function(){
+                isFlipping = false;
+            }, 500);
+
+        }, { passive: false }); 
+        // ============================================================
+    }
+});
+
+
+        
+        
+            
+
+
+ĐƠN VỊ ĐỐI TÁC CỦA CHÚNG TÔI
+
+
+
+
+
+Silicone Apollo
+
+
+
+Nhôm Maxpro.JP
+
+
+
+Phụ kiện Janus
+
+
+
+Nhôm PMI
+
+
+
+Nhôm PMA
+
+
+
+Nhôm Topal
+
+
+
+XingfaWindow
+
+
+
+Nhôm Yongxing
+
+
+
+Phụ kiện Sigico
+
+
+
+Phụ kiện Cmech
+
+
+
+Nội thất nhà xinh
+
+
+
+Phụ kiện Draho
+
+
+
+Phụ kiện Bogo
+
+
+
+Nhôm Zongkai
+
+
+
+Phụ Kiện Adler
+
+
+
+Nhôm Xingfa
+
+
+
+Nhà Thầu Cotecons
+
+
+
+Phụ Kiện KinLong
+
+
+
+
+
+$(document).ready(function(){
+var width = $(".item_doitac").width();
+var height = $(".item_doitac").height();
+$(".item_doitac img").attr('width',width);
+$(".item_doitac img").attr('height',height);
+})
+
+
+
+
+ 
+
+
+ -->
+
+
+
+    
+        
+        
+            Thông tin liên hệ
+            
+                Công Ty TNHH Nhôm Kính Đại Phúc
+            
+            
+                Địa chỉ: 1/5 Đường số 5, Phường Gò Vấp, TP. Hồ Chí Minh
+            
+            
+                Mã số thuế: 0316769803
+            
+            
+                Hotline: 
+                09.19.02.00.88
+                                     - 
+                    09.22.24.66.99
+                            
+            
+                Email: daiphucnhomkinh@gmail.com
+            
+            
+                Website: https://nhomkinhdaiphuc.com
+            
+        
+
+        
+        
+            Điều khoản sử dụng
+                            
+                    Chính sách và Quy định chung
+                
+                            
+                    Quy định và hình thức thanh toán
+                
+                            
+                    Chính sách vận chuyển và giao hàng
+                
+                            
+                    Chính sách bảo mật thông tin
+                
+                            
+                    Chính sách đổi trả và bảo hành
+                
+                            
+                    Hướng dẫn mua hàng online
+                
+                        
+                
+                    
+                
+                
+                    
+                
+            
+        
+
+        
+        
+            Sản phẩm
+                            
+                    Cửa Nhôm Xingfa
+                
+                            
+                    Cửa Trượt Quay
+                
+                            
+                    Cửa Nhôm Hệ Slim
+                
+                            
+                    Cửa Nhôm Slim Cover
+                
+                            
+                    Cửa Kính Cường Lực
+                
+                            
+                    Cửa Nhôm Thủy Lực
+                
+                            
+                    Cửa Nhôm Maxpro.JP
+                
+                            
+                    Phòng Tắm Kính
+                
+                            
+                    Cầu Thang - Lan Can Kính
+                
+                            
+                    Cửa Tự Động
+                
+                            
+                    Vách Kính Cường Lực
+                
+                            
+                    Cửa Lưới Chống Muỗi
+                
+                            
+                    Cửa Nhôm Kogen
+                
+                            
+                    Kính Xây Dựng
+                
+                            
+                    Cửa Nhôm PMA
+                
+                            
+                    Cửa Nhôm Xingfa Class A
+                
+                            
+                    Cửa Nhôm Tấm Tổ Ong
+                
+                            
+                    Cửa Nhôm Yongxing
+                
+                            
+                    Tủ Cánh Kính
+                
+                            
+                    Cửa Nhôm Owin
+                
+                            
+                    Cửa Nhôm Topal
+                
+                            
+                    Cửa Nhôm Kenwin
+                
+                            
+                    Bảng kính văn phòng
+                
+                    
+
+        
+        
+            Gửi thông tin tư vấn
+            
+                Hãy để lại địa chỉ email của bạn để nhận thông tin tư vấn, báo giá sản phẩm. 
+                                
+                    
+                    GỬI
+                
+            
+            
+                Social:
+                                    
+                        
+                            
+                        
+                    
+                                    
+                        
+                            
+                        
+                    
+                                    
+                        
+                            
+                        
+                    
+                            
+        
+    
+
+    
+            
+                        
+                Hệ thống chi nhánh
+                
+                    
+                                                    
+                                
+                                    Trụ sở: 1/5 Đường Số 5, Phường 17, Quận Gò Vấp
+

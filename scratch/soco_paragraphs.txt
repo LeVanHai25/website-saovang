@@ -1,0 +1,444 @@
+Source: https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-soco-44.html
+
+=== PARAGRAPHS ===
+1: Cùng với xu thế phát triển xã hội, nhu cầu về kiến trúc công trình nói chung và ngành cửa nói riêng ngày càng đa dạng. SOCO System ra đời như một giải pháp đáp ứng tối đa những tiêu chí về công năng và thiết kế, mang lại không gian sang trọng, đẳng cấp cho các công trình.
+
+2: SOCO - Solution Construction - là hệ nhôm được sản xuất theo công nghệ Anode hiện đại và công nghệ sơn tĩnh điện phủ bóng cao cấp. Sản phẩm được sản xuất theo tiêu chuẩn Châu Âu - European Standards (Profile nhôm rãnh C) kết hợp với phụ kiện đồng bộ nhập khẩu.
+
+3: Cấu trúc hệ nhôm SOCO đáp ứng thiết kế cửa có kích thước cánh lớn, tạo không gian rộng, chịu lực tác động mạnh cũng như giảm tải trọng cho công trình. Mang đậm phong cách Italy, nhôm SOCO sở hữu đường nét thiết kế lịch lãm và tinh tế với bề mặt bóng mịn, màu sắc đa dạng, nổi bật nhất là màu Vàng ánh kim (Champagne).
+
+4: Nhôm Anode là loại nhôm được nhúng vào bể Anodized gồm các hóa chất Acetone, Acid Sulfuric đậm đặc. Dòng điện chạy qua bể này sẽ tạo ra quá trình Oxy hóa, sản sinh một lớp bọc mỏng nhưng rất cứng trên bề mặt nhôm.
+
+5: Để biết thêm chi tiết về sản phẩm nhôm SOCO và nhận được tư vấn, xin vui lòng liên hệ:
+
+
+=== LIST ITEMS ===
+1: var base_url = 'https://nhomkinhdaiphuc.com';
+
+
+
+
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-10979479051');
+
+
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-191434917-1');
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TJBQDZV');
+
+{
+"@context": "https://schema.org",
+"@type": "Organization",
+"url": "https://nhomkinhdaiphuc.com",
+"name": "Nhôm Kính Đại Phúc",
+"logo": "https://nhomkinhdaiphuc.com/thumb/900x675/1/assets/images/nhomkinhdaiphuc/nhom-kinh-dai-phuc.webp",
+"contactPoint" : [{
+"@type" : "ContactPoint",
+"telephone" : "+84899966699",
+"contactType" : "customer service",
+"areaServed": "VI"
+}],
+"sameAs" : [
+"https://www.facebook.com/nhomkinhdaiphuc",
+"https://www.youtube.com/@nhomkinhdaiphuc",
+"https://x.com/nhomkinhdaiphuc"
+]
+}
+
+
+{
+"@context":"http://schema.org",
+"@type":"BreadcrumbList",
+"itemListElement":[
+{
+"@type":"ListItem",
+"position":1,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com",
+"name":"Trang chủ"
+}
+},
+{ "@type":"ListItem",
+"position":2,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/cong-cu.html",
+"name":"Công cụ"
+}
+},
+{ "@type":"ListItem",
+"position":3,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/catalogue.html",
+"name":"Catalogue"
+}
+},
+{ "@type":"ListItem",
+"position":3,
+"item":{
+"@id":"https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-soco-44.html",
+"name":"Catalogue nhôm Soco"
+}
+}
+]
+}
+
+
+{
+"@context":"http://schema.org",
+"@type":"NewsArticle",
+"mainEntityOfPage":{
+"@type":"WebPage",
+"@id":"https://nhomkinhdaiphuc.com/catalogue/catalogue-nhom-soco-44.html" 
+},
+"headline":"Catalogue nhôm Soco",
+"description":"Catalogue nhôm Soco giới thiệu các dòng sản phẩm nhôm cao cấp, thiết kế sang trọng và tính năng vượt trội. Sản phẩm được sản xuất theo tiêu chuẩn Châu Âu",
+"image":{
+"@type":"ImageObject",
+"url":"https://nhomkinhdaiphuc.com/upload/catalogue/catalogue-nhom-soco_412513.webp",
+"width":900,
+"height":675 },
+"datePublished":"2024-05-29T22:53:39+07:00", 
+"dateModified":"2024-05-29T22:53:39+07:00", 
+"author":{ 
+"@type":"Person",
+"name":"Nhôm kính Đại Phúc",
+"url":"https://nhomkinhdaiphuc.com"
+},
+"publisher":{ 
+"@type": "Organization", 
+"name":"Nhôm kính Đại Phúc",
+"logo":{ 
+"@type":"ImageObject",
+"url":"https://nhomkinhdaiphuc.com/assets/images/nhomkinhdaiphuc.webp" 
+} 
+}
+}
+
+
+  {
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "priceRange":"650.000 VND - 2.300.000 VND",
+  "image":"https://nhomkinhdaiphuc.com/assets/images/nhomkinhdaiphuc.webp",
+  "name" : "Chuyên thi công nhôm kính cường lực, cửa nhôm kính trên toàn quốc...",
+  "telephone": "+84899966699",
+  "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "1/5 Đường số 5, Phường 17, Q. Gò Vấp, TP. Hồ Chí Minh",
+  "addressLocality": "Hồ Chí Minh"
+  }
+  }
+
+
+
+
+
+    
+        
+<a class="logo_header" href="https://nhomkinhdaiphuc.com"
+title="Công Ty TNHH Nhôm Kính Đại Phúc">
+
+
+
+Công Ty TNHH Nhôm Kính Đại Phúc
+Chuyên thi công, lắp đặt kính cường lực, cửa nhôm Xingfa. Giá cạnh tranh, thi công nhanh, chất lượng
+09.19.02.00.88 - 09.22.24.66.99
+daiphucnhomkinh@gmail.com
+1/5 Đường số 5, Phường Gò Vấp, TP. Hồ Chí Minh
+
+
+
+
+    var configUrl = "https://nhomkinhdaiphuc.com";
+    var activeClass = "";
+    let login = "login";
+    
+    let avatar = "assets/images/user.svg";
+    if(login == 'member'){
+        let quyen = 0;
+        var pcLoginLi = '\
+                        \
+                            \
+                            Trang thành viên\
+
+2: Trang quản trị
+
+3: \
+                    \
+                    ';
+                    if(quyen === 1){
+                        mLoginLi += 'Trang quản trị';
+                    }
+                    else{
+                        mLoginLi += 'Trang thành viên';
+                    }
+            mLoginLi += '\
+                    Đăng xuất\
+                    \
+
+4: \
+                        \
+                            \
+                            Đăng nhập\
+
+5: \
+                            Đăng ký\
+
+6: \
+                    \
+                    \
+                    \
+                    Đăng nhập\
+                    \
+                    \
+                    Đăng ký\
+                    \
+
+7: Sản phẩm
+                
+                        Cửa Nhôm Xingfa
+
+8: Cửa Trượt Quay
+
+9: Cửa Nhôm Hệ Slim
+
+10: Cửa Nhôm Slim Cover
+
+11: Cửa Kính Cường Lực
+
+12: Cửa Nhôm Thủy Lực
+
+13: Cửa Nhôm Maxpro.JP
+
+14: Phòng Tắm Kính
+
+15: Cầu Thang - Lan Can Kính
+
+16: Cửa Tự Động
+
+17: Vách Kính Cường Lực
+
+18: Cửa Lưới Chống Muỗi
+
+19: Cửa Nhôm Kogen
+
+20: Kính Xây Dựng
+
+21: Cửa Nhôm PMA
+
+22: Cửa Nhôm Xingfa Class A
+
+23: Cửa Nhôm Tấm Tổ Ong
+
+24: Cửa Nhôm Yongxing
+
+25: Tủ Cánh Kính
+
+26: Cửa Nhôm Owin
+
+27: Cửa Nhôm Topal
+
+28: Cửa Nhôm Kenwin
+
+29: Bảng kính văn phòng
+
+30: Phụ kiện
+                
+                        Phụ Kện Cửa Slim
+
+31: Phụ Kiện Cửa Trượt Quay
+
+32: Phụ Kiện Papo
+
+33: Phụ Kiện Opk
+
+34: Phụ Kiện Draho
+
+35: Phụ Kiện Bogo
+
+36: Phụ Kiện Cmech
+
+37: Phụ Kiện Huy Hoàng
+
+38: Phụ Kiện KinLong
+
+39: Phụ Kiện Janus
+
+40: Khóa Điện Tử
+
+41: Phụ Kiện Candy
+
+42: Phụ Kiện Sigico
+
+43: Phụ Kiện Cửa Kính
+
+44: Phụ Kiện Hafele
+
+45: Phụ Kiện YKEBR
+
+46: Phụ Kiện 3H
+
+47: Báo giá
+                
+                        Báo Giá Cửa Nhôm
+
+48: Báo Giá Cửa Kính Cường Lực
+
+49: Báo Giá Vách Kính Cường Lực
+
+50: Báo Giá Lan Can - Cầu Thang Kính
+
+51: Công cụ
+        
+            Tài liệu catalogue
+
+52: Thước lỗ ban
+
+53: Đọc số thành chữ
+
+54: Lịch vạn niên
+
+55: Xem tuổi xây nhà
+
+56: Công cụ tính thuế
+
+57: Profile nhôm
+
+58: Tối ưu cắt vật liệu
+
+59: Tin tức
+                
+                        Tin tức thị trường
+
+60: Kiến thức về kính
+
+61: Kiến thức về nhôm
+
+62: Kiến thức về phụ kiện
+
+63: Kiến thức phong thủy
+
+64: Thương hiệu nhôm
+
+65: Video
+                
+                        Video cửa nhôm Slim
+
+66: Video cửa nhôm trượt quay
+
+67: Video cửa kính cường lực
+
+68: Video cửa trượt quay slim
+
+69: Video Cửa Nhôm Xingfa
+
+70: Video Cửa Nhôm Thủy Lực
+
+71: Video hướng dẫn lắp đặt cửa nhôm slim
+
+72: Catalogue nhôm Soco
+
+73: Catalogue Nhôm Soco
+
+Giới Thiệu Về Nhôm Soco
+
+Cùng với xu thế phát triển xã hội, nhu cầu về kiến trúc công trình nói chung và ngành cửa nói riêng ngày càng đa dạng. SOCO System ra đời như một giải pháp đáp ứng tối đa những tiêu chí về công năng và thiết kế, mang lại không gian sang trọng, đẳng cấp cho các công trình.
+
+SOCO - Solution Construction - là hệ nhôm được sản xuất theo công nghệ Anode hiện đại và công nghệ sơn tĩnh điện phủ bóng cao cấp. Sản phẩm được sản xuất theo tiêu chuẩn Châu Âu - European Standards (Profile nhôm rãnh C) kết hợp với phụ kiện đồng bộ nhập khẩu.
+
+Cấu trúc hệ nhôm SOCO đáp ứng thiết kế cửa có kích thước cánh lớn, tạo không gian rộng, chịu lực tác động mạnh cũng như giảm tải trọng cho công trình. Mang đậm phong cách Italy, nhôm SOCO sở hữu đường nét thiết kế lịch lãm và tinh tế với bề mặt bóng mịn, màu sắc đa dạng, nổi bật nhất là màu Vàng ánh kim (Champagne).
+
+Công Nghệ Anode
+
+Nhôm Anode là loại nhôm được nhúng vào bể Anodized gồm các hóa chất Acetone, Acid Sulfuric đậm đặc. Dòng điện chạy qua bể này sẽ tạo ra quá trình Oxy hóa, sản sinh một lớp bọc mỏng nhưng rất cứng trên bề mặt nhôm.
+
+Ưu Điểm Của Nhôm Anode:
+
+
+	Chống ăn mòn muối biển
+
+74: Khả năng chịu nhiệt tốt
+
+75: Chống oxy hóa
+
+76: Thiết kế cách âm, cách nhiệt tối ưu
+
+77: Rãnh C tiêu chuẩn châu Âu
+
+78: Gioăng trung gian và gioăng nẹp cao su
+
+79: Mã sản phẩm: SOCO6501M, SOCO6502M, SOCO6503M, SOCO6509, SOCO6501, SOCO6502, SOCO6504, SOCO6505, SOCO6506
+
+80: Độ dày: 1.0 - 2.0 mm
+
+81: Trọng lượng: 0.704 - 1.908 kg/m
+
+82: Rãnh C tiêu chuẩn Châu Âu
+
+83: Ray Inox giúp vận hành êm ái
+
+84: Hệ gioăng tăng độ bền, kín khí
+
+85: Mã sản phẩm: SOCO9401, SOCO9402, SOCO9403, SOCO9405, SOCO9406, SOCO9407, SOCO9411, SOCO9412, SOCO9421
+
+86: Độ dày: 1.0 - 1.6 mm
+
+87: Trọng lượng: 0.184 - 2.205 kg/m
+
+88: Rãnh truyền động theo tiêu chuẩn Châu Âu
+
+89: Phụ kiện tích hợp đồng bộ, cao cấp
+
+90: Độ dày - cứng vượt trội, tối ưu khả năng chịu tải trọng cao
+
+91: Mã sản phẩm: SOCO12001, SOCO12002, SOCO12003, SOCO12004, SOCO12005, SOCO12006, SOCO12007, SOCO12008, SOCO12009
+
+92: Độ dày: 1.0 - 2.0 mm
+
+93: Trọng lượng: 0.197 - 2.446 kg/m
+
+94: Rãnh truyền động theo tiêu chuẩn Châu Âu
+
+95: Phụ kiện tích hợp đồng bộ, cao cấp
+
+96: Độ dày - cứng vượt trội, tối ưu khả năng chịu tải trọng cao
+
+97: Mã sản phẩm: SOCO18002, SOCO18010, SOCO18001, SOCO18003, SOCO18004, SOCO18005, SOCO18006, SOCO18007, SOCO18008
+
+98: Độ dày: 1.0 - 2.0 mm
+
+99: Trọng lượng: 0.078 - 2.747 kg/m
+
+100: Thiết kế sang trọng, đẳng cấp theo phong cách Italy
+
+101: Sản phẩm bền bỉ với thời gian, chống trầy xước và ăn mòn tốt
+
+102: Đa dạng về màu sắc và mẫu mã, phù hợp với nhiều loại công trình
+
+103: Hotline: 0919 02 00 88
+
+104: Website: soco-italy.com
+
+105: Trụ sở: 1/5 Đường Số 5, Phường 17, Quận Gò Vấp
+

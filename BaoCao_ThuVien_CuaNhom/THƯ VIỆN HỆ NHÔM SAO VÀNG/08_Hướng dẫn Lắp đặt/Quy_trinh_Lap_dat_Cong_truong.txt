@@ -1,0 +1,29 @@
+QUY TRÌNH THI CÔNG LẮP DỰNG CỬA NHÔM KÍNH SAO VÀNG
+===================================================
+BƯỚC 1: KHẢO SÁT VÀ ĐO ĐẠC Ô CHỜ:
+   - Kiểm tra kích thước ô chờ tường xây tô hoàn thiện (W, H, đường chéo d1, d2).
+   - Kiểm tra cốt 0.0 sàn hoàn thiện để tính khe hở chân cửa. Sai số cho phép ±3mm.
+
+BƯỚC 2: LIÊN KẾT KHUNG BAO VÀO TƯỜNG:
+   - Định vị khung bao bằng vít nở inox SUS304 M8x80mm. Khoảng cách giữa các vít ≤ 600mm.
+   - Đệm chêm nhựa hoặc cao su cứng tại các điểm bắt vít để cố định hình dạng nhôm.
+
+BƯỚC 3: LẮP CÁNH CỬA VÀ KÍNH CƯỜNG LỰC:
+   - Lắp bản lề và cánh vào khung bao.
+   - Đặt kính chèn đệm nêm nhựa cứng xung quanh cạnh kính để nâng đỡ và phân bổ trọng lượng.
+
+BƯỚC 4: BƠM KEO BỌT POLYURETHANE (PU):
+   - Bơm keo bọt nở lấp đầy khe hở giữa khung nhôm và tường xây tô.
+   - Chờ keo khô 60 phút, cắt bỏ phần thừa phẳng với mặt nhôm.
+
+BƯỚC 5: BƠM KEO SILICON CHỐNG THẤM NGOÀI TRỜI:
+   - Sử dụng keo silicon trung tính Dow Corning 791 hoặc Apollo A500.
+   - Đường keo rộng 8-12mm căng phẳng mịn góc 45 độ đảm bảo nước mưa thoát nhanh.
+
+BƯỚC 6: CĂN CHỈNH VÀ CHẠY THỬ PHỤ KIỆN:
+   - Căn chỉnh bản lề 3D, thanh chuyển động khóa đa điểm.
+   - Thử nghiệm đóng mở tối thiểu 10 lần đảm bảo êm ái, gioăng ép đều toàn viền.
+
+BƯỚC 7: VỆ SINH VÀ BÀN GIAO:
+   - Bóc màng PE bảo vệ nhôm, làm sạch kính và nhôm bằng dung dịch lau chuyên dụng.
+   - Bàn giao chìa khóa và biên bản nghiệm thu kỹ thuật.

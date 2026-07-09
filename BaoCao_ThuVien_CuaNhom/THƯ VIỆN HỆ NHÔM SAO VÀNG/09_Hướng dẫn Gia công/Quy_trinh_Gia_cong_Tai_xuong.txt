@@ -1,0 +1,21 @@
+QUY TRÌNH GIA CÔNG SẢN XUẤT CỬA NHÔM TẠI XƯỞNG
+===================================================
+1. CẮT NHÔM:
+   - Máy cắt 2 đầu CNC đạt độ chính xác chiều dài ±0.5mm, góc cắt 45 hoặc 90 độ hoàn chỉnh.
+   - Sử dụng dầu làm mát bôi trơn lưỡi cắt hợp kim chuyên dụng.
+
+2. ĐỘT DẬP VÀ KHOÉT KHÓA:
+   - Khoét lỗ tay nắm, lỗ khóa, lỗ thoát nước mưa bằng máy phay CNC hoặc đột dập thủy lực.
+   - Đảm bảo biên dạng lỗ khoét khớp hoàn toàn với thông số hãng phụ kiện.
+
+3. LIÊN KẾT GÓC (ÉP GÓC THỦY LỰC):
+   - Sử dụng ke góc nhôm đúc đúc sẵn kết hợp ke ma thuật tăng cứng.
+   - Bơm keo ép góc PU (Polyurethane) chuyên dụng chịu nhiệt vào khoang nhôm trước khi ép.
+   - Ép góc bằng máy ép góc thủy lực kỹ thuật số lực ép ≥ 50kN.
+
+4. LUỒN GIOĂNG CAO SU:
+   - Luồn gioăng EPDM đa khoang vào khe nhôm. Tại các góc cua, cắt chéo gioăng 45 độ và nhỏ keo 502/keo dán gioăng đặc chủng liên kết kín.
+
+5. LẮP PHỤ KIỆN VÀ HOÀN THIỆN BAN ĐẦU:
+   - Lắp sẵn bản lề, khóa, thanh truyền động theo bản vẽ thiết kế.
+   - Quấn màng bảo vệ chống trầy xước bề mặt nhôm trước khi đóng gói xuất xưởng.

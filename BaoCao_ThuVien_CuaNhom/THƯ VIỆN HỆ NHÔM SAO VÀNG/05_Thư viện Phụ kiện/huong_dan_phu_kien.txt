@@ -1,0 +1,6 @@
+QUY CHUẨN PHỤ KIỆN KIM KHÍ ĐỒNG BỘ
+================================================
+1. Bản lề 3D / Bản lề ma sát: Phải kiểm tra góc mở tối đa (90 - 180 độ) để chống va vào tường.
+2. Thân khóa đa điểm: Rãnh truyền động phải khớp với thanh truyền lực chuyển động của tay nắm.
+3. Bánh xe chịu lực: Bánh xe inox đúc đơn/kép chịu tải cánh sổ lùa từ 80kg, cánh đi lùa từ 150kg - 400kg.
+4. Xem bản vẽ mẫu: Ban_le_3D_Cmech.dxf và Khoa_Da_Diem_Hopo.dxf.
