@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#9B1C1C" />
+  <title>Báo Giá Nhôm Kính Tức Thì — Tính Giá Online | Cơ Khí Sao Vàng</title>
+  <meta name="description" content="Tính giá nhôm kính tức thì online: chọn hãng nhôm, loại cửa, kích thước → nhận giá ước tính ngay trong vài giây. Không ràng buộc, miễn phí hoàn toàn." />
+  <meta name="keywords" content="báo giá nhôm kính, tính giá cửa nhôm, giá nhôm xingfa, giá cửa nhôm 2024, báo giá tức thì" />
+  <link rel="canonical" href="https://www.CoKhiSaoVang.com/bao-gia-nhom.html" />
+  <meta property="og:title" content="Tính Giá Nhôm Kính Tức Thì — Sao Vàng" />
+  <meta property="og:description" content="Công cụ tính giá nhôm kính online: chọn hãng, loại cửa, kích thước → giá ước tính ngay lập tức." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    /* ── Page Layout ── */
+    .calc-page { background: #f0f4f8; min-height: 100vh; }
+
+    /* ── Hero ── */
+    .calc-hero {
+      background: linear-gradient(135deg, #0f1923 0%, #1a2940 60%, #9b1c1c 100%);
+      padding: 80px 0 60px; text-align: center; position: relative; overflow: hidden;
+    }
+    .calc-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 70% 50%, rgba(155,28,28,.3) 0%, transparent 60%);
+    }
+    .calc-hero-content { position: relative; z-index: 2; padding: 0 24px; }
+    .calc-hero h1 {
+      font-family: 'Montserrat', sans-serif; font-size: clamp(26px,5vw,48px);
+      font-weight: 900; color: #fff; margin: 14px 0 12px; line-height: 1.15;
+    }
+    .calc-hero h1 span { color: #f5c842; }
+    .calc-hero p { font-size: 15px; color: rgba(255,255,255,.75); max-width: 500px; margin: 0 auto; }
+
+    /* ── Steps Wizard ── */
+    .steps-container { max-width: 860px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    .step-progress {
+      display: flex; gap: 0; margin-bottom: 36px; background: #fff;
+      border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.06);
+    }
+    .step-tab {
+      flex: 1; padding: 16px 8px; text-align: center; font-size: 11px; font-weight: 800;
+      font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: .05em;
+      color: #94a3b8; border: none; background: none; cursor: pointer;
+      transition: all .3s; border-right: 1px solid #f1f5f9; position: relative;
+    }
+    .step-tab:last-child { border-right: none; }
+    .step-tab.active { background: #9b1c1c; color: #fff; }
+    .step-tab.done { background: #f0fdf4; color: #15803d; }
+    .step-tab .step-num {
+      display: block; font-size: 18px; font-weight: 900; margin-bottom: 3px;
+    }
+    .step-tab.done .step-num::after { content: ' ✓'; }
+
+    /* ── Step Cards ── */
+    .step-panel { display: none; }
+    .step-panel.active { display: block; }
+    .step-card {
+      background: #fff; border-radius: 20px; padding: 32px;
+      box-shadow: 0 4px 24px rgba(0,0,0,.06); margin-bottom: 20px;
+    }
+    .step-card-title {
+      font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 900;
+      color: #1a2940; margin-bottom: 6px;
+    }
+    .step-card-sub { font-size: 13px; color: #64748b; margin-bottom: 28px; }
+
+    /* ── Brand Grid (Step 1) ── */
+    .brand-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: 14px; }
+    .brand-option {
+      border: 2px solid #e2e8f0; border-radius: 14px; padding: 20px 16px; text-align: center;
+      cursor: pointer; transition: all .25s; background: #fff;
+    }
+    .brand-option:hover { border-color: #9b1c1c; transform: translateY(-2px); }
+    .brand-option.selected { border-color: #9b1c1c; background: #fef2f2; box-shadow: 0 0 0 3px rgba(155,28,28,.12); }
+    .brand-option-name {
+      font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 900;
+      margin-bottom: 4px;
+    }
+    .brand-option-sub { font-size: 11px; color: #64748b; font-weight: 600; }
+    .brand-option-range { font-size: 12px; font-weight: 800; color: #9b1c1c; margin-top: 8px; }
+    .brand-check { display: none; color: #9b1c1c; font-size: 20px; margin-bottom: 6px; }
+    .brand-option.selected .brand-check { display: block; }
+
+    /* ── Type Select (Step 2) ── */
+    .type-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px,1fr)); gap: 12px; }
+    .type-option {
+      border: 2px solid #e2e8f0; border-radius: 12px; padding: 18px 12px; text-align: center;
+      cursor: pointer; transition: all .25s; background: #fff;
+    }
+    .type-option:hover { border-color: #9b1c1c; }
+    .type-option.selected { border-color: #9b1c1c; background: #fef2f2; }
+    .type-option i { font-size: 28px; color: #64748b; display: block; margin-bottom: 8px; }
+    .type-option.selected i { color: #9b1c1c; }
+    .type-option-name { font-size: 13px; font-weight: 800; color: #1a2940; font-family: 'Montserrat', sans-serif; }
+    .type-option-mult { font-size: 11px; color: #64748b; margin-top: 4px; }
+
+    /* ── Dimensions (Step 3) ── */
+    .dim-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px; }
+    .dim-field label { display: block; font-size: 12px; font-weight: 800; color: #1a2940; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .05em; }
+    .dim-input {
+      width: 100%; padding: 14px 16px; border: 2px solid #e2e8f0; border-radius: 12px;
+      font-size: 20px; font-weight: 800; font-family: 'Montserrat', sans-serif; color: #1a2940;
+      outline: none; transition: border-color .2s; box-sizing: border-box;
+    }
+    .dim-input:focus { border-color: #9b1c1c; }
+    .dim-input-unit { font-size: 12px; color: #94a3b8; margin-top: 6px; }
+    .qty-row { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+    .qty-btn {
+      width: 44px; height: 44px; border-radius: 50%; border: 2px solid #e2e8f0;
+      background: #fff; font-size: 20px; cursor: pointer; display: flex;
+      align-items: center; justify-content: center; font-weight: 700; transition: all .2s;
+    }
+    .qty-btn:hover { border-color: #9b1c1c; color: #9b1c1c; }
+    .qty-val { font-family: 'Montserrat', sans-serif; font-size: 22px; font-weight: 900; color: #1a2940; min-width: 40px; text-align: center; }
+
+    .glass-options { display: flex; gap: 10px; flex-wrap: wrap; }
+    .glass-opt {
+      padding: 9px 18px; border-radius: 50px; border: 2px solid #e2e8f0;
+      background: #fff; cursor: pointer; font-size: 12px; font-weight: 700;
+      color: #555; transition: all .2s; font-family: 'Montserrat', sans-serif;
+    }
+    .glass-opt:hover { border-color: #9b1c1c; }
+    .glass-opt.selected { background: #9b1c1c; border-color: #9b1c1c; color: #fff; }
+
+    /* ── Result Panel (Step 4) ── */
+    .result-card {
+      background: linear-gradient(135deg, #0f1923 0%, #1a2940 100%);
+      border-radius: 20px; padding: 32px; color: #fff; margin-bottom: 20px;
+    }
+    .result-title { font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 800; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; }
+    .result-total { font-family: 'Montserrat', sans-serif; font-size: clamp(32px,6vw,52px); font-weight: 900; color: #f5c842; line-height: 1; }
+    .result-range { font-size: 12px; color: rgba(255,255,255,.5); margin-top: 6px; }
+    .result-breakdown { margin-top: 24px; border-top: 1px solid rgba(255,255,255,.1); padding-top: 20px; }
+    .result-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,.07); }
+    .result-row:last-child { border-bottom: none; }
+    .result-row-label { font-size: 13px; color: rgba(255,255,255,.65); }
+    .result-row-val { font-size: 14px; font-weight: 800; color: #fff; font-family: 'Montserrat', sans-serif; }
+
+    .result-summary-card {
+      background: #fff; border-radius: 16px; padding: 24px;
+      border: 1px solid #e2e8f0; margin-bottom: 20px;
+    }
+    .result-summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .rs-item { background: #f8fafc; border-radius: 10px; padding: 14px; }
+    .rs-label { font-size: 10px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
+    .rs-val { font-size: 15px; font-weight: 800; color: #1a2940; font-family: 'Montserrat', sans-serif; }
+
+    /* ── Contact Form ── */
+    .contact-form-card { background: #fff; border-radius: 20px; padding: 32px; box-shadow: 0 4px 24px rgba(0,0,0,.06); }
+    .form-row { margin-bottom: 16px; }
+    .form-row label { display: block; font-size: 12px; font-weight: 800; color: #1a2940; margin-bottom: 8px; text-transform: uppercase; letter-spacing: .05em; }
+    .form-input {
+      width: 100%; padding: 13px 16px; border: 2px solid #e2e8f0; border-radius: 12px;
+      font-size: 14px; font-family: 'Inter', sans-serif; color: #1a2940;
+      outline: none; transition: border-color .2s; box-sizing: border-box;
+    }
+    .form-input:focus { border-color: #9b1c1c; }
+    .form-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-note { font-size: 11px; color: #94a3b8; margin-top: 12px; text-align: center; }
+
+    /* ── Nav Buttons ── */
+    .nav-btns { display: flex; gap: 12px; justify-content: flex-end; margin-top: 8px; }
+    .btn-back {
+      padding: 13px 28px; border-radius: 50px; border: 2px solid #e2e8f0;
+      background: #fff; font-family: 'Montserrat', sans-serif; font-size: 13px;
+      font-weight: 800; color: #64748b; cursor: pointer; transition: all .2s;
+    }
+    .btn-back:hover { border-color: #9b1c1c; color: #9b1c1c; }
+    .btn-next {
+      padding: 13px 32px; border-radius: 50px; border: none;
+      background: #9b1c1c; color: #fff; font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 800; cursor: pointer; transition: opacity .2s;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .btn-next:hover { opacity: .85; }
+    .btn-next:disabled { opacity: .4; cursor: not-allowed; }
+
+    /* ── Toast ── */
+    .toast {
+      position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%) translateY(80px);
+      background: #1a2940; color: #fff; padding: 14px 28px; border-radius: 50px;
+      font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700;
+      box-shadow: 0 8px 30px rgba(0,0,0,.2); transition: transform .4s; z-index: 999;
+      display: flex; align-items: center; gap: 10px; white-space: nowrap;
+    }
+    .toast.show { transform: translateX(-50%) translateY(0); }
+    .toast.success { background: #15803d; }
+    .toast.error { background: #9b1c1c; }
+
+    @media (max-width: 600px) {
+      .dim-grid, .form-grid-2, .result-summary-grid { grid-template-columns: 1fr; }
+      .brand-grid { grid-template-columns: 1fr 1fr; }
+      .step-tab { font-size: 9px; padding: 12px 4px; }
+    }
+  </style>
+</head>
+<body class="calc-page">
+
+<!-- NAV -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Điều hướng chính">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Trang chủ Sao Vàng">
+      <img src="assets/images/logo-sv-main.svg" width="140" height="42" fetchpriority="high" loading="eager" alt="Logo Sao Vàng" />
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Trang Chủ</a></li>
+      <li><a href="nhom-sao-vang.html">Hệ Nhôm</a></li>
+      <li><a href="phu-kien.html">Phụ Kiện</a></li>
+      <li><a href="du-an-nhom.html">Portfolio Nhôm</a></li>
+      <li><a href="bao-gia-nhom.html" class="active">Tính Giá</a></li>
+      <li><a href="bao-gia.html" class="nav-cta">Báo Giá Chính Thức</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu" onclick="this.closest('.navbar').classList.toggle('nav-open')">
+      <i class="ri-menu-line"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="calc-hero">
+  <div class="calc-hero-content">
+    <span style="display:inline-block;background:rgba(245,200,66,.15);color:#f5c842;font-size:10px;font-weight:800;letter-spacing:.18em;padding:5px 16px;border-radius:20px;text-transform:uppercase;margin-bottom:14px;border:1px solid rgba(245,200,66,.3);">CÔNG CỤ TÍNH GIÁ</span>
+    <h1>Tính Giá Nhôm Kính <span>Tức Thì</span></h1>
+    <p>Chọn hãng nhôm, loại cửa và kích thước — nhận giá ước tính ngay lập tức. Hoàn toàn miễn phí, không ràng buộc.</p>
+    <div style="display:flex;gap:24px;justify-content:center;margin-top:28px;flex-wrap:wrap;">
+      <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:13px;"><i class="ri-timer-line" style="color:#f5c842;"></i> Kết quả trong 10 giây</div>
+      <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:13px;"><i class="ri-lock-line" style="color:#f5c842;"></i> Không cần đăng ký</div>
+      <div style="display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:13px;"><i class="ri-refresh-line" style="color:#f5c842;"></i> Giá cập nhật tự động</div>
+    </div>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<div style="background:#fff;border-bottom:1px solid #e2e8f0;padding:12px 0;">
+  <div style="max-width:860px;margin:0 auto;padding-inline:24px;display:flex;align-items:center;gap:8px;font-size:13px;color:#6c757d;">
+    <a href="index.html" style="color:#6c757d;text-decoration:none;">Trang chủ</a>
+    <i class="ri-arrow-right-s-line" style="font-size:10px;"></i>
+    <a href="bao-gia.html" style="color:#6c757d;text-decoration:none;">Báo Giá</a>
+    <i class="ri-arrow-right-s-line" style="font-size:10px;"></i>
+    <span>Tính Giá Nhôm Kính</span>
+  </div>
+</div>
+
+<!-- CALCULATOR WIZARD -->
+<div class="steps-container">
+
+  <!-- Step Progress Bar -->
+  <div class="step-progress" role="tablist">
+    <button class="step-tab active" id="tab1" onclick="goToStep(1)">
+      <span class="step-num">1</span>Hãng Nhôm
+    </button>
+    <button class="step-tab" id="tab2" onclick="goToStep(2)">
+      <span class="step-num">2</span>Loại Cửa
+    </button>
+    <button class="step-tab" id="tab3" onclick="goToStep(3)">
+      <span class="step-num">3</span>Kích Thước
+    </button>
+    <button class="step-tab" id="tab4" onclick="goToStep(4)">
+      <span class="step-num">4</span>Kết Quả
+    </button>
+  </div>
+
+  <!-- ── STEP 1: Chọn Hãng ── -->
+  <div class="step-panel active" id="step1">
+    <div class="step-card">
+      <h2 class="step-card-title">Chọn Hãng Nhôm</h2>
+      <p class="step-card-sub">Mỗi hãng có mức giá và chất lượng khác nhau. Giá hiển thị là đơn giá ước tính/m².</p>
+      <div class="brand-grid" id="brandGrid"></div>
+    </div>
+    <div class="nav-btns">
+      <button class="btn-next" id="btn1Next" onclick="goToStep(2)" disabled>
+        Tiếp theo <i class="ri-arrow-right-line"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── STEP 2: Loại Cửa ── -->
+  <div class="step-panel" id="step2">
+    <div class="step-card">
+      <h2 class="step-card-title">Chọn Loại Cửa</h2>
+      <p class="step-card-sub">Loại cửa ảnh hưởng đến độ phức tạp lắp đặt và phụ kiện cần dùng.</p>
+      <div class="type-grid" id="typeGrid"></div>
+    </div>
+    <div class="nav-btns">
+      <button class="btn-back" onclick="goToStep(1)"><i class="ri-arrow-left-line"></i> Quay lại</button>
+      <button class="btn-next" id="btn2Next" onclick="goToStep(3)" disabled>
+        Tiếp theo <i class="ri-arrow-right-line"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── STEP 3: Kích Thước ── -->
+  <div class="step-panel" id="step3">
+    <div class="step-card">
+      <h2 class="step-card-title">Nhập Kích Thước & Số Lượng</h2>
+      <p class="step-card-sub">Nhập kích thước một ô cửa (rộng × cao). Chiều cao tính từ sàn đến trần hoặc theo thiết kế.</p>
+
+      <div class="dim-grid">
+        <div class="dim-field">
+          <label for="inputWidth">Chiều Rộng</label>
+          <input class="dim-input" id="inputWidth" type="number" min="0.3" max="8" step="0.01" value="1.2" oninput="updateLiveCalc()">
+          <div class="dim-input-unit">mét (ví dụ: 1.2 = 1m20)</div>
+        </div>
+        <div class="dim-field">
+          <label for="inputHeight">Chiều Cao</label>
+          <input class="dim-input" id="inputHeight" type="number" min="0.5" max="6" step="0.01" value="2.1" oninput="updateLiveCalc()">
+          <div class="dim-input-unit">mét (ví dụ: 2.1 = 2m10)</div>
+        </div>
+      </div>
+
+      <div style="margin-bottom:20px;">
+        <label style="display:block;font-size:12px;font-weight:800;color:#1a2940;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em;">Số Lượng Ô Cửa</label>
+        <div class="qty-row">
+          <button class="qty-btn" onclick="changeQty(-1)">−</button>
+          <span class="qty-val" id="qtyDisplay">1</span>
+          <button class="qty-btn" onclick="changeQty(1)">+</button>
+          <span style="font-size:13px;color:#64748b;margin-left:8px;">ô cửa</span>
+        </div>
+      </div>
+
+      <div>
+        <label style="display:block;font-size:12px;font-weight:800;color:#1a2940;margin-bottom:10px;text-transform:uppercase;letter-spacing:.05em;">Loại Kính</label>
+        <div class="glass-options">
+          <button class="glass-opt selected" onclick="selectGlass(this,'thuong',1)">Kính Thường (5mm)</button>
+          <button class="glass-opt" onclick="selectGlass(this,'cuong-luc',1.15)">Kính Cường Lực (8mm)</button>
+          <button class="glass-opt" onclick="selectGlass(this,'low-e',1.35)">Kính Low-E (tiết kiệm điện)</button>
+          <button class="glass-opt" onclick="selectGlass(this,'3-lop',1.6)">Kính 3 Lớp (cách âm)</button>
+        </div>
+      </div>
+
+      <!-- Live preview -->
+      <div id="livePreview" style="margin-top:24px;background:#f8fafc;border-radius:14px;padding:18px;border:1px solid #e2e8f0;">
+        <div style="font-size:11px;font-weight:800;color:#94a3b8;text-transform:uppercase;letter-spacing:.08em;margin-bottom:10px;">Xem trước ước tính</div>
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:13px;color:#64748b;" id="previewDesc">1.2m × 2.1m × 1 ô = 2.52m²</span>
+          <span style="font-family:'Montserrat',sans-serif;font-size:22px;font-weight:900;color:#9b1c1c;" id="previewPrice">—</span>
+        </div>
+      </div>
+    </div>
+    <div class="nav-btns">
+      <button class="btn-back" onclick="goToStep(2)"><i class="ri-arrow-left-line"></i> Quay lại</button>
+      <button class="btn-next" onclick="computeResult();goToStep(4)">
+        <i class="ri-calculator-line"></i> Tính Giá Ngay
+      </button>
+    </div>
+  </div>
+
+  <!-- ── STEP 4: Kết Quả & Form ── -->
+  <div class="step-panel" id="step4">
+    <!-- Price Result -->
+    <div class="result-card">
+      <div class="result-title">Giá Ước Tính Tổng Cộng</div>
+      <div class="result-total" id="resultTotal">—</div>
+      <div class="result-range" id="resultRange">Sai số ±15% tùy thiết kế thực tế</div>
+      <div class="result-breakdown" id="resultBreakdown"></div>
+    </div>
+
+    <!-- Summary -->
+    <div class="result-summary-card">
+      <div style="font-size:13px;font-weight:800;color:#1a2940;margin-bottom:16px;font-family:'Montserrat',sans-serif;">Thông số đã chọn</div>
+      <div class="result-summary-grid" id="resultSummary"></div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form-card">
+      <div style="font-family:'Montserrat',sans-serif;font-size:18px;font-weight:900;color:#1a2940;margin-bottom:6px;">Nhận Báo Giá Chính Thức</div>
+      <p style="font-size:13px;color:#64748b;margin-bottom:24px;">Điền thông tin để nhận báo giá chi tiết từ kỹ thuật viên trong 2 giờ làm việc.</p>
+
+      <form id="quoteForm" onsubmit="submitForm(event)">
+        <div class="form-grid-2">
+          <div class="form-row">
+            <label for="fName">Họ và Tên *</label>
+            <input class="form-input" id="fName" type="text" placeholder="Nguyễn Văn A" required>
+          </div>
+          <div class="form-row">
+            <label for="fPhone">Số Điện Thoại *</label>
+            <input class="form-input" id="fPhone" type="tel" placeholder="0869 590 279" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="fAddress">Địa Chỉ Công Trình</label>
+          <input class="form-input" id="fAddress" type="text" placeholder="Số nhà, đường, quận, tỉnh/thành phố">
+        </div>
+        <div class="form-row">
+          <label for="fNote">Ghi Chú Thêm</label>
+          <textarea class="form-input" id="fNote" rows="3" placeholder="Màu sắc yêu thích, yêu cầu đặc biệt, thời gian thi công..."></textarea>
+        </div>
+
+        <div style="display:flex;gap:12px;margin-top:8px;flex-wrap:wrap;">
+          <button type="submit" class="btn-next" style="flex:1;justify-content:center;padding:15px;">
+            <i class="ri-send-plane-line"></i> Gửi Yêu Cầu Báo Giá
+          </button>
+          <a href="tel:0869590279" style="display:flex;align-items:center;gap:8px;padding:15px 24px;border-radius:50px;border:2px solid #9b1c1c;color:#9b1c1c;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:800;text-decoration:none;transition:all .2s;" onmouseover="this.style.background='#fef2f2'" onmouseout="this.style.background='#fff'">
+            <i class="ri-phone-line"></i> 0869 590 279
+          </a>
+        </div>
+        <p class="form-note">🔒 Thông tin của bạn được bảo mật tuyệt đối. Sao Vàng cam kết phản hồi trong 2 giờ làm việc.</p>
+      </form>
+    </div>
+
+    <div class="nav-btns" style="margin-top:0;">
+      <button class="btn-back" onclick="goToStep(1)"><i class="ri-refresh-line"></i> Tính lại</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- FOOTER -->
+<footer style="background:#0f1923;color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:13px;">
+  © 2024 Cơ Khí Sao Vàng — Hotline: <a href="tel:0869590279" style="color:#f5c842;">0869 590 279</a>
+  &nbsp;|&nbsp; <a href="du-an-nhom.html" style="color:rgba(255,255,255,.5);">Portfolio Nhôm</a>
+  &nbsp;|&nbsp; <a href="nhom-sao-vang.html" style="color:rgba(255,255,255,.5);">Hệ Nhôm</a>
+</footer>
+
+<script>
+// ════════════════════════════════════════════════════════════
+// PRICING DATA  (thay bằng Google Sheets API sau khi setup)
+// Cấu trúc: brand → { label, color, pricePerSqm, range, origin }
+// ════════════════════════════════════════════════════════════
+const BRANDS = [
+  { id:'xingfa',  label:'Xingfa',     color:'#e11d48', origin:'Quảng Đông · TQ', base:2800000,  range:'2.5 – 4.2 triệu/m²' },
+  { id:'maxpro',  label:'Maxpro.JP',  color:'#b45309', origin:'Nhật Bản · Anodized', base:4200000, range:'3.8 – 5.5 triệu/m²' },
+  { id:'civro',   label:'Civro',      color:'#1e293b', origin:'Đức · Cách nhiệt', base:6800000,  range:'6 – 9 triệu/m²' },
+  { id:'slim',    label:'Slim System',color:'#475569', origin:'Châu Âu · Panorama', base:5500000, range:'4.8 – 7 triệu/m²' },
+  { id:'kogen',   label:'Kogen',      color:'#0369a1', origin:'Đức · Xếp gấp',  base:5200000,  range:'4.5 – 6.5 triệu/m²' },
+  { id:'pma',     label:'PMA',        color:'#15803d', origin:'Châu Âu · Rãnh C', base:3200000,  range:'2.8 – 4.5 triệu/m²' },
+  { id:'owin',    label:'Owin',       color:'#4338ca', origin:'Việt Nam · OEM',  base:2600000,  range:'2.2 – 3.5 triệu/m²' },
+  { id:'topal',   label:'Topal',      color:'#b91c1c', origin:'Austdoor · VN',   base:2400000,  range:'2.0 – 3.2 triệu/m²' },
+];
+
+const DOOR_TYPES = [
+  { id:'lua',      label:'Cửa Lùa',       icon:'ri-layout-column-line', mult:1.0,  note:'×1.0 — Phổ biến nhất' },
+  { id:'mo-quay',  label:'Cửa Mở Quay',   icon:'ri-door-open-line',     mult:0.9,  note:'×0.9 — Chi phí thấp hơn' },
+  { id:'xep-gap',  label:'Cửa Xếp Gấp',   icon:'ri-layout-row-line',    mult:1.4,  note:'×1.4 — Phức tạp cao' },
+  { id:'truot-lat',label:'Trượt Lật',      icon:'ri-artboard-line',      mult:1.3,  note:'×1.3 — Sang trọng' },
+  { id:'vach-kinh',label:'Vách Kính',      icon:'ri-window-line',        mult:0.85, note:'×0.85 — Không cần phụ kiện' },
+  { id:'cuon',     label:'Cửa Cuốn',       icon:'ri-shield-line',        mult:0.95, note:'×0.95 — Bảo an, phổ biến' },
+];
+
+// ── State ──
+let sel = { brand: null, type: null, qty: 1, glassMult: 1 };
+
+// ── Render Brand Grid ──
+function renderBrands() {
+  document.getElementById('brandGrid').innerHTML = BRANDS.map(b => `
+    <div class="brand-option" onclick="selectBrand('${b.id}')" id="brand-${b.id}">
+      <div class="brand-check"><i class="ri-checkbox-circle-fill"></i></div>
+      <div class="brand-option-name" style="color:${b.color}">${b.label}</div>
+      <div class="brand-option-sub">${b.origin}</div>
+      <div class="brand-option-range">${b.range}</div>
+    </div>
+  `).join('');
+}
+
+function selectBrand(id) {
+  sel.brand = id;
+  document.querySelectorAll('.brand-option').forEach(el => el.classList.remove('selected'));
+  document.getElementById('brand-'+id).classList.add('selected');
+  document.getElementById('btn1Next').disabled = false;
+  updateLiveCalc();
+}
+
+// ── Render Type Grid ──
+function renderTypes() {
+  document.getElementById('typeGrid').innerHTML = DOOR_TYPES.map(t => `
+    <div class="type-option" onclick="selectType('${t.id}')" id="type-${t.id}">
+      <i class="${t.icon}"></i>
+      <div class="type-option-name">${t.label}</div>
+      <div class="type-option-mult">${t.note}</div>
+    </div>
+  `).join('');
+}
+
+function selectType(id) {
+  sel.type = id;
+  document.querySelectorAll('.type-option').forEach(el => el.classList.remove('selected'));
+  document.getElementById('type-'+id).classList.add('selected');
+  document.getElementById('btn2Next').disabled = false;
+  updateLiveCalc();
+}
+
+// ── Qty & Glass ──
+function changeQty(delta) {
+  sel.qty = Math.max(1, Math.min(50, sel.qty + delta));
+  document.getElementById('qtyDisplay').textContent = sel.qty;
+  updateLiveCalc();
+}
+
+function selectGlass(btn, id, mult) {
+  sel.glassMult = mult;
+  document.querySelectorAll('.glass-opt').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  updateLiveCalc();
+}
+
+// ── Live Calc ──
+function calcPrice() {
+  if (!sel.brand || !sel.type) return null;
+  const brand = BRANDS.find(b => b.id === sel.brand);
+  const type = DOOR_TYPES.find(t => t.id === sel.type);
+  const w = parseFloat(document.getElementById('inputWidth')?.value || 1.2);
+  const h = parseFloat(document.getElementById('inputHeight')?.value || 2.1);
+  const area = w * h * sel.qty;
+  const LABOR_RATE = 300000; // VNĐ/m²
+  const ACCESSORIES_RATE = brand.base * 0.12;
+
+  const materialCost = brand.base * type.mult * sel.glassMult * area;
+  const laborCost = LABOR_RATE * area * type.mult;
+  const accessoryCost = ACCESSORIES_RATE * area;
+  const total = materialCost + laborCost + accessoryCost;
+
+  return { area, w, h, materialCost, laborCost, accessoryCost, total, brand, type };
+}
+
+function fmtVND(n) {
+  if (n >= 1e9) return (n/1e9).toFixed(1) + ' tỷ';
+  if (n >= 1e6) return (n/1e6).toFixed(1) + ' triệu';
+  return n.toLocaleString('vi-VN') + ' đ';
+}
+function fmtFull(n) { return n.toLocaleString('vi-VN') + ' ₫'; }
+
+function updateLiveCalc() {
+  const r = calcPrice();
+  if (!r) return;
+  document.getElementById('previewDesc').textContent =
+    `${r.w}m × ${r.h}m × ${sel.qty} ô = ${r.area.toFixed(2)}m²`;
+  document.getElementById('previewPrice').textContent = fmtVND(r.total);
+}
+
+function computeResult() {
+  const r = calcPrice();
+  if (!r) return;
+
+  document.getElementById('resultTotal').textContent = fmtVND(r.total);
+  const lo = fmtVND(r.total * 0.85), hi = fmtVND(r.total * 1.15);
+  document.getElementById('resultRange').textContent = `Dao động: ${lo} — ${hi} (±15% tùy thiết kế thực tế)`;
+
+  document.getElementById('resultBreakdown').innerHTML = `
+    <div class="result-row"><span class="result-row-label">Vật liệu nhôm + kính</span><span class="result-row-val">${fmtFull(r.materialCost)}</span></div>
+    <div class="result-row"><span class="result-row-label">Nhân công lắp đặt</span><span class="result-row-val">${fmtFull(r.laborCost)}</span></div>
+    <div class="result-row"><span class="result-row-label">Phụ kiện & hoàn thiện</span><span class="result-row-val">${fmtFull(r.accessoryCost)}</span></div>
+    <div class="result-row" style="padding-top:14px;border-top:1px solid rgba(255,255,255,.15);margin-top:6px;">
+      <span style="color:#f5c842;font-weight:800;font-size:14px;">TỔNG ƯỚC TÍNH</span>
+      <span style="color:#f5c842;font-size:18px;font-weight:900;font-family:'Montserrat',sans-serif;">${fmtFull(r.total)}</span>
+    </div>
+  `;
+
+  const type = DOOR_TYPES.find(t => t.id === sel.type);
+  const w = parseFloat(document.getElementById('inputWidth').value);
+  const h = parseFloat(document.getElementById('inputHeight').value);
+  const glassLabels = {'1':'Kính thường','1.15':'Kính cường lực','1.35':'Kính Low-E','1.6':'Kính 3 lớp'};
+  document.getElementById('resultSummary').innerHTML = `
+    <div class="rs-item"><div class="rs-label">Hãng nhôm</div><div class="rs-val">${r.brand.label}</div></div>
+    <div class="rs-item"><div class="rs-label">Loại cửa</div><div class="rs-val">${type.label}</div></div>
+    <div class="rs-item"><div class="rs-label">Kích thước</div><div class="rs-val">${w}m × ${h}m</div></div>
+    <div class="rs-item"><div class="rs-label">Diện tích</div><div class="rs-val">${r.area.toFixed(2)}m² (${sel.qty} ô)</div></div>
+  `;
+}
+
+// ── Steps Navigation ──
+function goToStep(n) {
+  [1,2,3,4].forEach(i => {
+    document.getElementById('step'+i).classList.toggle('active', i===n);
+    const tab = document.getElementById('tab'+i);
+    tab.classList.remove('active','done');
+    if (i === n) tab.classList.add('active');
+    else if (i < n) tab.classList.add('done');
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+// ── Form Submit (EmailJS ready) ──
+function submitForm(e) {
+  e.preventDefault();
+  const r = calcPrice();
+  const data = {
+    name:    document.getElementById('fName').value,
+    phone:   document.getElementById('fPhone').value,
+    address: document.getElementById('fAddress').value,
+    note:    document.getElementById('fNote').value,
+    brand:   r?.brand?.label || '—',
+    type:    DOOR_TYPES.find(t=>t.id===sel.type)?.label || '—',
+    area:    r?.area?.toFixed(2) + 'm²' || '—',
+    price:   r ? fmtVND(r.total) : '—',
+  };
+
+  // ─── EmailJS Integration ───────────────────────────────────
+  // Bước 1: Đăng ký tại emailjs.com (miễn phí 200 email/tháng)
+  // Bước 2: Thêm script sau vào <head>:
+  //   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  //   <script>emailjs.init("YOUR_PUBLIC_KEY");</script>
+  // Bước 3: Bỏ comment đoạn code bên dưới và điền Service ID + Template ID:
+  //
+  // emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+  //   customer_name: data.name,
+  //   customer_phone: data.phone,
+  //   customer_address: data.address,
+  //   customer_note: data.note,
+  //   nhom_brand: data.brand,
+  //   door_type: data.type,
+  //   area: data.area,
+  //   estimated_price: data.price,
+  // }).then(() => showToast('✅ Yêu cầu đã gửi! Chúng tôi sẽ phản hồi trong 2 giờ.','success'))
+  //   .catch(() => showToast('❌ Lỗi gửi form. Vui lòng gọi hotline.','error'));
+  // ─────────────────────────────────────────────────────────────
+
+  // Fallback: mở WhatsApp / Zalo với thông tin điền sẵn
+  const msg = encodeURIComponent(
+    `*Yêu cầu báo giá nhôm kính từ website Sao Vàng*\n` +
+    `👤 Khách hàng: ${data.name}\n📞 SĐT: ${data.phone}\n` +
+    `📍 Địa chỉ: ${data.address || 'Chưa điền'}\n` +
+    `🏷️ Hãng nhôm: ${data.brand}\n🚪 Loại cửa: ${data.type}\n` +
+    `📐 Diện tích: ${data.area}\n💰 Giá ước tính: ${data.price}\n` +
+    `📝 Ghi chú: ${data.note || 'Không có'}`
+  );
+  window.open(`https://zalo.me/0869590279?text=${msg}`, '_blank');
+  showToast('✅ Đang chuyển sang Zalo để gửi yêu cầu...', 'success');
+}
+
+function showToast(msg, type='') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = 'toast ' + type;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 4000);
+}
+
+// ── INIT ──
+renderBrands();
+renderTypes();
+</script>
+</body>
+</html>
