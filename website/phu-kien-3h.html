@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#3f6212" />
+  <title>Phụ Kiện 3H Chính Hãng Cao Cấp | SAO VÀNG</title>
+  <meta name="description" content="Sao Vàng cung cấp phụ kiện 3H chính hãng chất lượng cao. Đầy đủ 3H bản lề, khóa đa điểm, tay nắm chống muối mặn. Bảo hành dài hạn." />
+  <meta name="keywords" content="phụ kiện 3h, phụ kiện 3H, 3H chính hãng, phụ kiện nhôm kính" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  
+  <style>
+    .brand-hero {
+      background: linear-gradient(135deg,#3f6212 0%,#65a30d 100%);
+      padding: 120px 0 60px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 120%, rgba(255,255,255,0.1), transparent 70%);
+    }
+    .brand-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .brand-title {
+      font-family: var(--sv-font-head);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .brand-subtitle-hero {
+      font-size: clamp(14px, 2vw, 18px);
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    
+    .brand-stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 40px);
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .brand-stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 24px;
+      min-width: 140px;
+      backdrop-filter: blur(8px);
+    }
+    .brand-stat-num {
+      font-family: var(--sv-font-head);
+      font-size: 28px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .brand-stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .brand-detail-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+    .brand-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .brand-content-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .brand-info-column {
+      padding-right: 20px;
+    }
+    .brand-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin: 28px 0 14px;
+      border-left: 4px solid #3f6212;
+      padding-left: 14px;
+    }
+    .brand-sub-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sv-dark-800);
+      margin: 18px 0 8px;
+    }
+    .brand-desc-p {
+      font-size: var(--sv-fs-sm);
+      color: var(--sv-gray-text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    
+    .brand-sidebar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .sidebar-title {
+      font-family: var(--sv-font-head);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: 20px;
+    }
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .sidebar-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 13px;
+      color: var(--sv-gray-text);
+      display: flex;
+      justify-content: space-between;
+    }
+    .sidebar-list li strong {
+      color: var(--sv-dark-900);
+    }
+    
+    .brand-products-section {
+      padding: 80px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .pk-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .pk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+    .pk-card-img {
+      position: relative;
+      height: 220px;
+      background: #f1f5f9;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .pk-card-img img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .pk-card-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+    .pk-card-body {
+      padding: 20px;
+    }
+    .pk-card-name {
+      font-family: var(--sv-font-head);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: 16px;
+      min-height: 40px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .pk-card-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: var(--sv-font-head);
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-menu-link active">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html" class="nav-menu-link">Nhôm Sao Vàng</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan</a>
+            <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
+          </div>
+        </div>
+        <a href="phu-kien.html" class="nav-menu-link">Phụ Kiện</a>
+        <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
+        <a href="du-an.html" class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="lien-he.html" class="nav-menu-link">Liên Hệ</a>
+      </nav>
+
+      <!-- Hotline + Hamburger -->
+      <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+        <a href="tel:0869590279" class="nav-hotline" aria-label="Gọi hotline 0869 590 279">
+          <i class="ri-phone-fill" aria-hidden="true"></i>
+          <span>0869 590 279</span>
+        </a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+      <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html" class="nav-drawer-link">Trang Chủ</a>
+    <a href="co-khi-sao-vang.html" class="nav-drawer-link">Cơ Khí Sao Vàng</a>
+    <a href="nhom-sao-vang.html" class="nav-drawer-link">Nhôm Sao Vàng</a>
+    <a href="linh-vuc-hoat-dong.html" class="nav-drawer-link">Lĩnh Vực Hoạt Động</a>
+    <a href="phu-kien.html" class="nav-drawer-link active">Phụ Kiện</a>
+    <a href="thu-vien-profile-nhom.html" class="nav-drawer-link">Profile Nhôm</a>
+    <a href="du-an.html" class="nav-drawer-link">Dự Án Đã Thực Hiện</a>
+    <a href="lien-he.html" class="nav-drawer-link">Liên Hệ</a>
+    <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
+      <i class="ri-phone-fill"></i> 0869 590 279
+    </a>
+  </nav>
+
+  
+
+  <section class="brand-hero">
+    <div class="sv-container">
+      <span class="brand-tag">THƯƠNG HIỆU PHỤ KIỆN</span>
+      <h1 class="brand-title">Phụ Kiện 3H</h1>
+      <p class="brand-subtitle-hero">Dòng sản phẩm nhập khẩu cao cấp đồng hành cùng các giải pháp cửa nhôm kính Sao Vàng</p>
+      
+      <div class="brand-stats">
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Hebel Trung Quốc</div>
+          <div class="brand-stat-label">Xuất Xứ</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">5</div>
+          <div class="brand-stat-label">Mã Sản Phẩm</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">100%</div>
+          <div class="brand-stat-label">Chính Hãng</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-detail-section">
+    <div class="sv-container">
+      <div class="brand-content-grid">
+        <div class="brand-info-column">
+          <h2 class="sv-section-title" style="margin-left:0; text-align:left;">Tổng Quan Về Hãng</h2>
+          <p class='brand-desc-p'>Trang chủPhụ kiệnPhụ Kiện 3H            
+Phụ Kiện 3H</p><p class='brand-desc-p'>Bánh Xe Cửa Lùa LTD24</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Bản lề lá 1D JX80</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ kiện 3H đang ngày càng khẳng định vị thế của mình trong lĩnh vực cửa nhôm, đặc biệt là khi kết hợp với hệ cửa nhôm Xingfa - một trong những thương hiệu hàng đầu hiện nay. Với chất lượng vượt trội, mẫu mã đa dạng và khả năng tối ưu hóa hiệu suất cửa, phụ kiện 3H đã trở thành lựa chọn hàng đầu cho các công trình kiến trúc hiện đại. Bài viết này sẽ cùng bạn khám phá chi tiết về Phụ kiện 3H, những ưu điểm vượt trội của nó khi phối hợp với cửa nhôm Xingfa, từ đó giúp bạn có thêm những kiến thức cần thiết để lựa chọn sản phẩm phù hợp nhất cho không gian sống của mình.</p><h3 class='brand-subtitle'>Giới Thiệu Về Phụ Kiện 3H</h3><p class='brand-desc-p'>Hội chợ triển lãm giới thiệu phụ kiện cao cấp 3H</p><p class='brand-desc-p'>Phụ kiện 3H, hay còn được biết đến với tên gọi 3H Henexin, là một thương hiệu phụ kiện cửa nổi tiếng đến từ Trung Quốc. Sự ra đời và phát triển của thương hiệu này gắn liền với những nỗ lực không ngừng nghỉ trong việc nghiên cứu, phát triển và sản xuất ra những sản phẩm chất lượng, góp phần nâng cao giá trị cho các công trình kiến trúc.</p><h3 class='brand-subtitle'># Nguồn Gốc Và Lịch Sử Phát Triển Của 3H Henexin</h3><p class='brand-desc-p'>3H Henexin là đứa con tinh thần của công ty 3H INC, một doanh nghiệp đã có hơn 40 năm kinh nghiệm trong lĩnh vực sản xuất phụ kiện cửa và cửa sổ.</p><p class='brand-desc-p'>Hành trình phát triển của 3H Henexin bắt đầu từ năm 1981, khi công ty 3H INC đặt nền móng cho một đế chế phụ kiện cửa vững mạnh.</p><p class='brand-desc-p'>Ban đầu, 3H INC tập trung vào việc sản xuất các loại phụ kiện cơ bản cho cửa gỗ và cửa nhựa, đáp ứng nhu cầu ngày càng tăng của thị trường nội địa Trung Quốc.</p><p class='brand-desc-p'>Qua thời gian, với sự đầu tư không ngừng vào công nghệ và đội ngũ nhân sự, 3H INC đã nhanh chóng mở rộng quy mô sản xuất, phát triển các dòng sản phẩm mới, đa dạng hóa mẫu mã và nâng cao chất lượng.</p><p class='brand-desc-p'>3H Henexin đã từng bước khẳng định vị thế của mình trên thị trường quốc tế, trở thành một trong những thương hiệu phụ kiện cửa hàng đầu, được ưa chuộng tại nhiều quốc gia trên thế giới, bao gồm cả Việt Nam.</p><h3 class='brand-subtitle'># Những Đạt Được Và Chứng Nhận Chất Lượng Của Phụ Kiện 3H</h3><p class='brand-desc-p'>Sự thành công của thương hiệu Phụ kiện 3H không chỉ đến từ những nỗ lực trong phát triển sản phẩm, mà còn nhờ vào việc không ngừng hoàn thiện hệ thống quản lý chất lượng theo tiêu chuẩn quốc tế.</p><p class='brand-desc-p'>Chứng nhận ISO 9001: Đây là một trong những minh chứng rõ ràng nhất cho cam kết mang đến những sản phẩm chất lượng cao, đáp ứng các yêu cầu khắt khe nhất của ngành công nghiệp cửa.</p><p class='brand-desc-p'>Hệ thống sản xuất hiện đại: Với diện tích sản xuất lên đến hơn 300.000 m2, trang bị 714 máy móc tiên tiến và hơn 2000 nhân viên lành nghề, 3H Henexin có khả năng đáp ứng một khối lượng lớn đơn hàng, đảm bảo tiến độ và chất lượng sản phẩm. Năng lực sản xuất ấn tượng này cũng cho thấy tiềm lực mạnh mẽ của thương hiệu.</p><p class='brand-desc-p'>Đạt được nhiều tiêu chuẩn quốc gia và quốc tế: Các sản phẩm phụ kiện 3H đều được sản xuất trên dây chuyền công nghệ hiện đại, trải qua quá trình kiểm định nghiêm ngặt, đảm bảo đáp ứng các tiêu chuẩn chất lượng quốc tế.</p><p class='brand-desc-p'>Tỷ lệ đặt hàng lặp lại cao: Việc khách hàng tin tưởng và lựa chọn sử dụng sản phẩm 3H một cách thường xuyên là minh chứng rõ ràng nhất cho sự hài lòng về chất lượng và dịch vụ của thương hiệu.</p><p class='brand-desc-p'>Đội ngũ nghiên cứu và phát triển (R&D): Với 25 – 40 kỹ sư R&D, 3H Henexin luôn cập nhật những công nghệ mới nhất, nghiên cứu và phát triển các sản phẩm đáp ứng nhu cầu thị trường một cách nhanh chóng và hiệu quả.</p><p class='brand-desc-p'>Những thành tựu đáng kể này chính là kết quả của quá trình nỗ lực không ngừng nghỉ của 3H Henexin, góp phần khẳng định vị thế là thương hiệu phụ kiện cửa hàng đầu, được lựa chọn cho nhiều công trình lớn nhỏ trên khắp thế giới.</p><h3 class='brand-subtitle'># Ưu Điểm Nổi Bật Của Phụ Kiện 3H</h3><p class='brand-desc-p'>Phụ kiện 3H đã chinh phục thị trường nhờ vào những ưu điểm vượt trội so với các sản phẩm cùng loại:</p><p class='brand-desc-p'>Chất lượng vượt trội: Được sản xuất trên dây chuyền hiện đại, với vật liệu cao cấp, phụ kiện 3H mang đến độ bền bỉ cao, chịu được tác động của thời tiết và môi trường khắc nghiệt.
+
+	Mẫu mã đa dạng: Phụ kiện 3H sở hữu bộ sưu tập sản phẩm phong phú về kiểu dáng, màu sắc, đáp ứng mọi yêu cầu thẩm mỹ, phù hợp với nhiều phong cách thiết kế kiến trúc.
+
+	Tính năng ưu việt: Phụ kiện 3H được thiết kế với những tính năng ưu việt, như khả năng chống ăn mòn, hạn chế tiếng ồn, tăng cường độ an toàn và bảo mật cho cửa.
+
+	Giá thành hợp lý: 3H Henexin luôn chú trọng đến việc tối ưu hóa quy trình sản xuất, mang đến sản phẩm chất lượng cao với giá thành hợp lý, phù hợp với nhiều đối tượng khách hàng.</p><p class='brand-desc-p'>Dịch vụ tốt: 3H Henexin luôn đặt khách hàng lên hàng đầu, cung cấp dịch vụ tư vấn, hỗ trợ kỹ thuật và bảo hành chu đáo, chuyên nghiệp.</p><p class='brand-desc-p'>Phụ kiện 3H đã và đang khẳng định sự lựa chọn sáng suốt cho những ai đang tìm kiếm giải pháp tối ưu cho hệ thống cửa của mình.</p><h3 class='brand-subtitle'>Ứng Dụng Của Phụ Kiện 3H Với Cửa Nhôm Xingfa</h3><p class='brand-desc-p'>Tay nắm cửa phụ kiện 3H</p><p class='brand-desc-p'>Cửa nhôm Xingfa đã và đang trở thành lựa chọn phổ biến trong các công trình xây dựng tại Việt Nam. Sự kết hợp hoàn hảo giữa khung nhôm Xingfa chắc chắn, bền bỉ với Phụ kiện 3H cao cấp đã tạo nên những hệ cửa hiện đại, an toàn và thẩm mỹ.</p><h3 class='brand-subtitle'># Vai Trò Quan Trọng Của Phụ Kiện 3H Trong Hệ Thống Cửa Nhôm</h3><p class='brand-desc-p'>Phụ kiện cửa nhôm nói chung và Phụ kiện 3H nói riêng đóng vai trò quan trọng trong việc quyết định đến chất lượng, độ bền cũng như tính năng của hệ cửa.</p><p class='brand-desc-p'>Kết nối các bộ phận: Phụ kiện giúp kết nối các thanh profile nhôm, tạo nên khung cửa chắc chắn, ổn định.</p><p class='brand-desc-p'>Đảm bảo hoạt động trơn tru: Các loại bản lề, tay nắm, khóa cửa... đảm bảo cửa đóng mở một cách dễ dàng, êm ái, không gây tiếng ồn.</p><p class='brand-desc-p'>Tăng cường độ an toàn: Khóa cửa, chốt cửa... được thiết kế an toàn, giúp bảo vệ ngôi nhà khỏi sự xâm nhập trái phép.</p><p class='brand-desc-p'>Nâng cao tính thẩm mỹ: Phụ kiện cửa được thiết kế tinh tế, góp phần làm tăng thêm vẻ đẹp cho ngôi nhà.</p><p class='brand-desc-p'>Nhờ vào vai trò quan trọng này, phụ kiện 3H đã trở thành một phần không thể thiếu trong hệ cửa nhôm Xingfa, mang đến sự hoàn thiện và nâng tầm giá trị cho các công trình.</p><h3 class='brand-subtitle'># Sự Kết Hợp Hoàn Hảo Giữa Nhôm Xingfa Và Phụ Kiện 3H</h3><p class='brand-desc-p'>Nhôm Xingfa, với ưu điểm vượt trội về độ bền bỉ, khả năng chịu lực, tính thẩm mỹ đã trở thành một trong những sự lựa chọn hàng đầu trong ngành xây dựng.</p><p class='brand-desc-p'>Sự đồng bộ hoàn hảo về màu sắc: Khi sử dụng Phụ kiện 3H cùng với nhôm Xingfa, bạn sẽ có được sự đồng bộ về màu sắc, tạo nên một tổng thể hài hòa, đẹp mắt cho không gian sống.</p><p class='brand-desc-p'>Nâng tầm vẻ đẹp kiến trúc: Sự kết hợp giữa vẻ đẹp sang trọng của nhôm Xingfa và thiết kế tinh tế của Phụ kiện 3H sẽ giúp tôn lên vẻ đẹp kiến trúc của ngôi nhà, tạo nên không gian sống hiện đại, tinh tế.</p><p class='brand-desc-p'>Tăng cường độ bền cho cửa: Sử dụng Phụ kiện 3H chính hãng sẽ giúp cửa nhôm Xingfa hoạt động bền bỉ hơn, chịu được sự khắc nghiệt của thời tiết và môi trường. Điều này góp phần tiết kiệm chi phí sửa chữa, bảo dưỡng cho người sử dụng lâu dài.</p><p class='brand-desc-p'>Tối ưu hóa hiệu suất cửa: Phụ kiện 3H góp phần tăng cường khả năng cách âm, cách nhiệt cho cửa nhôm Xingfa, giúp mang lại không gian sống yên tĩnh, thoải mái và tiết kiệm năng lượng.</p><p class='brand-desc-p'>Sự kết hợp hoàn hảo giữa nhôm Xingfa và Phụ kiện 3H không chỉ mang đến giá trị thẩm mỹ cao mà còn đảm bảo các tính năng ưu việt của hệ cửa, giúp nâng cao chất lượng cuộc sống cho người sử dụng.</p><h3 class='brand-subtitle'># Tính Thẩm Mỹ Và Độ Bền Của Cửa Nhôm Xingfa Khi Sử Dụng Phụ Kiện 3H</h3><p class='brand-desc-p'>Kết hợp hài hòa: Khung nhôm Xingfa sở hữu những đường nét mạnh mẽ, hiện đại, kết hợp với các phụ kiện 3H được thiết kế tinh tế, mang đến sự hài hòa, cân đối cho tổng thể hệ thống cửa.</p><p class='brand-desc-p'>Tạo điểm nhấn: Phụ kiện 3H với nhiều màu sắc và kiểu dáng đa dạng, giúp tạo điểm nhấn cho cửa nhôm Xingfa, làm nổi bật không gian kiến trúc.</p><p class='brand-desc-p'>Nâng cao giá trị thẩm mỹ: Hệ thống cửa nhôm Xingfa khi kết hợp với Phụ kiện 3H sẽ làm tăng thêm vẻ đẹp cho ngôi nhà, thể hiện gu thẩm mỹ tinh tế của gia chủ.</p><p class='brand-desc-p'>Độ bền vượt trội: Phụ kiện 3H được sản xuất từ chất liệu cao cấp, có khả năng chống ăn mòn, chống oxy hóa, chịu được tác động của thời tiết khắc nghiệt, giúp cửa nhôm Xingfa bền bỉ theo thời gian.</p><p class='brand-desc-p'>Tính năng ưu việt: Phụ kiện 3H tích hợp nhiều tính năng ưu việt, như hệ thống khóa đa điểm, bản lề giảm chấn… giúp cửa đóng mở êm ái, an toàn và bền bỉ, nâng cao chất lượng sống cho người dùng.</p><p class='brand-desc-p'>Kết hợp nhôm Xingfa và Phụ kiện 3H là giải pháp tối ưu để kiến tạo nên những hệ cửa vừa đẹp mắt, vừa chắc chắn, góp phần nâng cao giá trị thẩm mỹ và chất lượng cuộc sống cho gia đình bạn.</p><h3 class='brand-subtitle'>Các Loại Phụ Kiện 3H Phổ Biến</h3><p class='brand-desc-p'>Bánh Xe Cửa Lùa Phụ Kiện 3H</p><p class='brand-desc-p'>Phụ kiện 3H bao gồm rất nhiều loại phụ kiện khác nhau, mỗi loại đều đảm nhận một vai trò riêng biệt, góp phần tạo nên sự hoàn thiện cho hệ cửa nhôm Xingfa.</p><h3 class='brand-subtitle'># Bản Lề Cửa Nhôm 3H: Đa Dạng Mẫu Mã, Chắc Chắn Và Bền Bỉ</h3><p class='brand-desc-p'>Bản lề cửa đóng vai trò quan trọng trong việc kết nối cánh cửa với khung cửa, giúp cửa đóng mở một cách êm ái, trơn tru.</p><p class='brand-desc-p'>Chất liệu cao cấp: Bản lề 3H được chế tạo từ các loại hợp kim cao cấp, chống ăn mòn, chịu lực tốt, đảm bảo độ bền bỉ trong điều kiện thời tiết khắc nghiệt.</p><p class='brand-desc-p'>Mẫu mã đa dạng: Bạn có thể lựa chọn nhiều kiểu dáng bản lề khác nhau, từ bản lề thường đến bản lề đa chiều, bản lề âm, phù hợp với mọi kiểu cửa và sở thích của khách hàng.</p><p class='brand-desc-p'>Hoạt động êm ái: Bản lề 3H được thiết kế với hệ thống giảm chấn, giúp cửa đóng mở êm ái, không gây tiếng ồn, mang lại sự thoải mái cho người sử dụng.</p><p class='brand-desc-p'>Kết cấu chắc chắn: Kết cấu bản lề được thiết kế chắc chắn, chịu được trọng lượng lớn của cánh cửa, đảm bảo an toàn cho người sử dụng.</p><p class='brand-desc-p'>Dễ dàng lắp đặt: Bản lề 3H được thiết kế đơn giản, dễ dàng lắp đặt và thay thế, giúp tiết kiệm thời gian và công sức.</p><h3 class='brand-subtitle'># Tay Cầm Cửa Nhôm 3H: Thiết Kế Tinh Tế, Nâng Cao Tính Thẩm Mỹ</h3><p class='brand-desc-p'>Tay nắm cửa không chỉ là bộ phận giúp đóng mở cửa mà còn là điểm nhấn tạo nên vẻ đẹp cho tổng thể hệ thống cửa.</p><p class='brand-desc-p'>Chất liệu cao cấp: Tay nắm 3H thường được làm từ hợp kim cao cấp, bề mặt được xử lý chống ăn mòn, chống phai màu, đảm bảo độ bền cao và vẻ đẹp theo thời gian.</p><p class='brand-desc-p'>Thiết kế phong phú: 3H Henexin cung cấp nhiều mẫu mã tay nắm với thiết kế tinh tế, hiện đại, phù hợp với nhiều phong cách thiết kế kiến trúc.</p><p class='brand-desc-p'>Cảm giác thoải mái khi sử dụng: Tay nắm được thiết kế vừa tay, tạo cảm giác thoải mái khi sử dụng, không gây trơn trượt.</p><p class='brand-desc-p'>Tính năng an toàn: Một số mẫu tay nắm được tích hợp thêm tính năng an toàn như khóa cửa từ bên trong, giúp tăng cường bảo mật cho ngôi nhà.</p><p class='brand-desc-p'>Dễ dàng vệ sinh: Bề mặt tay nắm cửa 3H dễ dàng vệ sinh, lau chùi, giúp luôn giữ được vẻ đẹp sáng bóng.</p><h3 class='brand-subtitle'># Khóa Cửa Nhôm 3H: An Toàn Và Bảo Mật Cho Ngôi Nhà</h3><p class='brand-desc-p'>Khóa cửa là bộ phận quan trọng nhất trong hệ thống cửa, đảm bảo an ninh và sự an toàn cho ngôi nhà.</p><p class='brand-desc-p'>Chất liệu chắc chắn: Khóa cửa 3H thường được làm từ các loại hợp kim cao cấp, có khả năng chống cắt, chống cậy, đảm bảo an ninh cho ngôi nhà.</p><p class='brand-desc-p'>Hệ thống khóa đa điểm: Khóa cửa 3H được trang bị hệ thống khóa đa điểm, giúp tăng cường khả năng bảo vệ, ngăn chặn các hoạt động đột nhập trái phép.</p><p class='brand-desc-p'>Thiết kế thông minh: Khóa cửa được thiết kế thông minh, dễ dàng sử dụng, mang lại sự tiện lợi cho người sử dụng.</p><p class='brand-desc-p'>Tính năng an toàn cao: Một số mẫu khóa cửa được tích hợp thêm các tính năng an toàn, như chốt an toàn, báo động khi có người đột nhập…</p><p class='brand-desc-p'>Tương thích với cửa nhôm Xingfa: Khóa cửa 3H được thiết kế tương thích với cửa nhôm Xingfa, đảm bảo tính thẩm mỹ và độ chắc chắn khi lắp đặt.</p><p class='brand-desc-p'>Việc lựa chọn khóa cửa phù hợp không chỉ đảm bảo an ninh cho ngôi nhà mà còn góp phần nâng cao tính thẩm mỹ và sự tiện nghi cho không gian sống.</p><h3 class='brand-subtitle'># Các Loại Phụ Kiện Khác (Gioăng, Ron, Keo..)</h3><p class='brand-desc-p'>Bên cạnh những loại phụ kiện kể trên, Phụ kiện 3H còn cung cấp thêm các loại phụ kiện khác như gioăng, ron, keo…</p><p class='brand-desc-p'>Gioăng cao su: Gioăng cao su giúp cải thiện khả năng cách âm, cách nhiệt cho cửa, tăng cường độ kín khít, hạn chế bụi bẩn, nước mưa xâm nhập.</p><p class='brand-desc-p'>Ron cửa: Ron cửa giúp tạo độ thẩm mỹ, đồng thời bảo vệ các cạnh của cửa, tránh trầy xước và va đập trong quá trình sử dụng.</p><p class='brand-desc-p'>Keo silicone: Keo silicone được dùng để trám bít các khe hở trên cửa, đảm bảo độ kín khít, tránh bụi bẩn và nước mưa xâm nhập, giữ cho không gian sống luôn sạch sẽ, thoải mái.</p><p class='brand-desc-p'>Những loại phụ kiện nhỏ này tuy không quá nổi bật nhưng đóng vai trò quan trọng trong việc nâng cao hiệu suất và độ bền của cửa nhôm Xingfa, mang đến cho bạn một không gian sống hoàn hảo.</p><h3 class='brand-subtitle'>Ưu Điểm Khi Kết Hợp Nhôm Xingfa Và Phụ Kiện 3H</h3><p class='brand-desc-p'>Sự kết hợp hoàn hảo giữa khung nhôm Xingfa và Phụ kiện 3H mang đến nhiều lợi ích vượt trội cho người sử dụng, từ nâng cao tuổi thọ và độ bền của cửa đến đảm bảo an toàn và nâng cao tính thẩm mỹ cho ngôi nhà.</p><h3 class='brand-subtitle'># Nâng Cao Tuổi Thọ Và Độ Bền Cho Cửa Nhôm</h3><p class='brand-desc-p'>Chống ăn mòn và oxy hóa: Nhôm Xingfa và Phụ kiện 3H đều được sản xuất từ chất liệu cao cấp, có khả năng chống ăn mòn, oxy hóa, thích hợp với điều kiện thời tiết khắc nghiệt tại Việt Nam.</p><p class='brand-desc-p'>Chịu lực tốt: Cấu trúc chắc chắn của khung nhôm Xingfa kết hợp với độ bền bỉ của Phụ kiện 3H giúp cửa chịu được lực tác động lớn, đảm bảo độ an toàn và bền bỉ theo thời gian.</p><p class='brand-desc-p'>Hạn chế cong vênh: Nhôm Xingfa được xử lý bề mặt bằng công nghệ tiên tiến, giúp hạn chế tình trạng cong vênh, biến dạng do tác động của nhiệt độ, môi trường.</p><p class='brand-desc-p'>Giảm thiểu hao mòn: Phụ kiện 3H được thiết kế với khả năng chịu lực cao, giảm thiểu ma sát, giúp hạn chế hao mòn trong quá trình sử dụng, kéo dài tuổi thọ cho cửa.</p><p class='brand-desc-p'>Việc kết hợp sử dụng 2 sản phẩm này sẽ kéo dài tuổi thọ cho hệ thống cửa, giúp người dùng tiết kiệm chi phí bảo trì, sửa chữa trong tương lai.</p><h3 class='brand-subtitle'># Tối Ưu Hóa Hiệu Suất Cách Âm, Cách Nhiệt</h3><p class='brand-desc-p'>Khả năng cách âm: Nhôm Xingfa có khả năng cách âm tốt, kết hợp với gioăng cao su và ron cửa từ Phụ kiện 3H giúp giảm thiểu tiếng ồn từ bên ngoài, mang lại không gian sống yên tĩnh, thoải mái.</p><p class='brand-desc-p'>Khả năng cách nhiệt: Cấu trúc khung nhôm Xingfa và Phụ kiện 3H giúp ngăn chặn sự truyền nhiệt, giữ cho không gian bên trong luôn mát mẻ vào mùa hè và ấm áp vào mùa đông.</p><p class='brand-desc-p'>Tiết kiệm năng lượng: Khả năng cách nhiệt của cửa giúp giảm thiểu sự thất thoát nhiệt năng, góp phần tiết kiệm chi phí điện năng sử dụng cho hệ thống điều hòa, làm mát.</p><p class='brand-desc-p'>Bảo vệ sức khỏe: Việc hạn chế tiếng ồn và điều hòa nhiệt độ giúp bảo vệ sức khỏe của các thành viên trong gia đình, đặc biệt là người già và trẻ nhỏ.</p><h3 class='brand-subtitle'># Đảm Bảo An Toàn Và Bảo Mật Cho Không Gian Sống</h3><p class='brand-desc-p'>Khóa cửa an toàn: Phụ kiện 3H cung cấp các loại khóa cửa đa điểm, chốt an toàn, giúp tăng cường khả năng bảo vệ, ngăn chặn các hoạt động đột nhập trái phép.</p><p class='brand-desc-p'>Cửa chắc chắn: Hệ cửa nhôm Xingfa kết hợp với Phụ kiện 3H tạo nên hệ thống cửa chắc chắn, khó có thể phá hoại, đảm bảo an toàn cho gia đình.</p><p class='brand-desc-p'>An tâm khi sử dụng: Người dùng có thể hoàn toàn an tâm về sự an toàn của ngôi nhà khi sử dụng cửa nhôm Xingfa với Phụ kiện 3H, hạn chế các mối nguy hiểm từ bên ngoài.</p><p class='brand-desc-p'>Tăng cường bảo mật: Các loại khóa cửa 3H hiện đại, an toàn giúp bạn bảo vệ tài sản và các thành viên trong gia đình khỏi những mối đe dọa từ bên ngoài.</p><h3 class='brand-subtitle'># Tăng Cường Tính Thẩm Mỹ Cho Ngôi Nhà</h3><p class='brand-desc-p'>Sự đồng bộ hài hòa: Việc sử dụng cùng thương hiệu phụ kiện và hệ thống cửa nhôm giúp tạo nên sự đồng bộ về màu sắc và kiểu dáng, mang đến vẻ đẹp tinh tế và sang trọng cho ngôi nhà.</p><p class='brand-desc-p'>Nâng cao giá trị không gian: Hệ cửa nhôm Xingfa kết hợp với Phụ kiện 3H sẽ góp phần làm tăng thêm giá trị và vẻ đẹp cho ngôi nhà, thể hiện gu thẩm mỹ tinh tế của gia chủ.</p><p class='brand-desc-p'>Tăng thêm vẻ đẹp hiện đại: Thiết kế hiện đại của nhôm Xingfa và Phụ kiện 3H giúp không gian sống thêm phần trẻ trung, năng động, phù hợp với xu hướng kiến trúc hiện đại.</p><p class='brand-desc-p'>Tạo điểm nhấn ấn tượng: Phụ kiện 3H với nhiều màu sắc và kiểu dáng độc đáo, giúp tạo nên những điểm nhấn ấn tượng cho không gian sống.</p><h3 class='brand-subtitle'>Nhôm Kính Đại Phúc - Nhà Phân Phối Phụ Kiện 3H Chính Hãng</h3><p class='brand-desc-p'>Tay Nắm Cửa Sổ Phụ Kiện 3H</p><p class='brand-desc-p'>Nhôm Kính Đại Phúc là một trong những đơn vị phân phối Phụ kiện 3H uy tín và chất lượng hàng đầu tại Việt Nam, cam kết mang đến cho khách hàng những sản phẩm chính hãng, chất lượng cùng dịch vụ hoàn hảo.</p><h3 class='brand-subtitle'># Cam Kết Chất Lượng Và Dịch Vụ Khách Hàng</h3><p class='brand-desc-p'>Hàng chính hãng 100%: Nhôm Kính Đại Phúc cam kết cung cấp Phụ kiện 3H chính hãng, có nguồn gốc xuất xứ rõ ràng, đảm bảo chất lượng tối ưu.</p><p class='brand-desc-p'>Đa dạng mẫu mã: Khách hàng có thể dễ dàng lựa chọn các mẫu Phụ kiện 3H phù hợp với nhu cầu và sở thích của mình.</p><p class='brand-desc-p'>Giá cả cạnh tranh: Nhôm Kính Đại Phúc luôn có mức giá cạnh tranh nhất trên thị trường, giúp khách hàng tiết kiệm tối đa chi phí.</p><p class='brand-desc-p'>Dịch vụ tư vấn chuyên nghiệp: Đội ngũ tư vấn viên chuyên nghiệp của Nhôm Kính Đại Phúc luôn sẵn sàng hỗ trợ khách hàng lựa chọn sản phẩm phù hợp nhất.</p><p class='brand-desc-p'>Giao hàng nhanh chóng: Nhôm Kính Đại Phúc cam kết giao hàng nhanh chóng, đúng hẹn đến tận nơi khách hàng yêu cầu.</p><h3 class='brand-subtitle'># Chế Độ Bảo Hành Và Hỗ Trợ Kỹ Thuật</h3><p class='brand-desc-p'>Chế độ bảo hành rõ ràng: Nhôm Kính Đại Phúc cung cấp chính sách bảo hành rõ ràng cho các sản phẩm Phụ kiện 3H, giúp khách hàng yên tâm sử dụng.</p><p class='brand-desc-p'>Hỗ trợ kỹ thuật chuyên nghiệp: Đội ngũ kỹ thuật viên giàu kinh nghiệm luôn sẵn sàng hỗ trợ khách hàng trong quá trình lắp đặt và sử dụng sản phẩm.</p><p class='brand-desc-p'>Giải đáp mọi thắc mắc: Khách hàng có thể liên hệ với Nhôm Kính Đại Phúc để được giải đáp mọi thắc mắc về sản phẩm và dịch vụ.</p><p class='brand-desc-p'>Hỗ trợ khách hàng tận tâm: Nhôm Kính Đại Phúc luôn đặt sự hài lòng của khách hàng lên hàng đầu, cam kết cung cấp dịch vụ chăm sóc khách hàng tận tâm, chuyên nghiệp.</p><h3 class='brand-subtitle'># Lợi Ích Khi Mua Phụ Kiện 3H Từ Nhôm Kính Đại Phúc</h3><p class='brand-desc-p'>Đảm bảo chất lượng: Mua Phụ kiện 3H tại Nhôm Kính Đại Phúc, bạn có thể yên tâm về chất lượng sản phẩm chính hãng, đảm bảo độ bền bỉ và tính năng hoạt động ổn định.</p><p class='brand-desc-p'>Giá cả hợp lý: Nhôm Kính Đại Phúc luôn có mức giá bán cạnh tranh, giúp khách hàng tiết kiệm tối đa chi phí.</p><p class='brand-desc-p'>Dịch vụ trọn gói: Nhôm Kính Đại Phúc cung cấp dịch vụ trọn gói từ tư vấn, thiết kế đến lắp đặt và bảo hành, giúp khách hàng thuận tiện và tiết kiệm thời gian.</p><p class='brand-desc-p'>Chế độ bảo hành uy tín: Nhôm Kính Đại Phúc cam kết bảo hành sản phẩm Phụ kiện 3H theo đúng tiêu chuẩn của nhà sản xuất.</p><p class='brand-desc-p'>Hỗ trợ kỹ thuật chuyên nghiệp: Đội ngũ kỹ thuật viên kinh nghiệm của Nhôm Kính Đại Phúc sẽ hỗ trợ bạn trong quá trình lắp đặt và sử dụng sản phẩm.</p><h3 class='brand-subtitle'>Hướng Dẫn Chọn Mua Và Lắp Đặt Phụ Kiện 3H</h3><p class='brand-desc-p'>Va Li Mẫu Phụ Kiện 3H</p><p class='brand-desc-p'>Việc lựa chọn và lắp đặt Phụ kiện 3H đúng cách sẽ góp phần đảm bảo độ bền bỉ, tính năng hoạt động tối ưu và tính thẩm mỹ cho hệ thống cửa nhôm Xingfa.</p><h3 class='brand-subtitle'># Lựa Chọn Phụ Kiện Phù Hợp Với Loại Cửa</h3><p class='brand-desc-p'>Xác định loại cửa: Bạn cần xác định rõ loại cửa mà mình đang sử dụng, ví dụ như cửa đi, cửa sổ, cửa lùa, cửa xếp… để lựa chọn Phụ kiện 3H tương ứng.</p><p class='brand-desc-p'>Kiểu dáng và màu sắc: Lựa chọn Phụ kiện 3H có kiểu dáng và màu sắc phù hợp với phong cách thiết kế của ngôi nhà và sở thích của gia chủ.</p><p class='brand-desc-p'>Chất liệu: Nên lựa chọn các loại phụ kiện 3H được làm từ chất liệu cao cấp, có khả năng chống ăn mòn, chịu lực tốt để đảm bảo độ bền bỉ theo thời gian.</p><p class='brand-desc-p'>Tính năng: Lựa chọn các loại Phụ kiện 3H có tích hợp những tính năng phù hợp với nhu cầu sử dụng, ví dụ như khả năng cách âm, cách nhiệt, khóa đa điểm...</p><h3 class='brand-subtitle'># Cách Lắp Đặt Và Bảo Quản Đúng Cách</h3><p class='brand-desc-p'>Lắp đặt bởi thợ chuyên nghiệp: Việc lắp đặt Phụ kiện 3H cần sự khéo léo và kỹ thuật, vì vậy bạn nên nhờ đến sự hỗ trợ của các thợ chuyên nghiệp để đảm bảo chất lượng và độ an toàn.</p><p class='brand-desc-p'>Tuân thủ hướng dẫn: Nên tuân thủ theo hướng dẫn lắp đặt của nhà sản xuất để đảm bảo quy trình lắp đặt đúng kỹ thuật và an toàn.</p><p class='brand-desc-p'>Kiểm tra kỹ các chi tiết: Sau khi lắp đặt, bạn cần kiểm tra kỹ lưỡng các chi tiết để đảm bảo Phụ kiện 3H hoạt động trơn tru và ổn định.</p><p class='brand-desc-p'>Vệ sinh định kỳ: Thực hiện vệ sinh định kỳ cho Phụ kiện 3H để giúp loại bỏ bụi bẩn, giữ cho phụ kiện luôn sạch sẽ và hoạt động hiệu quả.</p><p class='brand-desc-p'>Tránh va đập mạnh: Tránh va đập mạnh vào Phụ kiện 3H để tránh làm hư hỏng phụ kiện.</p><h3 class='brand-subtitle'># Những Lưu Ý Khi Lựa Chọn Và Sử Dụng</h3><p class='brand-desc-p'>Lựa chọn đơn vị cung cấp uy tín: Nên lựa chọn các đơn vị cung cấp uy tín, có kinh nghiệm trong việc cung cấp và phân phối Phụ kiện 3H chính hãng.</p><p class='brand-desc-p'>Kiểm tra kỹ sản phẩm: Trước khi mua, bạn nên kiểm tra kỹ các chi tiết của sản phẩm, đảm bảo sản phẩm không bị lỗi, hư hỏng.</p><p class='brand-desc-p'>Không sử dụng sản phẩm kém chất lượng: Tránh mua và sử dụng các sản phẩm Phụ kiện 3H kém chất lượng vì sẽ ảnh hưởng đến tuổi thọ và tính năng của cửa.</p><p class='brand-desc-p'>Thường xuyên bảo dưỡng: Thực hiện bảo dưỡng định kỳ cho Phụ kiện 3H để đảm bảo sản phẩm luôn hoạt động ổn định và bền bỉ.</p><p class='brand-desc-p'>Tham khảo ý kiến chuyên gia: Nếu có bất kỳ thắc mắc nào trong quá trình lựa chọn và sử dụng sản phẩm, bạn có thể tham khảo ý kiến của các chuyên gia hoặc đơn vị cung cấp.</p><h3 class='brand-subtitle'>Ứng Dụng Phụ Kiện 3H Trong Các Công Trình Khác Nhau</h3><p class='brand-desc-p'>Phụ Kiện 3H Cửa Xếp Trượt</p><p class='brand-desc-p'>Phụ kiện 3H không chỉ được ứng dụng rộng rãi trong hệ thống cửa nhôm Xingfa mà còn thích hợp với nhiều loại cửa khác, mang đến giải pháp hoàn thiện cho các công trình kiến trúc đa dạng.</p><h3 class='brand-subtitle'># Sử Dụng Phụ Kiện 3H Cho Cửa Đi</h3><p class='brand-desc-p'>Kết cấu chắc chắn: Phụ kiện 3H giúp tăng cường độ chắc chắn cho cửa đi, chịu được lực tác động mạnh.</p><p class='brand-desc-p'>Khả năng cách âm tốt: Gioăng cao su và ron cửa từ Phụ kiện 3H giúp giảm tiếng ồn hiệu quả, mang lại sự yên tĩnh cho không gian bên trong.</p><p class='brand-desc-p'>Tính năng an toàn cao: Khóa cửa đa điểm, chốt an toàn từ Phụ kiện 3H giúp bảo vệ an ninh cho ngôi nhà hiệu quả.</p><p class='brand-desc-p'>Thiết kế thẩm mỹ: Phụ kiện 3H với kiểu dáng và màu sắc đa dạng, giúp tăng thêm vẻ đẹp cho cửa đi, hài hòa với kiến trúc tổng thể.</p><h3 class='brand-subtitle'># Sử Dụng Phụ Kiện 3H Cho Cửa Sổ</h3><p class='brand-desc-p'>Giảm thiểu tiếng ồn: Phụ kiện 3H giúp giảm thiểu tiếng ồn từ bên ngoài, mang lại không gian yên tĩnh cho ngôi nhà.</p><p class='brand-desc-p'>Cải thiện khả năng cách nhiệt: Gioăng cao su và ron cửa từ Phụ kiện 3H tăng cường khả năng cách nhiệt, giúp tiết kiệm năng lượng và điều hòa nhiệt độ hiệu quả.</p><p class='brand-desc-p'>Đảm bảo an toàn: Chốt an toàn, khóa cửa từ Phụ kiện 3H giúp tăng cường tính an toàn cho cửa sổ, đặc biệt là đối với nhà có trẻ nhỏ.</p><p class='brand-desc-p'>Nâng cao tính thẩm mỹ: Phụ kiện 3H giúp cửa sổ thêm phần tinh tế và đẹp mắt, hài hòa với nội thất và ngoại thất của ngôi nhà.</p><h3 class='brand-subtitle'># Sử Dụng Phụ Kiện 3H Cho Các Loại Cửa Đặc Biệt (Cửa Lùa, Cửa Gập..)</h3><p class='brand-desc-p'>Cửa lùa: Phụ kiện 3H giúp hệ thống ray trượt cửa lùa hoạt động trơn tru, êm ái, đảm bảo độ bền bỉ theo thời gian.</p><p class='brand-desc-p'>Cửa xếp: Phụ kiện 3H giúp cửa xếp đóng mở linh hoạt, dễ dàng, tăng cường khả năng cách âm, cách nhiệt.</p><p class='brand-desc-p'>Cửa sổ mái: Phụ kiện 3H với khả năng chịu lực tốt, thích hợp với các loại cửa sổ mái, đảm bảo độ an toàn và bền bỉ.</p><p class='brand-desc-p'>Phụ kiện 3H là giải pháp tối ưu cho các loại cửa đặc biệt, giúp chúng vận hành hiệu quả, an toàn và thẩm mỹ, góp phần hoàn thiện cho các không gian sống trong các công trình kiến trúc đa dạng.</p><h3 class='brand-subtitle'>Những Mẫu Phụ Kiện 3H Phổ Biến</h3><p class='brand-desc-p'>Phụ kiện 3H với mẫu mã đa dạng được thiết kế phù hợp với các nhu cầu sử dụng khác nhau, từ các mẫu bản lề sang trọng, tay nắm tinh tế cho đến các loại khóa cửa an toàn. Dưới đây là một số hình ảnh minh họa:</p><h3 class='brand-subtitle'># Hình Ảnh Các Mẫu Bản Lề 3H</h3><p class='brand-desc-p'>Hình ảnh minh họa các loại bản lề 3H với thiết kế đa dạng, từ bản lề thường đến bản lề đa chiều, bản lề âm. Các loại bản lề này đều được làm từ chất liệu cao cấp, đảm bảo độ bền bỉ và khả năng chịu lực tốt, giúp cửa đóng mở êm ái, trơn tru.</p><h3 class='brand-subtitle'># Hình Ảnh Các Mẫu Tay Cầm 3H</h3><p class='brand-desc-p'>Hình ảnh minh họa các mẫu tay cầm 3H được thiết kế tinh tế, hiện đại, với kiểu dáng và màu sắc đa dạng. Các loại tay cầm này không chỉ mang lại sự tiện lợi khi sử dụng mà còn góp phần nâng cao tính thẩm mỹ cho không gian sống.</p><h3 class='brand-subtitle'># Hình Ảnh Các Mẫu Khóa 3H</h3><p class='brand-desc-p'>Hình ảnh minh họa một số mẫu khóa 3H với thiết kế đa dạng, tích hợp nhiều tính năng an toàn như khóa đa điểm, chốt an toàn… Khóa cửa 3H được làm từ chất liệu cao cấp, đảm bảo độ bền bỉ và hiệu quả bảo vệ an ninh cho ngôi nhà.</p><h3 class='brand-subtitle'>Phụ Kiện 3H Tham Gia Các Hội Chợ Và Sự Kiện</h3><p class='brand-desc-p'>Để tiếp cận gần hơn với khách hàng tiềm năng và giới thiệu những sản phẩm chất lượng cao, Phụ kiện 3H thường xuyên tham gia các hội chợ và sự kiện trong ngành xây dựng và nội thất.</p><h3 class='brand-subtitle'># Tham Gia Các Hội Chợ Xây Dựng Lớn</h3><p class='brand-desc-p'>Tăng cường nhận diện thương hiệu: Việc tham gia các hội chợ xây dựng lớn giúp Phụ kiện 3H nâng cao nhận diện thương hiệu, tiếp cận với đông đảo khách hàng và đối tác.</p><p class='brand-desc-p'>Trưng bày sản phẩm: Các gian hàng của Phụ kiện 3H được trưng bày ấn tượng, giới thiệu các sản phẩm mới nhất, giúp khách hàng có cái nhìn trực quan và rõ nét hơn về chất lượng sản phẩm.</p><p class='brand-desc-p'>Tư vấn và hỗ trợ: Đội ngũ tư vấn viên của Phụ kiện 3H luôn sẵn sàng tư vấn và hỗ trợ khách hàng trong việc lựa chọn sản phẩm phù hợp.</p><p class='brand-desc-p'>Kết nối với đối tác: Hội chợ cũng là cơ hội để Phụ kiện 3H kết nối, mở rộng mối quan hệ với các đối tác trong và ngoài nước.</p><h3 class='brand-subtitle'># Góp Mặt Tại Các Sự Kiện Ngành Cửa</h3><p class='brand-desc-p'>Thể hiện vị thế: Việc tham gia các sự kiện ngành cửa khẳng định vị thế của Phụ kiện 3H là một thương hiệu uy tín, chất lượng, luôn tiên phong trong việc cập nhật xu hướng.</p><p class='brand-desc-p'>Giới thiệu sản phẩm mới: Phụ kiện 3H thường giới thiệu các sản phẩm mới nhất, công nghệ tiên tiến tại các sự kiện này, thu hút sự quan tâm của khách hàng và giới chuyên môn.</p><p class='brand-desc-p'>Trao đổi kinh nghiệm: Các sự kiện này cũng là dịp để Phụ kiện 3H trao đổi kinh nghiệm, chia sẻ kiến thức với các chuyên gia trong ngành, góp phần nâng cao chất lượng sản phẩm và dịch vụ.</p><p class='brand-desc-p'>Thúc đẩy phát triển: Việc tham gia các sự kiện trong ngành cửa giúp Phụ kiện 3H thúc đẩy phát triển, nâng cao khả năng cạnh tranh trên thị trường.</p><h3 class='brand-subtitle'># Tiếp Cận Khách Hàng Tiềm Năng</h3><p class='brand-desc-p'>Mở rộng thị trường: Các hội chợ và sự kiện là cơ hội để Phụ kiện 3H mở rộng thị trường, tiếp cận với nhiều khách hàng tiềm năng, từ các nhà thầu, chủ đầu tư cho đến người tiêu dùng.</p><p class='brand-desc-p'>Tăng khả năng bán hàng: Việc trưng bày và giới thiệu sản phẩm tại các hội chợ và sự kiện giúp tăng khả năng bán hàng, quảng bá thương hiệu hiệu quả.</p><p class='brand-desc-p'>Tìm hiểu nhu cầu khách hàng: Qua việc tiếp xúc trực tiếp với khách hàng, Phụ kiện 3H có thể hiểu rõ hơn về nhu cầu sử dụng, từ đó cải thiện và hoàn thiện sản phẩm tốt hơn.</p><p class='brand-desc-p'>Xây dựng niềm tin: Việc tham gia các hội chợ và sự kiện góp phần nâng cao uy tín và sự tin tưởng của khách hàng đối với Phụ kiện 3H.</p><p class='brand-desc-p'>Phụ kiện 3H đã và đang khẳng định vị thế là một trong những thương hiệu phụ kiện cửa hàng đầu, đặc biệt phù hợp với hệ thống cửa nhôm Xingfa. Sự kết hợp hoàn hảo này mang đến không chỉ vẻ đẹp thẩm mỹ mà còn nâng cao chất lượng và độ bền của hệ thống cửa, mang lại không gian sống tiện nghi, an toàn và hiện đại cho người sử dụng. Qua bài viết này, hy vọng bạn đã có thêm những kiến thức cần thiết để lựa chọn sử dụng Phụ kiện 3H phù hợp nhất cho công trình của mình.</p><h3 class='brand-subtitle'># 4. Đảm Bảo Đội Ngũ Lắp Đặt Chuyên Nghiệp</h3><p class='brand-desc-p'>Đảm bảo kỹ thuật lắp đặt: Việc lắp đặt chính xác ảnh hưởng lớn đến hiệu suất và độ bền của cửa nhôm Xingfa khi sử dụng Phụ Kiện 3H.
+
+	Nhờ sự hỗ trợ từ chuyên gia: Đội ngũ lắp đặt chuyên nghiệp sẽ đảm bảo cửa hoạt động trơn tru, an toàn.</p><h3 class='brand-subtitle'>Cách Bảo Dưỡng Phụ Kiện 3H Đúng Cách</h3><h3 class='brand-subtitle'># 1. Vệ Sinh Định Kỳ</h3><p class='brand-desc-p'>Làm sạch bề mặt phụ kiện: Dùng khăn mềm và dung dịch tẩy rửa nhẹ để vệ sinh tay nắm, bản lề và khóa cửa.
+
+	Tránh dùng hóa chất mạnh: Không sử dụng các chất tẩy rửa chứa axit hoặc kiềm để tránh làm hư hại bề mặt phụ kiện.</p><h3 class='brand-subtitle'># 2. Kiểm Tra Định Kỳ</h3><p class='brand-desc-p'>Siết chặt các bộ phận lỏng: Kiểm tra bản lề, chốt cửa để đảm bảo các bộ phận không bị lỏng lẻo sau một thời gian sử dụng.
+
+	Bôi trơn định kỳ: Sử dụng dầu bôi trơn chuyên dụng cho các bộ phận chuyển động để đảm bảo hoạt động mượt mà.</p><h3 class='brand-subtitle'># 3. Bảo Quản Phụ Kiện Trong Điều Kiện Tốt</h3><p class='brand-desc-p'>Tránh môi trường ẩm ướt: Độ ẩm cao có thể gây ăn mòn bề mặt phụ kiện.
+
+	Kiểm tra gioăng cao su: Đảm bảo gioăng vẫn kín khít, không bị hở hoặc hư hỏng.</p><h3 class='brand-subtitle'>Những Ứng Dụng Nổi Bật Của Phụ Kiện 3H</h3><h3 class='brand-subtitle'># 1. Sử Dụng Cho Cửa Đi</h3><p class='brand-desc-p'>Cửa đi mở quay: Phụ kiện 3H giúp tăng tính thẩm mỹ và độ an toàn cho hệ cửa đi mở quay.
+
+	Cửa đi lùa: Các hệ ray trượt được thiết kế chắc chắn, giúp cửa lùa vận hành êm ái.</p><h3 class='brand-subtitle'># 2. Sử Dụng Cho Cửa Sổ</h3><p class='brand-desc-p'>Cửa sổ mở hất: Bản lề và tay nắm của Phụ Kiện 3H đảm bảo cửa đóng mở an toàn, không lo rơi rớt.
+
+	Cửa sổ lùa: Hệ chốt và tay nắm được tối ưu hóa để tăng cường khả năng cách âm, cách nhiệt.</p><h3 class='brand-subtitle'># 3. Ứng Dụng Trong Cửa Đặc Biệt</h3><p class='brand-desc-p'>Cửa xếp: Phụ kiện 3H giúp hệ cửa xếp vận hành linh hoạt, dễ dàng đóng mở.
+
+	Cửa vách kính mặt dựng: Phụ kiện đảm bảo tính thẩm mỹ và khả năng chịu lực cao, phù hợp với các công trình hiện đại.</p><h3 class='brand-subtitle'>Mua Phụ Kiện 3H Ở Đâu Để Đảm Bảo Chính Hãng</h3><h3 class='brand-subtitle'># 1. Lựa Chọn Đơn Vị Uy Tín</h3><p class='brand-desc-p'>Nhôm Kính Đại Phúc: Nhà phân phối hàng đầu với các sản phẩm Phụ Kiện 3H chính hãng.
+
+	Cam kết chất lượng: Đảm bảo hàng mới 100%, có nguồn gốc xuất xứ rõ ràng.</p><h3 class='brand-subtitle'># 2. Dịch Vụ Hỗ Trợ Chuyên Nghiệp</h3><p class='brand-desc-p'>Tư vấn miễn phí: Đội ngũ nhân viên hỗ trợ khách hàng tìm kiếm sản phẩm phù hợp.
+
+	Giao hàng tận nơi: Nhanh chóng, đúng hẹn, đảm bảo tiết kiệm thời gian.</p><p class='brand-desc-p'>Phụ Kiện 3H là giải pháp toàn diện cho hệ thống cửa nhôm, đặc biệt là cửa nhôm Xingfa. Với chất lượng vượt trội, thiết kế tinh tế và giá cả hợp lý, sản phẩm mang lại sự an tâm và giá trị vượt trội cho mọi công trình. Để tối ưu hóa hiệu quả sử dụng, chúng ta nên chọn các sản phẩm chính hãng và bảo dưỡng định kỳ.</p><h3 class='brand-subtitle'># Câu Hỏi Thường Gặp (FAQs)</h3><p class='brand-desc-p'>1. Giá Phụ Kiện 3H có đắt không?</p><p class='brand-desc-p'>Giá cả hợp lý, phù hợp với nhiều phân khúc khách hàng, đặc biệt có mức giá cạnh tranh so với các thương hiệu khác.</p><p class='brand-desc-p'>2. Làm thế nào để nhận biết Phụ Kiện 3H chính hãng?</p><p class='brand-desc-p'>Nên mua tại các đại lý ủy quyền, kiểm tra tem chống hàng giả và giấy tờ xuất xứ của sản phẩm.</p><p class='brand-desc-p'>3. Phụ Kiện 3H phù hợp với những loại cửa nào?</p><p class='brand-desc-p'>Phụ kiện 3H được thiết kế tương thích với nhiều loại cửa như cửa nhôm Xingfa, cửa nhôm Maxpro, Cửa nhôm hệ rãnh K và Hệ rãnh C.</p><p class='brand-desc-p'>4. Phụ Kiện 3H có bền không?</p><p class='brand-desc-p'>Được chế tạo từ vật liệu cao cấp, Phụ Kiện 3H có độ bền vượt trội, chịu được tác động của môi trường khắc nghiệt.</p><p class='brand-desc-p'>5. Cần lưu ý gì khi lắp đặt Phụ Kiện 3H?</p><p class='brand-desc-p'>Nên nhờ đội ngũ lắp đặt chuyên nghiệp và kiểm tra kỹ các chi tiết trước khi hoàn thiện.</p>
+        </div>
+        
+        <div class="brand-sidebar">
+          <h3 class="sidebar-title">Thông Số Kỹ Thuật 3H</h3>
+          <ul class="sidebar-list">
+            <li>Xuất xứ chính hãng: <strong>Hebel Trung Quốc</strong></li>
+            <li>Phân khúc thị trường: <strong>Tiêu chuẩn / Đồng bộ Xingfa</strong></li>
+            <li>Xử lý bề mặt nổi trội: <strong>Chống oxi hóa / Mạ Anodized</strong></li>
+            <li>Ứng dụng chính: <strong>Cửa đi, Cửa sổ, Vách nhôm kính</strong></li>
+            <li>Cam kết từ Sao Vàng: <strong>Đền bù gấp đôi nếu phát hiện hàng nhái</strong></li>
+            <li>Chính sách bảo hành: <strong>Đổi mới 1-1 trong 24 tháng</strong></li>
+          </ul>
+          
+          <a href="lien-he.html" class="sv-btn sv-btn-red" style="width:100%; display:flex; justify-content:center;">NHẬN BÁO GIÁ 3H <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-products-section">
+    <div class="sv-container">
+      <div style="text-align:center;">
+        <span class="sv-section-tag">DANH MỤC SẢN PHẨM</span>
+        <h2 class="sv-section-title" style="margin-inline:auto;">Sản Phẩm 3H Nổi Bật</h2>
+      </div>
+      
+      <div class="pk-grid">
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="assets/images/no-image.svg" alt="Phụ Kện Cửa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#3f6212;">3H</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Phụ Kện Cửa Slim</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #3f6212; color:#3f6212;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="assets/images/no-image.svg" alt="" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#3f6212;">3H</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name"></div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #3f6212; color:#3f6212;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="assets/images/no-image.svg" alt="Khóa Điện Tử" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#3f6212;">3H</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Khóa Điện Tử</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #3f6212; color:#3f6212;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-cua-lua-ltd24_445128137475/banh-xe-cua-lua-ltd24.webp" alt="Bánh Xe Cửa Lùa LTD24" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#3f6212;">3H</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bánh Xe Cửa Lùa LTD24</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #3f6212; color:#3f6212;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-1d-jx80_953330448849/ban-le-la-1d-jx80.webp" alt="Bản lề lá 1D JX80" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#3f6212;">3H</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản lề lá 1D JX80</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #3f6212; color:#3f6212;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner section-container">
+      <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.5fr;gap:40px;">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="index.html" class="footer-brand" aria-label="Trang chủ Sao Vàng">
+            <img src="assets/images/logo-sv-main.svg" alt="Sao Vàng Logo" width="52" height="52" />
+            <div>
+              <div class="footer-brand-name">SAO VÀNG</div>
+              <div class="footer-brand-tagline">Cơ Khí & Nhôm Kính</div>
+            </div>
+          </a>
+          <p class="footer-desc">Cung cấp đầy đủ phụ kiện nhôm kính chính hãng từ các thương hiệu uy tín hàng đầu. Tư vấn miễn phí, giao hàng nhanh tại Hà Nội.</p>
+        </div>
+
+        <!-- Col 2: Phụ kiện -->
+        <div>
+          <h4 class="footer-col-title">Phụ Kiện</h4>
+          <div class="footer-links">
+            <a href="phu-kien.html" class="footer-link">Tất Cả Phụ Kiện</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện Draho</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện Bogo</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện KinLong</a>
+            <a href="lien-he.html" class="footer-link">Khóa Điện Tử</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Sản phẩm -->
+        <div>
+          <h4 class="footer-col-title">Sản Phẩm</h4>
+          <div class="footer-links">
+            <a href="co-khi-sao-vang.html" class="footer-link">Cơ Khí Sao Vàng</a>
+            <a href="nhom-sao-vang.html" class="footer-link">Nhôm Sao Vàng</a>
+            <a href="san-pham.html" class="footer-link">Sản Phẩm</a>
+            <a href="du-an.html" class="footer-link">Dự Án</a>
+            <a href="tin-tuc.html" class="footer-link">Tin Tức</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Hỗ trợ -->
+        <div>
+          <h4 class="footer-col-title">Hỗ Trợ</h4>
+          <div class="footer-links">
+            <a href="gioi-thieu.html" class="footer-link">Giới thiệu</a>
+            <a href="linh-vuc-hoat-dong.html" class="footer-link">Lĩnh vực hoạt động</a>
+            <a href="thu-vien-sp.html" class="footer-link">Thư viện SP</a>
+            <a href="bao-gia.html" class="footer-link">Báo giá</a>
+            <a href="lien-he.html" class="footer-link">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội.</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-line" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color: inherit; text-decoration: none;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <a href="mailto:info@cokhisaovang.com" style="color: inherit; text-decoration: none;">info@cokhisaovang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>Thứ 2 - Thứ 7: 8:00 - 17:00</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. MST: 0110808047.</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+        <span>Phụ Kiện Nhôm Kính Chính Hãng</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── PRODUCT DETAIL MODAL ── -->
+  <div class="pk-modal" id="pkDetailModal" aria-hidden="true" role="dialog">
+    <div class="pk-modal-container">
+      <button class="pk-modal-close" id="pkCloseModal" aria-label="Đóng cửa sổ"><i class="ri-close-line"></i></button>
+      <div class="pk-modal-body" id="pkModalBody">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SCRIPTS ── -->
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/modules/navbar.js" defer></script>
+  <script>
+    // Product Detail Database
+    const productDb = {
+      "Bộ Khóa Có Chìa Cửa Lùa Slim": {
+        price: "864,000 đ/bộ",
+        images: [
+          "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim_546835771787/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim.webp",
+          "https://nhomkinhdaiphuc.com/upload/product/bo-khoa-co-chia-cua-lua-slim-mau-vang_4631972.webp",
+          "https://nhomkinhdaiphuc.com/upload/product/bo-khoa-co-chia-cua-lua-slim-mau-vang_4631971.webp",
+          "https://nhomkinhdaiphuc.com/upload/product/bo-khoa-co-chia-cua-lua-slim-mau-vang_4631970.webp"
+        ],
+        brand: "Slim System",
+        description: "Bộ khóa có chìa cửa lùa Slim là dòng khóa cửa đi cao cấp chuyên dụng cho các hệ nhôm Slim thanh mảnh. Khóa có thiết kế âm cửa tinh tế, tay nắm bóp dẹt thẩm mỹ, trang bị chìa khóa cơ dự phòng đảm bảo tính bảo mật và riêng tư cao nhất cho căn hộ của bạn. Sản phẩm được sản xuất bằng công nghệ anode chống oxy hóa bề mặt, không bay màu, chịu ăn mòn cực tốt.",
+        specs: {
+          "Thương hiệu": "Slim System",
+          "Chất liệu": "Hợp kim nhôm anode cao cấp",
+          "Màu sắc": "Đen nhám / Vàng Gold",
+          "Hệ nhôm thích hợp": "Cửa trượt Slim, cửa nhôm nội thất Slim",
+          "Độ dày kính phù hợp": "Kính cường lực 8mm - 12mm",
+          "Bảo hành": "24 tháng chính hãng"
+        }
+      },
+      "Bánh Xe Giảm Chấn Cửa Lùa Slim": {
+        price: "Liên hệ báo giá",
+        images: [
+          "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-giam-chan-cua-lua-slim_377335539699/phu-kien-cua-slim-banh-xe-giam-chan-cua-lua-slim.webp"
+        ],
+        brand: "OPK / Slim System",
+        description: "Bánh xe giảm chấn cửa lùa Slim giúp hành trình mở và đóng cửa cực kỳ êm ái, triệt tiêu tiếng ồn và tránh va đập mạnh làm vỡ kính. Đảm bảo an toàn tuyệt đối khi sử dụng.",
+        specs: {
+          "Thương hiệu": "OPK / Slim System",
+          "Chất liệu": "Thép chống gỉ + Nhựa POM siêu bền",
+          "Tải trọng tối đa": "100kg/cánh",
+          "Hệ thống giảm chấn": "Thủy lực 2 chiều",
+          "Bảo hành": "24 tháng"
+        }
+      },
+      "Khóa điện tử Xingfa 6-in-1 Viro Smartlock VR-S30E": {
+        price: "3,500,000 đ/bộ",
+        images: [
+          "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e_015859246278/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e.webp"
+        ],
+        brand: "Viro Smartlock",
+        description: "Khóa điện tử thông minh tích hợp 6 phương thức mở khóa tiên tiến nhất: Vân tay, Mật mã, Thẻ từ, Chìa cơ dự phòng, App điện thoại qua Bluetooth, và Wifi (Gateway). Thân khóa siêu mảnh thiết kế riêng cho các hệ cửa nhôm Xingfa, cửa nhôm kính có đố nhỏ.",
+        specs: {
+          "Thương hiệu": "Viro Smartlock",
+          "Chất liệu": "Hợp kim kẽm siêu cứng",
+          "Bộ nhớ lưu trữ": "100 vân tay, 100 mã số, 100 thẻ từ",
+          "Màu sắc": "Đen xi mạ cao cấp",
+          "Bảo hành": "24 tháng"
+        }
+      }
+    };
+
+    // Filter tab interaction
+    document.querySelectorAll('.filter-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        document.querySelectorAll('.pk-category').forEach(cat => {
+          if (filter === 'all' || cat.dataset.cat === filter) {
+            cat.style.display = '';
+          } else {
+            cat.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Detail Modal Controller
+    const modal = document.getElementById('pkDetailModal');
+    const modalBody = document.getElementById('pkModalBody');
+    const closeBtn = document.getElementById('pkCloseModal');
+
+    function openProductDetail(card) {
+      const imgEl = card.querySelector('.pk-card-img img');
+      const titleEl = card.querySelector('.pk-card-name');
+      const categorySection = card.closest('.pk-category');
+      
+      const title = titleEl ? titleEl.textContent.trim() : 'Phụ Kiện Cao Cấp';
+      const imageSrc = imgEl ? imgEl.src : 'assets/images/no-image.svg';
+      
+      let categoryName = 'SAO VÀNG';
+      if (categorySection) {
+        const titleHeader = categorySection.querySelector('.pk-category-title');
+        if (titleHeader) {
+          // Clone and remove brand tags inside header to get clean category name
+          const tempHeader = titleHeader.cloneNode(true);
+          tempHeader.querySelectorAll('.pk-category-brand-tag, .pk-category-badge').forEach(el => el.remove());
+          categoryName = tempHeader.textContent.trim();
+        }
+      }
+
+      // Lookup or generate detail record
+      const details = productDb[title] || {
+        price: "Liên hệ báo giá",
+        images: [imageSrc],
+        brand: categoryName,
+        description: `Phụ kiện ${title} cao cấp, được cung cấp chính hãng bởi Công ty Cổ phần Sản xuất Cơ khí Sao Vàng. Thiết kế tinh tế, hiện đại, tối ưu hóa công năng và nâng cao tuổi thọ vận hành cho các hệ thống cửa nhôm kính của bạn.`,
+        specs: {
+          "Thương hiệu": categoryName,
+          "Phân loại": "Phụ kiện nhôm kính cao cấp",
+          "Chất liệu": "Hợp kim cao cấp chống gỉ",
+          "Xuất xứ": "Chính hãng",
+          "Bảo hành": "12 - 24 tháng chính hãng"
+        }
+      };
+
+      // Render Modal Body
+      let thumbsHtml = '';
+      if (details.images && details.images.length > 1) {
+        thumbsHtml = `<div class="pk-gallery-thumbs">` + 
+          details.images.map((img, idx) => `
+            <div class="pk-gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="changeMainImage('${img}', this)">
+              <img src="${img}" alt="Ảnh phụ ${idx + 1}" />
+            </div>
+          `).join('') + `</div>`;
+      }
+
+      let specsHtml = '';
+      if (details.specs) {
+        specsHtml = `<table class="pk-specs-table">` +
+          Object.entries(details.specs).map(([key, val]) => `
+            <tr>
+              <td class="pk-specs-label">${key}</td>
+              <td>${val}</td>
+            </tr>
+          `).join('') + `</table>`;
+      }
+
+      modalBody.innerHTML = `
+        <div class="pk-modal-gallery">
+          <div class="pk-gallery-main">
+            <img id="pkMainImg" src="${details.images[0]}" alt="${title}" />
+          </div>
+          ${thumbsHtml}
+        </div>
+        <div class="pk-modal-info">
+          <div class="pk-info-brand">${details.brand || categoryName}</div>
+          <h3 class="pk-info-title">${title}</h3>
+          <div class="pk-info-price"><span>Giá bán:</span>${details.price}</div>
+          
+          <div class="pk-info-tabs">
+            <button class="pk-info-tab active" onclick="switchTab('desc', this)">Mô tả chi tiết</button>
+            <button class="pk-info-tab" onclick="switchTab('specs', this)">Thông số kỹ thuật</button>
+          </div>
+
+          <div class="pk-info-panel active" id="pkPanelDesc">
+            <p>${details.description}</p>
+          </div>
+          <div class="pk-info-panel" id="pkPanelSpecs">
+            ${specsHtml}
+          </div>
+
+          <div class="pk-info-actions">
+            <a href="tel:0869590279" class="btn-gold"><i class="ri-phone-fill"></i> 0869 590 279</a>
+            <a href="lien-he.html" class="btn-outline"><i class="ri-mail-send-line"></i> Gửi Yêu Cầu</a>
+          </div>
+        </div>
+      `;
+
+      // Show Modal
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function changeMainImage(src, thumbEl) {
+      document.getElementById('pkMainImg').src = src;
+      document.querySelectorAll('.pk-gallery-thumb').forEach(el => el.classList.remove('active'));
+      thumbEl.classList.add('active');
+    }
+
+    function switchTab(type, tabEl) {
+      document.querySelectorAll('.pk-info-tab').forEach(el => el.classList.remove('active'));
+      tabEl.classList.add('active');
+      
+      document.querySelectorAll('.pk-info-panel').forEach(el => el.classList.remove('active'));
+      if (type === 'desc') {
+        document.getElementById('pkPanelDesc').classList.add('active');
+      } else {
+        document.getElementById('pkPanelSpecs').classList.add('active');
+      }
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // Attach click events to cards
+    document.querySelectorAll('.pk-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Prevent default only if clicking card-btn or if we want modal for the whole card
+        e.preventDefault();
+        openProductDetail(card);
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+  </script>
+  <script src="assets/js/shared/internal-links.js"></script>
+  <!-- Sprint 3: Service CTA -->
+  <script src="assets/js/shared/service-cta.js"></script>
+    <!-- Sprint 2: Shared components -->
+  <script src="assets/js/shared/floating-widget.js"></script>
+  <script src="assets/js/shared/faq-accordion.js"></script>
+  <script src="assets/js/shared/breadcrumb.js"></script>
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>
+
+</body>
+</html>

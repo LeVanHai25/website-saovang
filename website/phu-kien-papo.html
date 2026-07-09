@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#7c2d12" />
+  <title>Phụ Kiện PAPO Chính Hãng Cao Cấp | SAO VÀNG</title>
+  <meta name="description" content="Sao Vàng cung cấp phụ kiện PAPO chính hãng chất lượng cao. Đầy đủ PAPO bản lề, khóa đa điểm, tay nắm chống muối mặn. Bảo hành dài hạn." />
+  <meta name="keywords" content="phụ kiện papo, phụ kiện PAPO, PAPO chính hãng, phụ kiện nhôm kính" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  
+  <style>
+    .brand-hero {
+      background: linear-gradient(135deg,#7c2d12 0%,#ea580c 100%);
+      padding: 120px 0 60px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 120%, rgba(255,255,255,0.1), transparent 70%);
+    }
+    .brand-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .brand-title {
+      font-family: var(--sv-font-head);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .brand-subtitle-hero {
+      font-size: clamp(14px, 2vw, 18px);
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    
+    .brand-stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 40px);
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .brand-stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 24px;
+      min-width: 140px;
+      backdrop-filter: blur(8px);
+    }
+    .brand-stat-num {
+      font-family: var(--sv-font-head);
+      font-size: 28px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .brand-stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .brand-detail-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+    .brand-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .brand-content-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .brand-info-column {
+      padding-right: 20px;
+    }
+    .brand-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin: 28px 0 14px;
+      border-left: 4px solid #7c2d12;
+      padding-left: 14px;
+    }
+    .brand-sub-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sv-dark-800);
+      margin: 18px 0 8px;
+    }
+    .brand-desc-p {
+      font-size: var(--sv-fs-sm);
+      color: var(--sv-gray-text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    
+    .brand-sidebar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .sidebar-title {
+      font-family: var(--sv-font-head);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: 20px;
+    }
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .sidebar-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 13px;
+      color: var(--sv-gray-text);
+      display: flex;
+      justify-content: space-between;
+    }
+    .sidebar-list li strong {
+      color: var(--sv-dark-900);
+    }
+    
+    .brand-products-section {
+      padding: 80px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .pk-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .pk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+    .pk-card-img {
+      position: relative;
+      height: 220px;
+      background: #f1f5f9;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .pk-card-img img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .pk-card-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+    .pk-card-body {
+      padding: 20px;
+    }
+    .pk-card-name {
+      font-family: var(--sv-font-head);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: 16px;
+      min-height: 40px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .pk-card-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: var(--sv-font-head);
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-menu-link active">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html" class="nav-menu-link">Nhôm Sao Vàng</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan</a>
+            <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
+          </div>
+        </div>
+        <a href="phu-kien.html" class="nav-menu-link">Phụ Kiện</a>
+        <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
+        <a href="du-an.html" class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="lien-he.html" class="nav-menu-link">Liên Hệ</a>
+      </nav>
+
+      <!-- Hotline + Hamburger -->
+      <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+        <a href="tel:0869590279" class="nav-hotline" aria-label="Gọi hotline 0869 590 279">
+          <i class="ri-phone-fill" aria-hidden="true"></i>
+          <span>0869 590 279</span>
+        </a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+      <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html" class="nav-drawer-link">Trang Chủ</a>
+    <a href="co-khi-sao-vang.html" class="nav-drawer-link">Cơ Khí Sao Vàng</a>
+    <a href="nhom-sao-vang.html" class="nav-drawer-link">Nhôm Sao Vàng</a>
+    <a href="linh-vuc-hoat-dong.html" class="nav-drawer-link">Lĩnh Vực Hoạt Động</a>
+    <a href="phu-kien.html" class="nav-drawer-link active">Phụ Kiện</a>
+    <a href="thu-vien-profile-nhom.html" class="nav-drawer-link">Profile Nhôm</a>
+    <a href="du-an.html" class="nav-drawer-link">Dự Án Đã Thực Hiện</a>
+    <a href="lien-he.html" class="nav-drawer-link">Liên Hệ</a>
+    <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
+      <i class="ri-phone-fill"></i> 0869 590 279
+    </a>
+  </nav>
+
+  
+
+  <section class="brand-hero">
+    <div class="sv-container">
+      <span class="brand-tag">THƯƠNG HIỆU PHỤ KIỆN</span>
+      <h1 class="brand-title">Phụ Kiện PAPO</h1>
+      <p class="brand-subtitle-hero">Dòng sản phẩm nhập khẩu cao cấp đồng hành cùng các giải pháp cửa nhôm kính Sao Vàng</p>
+      
+      <div class="brand-stats">
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Hồng Kông</div>
+          <div class="brand-stat-label">Xuất Xứ</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">15</div>
+          <div class="brand-stat-label">Mã Sản Phẩm</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">100%</div>
+          <div class="brand-stat-label">Chính Hãng</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-detail-section">
+    <div class="sv-container">
+      <div class="brand-content-grid">
+        <div class="brand-info-column">
+          <h2 class="sv-section-title" style="margin-left:0; text-align:left;">Tổng Quan Về Hãng</h2>
+          <p class='brand-desc-p'>Trang chủPhụ kiệnPhụ Kiện Papo            
+Phụ Kiện Papo</p><p class='brand-desc-p'>Vách tắm kính cửa chữ L phụ kiện thương hiệu Papo mã PT02</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ Kiện Vách Tắm Papo lùa có giảm chấn mã PT01</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ Kiện Papo vách kính phòng tắm 2 cánh lùa qua lại mã PT03</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ Kiện Papo cho vách kính phòng tắm 2 cánh lùa qua lại có giảm chấn mã PT04</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ Kiện Papo, phòng tắm lùa vuông góc 90 độ mã PT06</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ Kiện Phòng Tắm Papo phụ kiện lùa 135 độ mã PT07</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ Kiện Vách tắm kính cửa lùa 135 độ Papo có giảm chấn mã PT07S</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ Kiện Phòng Tắm Kính Cửa Lùa Chữ T Papo có giảm chấn mã PT08</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ Kiện Papo, Vách tắm kính cửa lùa chữ T (có vách bên) mã PT09</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ Kiện Vách tắm kính cửa lùa giảm chấn Papo mã PT10</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ Kiện Phòng Tắm Papo bản lề xoay trên dưới mã PT11</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Hệ thống trượt từ tính cửa đơn</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>&laquo;  &#8249; 12 &#8250;  &raquo;</p><h3 class='brand-subtitle'>Phụ kiện Papo là gì?</h3><p class='brand-desc-p'>Papo là một thương hiệu chuyên sản xuất và cung cấp các loại phụ kiện cửa cao cấp, bao gồm cả phụ kiện cửa nhôm và cabin tắm slim cao cấp. Với hơn 10 năm kinh nghiệm trong ngành, Papo đã trở thành một trong những thương hiệu hàng đầu về phụ kiện cửa tại Việt Nam.</p><p class='brand-desc-p'>Phòng tắm kính Papo đa dạng với nhiều mẫu khác nhau, bao gồm: khóa cửa, tay nắm cửa, bản lề, chốt cửa, đầu chốt, phụ kiện trang trí và nhiều hơn nữa. Tất cả các sản phẩm cabin tắm slim đều được thiết kế với chất lượng cao và sự tinh tế trong từng chi tiết, đảm bảo mang đến cho khách hàng những trải nghiệm sử dụng tuyệt vời nhất.</p><p class='brand-desc-p'>Với đội ngũ nhân viên giàu kinh nghiệm và tận tâm với công việc, Papo cam kết cung cấp cho khách hàng các sản phẩm chất lượng tốt nhất, đảm bảo an toàn và độ bền cao. Khách hàng có thể yên tâm khi sử dụng sản phẩm của Papo.</p><p class='brand-desc-p'>Ngoài ra, Papo cũng mang đến cho khách hàng dịch vụ tư vấn và hỗ trợ chuyên nghiệp, giúp khách hàng lựa chọn được sản phẩm phù hợp nhất với nhu cầu và sở thích của mình.</p><p class='brand-desc-p'>Với sự phát triển không ngừng của công nghệ, Papo luôn cập nhật và nghiên cứu để cho ra đời những sản phẩm mới, đáp ứng nhu cầu và sở thích của khách hàng ngày càng đa dạng.</p><p class='brand-desc-p'>Cửa nhôm Slim và phòng tắm kính PAPO là những sản phẩm mới nhất trong lĩnh vực hệ cửa-vách ngăn nội thất thông minh, với những đặc điểm vượt trội so với các sản phẩm trước đó.</p><h3 class='brand-subtitle'>Phụ kiện Papo cửa Slim</h3><p class='brand-desc-p'>Điểm đáng chú ý đầu tiên của cửa nhôm Slim là thiết kế hệ thanh nhôm bản nhỏ, tinh tế và đẹp mắt, phù hợp với các giải pháp cửa nội thất của công trình. Hệ thanh nhôm bản nhỏ này giúp cửa nhôm Slim trở nên gọn nhẹ, dễ dàng lắp đặt và di chuyển.</p><p class='brand-desc-p'>Điểm mạnh thứ hai của phòng tắm Papo chính là hệ phụ kiện đồng bộ cao cấp, được thiết kế thông minh để tối ưu công năng vận hành và tăng tuổi thọ của cửa. Hệ phụ kiện đồng bộ này giúp cho việc mở và đóng cửa trở nên nhẹ nhàng, êm ái và bền bỉ hơn, đồng thời giúp giảm thiểu sự cọ xát giữa các bộ phận của cửa nhôm Slim.</p><p class='brand-desc-p'>Điểm mạnh cuối cùng của cửa nhôm Slim đó là thiết kế cửa trượt không ray dưới, loại bỏ bất tiện về sự vướng víu và việc vệ sinh bụi bẩn cho ray, tiện dụng cho mọi loại địa hình hay kiểu bố trí của công trình. Với thiết kế này, cửa nhôm Slim trở nên đơn giản hơn, dễ dàng sử dụng và bảo trì.</p><p class='brand-desc-p'>Với những đặc điểm vượt trội này, cửa nhôm Slim và phòng tắm kính PAPO đang được đánh giá cao trong ngành công nghiệp hệ cửa-vách ngăn nội thất thông minh. Đây hứa hẹn sẽ là xu hướng mới cho các dự án xây dựng và thiết kế nội thất trong tương lai gần.</p><p class='brand-desc-p'>Cửa nhôm Slim và phụ kiện đồng bộ của hãng PAPO đang là một xu hướng mới trong thiết kế cửa-vách ngăn nội thất hiện nay. Điểm đặc biệt của sản phẩm này là thiết kế hệ thanh nhôm bản nhỏ, phù hợp với nhiều giải pháp cửa nội thất và vách ngăn tùy thuộc vào vị trí và yêu cầu sử dụng.</p><p class='brand-desc-p'>Bên cạnh đó, hệ phụ kiện thiết kế thông minh giúp tối ưu công năng vận hành và tăng tuổi thọ của cửa. Đặc biệt, hệ phụ kiện đồng bộ cao cấp mang lại khả năng vận hành bền bỉ, nhẹ nhàng và êm ái cho bộ cửa nhôm trượt Slim.</p><p class='brand-desc-p'>Một ưu điểm khác của cửa nhôm Slim là thiết kế trượt không cần ray dưới, giúp loại bỏ bất tiện về sự vướng víu và việc vệ sinh bụi bẩn cho ray. Điều này đặc biệt tiện dụng cho mọi loại địa hình hay kiểu bố trí của công trình.</p><p class='brand-desc-p'>Thêm vào đó, sản phẩm còn được thiết kế linh hoạt và đa dạng, có thể dễ dàng kết hợp thành nhiều giải pháp cửa và vách ngăn tùy thuộc vào vị trí và yêu cầu sử dụng. Nhờ vào điều này, cửa nhôm Slim và phụ kiện đồng bộ có thể mang lại nhiều công năng tối ưu cho không gian sử dụng vô cùng hợp lý.</p><h3 class='brand-subtitle'>Phụ kiện phòng tắm kính Papo</h3><p class='brand-desc-p'>Phòng tắm kính Papo là một không gian quan trọng trong căn nhà của bạn, là nơi để thư giãn và tắm rửa sau một ngày dài. Để tạo ra một không gian phòng tắm đẹp và tiện nghi, phụ kiện phòng tắm Papo là một sự lựa chọn tuyệt vời cho bạn.</p><p class='brand-desc-p'>Với các sản phẩm khung inox và kính cao cấp của Papo, bạn có thể tạo ra một không gian phòng tắm sang trọng và hiện đại. Khung inox được thiết kế chắc chắn và đẹp mắt, giúp cho phòng tắm của bạn trở nên đẹp mắt và chuyên nghiệp hơn.</p><p class='brand-desc-p'>Nếu bạn đang tìm kiếm một giải pháp phòng tắm đa năng, phòng tắm kính Papo sẽ là một lựa chọn hoàn hảo cho bạn. Với các tùy chọn mở hoặc trượt, phòng tắm kính Papo có thể tạo ra nhiều phương án thiết kế khác nhau, phù hợp với mọi kiểu không gian phòng tắm.</p><p class='brand-desc-p'>Mẫu phòng tắm mới nhất 2023 của Papo mang lại sự độc đáo và sáng tạo, với thiết kế và chất liệu đa dạng và tiên tiến. Với các lựa chọn phòng tắm mạ vàng, bạn có thể tạo ra một không gian phòng tắm sang trọng và đẳng cấp, giúp bạn thư giãn sau một ngày làm việc mệt nhọc.</p><p class='brand-desc-p'>Nếu bạn đang muốn tìm kiếm phụ kiện phòng tắm Papo, bạn có thể tìm mua tại các cửa hàng bán lẻ, các trung tâm thương mại hoặc trên các trang mua sắm trực tuyến. Với các sản phẩm phụ kiện phòng tắm Papo, bạn sẽ không phải lo lắng về chất lượng và thiết kế, vì đó là những sản phẩm được sản xuất với tiêu chuẩn cao và có tính thẩm mỹ cao.</p><p class='brand-desc-p'>Với phụ kiện phòng tắm Papo, bạn sẽ không chỉ có một không gian phòng tắm đẹp mắt, mà còn là một không gian tiện nghi và đáng sống. Hãy lựa chọn sản phẩm phù hợp với sở thích và nhu cầu của bạn để tạo ra một không gian phòng tắm hoàn hảo.</p><h3 class='brand-subtitle'>Phụ kiện Papo của nước nào?</h3><p class='brand-desc-p'>Thương hiệu phụ kiện Papo có nguồn gốc từ Đài Loan và hiện nay được phân phối rộng rãi trên thị trường quốc tế. Trong đó, sản phẩm phụ kiện Papo được sản xuất và phân phối tại Việt Nam bởi công ty TNHH PAPO Việt Nam.</p><p class='brand-desc-p'>Tôi xin cung cấp thông tin liên hệ của Papo tại Đài Loan như sau:</p><p class='brand-desc-p'>Địa chỉ: No. 9-11, Lane 352, Ruiguang Road, Neihu District, Taipei City 114, Taiwan (R.O.C) Số điện thoại: +886-2-2791-9696 Email: service@papo.com.tw</p><p class='brand-desc-p'>Bạn có thể truy cập trang web chính thức của Papo tại địa chỉ https://www.papo.com.tw/ để biết thêm thông tin chi tiết và liên hệ.</p>
+        </div>
+        
+        <div class="brand-sidebar">
+          <h3 class="sidebar-title">Thông Số Kỹ Thuật PAPO</h3>
+          <ul class="sidebar-list">
+            <li>Xuất xứ chính hãng: <strong>Hồng Kông</strong></li>
+            <li>Phân khúc thị trường: <strong>Chuyên Phòng Tắm Kính & Cabin tắm</strong></li>
+            <li>Xử lý bề mặt nổi trội: <strong>Chống oxi hóa / Mạ Anodized</strong></li>
+            <li>Ứng dụng chính: <strong>Cửa đi, Cửa sổ, Vách nhôm kính</strong></li>
+            <li>Cam kết từ Sao Vàng: <strong>Đền bù gấp đôi nếu phát hiện hàng nhái</strong></li>
+            <li>Chính sách bảo hành: <strong>Đổi mới 1-1 trong 24 tháng</strong></li>
+          </ul>
+          
+          <a href="lien-he.html" class="sv-btn sv-btn-red" style="width:100%; display:flex; justify-content:center;">NHẬN BÁO GIÁ PAPO <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-products-section">
+    <div class="sv-container">
+      <div style="text-align:center;">
+        <span class="sv-section-tag">DANH MỤC SẢN PHẨM</span>
+        <h2 class="sv-section-title" style="margin-inline:auto;">Sản Phẩm PAPO Nổi Bật</h2>
+      </div>
+      
+      <div class="pk-grid">
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="assets/images/no-image.svg" alt="Phụ Kện Cửa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Phụ Kện Cửa Slim</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="assets/images/no-image.svg" alt="" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name"></div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="assets/images/no-image.svg" alt="Khóa Điện Tử" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Khóa Điện Tử</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/vach-tam-kinh-cua-chu-l-phu-kien-thuong-hieu-papo-ma-pt02_884744901411/vach-tam-kinh-cua-chu-l-phu-kien-thuong-hieu-papo-ma-pt02.webp" alt="Vách tắm kính cửa chữ L phụ kiện thương hiệu Papo mã PT02" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Vách tắm kính cửa chữ L phụ kiện thương hiệu Papo mã PT02</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-vach-tam-papo-lua-co-giam-chan-ma-pt01_010926749766/phu-kien-vach-tam-papo-lua-co-giam-chan-ma-pt01.webp" alt="Phụ Kiện Vách Tắm Papo lùa có giảm chấn mã PT01" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Phụ Kiện Vách Tắm Papo lùa có giảm chấn mã PT01</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-papo-vach-kinh-phong-tam-2-canh-lua-qua-lai-ma-pt03_286014016518/phu-kien-papo-vach-kinh-phong-tam-2-canh-lua-qua-lai-ma-pt03.webp" alt="vách kính phòng tắm 2 cánh lùa qua lại mã PT03" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">vách kính phòng tắm 2 cánh lùa qua lại mã PT03</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-papo-cho-vach-kinh-phong-tam-2-canh-lua-qua-lai-co-giam-chan-ma-pt04_160820501707/phu-kien-papo-cho-vach-kinh-phong-tam-2-canh-lua-qua-lai-co-giam-chan-ma-pt04.webp" alt="cho vách kính phòng tắm 2 cánh lùa qua lại có giảm chấn mã PT04" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">cho vách kính phòng tắm 2 cánh lùa qua lại có giảm chấn mã PT04</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-papo-phong-tam-lua-vuong-goc-90-do-ma-pt06_109679216690/phu-kien-papo-phong-tam-lua-vuong-goc-90-do-ma-pt06.webp" alt=", phòng tắm lùa vuông góc 90 độ mã PT06" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">, phòng tắm lùa vuông góc 90 độ mã PT06</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-phong-tam-papo-phu-kien-lua-135-do-ma-pt07_093704140722/phu-kien-phong-tam-papo-phu-kien-lua-135-do-ma-pt07.webp" alt="Phụ Kiện Phòng Tắm Papo phụ kiện lùa 135 độ mã PT07" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Phụ Kiện Phòng Tắm Papo phụ kiện lùa 135 độ mã PT07</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-vach-tam-kinh-cua-lua-135-do-papo-co-giam-chan-ma-pt07s_372465976078/phu-kien-vach-tam-kinh-cua-lua-135-do-papo-co-giam-chan-ma-pt07s.webp" alt="Phụ Kiện Vách tắm kính cửa lùa 135 độ Papo có giảm chấn mã PT07S" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Phụ Kiện Vách tắm kính cửa lùa 135 độ Papo có giảm chấn mã PT07S</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phong-tam-kinh-cua-lua-chu-t-papo-co-giam-chan-ma-pt08_818339009903/phu-kien-phong-tam-kinh-cua-lua-chu-t-papo-co-giam-chan-ma-pt08.webp" alt="Phụ Kiện Phòng Tắm Kính Cửa Lùa Chữ T Papo có giảm chấn mã PT08" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Phụ Kiện Phòng Tắm Kính Cửa Lùa Chữ T Papo có giảm chấn mã PT08</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-papo-vach-tam-kinh-cua-lua-chu-t-co-vach-ben-ma-pt09_219682008890/phu-kien-papo-vach-tam-kinh-cua-lua-chu-t-co-vach-ben-ma-pt09.webp" alt=", Vách tắm kính cửa lùa chữ T (có vách bên) mã PT09" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">, Vách tắm kính cửa lùa chữ T (có vách bên) mã PT09</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/vach-tam-kinh-cua-lua-giam-chan-papo-ma-pt10_000540388082/phu-kien-vach-tam-kinh-cua-lua-giam-chan-papo-ma-pt10.webp" alt="Phụ Kiện Vách tắm kính cửa lùa giảm chấn Papo mã PT10" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Phụ Kiện Vách tắm kính cửa lùa giảm chấn Papo mã PT10</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-phong-tam-papo-ban-le-xoay-tren-duoi-ma-pt11_684291958876/phu-kien-phong-tam-papo-ban-le-xoay-tren-duoi-ma-pt11.webp" alt="Phụ Kiện Phòng Tắm Papo bản lề xoay trên dưới mã PT11" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Phụ Kiện Phòng Tắm Papo bản lề xoay trên dưới mã PT11</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/he-thong-truot-tu-tinh-cua-don_631021924353/he-thong-truot-tu-tinh-cua-don.webp" alt="Hệ thống trượt từ tính cửa đơn" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#7c2d12;">PAPO</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Hệ thống trượt từ tính cửa đơn</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #7c2d12; color:#7c2d12;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner section-container">
+      <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.5fr;gap:40px;">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="index.html" class="footer-brand" aria-label="Trang chủ Sao Vàng">
+            <img src="assets/images/logo-sv-main.svg" alt="Sao Vàng Logo" width="52" height="52" />
+            <div>
+              <div class="footer-brand-name">SAO VÀNG</div>
+              <div class="footer-brand-tagline">Cơ Khí & Nhôm Kính</div>
+            </div>
+          </a>
+          <p class="footer-desc">Cung cấp đầy đủ phụ kiện nhôm kính chính hãng từ các thương hiệu uy tín hàng đầu. Tư vấn miễn phí, giao hàng nhanh tại Hà Nội.</p>
+        </div>
+
+        <!-- Col 2: Phụ kiện -->
+        <div>
+          <h4 class="footer-col-title">Phụ Kiện</h4>
+          <div class="footer-links">
+            <a href="phu-kien.html" class="footer-link">Tất Cả Phụ Kiện</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện Draho</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện Bogo</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện KinLong</a>
+            <a href="lien-he.html" class="footer-link">Khóa Điện Tử</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Sản phẩm -->
+        <div>
+          <h4 class="footer-col-title">Sản Phẩm</h4>
+          <div class="footer-links">
+            <a href="co-khi-sao-vang.html" class="footer-link">Cơ Khí Sao Vàng</a>
+            <a href="nhom-sao-vang.html" class="footer-link">Nhôm Sao Vàng</a>
+            <a href="san-pham.html" class="footer-link">Sản Phẩm</a>
+            <a href="du-an.html" class="footer-link">Dự Án</a>
+            <a href="tin-tuc.html" class="footer-link">Tin Tức</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Hỗ trợ -->
+        <div>
+          <h4 class="footer-col-title">Hỗ Trợ</h4>
+          <div class="footer-links">
+            <a href="gioi-thieu.html" class="footer-link">Giới thiệu</a>
+            <a href="linh-vuc-hoat-dong.html" class="footer-link">Lĩnh vực hoạt động</a>
+            <a href="thu-vien-sp.html" class="footer-link">Thư viện SP</a>
+            <a href="bao-gia.html" class="footer-link">Báo giá</a>
+            <a href="lien-he.html" class="footer-link">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội.</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-line" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color: inherit; text-decoration: none;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <a href="mailto:info@cokhisaovang.com" style="color: inherit; text-decoration: none;">info@cokhisaovang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>Thứ 2 - Thứ 7: 8:00 - 17:00</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. MST: 0110808047.</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+        <span>Phụ Kiện Nhôm Kính Chính Hãng</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── PRODUCT DETAIL MODAL ── -->
+  <div class="pk-modal" id="pkDetailModal" aria-hidden="true" role="dialog">
+    <div class="pk-modal-container">
+      <button class="pk-modal-close" id="pkCloseModal" aria-label="Đóng cửa sổ"><i class="ri-close-line"></i></button>
+      <div class="pk-modal-body" id="pkModalBody">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SCRIPTS ── -->
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/modules/navbar.js" defer></script>
+  <script>
+    // Product Detail Database
+    const productDb = {
+      "Bộ Khóa Có Chìa Cửa Lùa Slim": {
+        price: "864,000 đ/bộ",
+        images: [
+          "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim_546835771787/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim.webp",
+          "https://nhomkinhdaiphuc.com/upload/product/bo-khoa-co-chia-cua-lua-slim-mau-vang_4631972.webp",
+          "https://nhomkinhdaiphuc.com/upload/product/bo-khoa-co-chia-cua-lua-slim-mau-vang_4631971.webp",
+          "https://nhomkinhdaiphuc.com/upload/product/bo-khoa-co-chia-cua-lua-slim-mau-vang_4631970.webp"
+        ],
+        brand: "Slim System",
+        description: "Bộ khóa có chìa cửa lùa Slim là dòng khóa cửa đi cao cấp chuyên dụng cho các hệ nhôm Slim thanh mảnh. Khóa có thiết kế âm cửa tinh tế, tay nắm bóp dẹt thẩm mỹ, trang bị chìa khóa cơ dự phòng đảm bảo tính bảo mật và riêng tư cao nhất cho căn hộ của bạn. Sản phẩm được sản xuất bằng công nghệ anode chống oxy hóa bề mặt, không bay màu, chịu ăn mòn cực tốt.",
+        specs: {
+          "Thương hiệu": "Slim System",
+          "Chất liệu": "Hợp kim nhôm anode cao cấp",
+          "Màu sắc": "Đen nhám / Vàng Gold",
+          "Hệ nhôm thích hợp": "Cửa trượt Slim, cửa nhôm nội thất Slim",
+          "Độ dày kính phù hợp": "Kính cường lực 8mm - 12mm",
+          "Bảo hành": "24 tháng chính hãng"
+        }
+      },
+      "Bánh Xe Giảm Chấn Cửa Lùa Slim": {
+        price: "Liên hệ báo giá",
+        images: [
+          "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-giam-chan-cua-lua-slim_377335539699/phu-kien-cua-slim-banh-xe-giam-chan-cua-lua-slim.webp"
+        ],
+        brand: "OPK / Slim System",
+        description: "Bánh xe giảm chấn cửa lùa Slim giúp hành trình mở và đóng cửa cực kỳ êm ái, triệt tiêu tiếng ồn và tránh va đập mạnh làm vỡ kính. Đảm bảo an toàn tuyệt đối khi sử dụng.",
+        specs: {
+          "Thương hiệu": "OPK / Slim System",
+          "Chất liệu": "Thép chống gỉ + Nhựa POM siêu bền",
+          "Tải trọng tối đa": "100kg/cánh",
+          "Hệ thống giảm chấn": "Thủy lực 2 chiều",
+          "Bảo hành": "24 tháng"
+        }
+      },
+      "Khóa điện tử Xingfa 6-in-1 Viro Smartlock VR-S30E": {
+        price: "3,500,000 đ/bộ",
+        images: [
+          "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e_015859246278/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e.webp"
+        ],
+        brand: "Viro Smartlock",
+        description: "Khóa điện tử thông minh tích hợp 6 phương thức mở khóa tiên tiến nhất: Vân tay, Mật mã, Thẻ từ, Chìa cơ dự phòng, App điện thoại qua Bluetooth, và Wifi (Gateway). Thân khóa siêu mảnh thiết kế riêng cho các hệ cửa nhôm Xingfa, cửa nhôm kính có đố nhỏ.",
+        specs: {
+          "Thương hiệu": "Viro Smartlock",
+          "Chất liệu": "Hợp kim kẽm siêu cứng",
+          "Bộ nhớ lưu trữ": "100 vân tay, 100 mã số, 100 thẻ từ",
+          "Màu sắc": "Đen xi mạ cao cấp",
+          "Bảo hành": "24 tháng"
+        }
+      }
+    };
+
+    // Filter tab interaction
+    document.querySelectorAll('.filter-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        document.querySelectorAll('.pk-category').forEach(cat => {
+          if (filter === 'all' || cat.dataset.cat === filter) {
+            cat.style.display = '';
+          } else {
+            cat.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Detail Modal Controller
+    const modal = document.getElementById('pkDetailModal');
+    const modalBody = document.getElementById('pkModalBody');
+    const closeBtn = document.getElementById('pkCloseModal');
+
+    function openProductDetail(card) {
+      const imgEl = card.querySelector('.pk-card-img img');
+      const titleEl = card.querySelector('.pk-card-name');
+      const categorySection = card.closest('.pk-category');
+      
+      const title = titleEl ? titleEl.textContent.trim() : 'Phụ Kiện Cao Cấp';
+      const imageSrc = imgEl ? imgEl.src : 'assets/images/no-image.svg';
+      
+      let categoryName = 'SAO VÀNG';
+      if (categorySection) {
+        const titleHeader = categorySection.querySelector('.pk-category-title');
+        if (titleHeader) {
+          // Clone and remove brand tags inside header to get clean category name
+          const tempHeader = titleHeader.cloneNode(true);
+          tempHeader.querySelectorAll('.pk-category-brand-tag, .pk-category-badge').forEach(el => el.remove());
+          categoryName = tempHeader.textContent.trim();
+        }
+      }
+
+      // Lookup or generate detail record
+      const details = productDb[title] || {
+        price: "Liên hệ báo giá",
+        images: [imageSrc],
+        brand: categoryName,
+        description: `Phụ kiện ${title} cao cấp, được cung cấp chính hãng bởi Công ty Cổ phần Sản xuất Cơ khí Sao Vàng. Thiết kế tinh tế, hiện đại, tối ưu hóa công năng và nâng cao tuổi thọ vận hành cho các hệ thống cửa nhôm kính của bạn.`,
+        specs: {
+          "Thương hiệu": categoryName,
+          "Phân loại": "Phụ kiện nhôm kính cao cấp",
+          "Chất liệu": "Hợp kim cao cấp chống gỉ",
+          "Xuất xứ": "Chính hãng",
+          "Bảo hành": "12 - 24 tháng chính hãng"
+        }
+      };
+
+      // Render Modal Body
+      let thumbsHtml = '';
+      if (details.images && details.images.length > 1) {
+        thumbsHtml = `<div class="pk-gallery-thumbs">` + 
+          details.images.map((img, idx) => `
+            <div class="pk-gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="changeMainImage('${img}', this)">
+              <img src="${img}" alt="Ảnh phụ ${idx + 1}" />
+            </div>
+          `).join('') + `</div>`;
+      }
+
+      let specsHtml = '';
+      if (details.specs) {
+        specsHtml = `<table class="pk-specs-table">` +
+          Object.entries(details.specs).map(([key, val]) => `
+            <tr>
+              <td class="pk-specs-label">${key}</td>
+              <td>${val}</td>
+            </tr>
+          `).join('') + `</table>`;
+      }
+
+      modalBody.innerHTML = `
+        <div class="pk-modal-gallery">
+          <div class="pk-gallery-main">
+            <img id="pkMainImg" src="${details.images[0]}" alt="${title}" />
+          </div>
+          ${thumbsHtml}
+        </div>
+        <div class="pk-modal-info">
+          <div class="pk-info-brand">${details.brand || categoryName}</div>
+          <h3 class="pk-info-title">${title}</h3>
+          <div class="pk-info-price"><span>Giá bán:</span>${details.price}</div>
+          
+          <div class="pk-info-tabs">
+            <button class="pk-info-tab active" onclick="switchTab('desc', this)">Mô tả chi tiết</button>
+            <button class="pk-info-tab" onclick="switchTab('specs', this)">Thông số kỹ thuật</button>
+          </div>
+
+          <div class="pk-info-panel active" id="pkPanelDesc">
+            <p>${details.description}</p>
+          </div>
+          <div class="pk-info-panel" id="pkPanelSpecs">
+            ${specsHtml}
+          </div>
+
+          <div class="pk-info-actions">
+            <a href="tel:0869590279" class="btn-gold"><i class="ri-phone-fill"></i> 0869 590 279</a>
+            <a href="lien-he.html" class="btn-outline"><i class="ri-mail-send-line"></i> Gửi Yêu Cầu</a>
+          </div>
+        </div>
+      `;
+
+      // Show Modal
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function changeMainImage(src, thumbEl) {
+      document.getElementById('pkMainImg').src = src;
+      document.querySelectorAll('.pk-gallery-thumb').forEach(el => el.classList.remove('active'));
+      thumbEl.classList.add('active');
+    }
+
+    function switchTab(type, tabEl) {
+      document.querySelectorAll('.pk-info-tab').forEach(el => el.classList.remove('active'));
+      tabEl.classList.add('active');
+      
+      document.querySelectorAll('.pk-info-panel').forEach(el => el.classList.remove('active'));
+      if (type === 'desc') {
+        document.getElementById('pkPanelDesc').classList.add('active');
+      } else {
+        document.getElementById('pkPanelSpecs').classList.add('active');
+      }
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // Attach click events to cards
+    document.querySelectorAll('.pk-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Prevent default only if clicking card-btn or if we want modal for the whole card
+        e.preventDefault();
+        openProductDetail(card);
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+  </script>
+  <script src="assets/js/shared/internal-links.js"></script>
+  <!-- Sprint 3: Service CTA -->
+  <script src="assets/js/shared/service-cta.js"></script>
+    <!-- Sprint 2: Shared components -->
+  <script src="assets/js/shared/floating-widget.js"></script>
+  <script src="assets/js/shared/faq-accordion.js"></script>
+  <script src="assets/js/shared/breadcrumb.js"></script>
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>
+
+</body>
+</html>

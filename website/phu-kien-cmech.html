@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#d4af37" />
+  <title>Phụ Kiện CMECH Chính Hãng Cao Cấp | SAO VÀNG</title>
+  <meta name="description" content="Sao Vàng cung cấp phụ kiện CMECH chính hãng chất lượng cao. Đầy đủ CMECH bản lề, khóa đa điểm, tay nắm chống muối mặn. Bảo hành dài hạn." />
+  <meta name="keywords" content="phụ kiện cmech, phụ kiện CMECH, CMECH chính hãng, phụ kiện nhôm kính" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  
+  <style>
+    .brand-hero {
+      background: linear-gradient(135deg,#0f172a 0%,#1e293b 100%);
+      padding: 120px 0 60px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 120%, rgba(255,255,255,0.1), transparent 70%);
+    }
+    .brand-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .brand-title {
+      font-family: var(--sv-font-head);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .brand-subtitle-hero {
+      font-size: clamp(14px, 2vw, 18px);
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    
+    .brand-stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 40px);
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .brand-stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 24px;
+      min-width: 140px;
+      backdrop-filter: blur(8px);
+    }
+    .brand-stat-num {
+      font-family: var(--sv-font-head);
+      font-size: 28px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .brand-stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .brand-detail-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+    .brand-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .brand-content-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .brand-info-column {
+      padding-right: 20px;
+    }
+    .brand-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin: 28px 0 14px;
+      border-left: 4px solid #d4af37;
+      padding-left: 14px;
+    }
+    .brand-sub-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sv-dark-800);
+      margin: 18px 0 8px;
+    }
+    .brand-desc-p {
+      font-size: var(--sv-fs-sm);
+      color: var(--sv-gray-text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    
+    .brand-sidebar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .sidebar-title {
+      font-family: var(--sv-font-head);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: 20px;
+    }
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .sidebar-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 13px;
+      color: var(--sv-gray-text);
+      display: flex;
+      justify-content: space-between;
+    }
+    .sidebar-list li strong {
+      color: var(--sv-dark-900);
+    }
+    
+    .brand-products-section {
+      padding: 80px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .pk-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .pk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+    .pk-card-img {
+      position: relative;
+      height: 220px;
+      background: #f1f5f9;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .pk-card-img img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .pk-card-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+    .pk-card-body {
+      padding: 20px;
+    }
+    .pk-card-name {
+      font-family: var(--sv-font-head);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: 16px;
+      min-height: 40px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .pk-card-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: var(--sv-font-head);
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-menu-link active">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html" class="nav-menu-link">Nhôm Sao Vàng</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan</a>
+            <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
+          </div>
+        </div>
+        <a href="phu-kien.html" class="nav-menu-link">Phụ Kiện</a>
+        <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
+        <a href="du-an.html" class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="lien-he.html" class="nav-menu-link">Liên Hệ</a>
+      </nav>
+
+      <!-- Hotline + Hamburger -->
+      <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+        <a href="tel:0869590279" class="nav-hotline" aria-label="Gọi hotline 0869 590 279">
+          <i class="ri-phone-fill" aria-hidden="true"></i>
+          <span>0869 590 279</span>
+        </a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+      <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html" class="nav-drawer-link">Trang Chủ</a>
+    <a href="co-khi-sao-vang.html" class="nav-drawer-link">Cơ Khí Sao Vàng</a>
+    <a href="nhom-sao-vang.html" class="nav-drawer-link">Nhôm Sao Vàng</a>
+    <a href="linh-vuc-hoat-dong.html" class="nav-drawer-link">Lĩnh Vực Hoạt Động</a>
+    <a href="phu-kien.html" class="nav-drawer-link active">Phụ Kiện</a>
+    <a href="thu-vien-profile-nhom.html" class="nav-drawer-link">Profile Nhôm</a>
+    <a href="du-an.html" class="nav-drawer-link">Dự Án Đã Thực Hiện</a>
+    <a href="lien-he.html" class="nav-drawer-link">Liên Hệ</a>
+    <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
+      <i class="ri-phone-fill"></i> 0869 590 279
+    </a>
+  </nav>
+
+  
+
+  <section class="brand-hero">
+    <div class="sv-container">
+      <span class="brand-tag">THƯƠNG HIỆU PHỤ KIỆN</span>
+      <h1 class="brand-title">Phụ Kiện CMECH</h1>
+      <p class="brand-subtitle-hero">Dòng sản phẩm nhập khẩu cao cấp đồng hành cùng các giải pháp cửa nhôm kính Sao Vàng</p>
+      
+      <div class="brand-stats">
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Hoa Kỳ (USA)</div>
+          <div class="brand-stat-label">Xuất Xứ</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">19</div>
+          <div class="brand-stat-label">Mã Sản Phẩm</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">100%</div>
+          <div class="brand-stat-label">Chính Hãng</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-detail-section">
+    <div class="sv-container">
+      <div class="brand-content-grid">
+        <div class="brand-info-column">
+          <h2 class="sv-section-title" style="margin-left:0; text-align:left;">Tổng Quan Về Hãng</h2>
+          <p class='brand-desc-p'>Trang chủPhụ kiệnPhụ Kiện Cmech            
+Phụ Kiện Cmech</p><p class='brand-desc-p'>Đầu khóa biên 8.5mm có trục xoay Cmech A090032</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ kiện Cmech. Bản lề cửa sổ chữ  A 60kg</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Thanh truyền động tích hợp đầu khóa biên​ Cmech Cmech A020050</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Lưỡi gà tay nắm cửa sổ quay, hất dài 53mm Cmech A110105</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Đầu biên chốt cánh phụ rời kích thước 90×19.6 mm Cmech A070003</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Đầu chia loại gia cố Cmech A020023</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Đầu chia chuyển động dài 24mm Cmech E020001</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Đầu khóa biên cao 7mm Cmech A090005</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Vấu hãm cửa 2 cánh (vít lục giác) Cmech A100101</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Vấu hãm 3 lỗ cửa 1 cánh đầu cao  20×9.5mm Cmech A100114</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Vấu 3 lỗ cửa 1 cánh 20x14mm Cmech A100109</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Móc chốt cánh phụ rời dài 130mm Cmech A020055, gắn với A070003 hoặc C459</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>&laquo;  &#8249; 1234 &#8250;  &raquo;</p><p class='brand-desc-p'>Nội dung chính</p><p class='brand-desc-p'>Tại Sao Nên Chọn Phụ Kiện Cmech?</p><p class='brand-desc-p'>Chất Lượng Vượt Trội Và Độ Bền Cao
+
+		Thiết Kế Tinh Tế Và Đa Dạng Mẫu Mã
+
+		Công Nghệ Xử Lý Bề Mặt Độc Quyền - M-Treatment
+
+		Quy Trình Sản Xuất Hiện Đại Và Kiểm Tra Chất Lượng Khắt Khe
+
+		Dễ Dàng Lắp Đặt Và Bảo Trì</p><p class='brand-desc-p'>Phụ Kiện Cmech Phù Hợp Với Những Hệ Nhôm Nào Tại Việt Nam?</p><p class='brand-desc-p'>Hệ Nhôm Xingfa
+
+		Hệ Nhôm PMA
+
+		Hệ Nhôm Wisdom
+
+		Hệ Nhôm PMI
+
+		Hệ Nhôm Maxpro
+
+		Hệ Nhôm Topal</p><p class='brand-desc-p'>Bảng giá phụ kiện Cmech nhập khẩu chính hãng
+
+	Hướng Dẫn Lựa Chọn Và Sử Dụng Phụ Kiện Cmech Hiệu Quả
+
+	Phụ Kiện Cmech Có Tốt Không? Những Ưu Điểm Vượt Trội
+
+	Câu Hỏi Thường Gặp Về Phụ Kiện Cmech</p><p class='brand-desc-p'>Phụ kiện cửa nhôm đóng vai trò quan trọng trong việc hoàn thiện và nâng cao giá trị thẩm mỹ của các công trình kiến trúc. Trong số các thương hiệu nổi tiếng, Phụ Kiện Cmech đã và đang chiếm lĩnh thị trường toàn cầu, bao gồm cả Việt Nam, nhờ vào chất lượng vượt trội, thiết kế tinh tế, và công nghệ tiên tiến. Nhưng liệu bạn đã biết hết về những đặc điểm nổi bật và giá phụ kiện Cmech? Hãy cùng chúng ta tìm hiểu chi tiết trong bài viết này!</p><p class='brand-desc-p'>Phụ Kiện Cmech</p><p class='brand-desc-p'>Tại Sao Nên Chọn Phụ Kiện Cmech?</p><p class='brand-desc-p'>Phụ Kiện Cmech không chỉ đơn thuần là những sản phẩm phụ trợ cho cửa nhôm mà còn mang đến giải pháp toàn diện về an toàn, bền bỉ, và thẩm mỹ cho mọi công trình. Với hơn 20 năm kinh nghiệm trong ngành, Cmech đã xây dựng được uy tín vững chắc nhờ vào các đặc điểm nổi bật sau:</p><p class='brand-desc-p'>1. Chất Lượng Vượt Trội Và Độ Bền Cao</p><p class='brand-desc-p'>Phụ kiện Cmech được sản xuất từ vật liệu cao cấp, áp dụng công nghệ tiên tiến, đảm bảo độ bền và khả năng chống chịu tốt. Sản phẩm của Cmech có khả năng chống gỉ sét, mài mòn và chịu lực mạnh mẽ, phù hợp với mọi điều kiện thời tiết khắc nghiệt.</p><p class='brand-desc-p'>2. Thiết Kế Tinh Tế Và Đa Dạng Mẫu Mã</p><p class='brand-desc-p'>Cmech không ngừng đổi mới và phát triển các sản phẩm với thiết kế tinh tế, sang trọng, phù hợp với nhiều phong cách kiến trúc từ cổ điển đến hiện đại. Các dòng sản phẩm đa dạng từ khóa cửa, bản lề, tay nắm, ray cửa đến phụ kiện đa điểm giúp khách hàng dễ dàng lựa chọn sản phẩm phù hợp với nhu cầu và thiết kế của mình.</p><p class='brand-desc-p'>3. Công Nghệ Xử Lý Bề Mặt Độc Quyền - M-Treatment</p><p class='brand-desc-p'>Công nghệ M-treatment độc quyền của Cmech tăng khả năng chống muối biển lên gấp 10 lần so với phương pháp xử lý thông thường. Đây là giải pháp lý tưởng cho các công trình xây dựng gần biển hoặc trong môi trường có độ ẩm cao, giúp phụ kiện luôn bền đẹp theo thời gian.</p><p class='brand-desc-p'>4. Quy Trình Sản Xuất Hiện Đại Và Kiểm Tra Chất Lượng Khắt Khe</p><p class='brand-desc-p'>Cmech áp dụng quy trình sản xuất hiện đại với các máy móc, thiết bị tiên tiến. Mỗi sản phẩm đều trải qua các giai đoạn kiểm tra nghiêm ngặt về độ bền, khả năng chịu lực, chống thấm nước và độ chính xác kích thước trước khi đến tay khách hàng.</p><p class='brand-desc-p'>5. Dễ Dàng Lắp Đặt Và Bảo Trì</p><p class='brand-desc-p'>Phụ kiện Cmech được thiết kế với cấu trúc đơn giản, giúp dễ dàng lắp đặt và tháo rời, tiết kiệm thời gian và chi phí cho quá trình thi công. Điều này cũng giúp người sử dụng dễ dàng bảo trì và thay thế khi cần thiết.</p><p class='brand-desc-p'>Phụ Kiện Cmech Phù Hợp Với Những Hệ Nhôm Nào Tại Việt Nam?</p><p class='brand-desc-p'>Phụ kiện Cmech được thiết kế để tương thích với nhiều hệ nhôm cao cấp, đáp ứng đa dạng nhu cầu sử dụng tại Việt Nam:</p><p class='brand-desc-p'>1. Hệ Nhôm Xingfa</p><p class='brand-desc-p'>Hệ nhôm Xingfa là lựa chọn hàng đầu cho nhiều công trình từ nhà ở đến khách sạn. Phụ kiện Cmech giúp tăng cường độ bền, tính thẩm mỹ, và đảm bảo sự an toàn cho hệ cửa nhôm Xingfa.</p><p class='brand-desc-p'>2. Hệ Nhôm PMA</p><p class='brand-desc-p'>Được nhập khẩu từ Malaysia, hệ nhôm PMA nổi bật với chất lượng cao và thiết kế đẹp mắt. Phụ kiện Cmech là sự kết hợp hoàn hảo để nâng cao tính năng và thẩm mỹ cho hệ nhôm này.</p><p class='brand-desc-p'>3. Hệ Nhôm Wisdom</p><p class='brand-desc-p'>Đến từ Trung Quốc, hệ nhôm Wisdom được ưa chuộng trong các công trình kiến trúc hiện đại. Phụ kiện Cmech mang lại độ bền và phong cách thẩm mỹ cao cho hệ nhôm Wisdom.</p><p class='brand-desc-p'>4. Hệ Nhôm PMI</p><p class='brand-desc-p'>Hệ nhôm PMI của Ý nổi tiếng với độ bền và khả năng chịu lực tốt. Phụ kiện Cmech được thiết kế đặc biệt để phù hợp với hệ nhôm PMI, giúp các công trình thêm phần chắc chắn và sang trọng.</p><p class='brand-desc-p'>5. Hệ Nhôm Maxpro</p><p class='brand-desc-p'>Hệ nhôm Maxpro do Việt Nam sản xuất đáp ứng tiêu chuẩn chất lượng cao. Phụ kiện Cmech giúp hệ nhôm này trở nên hoàn hảo hơn, phù hợp với mọi công trình từ nhỏ đến lớn.</p><p class='brand-desc-p'>6. Hệ Nhôm Topal</p><p class='brand-desc-p'>Hệ nhôm Topal nhập khẩu từ Thổ Nhĩ Kỳ được biết đến với thiết kế hiện đại và độ bền cao. Sự kết hợp giữa phụ kiện Cmech và hệ nhôm Topal mang lại sự sang trọng và đẳng cấp cho công trình của bạn.</p><p class='brand-desc-p'>Bảng giá phụ kiện Cmech nhập khẩu chính hãng</p><p class='brand-desc-p'>STT
+
+			TÊN PHỤ KIỆN CMECH
+
+			ĐVT
+
+			 ĐƠN GIÁ (VNĐ)</p><p class='brand-desc-p'>1
+
+			Bộ khóa đa điểm cửa xếp trượt Cmech tay nắm kiểu New York
+
+			cái
+
+			3,972,000</p><p class='brand-desc-p'>2
+
+			Thanh nối răng cưa G020005 Cmech nối chốt
+
+			cái
+
+			139,000</p><p class='brand-desc-p'>3
+
+			Thanh chuyển động nối khóa đa điểm G020004 Cmech
+
+			cái
+
+			599,000</p><p class='brand-desc-p'>4
+
+			Tay nắm chốt dẹt G010003 Cmech
+
+			cái
+
+			341,000</p><p class='brand-desc-p'>5
+
+			Hộp số chốt G020001 Cmech nối dài
+
+			cái
+
+			259,000</p><p class='brand-desc-p'>6
+
+			Đệm chống va đập có thể điều chỉnh G080002 Cmech
+
+			cái
+
+			132,000</p><p class='brand-desc-p'>7
+
+			Đầu chốt biên cửa xếp trượt G070001 Cmech
+
+			cái
+
+			136,000</p><p class='brand-desc-p'>8
+
+			Bản lề có tay kéo G040002 Cmech không điều chỉnh
+
+			cái
+
+			790,000</p><p class='brand-desc-p'>9
+
+			Bản lề treo cánh G040003 Cmech không điều chỉnh
+
+			cái
+
+			505,000</p><p class='brand-desc-p'>10
+
+			Bản lề treo cánh G040001 Cmech có điều chỉnh
+
+			cái
+
+			530,000</p><p class='brand-desc-p'>11
+
+			Bánh xe dẫn hướng trên tích hợp bản lề G050002 Cmech
+
+			cái
+
+			1,355,000</p><p class='brand-desc-p'>12
+
+			Bánh xe chịu lực tích hợp bản lề G050001 Cmech
+
+			cái
+
+			2,458,000</p><p class='brand-desc-p'>13
+
+			Cặp bánh xe đơn 60kg cửa lùa E050017-A Cmech – Xingfa hệ 93
+
+			cái
+
+			210,000</p><p class='brand-desc-p'>14
+
+			Cặp bánh xe đôi 120kg cửa lùa E050015 Cmech – Xingfa hệ 93
+
+			cái
+
+			300,000</p><p class='brand-desc-p'>15
+
+			Bộ 4 món đầu biên vấu hãm Cmech cửa 1 cánh
+
+			cái
+
+			 209,000</p><p class='brand-desc-p'>16
+
+			Bộ 4 món đầu biên vấu hãm Cmech cửa 2 cánh
+
+			cái
+
+			188,000</p><p class='brand-desc-p'>17
+
+			Bộ chốt liền cánh phụ loại nối dài Cmech
+
+			cái
+
+			450,000</p><p class='brand-desc-p'>18
+
+			Chốt bật cánh phụ D070006 Cmech dài 280mm
+
+			cái
+
+			311,000</p><p class='brand-desc-p'>19
+
+			Miệng chốt D100021 Cmech – hệ Xingfa
+
+			cái
+
+			90,000</p><p class='brand-desc-p'>20
+
+			Thanh chốt đa điểm cửa lùa E030015 Cmech – hệ Xingfa
+
+			cái
+
+			673,000</p><p class='brand-desc-p'>21
+
+			Bộ chốt sập âm tự động có chìa P010024 Cmech lùa xingfa 93
+
+			cái
+
+			217,000</p><p class='brand-desc-p'>22
+
+			Thanh chống gió 12in H040068 Cmech
+
+			cái
+
+			274,000</p><p class='brand-desc-p'>23
+
+			Đầu chia đa điểm E020001 Cmech – nối với đầu biên
+
+			cái
+
+			110,000</p><p class='brand-desc-p'>24
+
+			Lõi khóa 2 đầu chìa tâm lệch 45/35 Cmech dài 80mm
+
+			cái
+
+			310,000</p><p class='brand-desc-p'>25
+
+			Lõi khóa 1 đầu chìa tâm lệch 45/30 Cmech dài 75mm
+
+			cái
+
+			320,000</p><p class='brand-desc-p'>26
+
+			Bộ tay nắm khóa đa điểm cửa lùa Metro Cmech 2 mặt
+
+			cái
+
+			920,000</p><p class='brand-desc-p'>27
+
+			Tay nắm khóa đa điểm cửa lùa Metro E010001 Cmech 1 mặt
+
+			cái
+
+			450,000</p><p class='brand-desc-p'>28
+
+			Tay nắm đa điểm cửa sổ A010107 Cmech màu Silver (bạc)
+
+			cái
+
+			415,000</p><p class='brand-desc-p'>29
+
+			Cặp tay nắm khóa D010133 Cmech kiểu New York
+
+			cái
+
+			910,000</p><p class='brand-desc-p'>30
+
+			Bộ khóa đa điểm Cmech tay nắm kiểu New York
+
+			cái
+
+			2,409,000</p><p class='brand-desc-p'>31
+
+			Bộ khóa đơn điểm Cmech tay nắm kiểu New York
+
+			cái
+
+			2,250,000</p><p class='brand-desc-p'>32
+
+			Bản lề chữ A A040132, A040133, A040134, A040135 Cmech
+
+			cái
+
+			380,000</p><p class='brand-desc-p'>33
+
+			Bản lề 3D cánh cánh D040013 Cmech màu Silver (bạc)
+
+			cái
+
+			750,000</p><p class='brand-desc-p'>34
+
+			Bản lề 3D khung cánh D040003 Cmech màu Silver (bạc)
+
+			cái
+
+			700,000</p><p class='brand-desc-p'>35
+
+			Bản lề 3D 3 cục cánh cánh D040015 Cmech màu Silver (bạc)
+
+			cái
+
+			990,000</p><p class='brand-desc-p'>36
+
+			Bản lề 3D 3 cục khung cánh D040014 Cmech màu Silver (bạc)
+
+			cái
+
+			960,000</p><p class='brand-desc-p'>Lưu ý: Đây là bảng giá phụ kiện Cmech có tính chất tham khảo để khách hàng nắm bắt được giá phụ kiện cửa Cmech xem có phù hợp với nhu cầu của mình hay không. Giá từng loại sản phẩm có thể sẽ được niêm yết khác nhau tùy theo thời điểm. Để có được giá sản phẩm phụ kiện Cmech chính xác nhất, khách hàng vui lòng liên hệ với Nhôm Kính Đại Phúc qua số Hotline: 0919020088</p><p class='brand-desc-p'>Hướng Dẫn Lựa Chọn Và Sử Dụng Phụ Kiện Cmech Hiệu Quả</p><p class='brand-desc-p'>Để tối ưu hóa việc sử dụng phụ kiện Cmech, bạn cần lưu ý các yếu tố sau:</p><p class='brand-desc-p'>Xác định nhu cầu sử dụng: Tùy thuộc vào công trình của bạn là nhà ở, văn phòng hay khách sạn để chọn loại phụ kiện phù hợp.
+
+	Kiểm tra tính tương thích với hệ nhôm: Đảm bảo phụ kiện Cmech bạn chọn tương thích với hệ nhôm mà công trình đang sử dụng.
+
+	Lựa chọn nhà cung cấp uy tín: Chọn mua từ các nhà phân phối chính thức để đảm bảo sản phẩm chính hãng và nhận được dịch vụ hậu mãi tốt.</p><p class='brand-desc-p'>Phụ Kiện Cmech Có Tốt Không? Những Ưu Điểm Vượt Trội</p><p class='brand-desc-p'>Không chỉ được đánh giá cao về chất lượng, phụ kiện Cmech còn có nhiều ưu điểm vượt trội mà ít thương hiệu nào sánh được:</p><p class='brand-desc-p'>Chống ăn mòn tuyệt đối: Với công nghệ M-treatment độc quyền, các sản phẩm của Cmech có khả năng chống ăn mòn cao, đặc biệt phù hợp cho các công trình ven biển.
+
+	Thiết kế hiện đại, đa dạng: Phụ kiện Cmech có nhiều mẫu mã phù hợp với mọi phong cách kiến trúc, từ cổ điển đến hiện đại.
+
+	Dễ dàng bảo trì và thay thế: Thiết kế đơn giản giúp việc bảo trì và thay thế trở nên dễ dàng hơn bao giờ hết.</p><p class='brand-desc-p'>Câu Hỏi Thường Gặp Về Phụ Kiện Cmech</p><p class='brand-desc-p'>Phụ kiện Cmech có phù hợp với hệ nhôm Xingfa không?</p><p class='brand-desc-p'>Có, phụ kiện Cmech được thiết kế tối ưu để tương thích với hệ nhôm Xingfa, đảm bảo độ bền và thẩm mỹ cao.</p><p class='brand-desc-p'>Công nghệ M-treatment của Cmech là gì?</p><p class='brand-desc-p'>Đây là công nghệ xử lý bề mặt độc quyền giúp tăng khả năng chống muối biển lên gấp 10 lần so với phương pháp thông thường.</p><p class='brand-desc-p'>Giá phụ kiện Cmech có cao không?</p><p class='brand-desc-p'>Mặc dù chất lượng cao và thiết kế tinh tế, giá phụ kiện Cmech rất cạnh tranh, phù hợp với nhiều phân khúc khách hàng.</p><p class='brand-desc-p'>Phụ kiện Cmech có dễ lắp đặt không?</p><p class='brand-desc-p'>Có, phụ kiện Cmech được thiết kế đơn giản, dễ lắp đặt và tháo rời, giúp tiết kiệm thời gian và chi phí.</p><p class='brand-desc-p'>Phụ kiện Cmech có bảo hành không?</p><p class='brand-desc-p'>Tất cả các sản phẩm phụ kiện Cmech chính hãng đều đi kèm với chính sách bảo hành rõ ràng, đảm bảo quyền lợi cho người dùng.</p>
+        </div>
+        
+        <div class="brand-sidebar">
+          <h3 class="sidebar-title">Thông Số Kỹ Thuật CMECH</h3>
+          <ul class="sidebar-list">
+            <li>Xuất xứ chính hãng: <strong>Hoa Kỳ (USA)</strong></li>
+            <li>Phân khúc thị trường: <strong>Luxury / Biệt thự biển</strong></li>
+            <li>Xử lý bề mặt nổi trội: <strong>Chống oxi hóa / Mạ Anodized</strong></li>
+            <li>Ứng dụng chính: <strong>Cửa đi, Cửa sổ, Vách nhôm kính</strong></li>
+            <li>Cam kết từ Sao Vàng: <strong>Đền bù gấp đôi nếu phát hiện hàng nhái</strong></li>
+            <li>Chính sách bảo hành: <strong>Đổi mới 1-1 trong 24 tháng</strong></li>
+          </ul>
+          
+          <a href="lien-he.html" class="sv-btn sv-btn-red" style="width:100%; display:flex; justify-content:center;">NHẬN BÁO GIÁ CMECH <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-products-section">
+    <div class="sv-container">
+      <div style="text-align:center;">
+        <span class="sv-section-tag">DANH MỤC SẢN PHẨM</span>
+        <h2 class="sv-section-title" style="margin-inline:auto;">Sản Phẩm CMECH Nổi Bật</h2>
+      </div>
+      
+      <div class="pk-grid">
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/dau-khoa-bien-chiu-luc-cmech-co-num-that-dk1_133538820391/dau-kho-a-bien-8-5mm-co-truc-xoay-cmech-a090032.jpg" alt="Đầu Khóa Biên 8.5mm Cmech A090032" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Đầu Khóa Biên 8.5mm Cmech A090032</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-cua-so-cmech-ma-sat-tren-c-groove_212516217403/phu-kien-cmech-ban-le-cua-so-chu-a-60kg.webp" alt="Bản Lề Cửa Sổ Chữ A 60kg Cmech" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề Cửa Sổ Chữ A 60kg Cmech</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-thanh-truyen-dong-khoa-cua-gan-be-mat-b1_622006418921/thanh-truyen-dong-tich-hop-dau-khoa-bien-cmech-cmech-a020050.webp" alt="Thanh Truyền Động Tích Hợp Cmech A020050" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Thanh Truyền Động Tích Hợp Cmech A020050</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-ca-tay-nam-cua-so-quay-hat-c1_667821215494/luoi-ga-tay-nam-cua-so-quay-hat-dai-53mm-cmech-a110105.webp" alt="Lưỡi Gà Tay Nắm Cửa Sổ Cmech A110105" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Lưỡi Gà Tay Nắm Cửa Sổ Cmech A110105</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="assets/images/no-image.svg" alt="Phụ Kện Cửa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Phụ Kện Cửa Slim</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="assets/images/no-image.svg" alt="" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name"></div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="assets/images/no-image.svg" alt="Khóa Điện Tử" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Khóa Điện Tử</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/dau-khoa-bien-chiu-luc-cmech-co-num-that-dk1_133538820391/dau-kho-a-bien-8-5mm-co-truc-xoay-cmech-a090032.jpg" alt="Đầu khóa biên 8.5mm có trục xoay Cmech A090032" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Đầu khóa biên 8.5mm có trục xoay Cmech A090032</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-cua-so-cmech-ma-sat-tren-c-groove_212516217403/phu-kien-cmech-ban-le-cua-so-chu-a-60kg.webp" alt="Bản lề cửa sổ chữ  A 60kg" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản lề cửa sổ chữ  A 60kg</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-thanh-truyen-dong-khoa-cua-gan-be-mat-b1_622006418921/thanh-truyen-dong-tich-hop-dau-khoa-bien-cmech-cmech-a020050.webp" alt="Thanh truyền động tích hợp đầu khóa biên​ Cmech Cmech A020050" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Thanh truyền động tích hợp đầu khóa biên​ Cmech Cmech A020050</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-ca-tay-nam-cua-so-quay-hat-c1_667821215494/luoi-ga-tay-nam-cua-so-quay-hat-dai-53mm-cmech-a110105.webp" alt="Lưỡi gà tay nắm cửa sổ quay, hất dài 53mm Cmech A110105" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Lưỡi gà tay nắm cửa sổ quay, hất dài 53mm Cmech A110105</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/dau-bien-chot-canh-phu-roi-kich-thuoc-90-19-6-mm-cmech-a070003_688252618055/dau-bien-chot-canh-phu-roi-kich-thuoc-90-19-6-mm-cmech-a070003.webp" alt="Đầu biên chốt cánh phụ rời kích thước 90×19.6 mm Cmech A070003" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Đầu biên chốt cánh phụ rời kích thước 90×19.6 mm Cmech A070003</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-dau-chia-loai-gia-co-d2_029970004934/dau-chia-loai-gia-co-cmech-a020023.webp" alt="Đầu chia loại gia cố Cmech A020023" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Đầu chia loại gia cố Cmech A020023</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-dau-chia-chuyen-dong-dai-24mm_505366510449/dau-chia-chuyen-dong-dai-24mm-cmech-e020001.webp" alt="Đầu chia chuyển động dài 24mm Cmech E020001" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Đầu chia chuyển động dài 24mm Cmech E020001</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/dau-khoa-bien-cao-7mm-cmech-a090005_763171951325/dau-khoa-bien-cao-7mm-cmech-a090005.webp" alt="Đầu khóa biên cao 7mm Cmech A090005" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Đầu khóa biên cao 7mm Cmech A090005</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-vau-ham-cua-2-canh-vit-luc-giac-_022233362259/vau-ham-cua-2-canh-vit-luc-giac-cmech-a100101.webp" alt="Vấu hãm cửa 2 cánh (vít lục giác) Cmech A100101" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Vấu hãm cửa 2 cánh (vít lục giác) Cmech A100101</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-vau-cua-1-canh-dau-cao-v16_901807703413/vau-ham-3-lo-cua-1-canh-dau-cao-20-9-5mm-cmech-a100114.webp" alt="Vấu hãm 3 lỗ cửa 1 cánh đầu cao  20×9.5mm Cmech A100114" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Vấu hãm 3 lỗ cửa 1 cánh đầu cao  20×9.5mm Cmech A100114</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-vau-3-lo-cua-1-canh-v17_132162056964/vau-3-lo-cua-1-canh-20x14mm-cmech-a100109.webp" alt="Vấu 3 lỗ cửa 1 cánh 20x14mm Cmech A100109" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Vấu 3 lỗ cửa 1 cánh 20x14mm Cmech A100109</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/mo-c-chot-canh-phu-roi-dai-130mm-cmech-a020055-gan-voi-a070003-hoa-c-c459_633830233364/mo-c-chot-canh-phu-roi-dai-130mm-cmech-a020055-gan-voi-a070003-hoa-c-c459.webp" alt="Móc chốt cánh phụ rời dài 130mm Cmech A020055, gắn với A070003 hoặc C459" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#d4af37;">CMECH</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Móc chốt cánh phụ rời dài 130mm Cmech A020055, gắn với A070003 hoặc C459</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #d4af37; color:#d4af37;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner section-container">
+      <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.5fr;gap:40px;">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="index.html" class="footer-brand" aria-label="Trang chủ Sao Vàng">
+            <img src="assets/images/logo-sv-main.svg" alt="Sao Vàng Logo" width="52" height="52" />
+            <div>
+              <div class="footer-brand-name">SAO VÀNG</div>
+              <div class="footer-brand-tagline">Cơ Khí & Nhôm Kính</div>
+            </div>
+          </a>
+          <p class="footer-desc">Cung cấp đầy đủ phụ kiện nhôm kính chính hãng từ các thương hiệu uy tín hàng đầu. Tư vấn miễn phí, giao hàng nhanh tại Hà Nội.</p>
+        </div>
+
+        <!-- Col 2: Phụ kiện -->
+        <div>
+          <h4 class="footer-col-title">Phụ Kiện</h4>
+          <div class="footer-links">
+            <a href="phu-kien.html" class="footer-link">Tất Cả Phụ Kiện</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện Draho</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện Bogo</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện KinLong</a>
+            <a href="lien-he.html" class="footer-link">Khóa Điện Tử</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Sản phẩm -->
+        <div>
+          <h4 class="footer-col-title">Sản Phẩm</h4>
+          <div class="footer-links">
+            <a href="co-khi-sao-vang.html" class="footer-link">Cơ Khí Sao Vàng</a>
+            <a href="nhom-sao-vang.html" class="footer-link">Nhôm Sao Vàng</a>
+            <a href="san-pham.html" class="footer-link">Sản Phẩm</a>
+            <a href="du-an.html" class="footer-link">Dự Án</a>
+            <a href="tin-tuc.html" class="footer-link">Tin Tức</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Hỗ trợ -->
+        <div>
+          <h4 class="footer-col-title">Hỗ Trợ</h4>
+          <div class="footer-links">
+            <a href="gioi-thieu.html" class="footer-link">Giới thiệu</a>
+            <a href="linh-vuc-hoat-dong.html" class="footer-link">Lĩnh vực hoạt động</a>
+            <a href="thu-vien-sp.html" class="footer-link">Thư viện SP</a>
+            <a href="bao-gia.html" class="footer-link">Báo giá</a>
+            <a href="lien-he.html" class="footer-link">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội.</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-line" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color: inherit; text-decoration: none;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <a href="mailto:info@cokhisaovang.com" style="color: inherit; text-decoration: none;">info@cokhisaovang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>Thứ 2 - Thứ 7: 8:00 - 17:00</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. MST: 0110808047.</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+        <span>Phụ Kiện Nhôm Kính Chính Hãng</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── PRODUCT DETAIL MODAL ── -->
+  <div class="pk-modal" id="pkDetailModal" aria-hidden="true" role="dialog">
+    <div class="pk-modal-container">
+      <button class="pk-modal-close" id="pkCloseModal" aria-label="Đóng cửa sổ"><i class="ri-close-line"></i></button>
+      <div class="pk-modal-body" id="pkModalBody">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SCRIPTS ── -->
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/modules/navbar.js" defer></script>
+  <script>
+    // Product Detail Database
+    const productDb = {
+      "Bộ Khóa Có Chìa Cửa Lùa Slim": {
+        price: "864,000 đ/bộ",
+        images: [
+          "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim_546835771787/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim.webp",
+          "https://nhomkinhdaiphuc.com/upload/product/bo-khoa-co-chia-cua-lua-slim-mau-vang_4631972.webp",
+          "https://nhomkinhdaiphuc.com/upload/product/bo-khoa-co-chia-cua-lua-slim-mau-vang_4631971.webp",
+          "https://nhomkinhdaiphuc.com/upload/product/bo-khoa-co-chia-cua-lua-slim-mau-vang_4631970.webp"
+        ],
+        brand: "Slim System",
+        description: "Bộ khóa có chìa cửa lùa Slim là dòng khóa cửa đi cao cấp chuyên dụng cho các hệ nhôm Slim thanh mảnh. Khóa có thiết kế âm cửa tinh tế, tay nắm bóp dẹt thẩm mỹ, trang bị chìa khóa cơ dự phòng đảm bảo tính bảo mật và riêng tư cao nhất cho căn hộ của bạn. Sản phẩm được sản xuất bằng công nghệ anode chống oxy hóa bề mặt, không bay màu, chịu ăn mòn cực tốt.",
+        specs: {
+          "Thương hiệu": "Slim System",
+          "Chất liệu": "Hợp kim nhôm anode cao cấp",
+          "Màu sắc": "Đen nhám / Vàng Gold",
+          "Hệ nhôm thích hợp": "Cửa trượt Slim, cửa nhôm nội thất Slim",
+          "Độ dày kính phù hợp": "Kính cường lực 8mm - 12mm",
+          "Bảo hành": "24 tháng chính hãng"
+        }
+      },
+      "Bánh Xe Giảm Chấn Cửa Lùa Slim": {
+        price: "Liên hệ báo giá",
+        images: [
+          "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-giam-chan-cua-lua-slim_377335539699/phu-kien-cua-slim-banh-xe-giam-chan-cua-lua-slim.webp"
+        ],
+        brand: "OPK / Slim System",
+        description: "Bánh xe giảm chấn cửa lùa Slim giúp hành trình mở và đóng cửa cực kỳ êm ái, triệt tiêu tiếng ồn và tránh va đập mạnh làm vỡ kính. Đảm bảo an toàn tuyệt đối khi sử dụng.",
+        specs: {
+          "Thương hiệu": "OPK / Slim System",
+          "Chất liệu": "Thép chống gỉ + Nhựa POM siêu bền",
+          "Tải trọng tối đa": "100kg/cánh",
+          "Hệ thống giảm chấn": "Thủy lực 2 chiều",
+          "Bảo hành": "24 tháng"
+        }
+      },
+      "Khóa điện tử Xingfa 6-in-1 Viro Smartlock VR-S30E": {
+        price: "3,500,000 đ/bộ",
+        images: [
+          "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e_015859246278/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e.webp"
+        ],
+        brand: "Viro Smartlock",
+        description: "Khóa điện tử thông minh tích hợp 6 phương thức mở khóa tiên tiến nhất: Vân tay, Mật mã, Thẻ từ, Chìa cơ dự phòng, App điện thoại qua Bluetooth, và Wifi (Gateway). Thân khóa siêu mảnh thiết kế riêng cho các hệ cửa nhôm Xingfa, cửa nhôm kính có đố nhỏ.",
+        specs: {
+          "Thương hiệu": "Viro Smartlock",
+          "Chất liệu": "Hợp kim kẽm siêu cứng",
+          "Bộ nhớ lưu trữ": "100 vân tay, 100 mã số, 100 thẻ từ",
+          "Màu sắc": "Đen xi mạ cao cấp",
+          "Bảo hành": "24 tháng"
+        }
+      }
+    };
+
+    // Filter tab interaction
+    document.querySelectorAll('.filter-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        document.querySelectorAll('.pk-category').forEach(cat => {
+          if (filter === 'all' || cat.dataset.cat === filter) {
+            cat.style.display = '';
+          } else {
+            cat.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Detail Modal Controller
+    const modal = document.getElementById('pkDetailModal');
+    const modalBody = document.getElementById('pkModalBody');
+    const closeBtn = document.getElementById('pkCloseModal');
+
+    function openProductDetail(card) {
+      const imgEl = card.querySelector('.pk-card-img img');
+      const titleEl = card.querySelector('.pk-card-name');
+      const categorySection = card.closest('.pk-category');
+      
+      const title = titleEl ? titleEl.textContent.trim() : 'Phụ Kiện Cao Cấp';
+      const imageSrc = imgEl ? imgEl.src : 'assets/images/no-image.svg';
+      
+      let categoryName = 'SAO VÀNG';
+      if (categorySection) {
+        const titleHeader = categorySection.querySelector('.pk-category-title');
+        if (titleHeader) {
+          // Clone and remove brand tags inside header to get clean category name
+          const tempHeader = titleHeader.cloneNode(true);
+          tempHeader.querySelectorAll('.pk-category-brand-tag, .pk-category-badge').forEach(el => el.remove());
+          categoryName = tempHeader.textContent.trim();
+        }
+      }
+
+      // Lookup or generate detail record
+      const details = productDb[title] || {
+        price: "Liên hệ báo giá",
+        images: [imageSrc],
+        brand: categoryName,
+        description: `Phụ kiện ${title} cao cấp, được cung cấp chính hãng bởi Công ty Cổ phần Sản xuất Cơ khí Sao Vàng. Thiết kế tinh tế, hiện đại, tối ưu hóa công năng và nâng cao tuổi thọ vận hành cho các hệ thống cửa nhôm kính của bạn.`,
+        specs: {
+          "Thương hiệu": categoryName,
+          "Phân loại": "Phụ kiện nhôm kính cao cấp",
+          "Chất liệu": "Hợp kim cao cấp chống gỉ",
+          "Xuất xứ": "Chính hãng",
+          "Bảo hành": "12 - 24 tháng chính hãng"
+        }
+      };
+
+      // Render Modal Body
+      let thumbsHtml = '';
+      if (details.images && details.images.length > 1) {
+        thumbsHtml = `<div class="pk-gallery-thumbs">` + 
+          details.images.map((img, idx) => `
+            <div class="pk-gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="changeMainImage('${img}', this)">
+              <img src="${img}" alt="Ảnh phụ ${idx + 1}" />
+            </div>
+          `).join('') + `</div>`;
+      }
+
+      let specsHtml = '';
+      if (details.specs) {
+        specsHtml = `<table class="pk-specs-table">` +
+          Object.entries(details.specs).map(([key, val]) => `
+            <tr>
+              <td class="pk-specs-label">${key}</td>
+              <td>${val}</td>
+            </tr>
+          `).join('') + `</table>`;
+      }
+
+      modalBody.innerHTML = `
+        <div class="pk-modal-gallery">
+          <div class="pk-gallery-main">
+            <img id="pkMainImg" src="${details.images[0]}" alt="${title}" />
+          </div>
+          ${thumbsHtml}
+        </div>
+        <div class="pk-modal-info">
+          <div class="pk-info-brand">${details.brand || categoryName}</div>
+          <h3 class="pk-info-title">${title}</h3>
+          <div class="pk-info-price"><span>Giá bán:</span>${details.price}</div>
+          
+          <div class="pk-info-tabs">
+            <button class="pk-info-tab active" onclick="switchTab('desc', this)">Mô tả chi tiết</button>
+            <button class="pk-info-tab" onclick="switchTab('specs', this)">Thông số kỹ thuật</button>
+          </div>
+
+          <div class="pk-info-panel active" id="pkPanelDesc">
+            <p>${details.description}</p>
+          </div>
+          <div class="pk-info-panel" id="pkPanelSpecs">
+            ${specsHtml}
+          </div>
+
+          <div class="pk-info-actions">
+            <a href="tel:0869590279" class="btn-gold"><i class="ri-phone-fill"></i> 0869 590 279</a>
+            <a href="lien-he.html" class="btn-outline"><i class="ri-mail-send-line"></i> Gửi Yêu Cầu</a>
+          </div>
+        </div>
+      `;
+
+      // Show Modal
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function changeMainImage(src, thumbEl) {
+      document.getElementById('pkMainImg').src = src;
+      document.querySelectorAll('.pk-gallery-thumb').forEach(el => el.classList.remove('active'));
+      thumbEl.classList.add('active');
+    }
+
+    function switchTab(type, tabEl) {
+      document.querySelectorAll('.pk-info-tab').forEach(el => el.classList.remove('active'));
+      tabEl.classList.add('active');
+      
+      document.querySelectorAll('.pk-info-panel').forEach(el => el.classList.remove('active'));
+      if (type === 'desc') {
+        document.getElementById('pkPanelDesc').classList.add('active');
+      } else {
+        document.getElementById('pkPanelSpecs').classList.add('active');
+      }
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // Attach click events to cards
+    document.querySelectorAll('.pk-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Prevent default only if clicking card-btn or if we want modal for the whole card
+        e.preventDefault();
+        openProductDetail(card);
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+  </script>
+  <script src="assets/js/shared/internal-links.js"></script>
+  <!-- Sprint 3: Service CTA -->
+  <script src="assets/js/shared/service-cta.js"></script>
+    <!-- Sprint 2: Shared components -->
+  <script src="assets/js/shared/floating-widget.js"></script>
+  <script src="assets/js/shared/faq-accordion.js"></script>
+  <script src="assets/js/shared/breadcrumb.js"></script>
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>
+
+</body>
+</html>

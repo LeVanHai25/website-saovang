@@ -1,579 +1,374 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
   <meta charset="UTF-8" />
-  <!-- ═══ Google Tag Manager — Sprint 6 ═══
-       Thay GTM-XXXXXXX bằng Container ID thực của bạn
-       Lấy tại: tagmanager.google.com
-  ═══════════════════════════════════════ -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
-  <!-- End Google Tag Manager -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#9B1C1C" />
-  <title>Phụ Kiện Nhôm Kính Cao Cấp — Draho, Bogo, KinLong, Janus | SAO VÀNG</title>
-  <meta name="description" content="Cơ Khí Sao Vàng cung cấp đầy đủ phụ kiện nhôm kính cao cấp: Draho, Bogo, KinLong, Janus, Cmech, Huy Hoàng, Candy, Hafele, khóa điện tử và nhiều thương hiệu uy tín. Tư vấn miễn phí." />
-  <meta name="keywords" content="phụ kiện nhôm kính, phụ kiện cửa nhôm, draho, bogo, kinlong, janus, cmech, hafele, khóa điện tử" />
-  <meta property="og:title" content="Phụ Kiện Nhôm Kính Cao Cấp | SAO VÀNG" />
-  <meta property="og:description" content="Đầy đủ phụ kiện nhôm kính thương hiệu uy tín: Draho, Bogo, KinLong, Janus, Candy, Hafele..." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.CoKhiSaoVang.com/phu-kien.html" />
-  <link rel="canonical" href="https://www.CoKhiSaoVang.com/phu-kien.html" />
-
-  <!-- Fonts -->
+  <title>Phụ Kiện Nhôm Kính Cao Cấp — Cmech, Bogo, Draho, Sigico | SAO VÀNG</title>
+  <meta name="description" content="Sao Vàng phân phối phụ kiện nhôm kính cao cấp đồng bộ chính hãng: Cmech Mỹ, Bogo Đức, Draho, Janus, Sigico, Hafele. Lắp đặt và bảo hành 100% chính hãng." />
+  <meta name="keywords" content="phụ kiện nhôm kính, phụ kiện cửa nhôm, phụ kiện slim, cmech, bogo, draho, sigico, hafele, kinlong, huy hoang" />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
-
-  <!-- Design System v2 -->
   <link rel="stylesheet" href="assets/css/main.css" />
-
+  
   <style>
-    /* ══ Page: phu-kien.html ══ */
+    /* Custom Styling for Redesigned Dashboard */
     :root {
-      --pk-red: #9B1C1C;
-      --pk-gold: #d4af37;
-      --pk-dark: #0f1115;
-      --pk-card-bg: #fff;
+      --sv-gold: #d4af37;
+      --sv-red: #9B1C1C;
     }
-
-    /* ── Hero ── */
-    .page-hero {
+    .dashboard-hero {
+      background: linear-gradient(135deg, #0f1115 0%, #1c1f26 100%);
+      padding: 140px 0 80px;
+      color: #fff;
+      text-align: center;
       position: relative;
-      height: 42vh;
-      min-height: 300px;
-      display: flex; align-items: center; justify-content: center; text-align: center;
-      background: var(--pk-dark);
-      padding-top: var(--sv-navbar-h, 72px);
       overflow: hidden;
     }
-    .page-hero-bg {
+    .dashboard-hero::before {
+      content: '';
       position: absolute; inset: 0;
-      background: url('https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      opacity: 0.22;
+      background: radial-gradient(circle at 50% 120%, rgba(155, 28, 28, 0.15), transparent 70%);
     }
-    .page-hero-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(150deg, rgba(155,28,28,0.75) 0%, rgba(15,17,21,0.90) 100%);
-    }
-    .page-hero-content { position: relative; z-index: 2; padding: 40px 20px; }
-    .page-hero-eyebrow {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--pk-gold);
+    .dashboard-title {
+      font-family: var(--sv-font-head);
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 900;
+      letter-spacing: -0.02em;
       margin-bottom: 12px;
     }
-    .page-hero-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(30px, 5vw, 56px); font-weight: 900;
-      color: #fff; line-height: 1.08; margin-bottom: 14px;
+    .dashboard-desc {
+      font-size: clamp(14px, 2vw, 18px);
+      color: rgba(255,255,255,0.7);
+      max-width: 680px;
+      margin: 0 auto 32px;
+      line-height: 1.6;
     }
-    .page-hero-title span { color: var(--pk-gold); }
-    .page-hero-desc {
-      font-size: 15px; color: rgba(255,255,255,0.72);
-      max-width: 520px; margin: 0 auto 20px; line-height: 1.7;
+    
+    /* Search Box styling */
+    .search-wrapper {
+      max-width: 580px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
     }
-    .page-hero-breadcrumb {
-      display: flex; align-items: center; justify-content: center;
-      gap: 6px; font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
-      text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 14px;
+    .search-box {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 99px;
+      padding: 18px 30px 18px 60px;
+      color: #fff;
+      font-size: 15px;
+      font-family: var(--sv-font-body);
+      outline: none;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
     }
-    .page-hero-breadcrumb a { color: rgba(255,255,255,0.4); text-decoration: none; }
-    .page-hero-breadcrumb a:hover { color: var(--pk-gold); }
-    .page-hero-breadcrumb .sep { color: rgba(255,255,255,0.2); }
-    .page-hero-breadcrumb .current { color: var(--pk-gold); }
-
-    /* ── Stats bar ── */
-    .stats-bar {
-      background: var(--pk-red);
-      padding: 18px 0;
+    .search-box:focus {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--sv-gold);
+      box-shadow: 0 8px 32px rgba(212, 175, 55, 0.15);
     }
-    .stats-bar-inner {
-      max-width: 1200px; margin: 0 auto; padding: 0 24px;
-      display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+    .search-wrapper i {
+      position: absolute;
+      left: 24px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 20px;
+      color: rgba(255,255,255,0.4);
+      pointer-events: none;
+      transition: all 0.3s;
     }
-    .stat-pill {
-      display: flex; align-items: center; gap: 10px;
-      color: #fff; font-family: 'Montserrat', sans-serif;
+    .search-box:focus + i {
+      color: var(--sv-gold);
     }
-    .stat-pill i { font-size: 22px; color: var(--pk-gold); }
-    .stat-pill-num { font-size: 22px; font-weight: 900; line-height: 1; }
-    .stat-pill-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; opacity: 0.8; }
-
-    /* ── Filter tabs ── */
-    .filter-section { background: #f8f8f8; border-bottom: 1px solid #e8e8e8; position: sticky; top: var(--sv-navbar-h, 72px); z-index: 80; }
-    .filter-inner {
-      max-width: 1200px; margin: 0 auto; padding: 0 24px;
-      display: flex; gap: 0; overflow-x: auto;
-      scrollbar-width: none;
+    
+    /* Brand catalog panel */
+    .brand-section {
+      padding: 60px 0;
+      background: #f8fafc;
+      border-bottom: 1px solid #e2e8f0;
     }
-    .filter-inner::-webkit-scrollbar { display: none; }
-    .filter-tab {
-      flex-shrink: 0;
-      padding: 14px 18px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
-      text-transform: uppercase; color: #555;
-      border: none; background: none; cursor: pointer;
-      border-bottom: 3px solid transparent;
-      transition: color 0.2s, border-color 0.2s;
-      white-space: nowrap;
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
     }
-    .filter-tab:hover { color: var(--pk-red); }
-    .filter-tab.active { color: var(--pk-red); border-bottom-color: var(--pk-red); }
-
-    /* ── Main layout ── */
-    .pk-layout {
-      max-width: 1200px; margin: 0 auto; padding: 48px 24px 80px;
+    .brand-item-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 200px;
     }
-
-    /* ── Category section ── */
-    .pk-category {
-      margin-bottom: 64px;
+    .brand-item-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      border-color: var(--sv-red);
     }
-    .pk-category-header {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 28px; padding-bottom: 16px;
-      border-bottom: 2px solid #f0f0f0;
+    .brand-logo-txt {
+      font-family: var(--sv-font-head);
+      font-size: 28px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
     }
-    .pk-category-title {
-      display: flex; align-items: center; gap: 12px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(18px, 2.5vw, 24px); font-weight: 800; color: #1a1a1a;
-    }
-    .pk-category-badge {
-      width: 8px; height: 32px;
-      background: var(--pk-red);
-      border-radius: 2px;
-      flex-shrink: 0;
-    }
-    .pk-category-brand-tag {
-      display: inline-flex; align-items: center;
-      background: var(--pk-red); color: #fff;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10px; font-weight: 800; letter-spacing: 0.12em;
+    .brand-origin {
+      font-size: 11px;
+      color: var(--sv-gray-text);
       text-transform: uppercase;
-      padding: 3px 8px; border-radius: 2px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
     }
-    .pk-viewall {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
-      text-transform: uppercase; color: var(--pk-red);
-      text-decoration: none; display: flex; align-items: center; gap: 6px;
-      transition: gap 0.2s;
+    .brand-explore-btn {
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--sv-red);
+      margin-top: 20px;
+      display: flex; align-items: center; gap: 4px;
     }
-    .pk-viewall:hover { gap: 10px; }
-
-    /* ── Product grid ── */
+    
+    /* Layout */
+    .catalog-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 40px;
+      padding: 80px 0;
+    }
+    @media (max-width: 991px) {
+      .catalog-layout { grid-template-columns: 1fr; }
+    }
+    
+    /* Sidebar filters */
+    .filter-sidebar {
+      position: sticky;
+      top: 90px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px;
+      height: fit-content;
+    }
+    .filter-title {
+      font-family: var(--sv-font-head);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #f1f5f9;
+    }
+    .filter-list {
+      list-style: none;
+      padding: 0; margin: 0;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .filter-btn-item {
+      width: 100%;
+      text-align: left;
+      padding: 12px 16px;
+      border-radius: 8px;
+      background: transparent;
+      border: none;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sv-gray-text);
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .filter-btn-item:hover {
+      background: #f1f5f9;
+      color: var(--sv-dark-900);
+    }
+    .filter-btn-item.active {
+      background: var(--sv-red);
+      color: #fff;
+    }
+    .filter-count {
+      background: #f1f5f9;
+      color: var(--sv-gray-text);
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 20px;
+    }
+    .filter-btn-item.active .filter-count {
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+    }
+    
+    /* Products Grid */
     .pk-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 24px;
     }
-
-    /* ── Product card ── */
     .pk-card {
       background: #fff;
-      border: 1px solid #f0f0f0;
-      border-radius: 4px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
       overflow: hidden;
-      transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+      transition: all 0.3s ease;
       cursor: pointer;
     }
     .pk-card:hover {
-      box-shadow: 0 8px 32px rgba(155,28,28,0.1);
-      transform: translateY(-4px);
-      border-color: #f0d0d0;
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
     }
     .pk-card-img {
-      position: relative; overflow: hidden;
-      aspect-ratio: 1 / 1;
-      background: #f5f5f5;
+      position: relative;
+      height: 200px;
+      background: #f8fafc;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+      border-bottom: 1px solid #f1f5f9;
     }
     .pk-card-img img {
-      width: 100%; height: 100%; object-fit: contain;
-      padding: 12px;
-      transition: transform 0.5s ease;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
     }
-    .pk-card:hover .pk-card-img img { transform: scale(1.08); }
     .pk-card-badge {
-      position: absolute; top: 8px; left: 8px;
-      background: var(--pk-red); color: #fff;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 9px; font-weight: 800; letter-spacing: 0.1em;
-      padding: 2px 6px; border-radius: 2px; text-transform: uppercase;
+      position: absolute;
+      top: 12px; left: 12px;
+      background: var(--sv-red);
+      color: #fff;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 20px;
+      text-transform: uppercase;
     }
-    .pk-card-body { padding: 14px 14px 16px; }
+    .pk-card-body {
+      padding: 16px;
+    }
     .pk-card-name {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 13px; font-weight: 600; color: #1a1a1a;
-      line-height: 1.45; margin-bottom: 10px;
-      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+      font-family: var(--sv-font-head);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: 12px;
+      min-height: 38px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
     .pk-card-btn {
-      display: inline-flex; align-items: center; gap: 5px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--pk-red); text-decoration: none;
-      padding: 6px 0;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.2s;
-    }
-    .pk-card-btn:hover { border-bottom-color: var(--pk-red); }
-
-    /* ── CTA banner ── */
-    .cta-banner {
-      background: linear-gradient(135deg, #7b1212 0%, var(--pk-red) 60%, #b91c1c 100%);
-      padding: 64px 24px; text-align: center; position: relative; overflow: hidden;
-    }
-    .cta-banner::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-    .cta-inner { position: relative; z-index: 1; max-width: 680px; margin: 0 auto; }
-    .cta-eyebrow {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
-      text-transform: uppercase; color: var(--pk-gold); margin-bottom: 12px;
-    }
-    .cta-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(24px, 4vw, 38px); font-weight: 900;
-      color: #fff; line-height: 1.15; margin-bottom: 14px;
-    }
-    .cta-desc { font-size: 15px; color: rgba(255,255,255,0.78); margin-bottom: 32px; line-height: 1.7; }
-    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    .btn-gold {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--pk-gold); color: #1a1a1a;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 13px; font-weight: 800; letter-spacing: 0.06em;
-      text-transform: uppercase; padding: 14px 28px;
-      border: none; cursor: pointer; text-decoration: none;
-      transition: background 0.2s, transform 0.2s;
-      border-radius: 2px;
-    }
-    .btn-gold:hover { background: #b8942e; transform: translateY(-2px); color: #1a1a1a; }
-    .btn-outline {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: transparent; color: #fff;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 13px; font-weight: 700; letter-spacing: 0.06em;
-      text-transform: uppercase; padding: 13px 28px;
-      border: 2px solid rgba(255,255,255,0.5); cursor: pointer; text-decoration: none;
-      transition: border-color 0.2s, background 0.2s;
-      border-radius: 2px;
-    }
-    .btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); color: #fff; }
-
-    /* ── Brand logos ── */
-    .brands-section { background: #fff; padding: 48px 24px; border-top: 1px solid #f0f0f0; }
-    .brands-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 11px; font-weight: 700; letter-spacing: 0.2em;
-      text-transform: uppercase; color: #aaa; text-align: center; margin-bottom: 28px;
-    }
-    .brands-grid {
-      max-width: 1000px; margin: 0 auto;
-      display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
-    }
-    .brand-chip {
-      padding: 8px 18px;
-      border: 2px solid #e8e8e8; border-radius: 100px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 13px; font-weight: 700; color: #555;
-      cursor: pointer; transition: all 0.2s; text-decoration: none;
-    }
-    .brand-chip:hover, .brand-chip.active {
-      border-color: var(--pk-red); color: var(--pk-red);
-      background: rgba(155,28,28,0.04);
-    }
-
-    /* ── Details Modal ── */
-    .pk-modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 17, 21, 0.75);
-      backdrop-filter: blur(12px);
-      z-index: 10000;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-      padding: 20px;
-    }
-    .pk-modal.active {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    .pk-modal-container {
-      background: #fff;
+      display: flex; align-items: center; justify-content: center; gap: 4px;
       width: 100%;
-      max-width: 900px;
-      max-height: 90vh;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 24px 64px rgba(0,0,0,0.3);
-      position: relative;
-      transform: scale(0.92);
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-      display: flex;
-      flex-direction: column;
-    }
-    .pk-modal.active .pk-modal-container {
-      transform: scale(1);
-    }
-    .pk-modal-close {
-      position: absolute;
-      top: 16px;
-      right: 16px;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: #f5f5f5;
-      border: none;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      color: #333;
-      transition: background 0.2s, color 0.2s;
-      z-index: 10;
-    }
-    .pk-modal-close:hover {
-      background: var(--pk-red);
-      color: #fff;
-    }
-    .pk-modal-body {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      overflow-y: auto;
-      height: 100%;
-    }
-    .pk-modal-gallery {
-      padding: 40px;
-      background: #fafafa;
-      border-right: 1px solid #f0f0f0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-    }
-    .pk-gallery-main {
-      width: 100%;
-      aspect-ratio: 1/1;
-      background: #fff;
-      border: 1px solid #e8e8e8;
-      border-radius: 4px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-    .pk-gallery-main img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      padding: 16px;
-      transition: transform 0.3s;
-    }
-    .pk-gallery-thumbs {
-      display: flex;
-      gap: 10px;
-      width: 100%;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .pk-gallery-thumb {
-      width: 60px;
-      height: 60px;
-      border: 2px solid #e8e8e8;
-      border-radius: 4px;
-      cursor: pointer;
-      overflow: hidden;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: border-color 0.2s;
-    }
-    .pk-gallery-thumb.active, .pk-gallery-thumb:hover {
-      border-color: var(--pk-red);
-    }
-    .pk-gallery-thumb img {
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: contain;
-      padding: 4px;
-    }
-    .pk-modal-info {
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-    }
-    .pk-info-brand {
-      font-family: 'Montserrat', sans-serif;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #cbd5e1;
+      font-family: var(--sv-font-head);
       font-size: 11px;
       font-weight: 800;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--pk-gold);
-      margin-bottom: 8px;
-    }
-    .pk-info-title {
-      font-family: 'Montserrat', sans-serif;
-      font-size: clamp(20px, 3vw, 24px);
-      font-weight: 800;
-      color: #1a1a1a;
-      line-height: 1.3;
-      margin-bottom: 16px;
-    }
-    .pk-info-price {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 20px;
-      font-weight: 900;
-      color: var(--pk-red);
-      margin-bottom: 24px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    .pk-info-price span {
-      font-size: 13px;
-      font-weight: 600;
-      color: #777;
-      margin-right: 6px;
-    }
-    .pk-info-tabs {
-      display: flex;
-      border-bottom: 1px solid #e8e8e8;
-      margin-bottom: 20px;
-    }
-    .pk-info-tab {
-      padding: 10px 16px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #777;
-      border: none;
-      background: none;
-      cursor: pointer;
-      border-bottom: 2px solid transparent;
+      color: var(--sv-gray-text);
+      text-decoration: none;
       transition: all 0.2s;
     }
-    .pk-info-tab.active {
-      color: var(--pk-red);
-      border-bottom-color: var(--pk-red);
+    .pk-card:hover .pk-card-btn {
+      background: var(--sv-red);
+      border-color: var(--sv-red);
+      color: #fff;
     }
-    .pk-info-panel {
-      display: none;
-      font-size: 14px;
-      line-height: 1.6;
-      color: #555;
-      margin-bottom: 28px;
-      flex-grow: 1;
-    }
-    .pk-info-panel.active {
-      display: block;
-    }
-    .pk-specs-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    .pk-specs-table td {
-      padding: 8px 12px;
-      font-size: 13px;
-      border-bottom: 1px solid #f5f5f5;
-    }
-    .pk-specs-table tr:last-child td {
-      border-bottom: none;
-    }
-    .pk-specs-label {
-      font-weight: 700;
-      color: #333;
-      width: 140px;
-    }
-    .pk-info-actions {
+    
+    /* Slide-over Side Panel */
+    .side-panel {
+      position: fixed;
+      top: 0; right: -420px;
+      width: 400px; height: 100%;
+      background: #fff;
+      box-shadow: -10px 0 40px rgba(0,0,0,0.15);
+      z-index: 1000;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
       display: flex;
-      gap: 12px;
+      flex-direction: column;
     }
-    .pk-info-actions .btn-gold {
+    .side-panel.open {
+      right: 0;
+    }
+    .panel-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      z-index: 999;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    .panel-backdrop.open {
+      opacity: 1; pointer-events: auto;
+    }
+    .panel-header {
+      padding: 24px;
+      border-bottom: 1px solid #f1f5f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .panel-title {
+      font-family: var(--sv-font-head);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+    }
+    .panel-close-btn {
+      background: transparent; border: none;
+      font-size: 24px; cursor: pointer;
+      color: var(--sv-gray-text);
+    }
+    .panel-body {
+      padding: 24px;
+      overflow-y: auto;
       flex: 1;
-      justify-content: center;
+      display: flex; flex-direction: column; gap: 20px;
     }
-    .pk-info-actions .btn-outline {
-      flex: 1;
-      justify-content: center;
-      border-color: #ddd;
-      color: #333;
+    .panel-img-box {
+      height: 240px;
+      background: #f8fafc;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      padding: 20px;
     }
-    .pk-info-actions .btn-outline:hover {
-      border-color: var(--pk-red);
-      color: var(--pk-red);
-      background: rgba(155,28,28,0.04);
+    .panel-img-box img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
     }
-    @media (max-width: 768px) {
-      .pk-modal-body {
-        grid-template-columns: 1fr;
-      }
-      .pk-modal-gallery {
-        padding: 24px;
-        border-right: none;
-        border-bottom: 1px solid #f0f0f0;
-      }
-      .pk-modal-info {
-        padding: 24px;
-      }
-      .pk-modal-container {
-        max-height: 95vh;
-      }
+    .panel-info-list {
+      list-style: none; padding: 0; margin: 0;
     }
-
-    /* ── Responsive ── */
-    @media (max-width: 768px) {
-      .pk-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-      .stats-bar-inner { gap: 24px; }
-      .pk-category-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .panel-info-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #f1f5f9;
+      font-size: 13px;
+      color: var(--sv-gray-text);
+      display: flex; justify-content: space-between;
     }
-    @media (max-width: 480px) {
-      .pk-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .panel-info-list li strong {
+      color: var(--sv-dark-900);
     }
   </style>
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
 
-  <!-- ── HEADER ── -->
-  <header class="header-v2" id="navbar" role="banner">
-    <div class="nav-inner">
-      <!-- Logo -->
-      <a href="index.html" class="nav-logo" aria-label="Trang chủ Sao Vàng">
-        <img src="assets/images/logo-sv-main.svg" alt="Cơ Khí Sao Vàng" class="nav-logo-img" width="44" height="44" />
-        <div class="nav-logo-text">
-          <span class="nav-logo-name">SAO VÀNG</span>
-          <span class="nav-logo-sub">Cơ Khí & Nhôm Kính</span>
-        </div>
-      </a>
-
-      <!-- Desktop nav -->
-            <!-- Desktop nav menu (tinh gọn) -->
-      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+  <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
         <a href="index.html" class="nav-menu-link">Trang Chủ</a>
         <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
         <a href="nhom-sao-vang.html" class="nav-menu-link">Nhôm Sao Vàng</a>
@@ -622,904 +417,2032 @@
     </a>
   </nav>
 
-  <!-- ── HERO ── -->
-  <section class="page-hero">
-    <div class="page-hero-bg"></div>
-    <div class="page-hero-overlay"></div>
-    <div class="page-hero-content">
-      <div class="page-hero-eyebrow">PHỤ KIỆN NHÔM KÍNH CAO CẤP</div>
-      <h1 class="page-hero-title">Phụ Kiện <span>Chính Hãng</span><br>Đa Thương Hiệu</h1>
-      <p class="page-hero-desc">Draho · Bogo · KinLong · Janus · Cmech · Candy · Hafele và nhiều thương hiệu uy tín hàng đầu</p>
-      <div class="page-hero-breadcrumb">
-        <a href="index.html">Trang Chủ</a>
-        <span class="sep">›</span>
-        <span class="current">Phụ Kiện</span>
-      </div>
-    </div>
-  </section>
+  
 
-  <!-- ── STATS BAR ── -->
-  <div class="stats-bar">
-    <div class="stats-bar-inner">
-      <div class="stat-pill">
-        <i class="ri-medal-line"></i>
-        <div>
-          <div class="stat-pill-num">17+</div>
-          <div class="stat-pill-label">Thương Hiệu</div>
-        </div>
-      </div>
-      <div class="stat-pill">
-        <i class="ri-box-3-line"></i>
-        <div>
-          <div class="stat-pill-num">500+</div>
-          <div class="stat-pill-label">Mã Sản Phẩm</div>
-        </div>
-      </div>
-      <div class="stat-pill">
-        <i class="ri-shield-check-line"></i>
-        <div>
-          <div class="stat-pill-num">100%</div>
-          <div class="stat-pill-label">Chính Hãng</div>
-        </div>
-      </div>
-      <div class="stat-pill">
-        <i class="ri-truck-line"></i>
-        <div>
-          <div class="stat-pill-num">24h</div>
-          <div class="stat-pill-label">Giao Hàng HN</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- ── BRAND INTRO SECTION ── -->
-  <section style="padding:72px 0; background:#fff;" aria-label="Giới thiệu thương hiệu phụ kiện">
+  <section class="dashboard-hero">
     <div class="sv-container">
-      <div style="text-align:center; margin-bottom:clamp(32px,5vw,52px);" data-sv-reveal>
-        <span class="sv-section-tag">3 THƯƠNG HIỆU NỒNG CỐT</span>
-        <h2 class="sv-section-title" style="margin-inline:auto;">Phụ Kiện Chính Hãng — Phân Tích Sâu Từng Dòng</h2>
-        <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); max-width:620px; margin-inline:auto; margin-top:var(--sv-sp-2); line-height:1.7;">
-          NKSV chỉ phân phối 3 thương hiệu cốt lõi — mỗi thương hiệu giải quyết một bài toán cụ thể khác nhau về hiệu năng, ngân sách và môi trường sử dụng.
-        </p>
+      <h1 class="dashboard-title">Phụ Kiện Nhôm Kính Cao Cấp</h1>
+      <p class="dashboard-desc">Hệ thống danh mục phụ kiện đồng bộ thông minh. Khám phá giải pháp khóa từ, bản lề, tay nắm cao cấp nhập khẩu đồng bộ 100%.</p>
+      
+      <div class="search-wrapper">
+        <input type="text" id="db-search-input" class="search-box" placeholder="Tìm kiếm nhanh phụ kiện (ví dụ: Bản lề, Tay nắm, Khóa...)" />
+        <i class="ri-search-line"></i>
       </div>
+    </div>
+  </section>
 
-      <!-- CMECH -->
-      <div style="display:grid; grid-template-columns:340px 1fr; gap:clamp(24px,4vw,56px); align-items:center; margin-bottom:72px; padding-bottom:72px; border-bottom:1px solid #f0f0f0;" class="brand-row" data-sv-reveal>
-        <div style="background:linear-gradient(135deg,#0f172a 0%,#1e293b 100%); border-radius:16px; padding:36px 28px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px; flex-shrink:0;">
-          <div style="width:72px; height:72px; background:rgba(212,175,55,0.15); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; color:#d4af37;">
-            <i class="ri-shield-star-line"></i>
-          </div>
-          <div style="font-family:var(--sv-font-head); font-size:28px; font-weight:900; color:#d4af37; letter-spacing:0.05em;">CMECH</div>
-          <div style="font-size:12px; color:rgba(255,255,255,0.6); font-weight:600; text-transform:uppercase; letter-spacing:0.1em;">Made in USA</div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; width:100%; margin-top:8px;">
-            <div style="background:rgba(255,255,255,0.06); border-radius:8px; padding:12px 8px; text-align:center;">
-              <div style="font-family:var(--sv-font-head); font-size:20px; font-weight:900; color:#d4af37;">100K</div>
-              <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">Lần đóng mở</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.06); border-radius:8px; padding:12px 8px; text-align:center;">
-              <div style="font-family:var(--sv-font-head); font-size:20px; font-weight:900; color:#d4af37;">10x</div>
-              <div style="font-size:10px; color:rgba(255,255,255,0.5); margin-top:3px;">Kháng muối mặn</div>
-            </div>
-          </div>
-          <a href="lien-he.html" style="display:inline-flex; align-items:center; gap:6px; background:#d4af37; color:#0f172a; padding:10px 20px; border-radius:8px; font-family:var(--sv-font-head); font-weight:800; font-size:13px; text-decoration:none; transition:all 0.2s; margin-top:4px;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(212,175,55,0.4)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
-            Báo Giá CMECH <i class="ri-arrow-right-line"></i>
-          </a>
-        </div>
-        <div>
-          <div style="display:inline-block; background:#fef3c7; color:#92400e; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; border-radius:4px; padding:4px 12px; margin-bottom:16px;">Phân Khúc Luxury &amp; Resort Biển</div>
-          <h3 style="font-family:var(--sv-font-head); font-size:clamp(20px,2.5vw,26px); font-weight:800; color:var(--sv-dark-900); margin-bottom:14px; line-height:1.3;">CMECH — Chí Lực Của Mỹ Để Giải Bài Toán Môi Trường Muối Biển</h3>
-          <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); line-height:1.7; margin-bottom:20px;">
-            CMECH (Hoa Kỳ) sử dụng công nghệ xử lý bề mặt độc quyền <strong>M-Treatment</strong> — lớp mạ đa tầng kích thước nano kháng muối NaCl gấp 10 lần so với tiêu chuẩn ASTM B117. Tất cả các tấm chất liệu cơ sở đều là hợp kim thau/inox 316L — không có thuyền thễ kếm chất lượng.
-          </p>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:24px;">
-            <div style="border:1px solid #e5e7eb; border-radius:8px; padding:14px 16px;">
-              <div style="font-size:11px; font-weight:700; color:var(--sv-red-600); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Dòng London Series</div>
-              <p style="font-size:12px; color:var(--sv-gray-text); line-height:1.5;">Tay nắm vô địch đa điểm khóa, dạng thẳng góc vuông, mạ PVD 18K Gold hoặc Black Chrome. Chuyên cho biệt thự Luxury và các khách sạn 5 sao.</p>
-            </div>
-            <div style="border:1px solid #e5e7eb; border-radius:8px; padding:14px 16px;">
-              <div style="font-size:11px; font-weight:700; color:var(--sv-red-600); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Dòng New York Series</div>
-              <p style="font-size:12px; color:var(--sv-gray-text); line-height:1.5;">Tay nắm kiểu dáng cửa đi văn phòng hiện đại, khóa 3 điểm kết hợp giải pháp chống vượt rào 2 cấp độ. Phù hợp cho cao ốc văn phòng và resort.</p>
-            </div>
-            <div style="border:1px solid #e5e7eb; border-radius:8px; padding:14px 16px;">
-              <div style="font-size:11px; font-weight:700; color:var(--sv-red-600); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Dòng Metro Series</div>
-              <p style="font-size:12px; color:var(--sv-gray-text); line-height:1.5;">Tay nắm mọng gon phù hợp cửa nhôm Slim 20-25mm. Bề mặt Matte Black hoặc Satin Nickel. Bảo hành 10 năm chống ăn mòn muối biển.</p>
-            </div>
-            <div style="border:1px solid #fef3c7; background:#fffbeb; border-radius:8px; padding:14px 16px;">
-              <div style="font-size:11px; font-weight:700; color:#92400e; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:6px;">Cam Kết Chất Lượng</div>
-              <p style="font-size:12px; color:#78350f; line-height:1.5;"><strong>Bảo hành 100,000 lần đóng mở</strong> không hỏng. Test chuẩn ANSI/BHMA A156.2 Grade 1 — tiêu chuẩn cao nhất của Hoa Kỳ cho phụ kiện thương mại.</p>
-            </div>
-          </div>
-        </div>
+  <!-- ── BRAND QUICK EXPLORE ── -->
+  <section class="brand-section">
+    <div class="sv-container">
+      <div style="text-align:center; margin-bottom:30px;">
+        <span class="sv-section-tag">HÃNG LIÊN KẾT CHÍNH HÃNG</span>
+        <h2 class="sv-section-title" style="margin-inline:auto;">Thương Hiệu Phụ Kiện Nổi Tiếng</h2>
       </div>
-
-      <!-- BOGO -->
-      <div style="display:grid; grid-template-columns:1fr 340px; gap:clamp(24px,4vw,56px); align-items:center; margin-bottom:72px; padding-bottom:72px; border-bottom:1px solid #f0f0f0;" class="brand-row brand-row-reverse" data-sv-reveal>
-        <div>
-          <div style="display:inline-block; background:#dbeafe; color:#1e40af; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; border-radius:4px; padding:4px 12px; margin-bottom:16px;">Phân Khúc Cao Cấp &amp; Biệt Thự</div>
-          <h3 style="font-family:var(--sv-font-head); font-size:clamp(20px,2.5vw,26px); font-weight:800; color:var(--sv-dark-900); margin-bottom:14px; line-height:1.3;">BOGO — Bản Lề 4D Đức Quốc Chưa Từng Thất Bại Sau 15 Năm</h3>
-          <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); line-height:1.7; margin-bottom:20px;">
-            BOGO (Đức/OEM cao cấp) được chế tạo từ hợp kim nhôm đúc nguyên khối chất lượng đặc biệt, xi mạ Anodizing ngành Aerospace — cùng loại vật liệu được dùng trong công nghiệp hàng không. Bản lề 4D có thể điều chỉnh 4 hướng chỉnh cánh sau lắp đặt mà không cần tháo cửa.
-          </p>
-          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:24px;">
-            <div style="background:var(--sv-gray-025,#f9fafb); border-radius:8px; padding:14px; text-align:center;">
-              <div style="font-family:var(--sv-font-head); font-size:22px; font-weight:900; color:var(--sv-dark-900); margin-bottom:4px;">150kg</div>
-              <div style="font-size:11px; color:var(--sv-gray-text);">Chịu lực tải tối đa</div>
-            </div>
-            <div style="background:var(--sv-gray-025,#f9fafb); border-radius:8px; padding:14px; text-align:center;">
-              <div style="font-family:var(--sv-font-head); font-size:22px; font-weight:900; color:var(--sv-dark-900); margin-bottom:4px;">4D</div>
-              <div style="font-size:11px; color:var(--sv-gray-text);">Chỉnh hướng sau lắp</div>
-            </div>
-            <div style="background:var(--sv-gray-025,#f9fafb); border-radius:8px; padding:14px; text-align:center;">
-              <div style="font-family:var(--sv-font-head); font-size:22px; font-weight:900; color:var(--sv-dark-900); margin-bottom:4px;">15Y</div>
-              <div style="font-size:11px; color:var(--sv-gray-text);">Bảo hành độ chỉnh</div>
-            </div>
-          </div>
-          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px;">
-            <span style="background:#eff6ff; color:#1e40af; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Bản lề 4D chính cánh 150kg</span>
-            <span style="background:#eff6ff; color:#1e40af; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Tay nắm Slim 18mm âm khóa</span>
-            <span style="background:#eff6ff; color:#1e40af; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Anodizing Aerospace grade</span>
-            <span style="background:#eff6ff; color:#1e40af; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Ren Rãnh C chuẩn Đức</span>
-          </div>
-          <a href="lien-he.html" class="sv-btn sv-btn-red">Báo Giá BOGO <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div style="background:linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 100%); border-radius:16px; padding:36px 28px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px; flex-shrink:0;">
-          <div style="width:72px; height:72px; background:rgba(255,255,255,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; color:#93c5fd;">
-            <i class="ri-settings-3-line"></i>
-          </div>
-          <div style="font-family:var(--sv-font-head); font-size:28px; font-weight:900; color:#fff; letter-spacing:0.05em;">BOGO</div>
-          <div style="font-size:12px; color:rgba(255,255,255,0.7); font-weight:600; text-transform:uppercase; letter-spacing:0.1em;">German Engineering / OEM</div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; width:100%; margin-top:8px;">
-            <div style="background:rgba(255,255,255,0.1); border-radius:8px; padding:12px 8px; text-align:center;">
-              <div style="font-family:var(--sv-font-head); font-size:20px; font-weight:900; color:#bfdbfe;">150kg</div>
-              <div style="font-size:10px; color:rgba(255,255,255,0.6); margin-top:3px;">Tải trọng</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.1); border-radius:8px; padding:12px 8px; text-align:center;">
-              <div style="font-family:var(--sv-font-head); font-size:20px; font-weight:900; color:#bfdbfe;">4D</div>
-              <div style="font-size:10px; color:rgba(255,255,255,0.6); margin-top:3px;">Chỉnh hướng</div>
-            </div>
-          </div>
-          <a href="lien-he.html" style="display:inline-flex; align-items:center; gap:6px; background:#fff; color:#1e40af; padding:10px 20px; border-radius:8px; font-family:var(--sv-font-head); font-weight:800; font-size:13px; text-decoration:none; transition:all 0.2s; margin-top:4px;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='';">
-            Báo Giá BOGO <i class="ri-arrow-right-line"></i>
-          </a>
-        </div>
+      
+      <div class="brand-grid">
+        <a href="phu-kien-cmech.html" class="brand-item-card">
+          <div class="brand-logo-txt" style="color:#d4af37;">CMECH</div>
+          <div class="brand-origin">Xuất xứ: Mỹ (USA)</div>
+          <div class="brand-explore-btn">Xem chi tiết hãng <i class="ri-arrow-right-line"></i></div>
+        </a>
+        <a href="phu-kien-bogo.html" class="brand-item-card">
+          <div class="brand-logo-txt" style="color:#1e3a8a;">BOGO</div>
+          <div class="brand-origin">Xuất xứ: Đức / OEM</div>
+          <div class="brand-explore-btn">Xem chi tiết hãng <i class="ri-arrow-right-line"></i></div>
+        </a>
+        <a href="phu-kien-draho.html" class="brand-item-card">
+          <div class="brand-logo-txt" style="color:#065f46;">DRAHO</div>
+          <div class="brand-origin">Xuất xứ: Trung Quốc</div>
+          <div class="brand-explore-btn">Xem chi tiết hãng <i class="ri-arrow-right-line"></i></div>
+        </a>
+        <a href="phu-kien-papo.html" class="brand-item-card">
+          <div class="brand-logo-txt" style="color:#7c2d12;">PAPO</div>
+          <div class="brand-origin">Xuất xứ: Hồng Kông</div>
+          <div class="brand-explore-btn">Xem chi tiết hãng <i class="ri-arrow-right-line"></i></div>
+        </a>
+        <a href="phu-kien-opk.html" class="brand-item-card">
+          <div class="brand-logo-txt" style="color:#4c1d95;">OPK</div>
+          <div class="brand-origin">Xuất xứ: Đức</div>
+          <div class="brand-explore-btn">Xem chi tiết hãng <i class="ri-arrow-right-line"></i></div>
+        </a>
+        <a href="phu-kien-sigico.html" class="brand-item-card">
+          <div class="brand-logo-txt" style="color:#111827;">SIGICO</div>
+          <div class="brand-origin">Xuất xứ: Đức</div>
+          <div class="brand-explore-btn">Xem chi tiết hãng <i class="ri-arrow-right-line"></i></div>
+        </a>
       </div>
+    </div>
+  </section>
 
-      <!-- DRAHO -->
-      <div style="display:grid; grid-template-columns:340px 1fr; gap:clamp(24px,4vw,56px); align-items:center; margin-bottom:72px; padding-bottom:72px; border-bottom:1px solid #f0f0f0;" class="brand-row" data-sv-reveal>
-        <div style="background:linear-gradient(135deg,#065f46 0%,#059669 100%); border-radius:16px; padding:36px 28px; display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px; flex-shrink:0;">
-          <div style="width:72px; height:72px; background:rgba(255,255,255,0.12); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; color:#6ee7b7;">
-            <i class="ri-building-2-line"></i>
-          </div>
-          <div style="font-family:var(--sv-font-head); font-size:28px; font-weight:900; color:#fff; letter-spacing:0.05em;">DRAHO</div>
-          <div style="font-size:12px; color:rgba(255,255,255,0.7); font-weight:600; text-transform:uppercase; letter-spacing:0.1em;">China Premium OEM</div>
-          <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; width:100%; margin-top:8px;">
-            <div style="background:rgba(255,255,255,0.1); border-radius:8px; padding:12px 8px; text-align:center;">
-              <div style="font-family:var(--sv-font-head); font-size:20px; font-weight:900; color:#6ee7b7;">500+</div>
-              <div style="font-size:10px; color:rgba(255,255,255,0.6); margin-top:3px;">Mã sản phẩm</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.1); border-radius:8px; padding:12px 8px; text-align:center;">
-              <div style="font-family:var(--sv-font-head); font-size:20px; font-weight:900; color:#6ee7b7;">-35%</div>
-              <div style="font-size:10px; color:rgba(255,255,255,0.6); margin-top:3px;">So với CMECH</div>
-            </div>
-          </div>
-          <a href="lien-he.html" style="display:inline-flex; align-items:center; gap:6px; background:#fff; color:#065f46; padding:10px 20px; border-radius:8px; font-family:var(--sv-font-head); font-weight:800; font-size:13px; text-decoration:none; transition:all 0.2s; margin-top:4px;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='';">
-            Báo Giá DRAHO <i class="ri-arrow-right-line"></i>
-          </a>
-        </div>
+  <!-- ── MAIN PRODUCTS PANEL ── -->
+  <section style="background:#fff;">
+    <div class="sv-container">
+      <div class="catalog-layout">
+        
+        <!-- Left Filter Sidebar -->
+        <aside class="filter-sidebar">
+          <h3 class="filter-title">Danh Mục Phụ Kiện</h3>
+          <ul class="filter-list">
+            <li>
+              <button class="filter-btn-item active" onclick="setCategory('all')">
+                Tất Cả Phụ Kiện <span class="filter-count" id="count-all">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('slim')">
+                Hệ Cửa Slim <span class="filter-count" id="count-slim">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('truot-quay')">
+                Cửa Trượt Quay <span class="filter-count" id="count-truot-quay">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('cmech')">
+                Hãng CMECH <span class="filter-count" id="count-cmech">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('bogo')">
+                Hãng BOGO <span class="filter-count" id="count-bogo">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('draho')">
+                Hãng DRAHO <span class="filter-count" id="count-draho">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('sigico')">
+                Hãng SIGICO <span class="filter-count" id="count-sigico">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('hafele')">
+                Hãng HAFELE <span class="filter-count" id="count-hafele">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('papo')">
+                Hãng PAPO (Vách kính) <span class="filter-count" id="count-papo">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('opk')">
+                Hãng OPK (Lùa) <span class="filter-count" id="count-opk">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('kinlong')">
+                Hãng KINLONG <span class="filter-count" id="count-kinlong">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('janus')">
+                Hãng JANUS <span class="filter-count" id="count-janus">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('huy-hoang')">
+                Hãng HUY HOÀNG <span class="filter-count" id="count-huy-hoang">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('3h')">
+                Hãng 3H <span class="filter-count" id="count-3h">0</span>
+              </button>
+            </li>
+            <li>
+              <button class="filter-btn-item" onclick="setCategory('khoa-dt')">
+                Khóa Điện Tử <span class="filter-count" id="count-khoa-dt">0</span>
+              </button>
+            </li>
+          </ul>
+        </aside>
+        
+        <!-- Right Products Grid Container -->
         <div>
-          <div style="display:inline-block; background:#dcfce7; color:#166534; font-size:11px; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; border-radius:4px; padding:4px 12px; margin-bottom:16px;">Phân Khúc Trung Cấp &amp; Văn Phòng</div>
-          <h3 style="font-family:var(--sv-font-head); font-size:clamp(20px,2.5vw,26px); font-weight:800; color:var(--sv-dark-900); margin-bottom:14px; line-height:1.3;">DRAHO — Tối Ưu Chi Phí, Không Giảm Chất Lượng</h3>
-          <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); line-height:1.7; margin-bottom:20px;">
-            DRAHO là lựa chọn hàng đầu cho các công trình văn phòng, chung cư và nhà phố ưu tiên ngân sách. Đầy đủ chủng loại: bản lề 4D, thanh truyền động, con lăn bánh xe, tay nắm khóa đa điểm. Sản xuất tại nhà máy OEM ISO 9001 kiểm định bởi Bureau Veritas.
-          </p>
-          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:24px;">
-            <span style="background:#dcfce7; color:#166534; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Bản lề 4D tiêu chuẩn 80kg</span>
-            <span style="background:#dcfce7; color:#166534; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Thanh truyền động đa điểm</span>
-            <span style="background:#dcfce7; color:#166534; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Con lăn giảm chấn</span>
-            <span style="background:#dcfce7; color:#166534; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Tay nắm khóa đa dạng</span>
-            <span style="background:#dcfce7; color:#166534; border-radius:20px; padding:6px 14px; font-size:12px; font-weight:600;">Giao hàng HN 24h</span>
+          <div class="pk-grid" id="products-grid-container">
+            <!-- Dynamically populated via JS -->
           </div>
-          <a href="lien-he.html" class="sv-btn sv-btn-red">Báo Giá DRAHO <i class="ri-arrow-right-line"></i></a>
-        </div>
-      </div>
-
-      <!-- CAM KẾT CHÍNH HÃNG -->
-      <div style="background:linear-gradient(135deg,#7f1d1d 0%,#9b1c1c 100%); border-radius:20px; padding:clamp(32px,5vw,56px); color:#fff; display:grid; grid-template-columns:1fr 1fr; gap:clamp(24px,4vw,48px); align-items:center;" class="brand-row" data-sv-reveal>
-        <div>
-          <div style="font-size:11px; font-weight:800; letter-spacing:0.15em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:12px;">CAM KẾT TỤ NKSV</div>
-          <h3 style="font-family:var(--sv-font-head); font-size:clamp(20px,2.5vw,28px); font-weight:900; color:#fff; margin-bottom:16px; line-height:1.25;">100% Chính Hãng — Đền Bù Gấp Đôi Nếu Phát Hiện Hàng Giả</h3>
-          <p style="font-size:var(--sv-fs-sm); color:rgba(255,255,255,0.8); line-height:1.7; margin-bottom:24px;">
-            NKSV cam kết: không tráo đổi phụ kiện loại 1 sang loại 2, không cung cấp hàng nhái hàng kém chất lượng. Mọi phụ kiện đều có tem chống giả và QR Code xác thực xuất xư. Nếu phát hiện sai phạm, NKSV đền bù <strong style="color:#fbbf24;">gấp đôi giá trị hợp đồng</strong>.
-          </p>
-          <div style="display:flex; gap:12px; flex-wrap:wrap;">
-            <a href="lien-he.html" style="display:inline-flex; align-items:center; gap:8px; background:#d4af37; color:#0f172a; padding:13px 24px; border-radius:8px; font-family:var(--sv-font-head); font-weight:800; font-size:14px; text-decoration:none; transition:all 0.2s;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='';">
-              <i class="ri-phone-fill"></i> 0869 590 279
-            </a>
-            <a href="lien-he.html" style="display:inline-flex; align-items:center; gap:8px; background:transparent; color:#fff; padding:13px 24px; border-radius:8px; border:2px solid rgba(255,255,255,0.4); font-family:var(--sv-font-head); font-weight:700; font-size:14px; text-decoration:none; transition:all 0.2s;" onmouseover="this.style.borderColor='#fff'; this.style.background='rgba(255,255,255,0.1)';" onmouseout="this.style.borderColor='rgba(255,255,255,0.4)'; this.style.background='transparent';">
-              Xem Chính Sách Bảo Hành <i class="ri-arrow-right-line"></i>
-            </a>
-          </div>
-        </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
-          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:20px; text-align:center;">
-            <i class="ri-shield-check-line" style="font-size:28px; color:#fbbf24; display:block; margin-bottom:8px;"></i>
-            <div style="font-size:12px; font-weight:700; color:#fff; margin-bottom:4px;">Tem Chống Giả</div>
-            <div style="font-size:11px; color:rgba(255,255,255,0.6);">Tất cả sp đều có tem hologram chống sao chép</div>
-          </div>
-          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:20px; text-align:center;">
-            <i class="ri-qr-code-line" style="font-size:28px; color:#fbbf24; display:block; margin-bottom:8px;"></i>
-            <div style="font-size:12px; font-weight:700; color:#fff; margin-bottom:4px;">QR Code Xác Thực</div>
-            <div style="font-size:11px; color:rgba(255,255,255,0.6);">Quét mã kiểm tra lô sản xuất thực tế</div>
-          </div>
-          <div style="background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:12px; padding:20px; text-align:center;">
-            <i class="ri-file-list-3-line" style="font-size:28px; color:#fbbf24; display:block; margin-bottom:8px;"></i>
-            <div style="font-size:12px; font-weight:700; color:#fff; margin-bottom:4px;">CO/CQ Theo Lô</div>
-            <div style="font-size:11px; color:rgba(255,255,255,0.6);">Giấy chứng nhận xuất xứ kèm theo từng lô hàng</div>
-          </div>
-          <div style="background:rgba(255,215,0,0.15); border:1px solid rgba(255,215,0,0.3); border-radius:12px; padding:20px; text-align:center;">
-            <i class="ri-money-dollar-circle-line" style="font-size:28px; color:#fbbf24; display:block; margin-bottom:8px;"></i>
-            <div style="font-size:12px; font-weight:700; color:#fff; margin-bottom:4px;">Đền Bù Gấp Đôi</div>
-            <div style="font-size:11px; color:rgba(255,255,255,0.6);">Nếu phát hiện hàng không đúng nhãn hiệu đã cam kết</div>
+          <div id="no-results-msg" style="display:none; text-align:center; padding:60px 0; color:var(--sv-gray-text);">
+            <i class="ri-inbox-archive-line" style="font-size:48px; margin-bottom:12px; display:block;"></i>
+            Không tìm thấy sản phẩm phụ kiện nào khớp với từ khóa của bạn.
           </div>
         </div>
       </div>
     </div>
-
-    <style>
-      @media (max-width: 900px) {
-        .brand-row { grid-template-columns: 1fr !important; }
-        .brand-row-reverse > div:first-child { order: 2; }
-        .brand-row-reverse > div:last-child { order: 1; }
-      }
-    </style>
   </section>
 
-  <!-- ── FILTER TABS ── -->
-  <div class="filter-section">
-    <div class="filter-inner">
-      <button class="filter-tab active" data-filter="all">Tất Cả</button>
-      <button class="filter-tab" data-filter="slim">Cửa Slim</button>
-      <button class="filter-tab" data-filter="truot-quay">Trượt Quay</button>
-      <button class="filter-tab" data-filter="papo">Papo</button>
-      <button class="filter-tab" data-filter="opk">OPK</button>
-      <button class="filter-tab" data-filter="draho">Draho</button>
-      <button class="filter-tab" data-filter="bogo">Bogo</button>
-      <button class="filter-tab" data-filter="cmech">Cmech</button>
-      <button class="filter-tab" data-filter="huy-hoang">Huy Hoàng</button>
-      <button class="filter-tab" data-filter="kinlong">KinLong</button>
-      <button class="filter-tab" data-filter="janus">Janus</button>
-      <button class="filter-tab" data-filter="khoa-dt">Khóa Điện Tử</button>
-      <button class="filter-tab" data-filter="candy">Candy</button>
-      <button class="filter-tab" data-filter="sigico">Sigico</button>
-      <button class="filter-tab" data-filter="cua-kinh">Cửa Kính</button>
-      <button class="filter-tab" data-filter="hafele">Hafele</button>
+  <!-- ── SLIDE OVER DETAIL PANEL ── -->
+  <div class="panel-backdrop" id="panel-backdrop" onclick="closeDetailPanel()"></div>
+  <div class="side-panel" id="side-panel">
+    <div class="panel-header">
+      <h3 class="panel-title">Chi Tiết Phụ Kiện</h3>
+      <button class="panel-close-btn" onclick="closeDetailPanel()"><i class="ri-close-line"></i></button>
+    </div>
+    <div class="panel-body">
+      <div class="panel-img-box">
+        <img id="panel-img" src="" alt="" />
+      </div>
+      <h2 class="sv-section-title" id="panel-name" style="margin-left:0; text-align:left; font-size:18px;"></h2>
+      
+      <ul class="panel-info-list">
+        <li>Thương hiệu phân phối: <strong id="panel-brand"></strong></li>
+        <li>Danh mục phụ kiện: <strong id="panel-category"></strong></li>
+        <li>Chất liệu cấu tạo: <strong>Inox 304 / Inox 316 / Hợp kim nhôm</strong></li>
+        <li>Tình trạng phân phối: <strong style="color:#22c55e;">Sẵn hàng (Hà Nội & HCM)</strong></li>
+        <li>Thời gian bảo hành: <strong>24 tháng chính hãng</strong></li>
+      </ul>
+      
+      <a href="lien-he.html" class="sv-btn sv-btn-red" style="width:100%; display:flex; justify-content:center; margin-top:auto;">YÊU CẦU BÁO GIÁ NGAY <i class="ri-arrow-right-line"></i></a>
     </div>
   </div>
 
-  <!-- ── MAIN CONTENT ── -->
-  <main id="main-content">
-    <div class="pk-layout">
-
-      <!-- ══ 1. PHỤ KIỆN CỬA SLIM ══ -->
-      <div class="pk-category" data-cat="slim">
-        <div class="pk-category-header">
-          <h2 class="pk-category-title">
-            <div class="pk-category-badge"></div>
-            Phụ Kiện Cửa Slim
-            <span class="pk-category-brand-tag">Slim System</span>
-          </h2>
-          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div class="pk-grid">
-          <div class="pk-card">
+  <script type="text/javascript">
+    const PRODUCTS_DB = [
+  {
+    "name": "Đầu Khóa Biên 8.5mm Cmech A090032",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/dau-khoa-bien-chiu-luc-cmech-co-num-that-dk1_133538820391/dau-kho-a-bien-8-5mm-co-truc-xoay-cmech-a090032.jpg",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Bản Lề Cửa Sổ Chữ A 60kg Cmech",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-cua-so-cmech-ma-sat-tren-c-groove_212516217403/phu-kien-cmech-ban-le-cua-so-chu-a-60kg.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Thanh Truyền Động Tích Hợp Cmech A020050",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-thanh-truyen-dong-khoa-cua-gan-be-mat-b1_622006418921/thanh-truyen-dong-tich-hop-dau-khoa-bien-cmech-cmech-a020050.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Lưỡi Gà Tay Nắm Cửa Sổ Cmech A110105",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-ca-tay-nam-cua-so-quay-hat-c1_667821215494/luoi-ga-tay-nam-cua-so-quay-hat-dai-53mm-cmech-a110105.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Đầu khóa biên 8.5mm có trục xoay Cmech A090032",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/dau-khoa-bien-chiu-luc-cmech-co-num-that-dk1_133538820391/dau-kho-a-bien-8-5mm-co-truc-xoay-cmech-a090032.jpg",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Bản lề cửa sổ chữ  A 60kg",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-cua-so-cmech-ma-sat-tren-c-groove_212516217403/phu-kien-cmech-ban-le-cua-so-chu-a-60kg.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Thanh truyền động tích hợp đầu khóa biên​ Cmech Cmech A020050",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-thanh-truyen-dong-khoa-cua-gan-be-mat-b1_622006418921/thanh-truyen-dong-tich-hop-dau-khoa-bien-cmech-cmech-a020050.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Lưỡi gà tay nắm cửa sổ quay, hất dài 53mm Cmech A110105",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-ca-tay-nam-cua-so-quay-hat-c1_667821215494/luoi-ga-tay-nam-cua-so-quay-hat-dai-53mm-cmech-a110105.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Đầu biên chốt cánh phụ rời kích thước 90×19.6 mm Cmech A070003",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/dau-bien-chot-canh-phu-roi-kich-thuoc-90-19-6-mm-cmech-a070003_688252618055/dau-bien-chot-canh-phu-roi-kich-thuoc-90-19-6-mm-cmech-a070003.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Đầu chia loại gia cố Cmech A020023",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-dau-chia-loai-gia-co-d2_029970004934/dau-chia-loai-gia-co-cmech-a020023.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Đầu chia chuyển động dài 24mm Cmech E020001",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-dau-chia-chuyen-dong-dai-24mm_505366510449/dau-chia-chuyen-dong-dai-24mm-cmech-e020001.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Đầu khóa biên cao 7mm Cmech A090005",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/dau-khoa-bien-cao-7mm-cmech-a090005_763171951325/dau-khoa-bien-cao-7mm-cmech-a090005.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Vấu hãm cửa 2 cánh (vít lục giác) Cmech A100101",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-vau-ham-cua-2-canh-vit-luc-giac-_022233362259/vau-ham-cua-2-canh-vit-luc-giac-cmech-a100101.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Vấu hãm 3 lỗ cửa 1 cánh đầu cao  20×9.5mm Cmech A100114",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-vau-cua-1-canh-dau-cao-v16_901807703413/vau-ham-3-lo-cua-1-canh-dau-cao-20-9-5mm-cmech-a100114.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Vấu 3 lỗ cửa 1 cánh 20x14mm Cmech A100109",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-vau-3-lo-cua-1-canh-v17_132162056964/vau-3-lo-cua-1-canh-20x14mm-cmech-a100109.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Móc chốt cánh phụ rời dài 130mm Cmech A020055, gắn với A070003 hoặc C459",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/mo-c-chot-canh-phu-roi-dai-130mm-cmech-a020055-gan-voi-a070003-hoa-c-c459_633830233364/mo-c-chot-canh-phu-roi-dai-130mm-cmech-a020055-gan-voi-a070003-hoa-c-c459.webp",
+    "category": "cmech",
+    "categoryName": "Cmech",
+    "brand": "CMECH"
+  },
+  {
+    "name": "Bản Lề 4D Janus Cánh–Cánh Màu Đen",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-canh-canh-mau-den_662265680180/phu-kien-ban-le-4d-janus-canh-canh-mau-den.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Bản Lề 4D Janus Khung–Cánh Màu Đen",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-khung-canh-mau-den_433592559544/phu-kien-ban-le-4d-janus-khung-canh-mau-den.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Bản Lề 4D Janus Cánh–Cánh Màu Bạc",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-canh-canh-mau-bac_822732252256/phu-kien-ban-le-4d-janus-canh-canh-mau-bac.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Bản Lề 4D Janus Khung–Cánh Màu Bạc",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-khung-canh-mau-bac_012057637236/phu-kien-ban-le-4d-janus-khung-canh-mau-bac.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Bản Lề 4D Janus Cánh–Cánh Màu Xám",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d-janus-canh-canh-mau-xam_669803897148/phu-kien-ban-le-4d-janus-canh-canh-mau-xam.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Bản Lề 4D Janus Khung–Cánh Màu Xám",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-khung-canh-mau-xam_183317442702/phu-kien-ban-le-4d-janus-khung-canh-mau-xam.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Phụ kiện bản lề 4D Janus cánh cánh màu đen",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-canh-canh-mau-den_662265680180/phu-kien-ban-le-4d-janus-canh-canh-mau-den.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Phụ kiện bản lề 4D Janus khung cánh màu đen",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-khung-canh-mau-den_433592559544/phu-kien-ban-le-4d-janus-khung-canh-mau-den.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Phụ kiện bản lề 4D Janus cánh cánh màu bạc",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-canh-canh-mau-bac_822732252256/phu-kien-ban-le-4d-janus-canh-canh-mau-bac.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Phụ kiện bản lề 4D Janus khung cánh màu bạc",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-khung-canh-mau-bac_012057637236/phu-kien-ban-le-4d-janus-khung-canh-mau-bac.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Phụ kiện bản lề 4D Janus cánh cánh màu xám",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d-janus-canh-canh-mau-xam_669803897148/phu-kien-ban-le-4d-janus-canh-canh-mau-xam.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Phụ kiện bản lề 4D Janus khung cánh màu xám",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-khung-canh-mau-xam_183317442702/phu-kien-ban-le-4d-janus-khung-canh-mau-xam.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Phụ kiện bản lề 4D Janus cánh cánh màu vàng",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-canh-canh-mau-vang_063008532550/phu-kien-ban-le-4d-janus-canh-canh-mau-vang.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Phụ kiện bản lề 4D Janus khung cánh vàng",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-khung-canh-vang_635138972439/phu-kien-ban-le-4d-janus-khung-canh-vang.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Khoá cửa Janus dành cho cửa nhôm tay tròn màu bạc",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-cua-janus-danh-cho-cua-nhom-tay-tron-mau-bac_380990245283/khoa-cua-janus-danh-cho-cua-nhom-tay-tron-mau-bac.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Khoá cửa Janus dành cho cửa nhôm tay tròn màu đen",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-cua-janus-danh-cho-cua-nhom-tay-tron-mau-den_678883216582/khoa-cua-janus-danh-cho-cua-nhom-tay-tron-mau-den.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Khoá cửa Janus dành cho cửa nhôm, tay nắm tròn màu vàng",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-cua-janus-danh-cho-cua-nhom-tay-nam-tron-mau-vang_497293734981/khoa-cua-janus-danh-cho-cua-nhom-tay-nam-tron-mau-vang.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Khoá cửa Janus dành cho cửa nhôm, tay nắm vuông góc cạnh",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-cua-janus-danh-cho-cua-nhom-tay-nam-vuong-goc-canh_914235656048/khoa-cua-janus-danh-cho-cua-nhom-tay-nam-vuong-goc-canh.webp",
+    "category": "janus",
+    "categoryName": "Janus",
+    "brand": "JANUS"
+  },
+  {
+    "name": "Thanh Truyền Động HCDG614",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/thanh-truyen-dong-chinh-hcdg614_653155184627/thanh-truyen-dong-hcdg614.jpg",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Thanh Truyền Động HCDG613",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/thanh-truyen-dong-hcdg613_050488046465/thanh-truyen-dong-hcdg613.jpg",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Chốt Bật 300 Giữ Cánh Phụ KinLong",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/chot-bat-300-giu-canh-phu-kinlong_087369851130/chot-bat-300-giu-canh-phu-kinlong.jpg",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Phụ Kiện Cửa Xếp Trượt KinLong",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-xep-truot-kinlong_224410042250/phu-kien-cua-xep-truot-kinlong.jpg",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Tay Nắm Cửa Đi KinLong MZS20",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-nam-cua-di-kinlong-mzs20_520301202277/tay-nam-cua-di-kinlong-mzs20.jpg",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Bản Lề Chữ A KinLong FC200",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-chu-a-kinlong-fc200_873717917356/ban-le-chu-a-kinlong-fc200.jpg",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Khóa chữ D cửa lùa đi nhôm xingfa",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-chu-d-cua-lua-di-nhom-xingfa_657043888834/khoa-chu-d-cua-lua-di-nhom-xingfa.jpg",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Miệng ốp lõi khóa MZS60-SH",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-kinlong-mieng-op-loi-khoa-mzs60-sh_604789504130/phu-kien-kinlong-mieng-op-loi-khoa-mzs60-sh.webp",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Tay nắm MZS07",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-kinlong-tay-nam-mzs07_687477007289/phu-kien-kinlong-tay-nam-mzs07.webp",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Tay nắm MZS07H",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-kinglong-tay-nam-mzs07h_247859276320/phu-kien-kinlong-tay-nam-mzs07h.webp",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Tay nắm MZS07S",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-kinglong-tay-nam-mzs07s_844238856099/phu-kien-kinlong-tay-nam-mzs07s.webp",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Tay nắm MZS08",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-kinlong-tay-nam-mzs08_349805467699/phu-kien-kinlong-tay-nam-mzs08.webp",
+    "category": "kinlong",
+    "categoryName": "Kinlong",
+    "brand": "KINLONG"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Bản Lề Phòng Tắm Kính 90º Hafele 981.77.900",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ba-n-le-pho-ng-ta-m-ki-nh-90-hafele-981-77-900_367004250080/ban-le-phong-tam-kinh-90-hafele-981-77-900.webp",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Tay Nắm Cho Cửa Kính Hafele 981.53.272",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-na-m-cho-cu-a-ki-nh-hafele-981-53-272_775782163634/tay-nam-cho-cua-kinh-hafele-981-53-272.webp",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Ron Nam Châm 90º Cho Cửa Kính 10 - 12mm Hafele 950.50.027",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ron-cu-a-ki-nh-10-12mm-nam-cham-90-hafele-950-50-027_957860709493/ron-nam-cham-90-cho-cua-kinh-10-12mm-hafele-950-50-027.webp",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Bas Giữ Thanh Treo Gắn Kính Hafele 981.52.793 phi 19",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bas-giu-thanh-treo-ga-n-ki-nh-hafele-981-52-793_040843205643/bas-giu-thanh-treo-gan-kinh-hafele-981-52-793-phi-19.webp",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Bas Giữ Thanh Treo Tường Hafele 981.52.791 phi 19",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bas-giu-thanh-treo-tuo-ng-hafele-981-52-791_669188529887/bas-giu-thanh-treo-tuong-hafele-981-52-791-phi-19.webp",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Thanh Inox Treo Phòng Tắm Kính Hafele 981.74.000",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/thanh-inox-treo-pho-ng-ta-m-ki-nh-phi-19-hafele-981-74-000_924471163224/thanh-inox-treo-phong-tam-kinh-hafele-981-74-000.webp",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Kẹp khóa Hafele 981.00.403 đen mờ",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/kep-khoa-hafele-981-00-403-den-mo_845297161335/kep-khoa-hafele-981-00-403-den-mo.webp",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Kẹp khóa Hafele 981.50.030 inox mờ",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/kep-khoa-hafele-981-50-030-inox-mo_689486489253/kep-khoa-hafele-981-50-030-inox-mo.webp",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Kẹp khóa Hafele 981.00.660 inox bóng",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/kep-khoa-hafele-981-00-660-inox-bong_227757442778/kep-khoa-hafele-981-00-660-inox-bong.webp",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Kẹp khóa Hafele 489.81.031 inox bóng",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/kep-khoa-hafele-489-81-031-inox-bong_187540678779/kep-khoa-hafele-489-81-031-inox-bong.webp",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Kẹp khóa Hafele 489.81.030 inox mờ",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/kep-khoa-hafele-489-81-030-inox-mo_055755789124/kep-khoa-hafele-489-81-030-inox-mo.webp",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Kẹp khóa Hafele 981.00.401 inox bóng",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/kep-khoa-hafele-981-00-401-inox-bong_634685764642/kep-khoa-hafele-981-00-401-inox-bong.webp",
+    "category": "hafele",
+    "categoryName": "Hafele",
+    "brand": "HAFELE"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "phu-kien-3h",
+    "categoryName": "3H",
+    "brand": "PHU-KIEN-3H"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "phu-kien-3h",
+    "categoryName": "3H",
+    "brand": "PHU-KIEN-3H"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "phu-kien-3h",
+    "categoryName": "3H",
+    "brand": "PHU-KIEN-3H"
+  },
+  {
+    "name": "Bánh Xe Cửa Lùa LTD24",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-cua-lua-ltd24_445128137475/banh-xe-cua-lua-ltd24.webp",
+    "category": "phu-kien-3h",
+    "categoryName": "3H",
+    "brand": "PHU-KIEN-3H"
+  },
+  {
+    "name": "Bản lề lá 1D JX80",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-1d-jx80_953330448849/ban-le-la-1d-jx80.webp",
+    "category": "phu-kien-3h",
+    "categoryName": "3H",
+    "brand": "PHU-KIEN-3H"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "sigico",
+    "categoryName": "Sigico",
+    "brand": "SIGICO"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "sigico",
+    "categoryName": "Sigico",
+    "brand": "SIGICO"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "sigico",
+    "categoryName": "Sigico",
+    "brand": "SIGICO"
+  },
+  {
+    "name": "Tay nắm cửa sổ lưỡi gà kiểu Italy Sigico GL515.45",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-na-m-cua-so-luo-i-ga-kieu-italy-sigico-gl515-45_432827586039/tay-na-m-cua-so-luo-i-ga-kieu-italy-sigico-gl515-45.webp",
+    "category": "sigico",
+    "categoryName": "Sigico",
+    "brand": "SIGICO"
+  },
+  {
+    "name": "Tay nắm lưỡi gà kiểu Bayern Sigico L1234",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-nam-luoi-ga-kieu-bayern-sigico-l1234_794121624980/tay-nam-luoi-ga-kieu-bayern-sigico-l1234.webp",
+    "category": "sigico",
+    "categoryName": "Sigico",
+    "brand": "SIGICO"
+  },
+  {
+    "name": "Tay nắm dùng hộp chuyển động Sigico L1236",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-nam-dung-hop-chuyen-dong-sigico-l1236_497615727477/tay-nam-dung-hop-chuyen-dong-sigico-l1236.webp",
+    "category": "sigico",
+    "categoryName": "Sigico",
+    "brand": "SIGICO"
+  },
+  {
+    "name": "Bản lề 3 khúc rãnh cửa xếp trượt Xingfa cánh- cánh Sigico AMH301",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-3-khuc-ranh-cua-xep-truot-xingfa-canh-canh-sigico-amh301_562900217853/ban-le-3-khuc-ranh-cua-xep-truot-xingfa-canh-canh-sigico-amh301.webp",
+    "category": "sigico",
+    "categoryName": "Sigico",
+    "brand": "SIGICO"
+  },
+  {
+    "name": "Bộ bánh xe xếp trượt xingfa Sigico ABR75.06",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-banh-xe-xep-truot-xingfa-sigico-abr75-06_787819797217/bo-banh-xe-xep-truot-xingfa-sigico-abr75-06.webp",
+    "category": "sigico",
+    "categoryName": "Sigico",
+    "brand": "SIGICO"
+  },
+  {
+    "name": "Bản lề cửa xếp trượt Sigico AMH307",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ba-n-le-cua-xep-truot-sigico-amh307_999624885436/ba-n-le-cua-xep-truot-sigico-amh307.webp",
+    "category": "sigico",
+    "categoryName": "Sigico",
+    "brand": "SIGICO"
+  },
+  {
+    "name": "Bản lề kéo cửa xếp trượt Sigico AHH301",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ba-n-le-ke-o-cua-xep-truot-sigico-ahh301_797907231282/ba-n-le-ke-o-cua-xep-truot-sigico-ahh301.webp",
+    "category": "sigico",
+    "categoryName": "Sigico",
+    "brand": "SIGICO"
+  },
+  {
+    "name": "Tay nắm bẹt cửa xếp trượt Sigico FH192",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-na-m-be-t-cua-xep-truot-sigico-fh192_504835021707/tay-na-m-be-t-cua-xep-truot-sigico-fh192.webp",
+    "category": "sigico",
+    "categoryName": "Sigico",
+    "brand": "SIGICO"
+  },
+  {
+    "name": "Hộp chuyển động ghi mới Sigico AGC30",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ho-p-chuye-n-do-ng-ghi-moi-sigico-agc30_252371910288/ho-p-chuye-n-do-ng-ghi-moi-sigico-agc30.webp",
+    "category": "sigico",
+    "categoryName": "Sigico",
+    "brand": "SIGICO"
+  },
+  {
+    "name": "Tay nắm cửa xếp trượt Sigico DH05115",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-na-m-cua-xep-truot-sigico-dh05115_059537287983/tay-na-m-cua-xep-truot-sigico-dh05115.webp",
+    "category": "sigico",
+    "categoryName": "Sigico",
+    "brand": "SIGICO"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Phụ Kiện Cửa Trượt Bán Tự Động Cortech CT-600SA",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-ban-tu-dong-cortech-ct-600sa_223196602568/phu-kien-cua-truot-ban-tu-dong-cortech-ct-600sa.webp",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Cửa Trượt Bán Tự Động Cortech CT-806SA",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/cua-truot-ban-tu-dong-cortech-ct-806sa_375868302319/cua-truot-ban-tu-dong-cortech-ct-806sa.webp",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Bản lề sàn VVP FC49 180kg",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-san-vvp-fc49-180kg_929096826413/ban-le-san-vvp-fc49-180kg.webp",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Bản lề sàn VVP 150kg FC34-25 hộp Inox loại tốt",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-san-vvp-150kg-fc34-25-hop-inox-loai-tot_818638831009/ban-le-san-vvp-150kg-fc34-25-hop-inox-loai-tot.webp",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Bản lề sàn VVP FC34-20 105kg Thái",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-san-vvp-fc34-20-105kg-thai_729464032119/ban-le-san-vvp-fc34-20-105kg-thai.webp",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Bản lề sàn VVP FC34-25 150kg Thái",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-san-vvp-fc34-25-150kg-thai_579977857900/ban-le-san-vvp-fc34-25-150kg-thai.webp",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Bản lề sàn VVP FC34-25 150kg màu trắng bóng",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-san-vvp-fc34-25-150kg-mau-trang-bong_578472599287/ban-le-san-vvp-fc34-25-150kg-mau-trang-bong.webp",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Bản lề sàn VVP FC34-20 105kg màu trắng bóng",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-san-vvp-fc34-20-105kg-mau-trang-bong_086654013143/ban-le-san-vvp-fc34-20-105kg-mau-trang-bong.webp",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Bản lề sàn VVP FC34-25 150kg màu vàng",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-san-vvp-fc34-25-150kg-mau-vang_024910262757/ban-le-san-vvp-fc34-25-150kg-mau-vang.webp",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Bản lề sàn thủy lực VVP FC34",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-san-thuy-luc-vvp-fc34_203903353770/ban-le-san-thuy-luc-vvp-fc34.webp",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Trụ cầu thang, lan can Dmi inox 304 đế mặt cao 200mm",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tru-cau-thang-lan-can-dmi-inox-304-de-mat-cao-200mm_121152102027/tru-cau-thang-lan-can-dmi-inox-304-de-mat-cao-200mm.webp",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Khóa cửa kính đơn móc HMR848-07SS 1 mặt núm vặn",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-cua-kinh-don-moc-hmr848-07ss-1-mat-num-van_394029638991/khoa-cua-kinh-don-moc-hmr848-07ss-1-mat-num-van.webp",
+    "category": "cua-kinh",
+    "categoryName": "Cửa Kính cường lực",
+    "brand": "CUA-KINH"
+  },
+  {
+    "name": "Bản Lề 4D WD24 Cánh–Khung Nhôm Xingfa",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d--wd24--canh-voi-khung-va-wd25--canh-voi-canh---dung-cho-he-nhom-xingfa_759119042241/ban-le-4d-wd24-canh-voi-khung-va-wd25-canh-voi-canh--dung-cho-nhom-xingfa.jpg",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Bản Lề 3D WD15 Cánh–Khung Nhôm Xingfa",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-3d-wd15--canh-khung-va-wd14--canh-canh-dung-cho-he-xingfa_537708600518/ban-le-3d-wd15-canh-khung-va-wd14-canh-canh-dung-cho-nhom-xingfa.jpg",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Bản Lề 4D WD12 Nhôm Hệ Topal Prima",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d--wd12---dung-cho-nhom-he-topal-prima_551901166763/ban-le-4d-wd12--dung-cho-nhom-he-topal-prima.jpg",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Bộ Khóa Cửa Đi Bogo Màu Bạc (Xingfa/Prima/Maxpro)",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-khoa-cua-di-bogo-mau-bac-cho-cac-he-xingfa-prima-maxpro-maxal-jma60-_879423086449/bo-khoa-cua-di-bogo-mau-bac-cho-cac-he-xingfa-prima-maxpro-maxal-jma60-.jpg",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Bộ Khóa Mở Quay Hệ Slim Có Chìa BL9935A",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-khoa-mo-quay-he-slim-co-chia-bl9935a_066209420244/bo-khoa-mo-quay-he-slim-co-chia-bl9935a.webp",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "BẢN LỀ 4D  (WD24 - Cánh với Khung và WD25 - Cánh với Cánh)  - Dùng cho nhôm Xingfa",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d--wd24--canh-voi-khung-va-wd25--canh-voi-canh---dung-cho-he-nhom-xingfa_759119042241/ban-le-4d-wd24-canh-voi-khung-va-wd25-canh-voi-canh--dung-cho-nhom-xingfa.jpg",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "BẢN LỀ 3D (WD15 - cánh khung và WD14 - cánh cánh) dùng cho nhôm Xingfa",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-3d-wd15--canh-khung-va-wd14--canh-canh-dung-cho-he-xingfa_537708600518/ban-le-3d-wd15-canh-khung-va-wd14-canh-canh-dung-cho-nhom-xingfa.jpg",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "BẢN LỀ 4D  (WD12 ) - DÙNG CHO NHÔM HỆ TOPAL PRIMA",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d--wd12---dung-cho-nhom-he-topal-prima_551901166763/ban-le-4d-wd12--dung-cho-nhom-he-topal-prima.jpg",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "BẢN LỀ 4D  (WD12 )  - DÙNG CHO NHÔM HỆ CẦU MAXAL",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d--wd12---dung-cho-nhom-he-cau-maxal_952294146396/ban-le-4d-wd12-dung-cho-nhom-he-cau-maxal.jpg",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "BỘ KHÓA CỬA ĐI BOGO MÀU BẠC CHO CÁC HỆ: XINGFA, PRIMA, MAXPRO, MAXAL, JMA60,...",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-khoa-cua-di-bogo-mau-bac-cho-cac-he-xingfa-prima-maxpro-maxal-jma60-_879423086449/bo-khoa-cua-di-bogo-mau-bac-cho-cac-he-xingfa-prima-maxpro-maxal-jma60-.jpg",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Bộ khóa mở quay hệ Slim có chìa - BL9935A",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-khoa-mo-quay-he-slim-co-chia-bl9935a_066209420244/bo-khoa-mo-quay-he-slim-co-chia-bl9935a.webp",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Khóa cửa đi mở quay hệ Slim có chìa – BL99B35A-ET-16-DP",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-cua-di-mo-quay-he-slim-co-chia--bl99b35a-et-16-dp_498110852736/khoa-cua-di-mo-quay-he-slim-co-chia--bl99b35a-et-16-dp.webp",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Khóa cửa đi mở quay hệ Slim không chìa - BL-9840-ET",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-cua-di-mo-quay-he-slim-khong-chia-bl-9840-et_547957654161/khoa-cua-di-mo-quay-he-slim-khong-chia-bl-9840-et.webp",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Khóa cửa đi hệ Slim có chìa, không đế - BL94B35A-ET",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-cua-di-he-slim-co-chia-khong-de-bl94b35a-et_615833784469/khoa-cua-di-he-slim-co-chia-khong-de-bl94b35a-et.webp",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Bộ tay nắm và khóa cửa lùa hệ Slim - ADB-103A",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-tay-nam-va-khoa-cua-lua-he-slim-adb-103a_438651238605/bo-tay-nam-va-khoa-cua-lua-he-slim-adb-103a.webp",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Bộ tay nắm và khóa cửa lùa hệ Slim - ADB-102-BK",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-tay-nam-va-khoa-cua-lua-he-slim-adb-102-bk_662039914788/bo-tay-nam-va-khoa-cua-lua-he-slim-adb-102-bk.webp",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Bản lề ẩn Bogo – WD19",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-an-bogo--wd19_748993797509/ban-le-an-bogo--wd19.webp",
+    "category": "bogo",
+    "categoryName": "Bogo",
+    "brand": "BOGO"
+  },
+  {
+    "name": "Tay Nắm Cửa Sổ F34A (F34EU30)",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-nam-cua-so-f34a-f34eu30-_411206676397/tay-nam-cua-so-f34a-f34eu30-.webp",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Thanh Truyền Động LG12 Draho",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-thanh-truyen-dong-lg12_998645536953/phu-kien-draho-thanh-truyen-dong-lg12.webp",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Vấu Hãm Chốt Cửa F14CI",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-vau-ham-chot-cua-f14ci_903359436215/phu-kien-draho-vau-ham-chot-cua-f14ci.webp",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Tay Nắm Cửa Đi PM-23",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-tay-nam-cua-di-pm-23_088443078249/phu-kien-draho-tay-nam-cua-di-pm-23.webp",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Bụng Khóa Đa Điểm Cửa Đi 2885C1",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-bung-khoa-da-diem-cua-di-2885c1_878510258593/phu-kien-draho-bung-khoa-da-diem-cua-di-2885c1.webp",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Lõi Khóa 2 Đầu Chìa Cửa Đi Draho",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-loi-khoa-2-dau-chia-cua-di-draho_551097456721/phu-kien-draho-loi-khoa-2-dau-chia-cua-di-draho.webp",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Thanh truyền động LG12",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-thanh-truyen-dong-lg12_998645536953/phu-kien-draho-thanh-truyen-dong-lg12.webp",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Miệng ốp khóa KB-19G",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-mieng-op-khoa-kb-19g_457258190528/phu-kien-draho-mieng-op-khoa-kb-19g.webp",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Đầu nối khóa đa điểm FB6I",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-dau-noi-khoa-da-diem-fb6i_412791290487/phu-kien-draho-dau-noi-khoa-da-diem-fb6i.webp",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Bản lề 4D khung - cánh Draho ZH-168 màu xám, đen, bạc",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-ban-le-canh-canh-draho-zh-168_036632005112/ban-le-4d-khung-canh-draho-zh-168-mau-xam-den-bac.webp",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Bánh xe ray trên cửa xếp trượt Draho ZH-JTL1",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-ray-tren-cua-xep-truot-draho-zh-jtl1_430004449383/banh-xe-ray-tren-cua-xep-truot-draho-zh-jtl1.webp",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Bánh xe ray dưới cửa xếp trượt Draho ZH-JTL2",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-ray-duoi-cua-xep-truot-draho-zh-jtl2_152897391690/banh-xe-ray-duoi-cua-xep-truot-draho-zh-jtl2.webp",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Phụ Kiện Cửa Xếp Trượt Draho - Bản lề biên ZH-JTL3",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-xep-truot-draho-ban-le-bien-zh-jtl3_786042618775/phu-kien-cua-xep-truot-draho-ban-le-bien-zh-jtl3.webp",
+    "category": "draho",
+    "categoryName": "Draho",
+    "brand": "DRAHO"
+  },
+  {
+    "name": "Bản Lề Lá Lớn Candy Đa Màu (Xám/Đen/Nâu/Trắng Sữa)",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-xam-xam-anh-kim-den-bong-den-nham-nau-trang-sua-loai-moi_708874228621/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-xam-xam-anh-kim-den-bong-den-nham-nau-trang-sua-loai-moi.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Bản Lề Lá Lớn Candy Màu Vàng Gold",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-vang-gold-loai-moi_683947609574/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-vang-gold-loai-moi.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Bản lề lá lớn CANDY (Khung-Cánh hoặc Cánh-Cánh) màu Xám/ Xám ánh kim/ Đen bóng/ Đen nhám/ Nâu/ Trắng sữa - loại mới",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-xam-xam-anh-kim-den-bong-den-nham-nau-trang-sua-loai-moi_708874228621/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-xam-xam-anh-kim-den-bong-den-nham-nau-trang-sua-loai-moi.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Bản lề lá lớn CANDY (Khung-Cánh hoặc Cánh-Cánh) màu Vàng Gold - loại mới",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-vang-gold-loai-moi_683947609574/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-vang-gold-loai-moi.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Bản lề lá lớn CANDY (Khung-Cánh hoặc Cánh-Cánh) màu Vân Gỗ - loại mới",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-van-go-loai-moi_516366924189/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-van-go-loai-moi.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Bản lề lá lớn CANDY (Khung-Cánh hoặc Cánh-Cánh) màu Bạc - loại mới",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-bac-loai-moi_124561376152/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-bac-loai-moi.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Bản lề lá lớn CANDY (Khung-Cánh) màu Bạc Anode",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-lon-candy-khung-canh-mau-bac-anode_274517479415/ban-le-la-lon-candy-khung-canh-mau-bac-anode.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Bản lề lá lớn CANDY (Cánh-Cánh) màu Bạc Anode",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-lon-candy-canh-canh-mau-bac-anode_154289859383/ban-le-la-lon-candy-canh-canh-mau-bac-anode.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Bản lề 1D CANDY (Khung-Cánh hoặc Cánh-Cánh) màu Đen bóng/ Xám/ Trắng sữa",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-1d-candy-khung-canh-hoac-canh-canh-mau-den-bong-xam-trang-sua_313873538997/ban-le-1d-candy-khung-canh-hoac-canh-canh-mau-den-bong-xam-trang-sua.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Bản lề 1D CANDY (Khung-Cánh hoặc Cánh-Cánh) màu Vân gỗ",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-1d-candy-khung-canh-hoac-canh-canh-mau-van-go_638330662858/ban-le-1d-candy-khung-canh-hoac-canh-canh-mau-van-go.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Bản lề 2D CANDY (Khung-Cánh hoặc Cánh-Cánh) màu Đen Nhám",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-2d-candy-khung-canh-hoac-canh-canh-mau-den-nham_039386847681/ban-le-2d-candy-khung-canh-hoac-canh-canh-mau-den-nham.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Bản lề 2D CANDY (Khung-Cánh hoặc Cánh-Cánh) màu Bạc",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-2d-candy-khung-canh-hoac-canh-canh-mau-bac_120953183713/ban-le-2d-candy-khung-canh-hoac-canh-canh-mau-bac.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Khóa đơn điểm CANDY màu Đen Bóng/ Trắng/ Xám/ Nâu/ Đen Nhám (Tay Tam Giác hoặc Tay Cong)",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-don-diem-candy-mau-den-bong-trang-xam-nau-den-nham-tay-tam-giac-hoac-tay-cong-_419435600143/khoa-don-diem-candy-mau-den-bong-trang-xam-nau-den-nham-tay-tam-giac-hoac-tay-cong-.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Khóa đa điểm CANDY màu Đen Bóng/ Trắng/ Xám/ Nâu/ Đen Nhám (Tay Tam Giác hoặc Tay Cong)",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-da-diem-candy-mau-den-bong-trang-xam-nau-den-nham-tay-tam-giac-hoac-tay-cong-_487334282406/khoa-da-diem-candy-mau-den-bong-trang-xam-nau-den-nham-tay-tam-giac-hoac-tay-cong-.webp",
+    "category": "candy",
+    "categoryName": "Candy",
+    "brand": "CANDY"
+  },
+  {
+    "name": "Bản Lề Cửa Trượt Quay Màu Bạc",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-ban-le-cua-truot-quay-mau-bac_040378089022/phu-kien-cua-truot-quay-ban-le-cua-truot-quay-mau-bac.webp",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Bản Lề Cửa Trượt Quay Màu Đen",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-ban-le-cua-truot-quay-mau-den_441739774000/phu-kien-cua-truot-quay-ban-le-cua-truot-quay-mau-den.webp",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Bánh Xe Dẫn Hướng Dưới Cửa Trượt Quay",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-banh-xe-dan-huong-duoi-cua-truot-quay_158671608771/phu-kien-cua-truot-quay-banh-xe-dan-huong-duoi-cua-truot-quay.webp",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Bộ Chuyển Đổi Từ Mở Sang Trượt",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-bo-chuyen-doi-tu-mo-sang-truot-cua-truot-quay_338268378578/phu-kien-cua-truot-quay-bo-chuyen-doi-tu-mo-sang-truot-cua-truot-quay.webp",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Bánh xe treo trên cửa trượt quay",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-banh-xe-treo-tren-cua-truot-quay_647870877540/phu-kien-cua-truot-quay-banh-xe-treo-tren-cua-truot-quay.webp",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Bộ chuyển đổi từ mở sang trượt cửa trượt quay",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-bo-chuyen-doi-tu-mo-sang-truot-cua-truot-quay_338268378578/phu-kien-cua-truot-quay-bo-chuyen-doi-tu-mo-sang-truot-cua-truot-quay.webp",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Bộ nối tay gạt cửa trượt quay",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-bo-noi-tay-gat-cua-truot-quay_523074669336/phu-kien-cua-truot-quay-bo-noi-tay-gat-cua-truot-quay.webp",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Bộ tay nắm cửa trượt quay vân tay màu Gold",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-bo-tay-nam-cua-truot-quay-van-tay-mau-gold_517171572780/phu-kien-cua-truot-quay-bo-tay-nam-cua-truot-quay-van-tay-mau-gold.webp",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Bộ tay nắm cửa trượt quay vân tay màu đen",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-bo-tay-nam-cua-truot-quay-van-tay-mau-den_832161842526/phu-kien-cua-truot-quay-bo-tay-nam-cua-truot-quay-van-tay-mau-den.webp",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Càng T nối tay gạt cửa trượt quay",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-cang-t-noi-tay-gat-cua-truot-quay_108151642372/phu-kien-cua-truot-quay-cang-t-noi-tay-gat-cua-truot-quay.webp",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Chốt chân cửa trượt quay",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-chot-chan-cua-truot-quay_724372818474/phu-kien-cua-truot-quay-chot-chan-cua-truot-quay.webp",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Chốt sập cánh cửa trượt quay",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-chot-sap-canh-cua-truot-quay_219883377486/phu-kien-cua-truot-quay-chot-sap-canh-cua-truot-quay.webp",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Chốt tự động cửa trượt quay",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-chot-tu-dong-cua-truot-quay_803311265728/phu-kien-cua-truot-quay-chot-tu-dong-cua-truot-quay.webp",
+    "category": "truot-quay",
+    "categoryName": "Trượt Quay",
+    "brand": "TRUOT-QUAY"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "ykebr",
+    "categoryName": "YKEBR",
+    "brand": "YKEBR"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "ykebr",
+    "categoryName": "YKEBR",
+    "brand": "YKEBR"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "ykebr",
+    "categoryName": "YKEBR",
+    "brand": "YKEBR"
+  },
+  {
+    "name": "Tay Nắm Cửa Sổ Mở Quay YKEBR",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-nam-cua-so-mo-quay-ykebr_196760811301/tay-nam-cua-so-mo-quay-ykebr.webp",
+    "category": "ykebr",
+    "categoryName": "YKEBR",
+    "brand": "YKEBR"
+  },
+  {
+    "name": "OPK Cửa Lùa Slim 1 Cánh Giảm Chấn 2 Đầu",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-opk-phu-kien-cua-lua-slim-1-canh-giam-chan-2-dau_623491083600/phu-kien-opk-phu-kien-cua-lua-slim-1-canh-giam-chan-2-dau.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "OPK Cửa Nhôm Slim Lùa 2 Cánh",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-opk-phu-kien-cua-nhom-slim-opk-lua-2-canh_974529964333/phu-kien-opk-phu-kien-cua-nhom-slim-opk-lua-2-canh.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Bộ bánh xe thủy lực cửa lùa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-opk-bo-banh-xe-thuy-luc-cua-lua-slim_514772070160/phu-kien-opk-bo-banh-xe-thuy-luc-cua-lua-slim.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Phụ kiện lùa tự động cửa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-opk-phu-kien-lua-tu-dong-cua-slim_659916456566/phu-kien-opk-phu-kien-lua-tu-dong-cua-slim.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Phụ kiện cửa lùa Slim Opk lùa 2 cánh đối xứng",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-opk-phu-kien-cua-lua-slim-opk-lua-2-canh-doi-xung_065506108042/phu-kien-opk-phu-kien-cua-lua-slim-opk-lua-2-canh-doi-xung.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Phụ kiện cửa lùa Slim 1 cánh âm tường có nhấn",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-opk-phu-kien-cua-lua-slim-1-canh-am-tuong-co-nhan_464081555700/phu-kien-opk-phu-kien-cua-lua-slim-1-canh-am-tuong-co-nhan.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Phụ kiện cửa lùa Slim 1 cánh giảm chấn 2 đầu",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-opk-phu-kien-cua-lua-slim-1-canh-giam-chan-2-dau_337758485747/phu-kien-opk-phu-kien-cua-lua-slim-1-canh-giam-chan-2-dau.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Phụ kiện cửa nhôm Slim Opk lùa 2 cánh",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-opk-phu-kien-cua-nhom-slim-opk-lua-2-canh_974529964333/phu-kien-opk-phu-kien-cua-nhom-slim-opk-lua-2-canh.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Bộ phụ kiện SLIM 3 + 1 (3 TRƯỢT + 1 FIX) Thương hiệu OPK mã OPK-3T1F",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-pk-slim-3-1-3-truot-1-fix-thuong-hieu-opk-ma-opk-3t1f_030946694745/bo-pk-slim-3-1-3-truot-1-fix-thuong-hieu-opk-ma-opk-3t1f.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Bộ phụ kiện SLIM 2 + 1 (2 TRƯỢT + 1 FIX) Thương hiệu OPK, mã OPK-2T1F",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-pk-slim-2-1-2-truot-1-fix-thuong-hieu-opk-ma-opk-2t1f_731277816426/bo-pk-slim-2-1-2-truot-1-fix-thuong-hieu-opk-ma-opk-2t1f.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Bộ phụ kiện SLIM 2 + 0 (2 cánh lùa về 2 bên) Ray dưới. Thương hiệu OPK mã OPK-2T0F",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-pk-slim-2-0-2-canh-lua-ve-2-ben-ray-duoi-thuong-hieu-opk-ma-opk-2t0f_085796653464/bo-pk-slim-2-0-2-canh-lua-ve-2-ben-ray-duoi-thuong-hieu-opk-ma-opk-2t0f.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Bộ phụ kiện SLIM 2 + 2 (2 TRƯỢT + 2 FIX) Thương hiệu OPK mã OPK-2T2F",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-pk-slim-2-2-2-truot-2-fix-thuong-hieu-opk-ma-opk-2t2f_975727835625/bo-pk-slim-2-2-2-truot-2-fix-thuong-hieu-opk-ma-opk-2t2f.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Bộ phụ kiện SLIM 3 + 0 (3 TRƯỢT) Thương hiệu OPK, mã OPK-3T0F",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-pk-slim-3-0-3-truot-thuong-hieu-opk-ma-opk-3t0f_013143124855/bo-pk-slim-3-0-3-truot-thuong-hieu-opk-ma-opk-3t0f.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Bộ phụ kiện SLIM 2 + 0 (2 cánh lùa về 2 bên) Ray dưới. Thương hiệu OPK, mã OPK-2T",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-pk-slim-2-0-2-canh-lua-ve-2-ben-ray-duoi-thuong-hieu-opk-ma-opk-2t_246915373477/bo-pk-slim-2-0-2-canh-lua-ve-2-ben-ray-duoi-thuong-hieu-opk-ma-opk-2t.webp",
+    "category": "opk",
+    "categoryName": "OPK",
+    "brand": "OPK"
+  },
+  {
+    "name": "Bộ Khóa Có Chìa Cửa Lùa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim_546835771787/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Bánh Xe Giảm Chấn Cửa Lùa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-giam-chan-cua-lua-slim_377335539699/phu-kien-cua-slim-banh-xe-giam-chan-cua-lua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Bánh Xe Treo Cửa Lùa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-treo-cua-lua-slim_093533615914/phu-kien-cua-slim-banh-xe-treo-cua-lua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Bánh Xe Lùa Ray Dưới Cửa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-lua-ray-duoi-cua-slim_871152100477/phu-kien-cua-slim-banh-xe-lua-ray-duoi-cua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Bánh Xe Dẫn Hướng Dưới Nền Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-dan-huong-duoi-nen-cua-lua-slim_735361595727/phu-kien-cua-slim-banh-xe-dan-huong-duoi-nen-cua-lua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Bát Dài Treo Bánh Xe Có Dây Curoa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-slim-bat-dai-treo-banh-xe-co-day-curoa-cho-cua-lua-slim_441839919951/phu-kien-cua-slim-bat-dai-treo-banh-xe-co-day-curoa-cho-cua-lua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Bánh xe dẫn hướng dưới nền cửa lùa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-dan-huong-duoi-nen-cua-lua-slim_735361595727/phu-kien-cua-slim-banh-xe-dan-huong-duoi-nen-cua-lua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Bát dài treo bánh xe có dây curoa cho cửa lùa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-slim-bat-dai-treo-banh-xe-co-day-curoa-cho-cua-lua-slim_441839919951/phu-kien-cua-slim-bat-dai-treo-banh-xe-co-day-curoa-cho-cua-lua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Bát ngắn treo bánh xe có dây curoa cho cửa lùa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-slim-bat-ngan-treo-banh-xe-co-day-curoa-cho-cua-lua-slim_040004027969/phu-kien-cua-slim-bat-ngan-treo-banh-xe-co-day-curoa-cho-cua-lua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Bát treo bánh xe không dây curoa cửa lùa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bat-treo-banh-xe-khong-day-curoa-cua-lua-slim_704118682047/phu-kien-cua-slim-bat-treo-banh-xe-khong-day-curoa-cua-lua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Kẹp dây curoa cửa lùa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/kep-day-curoa-cua-lua-slim_458552106952/phu-kien-cua-slim-kep-day-curoa-cua-lua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Kẹp cố định dây curoa cửa lùa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/kep-co-dinh-day-curoa-cua-lua-slim_039610971233/phu-kien-cua-slim-kep-co-dinh-day-curoa-cua-lua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Đầu hãm bánh xe giảm chấn cửa lùa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/dau-ham-banh-xe-giam-chan-cua-lua-slim_386165426153/phu-kien-cua-slim-dau-ham-banh-xe-giam-chan-cua-lua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Đón bánh xe cửa lùa Slim",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/don-banh-xe-cua-lua-slim_999667061710/phu-kien-cua-slim-don-banh-xe-cua-lua-slim.webp",
+    "category": "slim",
+    "categoryName": "Cửa Slim",
+    "brand": "SLIM"
+  },
+  {
+    "name": "Khóa Điện Tử Xingfa 6-in-1 Viro Smartlock VR-S30E",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e_015859246278/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e.webp",
+    "category": "khoa-dt",
+    "categoryName": "Khóa Điện Tử",
+    "brand": "KHOA-DT"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "khoa-dt",
+    "categoryName": "Khóa Điện Tử",
+    "brand": "KHOA-DT"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "khoa-dt",
+    "categoryName": "Khóa Điện Tử",
+    "brand": "KHOA-DT"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "khoa-dt",
+    "categoryName": "Khóa Điện Tử",
+    "brand": "KHOA-DT"
+  },
+  {
+    "name": "Khóa điện tử Xingfa 6 in 1 Viro-Smartlock VR-S30E",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e_015859246278/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e.webp",
+    "category": "khoa-dt",
+    "categoryName": "Khóa Điện Tử",
+    "brand": "KHOA-DT"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": "Vách tắm kính cửa chữ L phụ kiện thương hiệu Papo mã PT02",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/vach-tam-kinh-cua-chu-l-phu-kien-thuong-hieu-papo-ma-pt02_884744901411/vach-tam-kinh-cua-chu-l-phu-kien-thuong-hieu-papo-ma-pt02.webp",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": "Phụ Kiện Vách Tắm Papo lùa có giảm chấn mã PT01",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-vach-tam-papo-lua-co-giam-chan-ma-pt01_010926749766/phu-kien-vach-tam-papo-lua-co-giam-chan-ma-pt01.webp",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": "vách kính phòng tắm 2 cánh lùa qua lại mã PT03",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-papo-vach-kinh-phong-tam-2-canh-lua-qua-lai-ma-pt03_286014016518/phu-kien-papo-vach-kinh-phong-tam-2-canh-lua-qua-lai-ma-pt03.webp",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": "cho vách kính phòng tắm 2 cánh lùa qua lại có giảm chấn mã PT04",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-papo-cho-vach-kinh-phong-tam-2-canh-lua-qua-lai-co-giam-chan-ma-pt04_160820501707/phu-kien-papo-cho-vach-kinh-phong-tam-2-canh-lua-qua-lai-co-giam-chan-ma-pt04.webp",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": ", phòng tắm lùa vuông góc 90 độ mã PT06",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-papo-phong-tam-lua-vuong-goc-90-do-ma-pt06_109679216690/phu-kien-papo-phong-tam-lua-vuong-goc-90-do-ma-pt06.webp",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": "Phụ Kiện Phòng Tắm Papo phụ kiện lùa 135 độ mã PT07",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-phong-tam-papo-phu-kien-lua-135-do-ma-pt07_093704140722/phu-kien-phong-tam-papo-phu-kien-lua-135-do-ma-pt07.webp",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": "Phụ Kiện Vách tắm kính cửa lùa 135 độ Papo có giảm chấn mã PT07S",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-vach-tam-kinh-cua-lua-135-do-papo-co-giam-chan-ma-pt07s_372465976078/phu-kien-vach-tam-kinh-cua-lua-135-do-papo-co-giam-chan-ma-pt07s.webp",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": "Phụ Kiện Phòng Tắm Kính Cửa Lùa Chữ T Papo có giảm chấn mã PT08",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phong-tam-kinh-cua-lua-chu-t-papo-co-giam-chan-ma-pt08_818339009903/phu-kien-phong-tam-kinh-cua-lua-chu-t-papo-co-giam-chan-ma-pt08.webp",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": ", Vách tắm kính cửa lùa chữ T (có vách bên) mã PT09",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-papo-vach-tam-kinh-cua-lua-chu-t-co-vach-ben-ma-pt09_219682008890/phu-kien-papo-vach-tam-kinh-cua-lua-chu-t-co-vach-ben-ma-pt09.webp",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": "Phụ Kiện Vách tắm kính cửa lùa giảm chấn Papo mã PT10",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/vach-tam-kinh-cua-lua-giam-chan-papo-ma-pt10_000540388082/phu-kien-vach-tam-kinh-cua-lua-giam-chan-papo-ma-pt10.webp",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": "Phụ Kiện Phòng Tắm Papo bản lề xoay trên dưới mã PT11",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-phong-tam-papo-ban-le-xoay-tren-duoi-ma-pt11_684291958876/phu-kien-phong-tam-papo-ban-le-xoay-tren-duoi-ma-pt11.webp",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": "Hệ thống trượt từ tính cửa đơn",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/he-thong-truot-tu-tinh-cua-don_631021924353/he-thong-truot-tu-tinh-cua-don.webp",
+    "category": "papo",
+    "categoryName": "Papo",
+    "brand": "PAPO"
+  },
+  {
+    "name": "Khóa Tay Nắm Đa Điểm HC 66",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-hc-66_507984006743/khoa-tay-nam-da-diem-huy-hoang-hc-66.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Khóa Tay Nắm Đa Điểm HC 68",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-hc-68_414258927636/khoa-tay-nam-da-diem-huy-hoang-hc-68.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Khóa APEX66 Mạ Đồng Đen American",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-apex66-ma-dong-den-american_513200872944/khoa-tay-nam-da-diem-apex66-ma-dong-den-american.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Khóa HH 80 Mạ Titan Bạc",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-80-ma-titan-bac_066899137126/khoa-tay-nam-da-diem-huy-hoang-80-ma-titan-bac.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Phụ Kện Cửa Slim",
+    "image": "assets/images/no-image.svg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "",
+    "image": "assets/images/no-image.svg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Khóa Điện Tử",
+    "image": "assets/images/no-image.svg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Khóa tay nắm đa điểm Huy Hoàng HC 66",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-hc-66_507984006743/khoa-tay-nam-da-diem-huy-hoang-hc-66.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Khóa tay nắm đa điểm Huy Hoàng HC 68",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-hc-68_414258927636/khoa-tay-nam-da-diem-huy-hoang-hc-68.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Khóa tay nắm đa điểm APEX66 Mạ đồng đen American",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-apex66-ma-dong-den-american_513200872944/khoa-tay-nam-da-diem-apex66-ma-dong-den-american.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Khóa tay nắm đa điểm Huy Hoàng APEX66 Mạ trắng bóng",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-apex66-ma-trang-bong_976632855320/khoa-tay-nam-da-diem-huy-hoang-apex66-ma-trang-bong.webp",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Khóa tay nắm đa điểm Huy Hoàng 80 Mạ Titan bạc",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-80-ma-titan-bac_066899137126/khoa-tay-nam-da-diem-huy-hoang-80-ma-titan-bac.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Khóa tay nắm đa điểm Huy Hoàng 80 Sơn trắng",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-80-son-trang_370196671381/khoa-tay-nam-da-diem-huy-hoang-80-son-trang.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Khóa tay nắm đa điểm Huy Hoàng 80 Sơn đen",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-80-son-den_333904287078/khoa-tay-nam-da-diem-huy-hoang-80-son-den.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Bản lề 4D 2 cánh Xingfa Mạ Titan bạc",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d-2-canh-xingfa-ma-titan-bac_551828680073/ban-le-4d-2-canh-xingfa-ma-titan-bac.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Khóa tay nắm cửa trượt Huy Hoàng AP 02 sơn đen, trắng",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-cua-truot-huy-hoang-ap-02-son-den_271778280661/khoa-tay-nam-cua-truot-huy-hoang-ap-02-son-den-trang.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Tay nắm cửa trượt Huy Hoàng AP 01 hệ 55 Mạ Titan",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-nam-cua-truot-huy-hoang-ap-01-he-55-ma-titan_593640790864/tay-nam-cua-truot-huy-hoang-ap-01-he-55-ma-titan.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Bản lề chữ A  thương hiệu Huy Hoàng AP 250",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-chu-a-thuong-hieu-huy-hoang-ap-250_565494824007/ban-le-chu-a-thuong-hieu-huy-hoang-ap-250.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  },
+  {
+    "name": "Chống gió cửa sổ Huy Hoàng CG200",
+    "image": "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/chong-gio-cua-so-huy-hoang-cg200_934537608175/chong-gio-cua-so-huy-hoang-cg200.jpg",
+    "category": "huy-hoang",
+    "categoryName": "Huy Hoàng",
+    "brand": "HUY-HOANG"
+  }
+];
+    
+    let currentCategory = 'all';
+    let searchQuery = '';
+    
+    function setCategory(cat) {
+      currentCategory = cat;
+      
+      // Update UI active state
+      document.querySelectorAll('.filter-btn-item').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      // Find button by onclick attribute containing category ID
+      const btn = Array.from(document.querySelectorAll('.filter-btn-item')).find(b => b.getAttribute('onclick').includes(`'${cat}'`));
+      if (btn) btn.classList.add('active');
+      
+      renderGrid();
+    }
+    
+    function renderGrid() {
+      const grid = document.getElementById('products-grid-container');
+      const noResults = document.getElementById('no-results-msg');
+      
+      // Filter list
+      const filtered = PRODUCTS_DB.filter(p => {
+        const matchesCat = (currentCategory === 'all' || p.category === currentCategory || (currentCategory === '3h' && p.category === 'phu-kien-3h'));
+        const matchesSearch = p.name.toLowerCase().includes(searchQuery.toLowerCase()) || p.categoryName.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCat && matchesSearch;
+      });
+      
+      // Populate HTML
+      grid.innerHTML = '';
+      if (filtered.length === 0) {
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+        filtered.forEach(p => {
+          const card = document.createElement('div');
+          card.className = 'pk-card';
+          card.onclick = () => openDetailPanel(p);
+          card.innerHTML = `
             <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim_546835771787/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim.webp" alt="Bộ Khóa Có Chìa Cửa Lùa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-              <span class="pk-card-badge">Slim</span>
+              <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge">${p.categoryName}</span>
             </div>
             <div class="pk-card-body">
-              <div class="pk-card-name">Bộ Khóa Có Chìa Cửa Lùa Slim</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-giam-chan-cua-lua-slim_377335539699/phu-kien-cua-slim-banh-xe-giam-chan-cua-lua-slim.webp" alt="Bánh Xe Giảm Chấn Cửa Lùa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bánh Xe Giảm Chấn Cửa Lùa Slim</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-treo-cua-lua-slim_093533615914/phu-kien-cua-slim-banh-xe-treo-cua-lua-slim.webp" alt="Bánh Xe Treo Cửa Lùa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bánh Xe Treo Cửa Lùa Slim</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-lua-ray-duoi-cua-slim_871152100477/phu-kien-cua-slim-banh-xe-lua-ray-duoi-cua-slim.webp" alt="Bánh Xe Lùa Ray Dưới Cửa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bánh Xe Lùa Ray Dưới Cửa Slim</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-dan-huong-duoi-nen-cua-lua-slim_735361595727/phu-kien-cua-slim-banh-xe-dan-huong-duoi-nen-cua-lua-slim.webp" alt="Bánh Xe Dẫn Hướng Dưới Nền Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bánh Xe Dẫn Hướng Dưới Nền Slim</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-slim-bat-dai-treo-banh-xe-co-day-curoa-cho-cua-lua-slim_441839919951/phu-kien-cua-slim-bat-dai-treo-banh-xe-co-day-curoa-cho-cua-lua-slim.webp" alt="Bát Dài Treo Bánh Xe Có Dây Curoa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bát Dài Treo Bánh Xe Có Dây Curoa Slim</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══ 2. PHỤ KIỆN CỬA TRƯỢT QUAY ══ -->
-      <div class="pk-category" data-cat="truot-quay">
-        <div class="pk-category-header">
-          <h2 class="pk-category-title">
-            <div class="pk-category-badge"></div>
-            Phụ Kiện Cửa Trượt Quay
-          </h2>
-          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div class="pk-grid">
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-ban-le-cua-truot-quay-mau-bac_040378089022/phu-kien-cua-truot-quay-ban-le-cua-truot-quay-mau-bac.webp" alt="Bản Lề Cửa Trượt Quay Màu Bạc" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề Cửa Trượt Quay Màu Bạc</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-ban-le-cua-truot-quay-mau-den_441739774000/phu-kien-cua-truot-quay-ban-le-cua-truot-quay-mau-den.webp" alt="Bản Lề Cửa Trượt Quay Màu Đen" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề Cửa Trượt Quay Màu Đen</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-banh-xe-dan-huong-duoi-cua-truot-quay_158671608771/phu-kien-cua-truot-quay-banh-xe-dan-huong-duoi-cua-truot-quay.webp" alt="Bánh Xe Dẫn Hướng Dưới Cửa Trượt Quay" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bánh Xe Dẫn Hướng Dưới Cửa Trượt Quay</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-truot-quay-bo-chuyen-doi-tu-mo-sang-truot-cua-truot-quay_338268378578/phu-kien-cua-truot-quay-bo-chuyen-doi-tu-mo-sang-truot-cua-truot-quay.webp" alt="Bộ Chuyển Đổi Từ Mở Sang Trượt" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bộ Chuyển Đổi Từ Mở Sang Trượt</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══ 3. PHỤ KIỆN DRAHO ══ -->
-      <div class="pk-category" data-cat="draho">
-        <div class="pk-category-header">
-          <h2 class="pk-category-title">
-            <div class="pk-category-badge"></div>
-            Phụ Kiện Draho
-            <span class="pk-category-brand-tag">DRAHO</span>
-          </h2>
-          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div class="pk-grid">
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-nam-cua-so-f34a-f34eu30-_411206676397/tay-nam-cua-so-f34a-f34eu30-.webp" alt="Tay Nắm Cửa Sổ F34A" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-              <span class="pk-card-badge">Draho</span>
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Tay Nắm Cửa Sổ F34A (F34EU30)</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-thanh-truyen-dong-lg12_998645536953/phu-kien-draho-thanh-truyen-dong-lg12.webp" alt="Thanh Truyền Động LG12 Draho" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Thanh Truyền Động LG12 Draho</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-vau-ham-chot-cua-f14ci_903359436215/phu-kien-draho-vau-ham-chot-cua-f14ci.webp" alt="Vấu Hãm Chốt Cửa F14CI" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Vấu Hãm Chốt Cửa F14CI</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-tay-nam-cua-di-pm-23_088443078249/phu-kien-draho-tay-nam-cua-di-pm-23.webp" alt="Tay Nắm Cửa Đi PM-23" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Tay Nắm Cửa Đi PM-23</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-bung-khoa-da-diem-cua-di-2885c1_878510258593/phu-kien-draho-bung-khoa-da-diem-cua-di-2885c1.webp" alt="Bụng Khóa Đa Điểm 2885C1" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bụng Khóa Đa Điểm Cửa Đi 2885C1</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-draho-loi-khoa-2-dau-chia-cua-di-draho_551097456721/phu-kien-draho-loi-khoa-2-dau-chia-cua-di-draho.webp" alt="Lõi Khóa 2 Đầu Chìa Cửa Đi Draho" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Lõi Khóa 2 Đầu Chìa Cửa Đi Draho</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══ 4. PHỤ KIỆN BOGO ══ -->
-      <div class="pk-category" data-cat="bogo">
-        <div class="pk-category-header">
-          <h2 class="pk-category-title">
-            <div class="pk-category-badge"></div>
-            Phụ Kiện Bogo
-            <span class="pk-category-brand-tag">BOGO</span>
-          </h2>
-          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div class="pk-grid">
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d--wd24--canh-voi-khung-va-wd25--canh-voi-canh---dung-cho-he-nhom-xingfa_759119042241/ban-le-4d-wd24-canh-voi-khung-va-wd25-canh-voi-canh--dung-cho-nhom-xingfa.jpg" alt="Bản Lề 4D WD24 Cánh Khung Xingfa" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-              <span class="pk-card-badge">Bogo</span>
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề 4D WD24 Cánh–Khung Nhôm Xingfa</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-3d-wd15--canh-khung-va-wd14--canh-canh-dung-cho-he-xingfa_537708600518/ban-le-3d-wd15-canh-khung-va-wd14-canh-canh-dung-cho-nhom-xingfa.jpg" alt="Bản Lề 3D WD15 Cánh Khung Xingfa" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề 3D WD15 Cánh–Khung Nhôm Xingfa</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d--wd12---dung-cho-nhom-he-topal-prima_551901166763/ban-le-4d-wd12--dung-cho-nhom-he-topal-prima.jpg" alt="Bản Lề 4D WD12 Nhôm Topal Prima" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề 4D WD12 Nhôm Hệ Topal Prima</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-khoa-cua-di-bogo-mau-bac-cho-cac-he-xingfa-prima-maxpro-maxal-jma60-_879423086449/bo-khoa-cua-di-bogo-mau-bac-cho-cac-he-xingfa-prima-maxpro-maxal-jma60-.jpg" alt="Bộ Khóa Cửa Đi Bogo Màu Bạc" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bộ Khóa Cửa Đi Bogo Màu Bạc (Xingfa/Prima/Maxpro)</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/bo-khoa-mo-quay-he-slim-co-chia-bl9935a_066209420244/bo-khoa-mo-quay-he-slim-co-chia-bl9935a.webp" alt="Bộ Khóa Mở Quay Hệ Slim BL9935A" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bộ Khóa Mở Quay Hệ Slim Có Chìa BL9935A</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══ 5. PHỤ KIỆN KINLONG ══ -->
-      <div class="pk-category" data-cat="kinlong">
-        <div class="pk-category-header">
-          <h2 class="pk-category-title">
-            <div class="pk-category-badge"></div>
-            Phụ Kiện KinLong
-            <span class="pk-category-brand-tag">KIN LONG</span>
-          </h2>
-          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div class="pk-grid">
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/thanh-truyen-dong-chinh-hcdg614_653155184627/thanh-truyen-dong-hcdg614.jpg" alt="Thanh Truyền Động HCDG614 KinLong" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-              <span class="pk-card-badge">KinLong</span>
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Thanh Truyền Động HCDG614</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/thanh-truyen-dong-hcdg613_050488046465/thanh-truyen-dong-hcdg613.jpg" alt="Thanh Truyền Động HCDG613 KinLong" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Thanh Truyền Động HCDG613</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/chot-bat-300-giu-canh-phu-kinlong_087369851130/chot-bat-300-giu-canh-phu-kinlong.jpg" alt="Chốt Bật 300 Giữ Cánh Phụ KinLong" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Chốt Bật 300 Giữ Cánh Phụ KinLong</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-xep-truot-kinlong_224410042250/phu-kien-cua-xep-truot-kinlong.jpg" alt="Phụ Kiện Cửa Xếp Trượt KinLong" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Phụ Kiện Cửa Xếp Trượt KinLong</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-nam-cua-di-kinlong-mzs20_520301202277/tay-nam-cua-di-kinlong-mzs20.jpg" alt="Tay Nắm Cửa Đi KinLong MZS20" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Tay Nắm Cửa Đi KinLong MZS20</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-chu-a-kinlong-fc200_873717917356/ban-le-chu-a-kinlong-fc200.jpg" alt="Bản Lề Chữ A KinLong FC200" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề Chữ A KinLong FC200</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══ 6. PHỤ KIỆN JANUS ══ -->
-      <div class="pk-category" data-cat="janus">
-        <div class="pk-category-header">
-          <h2 class="pk-category-title">
-            <div class="pk-category-badge"></div>
-            Phụ Kiện Janus
-            <span class="pk-category-brand-tag">JANUS</span>
-          </h2>
-          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div class="pk-grid">
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-canh-canh-mau-den_662265680180/phu-kien-ban-le-4d-janus-canh-canh-mau-den.webp" alt="Bản Lề 4D Janus Cánh-Cánh Màu Đen" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-              <span class="pk-card-badge">Janus</span>
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề 4D Janus Cánh–Cánh Màu Đen</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-khung-canh-mau-den_433592559544/phu-kien-ban-le-4d-janus-khung-canh-mau-den.webp" alt="Bản Lề 4D Janus Khung-Cánh Màu Đen" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề 4D Janus Khung–Cánh Màu Đen</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-canh-canh-mau-bac_822732252256/phu-kien-ban-le-4d-janus-canh-canh-mau-bac.webp" alt="Bản Lề 4D Janus Cánh-Cánh Màu Bạc" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề 4D Janus Cánh–Cánh Màu Bạc</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-khung-canh-mau-bac_012057637236/phu-kien-ban-le-4d-janus-khung-canh-mau-bac.webp" alt="Bản Lề 4D Janus Khung-Cánh Màu Bạc" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề 4D Janus Khung–Cánh Màu Bạc</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-4d-janus-canh-canh-mau-xam_669803897148/phu-kien-ban-le-4d-janus-canh-canh-mau-xam.webp" alt="Bản Lề 4D Janus Cánh-Cánh Màu Xám" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề 4D Janus Cánh–Cánh Màu Xám</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-ban-le-4d-janus-khung-canh-mau-xam_183317442702/phu-kien-ban-le-4d-janus-khung-canh-mau-xam.webp" alt="Bản Lề 4D Janus Khung-Cánh Màu Xám" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề 4D Janus Khung–Cánh Màu Xám</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══ 7. PHỤ KIỆN HUY HOÀNG ══ -->
-      <div class="pk-category" data-cat="huy-hoang">
-        <div class="pk-category-header">
-          <h2 class="pk-category-title">
-            <div class="pk-category-badge"></div>
-            Phụ Kiện Huy Hoàng
-            <span class="pk-category-brand-tag">HUY HOÀNG</span>
-          </h2>
-          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div class="pk-grid">
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-hc-66_507984006743/khoa-tay-nam-da-diem-huy-hoang-hc-66.jpg" alt="Khóa Tay Nắm Đa Điểm HC 66" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-              <span class="pk-card-badge">Huy Hoàng</span>
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Khóa Tay Nắm Đa Điểm HC 66</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-hc-68_414258927636/khoa-tay-nam-da-diem-huy-hoang-hc-68.jpg" alt="Khóa Tay Nắm Đa Điểm HC 68" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Khóa Tay Nắm Đa Điểm HC 68</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-apex66-ma-dong-den-american_513200872944/khoa-tay-nam-da-diem-apex66-ma-dong-den-american.jpg" alt="Khóa APEX66 Mạ Đồng Đen American" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Khóa APEX66 Mạ Đồng Đen American</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-tay-nam-da-diem-huy-hoang-80-ma-titan-bac_066899137126/khoa-tay-nam-da-diem-huy-hoang-80-ma-titan-bac.jpg" alt="Khóa Tay Nắm Đa Điểm HH 80 Mạ Titan Bạc" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Khóa HH 80 Mạ Titan Bạc</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══ 8. PHỤ KIỆN CMECH ══ -->
-      <div class="pk-category" data-cat="cmech">
-        <div class="pk-category-header">
-          <h2 class="pk-category-title">
-            <div class="pk-category-badge"></div>
-            Phụ Kiện Cmech
-            <span class="pk-category-brand-tag">CMECH</span>
-          </h2>
-          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div class="pk-grid">
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/dau-khoa-bien-chiu-luc-cmech-co-num-that-dk1_133538820391/dau-kho-a-bien-8-5mm-co-truc-xoay-cmech-a090032.jpg" alt="Đầu Khóa Biên 8.5mm Cmech A090032" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-              <span class="pk-card-badge">Cmech</span>
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Đầu Khóa Biên 8.5mm Cmech A090032</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-cua-so-cmech-ma-sat-tren-c-groove_212516217403/phu-kien-cmech-ban-le-cua-so-chu-a-60kg.webp" alt="Bản Lề Cửa Sổ Chữ A 60kg Cmech" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề Cửa Sổ Chữ A 60kg Cmech</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-thanh-truyen-dong-khoa-cua-gan-be-mat-b1_622006418921/thanh-truyen-dong-tich-hop-dau-khoa-bien-cmech-cmech-a020050.webp" alt="Thanh Truyền Động Tích Hợp Cmech A020050" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Thanh Truyền Động Tích Hợp Cmech A020050</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cmech-ca-tay-nam-cua-so-quay-hat-c1_667821215494/luoi-ga-tay-nam-cua-so-quay-hat-dai-53mm-cmech-a110105.webp" alt="Lưỡi Gà Tay Nắm Cửa Sổ Cmech A110105" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Lưỡi Gà Tay Nắm Cửa Sổ Cmech A110105</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══ 9. KHÓA ĐIỆN TỬ ══ -->
-      <div class="pk-category" data-cat="khoa-dt">
-        <div class="pk-category-header">
-          <h2 class="pk-category-title">
-            <div class="pk-category-badge"></div>
-            Khóa Điện Tử
-            <span class="pk-category-brand-tag">SMART LOCK</span>
-          </h2>
-          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div class="pk-grid">
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e_015859246278/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e.webp" alt="Khóa Điện Tử Xingfa 6-in-1 Viro VR-S30E" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-              <span class="pk-card-badge">Smart</span>
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Khóa Điện Tử Xingfa 6-in-1 Viro Smartlock VR-S30E</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══ 10. PHỤ KIỆN CANDY ══ -->
-      <div class="pk-category" data-cat="candy">
-        <div class="pk-category-header">
-          <h2 class="pk-category-title">
-            <div class="pk-category-badge"></div>
-            Phụ Kiện Candy
-            <span class="pk-category-brand-tag">CANDY</span>
-          </h2>
-          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div class="pk-grid">
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-xam-xam-anh-kim-den-bong-den-nham-nau-trang-sua-loai-moi_708874228621/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-xam-xam-anh-kim-den-bong-den-nham-nau-trang-sua-loai-moi.webp" alt="Bản Lề Lá Lớn Candy Đa Màu" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-              <span class="pk-card-badge">Candy</span>
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề Lá Lớn Candy Đa Màu (Xám/Đen/Nâu/Trắng Sữa)</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-vang-gold-loai-moi_683947609574/ban-le-la-lon-candy-khung-canh-hoac-canh-canh-mau-vang-gold-loai-moi.webp" alt="Bản Lề Lá Lớn Candy Màu Vàng Gold" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">Bản Lề Lá Lớn Candy Màu Vàng Gold</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ══ 11. PHỤ KIỆN OPK ══ -->
-      <div class="pk-category" data-cat="opk">
-        <div class="pk-category-header">
-          <h2 class="pk-category-title">
-            <div class="pk-category-badge"></div>
-            Phụ Kiện OPK
-            <span class="pk-category-brand-tag">OPK</span>
-          </h2>
-          <a href="lien-he.html" class="pk-viewall">Tư vấn thêm <i class="ri-arrow-right-line"></i></a>
-        </div>
-        <div class="pk-grid">
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-opk-phu-kien-cua-lua-slim-1-canh-giam-chan-2-dau_623491083600/phu-kien-opk-phu-kien-cua-lua-slim-1-canh-giam-chan-2-dau.webp" alt="OPK Cửa Lùa Slim 1 Cánh Giảm Chấn 2 Đầu" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-              <span class="pk-card-badge">OPK</span>
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">OPK Cửa Lùa Slim 1 Cánh Giảm Chấn 2 Đầu</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-          <div class="pk-card">
-            <div class="pk-card-img">
-              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-opk-phu-kien-cua-nhom-slim-opk-lua-2-canh_974529964333/phu-kien-opk-phu-kien-cua-nhom-slim-opk-lua-2-canh.webp" alt="OPK Cửa Nhôm Slim Lùa 2 Cánh" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
-            </div>
-            <div class="pk-card-body">
-              <div class="pk-card-name">OPK Cửa Nhôm Slim Lùa 2 Cánh</div>
-              <a href="lien-he.html" class="pk-card-btn">Báo giá <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- end pk-layout -->
-
-    <!-- ── BRAND CHIPS ── -->
-    <div class="brands-section">
-      <div class="brands-title">Các thương hiệu phụ kiện chúng tôi cung cấp</div>
-      <div class="brands-grid">
-        <a href="lien-he.html" class="brand-chip">Draho</a>
-        <a href="lien-he.html" class="brand-chip">Bogo</a>
-        <a href="lien-he.html" class="brand-chip">KinLong</a>
-        <a href="lien-he.html" class="brand-chip">Janus</a>
-        <a href="lien-he.html" class="brand-chip">Cmech</a>
-        <a href="lien-he.html" class="brand-chip">Huy Hoàng</a>
-        <a href="lien-he.html" class="brand-chip">Candy</a>
-        <a href="lien-he.html" class="brand-chip">Papo</a>
-        <a href="lien-he.html" class="brand-chip">OPK</a>
-        <a href="lien-he.html" class="brand-chip">Sigico</a>
-        <a href="lien-he.html" class="brand-chip">Hafele</a>
-        <a href="lien-he.html" class="brand-chip">YKEBR</a>
-        <a href="lien-he.html" class="brand-chip">3H</a>
-        <a href="lien-he.html" class="brand-chip">Viro Smartlock</a>
-        <a href="lien-he.html" class="brand-chip">Slim System</a>
-      </div>
-    </div>
-
-    <!-- ── CTA BANNER ── -->
-    <section class="cta-banner">
-      <div class="cta-inner">
-        <div class="cta-eyebrow">TƯ VẤN MIỄN PHÍ</div>
-        <h2 class="cta-title">Cần Tư Vấn Chọn Phụ Kiện<br>Phù Hợp Công Trình?</h2>
-        <p class="cta-desc">Đội ngũ kỹ thuật Sao Vàng sẽ tư vấn miễn phí loại phụ kiện phù hợp với từng hệ nhôm, tải trọng và điều kiện sử dụng cụ thể.</p>
-        <div class="cta-btns">
-          <a href="tel:0869590279" class="btn-gold">
-            <i class="ri-phone-fill"></i> 0869 590 279
-          </a>
-          <a href="lien-he.html" class="btn-outline">
-            <i class="ri-mail-send-line"></i> Gửi Yêu Cầu
-          </a>
-        </div>
-      </div>
-    </section>
-
-  </main>
+              <div class="pk-card-name">${p.name}</div>
+              <button class="pk-card-btn">Xem chi tiết <i class="ri-eye-line"></i></button>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+      }
+    }
+    
+    function updateCounts() {
+      document.getElementById('count-all').innerText = PRODUCTS_DB.length;
+      
+      const counts = {};
+      PRODUCTS_DB.forEach(p => {
+        let cat = p.category;
+        if (cat === 'phu-kien-3h') cat = '3h';
+        counts[cat] = (counts[cat] || 0) + 1;
+      });
+      
+      Object.keys(counts).forEach(cat => {
+        const el = document.getElementById(`count-${cat}`);
+        if (el) el.innerText = counts[cat];
+      });
+    }
+    
+    // Panel controls
+    function openDetailPanel(product) {
+      document.getElementById('panel-img').src = product.image;
+      document.getElementById('panel-name').innerText = product.name;
+      document.getElementById('panel-brand').innerText = product.brand;
+      document.getElementById('panel-category').innerText = product.categoryName;
+      
+      document.getElementById('side-panel').classList.add('open');
+      document.getElementById('panel-backdrop').classList.add('open');
+    }
+    
+    function closeDetailPanel() {
+      document.getElementById('side-panel').classList.remove('open');
+      document.getElementById('panel-backdrop').classList.remove('open');
+    }
+    
+    // Initialize search
+    document.getElementById('db-search-input').addEventListener('input', (e) => {
+      searchQuery = e.target.value;
+      renderGrid();
+    });
+    
+    window.addEventListener('DOMContentLoaded', () => {
+      updateCounts();
+      renderGrid();
+    });
+  </script>
 
   <!-- ── FOOTER ── -->
   <footer class="footer" role="contentinfo">
@@ -1851,5 +2774,8 @@
   </script>
   <!-- End Microsoft Clarity -->
   <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>
+
 </body>
 </html>

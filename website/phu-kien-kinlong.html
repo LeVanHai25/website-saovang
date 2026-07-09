@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1e293b" />
+  <title>Phụ Kiện KINLONG Chính Hãng Cao Cấp | SAO VÀNG</title>
+  <meta name="description" content="Sao Vàng cung cấp phụ kiện KINLONG chính hãng chất lượng cao. Đầy đủ KINLONG bản lề, khóa đa điểm, tay nắm chống muối mặn. Bảo hành dài hạn." />
+  <meta name="keywords" content="phụ kiện kinlong, phụ kiện KINLONG, KINLONG chính hãng, phụ kiện nhôm kính" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  
+  <style>
+    .brand-hero {
+      background: linear-gradient(135deg,#1e293b 0%,#334155 100%);
+      padding: 120px 0 60px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 120%, rgba(255,255,255,0.1), transparent 70%);
+    }
+    .brand-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .brand-title {
+      font-family: var(--sv-font-head);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .brand-subtitle-hero {
+      font-size: clamp(14px, 2vw, 18px);
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    
+    .brand-stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 40px);
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .brand-stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 24px;
+      min-width: 140px;
+      backdrop-filter: blur(8px);
+    }
+    .brand-stat-num {
+      font-family: var(--sv-font-head);
+      font-size: 28px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .brand-stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .brand-detail-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+    .brand-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .brand-content-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .brand-info-column {
+      padding-right: 20px;
+    }
+    .brand-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin: 28px 0 14px;
+      border-left: 4px solid #1e293b;
+      padding-left: 14px;
+    }
+    .brand-sub-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sv-dark-800);
+      margin: 18px 0 8px;
+    }
+    .brand-desc-p {
+      font-size: var(--sv-fs-sm);
+      color: var(--sv-gray-text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    
+    .brand-sidebar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .sidebar-title {
+      font-family: var(--sv-font-head);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: 20px;
+    }
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .sidebar-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 13px;
+      color: var(--sv-gray-text);
+      display: flex;
+      justify-content: space-between;
+    }
+    .sidebar-list li strong {
+      color: var(--sv-dark-900);
+    }
+    
+    .brand-products-section {
+      padding: 80px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .pk-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .pk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+    .pk-card-img {
+      position: relative;
+      height: 220px;
+      background: #f1f5f9;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .pk-card-img img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .pk-card-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+    .pk-card-body {
+      padding: 20px;
+    }
+    .pk-card-name {
+      font-family: var(--sv-font-head);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: 16px;
+      min-height: 40px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .pk-card-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: var(--sv-font-head);
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-menu-link active">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html" class="nav-menu-link">Nhôm Sao Vàng</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan</a>
+            <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
+          </div>
+        </div>
+        <a href="phu-kien.html" class="nav-menu-link">Phụ Kiện</a>
+        <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
+        <a href="du-an.html" class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="lien-he.html" class="nav-menu-link">Liên Hệ</a>
+      </nav>
+
+      <!-- Hotline + Hamburger -->
+      <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+        <a href="tel:0869590279" class="nav-hotline" aria-label="Gọi hotline 0869 590 279">
+          <i class="ri-phone-fill" aria-hidden="true"></i>
+          <span>0869 590 279</span>
+        </a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+      <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html" class="nav-drawer-link">Trang Chủ</a>
+    <a href="co-khi-sao-vang.html" class="nav-drawer-link">Cơ Khí Sao Vàng</a>
+    <a href="nhom-sao-vang.html" class="nav-drawer-link">Nhôm Sao Vàng</a>
+    <a href="linh-vuc-hoat-dong.html" class="nav-drawer-link">Lĩnh Vực Hoạt Động</a>
+    <a href="phu-kien.html" class="nav-drawer-link active">Phụ Kiện</a>
+    <a href="thu-vien-profile-nhom.html" class="nav-drawer-link">Profile Nhôm</a>
+    <a href="du-an.html" class="nav-drawer-link">Dự Án Đã Thực Hiện</a>
+    <a href="lien-he.html" class="nav-drawer-link">Liên Hệ</a>
+    <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
+      <i class="ri-phone-fill"></i> 0869 590 279
+    </a>
+  </nav>
+
+  
+
+  <section class="brand-hero">
+    <div class="sv-container">
+      <span class="brand-tag">THƯƠNG HIỆU PHỤ KIỆN</span>
+      <h1 class="brand-title">Phụ Kiện KINLONG</h1>
+      <p class="brand-subtitle-hero">Dòng sản phẩm nhập khẩu cao cấp đồng hành cùng các giải pháp cửa nhôm kính Sao Vàng</p>
+      
+      <div class="brand-stats">
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Trung Quốc (Chính hãng)</div>
+          <div class="brand-stat-label">Xuất Xứ</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">15</div>
+          <div class="brand-stat-label">Mã Sản Phẩm</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">100%</div>
+          <div class="brand-stat-label">Chính Hãng</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-detail-section">
+    <div class="sv-container">
+      <div class="brand-content-grid">
+        <div class="brand-info-column">
+          <h2 class="sv-section-title" style="margin-left:0; text-align:left;">Tổng Quan Về Hãng</h2>
+          <p class='brand-desc-p'>Trang chủPhụ kiệnPhụ Kiện KinLong            
+Phụ Kiện KinLong</p><p class='brand-desc-p'>Thanh truyền động HCDG614</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Thanh truyền động HCDG613</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Chốt bật 300 giữ cánh phụ Kinlong</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ Kiện Cửa Xếp Trượt Kinlong</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Tay nắm cửa đi KinLong MZS20</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Bản lề chữ A KinLong FC200</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Khóa chữ D cửa lùa đi nhôm xingfa</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ kiện Kinlong. Miệng ốp lõi khóa MZS60-SH</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ kiện Kinlong. Tay nắm MZS07</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ kiện Kinlong. Tay nắm MZS07H</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ kiện Kinlong. Tay nắm MZS07S</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Phụ kiện Kinlong. Tay nắm MZS08</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>&laquo;  &#8249; 1234 &#8250;  &raquo;</p><p class='brand-desc-p'>Nội dung chính</p><p class='brand-desc-p'>Giới Thiệu Về Thương Hiệu Phụ Kiện Kinlong</p><p class='brand-desc-p'>Lịch Sử Hình Thành và Phát Triển của Kinlong</p><p class='brand-desc-p'>Các Dòng Sản Phẩm Phụ Kiện Kinlong</p><p class='brand-desc-p'>Phụ Kiện Cửa Nhôm Kinlong</p><p class='brand-desc-p'>Ưu Điểm Của Phụ Kiện Cửa Nhôm Kinlong</p><p class='brand-desc-p'>Phụ Kiện Cửa Nhôm Xingfa Kinlong</p><p class='brand-desc-p'>Lợi Ích Của Phụ Kiện Cửa Nhôm Xingfa Kinlong</p><p class='brand-desc-p'>Phụ Kiện Cầu Thang và Lan Can Kinlong</p><p class='brand-desc-p'>Đặc Điểm Nổi Bật Của Phụ Kiện Cầu Thang và Lan Can Kinlong</p><p class='brand-desc-p'>Các Dòng Phụ Kiện Khác Của Kinlong</p><p class='brand-desc-p'>Giá Phụ Kiện Kinlong: Làm Thế Nào Để Chọn Phụ Kiện Phù Hợp?</p><p class='brand-desc-p'>Xác Định Nhu Cầu Sử Dụng
+
+		Tìm Hiểu Về Các Dòng Sản Phẩm và Bảng Giá Phụ Kiện Kinlong
+
+		Kiểm Tra Chất Lượng và Xuất Xứ Sản Phẩm</p><p class='brand-desc-p'>Lợi Ích Vượt Trội Của Phụ Kiện Kinlong So Với Các Thương Hiệu Khác</p><p class='brand-desc-p'>Chất Lượng Cao và Đa Dạng
+
+		Thiết Kế Sang Trọng và Hiện Đại
+
+		Độ Bền Cao
+
+		Khả Năng Tùy Biến Cao</p><p class='brand-desc-p'>Cách Lắp Đặt và Bảo Dưỡng Phụ Kiện Kinlong Đúng Cách</p><p class='brand-desc-p'>Tuân Thủ Hướng Dẫn Lắp Đặt
+
+		Sử Dụng Dụng Cụ Chuyên Dụng
+
+		Kiểm Tra Kỹ Sau Khi Lắp Đặt
+
+		Bảo Dưỡng Định Kỳ</p><p class='brand-desc-p'>Câu Hỏi Thường Gặp về Phụ Kiện Kinlong</p><p class='brand-desc-p'>Phụ kiện là một yếu tố quan trọng không thể thiếu trong bất kỳ công trình xây dựng nào, từ nhà ở đến các tòa nhà cao tầng. Đặc biệt, phụ kiện Kinlong đã trở thành một trong những lựa chọn hàng đầu cho các công trình tại Việt Nam nhờ vào chất lượng vượt trội, thiết kế hiện đại và đa dạng sản phẩm. Vậy phụ kiện Kinlong có những ưu điểm nổi bật nào? Làm thế nào để lựa chọn giá phụ kiện Kinlong phù hợp với nhu cầu? Hãy cùng chúng ta khám phá chi tiết trong bài viết này.</p><p class='brand-desc-p'>Giới Thiệu Về Thương Hiệu Phụ Kiện Kinlong</p><p class='brand-desc-p'>Kinlong là một thương hiệu phụ kiện có nguồn gốc từ Trung Quốc, được thành lập vào năm 1975. Với hơn 40 năm kinh nghiệm trong lĩnh vực sản xuất phụ kiện, Kinlong đã khẳng định vị thế là một trong những thương hiệu hàng đầu thế giới với các sản phẩm chất lượng cao, thiết kế hiện đại và độ bền vượt trội. Hiện nay, phụ kiện Kinlong đã có mặt tại hơn 100 quốc gia, trong đó có Việt Nam.</p><p class='brand-desc-p'>Lịch Sử Hình Thành và Phát Triển của Kinlong</p><p class='brand-desc-p'>Kinlong bắt đầu từ một công ty nhỏ chuyên sản xuất phụ kiện cửa, cửa sổ và lan can. Qua nhiều năm phát triển, Kinlong không ngừng đổi mới và cải tiến công nghệ sản xuất, mở rộng danh mục sản phẩm và gia nhập nhiều thị trường quốc tế. Đến nay, Kinlong đã trở thành một trong những thương hiệu phụ kiện được tin dùng nhất tại Việt Nam và trên toàn thế giới.</p><p class='brand-desc-p'>Phụ kiện Kinlong</p><p class='brand-desc-p'>Các Dòng Sản Phẩm Phụ Kiện Kinlong</p><p class='brand-desc-p'>1. Phụ Kiện Cửa Nhôm Kinlong</p><p class='brand-desc-p'>Phụ kiện cửa nhôm Kinlong bao gồm các sản phẩm như bản lề, tay nắm, khóa và nhiều phụ kiện khác. Những sản phẩm này được thiết kế từ thép không gỉ, có khả năng chịu lực cao và chống rỉ sét, đảm bảo an toàn và độ bền cho cửa nhôm. Tay nắm và khóa cửa cũng được thiết kế tinh tế, vừa đảm bảo tính thẩm mỹ vừa tăng cường an ninh cho ngôi nhà.</p><p class='brand-desc-p'>Ưu Điểm Của Phụ Kiện Cửa Nhôm Kinlong</p><p class='brand-desc-p'>Độ bền cao, chống rỉ sét.
+
+	Thiết kế đa dạng, phù hợp với nhiều loại cửa.
+
+	Dễ dàng lắp đặt và bảo trì.</p><p class='brand-desc-p'>2. Phụ Kiện Cửa Nhôm Xingfa Kinlong</p><p class='brand-desc-p'>Phụ kiện cửa nhôm Xingfa Kinlong là lựa chọn tối ưu cho các loại cửa nhôm Xingfa cao cấp. Các sản phẩm này bao gồm bản lề, tay nắm, khóa, được sản xuất từ vật liệu chất lượng cao, đảm bảo khả năng chịu lực tốt và hoạt động êm ái trong thời gian dài.</p><p class='brand-desc-p'>Lợi Ích Của Phụ Kiện Cửa Nhôm Xingfa Kinlong</p><p class='brand-desc-p'>Tương thích hoàn hảo với cửa nhôm Xingfa.
+
+	Khả năng chịu lực và chống ăn mòn tốt.
+
+	Tăng tính thẩm mỹ và giá trị cho ngôi nhà.</p><p class='brand-desc-p'>3. Phụ Kiện Cầu Thang và Lan Can Kinlong</p><p class='brand-desc-p'>Phụ kiện cầu thang và lan can Kinlong bao gồm bản lề, tay vịn, đệm bảo vệ, giúp gia tăng độ an toàn và tính thẩm mỹ cho các công trình xây dựng. Những sản phẩm này được sản xuất từ vật liệu chất lượng cao, chống ăn mòn và đảm bảo độ bền lâu dài.</p><p class='brand-desc-p'>Đặc Điểm Nổi Bật Của Phụ Kiện Cầu Thang và Lan Can Kinlong</p><p class='brand-desc-p'>Chất liệu cao cấp, chịu lực tốt.
+
+	Thiết kế hiện đại, tinh tế.
+
+	Dễ dàng lắp đặt và bảo trì.</p><p class='brand-desc-p'>4. Các Dòng Phụ Kiện Khác Của Kinlong</p><p class='brand-desc-p'>Ngoài những dòng sản phẩm kể trên, Kinlong còn cung cấp nhiều phụ kiện khác như bản lề cửa ô tô, cửa xe container, bản lề cửa tủ lạnh... Tất cả các sản phẩm đều được sản xuất với chất lượng cao, đảm bảo đáp ứng các yêu cầu khắt khe của các dự án xây dựng lớn.</p><p class='brand-desc-p'>Phụ kiện cửa lùa hiệu Kinlong</p><p class='brand-desc-p'>Giá Phụ Kiện Kinlong: Làm Thế Nào Để Chọn Phụ Kiện Phù Hợp?</p><p class='brand-desc-p'>Việc lựa chọn phụ kiện Kinlong không chỉ dựa vào chất lượng mà còn cần quan tâm đến giá phụ kiện Kinlong. Vậy làm thế nào để chọn mua sản phẩm phù hợp với nhu cầu và ngân sách?</p><p class='brand-desc-p'>Xác Định Nhu Cầu Sử Dụng</p><p class='brand-desc-p'>Trước tiên, chúng ta cần xác định rõ nhu cầu sử dụng của mình. Đối với các công trình nhà ở, nên chọn những phụ kiện cửa, cửa sổ và lan can phù hợp với kiểu dáng và yêu cầu an toàn. Đối với các công trình lớn hơn, cần chọn phụ kiện có khả năng chịu lực tốt và độ bền cao.</p><p class='brand-desc-p'>Tìm Hiểu Về Các Dòng Sản Phẩm và Bảng Giá Phụ Kiện Kinlong</p><p class='brand-desc-p'>Trước khi mua, bạn nên tìm hiểu kỹ về các dòng sản phẩm phụ kiện Kinlong cũng như bảng giá phụ kiện Kinlong. Thông tin này có thể tham khảo trực tiếp trên website của Kinlong hoặc liên hệ với các đại lý để được tư vấn chi tiết. Việc này sẽ giúp bạn chọn được sản phẩm phù hợp với nhu cầu sử dụng và ngân sách.</p><p class='brand-desc-p'>Kiểm Tra Chất Lượng và Xuất Xứ Sản Phẩm</p><p class='brand-desc-p'>Khi mua, bạn cần kiểm tra kỹ chất lượng và xuất xứ của sản phẩm. Phụ kiện Kinlong được sản xuất theo tiêu chuẩn chất lượng cao và có nguồn gốc từ Trung Quốc. Điều này giúp bạn đảm bảo sự an toàn và độ bền của sản phẩm khi sử dụng cho công trình của mình.</p><p class='brand-desc-p'>Phụ kiện cửa xếp trượt Kinlong</p><p class='brand-desc-p'>Lợi Ích Vượt Trội Của Phụ Kiện Kinlong So Với Các Thương Hiệu Khác</p><p class='brand-desc-p'>1. Chất Lượng Cao và Đa Dạng</p><p class='brand-desc-p'>Các sản phẩm của Kinlong được sản xuất với tiêu chuẩn chất lượng cao, đảm bảo sự an toàn và độ bền cho các công trình xây dựng. Đồng thời, Kinlong cung cấp nhiều dòng sản phẩm khác nhau, đáp ứng mọi nhu cầu của khách hàng.</p><p class='brand-desc-p'>2. Thiết Kế Sang Trọng và Hiện Đại</p><p class='brand-desc-p'>Mỗi sản phẩm của Kinlong đều có thiết kế hiện đại, tinh tế, giúp tăng tính thẩm mỹ cho công trình. Bạn có thể dễ dàng lựa chọn sản phẩm phù hợp với phong cách và yêu cầu của công trình.</p><p class='brand-desc-p'>3. Độ Bền Cao</p><p class='brand-desc-p'>Với hơn 40 năm kinh nghiệm trong lĩnh vực sản xuất phụ kiện, Kinlong đảm bảo sản phẩm có độ bền vượt trội, khả năng chịu lực tốt và không bị rỉ sét.</p><p class='brand-desc-p'>4. Khả Năng Tùy Biến Cao</p><p class='brand-desc-p'>Kinlong còn có khả năng thiết kế và sản xuất các sản phẩm theo yêu cầu của khách hàng, đáp ứng được các yêu cầu đặc biệt của từng dự án.</p><p class='brand-desc-p'>Sự kiện triển lãm phụ kiện Kinlong</p><p class='brand-desc-p'>Cách Lắp Đặt và Bảo Dưỡng Phụ Kiện Kinlong Đúng Cách</p><p class='brand-desc-p'>Để đảm bảo sản phẩm phụ kiện Kinlong hoạt động bền bỉ và an toàn, chúng ta cần tuân thủ một số nguyên tắc trong lắp đặt và bảo dưỡng.</p><p class='brand-desc-p'>1. Tuân Thủ Hướng Dẫn Lắp Đặt</p><p class='brand-desc-p'>Trước khi lắp đặt, hãy đọc kỹ hướng dẫn của nhà sản xuất để biết cách lắp đặt đúng cách, đảm bảo sự an toàn và độ bền của sản phẩm.</p><p class='brand-desc-p'>2. Sử Dụng Dụng Cụ Chuyên Dụng</p><p class='brand-desc-p'>Sử dụng các dụng cụ phù hợp như máy khoan, mũi khoan để tăng tính chính xác và độ bền của sản phẩm khi lắp đặt.</p><p class='brand-desc-p'>3. Kiểm Tra Kỹ Sau Khi Lắp Đặt</p><p class='brand-desc-p'>Sau khi lắp đặt, cần kiểm tra kỹ để đảm bảo sản phẩm hoạt động đúng cách và không có lỗi kỹ thuật nào.</p><p class='brand-desc-p'>4. Bảo Dưỡng Định Kỳ</p><p class='brand-desc-p'>Bảo dưỡng định kỳ giúp sản phẩm luôn hoạt động tốt và kéo dài tuổi thọ. Sử dụng chất tẩy rửa nhẹ để vệ sinh bề mặt và bôi trơn các bộ phận cơ khí để giảm ma sát.</p><p class='brand-desc-p'>Với chất lượng cao, độ bền vượt trội, thiết kế hiện đại và đa dạng sản phẩm, phụ kiện Kinlong đã khẳng định vị thế là lựa chọn hàng đầu cho các công trình xây dựng tại Việt Nam. Dù bạn đang tìm kiếm phụ kiện cho cửa, cửa sổ, cầu thang, hay bất kỳ công trình nào, Kinlong luôn mang đến giải pháp hoàn hảo và phù hợp nhất.</p><p class='brand-desc-p'>Phụ kiện cửa nhôm Kinlong</p><p class='brand-desc-p'>Câu Hỏi Thường Gặp về Phụ Kiện Kinlong</p><p class='brand-desc-p'>Phụ kiện Kinlong có tốt không?</p><p class='brand-desc-p'>Đúng vậy, phụ kiện Kinlong nổi bật với chất lượng cao, thiết kế hiện đại, độ bền vượt trội, và khả năng đáp ứng đa dạng nhu cầu của khách hàng.</p><p class='brand-desc-p'>Giá phụ kiện Kinlong có đắt không?</p><p class='brand-desc-p'>Giá phụ kiện Kinlong phù hợp với chất lượng sản phẩm, với nhiều mức giá khác nhau tùy thuộc vào dòng sản phẩm và yêu cầu của khách hàng.</p><p class='brand-desc-p'>Làm thế nào để mua phụ kiện Kinlong chính hãng?</p><p class='brand-desc-p'>Bạn có thể mua phụ kiện Kinlong chính hãng tại các đại lý ủy quyền hoặc trên website của Kinlong để đảm bảo chất lượng và xuất xứ sản phẩm.</p><p class='brand-desc-p'>Bảo dưỡng phụ kiện Kinlong như thế nào?</p><p class='brand-desc-p'>Bảo dưỡng định kỳ bằng cách vệ sinh bề mặt, kiểm tra các bộ phận và bôi trơn các cơ cấu chuyển động để duy trì hiệu quả hoạt động.</p><p class='brand-desc-p'>Phụ kiện Kinlong có phù hợp cho cửa nhôm Xingfa không?</p><p class='brand-desc-p'>Có, phụ kiện Kinlong được thiết kế đặc biệt để phù hợp và tối ưu cho các loại cửa nhôm Xingfa.</p>
+        </div>
+        
+        <div class="brand-sidebar">
+          <h3 class="sidebar-title">Thông Số Kỹ Thuật KINLONG</h3>
+          <ul class="sidebar-list">
+            <li>Xuất xứ chính hãng: <strong>Trung Quốc (Chính hãng)</strong></li>
+            <li>Phân khúc thị trường: <strong>Phổ thông / Đa công trình</strong></li>
+            <li>Xử lý bề mặt nổi trội: <strong>Chống oxi hóa / Mạ Anodized</strong></li>
+            <li>Ứng dụng chính: <strong>Cửa đi, Cửa sổ, Vách nhôm kính</strong></li>
+            <li>Cam kết từ Sao Vàng: <strong>Đền bù gấp đôi nếu phát hiện hàng nhái</strong></li>
+            <li>Chính sách bảo hành: <strong>Đổi mới 1-1 trong 24 tháng</strong></li>
+          </ul>
+          
+          <a href="lien-he.html" class="sv-btn sv-btn-red" style="width:100%; display:flex; justify-content:center;">NHẬN BÁO GIÁ KINLONG <i class="ri-arrow-right-line"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-products-section">
+    <div class="sv-container">
+      <div style="text-align:center;">
+        <span class="sv-section-tag">DANH MỤC SẢN PHẨM</span>
+        <h2 class="sv-section-title" style="margin-inline:auto;">Sản Phẩm KINLONG Nổi Bật</h2>
+      </div>
+      
+      <div class="pk-grid">
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/thanh-truyen-dong-chinh-hcdg614_653155184627/thanh-truyen-dong-hcdg614.jpg" alt="Thanh Truyền Động HCDG614" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Thanh Truyền Động HCDG614</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/thanh-truyen-dong-hcdg613_050488046465/thanh-truyen-dong-hcdg613.jpg" alt="Thanh Truyền Động HCDG613" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Thanh Truyền Động HCDG613</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/chot-bat-300-giu-canh-phu-kinlong_087369851130/chot-bat-300-giu-canh-phu-kinlong.jpg" alt="Chốt Bật 300 Giữ Cánh Phụ KinLong" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Chốt Bật 300 Giữ Cánh Phụ KinLong</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-xep-truot-kinlong_224410042250/phu-kien-cua-xep-truot-kinlong.jpg" alt="Phụ Kiện Cửa Xếp Trượt KinLong" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Phụ Kiện Cửa Xếp Trượt KinLong</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/tay-nam-cua-di-kinlong-mzs20_520301202277/tay-nam-cua-di-kinlong-mzs20.jpg" alt="Tay Nắm Cửa Đi KinLong MZS20" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Tay Nắm Cửa Đi KinLong MZS20</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/ban-le-chu-a-kinlong-fc200_873717917356/ban-le-chu-a-kinlong-fc200.jpg" alt="Bản Lề Chữ A KinLong FC200" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Bản Lề Chữ A KinLong FC200</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="assets/images/no-image.svg" alt="Phụ Kện Cửa Slim" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Phụ Kện Cửa Slim</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="assets/images/no-image.svg" alt="" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name"></div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="assets/images/no-image.svg" alt="Khóa Điện Tử" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Khóa Điện Tử</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-chu-d-cua-lua-di-nhom-xingfa_657043888834/khoa-chu-d-cua-lua-di-nhom-xingfa.jpg" alt="Khóa chữ D cửa lùa đi nhôm xingfa" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Khóa chữ D cửa lùa đi nhôm xingfa</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-kinlong-mieng-op-loi-khoa-mzs60-sh_604789504130/phu-kien-kinlong-mieng-op-loi-khoa-mzs60-sh.webp" alt="Miệng ốp lõi khóa MZS60-SH" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Miệng ốp lõi khóa MZS60-SH</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-kinlong-tay-nam-mzs07_687477007289/phu-kien-kinlong-tay-nam-mzs07.webp" alt="Tay nắm MZS07" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Tay nắm MZS07</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-kinglong-tay-nam-mzs07h_247859276320/phu-kien-kinlong-tay-nam-mzs07h.webp" alt="Tay nắm MZS07H" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Tay nắm MZS07H</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-kinglong-tay-nam-mzs07s_844238856099/phu-kien-kinlong-tay-nam-mzs07s.webp" alt="Tay nắm MZS07S" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Tay nắm MZS07S</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-kinlong-tay-nam-mzs08_349805467699/phu-kien-kinlong-tay-nam-mzs08.webp" alt="Tay nắm MZS08" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">KINLONG</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Tay nắm MZS08</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Liên hệ báo giá <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner section-container">
+      <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1.5fr;gap:40px;">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <a href="index.html" class="footer-brand" aria-label="Trang chủ Sao Vàng">
+            <img src="assets/images/logo-sv-main.svg" alt="Sao Vàng Logo" width="52" height="52" />
+            <div>
+              <div class="footer-brand-name">SAO VÀNG</div>
+              <div class="footer-brand-tagline">Cơ Khí & Nhôm Kính</div>
+            </div>
+          </a>
+          <p class="footer-desc">Cung cấp đầy đủ phụ kiện nhôm kính chính hãng từ các thương hiệu uy tín hàng đầu. Tư vấn miễn phí, giao hàng nhanh tại Hà Nội.</p>
+        </div>
+
+        <!-- Col 2: Phụ kiện -->
+        <div>
+          <h4 class="footer-col-title">Phụ Kiện</h4>
+          <div class="footer-links">
+            <a href="phu-kien.html" class="footer-link">Tất Cả Phụ Kiện</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện Draho</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện Bogo</a>
+            <a href="lien-he.html" class="footer-link">Phụ Kiện KinLong</a>
+            <a href="lien-he.html" class="footer-link">Khóa Điện Tử</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Sản phẩm -->
+        <div>
+          <h4 class="footer-col-title">Sản Phẩm</h4>
+          <div class="footer-links">
+            <a href="co-khi-sao-vang.html" class="footer-link">Cơ Khí Sao Vàng</a>
+            <a href="nhom-sao-vang.html" class="footer-link">Nhôm Sao Vàng</a>
+            <a href="san-pham.html" class="footer-link">Sản Phẩm</a>
+            <a href="du-an.html" class="footer-link">Dự Án</a>
+            <a href="tin-tuc.html" class="footer-link">Tin Tức</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Hỗ trợ -->
+        <div>
+          <h4 class="footer-col-title">Hỗ Trợ</h4>
+          <div class="footer-links">
+            <a href="gioi-thieu.html" class="footer-link">Giới thiệu</a>
+            <a href="linh-vuc-hoat-dong.html" class="footer-link">Lĩnh vực hoạt động</a>
+            <a href="thu-vien-sp.html" class="footer-link">Thư viện SP</a>
+            <a href="bao-gia.html" class="footer-link">Báo giá</a>
+            <a href="lien-he.html" class="footer-link">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội.</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-line" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color: inherit; text-decoration: none;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <a href="mailto:info@cokhisaovang.com" style="color: inherit; text-decoration: none;">info@cokhisaovang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>Thứ 2 - Thứ 7: 8:00 - 17:00</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. MST: 0110808047.</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+        <span>Phụ Kiện Nhôm Kính Chính Hãng</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── PRODUCT DETAIL MODAL ── -->
+  <div class="pk-modal" id="pkDetailModal" aria-hidden="true" role="dialog">
+    <div class="pk-modal-container">
+      <button class="pk-modal-close" id="pkCloseModal" aria-label="Đóng cửa sổ"><i class="ri-close-line"></i></button>
+      <div class="pk-modal-body" id="pkModalBody">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SCRIPTS ── -->
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/modules/navbar.js" defer></script>
+  <script>
+    // Product Detail Database
+    const productDb = {
+      "Bộ Khóa Có Chìa Cửa Lùa Slim": {
+        price: "864,000 đ/bộ",
+        images: [
+          "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim_546835771787/phu-kien-cua-slim-bo-khoa-co-chia-cua-lua-slim.webp",
+          "https://nhomkinhdaiphuc.com/upload/product/bo-khoa-co-chia-cua-lua-slim-mau-vang_4631972.webp",
+          "https://nhomkinhdaiphuc.com/upload/product/bo-khoa-co-chia-cua-lua-slim-mau-vang_4631971.webp",
+          "https://nhomkinhdaiphuc.com/upload/product/bo-khoa-co-chia-cua-lua-slim-mau-vang_4631970.webp"
+        ],
+        brand: "Slim System",
+        description: "Bộ khóa có chìa cửa lùa Slim là dòng khóa cửa đi cao cấp chuyên dụng cho các hệ nhôm Slim thanh mảnh. Khóa có thiết kế âm cửa tinh tế, tay nắm bóp dẹt thẩm mỹ, trang bị chìa khóa cơ dự phòng đảm bảo tính bảo mật và riêng tư cao nhất cho căn hộ của bạn. Sản phẩm được sản xuất bằng công nghệ anode chống oxy hóa bề mặt, không bay màu, chịu ăn mòn cực tốt.",
+        specs: {
+          "Thương hiệu": "Slim System",
+          "Chất liệu": "Hợp kim nhôm anode cao cấp",
+          "Màu sắc": "Đen nhám / Vàng Gold",
+          "Hệ nhôm thích hợp": "Cửa trượt Slim, cửa nhôm nội thất Slim",
+          "Độ dày kính phù hợp": "Kính cường lực 8mm - 12mm",
+          "Bảo hành": "24 tháng chính hãng"
+        }
+      },
+      "Bánh Xe Giảm Chấn Cửa Lùa Slim": {
+        price: "Liên hệ báo giá",
+        images: [
+          "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-giam-chan-cua-lua-slim_377335539699/phu-kien-cua-slim-banh-xe-giam-chan-cua-lua-slim.webp"
+        ],
+        brand: "OPK / Slim System",
+        description: "Bánh xe giảm chấn cửa lùa Slim giúp hành trình mở và đóng cửa cực kỳ êm ái, triệt tiêu tiếng ồn và tránh va đập mạnh làm vỡ kính. Đảm bảo an toàn tuyệt đối khi sử dụng.",
+        specs: {
+          "Thương hiệu": "OPK / Slim System",
+          "Chất liệu": "Thép chống gỉ + Nhựa POM siêu bền",
+          "Tải trọng tối đa": "100kg/cánh",
+          "Hệ thống giảm chấn": "Thủy lực 2 chiều",
+          "Bảo hành": "24 tháng"
+        }
+      },
+      "Khóa điện tử Xingfa 6-in-1 Viro Smartlock VR-S30E": {
+        price: "3,500,000 đ/bộ",
+        images: [
+          "https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e_015859246278/khoa-dien-tu-xingfa-6-in-1-viro-smartlock-vr-s30e.webp"
+        ],
+        brand: "Viro Smartlock",
+        description: "Khóa điện tử thông minh tích hợp 6 phương thức mở khóa tiên tiến nhất: Vân tay, Mật mã, Thẻ từ, Chìa cơ dự phòng, App điện thoại qua Bluetooth, và Wifi (Gateway). Thân khóa siêu mảnh thiết kế riêng cho các hệ cửa nhôm Xingfa, cửa nhôm kính có đố nhỏ.",
+        specs: {
+          "Thương hiệu": "Viro Smartlock",
+          "Chất liệu": "Hợp kim kẽm siêu cứng",
+          "Bộ nhớ lưu trữ": "100 vân tay, 100 mã số, 100 thẻ từ",
+          "Màu sắc": "Đen xi mạ cao cấp",
+          "Bảo hành": "24 tháng"
+        }
+      }
+    };
+
+    // Filter tab interaction
+    document.querySelectorAll('.filter-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        document.querySelectorAll('.pk-category').forEach(cat => {
+          if (filter === 'all' || cat.dataset.cat === filter) {
+            cat.style.display = '';
+          } else {
+            cat.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Detail Modal Controller
+    const modal = document.getElementById('pkDetailModal');
+    const modalBody = document.getElementById('pkModalBody');
+    const closeBtn = document.getElementById('pkCloseModal');
+
+    function openProductDetail(card) {
+      const imgEl = card.querySelector('.pk-card-img img');
+      const titleEl = card.querySelector('.pk-card-name');
+      const categorySection = card.closest('.pk-category');
+      
+      const title = titleEl ? titleEl.textContent.trim() : 'Phụ Kiện Cao Cấp';
+      const imageSrc = imgEl ? imgEl.src : 'assets/images/no-image.svg';
+      
+      let categoryName = 'SAO VÀNG';
+      if (categorySection) {
+        const titleHeader = categorySection.querySelector('.pk-category-title');
+        if (titleHeader) {
+          // Clone and remove brand tags inside header to get clean category name
+          const tempHeader = titleHeader.cloneNode(true);
+          tempHeader.querySelectorAll('.pk-category-brand-tag, .pk-category-badge').forEach(el => el.remove());
+          categoryName = tempHeader.textContent.trim();
+        }
+      }
+
+      // Lookup or generate detail record
+      const details = productDb[title] || {
+        price: "Liên hệ báo giá",
+        images: [imageSrc],
+        brand: categoryName,
+        description: `Phụ kiện ${title} cao cấp, được cung cấp chính hãng bởi Công ty Cổ phần Sản xuất Cơ khí Sao Vàng. Thiết kế tinh tế, hiện đại, tối ưu hóa công năng và nâng cao tuổi thọ vận hành cho các hệ thống cửa nhôm kính của bạn.`,
+        specs: {
+          "Thương hiệu": categoryName,
+          "Phân loại": "Phụ kiện nhôm kính cao cấp",
+          "Chất liệu": "Hợp kim cao cấp chống gỉ",
+          "Xuất xứ": "Chính hãng",
+          "Bảo hành": "12 - 24 tháng chính hãng"
+        }
+      };
+
+      // Render Modal Body
+      let thumbsHtml = '';
+      if (details.images && details.images.length > 1) {
+        thumbsHtml = `<div class="pk-gallery-thumbs">` + 
+          details.images.map((img, idx) => `
+            <div class="pk-gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="changeMainImage('${img}', this)">
+              <img src="${img}" alt="Ảnh phụ ${idx + 1}" />
+            </div>
+          `).join('') + `</div>`;
+      }
+
+      let specsHtml = '';
+      if (details.specs) {
+        specsHtml = `<table class="pk-specs-table">` +
+          Object.entries(details.specs).map(([key, val]) => `
+            <tr>
+              <td class="pk-specs-label">${key}</td>
+              <td>${val}</td>
+            </tr>
+          `).join('') + `</table>`;
+      }
+
+      modalBody.innerHTML = `
+        <div class="pk-modal-gallery">
+          <div class="pk-gallery-main">
+            <img id="pkMainImg" src="${details.images[0]}" alt="${title}" />
+          </div>
+          ${thumbsHtml}
+        </div>
+        <div class="pk-modal-info">
+          <div class="pk-info-brand">${details.brand || categoryName}</div>
+          <h3 class="pk-info-title">${title}</h3>
+          <div class="pk-info-price"><span>Giá bán:</span>${details.price}</div>
+          
+          <div class="pk-info-tabs">
+            <button class="pk-info-tab active" onclick="switchTab('desc', this)">Mô tả chi tiết</button>
+            <button class="pk-info-tab" onclick="switchTab('specs', this)">Thông số kỹ thuật</button>
+          </div>
+
+          <div class="pk-info-panel active" id="pkPanelDesc">
+            <p>${details.description}</p>
+          </div>
+          <div class="pk-info-panel" id="pkPanelSpecs">
+            ${specsHtml}
+          </div>
+
+          <div class="pk-info-actions">
+            <a href="tel:0869590279" class="btn-gold"><i class="ri-phone-fill"></i> 0869 590 279</a>
+            <a href="lien-he.html" class="btn-outline"><i class="ri-mail-send-line"></i> Gửi Yêu Cầu</a>
+          </div>
+        </div>
+      `;
+
+      // Show Modal
+      modal.classList.add('active');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function changeMainImage(src, thumbEl) {
+      document.getElementById('pkMainImg').src = src;
+      document.querySelectorAll('.pk-gallery-thumb').forEach(el => el.classList.remove('active'));
+      thumbEl.classList.add('active');
+    }
+
+    function switchTab(type, tabEl) {
+      document.querySelectorAll('.pk-info-tab').forEach(el => el.classList.remove('active'));
+      tabEl.classList.add('active');
+      
+      document.querySelectorAll('.pk-info-panel').forEach(el => el.classList.remove('active'));
+      if (type === 'desc') {
+        document.getElementById('pkPanelDesc').classList.add('active');
+      } else {
+        document.getElementById('pkPanelSpecs').classList.add('active');
+      }
+    }
+
+    function closeModal() {
+      modal.classList.remove('active');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    // Attach click events to cards
+    document.querySelectorAll('.pk-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        // Prevent default only if clicking card-btn or if we want modal for the whole card
+        e.preventDefault();
+        openProductDetail(card);
+      });
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
+    });
+  </script>
+  <script src="assets/js/shared/internal-links.js"></script>
+  <!-- Sprint 3: Service CTA -->
+  <script src="assets/js/shared/service-cta.js"></script>
+    <!-- Sprint 2: Shared components -->
+  <script src="assets/js/shared/floating-widget.js"></script>
+  <script src="assets/js/shared/faq-accordion.js"></script>
+  <script src="assets/js/shared/breadcrumb.js"></script>
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>
+
+</body>
+</html>
