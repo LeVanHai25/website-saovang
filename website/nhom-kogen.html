@@ -424,7 +424,168 @@ Cửa Nhôm Kogen</p><p class='brand-desc-p'>Cửa đi mở quay nhôm Kogen h�
     </div>
   </section>
 
-  <footer class="footer-v2" role="contentinfo">
+  
+    <!-- ══ GALLERY CÔNG TRÌNH THỰC TẾ ══════════════════════════════════ -->
+    <section id="cong-trinh" style="background:#f8fafc;padding:70px 0 80px;border-top:1px solid #e2e8f0;">
+      <div style="max-width:1280px;margin:0 auto;padding-inline:24px;">
+
+        <!-- Header -->
+        <div style="text-align:center;margin-bottom:40px;">
+          <span style="display:inline-block;background:#0369a1;color:#fff;font-size:10px;font-weight:800;letter-spacing:.15em;padding:4px 14px;border-radius:20px;text-transform:uppercase;margin-bottom:12px;">CÔNG TRÌNH THỰC TẾ</span>
+          <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:900;color:#1a2940;margin:0 0 10px;">Dự Án Đã Thi Công — Nhôm Kogen</h2>
+          <p style="font-size:14px;color:#64748b;max-width:520px;margin:0 auto;line-height:1.6;">Hình ảnh thực tế từ các công trình biệt thự, penthouse và nhà phố đã hoàn thành sử dụng hệ nhôm Kogen.</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:32px;" id="galFilterBar">
+          <button class="sv-gal-tab active" data-filter="all" onclick="filterGallery(this,'all')">Tất Cả</button><button class="sv-gal-tab" data-filter="Biệt thự" onclick="filterGallery(this,'Biệt thự')">Biệt thự</button><button class="sv-gal-tab" data-filter="Căn hộ" onclick="filterGallery(this,'Căn hộ')">Căn hộ</button><button class="sv-gal-tab" data-filter="Penthouse" onclick="filterGallery(this,'Penthouse')">Penthouse</button><button class="sv-gal-tab" data-filter="Resort" onclick="filterGallery(this,'Resort')">Resort</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div id="galGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px;">
+          
+          <div class="sv-gal-card" data-type="Biệt thự" onclick="openLightbox(0)">
+            <div class="sv-gal-img-wrap">
+              <img src="assets/images/project-villa.png" loading="lazy" decoding="async"
+                   width="600" height="400"
+                   alt="Biệt Thự Cửa Xếp Gấp Q.7 — Kogen Bi-Fold 68 | Sao Vàng"
+                   style="width:100%;height:220px;object-fit:cover;display:block;">
+              <div class="sv-gal-overlay">
+                <span style="background:#7c3aed;color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:20px;text-transform:uppercase;">Biệt thự</span>
+                <div style="margin-top:8px;font-size:13px;font-weight:700;color:#fff;">Kogen Bi-Fold 68</div>
+              </div>
+            </div>
+            <div class="sv-gal-info">
+              <div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#1a2940;margin-bottom:4px;">Biệt Thự Cửa Xếp Gấp Q.7</div>
+              <div style="font-size:12px;color:#64748b;display:flex;align-items:center;gap:5px;">
+                <i class="ri-map-pin-2-line"></i> TP. Hồ Chí Minh
+              </div>
+            </div>
+          </div>
+          <div class="sv-gal-card" data-type="Penthouse" onclick="openLightbox(1)">
+            <div class="sv-gal-img-wrap">
+              <img src="assets/images/project-penthouse.png" loading="lazy" decoding="async"
+                   width="600" height="400"
+                   alt="Penthouse Cửa Trượt Lật — Kogen Tilt & Slide | Sao Vàng"
+                   style="width:100%;height:220px;object-fit:cover;display:block;">
+              <div class="sv-gal-overlay">
+                <span style="background:#0369a1;color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:20px;text-transform:uppercase;">Penthouse</span>
+                <div style="margin-top:8px;font-size:13px;font-weight:700;color:#fff;">Kogen Tilt & Slide</div>
+              </div>
+            </div>
+            <div class="sv-gal-info">
+              <div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#1a2940;margin-bottom:4px;">Penthouse Cửa Trượt Lật</div>
+              <div style="font-size:12px;color:#64748b;display:flex;align-items:center;gap:5px;">
+                <i class="ri-map-pin-2-line"></i> TP. Hồ Chí Minh
+              </div>
+            </div>
+          </div>
+          <div class="sv-gal-card" data-type="Resort" onclick="openLightbox(2)">
+            <div class="sv-gal-img-wrap">
+              <img src="assets/images/project-dalat-villa.png" loading="lazy" decoding="async"
+                   width="600" height="400"
+                   alt="Villa Đà Lạt Cửa Gấp — Kogen Bi-Fold 5 Cánh | Sao Vàng"
+                   style="width:100%;height:220px;object-fit:cover;display:block;">
+              <div class="sv-gal-overlay">
+                <span style="background:#059669;color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:20px;text-transform:uppercase;">Resort</span>
+                <div style="margin-top:8px;font-size:13px;font-weight:700;color:#fff;">Kogen Bi-Fold 5 Cánh</div>
+              </div>
+            </div>
+            <div class="sv-gal-info">
+              <div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#1a2940;margin-bottom:4px;">Villa Đà Lạt Cửa Gấp</div>
+              <div style="font-size:12px;color:#64748b;display:flex;align-items:center;gap:5px;">
+                <i class="ri-map-pin-2-line"></i> Đà Lạt
+              </div>
+            </div>
+          </div>
+          <div class="sv-gal-card" data-type="Căn hộ" onclick="openLightbox(3)">
+            <div class="sv-gal-img-wrap">
+              <img src="assets/images/hero-interior.png" loading="lazy" decoding="async"
+                   width="600" height="400"
+                   alt="Căn Hộ Cao Cấp Quận 2 — Kogen Lùa Slim | Sao Vàng"
+                   style="width:100%;height:220px;object-fit:cover;display:block;">
+              <div class="sv-gal-overlay">
+                <span style="background:#0891b2;color:#fff;font-size:10px;font-weight:800;padding:3px 10px;border-radius:20px;text-transform:uppercase;">Căn hộ</span>
+                <div style="margin-top:8px;font-size:13px;font-weight:700;color:#fff;">Kogen Lùa Slim</div>
+              </div>
+            </div>
+            <div class="sv-gal-info">
+              <div style="font-family:'Montserrat',sans-serif;font-size:14px;font-weight:700;color:#1a2940;margin-bottom:4px;">Căn Hộ Cao Cấp Quận 2</div>
+              <div style="font-size:12px;color:#64748b;display:flex;align-items:center;gap:5px;">
+                <i class="ri-map-pin-2-line"></i> TP. Hồ Chí Minh
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div style="text-align:center;margin-top:48px;">
+          <p style="font-size:14px;color:#64748b;margin-bottom:16px;">Bạn muốn công trình tương tự?</p>
+          <a href="bao-gia.html" style="display:inline-flex;align-items:center;gap:8px;background:#0369a1;color:#fff;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;padding:14px 32px;border-radius:50px;text-decoration:none;letter-spacing:.03em;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+            <i class="ri-send-plane-line"></i> Nhận Báo Giá Miễn Phí
+          </a>
+        </div>
+      </div>
+
+      <!-- Lightbox -->
+      <div id="galLightbox" onclick="closeLightbox()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:9999;align-items:center;justify-content:center;padding:20px;">
+        <button onclick="closeLightbox()" style="position:absolute;top:20px;right:24px;background:none;border:none;color:#fff;font-size:32px;cursor:pointer;z-index:1;">&#x2715;</button>
+        <button onclick="prevSlide(event)" style="position:absolute;left:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:none;color:#fff;font-size:28px;width:50px;height:50px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8249;</button>
+        <button onclick="nextSlide(event)" style="position:absolute;right:20px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.1);border:none;color:#fff;font-size:28px;width:50px;height:50px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;">&#8250;</button>
+        <div style="max-width:860px;width:100%;text-align:center;" onclick="event.stopPropagation()">
+          <img id="lbImg" src="" alt="" style="width:100%;max-height:70vh;object-fit:contain;border-radius:12px;">
+          <div style="margin-top:16px;">
+            <div id="lbTitle" style="font-family:'Montserrat',sans-serif;font-size:18px;font-weight:800;color:#fff;margin-bottom:6px;"></div>
+            <div id="lbSub" style="font-size:13px;color:rgba(255,255,255,.6);"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ══ END GALLERY ══ -->
+
+    <style>
+      .sv-gal-card {border-radius:12px;overflow:hidden;background:#fff;border:1px solid #e2e8f0;cursor:pointer;transition:transform .3s,box-shadow .3s;}
+      .sv-gal-card:hover {transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.1);}
+      .sv-gal-img-wrap {position:relative;overflow:hidden;}
+      .sv-gal-overlay {position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,transparent 50%);opacity:0;transition:opacity .3s;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;}
+      .sv-gal-card:hover .sv-gal-overlay {opacity:1;}
+      .sv-gal-info {padding:14px 16px;}
+      .sv-gal-tab {padding:7px 18px;border-radius:50px;font-size:12px;font-weight:700;cursor:pointer;border:2px solid #e2e8f0;background:#fff;color:#555;transition:all .2s;font-family:'Montserrat',sans-serif;}
+      .sv-gal-tab:hover,.sv-gal-tab.active {background:#0369a1;border-color:#0369a1;color:#fff;}
+      #galLightbox.open {display:flex!important;}
+    </style>
+
+    <script>
+      const _galData = [{"img":"assets/images/project-villa.png","title":"Biệt Thự Cửa Xếp Gấp Q.7","location":"TP. Hồ Chí Minh","system":"Kogen Bi-Fold 68","type":"Biệt thự"},{"img":"assets/images/project-penthouse.png","title":"Penthouse Cửa Trượt Lật","location":"TP. Hồ Chí Minh","system":"Kogen Tilt & Slide","type":"Penthouse"},{"img":"assets/images/project-dalat-villa.png","title":"Villa Đà Lạt Cửa Gấp","location":"Đà Lạt","system":"Kogen Bi-Fold 5 Cánh","type":"Resort"},{"img":"assets/images/hero-interior.png","title":"Căn Hộ Cao Cấp Quận 2","location":"TP. Hồ Chí Minh","system":"Kogen Lùa Slim","type":"Căn hộ"}];
+      let _galIdx = 0;
+      function openLightbox(i) {
+        _galIdx = i; _renderLb();
+        document.getElementById('galLightbox').classList.add('open');
+        document.getElementById('galLightbox').style.display='flex';
+      }
+      function closeLightbox() {
+        document.getElementById('galLightbox').classList.remove('open');
+        document.getElementById('galLightbox').style.display='none';
+      }
+      function _renderLb() {
+        const d = _galData[_galIdx];
+        document.getElementById('lbImg').src = d.img;
+        document.getElementById('lbImg').alt = d.title;
+        document.getElementById('lbTitle').textContent = d.title;
+        document.getElementById('lbSub').textContent = d.location + ' · ' + d.system;
+      }
+      function prevSlide(e) { e.stopPropagation(); _galIdx=(_galIdx-1+_galData.length)%_galData.length; _renderLb(); }
+      function nextSlide(e) { e.stopPropagation(); _galIdx=(_galIdx+1)%_galData.length; _renderLb(); }
+      function filterGallery(btn, type) {
+        document.querySelectorAll('.sv-gal-tab').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.sv-gal-card').forEach(card=>{
+          card.style.display = (type==='all' || card.dataset.type===type) ? '' : 'none';
+        });
+      }
+      document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLightbox(); if(e.key==='ArrowLeft') prevSlide(e); if(e.key==='ArrowRight') nextSlide(e); });
+    </script>
+    <footer class="footer-v2" role="contentinfo">
     <div class="sv-container">
       <div class="footer-v2-grid">
 
