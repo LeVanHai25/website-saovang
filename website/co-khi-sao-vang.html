@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
@@ -362,6 +362,201 @@
       color: var(--sv-gold-600);
     }
     @media (max-width: 900px) {
+      .division-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .division-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .division-card {
+      background: var(--sv-white);
+      border: 1px solid var(--sv-gray-200);
+      border-radius: var(--sv-radius-md);
+      padding: var(--sv-sp-6);
+      box-shadow: var(--sv-shadow-sm);
+      transition: var(--sv-transition);
+      display: flex;
+      flex-direction: column;
+    }
+    .division-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--sv-shadow-md);
+      border-color: rgba(201,162,39,0.3);
+    }
+    .division-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(201,162,39,0.1);
+      border-radius: var(--sv-radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sv-gold-600);
+      font-size: var(--sv-fs-lg);
+      margin-bottom: var(--sv-sp-4);
+      transition: var(--sv-transition);
+    }
+    .division-card:hover .division-icon {
+      background: var(--sv-gold-600);
+      color: var(--sv-white);
+      box-shadow: var(--sv-shadow-gold);
+    }
+    .division-title {
+      font-family: var(--sv-font-head);
+      font-size: var(--sv-fs-md);
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: var(--sv-sp-2);
+    }
+    .division-desc {
+      font-size: var(--sv-fs-sm);
+      color: var(--sv-gray-text);
+      line-height: 1.55;
+      flex-grow: 1;
+      margin-bottom: var(--sv-sp-4);
+    }
+    .division-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--sv-sp-1);
+      color: var(--sv-gold-600);
+      font-family: var(--sv-font-head);
+      font-size: var(--sv-fs-xs);
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: var(--sv-transition);
+    }
+    .division-link:hover {
+      color: var(--sv-gold-500);
+    }
+    .division-link i {
+      transition: transform 0.2s;
+    }
+    .division-link:hover i {
+      transform: translateX(4px);
+    }
+
+    /* Projects Grid */
+    .projects-section {
+      padding-block: var(--sv-section-py);
+      background: var(--sv-white);
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sv-sp-6);
+    }
+    @media (max-width: 900px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Hotline Banner Improvements */
+    .sv-banner-hotline {
+      background: var(--sv-dark-900);
+      color: var(--sv-white);
+      padding-block: var(--sv-sp-12);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    .hotline-banner-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--sv-sp-8);
+      flex-wrap: wrap;
+    }
+    .hotline-banner-text {
+      flex: 1;
+      min-width: 300px;
+    }
+    .hotline-banner-text h3 {
+      font-family: var(--sv-font-head);
+      font-size: var(--sv-fs-xl);
+      font-weight: 800;
+      color: var(--sv-white);
+      margin-bottom: var(--sv-sp-2);
+    }
+    .hotline-banner-text p {
+      font-size: var(--sv-fs-sm);
+      color: rgba(255,255,255,0.7);
+      line-height: var(--sv-leading-relaxed);
+    }
+    .hotline-banner-form {
+      display: flex;
+      gap: var(--sv-sp-3);
+      flex-wrap: wrap;
+      align-items: center;
+      min-width: 320px;
+    }
+    .hotline-banner-form input {
+      padding: var(--sv-sp-3) var(--sv-sp-4);
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.08);
+      color: var(--sv-white);
+      border-radius: var(--sv-radius-md);
+      font-size: var(--sv-fs-sm);
+      width: 220px;
+      transition: all 0.2s;
+    }
+    .hotline-banner-form input:focus {
+      outline: none;
+      border-color: var(--sv-gold-500);
+      background: rgba(255,255,255,0.12);
+    }
+    .hotline-banner-form button {
+      background: var(--sv-gold-500);
+      color: var(--sv-dark-900);
+      padding: var(--sv-sp-3) var(--sv-sp-6);
+      border: none;
+      border-radius: var(--sv-radius-md);
+      font-weight: 700;
+      cursor: pointer;
+      font-size: var(--sv-fs-sm);
+      transition: all 0.2s;
+    }
+    .hotline-banner-form button:hover {
+      background: var(--sv-gold-600);
+      transform: translateY(-1px);
+    }
+    .hotline-banner-action {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      min-width: 200px;
+    }
+    .hotline-lbl {
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: var(--sv-sp-1);
+    }
+    .hotline-num {
+      color: var(--sv-gold-500);
+      font-size: var(--sv-fs-2xl);
+      font-weight: 900;
+      text-decoration: none;
+      font-family: var(--sv-font-head);
+      transition: color 0.2s;
+    }
+    .hotline-num:hover {
+      color: var(--sv-gold-600);
+    }
+    @media (max-width: 900px) {
       .hotline-banner-inner {
         flex-direction: column;
         align-items: flex-start;
@@ -370,6 +565,340 @@
       .hotline-banner-action {
         align-items: flex-start;
       }
+    }
+
+    /* EPCM CSS Overrides */
+    .brand-vision-mission {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sv-sp-6);
+      margin-top: var(--sv-sp-6);
+    }
+    @media (max-width: 900px) {
+      .brand-vision-mission {
+        grid-template-columns: 1fr;
+      }
+    }
+    .brand-vm-card {
+      background: var(--sv-gray-025);
+      border: 1px solid var(--sv-gray-200);
+      padding: var(--sv-sp-5);
+      border-radius: var(--sv-radius-md);
+      transition: var(--sv-transition);
+    }
+    .brand-vm-card:hover {
+      box-shadow: var(--sv-shadow-md);
+      border-color: var(--sv-gold-500);
+    }
+    .brand-vm-title {
+      font-family: var(--sv-font-head);
+      font-size: var(--sv-fs-sm);
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: var(--sv-sp-2);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand-vm-title i {
+      color: var(--sv-gold-600);
+    }
+    .brand-vm-desc {
+      font-size: var(--sv-fs-xs);
+      color: var(--sv-gray-text);
+      line-height: 1.6;
+    }
+
+    /* EPCM Tabs */
+    .epcm-tabs-container {
+      margin-top: var(--sv-sp-6);
+    }
+    .epcm-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: var(--sv-sp-6);
+      flex-wrap: wrap;
+    }
+    .epcm-tab-btn {
+      background: var(--sv-white);
+      border: 1px solid var(--sv-gray-300);
+      padding: 12px 24px;
+      font-family: var(--sv-font-head);
+      font-size: var(--sv-fs-xs);
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      cursor: pointer;
+      border-radius: var(--sv-radius-sm);
+      transition: var(--sv-transition);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .epcm-tab-btn:hover, .epcm-tab-btn.active {
+      background: var(--sv-gold-600);
+      color: var(--sv-white);
+      border-color: var(--sv-gold-600);
+      box-shadow: var(--sv-shadow-gold);
+    }
+    .epcm-tab-content {
+      display: none;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: var(--sv-sp-6);
+      align-items: center;
+      background: var(--sv-white);
+      border: 1px solid var(--sv-gray-200);
+      padding: var(--sv-sp-6);
+      border-radius: var(--sv-radius-md);
+      box-shadow: var(--sv-shadow-sm);
+      animation: sv-fadeIn 0.5s ease;
+    }
+    .epcm-tab-content.active {
+      display: grid;
+    }
+    @media (max-width: 900px) {
+      .epcm-tab-content {
+        grid-template-columns: 1fr;
+      }
+    }
+    .epcm-tab-img {
+      border-radius: var(--sv-radius-md);
+      overflow: hidden;
+      box-shadow: var(--sv-shadow-md);
+    }
+    .epcm-tab-img img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      transition: var(--sv-transition);
+    }
+    .epcm-tab-img:hover img {
+      transform: scale(1.03);
+    }
+    .epcm-features-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 20px;
+      margin-top: var(--sv-sp-4);
+    }
+    @media (max-width: 600px) {
+      .epcm-features-list {
+        grid-template-columns: 1fr;
+      }
+    }
+    .epcm-feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: var(--sv-fs-xs);
+      color: var(--sv-gray-text);
+      line-height: 1.4;
+    }
+    .epcm-feature-item::before {
+      content: '✓';
+      color: var(--sv-gold-600);
+      font-weight: 700;
+    }
+
+    /* Client Segments */
+    .client-segments {
+      padding-block: var(--sv-section-py);
+      background: var(--sv-white);
+    }
+    .segments-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sv-sp-6);
+    }
+    @media (max-width: 900px) {
+      .segments-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .segment-card {
+      border: 1px solid var(--sv-gray-200);
+      border-radius: var(--sv-radius-md);
+      overflow: hidden;
+      box-shadow: var(--sv-shadow-sm);
+      transition: var(--sv-transition);
+    }
+    .segment-card:hover {
+      box-shadow: var(--sv-shadow-md);
+      border-color: rgba(201,162,39,0.2);
+    }
+    .segment-header {
+      background: var(--sv-dark-900);
+      color: var(--sv-white);
+      padding: var(--sv-sp-4);
+      font-family: var(--sv-font-head);
+      font-weight: 700;
+      font-size: var(--sv-fs-md);
+      text-align: center;
+      border-bottom: 2px solid var(--sv-gold-600);
+    }
+    .segment-body {
+      padding: var(--sv-sp-5);
+      background: var(--sv-white);
+    }
+    .segment-desc {
+      font-size: var(--sv-fs-xs);
+      color: var(--sv-gray-text);
+      line-height: 1.6;
+      margin-bottom: var(--sv-sp-4);
+    }
+    .segment-criteria-title {
+      font-family: var(--sv-font-head);
+      font-size: var(--sv-fs-xs);
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: var(--sv-sp-2);
+      border-left: 3px solid var(--sv-gold-600);
+      padding-left: 8px;
+    }
+    .segment-criteria-list {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .segment-criteria-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: var(--sv-fs-xs);
+      color: var(--sv-gray-text);
+    }
+    .segment-criteria-item i {
+      color: var(--sv-gold-600);
+      margin-top: 2px;
+    }
+
+    /* Smart Quote Section */
+    .smart-quote-section {
+      padding-block: var(--sv-section-py);
+      background: var(--sv-dark-900);
+      color: var(--sv-white);
+      position: relative;
+    }
+    .smart-quote-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .smart-quote-form {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      padding: var(--sv-sp-6);
+      border-radius: var(--sv-radius-md);
+      margin-top: var(--sv-sp-4);
+    }
+    .sq-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sv-sp-4);
+      margin-bottom: var(--sv-sp-4);
+    }
+    @media (max-width: 600px) {
+      .sq-form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    .sq-form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .sq-form-group label {
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.7);
+      text-transform: uppercase;
+    }
+    .sq-form-group input, .sq-form-group select, .sq-form-group textarea {
+      padding: var(--sv-sp-3);
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.08);
+      color: var(--sv-white);
+      border-radius: var(--sv-radius-sm);
+      font-size: var(--sv-fs-xs);
+      transition: all 0.2s;
+    }
+    .sq-form-group input:focus, .sq-form-group select:focus, .sq-form-group textarea:focus {
+      outline: none;
+      border-color: var(--sv-gold-500);
+      background: rgba(255,255,255,0.12);
+    }
+    .sq-file-upload-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sq-file-upload-input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+    .sq-file-upload-btn {
+      background: rgba(255,255,255,0.12);
+      border: 1px dashed rgba(255,255,255,0.3);
+      padding: 10px 16px;
+      border-radius: var(--sv-radius-sm);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--sv-white);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .sq-file-name {
+      font-size: 11px;
+      color: rgba(255,255,255,0.5);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 150px;
+    }
+    .sq-nda-wrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-top: 12px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.7);
+    }
+    .sq-nda-wrapper input {
+      margin-top: 2px;
+    }
+    .sq-nda-wrapper a {
+      color: var(--sv-gold-500);
+      text-decoration: none;
+    }
+    .sq-nda-wrapper a:hover {
+      text-decoration: underline;
+    }
+    .sq-btn-submit {
+      background: var(--sv-gold-500);
+      color: var(--sv-dark-900);
+      padding: 14px 28px;
+      border: none;
+      border-radius: var(--sv-radius-sm);
+      font-family: var(--sv-font-head);
+      font-size: var(--sv-fs-xs);
+      font-weight: 700;
+      cursor: pointer;
+      width: 100%;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      transition: var(--sv-transition);
+    }
+    .sq-btn-submit:hover {
+      background: var(--sv-gold-600);
+      box-shadow: var(--sv-shadow-gold);
+    }
+
+    @keyframes sv-fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
@@ -457,18 +986,19 @@
     ════════════════════════════════════════════ -->
     <section class="page-hero" aria-label="Cơ Khí Sao Vàng Hero Banner">
       <div class="page-hero-bg" aria-hidden="true">
-        <img src="assets/images/workshop_cnc.png" alt="Xưởng cơ khí CNC Sao Vàng" />
+        <img src="https://i.pinimg.com/736x/2a/39/fa/2a39fabec655ea7df8a0c2ff665a6a0a.jpg" alt="Xưởng cơ khí CNC Sao Vàng" />
       </div>
       <div class="page-hero-content">
-        <span class="page-hero-tag">Thương Hiệu Thành Viên</span>
+        <span class="page-hero-tag">Giải Pháp EPCM Tổng Thể</span>
         <h1 class="page-hero-title">CƠ KHÍ SAO VÀNG</h1>
-        <p class="page-hero-desc">Kiệt tác gia công cơ khí chính xác CNC kết hợp chế tác nghệ thuật thủ công đỉnh cao cho công trình hạng sang và ngành hàng hải.</p>
+        <p class="page-hero-desc" style="font-weight: 700; text-transform: uppercase; color: var(--sv-gold-500); margin-bottom: 12px; letter-spacing: 0.05em;">Giải Pháp Cơ Khí Toàn Diện — Từ Ý Tưởng Đến Công Trình</p>
+        <p class="page-hero-desc" style="font-size: 15px;">Chúng tôi đồng hành cùng khách hàng từ ý tưởng, thiết kế DFM, sản xuất tại xưởng đến thi công lắp đặt và bảo trì công trình trọn gói (EPCM), loại bỏ mọi rủi ro nhà thầu phụ trung gian.</p>
       </div>
     </section>
 
 
     <!-- ════════════════════════════════════════════
-         SECTION 3: GIỚI THIỆU THƯƠNG HIỆU
+         SECTION 3: GIỚI THIỆU THƯƠNG HIỆU & TẦM NHÌN
     ════════════════════════════════════════════ -->
     <section class="brand-intro" aria-label="Giới thiệu thương hiệu">
       <div class="sv-container">
@@ -476,88 +1006,110 @@
           
           <!-- Text -->
           <div data-sv-reveal>
-            <span class="sv-section-tag">GIA CÔNG TIÊU CHUẨN ĐỨC</span>
-            <h2 class="sv-section-title">Năng Lực Chế Tác Kim Loại Đỉnh Cao</h2>
+            <span class="sv-section-tag">TÁI ĐỊNH VỊ THƯƠNG HIỆU CKSV</span>
+            <h2 class="sv-section-title">Nhà Cung Cấp Giải Phải Cơ Khí Tổng Thể</h2>
             <p style="font-size:var(--sv-fs-md); line-height:1.65; color:var(--sv-gray-text); margin-bottom:var(--sv-sp-4); font-weight:300;">
-              Thành lập năm 2024, **Cơ Khí Sao Vàng** sở hữu hệ thống nhà xưởng hiện đại tại Đường CN 6, KCN Bắc Từ Liêm, Hà Nội. Chúng tôi mang đến giải pháp tổng thể về chế tác kim loại tấm CNC chính xác, rèn đúc kim loại nghệ thuật và gia công phụ kiện inox 316 chuyên dụng cho du thuyền cao cấp.
+              Hiện nay, phần lớn doanh nghiệp cơ khí tại Việt Nam đang giới thiệu năng lực theo cách truyền thống là liệt kê danh sách máy móc và dịch vụ gia công đơn lẻ. Tại **Cơ Khí Sao Vàng (CKSV)**, chúng tôi tin rằng khách hàng không đơn thuần mua thời gian chạy máy CNC mà họ mua một kết quả hoàn chỉnh, tiến độ cam kết và một đầu mối duy nhất chịu trách nhiệm.
             </p>
             <p style="font-size:var(--sv-fs-sm); line-height:1.6; color:var(--sv-gray-text); margin-bottom:var(--sv-sp-6);">
-              Được vận hành bởi đội ngũ kỹ sư cơ khí chính xác giàu kinh nghiệm và thợ nghệ nhân tâm huyết, mỗi sản phẩm ra đời từ xưởng Cơ Khí Sao Vàng không chỉ đạt độ chính xác micromet theo bản vẽ kỹ thuật mà còn mang trọn vẹn giá trị thẩm mỹ, gia tăng vị thế kiến trúc công trình.
+              Vì vậy, CKSV chính thức tái định vị từ một xưởng gia công thông thường thành đơn vị cung cấp giải pháp cơ khí tổng thể theo mô hình chuỗi giá trị khép kín **EPCM (Engineering – Procurement – Construction – Maintenance)**.
             </p>
             <div style="display:flex; gap:16px; flex-wrap:wrap;">
-              <a href="lien-he.html" class="sv-btn sv-btn-gold">TƯ VẤN KỸ THUẬT <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
-              <a href="assets/images/team_engineers.png" target="_blank" class="sv-btn sv-btn-outline-gold">NĂNG LỰC SẢN XUẤT</a>
+              <a href="#quickQuote" class="sv-btn sv-btn-gold">BÁO GIÁ NHANH &amp; NDA <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+              <a href="nang-luc.html" class="sv-btn sv-btn-outline-gold">NĂNG LỰC SẢN XUẤT</a>
             </div>
           </div>
 
           <!-- Image -->
           <div class="intro-image-wrap" data-sv-reveal="right">
-            <img src="assets/images/welding_work.png" alt="Hàn cơ khí chính xác nghệ thuật tại Sao Vàng" />
-            <div class="intro-experience-badge" aria-label="Đội ngũ 20 năm kinh nghiệm">
-              <span class="intro-experience-num">20+</span>
-              <span class="intro-experience-lbl">Năm kinh nghiệm</span>
+            <img src="https://i.pinimg.com/736x/1a/0f/58/1a0f58eb8082697858c8ecb47690fb0a3a.jpg" alt="Mối hàn Inox TIG vảy cá tại Sao Vàng" />
+            <div class="intro-experience-badge" aria-label="Cam kết bảo hành kết cấu 5 năm">
+              <span class="intro-experience-num">5 Năm</span>
+              <span class="intro-experience-lbl">Bảo hành kết cấu</span>
             </div>
           </div>
 
         </div>
+
+        <!-- Vision, Mission & Values subgrid -->
+        <div class="brand-vision-mission">
+          <div class="brand-vm-card">
+            <h3 class="brand-vm-title"><i class="ri-eye-line"></i> Tầm Nhìn</h3>
+            <p class="brand-vm-desc">Trở thành thương hiệu hàng đầu Việt Nam cung cấp giải pháp cơ khí tổng thể cho các công trình công nghiệp quy mô lớn và kiến trúc dân dụng cao cấp, chuẩn hóa chuỗi giá trị EPCM.</p>
+          </div>
+          <div class="brand-vm-card">
+            <h3 class="brand-vm-title"><i class="ri-compass-3-line"></i> Sứ Mệnh</h3>
+            <p class="brand-vm-desc">Đồng hành từ ý tưởng sơ khởi đến khi công trình vận hành an toàn, tối ưu hóa giá trị đầu tư cho khách hàng bằng giải pháp trọn gói kỹ thuật cao và loại bỏ hoàn toàn các rủi ro trung gian.</p>
+          </div>
+          <div class="brand-vm-card">
+            <h3 class="brand-vm-title"><i class="ri-heart-line"></i> Giá Trị Cốt Lõi</h3>
+            <p class="brand-vm-desc">Chính trực (100% CO/CQ, bảo mật NDA), Chuyên nghiệp (AWS, ASME), Tư duy thực chiến (Triết lý DFM tối ưu hóa kết cấu và hao phí phôi), Bền vững lâu dài.</p>
+          </div>
+        </div>
+
       </div>
     </section>
 
 
     <!-- ════════════════════════════════════════════
-         SECTION 4: 6 LĨNH VỰC/DỊCH VỤ CỐT LÕI
+         SECTION 4: 5 LỢI THẾ CẠNH TRANH CỐT LÕI (USPs)
     ════════════════════════════════════════════ -->
-    <section class="division-section" aria-label="Các lĩnh vực hoạt động cơ khí">
+    <section class="division-section" aria-label="Lợi thế cạnh tranh cốt lõi của CKSV">
       <div class="sv-container">
         
         <div style="text-align:center; margin-bottom:var(--sv-sp-8);" data-sv-reveal>
-          <span class="sv-section-tag">CHUYÊN PHÂN KHÚC CAO CẤP</span>
-          <h2 class="sv-section-title" style="margin-inline:auto;">Sản Phẩm &amp; Dịch Vụ Cốt Lõi</h2>
+          <span class="sv-section-tag">TẠI SAO CHỌN CƠ KHÍ SAO VÀNG?</span>
+          <h2 class="sv-section-title" style="margin-inline:auto;">5 Lợi Thế Cạnh Tranh Cốt Lõi (USPs)</h2>
           <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); max-width:600px; margin-inline:auto; margin-top:var(--sv-sp-2);">
-            Chúng tôi tập trung chế tác 6 nhóm sản phẩm dịch vụ thế mạnh để đảm bảo chất lượng tinh xảo nhất đến tay khách hàng.
+            Giữa hàng ngàn doanh nghiệp cơ khí trên thị trường, CKSV tự tin khẳng định những giá trị khác biệt vượt trội sau đây.
           </p>
         </div>
 
-        <div class="division-grid" style="grid-template-columns: repeat(4, 1fr);">
+        <div class="division-grid" style="grid-template-columns: repeat(5, 1fr);">
           
-          <!-- Card 1 -->
+          <!-- USP 1 -->
           <div class="division-card" data-sv-reveal data-sv-delay="1">
             <div class="division-icon" aria-hidden="true">
-              <i class="ri-settings-4-line"></i>
+              <i class="ri-git-merge-line"></i>
             </div>
-            <h3 class="division-title">Gia Công Theo Bản Vẽ</h3>
-            <p class="division-desc">Gia công tiện, phay, bào, cắt laser CNC các loại kim loại tấm, chế tạo chi tiết máy, đồ gá (Jig) chính xác tuyệt đối theo bản vẽ kỹ thuật.</p>
-            <a href="linh-vuc-co-khi.html" class="division-link">Tìm hiểu thêm <i class="ri-arrow-right-line"></i></a>
+            <h3 class="division-title" style="font-size: 14px;">Chuỗi Dịch Vụ Khép Kín EPCM</h3>
+            <p class="division-desc" style="font-size: 12px; line-height: 1.5;">Đảm nhận toàn bộ vòng đời dự án: Khảo sát → Thiết kế DFM → Chế tạo tại xưởng → Thi công lắp dựng → Bảo trì. Khách hàng chỉ làm việc với một đầu mối chịu trách nhiệm duy nhất.</p>
           </div>
 
-          <!-- Card 2 -->
+          <!-- USP 2 -->
           <div class="division-card" data-sv-reveal data-sv-delay="2">
             <div class="division-icon" aria-hidden="true">
-              <i class="ri-shield-flash-line"></i>
+              <i class="ri-pencil-ruler-2-line"></i>
             </div>
-            <h3 class="division-title">Gia Công Inox</h3>
-            <p class="division-desc">Chế tạo chấn, gấp, đột dập, hàn hoàn thiện inox công nghiệp và inox trang trí cao cấp, cam kết độ bóng bề mặt và mối hàn tinh xảo nhất.</p>
-            <a href="linh-vuc-co-khi.html" class="division-link">Tìm hiểu thêm <i class="ri-arrow-right-line"></i></a>
+            <h3 class="division-title" style="font-size: 14px;">Tư Duy Thiết Kế Thực Chiến DFM</h3>
+            <p class="division-desc" style="font-size: 12px; line-height: 1.5;">Ứng dụng thiết kế DFM (Design for Manufacturing) trên SolidWorks/Inventor, chủ động phát hiện lỗi và hiệu chỉnh kết cấu 3D, giúp triệt tiêu 98% sai lệch khi thi công.</p>
           </div>
 
-          <!-- Card 3 -->
+          <!-- USP 3 -->
           <div class="division-card" data-sv-reveal data-sv-delay="3">
-            <div class="division-icon" aria-hidden="true">
-              <i class="ri-building-4-line"></i>
-            </div>
-            <h3 class="division-title">Cơ Khí Công Trình</h3>
-            <p class="division-desc">Sản xuất và lắp dựng kết cấu thép nhà xưởng, nhà thép tiền chế, khung giàn mái che và các hệ kết cấu sắt thép chịu lực lớn phục vụ công trình.</p>
-            <a href="linh-vuc-co-khi.html" class="division-link">Tìm hiểu thêm <i class="ri-arrow-right-line"></i></a>
-          </div>
-
-          <!-- Card 4 -->
-          <div class="division-card" data-sv-reveal data-sv-delay="4">
             <div class="division-icon" aria-hidden="true">
               <i class="ri-tools-line"></i>
             </div>
-            <h3 class="division-title">Chế Tạo &amp; Lắp Ráp</h3>
-            <p class="division-desc">Tổ hợp lắp ráp thiết bị, chế tạo bồn bể áp lực, đường ống công nghiệp, hệ thống giá kệ chứa hàng tải trọng cao cho nhà máy.</p>
-            <a href="linh-vuc-co-khi.html" class="division-link">Tìm hiểu thêm <i class="ri-arrow-right-line"></i></a>
+            <h3 class="division-title" style="font-size: 14px;">Năng Lực Tùy Biến Độc Bản</h3>
+            <p class="division-desc" style="font-size: 12px; line-height: 1.5;">Chúng tôi không bán sản phẩm đại trà có sẵn. CKSV chuyên thiết kế và chế tạo tùy biến hoàn toàn theo đúng nhu cầu và bản vẽ kỹ thuật chi tiết của đối tác.</p>
+          </div>
+
+          <!-- USP 4 -->
+          <div class="division-card" data-sv-reveal data-sv-delay="4">
+            <div class="division-icon" aria-hidden="true">
+              <i class="ri-checkbox-circle-line"></i>
+            </div>
+            <h3 class="division-title" style="font-size: 14px;">Chất Lượng B2B Chuẩn Mực</h3>
+            <p class="division-desc" style="font-size: 12px; line-height: 1.5;">Cam kết 100% phôi vật tư chính hãng có chứng chỉ CO/CQ rõ ràng, mối hàn đạt tiêu chuẩn AWS/ASME, dung sai kiểm soát chặt chẽ qua thiết bị đo kiểm hiện đại.</p>
+          </div>
+
+          <!-- USP 5 -->
+          <div class="division-card" data-sv-reveal data-sv-delay="5">
+            <div class="division-icon" aria-hidden="true">
+              <i class="ri-coins-line"></i>
+            </div>
+            <h3 class="division-title" style="font-size: 14px;">Tối Ưu Hóa Chi Phí Tổng Thể</h3>
+            <p class="division-desc" style="font-size: 12px; line-height: 1.5;">Thông qua khâu thiết kế chịu lực hợp lý tránh dư thừa và tiến độ thi công đồng bộ nhanh hơn 20%, giúp dự án sớm đưa vào khai thác và tối ưu hóa tổng chi phí.</p>
           </div>
 
         </div>
@@ -566,7 +1118,189 @@
 
 
     <!-- ════════════════════════════════════════════
-         SECTION 5: DỰ ÁN CƠ KHÍ TIÊU BIỂU
+         SECTION 5: 4 TRỤ CỘT NĂNG LỰC DỊCH VỤ (EPCM)
+    ════════════════════════════════════════════ -->
+    <section class="division-section" style="background: var(--sv-white);" aria-label="4 trụ cột năng lực hoạt động">
+      <div class="sv-container">
+        
+        <div style="text-align:center; margin-bottom:var(--sv-sp-8);" data-sv-reveal>
+          <span class="sv-section-tag">NĂNG LỰC HÀNH ĐỘNG</span>
+          <h2 class="sv-section-title" style="margin-inline:auto;">4 Trụ Cột Năng Lực Dịch Vụ</h2>
+          <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); max-width:600px; margin-inline:auto; margin-top:var(--sv-sp-2);">
+            Cơ cấu năng lực của CKSV được tổ chức chặt chẽ theo 4 mảng chiến lược đại diện cho chuỗi giá trị đầy đủ của một dự án cơ khí hiện đại.
+          </p>
+        </div>
+
+        <div class="epcm-tabs-container">
+          <!-- Tab Buttons -->
+          <div class="epcm-tabs">
+            <button class="epcm-tab-btn active" data-tab="tab-engineering">01. Engineering (Kỹ Thuật)</button>
+            <button class="epcm-tab-btn" data-tab="tab-manufacturing">02. Manufacturing (Gia Công)</button>
+            <button class="epcm-tab-btn" data-tab="tab-installation">03. Installation (Thi Công)</button>
+            <button class="epcm-tab-btn" data-tab="tab-maintenance">04. Maintenance (Bảo Trì)</button>
+          </div>
+
+          <!-- Tab Content 1 -->
+          <div class="epcm-tab-content active" id="tab-engineering">
+            <div>
+              <h3 class="sv-section-title" style="font-size: 24px; text-align: left; margin-bottom: var(--sv-sp-4);">Trụ Cột 01: Engineering Services (Kỹ Thuật &amp; Thiết Kế)</h3>
+              <p style="font-size:var(--sv-fs-sm); line-height:1.6; color:var(--sv-gray-text); margin-bottom:var(--sv-sp-4);">
+                Đây là giai đoạn khởi đầu quyết định sự thành bại và tính kinh tế của dự án. Chúng tôi biến mọi ý tưởng sơ khởi của đối tác thành giải pháp kỹ thuật có tính khả thi cao trước khi đưa vào sản xuất hàng loạt.
+              </p>
+              <div class="epcm-features-list">
+                <span class="epcm-feature-item">Khảo sát &amp; đo đạc hiện trạng laser 3D</span>
+                <span class="epcm-feature-item">Tư vấn giải pháp kỹ thuật tối ưu hóa kết cấu</span>
+                <span class="epcm-feature-item">Thiết kế kỹ thuật 2D/3D SolidWorks, Inventor</span>
+                <span class="epcm-feature-item">Triển khai bản vẽ Shop Drawing định hướng DFM</span>
+                <span class="epcm-feature-item">Phân tích chịu lực &amp; mô phỏng ứng suất FEA</span>
+                <span class="epcm-feature-item">Bóc tách khối lượng BOM vật tư chuẩn xác</span>
+              </div>
+            </div>
+            <div class="epcm-tab-img">
+              <img src="https://i.pinimg.com/736x/88/a4/09/88a409e51c89f53835cc988d451e5e6e3c.jpg" alt="Thiết kế cơ khí Solidworks DFM tại Sao Vàng" />
+            </div>
+          </div>
+
+          <!-- Tab Content 2 -->
+          <div class="epcm-tab-content" id="tab-manufacturing">
+            <div>
+              <h3 class="sv-section-title" style="font-size: 24px; text-align: left; margin-bottom: var(--sv-sp-4);">Trụ Cột 02: Manufacturing Services (Gia Công &amp; Chế Tạo)</h3>
+              <p style="font-size:var(--sv-fs-sm); line-height:1.6; color:var(--sv-gray-text); margin-bottom:var(--sv-sp-4);">
+                Sơ hữu hệ thống nhà xưởng hiện đại cùng trang thiết bị CNC đồng bộ kết hợp tay nghề thủ công tinh xảo, chúng tôi sản xuất chính xác từng micromet, đáp ứng các yêu cầu khắt khe của đối tác B2B.
+              </p>
+              <div class="epcm-features-list">
+                <span class="epcm-feature-item">Gia công cơ khí chính xác phay, tiện CNC</span>
+                <span class="epcm-feature-item">Cắt laser fiber kim loại tấm, inox, nhôm</span>
+                <span class="epcm-feature-item">Chấn gấp thủy lực CNC độ chính xác cao</span>
+                <span class="epcm-feature-item">Chế tạo dầm thép nhà tiền chế, kết cấu chịu lực</span>
+                <span class="epcm-feature-item">Gia công Inox 316L Marine Grade chuyên dụng du thuyền</span>
+                <span class="epcm-feature-item">Sản xuất OEM/ODM vỏ máy, jig gá số lượng lớn</span>
+              </div>
+            </div>
+            <div class="epcm-tab-img">
+              <img src="https://i.pinimg.com/736x/2a/39/fa/2a39fabec655ea7df8a0c2ff665a6a0a.jpg" alt="Đầu cắt laser fiber CNC gia công tấm" />
+            </div>
+          </div>
+
+          <!-- Tab Content 3 -->
+          <div class="epcm-tab-content" id="tab-installation">
+            <div>
+              <h3 class="sv-section-title" style="font-size: 24px; text-align: left; margin-bottom: var(--sv-sp-4);">Trụ Cột 03: Installation Services (Thi Công &amp; Lắp Đặt)</h3>
+              <p style="font-size:var(--sv-fs-sm); line-height:1.6; color:var(--sv-gray-text); margin-bottom:var(--sv-sp-4);">
+                Đội ngũ kỹ thuật thi công lành nghề trực tiếp lắp dựng an toàn tại hiện trường bằng thiết bị cẩu nâng chuyên dụng, cam kết lực xiết bu-lông, độ thăng bằng phẳng và nghiệm thu chất lượng chuẩn mực.
+              </p>
+              <div class="epcm-features-list">
+                <span class="epcm-feature-item">Lắp dựng kết cấu thép dầm cột nhà xưởng</span>
+                <span class="epcm-feature-item">Thi công cầu thang xoắn ốc thép bản Penthouse biệt thự</span>
+                <span class="epcm-feature-item">Lắp đặt vách kính mặt dựng Unitized, cabin tắm mạ vàng</span>
+                <span class="epcm-feature-item">Định vị cân chỉnh đồng tâm băng tải, thiết bị bồn bể</span>
+                <span class="epcm-feature-item">Đo đạc kiểm thử độ võng kết cấu</span>
+                <span class="epcm-feature-item">Nghiệm thu kiểm thử mối hàn không phá hủy NDT</span>
+              </div>
+            </div>
+            <div class="epcm-tab-img">
+              <img src="https://i.pinimg.com/736x/0d/16/a6/0d16a6cb8f1b6269b61dbdbef7bc9f1a2.jpg" alt="Thi công kết cấu thép ngoài hiện trường" />
+            </div>
+          </div>
+
+          <!-- Tab Content 4 -->
+          <div class="epcm-tab-content" id="tab-maintenance">
+            <div>
+              <h3 class="sv-section-title" style="font-size: 24px; text-align: left; margin-bottom: var(--sv-sp-4);">Trụ Cột 04: Maintenance Services (Bảo Trì &amp; Vận Hành)</h3>
+              <p style="font-size:var(--sv-fs-sm); line-height:1.6; color:var(--sv-gray-text); margin-bottom:var(--sv-sp-4);">
+                Sự đồng hành của CKSV không dừng lại sau khi bàn giao nghiệm thu. Chúng tôi cung cấp chính sách bảo trì vận hành dài lâu giúp bảo vệ tuyệt đối giá trị đầu tư của đối tác qua thời gian.
+              </p>
+              <div class="epcm-features-list">
+                <span class="epcm-feature-item">Kiểm tra định kỳ độ võng kết cấu thép</span>
+                <span class="epcm-feature-item">Đo kiểm tra an toàn áp lực bồn bể chứa hóa chất</span>
+                <span class="epcm-feature-item">Bảo dưỡng, bôi trơn con lăn hệ thống băng tải</span>
+                <span class="epcm-feature-item">Xử lý khẩn cấp sự cố hư hỏng mối hàn trong 24 giờ</span>
+                <span class="epcm-feature-item">Tính toán gia cường, cải tạo nâng tải trọng khung thép</span>
+                <span class="epcm-feature-item">Cải tạo hệ thống đường ống công nghệ nhà máy</span>
+              </div>
+            </div>
+            <div class="epcm-tab-img">
+              <img src="https://i.pinimg.com/736x/2e/ab/cc/2eabcc08a80808047ce561c28cdeaa31.jpg" alt="Inox du thuyền 316L hàng hải" />
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Tab Interactive Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const tabBtns = document.querySelectorAll('.epcm-tab-btn');
+        const tabContents = document.querySelectorAll('.epcm-tab-content');
+        
+        tabBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            const targetId = btn.getAttribute('data-tab');
+            
+            tabBtns.forEach(b => b.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+            
+            btn.classList.add('active');
+            document.getElementById(targetId).classList.add('active');
+          });
+        });
+      });
+    </script>
+
+
+    <!-- ════════════════════════════════════════════
+         SECTION 5.5: CHIẾN LƯỢC PHÂN TÁCH ĐỐI TƯỢNG KHÁCH HÀNG
+    ════════════════════════════════════════════ -->
+    <section class="client-segments" aria-label="Phân tách phân khúc khách hàng">
+      <div class="sv-container">
+        
+        <div style="text-align:center; margin-bottom:var(--sv-sp-8);" data-sv-reveal>
+          <span class="sv-section-tag">TIẾP CẬN CHUYÊN BIỆT</span>
+          <h2 class="sv-section-title" style="margin-inline:auto;">Giải Pháp Chuyên Biệt Cho Từng Phân Khúc</h2>
+          <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); max-width:600px; margin-inline:auto; margin-top:var(--sv-sp-2);">
+            Chúng tôi hiểu rằng mỗi nhóm đối tượng khách hàng có những yêu cầu khắt khe khác nhau về mặt kỹ thuật và tính thẩm mỹ.
+          </p>
+        </div>
+
+        <div class="segments-grid">
+          <!-- Segment 1: B2B Project & Industrial -->
+          <div class="segment-card" data-sv-reveal>
+            <div class="segment-header">Khách Hàng Dự Án &amp; Công Nghiệp (B2B)</div>
+            <div class="segment-body">
+              <p class="segment-desc">Dành cho các Tổng thầu xây dựng lớn, Chủ đầu tư dự án công nghiệp, nhà máy FDI (Nhật Bản, Hàn Quốc, Đài Loan...) và các đơn vị vận hành hàng hải, cảng biển.</p>
+              <div class="segment-criteria-title">Tiêu chí quyết định mua hàng:</div>
+              <div class="segment-criteria-list">
+                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Năng lực pháp lý, hồ sơ đấu thầu và chứng chỉ hành nghề</span>
+                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Chứng chỉ vật liệu đầu vào chính gốc (100% CO/CQ)</span>
+                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Tiêu chuẩn kỹ thuật hàn quốc tế AWS, ASME và kiểm soát dung sai</span>
+                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Cam kết đúng tiến độ dự án và bảo hành kết cấu lâu dài</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Segment 2: B2C Architecture & Residential -->
+          <div class="segment-card" data-sv-reveal data-sv-delay="1">
+            <div class="segment-header">Khách Hàng Kiến Trúc &amp; Dân Dụng (B2C &amp; B2B2C)</div>
+            <div class="segment-body">
+              <p class="segment-desc">Dành cho Chủ biệt thự lâu đài hạng sang, các Kiến trúc sư thiết kế nội/ngoại thất, và các Nhà thầu xây dựng nhà dân dụng cao cấp.</p>
+              <div class="segment-criteria-title">Tiêu chí quyết định mua hàng:</div>
+              <div class="segment-criteria-list">
+                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Tính thẩm mỹ tinh xảo, độ uốn lượn uốn cong mượt mà độc bản</span>
+                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Chất lượng hoàn thiện bề mặt (đánh bóng gương, mối hàn vô hình)</span>
+                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Sự phối hợp hài hòa đa vật liệu (thép rèn, inox PVD, kính cường lực)</span>
+                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Thương hiệu uy tín, có hồ sơ các công trình cao cấp thực tế</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════
+         SECTION 6: DỰ ÁN CƠ KHÍ TIÊU BIỂU
     ════════════════════════════════════════════ -->
     <section class="projects-section" aria-label="Dự án cơ khí tiêu biểu">
       <div class="sv-container">
@@ -584,23 +1318,23 @@
           <!-- Dự án 1 -->
           <article class="project-card" data-category="cokhi" data-sv-reveal data-sv-delay="1">
             <div class="project-card-image">
-              <img src="assets/images/project-mansion-gate.png" alt="Cổng nhôm đúc biệt thự lâu đài Vinhomes" loading="lazy" />
+              <img src="https://i.pinimg.com/736x/0d/16/a6/0d16a6cb8f1b6269b61dbdbef7bc9f1a2.jpg" alt="Cẩu dựng khung kết cấu thép nhà xưởng" loading="lazy" />
               <div class="project-card-overlay">
                 <span class="project-card-view-lbl">Xem chi tiết <i class="ri-arrow-right-line" aria-hidden="true"></i></span>
               </div>
             </div>
             <div class="project-card-info">
-              <span class="project-card-cat">Cổng Nhôm Đúc</span>
-              <h3 class="project-card-title">Cổng Đúc Biệt Thự Hoàng Gia</h3>
-              <p class="project-card-desc">Lâu đài tân cổ điển cao cấp, KĐT Vinhomes Riverside Hà Nội.</p>
-              <a href="du-an-chi-tiet.html" class="project-card-link" aria-label="Xem dự án Cổng Đúc Biệt Thự"></a>
+              <span class="project-card-cat">Kết Cấu Thép</span>
+              <h3 class="project-card-title">Kết Cấu Thép Khung Nhà Xưởng FDI</h3>
+              <p class="project-card-desc">Lắp dựng hệ dầm cột chịu tải cho nhà máy sản xuất công nghiệp.</p>
+              <a href="du-an-chi-tiet.html" class="project-card-link" aria-label="Xem dự án Kết cấu thép nhà xưởng"></a>
             </div>
           </article>
 
           <!-- Dự án 2 -->
           <article class="project-card" data-category="cokhi" data-sv-reveal data-sv-delay="2">
             <div class="project-card-image">
-              <img src="assets/images/project-yacht.png" alt="Inox lan can du thuyền Marina 316" loading="lazy" />
+              <img src="https://i.pinimg.com/736x/2e/ab/cc/2eabcc08a80808047ce561c28cdeaa31.jpg" alt="Inox lan can du thuyền Marina 316" loading="lazy" />
               <div class="project-card-overlay">
                 <span class="project-card-view-lbl">Xem chi tiết <i class="ri-arrow-right-line" aria-hidden="true"></i></span>
               </div>
@@ -608,7 +1342,7 @@
             <div class="project-card-info">
               <span class="project-card-cat">Inox Hàng Hải</span>
               <h3 class="project-card-title">Hệ Lan Can Inox Du Thuyền 316L</h3>
-              <p class="project-card-desc">Gia công chế tác gương bóng gương cho đội tàu du lịch Vịnh Hạ Long.</p>
+              <p class="project-card-desc">Gia công chế tác và đánh bóng gương lan can du thuyền kháng ăn mòn muối biển.</p>
               <a href="du-an-chi-tiet.html" class="project-card-link" aria-label="Xem dự án Inox Du Thuyền"></a>
             </div>
           </article>
@@ -616,15 +1350,15 @@
           <!-- Dự án 3 -->
           <article class="project-card" data-category="cokhi" data-sv-reveal data-sv-delay="3">
             <div class="project-card-image">
-              <img src="assets/images/service-artistic-stairs.png" alt="Cầu thang xoắn ốc thép bản CNC nghệ thuật" loading="lazy" />
+              <img src="https://i.pinimg.com/736x/fa/69/cf/fa69cf2418241829e15ce6e3c8872e42.jpg" alt="Cầu thang xoắn ốc thép bản CNC nghệ thuật" loading="lazy" />
               <div class="project-card-overlay">
                 <span class="project-card-view-lbl">Xem chi tiết <i class="ri-arrow-right-line" aria-hidden="true"></i></span>
               </div>
             </div>
             <div class="project-card-info">
               <span class="project-card-cat">Cầu Thang Xoắn</span>
-              <h3 class="project-card-title">Cầu Thang Thép Bản Bản Xoắn Ốc</h3>
-              <p class="project-card-desc">Thiết kế uốn cong xoắn ốc độc bản cho Penthouse Ecopark.</p>
+              <h3 class="project-card-title">Cầu Thang Thép Bản Xoắn Ốc Penthouse</h3>
+              <p class="project-card-desc">Thiết kế rèn uốn cong xoắn nghệ thuật tạo điểm nhấn cho không gian sang trọng.</p>
               <a href="du-an-chi-tiet.html" class="project-card-link" aria-label="Xem dự án Cầu Thang Xoắn Penthouse"></a>
             </div>
           </article>
@@ -635,30 +1369,137 @@
 
 
     <!-- ════════════════════════════════════════════
-         SECTION 6: HOTLINE BANNER
+         SECTION 7: SMART QUOTE & NDA FORM
     ════════════════════════════════════════════ -->
-    <section class="sv-banner-hotline" aria-label="Liên hệ tư vấn cơ khí">
+    <section class="smart-quote-section" id="quickQuote" aria-label="Yêu cầu báo giá nhanh và cam kết bảo mật NDA">
       <div class="sv-container">
-        <div class="hotline-banner-inner">
-          <div class="hotline-banner-text">
-            <h3>Bạn Cần Chế Tác Kim Loại Theo Bản Vẽ Kỹ Thuật?</h3>
-            <p>Liên hệ ngay bộ phận kỹ sư Cơ Khí Sao Vàng để nhận báo giá chi tiết và tư vấn thiết kế miễn phí.</p>
+        <div class="smart-quote-container">
+          
+          <div style="text-align:center; margin-bottom:var(--sv-sp-6);">
+            <span class="sv-section-tag" style="color: var(--sv-gold-500);">YÊU CẦU BÁO GIÁ THÔNG MINH</span>
+            <h2 class="sv-section-title" style="color: var(--sv-white); margin-inline:auto;">Gửi Bản Vẽ — Nhận Báo Giá Kèm Cam Kết Bảo Mật NDA</h2>
+            <p style="font-size:var(--sv-fs-sm); color:rgba(255,255,255,0.7); max-width:620px; margin-inline:auto; margin-top:var(--sv-sp-2); font-weight: 300;">
+              CKSV cam kết bảo vệ tuyệt đối bản vẽ công nghệ độc quyền của khách hàng. Hãy tải lên file thiết kế (.dwg, .dxf, .step, .pdf, .zip), đội ngũ kỹ sư của chúng tôi sẽ phản hồi báo giá chi tiết và tư vấn DFM trong vòng 24 giờ.
+            </p>
           </div>
-          <div class="hotline-banner-form">
-            <form id="coKhiCallbackForm" onsubmit="handleBannerSubmit(event, 'coKhiCallbackInput', 'Banner Cơ Khí')" style="display: flex; gap: 10px; width: 100%;">
-              <input type="tel" id="coKhiCallbackInput" placeholder="Số điện thoại của bạn..." required />
-              <button type="submit">Gửi Ngay</button>
-            </form>
-          </div>
-          <div class="hotline-banner-action">
-            <span class="hotline-lbl">ĐƯỜNG DÂY NÓNG TƯ VẤN KỸ THUẬT</span>
-            <a href="tel:0869590279" class="hotline-num">0869 590 279</a>
-          </div>
+
+          <form class="smart-quote-form" id="smartQuoteForm" enctype="multipart/form-data">
+            <div class="sq-form-row">
+              <div class="sq-form-group">
+                <label for="sqName">Họ và Tên / Tên Doanh Nghiệp *</label>
+                <input type="text" id="sqName" name="name" required placeholder="Ví dụ: Công ty Cổ phần A" />
+              </div>
+              <div class="sq-form-group">
+                <label for="sqPhone">Số Điện Thoại Liên Hệ *</label>
+                <input type="tel" id="sqPhone" name="phone" required placeholder="Ví dụ: 0912345678" />
+              </div>
+            </div>
+
+            <div class="sq-form-row">
+              <div class="sq-form-group">
+                <label for="sqEmail">Địa Chỉ Email *</label>
+                <input type="email" id="sqEmail" name="email" required placeholder="Ví dụ: contact@company.com" />
+              </div>
+              <div class="sq-form-group">
+                <label for="sqPillar">Dịch Vụ Quan Tâm</label>
+                <select id="sqPillar" name="pillar">
+                  <option value="engineering">Engineering (Thiết kế Shop Drawing, FEA uốn kéo)</option>
+                  <option value="manufacturing">Manufacturing (Gia công CNC, Kim loại tấm, Cắt Laser)</option>
+                  <option value="installation">Installation (Lắp dựng Kết cấu thép, Cầu thang xoắn, Kính)</option>
+                  <option value="maintenance">Maintenance (Bảo trì kết cấu định kỳ, Sửa chữa khẩn cấp)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="sq-form-row">
+              <div class="sq-form-group">
+                <label for="sqMessage">Yêu Cầu Chi Tiết (Mác vật liệu, Dung sai, Độ dày sơn...)</label>
+                <textarea id="sqMessage" name="message" rows="3" placeholder="Mô tả sơ bộ các yêu cầu kỹ thuật đặc thù của dự án..."></textarea>
+              </div>
+              <div class="sq-form-group" style="justify-content: flex-end;">
+                <label>Đính Kèm Bản Vẽ Kỹ Thuật (Tối đa 20MB)</label>
+                <div class="sq-file-upload-wrapper">
+                  <input type="file" id="sqFile" name="attachment" class="sq-file-upload-input" accept=".pdf,.dwg,.dxf,.step,.zip,.rar" />
+                  <div class="sq-file-upload-btn">
+                    <i class="ri-upload-cloud-2-line"></i> Tải bản vẽ lên...
+                  </div>
+                  <span class="sq-file-name" id="sqFileName">Chưa có file nào được chọn</span>
+                </div>
+                <div class="sq-nda-wrapper">
+                  <input type="checkbox" id="sqNda" required checked />
+                  <label for="sqNda">Tôi yêu cầu ký kết thỏa thuận bảo mật <a href="chinh-sach-bao-mat.html" target="_blank">NDA</a> trước khi gửi thông tin chi tiết.</label>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 24px;">
+              <button type="submit" class="sq-btn-submit">Gửi Bản Vẽ &amp; Nhận Báo Giá DFM Trong 24 Giờ</button>
+            </div>
+            
+            <div id="sqAlert" style="margin-top: 16px; padding: 12px; border-radius: 4px; display: none; font-size: 13px; text-align: center;"></div>
+          </form>
+
         </div>
       </div>
     </section>
 
-  </main>
+    <!-- File name selection and Form submit logic -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const fileInput = document.getElementById('sqFile');
+        const fileNameSpan = document.getElementById('sqFileName');
+        
+        if (fileInput && fileNameSpan) {
+          fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+              fileNameSpan.textContent = e.target.files[0].name;
+            } else {
+              fileNameSpan.textContent = "Chưa có file nào được chọn";
+            }
+          });
+        }
+        
+        const form = document.getElementById('smartQuoteForm');
+        const alertBox = document.getElementById('sqAlert');
+        
+        if (form) {
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            if (!alertBox) return;
+            
+            alertBox.style.display = 'block';
+            alertBox.style.background = '#fef3c7';
+            alertBox.style.color = '#92400e';
+            alertBox.textContent = 'Đang mã hóa dữ liệu bản vẽ và truyền tải bảo mật...';
+            
+            const formData = new FormData(form);
+            formData.append('source', 'Form Báo giá Thông minh CKSV');
+            
+            try {
+              const response = await fetch('/api/contact', {
+                method: 'POST',
+                body: formData
+              });
+              const result = await response.json();
+              if (response.ok) {
+                alertBox.style.background = '#d1fae5';
+                alertBox.style.color = '#065f46';
+                alertBox.textContent = 'Gửi dữ liệu thành công! Cam kết NDA đã được kích hoạt. Bộ phận kỹ sư sẽ gửi phản hồi báo giá DFM trong 24 giờ.';
+                form.reset();
+                fileNameSpan.textContent = "Chưa có file nào được chọn";
+              } else {
+                throw new Error(result.error || 'Có lỗi phát sinh khi truyền tải dữ liệu.');
+              }
+            } catch (err) {
+              alertBox.style.background = '#fee2e2';
+              alertBox.style.color = '#991b1b';
+              alertBox.textContent = err.message || 'Lỗi kết nối máy chủ, vui lòng liên hệ hotline 0869 590 279.';
+            }
+          });
+        }
+      });
+    </script>
+</main>
 
   <!-- ════════════════════════════════════════════
        SECTION 10: FOOTER
