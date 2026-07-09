@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#9B1C1C" />
+  <title>Portfolio Nhôm Kính — Dự Án Thực Tế Sao Vàng | Cơ Khí Sao Vàng</title>
+  <meta name="description" content="Khám phá 20+ dự án nhôm kính thực tế của Sao Vàng: biệt thự, penthouse, resort, nhà phố. Đầy đủ hình ảnh, hệ nhôm sử dụng và thông tin công trình." />
+  <meta name="keywords" content="dự án nhôm kính, công trình cửa nhôm, portfolio nhôm sao vàng, biệt thự nhôm xingfa, cửa nhôm thực tế" />
+  <link rel="canonical" href="https://www.CoKhiSaoVang.com/du-an-nhom.html" />
+  <meta property="og:title" content="Portfolio Nhôm Kính — Sao Vàng" />
+  <meta property="og:description" content="20+ công trình nhôm kính thực tế: biệt thự, penthouse, resort cao cấp tại TP.HCM, Đà Lạt, Phú Quốc." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/project-villa.png" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    /* ── Hero ── */
+    .portfolio-hero {
+      position: relative;
+      min-height: 55vh;
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; overflow: hidden;
+      background: linear-gradient(135deg, #0f1923 0%, #1a2940 60%, #0d1f30 100%);
+    }
+    .portfolio-hero-bg {
+      position: absolute; inset: 0;
+      background: url('assets/images/project-villa.png') center/cover no-repeat;
+      opacity: 0.25;
+    }
+    .portfolio-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(15,25,35,.4) 0%, rgba(15,25,35,.8) 100%);
+    }
+    .portfolio-hero-content { position: relative; z-index: 2; padding: 0 24px; }
+    .hero-badge {
+      display: inline-block; background: #9B1C1C; color: #fff;
+      font-size: 10px; font-weight: 800; letter-spacing: .18em;
+      padding: 5px 16px; border-radius: 20px; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .hero-title {
+      font-family: 'Montserrat', sans-serif; font-size: clamp(30px,6vw,58px);
+      font-weight: 900; color: #fff; line-height: 1.1; margin-bottom: 16px;
+      text-shadow: 0 4px 20px rgba(0,0,0,.5);
+    }
+    .hero-title span { color: #f5c842; }
+    .hero-desc { font-size: clamp(13px,2vw,16px); color: rgba(255,255,255,.75); max-width: 580px; margin: 0 auto 32px; line-height: 1.6; }
+    .hero-stats { display: flex; gap: 32px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+    .hero-stat { text-align: center; }
+    .hero-stat-num { font-family: 'Montserrat', sans-serif; font-size: 32px; font-weight: 900; color: #f5c842; line-height: 1; }
+    .hero-stat-label { font-size: 11px; color: rgba(255,255,255,.6); text-transform: uppercase; letter-spacing: .08em; margin-top: 4px; }
+
+    /* ── Filter Bar ── */
+    .filter-bar {
+      background: #fff; border-bottom: 1px solid #e2e8f0;
+      padding: 20px 0; position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    .filter-bar-inner {
+      max-width: 1280px; margin: 0 auto; padding-inline: 24px;
+      display: flex; gap: 10px; flex-wrap: wrap; align-items: center;
+    }
+    .filter-label { font-size: 11px; font-weight: 800; color: #9b1c1c; text-transform: uppercase; letter-spacing: .08em; margin-right: 4px; }
+    .f-btn {
+      padding: 7px 18px; border-radius: 50px; font-size: 12px; font-weight: 700;
+      cursor: pointer; border: 2px solid #e2e8f0; background: #fff; color: #555;
+      transition: all .2s; font-family: 'Montserrat', sans-serif;
+    }
+    .f-btn:hover { border-color: #9b1c1c; color: #9b1c1c; }
+    .f-btn.active { background: #9b1c1c; border-color: #9b1c1c; color: #fff; }
+    .filter-sep { width: 1px; height: 28px; background: #e2e8f0; margin: 0 4px; }
+
+    /* ── Projects Grid ── */
+    .projects-section { background: #f8fafc; padding: 60px 0 80px; }
+    .projects-inner { max-width: 1280px; margin: 0 auto; padding-inline: 24px; }
+    .results-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
+    .results-count { font-size: 13px; color: #64748b; font-weight: 600; }
+    .results-count strong { color: #9b1c1c; }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    /* ── Project Card ── */
+    .proj-card {
+      background: #fff; border-radius: 16px; overflow: hidden;
+      border: 1px solid #e2e8f0; cursor: pointer;
+      transition: transform .3s, box-shadow .3s;
+    }
+    .proj-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,.1); }
+    .proj-card-img { position: relative; overflow: hidden; }
+    .proj-card-img img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform .5s; }
+    .proj-card:hover .proj-card-img img { transform: scale(1.06); }
+    .proj-card-badges {
+      position: absolute; top: 14px; left: 14px;
+      display: flex; gap: 6px; flex-wrap: wrap;
+    }
+    .badge-type {
+      font-size: 10px; font-weight: 800; padding: 3px 10px; border-radius: 20px;
+      color: #fff; text-transform: uppercase; letter-spacing: .05em;
+    }
+    .badge-brand {
+      font-size: 10px; font-weight: 800; padding: 3px 10px; border-radius: 20px;
+      background: rgba(255,255,255,.15); backdrop-filter: blur(8px);
+      color: #fff; border: 1px solid rgba(255,255,255,.3);
+    }
+    .proj-card-body { padding: 20px; }
+    .proj-card-title {
+      font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 800;
+      color: #1a2940; margin-bottom: 6px; line-height: 1.3;
+    }
+    .proj-card-meta { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 12px; }
+    .proj-meta-item { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #64748b; }
+    .proj-meta-item i { font-size: 13px; }
+    .proj-card-system {
+      font-size: 12px; font-weight: 700; color: #9b1c1c;
+      background: #fef2f2; padding: 5px 12px; border-radius: 8px; display: inline-block;
+    }
+    .proj-card-cta {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 800; color: #9b1c1c; margin-top: 14px;
+      border: none; background: none; cursor: pointer; padding: 0; font-family: 'Montserrat', sans-serif;
+    }
+    .no-results { text-align: center; padding: 80px 20px; color: #94a3b8; display: none; }
+
+    /* ── Side Drawer ── */
+    .drawer-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 500; opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .drawer-overlay.open { opacity: 1; pointer-events: all; }
+    .drawer-panel {
+      position: fixed; top: 0; right: 0; bottom: 0; width: min(520px, 100%);
+      background: #fff; z-index: 501; transform: translateX(100%);
+      transition: transform .35s cubic-bezier(.4,0,.2,1); overflow-y: auto;
+      box-shadow: -20px 0 60px rgba(0,0,0,.15);
+    }
+    .drawer-panel.open { transform: translateX(0); }
+    .drawer-header {
+      position: sticky; top: 0; background: #fff; border-bottom: 1px solid #e2e8f0;
+      padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; z-index: 10;
+    }
+    .drawer-title { font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 800; color: #1a2940; }
+    .drawer-close { background: #f1f5f9; border: none; width: 36px; height: 36px; border-radius: 50%; cursor: pointer; font-size: 18px; display: flex; align-items: center; justify-content: center; color: #64748b; }
+    .drawer-img { width: 100%; height: 260px; object-fit: cover; }
+    .drawer-body { padding: 24px; }
+    .drawer-badge-row { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+    .drawer-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+    .drawer-info-item { background: #f8fafc; border-radius: 10px; padding: 12px; }
+    .drawer-info-label { font-size: 10px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 4px; }
+    .drawer-info-value { font-size: 14px; font-weight: 700; color: #1a2940; }
+    .drawer-desc { font-size: 13px; color: #374151; line-height: 1.65; margin-bottom: 24px; }
+    .drawer-brand-link {
+      display: flex; align-items: center; justify-content: space-between;
+      background: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 14px 16px;
+      text-decoration: none; color: #9b1c1c; font-weight: 800; font-size: 13px;
+      font-family: 'Montserrat', sans-serif; transition: background .2s;
+    }
+    .drawer-brand-link:hover { background: #fee2e2; }
+    .drawer-cta-row { margin-top: 16px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .btn-primary-drawer {
+      background: #9b1c1c; color: #fff; font-family: 'Montserrat', sans-serif;
+      font-size: 13px; font-weight: 800; padding: 12px; border-radius: 10px;
+      border: none; cursor: pointer; text-align: center; text-decoration: none;
+      display: block; transition: opacity .2s;
+    }
+    .btn-primary-drawer:hover { opacity: .85; }
+    .btn-outline-drawer {
+      background: #fff; color: #9b1c1c; border: 2px solid #9b1c1c;
+      font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 800;
+      padding: 12px; border-radius: 10px; cursor: pointer; text-align: center;
+      text-decoration: none; display: block; transition: all .2s;
+    }
+    .btn-outline-drawer:hover { background: #fef2f2; }
+
+    @media (max-width: 640px) {
+      .projects-grid { grid-template-columns: 1fr; }
+      .filter-bar-inner { gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV: injected from index.html by script -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Điều hướng chính">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Trang chủ Sao Vàng">
+      <img src="assets/images/logo-sv-main.svg" width="140" height="42" fetchpriority="high" loading="eager" alt="Logo Sao Vàng" />
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="index.html">Trang Chủ</a></li>
+      <li><a href="nhom-sao-vang.html">Hệ Nhôm</a></li>
+      <li><a href="phu-kien.html">Phụ Kiện</a></li>
+      <li><a href="du-an-nhom.html" class="active">Portfolio Nhôm</a></li>
+      <li><a href="du-an.html">Dự Án</a></li>
+      <li><a href="bao-gia.html" class="nav-cta">Báo Giá</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu" onclick="this.closest('.navbar').classList.toggle('nav-open')">
+      <i class="ri-menu-line"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="portfolio-hero">
+  <div class="portfolio-hero-bg"></div>
+  <div class="portfolio-hero-overlay"></div>
+  <div class="portfolio-hero-content">
+    <span class="hero-badge">Portfolio Nhôm Kính</span>
+    <h1 class="hero-title">Công Trình <span>Thực Tế</span><br>Đã Hoàn Thành</h1>
+    <p class="hero-desc">Hơn 20 dự án biệt thự, penthouse và resort sử dụng hệ nhôm cao cấp Xingfa, Maxpro, Civro, Slim, Kogen, PMA, Owin và Topal.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-num">20+</div><div class="hero-stat-label">Công trình</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">8</div><div class="hero-stat-label">Hãng nhôm</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">5</div><div class="hero-stat-label">Tỉnh thành</div></div>
+      <div class="hero-stat"><div class="hero-stat-num">100%</div><div class="hero-stat-label">Bàn giao đúng hạn</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- BREADCRUMB -->
+<div style="background:#f8fafc;border-bottom:1px solid #e2e8f0;padding:12px 0;">
+  <div style="max-width:1280px;margin:0 auto;padding-inline:24px;display:flex;align-items:center;gap:8px;font-size:13px;color:#6c757d;">
+    <a href="index.html" style="color:#6c757d;text-decoration:none;">Trang chủ</a>
+    <i class="ri-arrow-right-s-line" style="font-size:10px;"></i>
+    <a href="du-an.html" style="color:#6c757d;text-decoration:none;">Dự Án</a>
+    <i class="ri-arrow-right-s-line" style="font-size:10px;"></i>
+    <span>Portfolio Nhôm Kính</span>
+  </div>
+</div>
+
+<!-- FILTER BAR -->
+<div class="filter-bar" role="navigation" aria-label="Bộ lọc dự án">
+  <div class="filter-bar-inner">
+    <span class="filter-label">Hãng:</span>
+    <button class="f-btn active" data-brand="all" onclick="applyFilter(this,'brand')">Tất Cả</button>
+    <button class="f-btn" data-brand="xingfa" onclick="applyFilter(this,'brand')">Xingfa</button>
+    <button class="f-btn" data-brand="maxpro" onclick="applyFilter(this,'brand')">Maxpro.JP</button>
+    <button class="f-btn" data-brand="civro" onclick="applyFilter(this,'brand')">Civro</button>
+    <button class="f-btn" data-brand="slim" onclick="applyFilter(this,'brand')">Slim</button>
+    <button class="f-btn" data-brand="kogen" onclick="applyFilter(this,'brand')">Kogen</button>
+    <button class="f-btn" data-brand="pma" onclick="applyFilter(this,'brand')">PMA</button>
+    <button class="f-btn" data-brand="owin" onclick="applyFilter(this,'brand')">Owin</button>
+    <button class="f-btn" data-brand="topal" onclick="applyFilter(this,'brand')">Topal</button>
+    <div class="filter-sep"></div>
+    <span class="filter-label">Loại:</span>
+    <button class="f-btn active" data-type="all" onclick="applyFilter(this,'type')">Tất Cả</button>
+    <button class="f-btn" data-type="biet-thu" onclick="applyFilter(this,'type')">Biệt thự</button>
+    <button class="f-btn" data-type="penthouse" onclick="applyFilter(this,'type')">Penthouse</button>
+    <button class="f-btn" data-type="nha-pho" onclick="applyFilter(this,'type')">Nhà phố</button>
+    <button class="f-btn" data-type="resort" onclick="applyFilter(this,'type')">Resort</button>
+    <button class="f-btn" data-type="van-phong" onclick="applyFilter(this,'type')">Văn phòng</button>
+  </div>
+</div>
+
+<!-- PROJECTS GRID -->
+<section class="projects-section">
+  <div class="projects-inner">
+    <div class="results-bar">
+      <p class="results-count">Hiển thị <strong id="resultCount">0</strong> công trình</p>
+      <span style="font-size:12px;color:#94a3b8;">Click vào dự án để xem chi tiết</span>
+    </div>
+    <div class="projects-grid" id="projectsGrid"></div>
+    <div class="no-results" id="noResults">
+      <i class="ri-building-line" style="font-size:48px;display:block;margin-bottom:12px;"></i>
+      Không tìm thấy dự án phù hợp với bộ lọc.
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section style="background:linear-gradient(135deg,#0f1923 0%,#1a2940 100%);padding:80px 0;text-align:center;">
+  <div style="max-width:600px;margin:0 auto;padding-inline:24px;">
+    <span style="display:inline-block;background:#9B1C1C;color:#fff;font-size:10px;font-weight:800;letter-spacing:.15em;padding:4px 14px;border-radius:20px;text-transform:uppercase;margin-bottom:16px;">BẮT ĐẦU DỰ ÁN CỦA BẠN</span>
+    <h2 style="font-family:'Montserrat',sans-serif;font-size:clamp(22px,4vw,36px);font-weight:900;color:#fff;margin:0 0 16px;line-height:1.2;">Muốn Công Trình Tương Tự?</h2>
+    <p style="font-size:14px;color:rgba(255,255,255,.7);margin-bottom:32px;line-height:1.6;">Liên hệ Sao Vàng để được tư vấn hệ nhôm phù hợp và nhận báo giá chi tiết miễn phí trong 2 giờ.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;">
+      <a href="bao-gia.html" style="display:inline-flex;align-items:center;gap:8px;background:#9B1C1C;color:#fff;font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;padding:14px 32px;border-radius:50px;text-decoration:none;transition:opacity .2s;" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'">
+        <i class="ri-send-plane-line"></i> Nhận Báo Giá Miễn Phí
+      </a>
+      <a href="nhom-sao-vang.html" style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.1);color:#fff;border:2px solid rgba(255,255,255,.3);font-family:'Montserrat',sans-serif;font-size:14px;font-weight:800;padding:14px 32px;border-radius:50px;text-decoration:none;transition:all .2s;" onmouseover="this.style.background='rgba(255,255,255,.2)'" onmouseout="this.style.background='rgba(255,255,255,.1)'">
+        <i class="ri-layout-grid-line"></i> Xem Hệ Nhôm
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- DRAWER OVERLAY -->
+<div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+<aside class="drawer-panel" id="drawerPanel" role="dialog" aria-modal="true" aria-label="Chi tiết dự án">
+  <div class="drawer-header">
+    <span class="drawer-title" id="drawerTitle">Chi tiết dự án</span>
+    <button class="drawer-close" onclick="closeDrawer()" aria-label="Đóng">&#x2715;</button>
+  </div>
+  <img id="drawerImg" src="" alt="" class="drawer-img" loading="lazy" decoding="async">
+  <div class="drawer-body">
+    <div class="drawer-badge-row" id="drawerBadges"></div>
+    <div class="drawer-info-grid" id="drawerInfoGrid"></div>
+    <p class="drawer-desc" id="drawerDesc"></p>
+    <a href="#" class="drawer-brand-link" id="drawerBrandLink">
+      <span id="drawerBrandText"></span>
+      <i class="ri-arrow-right-line"></i>
+    </a>
+    <div class="drawer-cta-row">
+      <a href="bao-gia.html" class="btn-primary-drawer">Báo Giá Tương Tự</a>
+      <a href="lien-he.html" class="btn-outline-drawer">Liên Hệ Ngay</a>
+    </div>
+  </div>
+</aside>
+
+<!-- FOOTER placeholder -->
+<footer style="background:#0f1923;color:rgba(255,255,255,.5);text-align:center;padding:24px;font-size:13px;">
+  © 2024 Cơ Khí Sao Vàng — Hotline: <a href="tel:0869590279" style="color:#f5c842;">0869 590 279</a>
+</footer>
+
+<script>
+// ── Project Data ──────────────────────────────────────────────
+const PROJECTS = [
+  // XINGFA
+  {id:1, title:"Biệt Thự Thảo Điền", location:"TP. Hồ Chí Minh", year:2024, brand:"xingfa", brandLabel:"Xingfa", brandPage:"nhom-xingfa.html", brandColor:"#e11d48", type:"biet-thu", typeLabel:"Biệt thự", area:"320m²", system:"Xingfa 55 Cửa Lùa", image:"assets/images/project-villa.png", desc:"Hệ cửa nhôm Xingfa 55 toàn bộ mặt tiền biệt thự 3 tầng. Cửa lùa 3 cánh đồng bộ màu trắng sữa, kính cường lực 8mm Low-E, phụ kiện CMECH toàn bộ."},
+  {id:2, title:"Biệt Thự Vinhomes Grand", location:"TP. Hồ Chí Minh", year:2024, brand:"xingfa", brandLabel:"Xingfa", brandPage:"nhom-xingfa.html", brandColor:"#e11d48", type:"biet-thu", typeLabel:"Biệt thự", area:"280m²", system:"Xingfa 65 Cửa Đi", image:"assets/images/project-vinhomes-villa.png", desc:"Hệ cửa đi mở quay Xingfa 65 với bản lề ẩn, màu champagne, kết hợp vách kính cố định mặt tiền."},
+  {id:3, title:"Nhà Phố Quận 9", location:"TP. Hồ Chí Minh", year:2023, brand:"xingfa", brandLabel:"Xingfa", brandPage:"nhom-xingfa.html", brandColor:"#e11d48", type:"nha-pho", typeLabel:"Nhà phố", area:"120m²", system:"Xingfa 55 Mở Quay", image:"assets/images/hero-doors.png", desc:"Nhà phố 4 tầng sử dụng cửa chính nhôm Xingfa 55 màu đen, kết hợp cửa lùa ban công toàn bộ."},
+  {id:4, title:"Showroom Ô Tô Q.Bình Thạnh", location:"TP. Hồ Chí Minh", year:2024, brand:"xingfa", brandLabel:"Xingfa", brandPage:"nhom-xingfa.html", brandColor:"#e11d48", type:"van-phong", typeLabel:"Thương mại", area:"450m²", system:"Xingfa 70 Vách Kính", image:"assets/images/project-showroom-auto.png", desc:"Mặt dựng nhôm kính Xingfa 70 hệ unitized, kính cường lực 10mm, diện tích vách kính 200m²."},
+  {id:5, title:"Villa Đà Lạt View Thung Lũng", location:"Đà Lạt", year:2024, brand:"xingfa", brandLabel:"Xingfa", brandPage:"nhom-xingfa.html", brandColor:"#e11d48", type:"resort", typeLabel:"Resort", area:"200m²", system:"Xingfa 55 Cửa Lùa", image:"assets/images/project-dalat-villa.png", desc:"Villa du lịch tầm nhìn thung lũng, hệ lùa 4 cánh mở toàn bộ mặt đứng, kính Low-E giữ nhiệt."},
+  // MAXPRO
+  {id:6, title:"Resort Biển Phú Quốc", location:"Phú Quốc", year:2024, brand:"maxpro", brandLabel:"Maxpro.JP", brandPage:"nhom-maxpro.html", brandColor:"#b45309", type:"resort", typeLabel:"Resort", area:"1200m²", system:"Maxpro 65 Anodized", image:"assets/images/project-resort-yacht.png", desc:"Resort 5* mặt biển Phú Quốc, toàn bộ hệ cửa Maxpro Anodized chống muối mặn, kính Low-E 6mm."},
+  {id:7, title:"Biệt Thự Biển Mũi Né", location:"Phan Thiết", year:2023, brand:"maxpro", brandLabel:"Maxpro.JP", brandPage:"nhom-maxpro.html", brandColor:"#b45309", type:"biet-thu", typeLabel:"Biệt thự", area:"350m²", system:"Maxpro 55 Anodized", image:"assets/images/project-saobien-yacht.png", desc:"Biệt thự mặt biển Mũi Né, hệ Anodized Maxpro chống bào mòn muối mặn 20+ năm."},
+  {id:8, title:"Penthouse Biển Đà Nẵng", location:"Đà Nẵng", year:2024, brand:"maxpro", brandLabel:"Maxpro.JP", brandPage:"nhom-maxpro.html", brandColor:"#b45309", type:"penthouse", typeLabel:"Penthouse", area:"220m²", system:"Maxpro 83 Cửa Lùa", image:"assets/images/project-vinhomes-villa.png", desc:"Penthouse tầng 28, hệ lùa Maxpro 83 siêu rộng, cánh cửa 3m×2.4m, tầm nhìn biển 180°."},
+  // CIVRO
+  {id:9, title:"Biệt Thự Luxury Thủ Đức", location:"TP. Hồ Chí Minh", year:2024, brand:"civro", brandLabel:"Civro", brandPage:"nhom-civro.html", brandColor:"#1e293b", type:"biet-thu", typeLabel:"Biệt thự", area:"500m²", system:"Civro Cách Nhiệt 73", image:"assets/images/project-mansion-gate.png", desc:"Biệt thự Luxury 5 tầng, cửa cách nhiệt Civro 73 giảm 65% nhiệt truyền, tiết kiệm điều hòa 30%."},
+  {id:10, title:"Penthouse Luxury Hà Nội", location:"Hà Nội", year:2024, brand:"civro", brandLabel:"Civro", brandPage:"nhom-civro.html", brandColor:"#1e293b", type:"penthouse", typeLabel:"Penthouse", area:"300m²", system:"Civro Tilt & Turn", image:"assets/images/project-vinhomes-villa.png", desc:"Penthouse Hà Nội mùa đông, cửa Civro Tilt & Turn cách nhiệt, kính 3 lớp argon, cách âm 42dB."},
+  // SLIM
+  {id:11, title:"Penthouse View Panorama Q.2", location:"TP. Hồ Chí Minh", year:2024, brand:"slim", brandLabel:"Slim System", brandPage:"nhom-slim.html", brandColor:"#475569", type:"penthouse", typeLabel:"Penthouse", area:"280m²", system:"Slim Lùa Không Ray", image:"assets/images/hero-interior.png", desc:"Cửa lùa Slim không ray dưới tạo không gian thông thoáng hoàn toàn, khung 25mm mảnh nhất thị trường."},
+  {id:12, title:"Villa Đà Lạt Tầm Nhìn Rộng", location:"Đà Lạt", year:2024, brand:"slim", brandLabel:"Slim System", brandPage:"nhom-slim.html", brandColor:"#475569", type:"resort", typeLabel:"Resort", area:"180m²", system:"Slim Lùa 3 Cánh", image:"assets/images/project-dalat-villa.png", desc:"Hệ lùa 3 cánh Slim mở toàn bộ mặt tiền view rừng thông, kính cường lực siêu trắng 10mm."},
+  // KOGEN
+  {id:13, title:"Biệt Thự Cửa Xếp Gấp Q.7", location:"TP. Hồ Chí Minh", year:2024, brand:"kogen", brandLabel:"Kogen", brandPage:"nhom-kogen.html", brandColor:"#0369a1", type:"biet-thu", typeLabel:"Biệt thự", area:"240m²", system:"Kogen Bi-Fold 68", image:"assets/images/project-villa.png", desc:"Hệ cửa xếp gấp Kogen 5 cánh, mở toàn bộ mặt bếp-phòng khách, tích hợp với sân vườn liền mạch."},
+  {id:14, title:"Penthouse Cửa Trượt Lật", location:"TP. Hồ Chí Minh", year:2024, brand:"kogen", brandLabel:"Kogen", brandPage:"nhom-kogen.html", brandColor:"#0369a1", type:"penthouse", typeLabel:"Penthouse", area:"200m²", system:"Kogen Tilt & Slide", image:"assets/images/project-penthouse.png", desc:"Cửa trượt lật Kogen luxury, cánh cửa 4m×2.5m di chuyển êm ái, tích hợp hệ thống điều khiển motor."},
+  // PMA
+  {id:15, title:"Nhà Phố Quận Bình Thạnh", location:"TP. Hồ Chí Minh", year:2023, brand:"pma", brandLabel:"PMA", brandPage:"nhom-pma.html", brandColor:"#15803d", type:"nha-pho", typeLabel:"Nhà phố", area:"90m²", system:"PMA Classic 58 Mở Quay", image:"assets/images/hero-doors.png", desc:"Cửa chính + cửa ban công PMA Classic 58, màu xám đen, phụ kiện BOGO toàn bộ."},
+  {id:16, title:"Văn Phòng Khu CNC Quận 12", location:"TP. Hồ Chí Minh", year:2024, brand:"pma", brandLabel:"PMA", brandPage:"nhom-pma.html", brandColor:"#15803d", type:"van-phong", typeLabel:"Văn phòng", area:"600m²", system:"PMA Lux65 Cửa Lùa", image:"assets/images/service-aluminum-doors.png", desc:"Văn phòng 3 tầng, vách ngăn + cửa lùa hệ PMA Lux65 đồng bộ, kính cường lực 8mm mờ văn phòng."},
+  // OWIN
+  {id:17, title:"Nhà Phố Quận Tân Bình", location:"TP. Hồ Chí Minh", year:2023, brand:"owin", brandLabel:"Owin", brandPage:"nhom-owin.html", brandColor:"#4338ca", type:"nha-pho", typeLabel:"Nhà phố", area:"80m²", system:"Owin 55 Mở Quay", image:"assets/images/hero-doors.png", desc:"Cửa đi chính và cửa phòng hệ Owin 55, màu trắng ngà, phụ kiện OPK đồng bộ."},
+  {id:18, title:"Cửa Hàng Quận 10", location:"TP. Hồ Chí Minh", year:2024, brand:"owin", brandLabel:"Owin", brandPage:"nhom-owin.html", brandColor:"#4338ca", type:"van-phong", typeLabel:"Thương mại", area:"150m²", system:"Owin 55 Kính Cường Lực", image:"assets/images/project-showroom-auto.png", desc:"Mặt tiền cửa hàng kính cường lực hệ Owin 55, cửa lùa chính rộng 2.4m, kính tempered 10mm."},
+  // TOPAL
+  {id:19, title:"Biệt Thự Quận Thủ Đức", location:"TP. Hồ Chí Minh", year:2023, brand:"topal", brandLabel:"Topal", brandPage:"nhom-topal.html", brandColor:"#b91c1c", type:"biet-thu", typeLabel:"Biệt thự", area:"200m²", system:"Topal Premium 65", image:"assets/images/project-villa.png", desc:"Biệt thự gia đình hệ Topal Premium 65, cửa lùa ban công + cửa đi mở quay đồng bộ màu nâu gỗ."},
+  {id:20, title:"Trường Học Bình Chánh", location:"TP. Hồ Chí Minh", year:2024, brand:"topal", brandLabel:"Topal", brandPage:"nhom-topal.html", brandColor:"#b91c1c", type:"van-phong", typeLabel:"Công cộng", area:"800m²", system:"Topal 60 Cửa Lùa", image:"assets/images/service-aluminum-doors.png", desc:"Dự án lắp đặt cửa nhôm toàn bộ trường học 3 tầng, tiêu chuẩn an toàn công trình giáo dục."},
+  {id:21, title:"Nhà Phố Đồng Nai", location:"Đồng Nai", year:2024, brand:"topal", brandLabel:"Topal", brandPage:"nhom-topal.html", brandColor:"#b91c1c", type:"nha-pho", typeLabel:"Nhà phố", area:"100m²", system:"Topal 55 Mở Quay", image:"assets/images/project-vinhomes-villa.png", desc:"Nhà phố 3 tầng, toàn bộ cửa đi + cửa sổ hệ Topal 55, màu trắng sữa, phụ kiện 3H đồng bộ."},
+];
+
+// ── State & Filter ─────────────────────────────────────────────
+let activeBrand = 'all', activeType = 'all';
+
+const TYPE_COLORS = {
+  'biet-thu':'#7c3aed','penthouse':'#0369a1','resort':'#059669',
+  'nha-pho':'#b45309','van-phong':'#475569','thương mại':'#e11d48','công cộng':'#6b7280'
+};
+
+function applyFilter(btn, dimension) {
+  const val = btn.getAttribute('data-' + dimension);
+  if (dimension === 'brand') {
+    activeBrand = val;
+    document.querySelectorAll('[data-brand]').forEach(b => b.classList.toggle('active', b===btn));
+  } else {
+    activeType = val;
+    document.querySelectorAll('[data-type]').forEach(b => b.classList.toggle('active', b===btn));
+  }
+  renderProjects();
+}
+
+function renderProjects() {
+  const filtered = PROJECTS.filter(p =>
+    (activeBrand === 'all' || p.brand === activeBrand) &&
+    (activeType === 'all' || p.type === activeType)
+  );
+
+  const grid = document.getElementById('projectsGrid');
+  const noRes = document.getElementById('noResults');
+  document.getElementById('resultCount').textContent = filtered.length;
+
+  if (filtered.length === 0) {
+    grid.innerHTML = '';
+    noRes.style.display = 'block';
+    return;
+  }
+  noRes.style.display = 'none';
+
+  grid.innerHTML = filtered.map((p, i) => `
+    <article class="proj-card" onclick="openDrawer(${p.id})" role="button" tabindex="0" aria-label="${p.title}">
+      <div class="proj-card-img">
+        <img src="${p.image}" loading="lazy" decoding="async" width="600" height="220" alt="${p.title} — ${p.system} | Sao Vàng">
+        <div class="proj-card-badges">
+          <span class="badge-type" style="background:${TYPE_COLORS[p.type]||'#6b7280'}">${p.typeLabel}</span>
+          <span class="badge-brand">${p.brandLabel}</span>
+        </div>
+      </div>
+      <div class="proj-card-body">
+        <h3 class="proj-card-title">${p.title}</h3>
+        <div class="proj-card-meta">
+          <span class="proj-meta-item"><i class="ri-map-pin-2-line"></i>${p.location}</span>
+          <span class="proj-meta-item"><i class="ri-calendar-line"></i>${p.year}</span>
+          <span class="proj-meta-item"><i class="ri-ruler-line"></i>${p.area}</span>
+        </div>
+        <span class="proj-card-system">${p.system}</span>
+        <button class="proj-card-cta">Xem chi tiết <i class="ri-arrow-right-line"></i></button>
+      </div>
+    </article>
+  `).join('');
+}
+
+// ── Drawer ─────────────────────────────────────────────────────
+function openDrawer(id) {
+  const p = PROJECTS.find(x => x.id === id);
+  if (!p) return;
+
+  document.getElementById('drawerTitle').textContent = p.title;
+  document.getElementById('drawerImg').src = p.image;
+  document.getElementById('drawerImg').alt = p.title;
+  document.getElementById('drawerDesc').textContent = p.desc;
+  document.getElementById('drawerBrandLink').href = p.brandPage;
+  document.getElementById('drawerBrandText').textContent = `Xem đầy đủ hệ nhôm ${p.brandLabel} →`;
+
+  document.getElementById('drawerBadges').innerHTML = `
+    <span style="background:${TYPE_COLORS[p.type]||'#6b7280'};color:#fff;font-size:11px;font-weight:800;padding:4px 12px;border-radius:20px;text-transform:uppercase;">${p.typeLabel}</span>
+    <span style="background:${p.brandColor};color:#fff;font-size:11px;font-weight:800;padding:4px 12px;border-radius:20px;">${p.brandLabel}</span>
+  `;
+  document.getElementById('drawerInfoGrid').innerHTML = `
+    <div class="drawer-info-item"><div class="drawer-info-label">Địa điểm</div><div class="drawer-info-value">${p.location}</div></div>
+    <div class="drawer-info-item"><div class="drawer-info-label">Năm hoàn thành</div><div class="drawer-info-value">${p.year}</div></div>
+    <div class="drawer-info-item"><div class="drawer-info-label">Diện tích</div><div class="drawer-info-value">${p.area}</div></div>
+    <div class="drawer-info-item"><div class="drawer-info-label">Hệ nhôm</div><div class="drawer-info-value">${p.system}</div></div>
+  `;
+
+  document.getElementById('drawerOverlay').classList.add('open');
+  document.getElementById('drawerPanel').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDrawer() {
+  document.getElementById('drawerOverlay').classList.remove('open');
+  document.getElementById('drawerPanel').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
+
+// ── Init ───────────────────────────────────────────────────────
+renderProjects();
+</script>
+</body>
+</html>
