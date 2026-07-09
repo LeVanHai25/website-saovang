@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#e11d48" />
+  <title>Cửa Nhôm Nhôm Xingfa Quảng Đông Chính Hãng | SAO VÀNG</title>
+  <meta name="description" content="Sao Vàng cung cấp các giải pháp cửa nhôm Nhôm Xingfa Quảng Đông nhập khẩu cao cấp đồng bộ chính hãng. Tư vấn thiết kế, báo giá lắp đặt trọn gói rẻ nhất." />
+  <meta name="keywords" content="cửa nhôm xingfa, cửa nhôm Nhôm Xingfa Quảng Đông, Nhôm Xingfa Quảng Đông chính hãng, mặt cắt nhôm xingfa" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  
+  <style>
+    .brand-hero {
+      background: linear-gradient(135deg,#991b1b 0%,#e11d48 100%);
+      padding: 120px 0 60px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 120%, rgba(255,255,255,0.1), transparent 70%);
+    }
+    .brand-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .brand-title {
+      font-family: var(--sv-font-head);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .brand-subtitle-hero {
+      font-size: clamp(14px, 2vw, 18px);
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    
+    .brand-stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 40px);
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .brand-stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 24px;
+      min-width: 140px;
+      backdrop-filter: blur(8px);
+    }
+    .brand-stat-num {
+      font-family: var(--sv-font-head);
+      font-size: 24px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .brand-stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .brand-detail-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+    .brand-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .brand-content-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .brand-info-column {
+      padding-right: 20px;
+    }
+    .brand-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin: 28px 0 14px;
+      border-left: 4px solid #e11d48;
+      padding-left: 14px;
+    }
+    .brand-sub-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sv-dark-800);
+      margin: 18px 0 8px;
+    }
+    .brand-desc-p {
+      font-size: var(--sv-fs-sm);
+      color: var(--sv-gray-text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    
+    .brand-sidebar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .sidebar-title {
+      font-family: var(--sv-font-head);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: 20px;
+    }
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .sidebar-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 13px;
+      color: var(--sv-gray-text);
+      display: flex;
+      justify-content: space-between;
+    }
+    .sidebar-list li strong {
+      color: var(--sv-dark-900);
+    }
+    
+    .brand-products-section {
+      padding: 80px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .pk-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .pk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+    .pk-card-img {
+      position: relative;
+      height: 220px;
+      background: #f1f5f9;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .pk-card-img img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .pk-card-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+    .pk-card-body {
+      padding: 20px;
+    }
+    .pk-card-name {
+      font-family: var(--sv-font-head);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: 16px;
+      min-height: 40px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .pk-card-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: var(--sv-font-head);
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .tech-download-card {
+      background: #fffbeb;
+      border: 1px dashed #d97706;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 24px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .tech-download-title {
+      font-family: var(--sv-font-head);
+      font-size: 15px;
+      font-weight: 800;
+      color: #92400e;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .tech-download-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: #d97706;
+      color: #fff;
+      font-family: var(--sv-font-head);
+      font-size: 13px;
+      font-weight: 800;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .tech-download-btn:hover {
+      background: #b45309;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-menu-link active">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html" class="nav-menu-link">Nhôm Sao Vàng</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan</a>
+            <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
+          </div>
+        </div>
+        <a href="phu-kien.html" class="nav-menu-link">Phụ Kiện</a>
+        <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
+        <a href="du-an.html" class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="lien-he.html" class="nav-menu-link">Liên Hệ</a>
+      </nav>
+
+  <section class="brand-hero">
+    <div class="sv-container">
+      <span class="brand-tag">HỆ THỐNG PROFILE NHÔM</span>
+      <h1 class="brand-title">Nhôm Xingfa Quảng Đông</h1>
+      <p class="brand-subtitle-hero">Dòng nhôm chất lượng cao được Sao Vàng lắp đặt chính hãng đồng bộ cho các giải pháp kiến trúc</p>
+      
+      <div class="brand-stats">
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Quảng Đông (Trung Quốc)</div>
+          <div class="brand-stat-label">Xuất Xứ</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">4</div>
+          <div class="brand-stat-label">Mẫu Thiết Kế</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Phổ thông / Trung cấp</div>
+          <div class="brand-stat-label">Phân Khúc</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-detail-section">
+    <div class="sv-container">
+      <div class="brand-content-grid">
+        <div class="brand-info-column">
+          <h2 class="sv-section-title" style="margin-left:0; text-align:left;">Ưu Điểm & Đặc Tính</h2>
+          <p class='brand-desc-p'>Trang chủSản phẩmCửa Nhôm Xingfa            
+Cửa Nhôm Xingfa</p><p class='brand-desc-p'>Cửa Sổ Nhôm Xingfa Mở Hất 1 Cánh</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Sổ Nhôm Xingfa Mở Hất 2 Cánh</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Sổ Nhôm Xingfa Mở Quay 1 Cánh</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Sổ Nhôm Xingfa Mở Quay 2 Cánh</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Sổ Nhôm Xingfa Mở Quay 4 Cánh</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa sổ nhôm xingfa mở trượt 2 cánh</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa đi mở quay nhôm xingfa 1 cánh</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa đi mở quay nhôm xingfa 2 cánh</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Vách kính cố định Nhôm Xingfa</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Nhôm Xingfa 4 Cánh Mở Quay</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa đi mở trượt nhôm Xingfa</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa xếp trượt nhôm xingfa</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>&laquo;  &#8249; 123 &#8250;  &raquo;</p><p class='brand-desc-p'>Mục lục</p><p class='brand-desc-p'>Đặc Điểm Nổi Bật Của Cửa Nhôm Xingfa
+
+	Ưu Điểm Nổi Trội Của Cửa Nhôm Xingfa</p><p class='brand-desc-p'>Độ Bền Cao Và Dễ Bảo Trì
+
+		Thiết Kế Linh Hoạt Và Đa Dạng
+
+		Khả Năng Cách Âm, Cách Nhiệt Tối Ưu</p><p class='brand-desc-p'>Ứng Dụng Của Cửa Nhôm Xingfa Trong Xây Dựng</p><p class='brand-desc-p'>Biệt Thự, Nhà Phố Cao Cấp
+
+		Văn Phòng Và Tòa Nhà Thương Mại
+
+		Công Trình Công Cộng Như Khách Sạn, Bệnh Viện</p><p class='brand-desc-p'>Các Loại Cửa Nhôm Xingfa Phổ Biến Trên Thị Trường</p><p class='brand-desc-p'>Cửa Sổ Nhôm Xingfa
+
+		Cửa Đi Nhôm Xingfa
+
+		Cửa Sổ Lùa Nhôm Xingfa
+
+		Cửa Đi Trượt Nhôm Xingfa
+
+		Cửa Xếp Trượt Nhôm Xingfa
+
+		Cửa Trượt Quay Nhôm Xingfa</p><p class='brand-desc-p'>Màu Sắc Đa Dạng Của Cửa Nhôm Xingfa</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Màu Trắng
+
+		Cửa Nhôm Xingfa Màu Xám
+
+		Cửa Nhôm Xingfa Màu Đen
+
+		Cửa Nhôm Xingfa Màu Gỗ
+
+		Cửa Nhôm Xingfa Màu Nâu Cà Phê</p><p class='brand-desc-p'>Lựa Chọn Nhà Cung Cấp Cửa Nhôm Xingfa Uy Tín
+
+	Tại Sao Nên Chọn Nhôm Kính Đại Phúc?
+
+	Câu Hỏi Thường Gặp</p><p class='brand-desc-p'>Trong thế giới xây dựng và kiến trúc hiện đại, Cửa Nhôm Xingfa đang nổi lên như một giải pháp vật liệu không thể thiếu, đặc biệt cho các công trình đòi hỏi tính thẩm mỹ cao và độ bền vượt trội. Vậy, Cửa Xingfa có gì đặc biệt mà ngày càng được ưa chuộng? Hãy cùng chúng ta khám phá chi tiết trong bài viết này.</p><p class='brand-desc-p'>Đặc Điểm Nổi Bật Của Cửa Nhôm Xingfa</p><p class='brand-desc-p'>Cửa Nhôm Xingfa được sản xuất từ nhôm hợp kim chất lượng cao, với nhiều tính năng ưu việt như chống ăn mòn, chịu lực tốt và khả năng cách nhiệt hiệu quả. Điểm mạnh của sản phẩm này nằm ở:</p><p class='brand-desc-p'>Chất lượng nhôm cao cấp: Nhôm Xingfa được chế tạo từ hợp kim nhôm tiêu chuẩn, có độ dày từ 1.4mm đến 2.0mm, đáp ứng các yêu cầu khắt khe về kỹ thuật và an toàn.
+
+	Đa dạng mẫu mã và màu sắc: Cửa nhôm Xingfa có nhiều màu sắc như trắng, đen, xám, gỗ… phù hợp với mọi phong cách thiết kế kiến trúc từ cổ điển đến hiện đại.
+
+	Khả năng chống ăn mòn vượt trội: Được phủ lớp sơn tĩnh điện chất lượng cao, cửa nhôm Xingfa không bị oxy hóa, không rỉ sét dù trong điều kiện thời tiết khắc nghiệt.
+
+	Hiệu suất cách âm, cách nhiệt tốt: Cấu trúc nhôm kết hợp với hệ gioăng EPDM cao cấp và kính cường lực giúp cửa có khả năng cách âm, cách nhiệt vượt trội, tiết kiệm năng lượng hiệu quả.</p><p class='brand-desc-p'>Cửa Nhôm Xingfa</p><p class='brand-desc-p'>Ưu Điểm Nổi Trội Của Cửa Nhôm Xingfa</p><p class='brand-desc-p'>1. Độ Bền Cao Và Dễ Bảo Trì</p><p class='brand-desc-p'>Cửa Xingfa nổi bật với độ bền cao, không bị cong vênh, mối mọt hay chịu ảnh hưởng của thời tiết. Ngoài ra, cửa nhôm Xingfa cũng rất dễ dàng bảo trì, không cần phải sơn lại sau thời gian dài sử dụng.</p><p class='brand-desc-p'>2. Thiết Kế Linh Hoạt Và Đa Dạng</p><p class='brand-desc-p'>Với nhiều lựa chọn về kích thước, màu sắc, và kiểu dáng, cửa Xingfa dễ dàng đáp ứng mọi yêu cầu thẩm mỹ và công năng của người dùng. Bạn có thể lựa chọn từ cửa mở quay, cửa trượt, cửa lùa, cửa xếp… để phù hợp với từng không gian sống khác nhau.</p><p class='brand-desc-p'>3. Khả Năng Cách Âm, Cách Nhiệt Tối Ưu</p><p class='brand-desc-p'>Cửa nhôm Xingfa có thiết kế đặc biệt với các rãnh thoát nước, hệ gioăng kín khí, kính cường lực giúp tăng khả năng cách âm, cách nhiệt hiệu quả. Điều này giúp không gian bên trong luôn thoáng mát vào mùa hè và ấm áp vào mùa đông.</p><p class='brand-desc-p'>Ứng Dụng Của Cửa Nhôm Xingfa Trong Xây Dựng</p><p class='brand-desc-p'>1. Biệt Thự, Nhà Phố Cao Cấp</p><p class='brand-desc-p'>Các mẫu cửa Xingfa được sử dụng phổ biến trong các biệt thự, nhà phố cao cấp nhờ vào tính thẩm mỹ vượt trội và khả năng bền bỉ với thời gian.</p><p class='brand-desc-p'>Cửa Xingfa được sử dụng phổ biến trong các biệt thự</p><p class='brand-desc-p'>2. Văn Phòng Và Tòa Nhà Thương Mại</p><p class='brand-desc-p'>Với khả năng cách âm tốt, cửa nhôm Xingfa là lựa chọn lý tưởng cho các văn phòng và tòa nhà thương mại, giúp tạo không gian yên tĩnh và chuyên nghiệp.</p><p class='brand-desc-p'>Vách kính xingfa trong tòa nhà văn phòng</p><p class='brand-desc-p'>3. Công Trình Công Cộng Như Khách Sạn, Bệnh Viện</p><p class='brand-desc-p'>Những nơi có yêu cầu cao về an toàn và thẩm mỹ như khách sạn, bệnh viện cũng ưu tiên lựa chọn cửa Xingfa để đảm bảo đáp ứng đầy đủ các tiêu chuẩn chất lượng.</p><p class='brand-desc-p'>Các Loại Cửa Nhôm Xingfa Phổ Biến Trên Thị Trường</p><p class='brand-desc-p'>1. Cửa Sổ Nhôm Xingfa</p><p class='brand-desc-p'>Cửa sổ nhôm Xingfa được biết đến với thiết kế hiện đại, đa dạng về kiểu dáng như cửa mở quay, mở hất, mở trượt... phù hợp với mọi không gian từ phòng khách đến phòng ngủ.</p><p class='brand-desc-p'>Cửa Sổ Nhôm Xingfa</p><p class='brand-desc-p'>2. Cửa Đi Nhôm Xingfa</p><p class='brand-desc-p'>Cửa đi nhôm Xingfa mang đến vẻ đẹp sang trọng, đẳng cấp cho mọi công trình. Với khả năng chống nước, chống gió tốt, cửa nhôm Xingfa đảm bảo sự an toàn tối đa cho ngôi nhà của bạn.</p><p class='brand-desc-p'>Cửa nhôm xingfa 2 cánh</p><p class='brand-desc-p'>3. Cửa Sổ Lùa Nhôm Xingfa</p><p class='brand-desc-p'>Cửa sổ lùa nhôm Xingfa là lựa chọn hoàn hảo cho không gian hẹp, giúp tối ưu diện tích sử dụng. Sản phẩm này được yêu thích bởi thiết kế gọn gàng, dễ dàng vận hành và bảo trì.</p><p class='brand-desc-p'>Cửa sổ lùa nhôm Xingfa</p><p class='brand-desc-p'>4. Cửa Đi Trượt Nhôm Xingfa</p><p class='brand-desc-p'>Cửa đi trượt nhôm Xingfa giúp tiết kiệm không gian và mang lại sự tiện nghi cho người dùng. Với thiết kế trượt linh hoạt, cửa trượt nhôm Xingfa có thể sử dụng ở những nơi có diện tích nhỏ như ban công, phòng ngủ.</p><p class='brand-desc-p'>Cửa đi trượt nhôm Xingfa</p><p class='brand-desc-p'>5. Cửa Xếp Trượt Nhôm Xingfa</p><p class='brand-desc-p'>Cửa đi xếp trượt nhôm Xingfa hệ 63 là lựa chọn tối ưu cho các công trình như khách sạn, biệt thự, nhà ở nhờ khả năng tiết kiệm không gian và thiết kế linh hoạt với nhiều tùy chọn số cánh (4, 5, 6 cánh). Cửa có thể xếp gọn về một bên, tạo sự thoáng đãng và tận dụng ánh sáng tốt. Đi kèm với phụ kiện đồng bộ cao cấp, cửa đảm bảo độ bền và thẩm mỹ cao, phù hợp với nhiều không gian, kể cả diện tích hạn chế.</p><p class='brand-desc-p'>Cửa Xếp Trượt Nhôm Xingfa</p><p class='brand-desc-p'>6. Cửa Trượt Quay Nhôm Xingfa</p><p class='brand-desc-p'>Cửa trượt quay nhôm Xingfa là giải pháp tối ưu cho không gian hiện đại, giúp tiết kiệm diện tích và tăng tính thẩm mỹ. Với thiết kế hiện đại, chất liệu nhôm cao cấp, cửa có độ bền cao, chống ăn mòn, cách âm và cách nhiệt tốt. Sản phẩm này dễ dàng vệ sinh, bảo dưỡng, phù hợp cho nhà ở, văn phòng, và các không gian cần tiết kiệm diện tích. Khi chọn mua, cần lưu ý kích thước, kiểu dáng, và chất lượng nhôm chính hãng. Cửa nhôm Xingfa có nhiều màu sắc như trắng, đen, ghi xám, và nâu cà phê, đáp ứng đa dạng nhu cầu sử dụng.</p><p class='brand-desc-p'>Cửa trượt quay Xingfa</p><p class='brand-desc-p'>Màu Sắc Đa Dạng Của Cửa Nhôm Xingfa</p><p class='brand-desc-p'>1. Cửa Nhôm Xingfa Màu Trắng</p><p class='brand-desc-p'>Màu trắng tinh tế giúp cửa nhôm Xingfa dễ dàng hòa hợp với mọi phong cách thiết kế, từ cổ điển đến hiện đại. Màu trắng cũng giúp tăng cường ánh sáng tự nhiên cho không gian.</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Màu Trắng</p><p class='brand-desc-p'>2. Cửa Nhôm Xingfa Màu Xám</p><p class='brand-desc-p'>Cửa Xingfa màu xám mang đến sự sang trọng và hiện đại, phù hợp với các công trình kiến trúc đương đại. Màu xám còn tạo cảm giác mát mẻ và dễ chịu.</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Màu Xám</p><p class='brand-desc-p'>3. Cửa Nhôm Xingfa Màu Đen</p><p class='brand-desc-p'>Màu đen không chỉ mang lại sự mạnh mẽ, bí ẩn mà còn tạo điểm nhấn nổi bật cho ngôi nhà của bạn. Cửa Xingfa màu đen là lựa chọn lý tưởng cho những ai yêu thích phong cách thiết kế táo bạo và khác biệt.</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Màu Đen</p><p class='brand-desc-p'>4. Cửa Nhôm Xingfa Màu Gỗ</p><p class='brand-desc-p'>Sự kết hợp giữa vẻ đẹp tự nhiên của gỗ và tính bền bỉ của nhôm đã tạo nên cửa nhôm Xingfa màu gỗ – một giải pháp hoàn hảo cho những ai yêu thích vẻ đẹp truyền thống nhưng không muốn từ bỏ sự hiện đại.</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Màu Vân Gỗ</p><p class='brand-desc-p'>5. Cửa Nhôm Xingfa Màu Nâu Cà Phê</p><p class='brand-desc-p'>Cửa Xingfa màu nâu cà phê đem lại vẻ đẹp ấm áp, thân thiện và sang trọng, thích hợp cho các ngôi nhà có phong cách cổ điển.</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Màu Nâu Cà Phê</p><p class='brand-desc-p'>Lựa Chọn Nhà Cung Cấp Cửa Nhôm Xingfa Uy Tín</p><p class='brand-desc-p'>Để đảm bảo chất lượng sản phẩm và dịch vụ, hãy lựa chọn đơn vị cung cấp cửa nhôm Xingfa uy tín. Nhôm Kính Đại Phúc là một trong những đơn vị tiên phong cung cấp các sản phẩm nhôm kính chất lượng cao, đảm bảo thẩm mỹ và độ bền lâu dài.</p><p class='brand-desc-p'>Tại Sao Nên Chọn Nhôm Kính Đại Phúc?</p><p class='brand-desc-p'>Kinh nghiệm lâu năm và uy tín: Với hơn 10 năm kinh nghiệm, Nhôm Kính Đại Phúc đã khẳng định vị thế trong ngành sản xuất và cung cấp cửa nhôm kính.
+
+	Giải pháp thi công chuyên nghiệp: Đội ngũ kỹ thuật viên giàu kinh nghiệm, thi công nhanh chóng và đảm bảo chất lượng.
+
+	Dịch vụ chăm sóc khách hàng tận tâm: Chúng tôi luôn sẵn sàng tư vấn và hỗ trợ khách hàng chọn lựa sản phẩm phù hợp nhất.</p><p class='brand-desc-p'>Cửa Nhôm Xingfa không chỉ là một lựa chọn hoàn hảo về mặt thẩm mỹ mà còn mang lại nhiều tiện ích vượt trội cho mọi công trình. Với sự đa dạng về mẫu mã, màu sắc và tính năng, cửa Xingfa đang ngày càng được yêu thích và sử dụng rộng rãi. Nếu bạn đang tìm kiếm giải pháp cửa nhôm chất lượng, hãy liên hệ với Nhôm Kính Đại Phúc để được tư vấn và hỗ trợ tốt nhất.</p><p class='brand-desc-p'>Câu Hỏi Thường Gặp</p><p class='brand-desc-p'>Cửa Nhôm Xingfa có bền không?</p><p class='brand-desc-p'>Cửa nhôm Xingfa rất bền, có khả năng chống ăn mòn và chịu được điều kiện thời tiết khắc nghiệt.</p><p class='brand-desc-p'>Tôi có thể lựa chọn màu sắc nào cho cửa Nhôm Xingfa?</p><p class='brand-desc-p'>Bạn có thể lựa chọn nhiều màu sắc như trắng, đen, xám, màu gỗ, nâu cà phê tùy theo phong cách thiết kế.</p><p class='brand-desc-p'>Cửa nhôm Xingfa có chống cháy không?</p><p class='brand-desc-p'>Có, cửa nhôm Xingfa có dòng sản phẩm cửa chống cháy chuyên dụng, đảm bảo an toàn trong trường hợp hỏa hoạn.</p><p class='brand-desc-p'>Cửa nhôm Xingfa phù hợp cho các loại công trình nào?</p><p class='brand-desc-p'>Cửa nhôm Xingfa phù hợp cho mọi loại công trình từ nhà ở, văn phòng, khách sạn, bệnh viện, trường học.</p><p class='brand-desc-p'>Làm thế nào để bảo trì cửa nhôm Xingfa?</p><p class='brand-desc-p'>Cửa nhôm Xingfa rất dễ bảo trì, bạn chỉ cần lau chùi nhẹ nhàng với nước sạch và chất tẩy rửa nhẹ.</p><p class='brand-desc-p'>THI CÔNG Cửa Nhôm Xingfa TRÊN TOÀN QUỐC</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Hồ Chí Minh</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Hà Nội</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Bình Dương</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Đà Nẵng</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Hải Phòng</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Long An</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Bà Rịa Vũng Tàu</p><p class='brand-desc-p'>Cửa Nhôm Xingfa An Giang</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Bắc Giang</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Bắc Kạn</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Bạc Liêu</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Bắc Ninh</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Bến Tre</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Bình Định</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Bình Phước</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Bình Thuận</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Cà Mau</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Cần Thơ</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Cao Bằng</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Đắk Lắk</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Đắk Nông</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Điện Biên</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Đồng Nai</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Đồng Tháp</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Gia Lai</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Hà Giang</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Hà Nam</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Hà Tĩnh</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Hải Dương</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Hậu Giang</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Hòa Bình</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Hưng Yên</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Khánh Hòa</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Kiên Giang</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Kon Tum</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Lai Châu</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Lâm Đồng</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Lạng Sơn</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Lào Cai</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Nam Định</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Nghệ An</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Ninh Bình</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Ninh Thuận</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Phú Thọ</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Phú Yên</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Quảng Bình</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Quảng Nam</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Quảng Ngãi</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Quảng Ninh</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Quảng Trị</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Sóc Trăng</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Sơn La</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Tây Ninh</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Thái Bình</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Thái Nguyên</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Thanh Hóa</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Thừa Thiên Huế</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Tiền Giang</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Trà Vinh</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Tuyên Quang</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Vĩnh Long</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Vĩnh Phúc</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Yên Bái</p><p class='brand-desc-p'>Mở rộng</p>
+        </div>
+        
+        <div class="brand-sidebar">
+          <h3 class="sidebar-title">Thông Số Kỹ Thuật</h3>
+          <ul class="sidebar-list">
+            <li>Xuất xứ nhôm: <strong>Quảng Đông (Trung Quốc)</strong></li>
+            <li>Phân khúc dự án: <strong>Phổ thông / Trung cấp</strong></li>
+            <li>Sơn phủ bề mặt: <strong>Tĩnh điện / PVDF / Anodized</strong></li>
+            <li>Độ bền màu sắc: <strong>10 - 25 năm chính hãng</strong></li>
+            <li>Ứng dụng tối ưu: <strong>Cửa mở quay, cửa lùa trượt, vách ngăn</strong></li>
+          </ul>
+          
+          <div class="tech-download-card">
+            <div class="tech-download-title">
+              <i class="ri-folder-zip-line"></i> TÀI LIỆU KỸ THUẬT & CAD PROFILE
+            </div>
+            <p style="font-size:12px; color:#78350f; line-height:1.5; margin:0;">
+              Tải đầy đủ thư viện bản vẽ mặt cắt nhôm và tài liệu AutoCAD để hỗ trợ bóc tách khối lượng và thiết kế.
+            </p>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/05_Thư viện CAD/Cửa lùa/Ban_ve_mau_Cua_lua.dxf" class="tech-download-btn" download>
+              Tải Bản Vẽ CAD (.dxf) <i class="ri-download-2-line"></i>
+            </a>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/01_Sổ tay Kỹ thuật Tổng hợp.docx" class="tech-download-btn" style="background:transparent; border:1px solid #d97706; color:#d97706;" download>
+              Tải Sổ Tay Kỹ Thuật <i class="ri-file-pdf-2-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-products-section">
+    <div class="sv-container">
+      <div style="text-align:center;">
+        <span class="sv-section-tag">MẪU CỬA ĐẸP</span>
+        <h2 class="sv-section-title" style="margin-inline:auto;">Giải Pháp Thiết Kế Cửa Nhôm Xingfa Quảng Đông</h2>
+      </div>
+      
+      <div class="pk-grid">
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/cua-nhom-xingfa-4-canh-mo-quay_142345095096/cua-nhom-xingfa-4-canh-mo-quay.webp" alt="Cửa đi mở quay nhôm Xingfa 4 cánh" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#e11d48;">Nhôm Xingfa Quảng Đông</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa đi mở quay nhôm Xingfa 4 cánh</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #e11d48; color:#e11d48;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/cua-so-nhom-xingfa-mo-quay-2-canh_868949141616/cua-so-nhom-xingfa-mo-quay-2-canh.webp" alt="Cửa sổ nhôm Xingfa mở quay 2 cánh" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#e11d48;">Nhôm Xingfa Quảng Đông</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa sổ nhôm Xingfa mở quay 2 cánh</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #e11d48; color:#e11d48;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/cua-so-nhom-xingfa-mo-quay-4-canh_509513106880/cua-so-nhom-xingfa-mo-quay-4-canh.webp" alt="Cửa sổ nhôm Xingfa mở quay 4 cánh" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#e11d48;">Nhôm Xingfa Quảng Đông</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa sổ nhôm Xingfa mở quay 4 cánh</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #e11d48; color:#e11d48;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/cua-xep-truot-nhom-xingfa_509510578643/cua-xep-truot-nhom-xingfa.webp" alt="Cửa đi xếp trượt nhôm Xingfa 6 cánh" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#e11d48;">Nhôm Xingfa Quảng Đông</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa đi xếp trượt nhôm Xingfa 6 cánh</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #e11d48; color:#e11d48;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-v2" role="contentinfo">
+    <div class="sv-container">
+      <div class="footer-v2-grid">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <div class="footer-logo-wrap" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+            <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 54px; width: auto; display: block;" />
+          </div>
+          <p class="footer-address" style="font-size: var(--sv-text-sm); color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 20px;">
+            Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng — chuyên cơ khí chính xác &amp; nhôm kính cao cấp.
+          </p>
+          <div class="footer-socials" aria-label="Mạng xã hội">
+            <a href="#" class="footer-social" aria-label="Facebook Sao Vàng"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="YouTube Sao Vàng"><i class="ri-youtube-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn Sao Vàng"><i class="ri-linkedin-fill" aria-hidden="true"></i></a>
+            <a href="tel:0869590279" class="footer-social" aria-label="Gọi hotline Sao Vàng"><i class="ri-phone-fill" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Cơ Khí Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Cơ Khí Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công cơ khí chính xác</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công CNC</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Kết cấu thép</a>
+            <a href="cau-thang-xoan.html" class="footer-link">Lan can, cầu thang, mái kính</a>
+            <a href="cong-nghe-thuat.html" class="footer-link">Cổng &amp; hàng rào</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công inox &amp; nhôm</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Nhôm Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Nhôm Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="cua-nhom-kinh.html" class="footer-link">Cửa nhôm kính cao cấp</a>
+            <a href="vach-kinh.html" class="footer-link">Vách kính mặt dựng</a>
+            <a href="lan-can-kinh.html" class="footer-link">Lan can kính</a>
+            <a href="thu-vien-profile-nhom.html" class="footer-link">Thư viện Profile Nhôm</a>
+            <a href="vach-kinh.html" class="footer-link">Phòng tắm kính</a>
+            <a href="vach-kinh.html" class="footer-link">Mái kính cường lực</a>
+            <a href="linh-vuc-nhom-kinh.html" class="footer-link">Phụ kiện nhôm kính</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Công ty -->
+        <div>
+          <h4 class="footer-col-title">Công Ty</h4>
+          <div class="footer-links">
+            <a href="gioi-thieu.html" class="footer-link">Giới thiệu</a>
+            <a href="linh-vuc-hoat-dong.html" class="footer-link">Lĩnh vực hoạt động</a>
+            <a href="du-an.html" class="footer-link">Dự án đã thực hiện</a>
+            <a href="san-pham.html" class="footer-link">Sản phẩm</a>
+            <a href="tin-tuc.html" class="footer-link">Tin tức</a>
+            <a href="lien-he.html" class="footer-link">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam.</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-line" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color: inherit; text-decoration: none;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <a href="mailto:info@cokhisaovang.com" style="color: inherit; text-decoration: none;">info@cokhisaovang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>Thứ 2 - Thứ 7: 8:00 - 17:00</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-global-line" aria-hidden="true"></i>
+              <a href="https://www.CoKhiSaoVang.com" target="_blank" style="color: inherit; text-decoration: none;">www.CoKhiSaoVang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-file-list-3-line" aria-hidden="true"></i>
+              <span>MST: 0110808047</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. All Rights Reserved. MST: 0110808047.</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+        <span>Design by <a href="https://readdy.ai" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; font-weight: 500;">Readdy.ai</a></span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════
+       FLOATING BUTTONS
+  ════════════════════════════════════════════ -->
+  <div class="floating-left" aria-label="Kênh liên hệ nhanh">
+    <a href="https://zalo.me/0869590279" class="float-btn float-btn-zalo"
+       target="_blank" rel="noopener" aria-label="Chat Zalo" title="Zalo: 0869 590 279">
+      <i class="ri-message-3-fill" aria-hidden="true"></i>
+    </a>
+    <a href="tel:0869590279" class="float-btn float-btn-phone"
+       aria-label="Gọi điện 0869 590 279" title="Gọi ngay">
+      <i class="ri-phone-fill" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="floating-right">
+    <button class="float-btn float-btn-top" id="scrollTopBtn" aria-label="Cuộn lên đầu trang" title="Lên đầu trang">
+      <i class="ri-arrow-up-line" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════════════════ -->
+  <script src="assets/js/main.js"></script>
+  <!-- navbar.js handles this -->
+  <script src="assets/js/modules/navbar.js"></script>
+  <script>
+    async function handleBannerSubmit(event, inputId, source) {
+      event.preventDefault();
+      const input = document.getElementById(inputId);
+      const phoneVal = input.value.trim();
+      const cleaned = phoneVal.replace(/\D/g, '');
+      if (cleaned.length < 9 || cleaned.length > 11) {
+        alert('Vui lòng nhập số điện thoại hợp lệ (từ 9 đến 11 chữ số).');
+        return;
+      }
+      
+      const btn = event.target.querySelector('button');
+      const origText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `<i class="ri-loader-4-line ri-spin"></i> GỬI...`;
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: 'Khách hàng liên hệ nhanh',
+            phone: phoneVal,
+            source: source,
+            note: `Khách hàng gửi số điện thoại từ hotline banner ${source} yêu cầu gọi lại tư vấn.`
+          })
+        });
+
+        if (response.ok) {
+          alert('Gửi số điện thoại thành công! Chúng tôi sẽ liên hệ lại ngay.');
+          input.value = '';
+        } else {
+          alert('Đã xảy ra lỗi, vui lòng thử lại sau.');
+        }
+      } catch (err) {
+        alert('Không thể kết nối tới máy chủ. Vui lòng thử lại.');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = origText;
+      }
+    }
+  </script>
+  <script src="assets/js/shared/internal-links.js"></script>
+  <!-- Sprint 3: Service CTA -->
+  <script src="assets/js/shared/service-cta.js"></script>
+    <!-- Sprint 2: Shared components -->
+  <script src="assets/js/shared/floating-widget.js"></script>
+  <script src="assets/js/shared/faq-accordion.js"></script>
+  <script src="assets/js/shared/breadcrumb.js"></script>
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#475569" />
+  <title>Cửa Nhôm Hệ Nhôm Slim Siêu Mảnh Chính Hãng | SAO VÀNG</title>
+  <meta name="description" content="Sao Vàng cung cấp các giải pháp cửa nhôm Hệ Nhôm Slim Siêu Mảnh nhập khẩu cao cấp đồng bộ chính hãng. Tư vấn thiết kế, báo giá lắp đặt trọn gói rẻ nhất." />
+  <meta name="keywords" content="cửa nhôm slim, cửa nhôm Hệ Nhôm Slim Siêu Mảnh, Hệ Nhôm Slim Siêu Mảnh chính hãng, mặt cắt nhôm slim" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  
+  <style>
+    .brand-hero {
+      background: linear-gradient(135deg,#1e293b 0%,#64748b 100%);
+      padding: 120px 0 60px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 120%, rgba(255,255,255,0.1), transparent 70%);
+    }
+    .brand-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .brand-title {
+      font-family: var(--sv-font-head);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .brand-subtitle-hero {
+      font-size: clamp(14px, 2vw, 18px);
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    
+    .brand-stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 40px);
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .brand-stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 24px;
+      min-width: 140px;
+      backdrop-filter: blur(8px);
+    }
+    .brand-stat-num {
+      font-family: var(--sv-font-head);
+      font-size: 24px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .brand-stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .brand-detail-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+    .brand-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .brand-content-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .brand-info-column {
+      padding-right: 20px;
+    }
+    .brand-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin: 28px 0 14px;
+      border-left: 4px solid #475569;
+      padding-left: 14px;
+    }
+    .brand-sub-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sv-dark-800);
+      margin: 18px 0 8px;
+    }
+    .brand-desc-p {
+      font-size: var(--sv-fs-sm);
+      color: var(--sv-gray-text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    
+    .brand-sidebar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .sidebar-title {
+      font-family: var(--sv-font-head);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: 20px;
+    }
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .sidebar-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 13px;
+      color: var(--sv-gray-text);
+      display: flex;
+      justify-content: space-between;
+    }
+    .sidebar-list li strong {
+      color: var(--sv-dark-900);
+    }
+    
+    .brand-products-section {
+      padding: 80px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .pk-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .pk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+    .pk-card-img {
+      position: relative;
+      height: 220px;
+      background: #f1f5f9;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .pk-card-img img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .pk-card-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+    .pk-card-body {
+      padding: 20px;
+    }
+    .pk-card-name {
+      font-family: var(--sv-font-head);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: 16px;
+      min-height: 40px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .pk-card-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: var(--sv-font-head);
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .tech-download-card {
+      background: #fffbeb;
+      border: 1px dashed #d97706;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 24px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .tech-download-title {
+      font-family: var(--sv-font-head);
+      font-size: 15px;
+      font-weight: 800;
+      color: #92400e;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .tech-download-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: #d97706;
+      color: #fff;
+      font-family: var(--sv-font-head);
+      font-size: 13px;
+      font-weight: 800;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .tech-download-btn:hover {
+      background: #b45309;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-menu-link active">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html" class="nav-menu-link">Nhôm Sao Vàng</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan</a>
+            <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
+          </div>
+        </div>
+        <a href="phu-kien.html" class="nav-menu-link">Phụ Kiện</a>
+        <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
+        <a href="du-an.html" class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="lien-he.html" class="nav-menu-link">Liên Hệ</a>
+      </nav>
+
+  <section class="brand-hero">
+    <div class="sv-container">
+      <span class="brand-tag">HỆ THỐNG PROFILE NHÔM</span>
+      <h1 class="brand-title">Hệ Nhôm Slim Siêu Mảnh</h1>
+      <p class="brand-subtitle-hero">Dòng nhôm chất lượng cao được Sao Vàng lắp đặt chính hãng đồng bộ cho các giải pháp kiến trúc</p>
+      
+      <div class="brand-stats">
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Châu Âu (Tối giản)</div>
+          <div class="brand-stat-label">Xuất Xứ</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">3</div>
+          <div class="brand-stat-label">Mẫu Thiết Kế</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Cao cấp / Tối giản diện tích</div>
+          <div class="brand-stat-label">Phân Khúc</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-detail-section">
+    <div class="sv-container">
+      <div class="brand-content-grid">
+        <div class="brand-info-column">
+          <h2 class="sv-section-title" style="margin-left:0; text-align:left;">Ưu Điểm & Đặc Tính</h2>
+          <p class='brand-desc-p'>Trang chủSản phẩmCửa Nhôm Hệ Slim            
+Cửa Nhôm Hệ Slim</p><p class='brand-desc-p'>Cửa Nhôm Slim Cover</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Lùa Nhôm Slim Không Ray - Cửa Nhôm Cao Cấp Tối Ưu Không Gian</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Nhôm Slim 1 Cánh Mở Quay</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Nhôm Slim Mở Quay 2 Cánh</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Vách ngăn phòng hệ slim có cửa mở quay</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa trượt slim 1 cánh không ray dưới</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa trượt slim 2 cánh, 1 cánh lùa 1 cánh cố định</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa trượt slim 2 cánh lùa 2 bên trên 1 ray</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa trượt slim 2 cánh lùa trên 2 ray</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa trượt slim 3 cánh, 2 cánh lùa 1 cánh cố định</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa trượt slim 3 cánh trượt qua lại trên 3 ray</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa trượt slim 4 cánh lùa 2 bên</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>&laquo;  &#8249; 123 &#8250;  &raquo;</p><p class='brand-desc-p'>Mục lục</p><p class='brand-desc-p'>Cửa Nhôm Slim Là Gì? Khám Phá Xu Hướng Thiết Kế "Vô Hình" Đầy Mê Hoặc</p><p class='brand-desc-p'>Định nghĩa về cửa nhôm Slim - Hơn cả một bộ cửa
+
+		Tại sao cửa nhôm Slim lại trở thành biểu tượng của sự sang trọng?</p><p class='brand-desc-p'>Cấu Tạo Chi Tiết Của Cửa Nhôm Slim - Bí Mật Đằng Sau Vẻ Đẹp Thanh Mảnh</p><p class='brand-desc-p'>Hệ Thống Khung Nhôm Slim Siêu Mảnh</p><p class='brand-desc-p'>Đặc điểm của thanh profile nhôm Slim
+
+			Các hệ nhôm Slim phổ biến</p><p class='brand-desc-p'>Phần Kính - Cửa Sổ Tâm Hồn Của Ngôi Nhà</p><p class='brand-desc-p'>Kính cường lực
+
+			Kính dán an toàn
+
+			Kính hộp cách âm, cách nhiệt</p><p class='brand-desc-p'>Hệ Phụ Kiện Đồng Bộ Cao Cấp</p><p class='brand-desc-p'>Hệ thống ray trượt
+
+			Bánh xe chịu lực
+
+			Tay nắm và hệ thống khóa</p><p class='brand-desc-p'>Hệ Gioăng EPDM Kín Khít Tuyệt Đối</p><p class='brand-desc-p'>Phân Loại Cửa Nhôm Slim Phổ Biến Nhất Hiện Nay</p><p class='brand-desc-p'>Phân loại theo cơ chế vận hành</p><p class='brand-desc-p'>Cửa lùa nhôm Slim (Cửa trượt Slim)
+
+			Cửa mở quay nhôm Slim</p><p class='brand-desc-p'>Phân loại theo số lượng cánh
+
+		Cửa nhôm Slim không ray dưới - Giải pháp cho không gian liền mạch</p><p class='brand-desc-p'>Ưu Điểm Vượt Trội Của Cửa Nhôm Slim So Với Các Hệ Nhôm Truyền Thống</p><p class='brand-desc-p'>Tối ưu không gian, mở rộng tầm nhìn Panorama
+
+		Thiết kế tối giản, tinh tế và sang trọng
+
+		Vận hành êm ái, nhẹ nhàng
+
+		Khả năng cách âm, cách nhiệt hiệu quả
+
+		Độ bền cao, chịu được tải trọng lớn</p><p class='brand-desc-p'>Nhược Điểm Cần Cân Nhắc Khi Lắp Đặt Cửa Nhôm Slim</p><p class='brand-desc-p'>Giá thành cao hơn
+
+		Yêu cầu kỹ thuật thi công khắt khe</p><p class='brand-desc-p'>Ứng Dụng Của Cửa Nhôm Slim Trong Kiến Trúc Hiện Đại
+
+	So Sánh Cửa Nhôm Slim Và Cửa Nhôm Xingfa - Lựa Chọn Nào Tối Ưu?
+
+	Nhôm Kính Đại Phúc - Đơn Vị Thi Công Cửa Nhôm Slim Uy Tín, Chuyên Nghiệp</p><p class='brand-desc-p'>Tại sao nên chọn Nhôm Kính Đại Phúc?
+
+		Cam kết về chất lượng và dịch vụ</p><p class='brand-desc-p'>Báo Giá Cửa Nhôm Slim Mới Nhất
+
+	Kết Luận
+
+	Câu Hỏi Thường Gặp Về Cửa Nhôm Slim</p><p class='brand-desc-p'>Cửa Nhôm Slim Là Gì? Khám Phá Xu Hướng Thiết Kế "Vô Hình" Đầy Mê Hoặc</p><p class='brand-desc-p'>Bạn đã bao giờ mơ ước về một không gian sống nơi ranh giới giữa trong nhà và ngoài trời gần như được xóa nhòa? Một nơi mà ánh sáng tự nhiên và cảnh quan thiên nhiên trở thành một phần không thể tách rời của kiến trúc? Nếu câu trả lời là có, thì cửa nhôm Slim chính là chìa khóa để biến ước mơ đó thành hiện thực. Đây không chỉ là một hệ cửa, mà còn là một tuyên ngôn về phong cách sống tối giản, tinh tế và đẳng cấp.</p><p class='brand-desc-p'>Mẫu cửa nhôm Slim lùa 6 cánh cho phòng khách biệt thự</p><p class='brand-desc-p'>Định nghĩa về cửa nhôm Slim - Hơn cả một bộ cửa</p><p class='brand-desc-p'>Cửa nhôm Slim (hay còn gọi là cửa nhôm hệ Slim, cửa lùa Slim) là một hệ thống cửa được cấu thành từ các thanh profile nhôm có thiết kế siêu mỏng, siêu thanh mảnh. Điểm đặc trưng tạo nên sự khác biệt của hệ cửa này chính là phần khung nhôm được tối giản hóa đến mức tối đa, nhường chỗ cho phần kính chiếm diện tích lớn, có thể lên tới 95% bề mặt cửa. Điều này tạo ra một cảm giác "vô hình", một "khung tranh sống" trọn vẹn cảnh quan bên ngoài, mang lại một tầm nhìn panorama không giới hạn.</p><p class='brand-desc-p'>Khác biệt hoàn toàn với các hệ nhôm truyền thống có bản nhôm to, dày và thô kệch, cửa nhôm Slim tập trung vào sự tinh gọn, thanh thoát nhưng vẫn đảm bảo tuyệt đối về độ cứng, độ bền và khả năng vận hành an toàn.</p><p class='brand-desc-p'>Tại sao cửa nhôm Slim lại trở thành biểu tượng của sự sang trọng?</p><p class='brand-desc-p'>Sự lên ngôi của cửa nhôm Slim không phải là ngẫu nhiên. Nó bắt nguồn từ sự thay đổi trong tư duy thiết kế kiến trúc hiện đại, nơi mà không gian mở, sự kết nối với thiên nhiên và chủ nghĩa tối giản (Minimalism) được đề cao. Vậy, điều gì làm nên sức hút khó cưỡng của hệ cửa này?</p><p class='brand-desc-p'>Thẩm mỹ đỉnh cao: Vẻ đẹp thanh mảnh, tinh tế của hệ khung nhôm mang lại nét sang trọng, hiện đại mà không một hệ cửa nào khác có thể sánh được.
+
+	Tối ưu hóa tầm nhìn: Với khung nhôm gần như "biến mất", bạn có thể tận hưởng trọn vẹn view sân vườn, hồ bơi, hay cảnh quan thành phố mà không bị bất kỳ chi tiết thừa nào cản trở.
+
+	Tuyên ngôn của sự đẳng cấp: Việc sử dụng cửa nhôm Slim trong một công trình được xem là dấu ấn của sự tinh tế, gu thẩm mỹ cao và sự đầu tư nghiêm túc của gia chủ.</p><p class='brand-desc-p'>Cấu Tạo Chi Tiết Của Cửa Nhôm Slim - Bí Mật Đằng Sau Vẻ Đẹp Thanh Mảnh</p><p class='brand-desc-p'>Để tạo nên một hệ cửa vừa thanh mảnh vừa vững chắc, cấu tạo cửa nhôm Slim là sự kết hợp hoàn hảo của những vật liệu cao cấp và công nghệ sản xuất tiên tiến. Mỗi bộ phận đều đóng một vai trò quan trọng, góp phần tạo nên một tổng thể hoàn mỹ.</p><p class='brand-desc-p'>Hệ Thống Khung Nhôm Slim Siêu Mảnh</p><p class='brand-desc-p'>Đây chính là "linh hồn" của sản phẩm. Thanh profile nhôm được sử dụng cho cửa nhôm hệ Slim là loại hợp kim nhôm cao cấp, thường là 6063-T5 hoặc tương đương, đạt tiêu chuẩn quốc tế về độ cứng và độ bền.</p><p class='brand-desc-p'>Đặc điểm của thanh profile nhôm Slim</p><p class='brand-desc-p'>Thiết kế siêu mỏng: Bản rộng của thanh nhôm cánh thường chỉ từ 16mm - 20mm, nhỏ hơn gấp 4-5 lần so với các hệ nhôm thông thường.
+
+	Kết cấu vững chắc: Mặc dù mỏng, nhưng bên trong thanh nhôm có các đường gân tăng cứng, được tính toán kỹ lưỡng để đảm bảo khả năng chịu lực uốn, lực vặn xoắn và áp lực gió lớn.
+
+	Bề mặt hoàn hảo: Bề mặt thanh nhôm được xử lý bằng công nghệ sơn tĩnh điện cao cấp hoặc Anodized, giúp chống ăn mòn, chống phai màu và dễ dàng vệ sinh.</p><p class='brand-desc-p'>Các hệ nhôm Slim phổ biến</p><p class='brand-desc-p'>Thị trường hiện nay có nhiều hệ nhôm Slim khác nhau, chủ yếu đến từ các thương hiệu nổi tiếng của châu Âu (Ý, Tây Ban Nha, Bồ Đào Nha) và các nhà sản xuất cao cấp trong nước. Mỗi hệ sẽ có những đặc điểm riêng về thiết kế mặt cắt và phụ kiện đi kèm.</p><p class='brand-desc-p'>Phần Kính - Cửa Sổ Tâm Hồn Của Ngôi Nhà</p><p class='brand-desc-p'>Với diện tích kính chiếm phần lớn, việc lựa chọn loại kính phù hợp là vô cùng quan trọng, ảnh hưởng trực tiếp đến sự an toàn, khả năng cách âm, cách nhiệt và thẩm mỹ của bộ cửa.</p><p class='brand-desc-p'>Kính cường lực</p><p class='brand-desc-p'>Là lựa chọn phổ biến nhất, kính cường lực có khả năng chịu lực va đập cao gấp 4-5 lần kính thường. Khi vỡ, kính sẽ tạo thành các hạt nhỏ như hạt ngô, giảm thiểu nguy cơ gây sát thương.</p><p class='brand-desc-p'>Kính dán an toàn</p><p class='brand-desc-p'>Gồm hai hay nhiều lớp kính được liên kết với nhau bằng lớp film PVB. Khi có va đập mạnh, lớp film sẽ giữ các mảnh vỡ lại, đảm bảo an toàn tuyệt đối, đặc biệt phù hợp cho các gia đình có trẻ nhỏ.</p><p class='brand-desc-p'>Kính hộp cách âm, cách nhiệt</p><p class='brand-desc-p'>Đây là giải pháp tối ưu cho những công trình yêu cầu cao về khả năng chống ồn và tiết kiệm năng lượng. Cấu tạo gồm 2 lớp kính được ngăn cách bởi một khoảng trống chứa khí trơ, giúp ngăn cản sự truyền âm và truyền nhiệt hiệu quả.</p><p class='brand-desc-p'>Hệ Phụ Kiện Đồng Bộ Cao Cấp</p><p class='brand-desc-p'>Nếu khung nhôm là xương sống thì hệ phụ kiện chính là các khớp nối, quyết định đến sự vận hành trơn tru và độ bền của cửa lùa Slim. Phụ kiện cho cửa Slim thường là hàng nhập khẩu cao cấp, được thiết kế riêng, đồng bộ với hệ nhôm.</p><p class='brand-desc-p'>Phụ kiện đồng bộ cao cấp của cửa nhôm Slim</p><p class='brand-desc-p'>Hệ thống ray trượt</p><p class='brand-desc-p'>Ray trượt của cửa Slim được làm từ hợp kim nhôm siêu bền, thiết kế nhỏ gọn. Đặc biệt, hệ thống cửa lùa slim không ray dưới đang là một xu hướng được ưa chuộng, giúp loại bỏ hoàn toàn sự vướng víu khi di chuyển, tạo nên một mặt sàn phẳng liền mạch.</p><p class='brand-desc-p'>Bánh xe chịu lực</p><p class='brand-desc-p'>Hệ thống bánh xe kép hoặc đa điểm được thiết kế thông minh, bọc bởi vật liệu giảm chấn, giúp các cánh cửa dù có kích thước lớn và nặng vẫn có thể trượt một cách nhẹ nhàng, êm ái, không gây tiếng ồn.</p><p class='brand-desc-p'>Tay nắm và hệ thống khóa</p><p class='brand-desc-p'>Tay nắm thường được thiết kế âm hoặc có kiểu dáng tối giản, tinh tế. Hệ thống khóa đa điểm hoặc khóa từ mang lại sự an toàn tuyệt đối cho ngôi nhà.</p><p class='brand-desc-p'>Hệ Gioăng EPDM Kín Khít Tuyệt Đối</p><p class='brand-desc-p'>Hệ thống gioăng cao su EPDM được chèn vào giữa các khung nhôm và kính, có tác dụng làm tăng độ kín khít, chống thấm nước, ngăn bụi bẩn và nâng cao khả năng cách âm, cách nhiệt cho bộ cửa.</p><p class='brand-desc-p'>Phân Loại Cửa Nhôm Slim Phổ Biến Nhất Hiện Nay</p><p class='brand-desc-p'>Sự đa dạng trong thiết kế giúp cửa nhôm Slim có thể đáp ứng linh hoạt mọi yêu cầu kiến trúc và công năng sử dụng. Vậy, cửa nhôm slim có mấy loại? Chúng ta có thể phân loại chúng dựa trên các tiêu chí sau:</p><p class='brand-desc-p'>Phân loại theo cơ chế vận hành</p><p class='brand-desc-p'>Cửa lùa nhôm Slim (Cửa trượt Slim)</p><p class='brand-desc-p'>Đây là loại phổ biến nhất, tối ưu cho việc tiết kiệm không gian. Cửa có thể thiết kế lùa về 1 phía hoặc 2 phía, lùa âm tường, lùa vuông góc... phù hợp với những không gian cần sự kết nối lớn như cửa đi chính, cửa ra sân vườn, ban công.</p><p class='brand-desc-p'>Ưu điểm: Tiết kiệm diện tích đóng/mở, tạo khẩu độ mở tối đa, vận hành nhẹ nhàng.
+
+	Ứng dụng: Phù hợp cho mọi công trình từ nhà phố đến biệt thự, resort.</p><p class='brand-desc-p'>Cửa mở quay nhôm Slim</p><p class='brand-desc-p'>Mặc dù ít phổ biến hơn cửa lùa, cửa mở quay Slim vẫn là một lựa chọn độc đáo cho cửa đi thông phòng, cửa sổ... mang lại vẻ đẹp thanh lịch và khả năng mở rộng 100% diện tích ô chờ.</p><p class='brand-desc-p'>Phân loại theo số lượng cánh</p><p class='brand-desc-p'>Tùy vào kích thước ô chờ và nhu cầu sử dụng, cửa nhôm Slim có thể được thiết kế với nhiều số cánh khác nhau:</p><p class='brand-desc-p'>Cửa lùa Slim 2 cánh, 3 cánh, 4 cánh.
+
+	Cửa lùa Slim 6 cánh (3 cánh lùa về mỗi bên).
+
+	Các thiết kế đặc biệt với số cánh lớn hơn cho các công trình có quy mô.</p><p class='brand-desc-p'>Cửa nhôm Slim không ray dưới - Giải pháp cho không gian liền mạch</p><p class='brand-desc-p'>Đây là một bước tiến đột phá trong thiết kế cửa lùa Slim. Toàn bộ cơ cấu chịu lực và dẫn hướng được chuyển lên ray treo phía trên, loại bỏ hoàn toàn phần ray âm sàn. Giải pháp này không chỉ mang lại thẩm mỹ đỉnh cao mà còn đảm bảo an toàn, tiện lợi cho việc đi lại, đặc biệt với người già và trẻ em, đồng thời giúp việc vệ sinh sàn nhà trở nên dễ dàng hơn bao giờ hết.</p><p class='brand-desc-p'>Ưu Điểm Vượt Trội Của Cửa Nhôm Slim So Với Các Hệ Nhôm Truyền Thống</p><p class='brand-desc-p'>Tại sao bạn nên đầu tư vào cửa nhôm Slim cao cấp thay vì các hệ nhôm Xingfa hay các hệ phổ thông khác? Câu trả lời nằm ở những ưu điểm độc nhất mà chỉ hệ cửa này mới có thể mang lại.</p><p class='brand-desc-p'>Không gian sống sang trọng với cửa nhôm Slim Panorama</p><p class='brand-desc-p'>Tối ưu không gian, mở rộng tầm nhìn Panorama</p><p class='brand-desc-p'>Đây là ưu điểm lớn nhất và đáng giá nhất. Với khung nhôm được thu gọn tối đa, cửa nhôm Slim Panorama phá vỡ mọi giới hạn về tầm nhìn. Ánh sáng tự nhiên tràn ngập khắp căn phòng, tạo cảm giác không gian rộng rãi, thoáng đãng hơn gấp nhiều lần. Bạn có thể ngồi trong nhà mà vẫn cảm nhận được sự thay đổi của thời tiết, ngắm nhìn khu vườn xanh mát hay thành phố lung linh về đêm.</p><p class='brand-desc-p'>Thiết kế tối giản, tinh tế và sang trọng</p><p class='brand-desc-p'>Cửa nhôm Slim là hiện thân của vẻ đẹp tối giản. Mọi chi tiết đều được tính toán để đạt đến sự tinh gọn nhưng vẫn đầy công năng. Vẻ đẹp thanh lịch này dễ dàng hòa hợp với mọi phong cách kiến trúc, từ hiện đại, tối giản đến Indochine hay cổ điển, nâng tầm giá trị thẩm mỹ cho toàn bộ công trình.</p><p class='brand-desc-p'>Vận hành êm ái, nhẹ nhàng</p><p class='brand-desc-p'>Nhờ hệ phụ kiện cao cấp và cơ cấu bánh xe thông minh, việc đóng mở một cánh cửa Slim kích thước lớn cũng trở nên nhẹ nhàng như một cái đẩy tay. Không còn những tiếng cọt kẹt khó chịu, thay vào đó là sự trượt êm ru, mang lại trải nghiệm sử dụng đẳng cấp.</p><p class='brand-desc-p'>Khả năng cách âm, cách nhiệt hiệu quả</p><p class='brand-desc-p'>Sự kết hợp giữa hệ khung nhôm có cầu cách nhiệt (tùy chọn), kính hộp và hệ gioăng EPDM kín khít giúp cửa nhôm Slim có khả năng cách âm, cách nhiệt vượt trội. Nó giúp bạn có một không gian yên tĩnh để nghỉ ngơi, làm việc và đồng thời tiết kiệm đáng kể chi phí điện năng cho việc làm mát hoặc sưởi ấm.</p><p class='brand-desc-p'>Độ bền cao, chịu được tải trọng lớn</p><p class='brand-desc-p'>Đừng để vẻ ngoài thanh mảnh đánh lừa bạn. Các thanh profile nhôm Slim được thiết kế với kết cấu chịu lực thông minh, có thể làm được những cánh cửa có chiều cao lên tới 3 mét, thậm chí hơn, mà vẫn đảm bảo độ vững chắc, an toàn tuyệt đối trước mọi điều kiện thời tiết khắc nghiệt.</p><p class='brand-desc-p'>Nhược Điểm Cần Cân Nhắc Khi Lắp Đặt Cửa Nhôm Slim</p><p class='brand-desc-p'>Bên cạnh những ưu điểm không thể phủ nhận, cửa nhôm Slim cũng có những điểm mà khách hàng cần cân nhắc kỹ lưỡng trước khi quyết định đầu tư.</p><p class='brand-desc-p'>Giá thành cao hơn</p><p class='brand-desc-p'>Do sử dụng vật liệu nhôm hợp kim cao cấp, hệ phụ kiện nhập khẩu đồng bộ và công nghệ sản xuất phức tạp, giá cửa nhôm Slim thường cao hơn đáng kể so với các hệ cửa nhôm thông thường như Xingfa. Đây là một khoản đầu tư cho giá trị thẩm mỹ và trải nghiệm lâu dài.</p><p class='brand-desc-p'>Yêu cầu kỹ thuật thi công khắt khe</p><p class='brand-desc-p'>Việc thi công cửa nhôm Slim đòi hỏi đội ngũ kỹ thuật phải có tay nghề rất cao, am hiểu sâu về sản phẩm và sở hữu các công cụ, máy móc chuyên dụng. Chỉ một sai sót nhỏ trong quá trình đo đạc, lắp đặt cũng có thể ảnh hưởng đến khả năng vận hành, độ kín khít và thẩm mỹ của bộ cửa.</p><p class='brand-desc-p'>Ứng Dụng Của Cửa Nhôm Slim Trong Kiến Trúc Hiện Đại</p><p class='brand-desc-p'>Với những đặc tính ưu việt, cửa nhôm Slim là lựa chọn hàng đầu cho các công trình kiến trúc cao cấp, nơi mà yêu cầu về thẩm mỹ và không gian được đặt lên hàng đầu.</p><p class='brand-desc-p'>Biệt thự, Penthouse, Resort cao cấp: Đây là "sân khấu" lý tưởng để cửa nhôm Slim cho biệt thự phô diễn hết vẻ đẹp của mình, tạo ra những vách kính khổng lồ kết nối phòng khách, phòng ngủ với sân vườn, hồ bơi.
+
+	Căn hộ chung cư, nhà phố hiện đại: Sử dụng cửa lùa Slim cho ban công hoặc vách ngăn không gian giúp "ăn gian" diện tích, làm cho căn hộ có cảm giác rộng và thoáng hơn.
+
+	Showroom, văn phòng, trung tâm thương mại: Cửa Slim tạo ra mặt tiền sang trọng, thu hút, trưng bày sản phẩm hiệu quả và mang lại một không gian làm việc mở, đầy sáng tạo.</p><p class='brand-desc-p'>So Sánh Cửa Nhôm Slim Và Cửa Nhôm Xingfa - Lựa Chọn Nào Tối Ưu?</p><p class='brand-desc-p'>Đây là câu hỏi mà rất nhiều khách hàng băn khoăn. Để có lựa chọn đúng đắn, hãy cùng so sánh cửa nhôm Slim và Xingfa qua các tiêu chí cốt lõi:</p><p class='brand-desc-p'>Tiêu Chí
+
+			Cửa Nhôm Slim
+
+			Cửa Nhôm Xingfa</p><p class='brand-desc-p'>Thẩm mỹ
+
+			Khung siêu mỏng, thanh mảnh, sang trọng, tối giản, tầm nhìn Panorama.
+
+			Khung to, dày, chắc chắn, mang tính phổ thông, tầm nhìn bị hạn chế bởi các đố cửa.</p><p class='brand-desc-p'>Không gian
+
+			Tối ưu không gian, tạo cảm giác rộng rãi, kết nối không gian tối đa.
+
+			Tạo cảm giác an toàn, chắc chắn nhưng có thể làm không gian bị chia cắt, nặng nề hơn.</p><p class='brand-desc-p'>Vận hành
+
+			Trượt siêu êm, nhẹ nhàng nhờ hệ phụ kiện cao cấp chuyên dụng.
+
+			Vận hành ổn định nhưng có thể nặng và phát ra tiếng động sau thời gian sử dụng.</p><p class='brand-desc-p'>Giá thành
+
+			Cao. Là dòng sản phẩm thuộc phân khúc cao cấp, hạng sang.
+
+			Hợp lý. Thuộc phân khúc phổ thông, phù hợp với đại đa số người dùng.</p><p class='brand-desc-p'>Kết luận so sánh: Nếu ngân sách của bạn thoải mái và ưu tiên hàng đầu là thẩm mỹ đỉnh cao, không gian mở và trải nghiệm sống đẳng cấp, cửa nhôm Slim là lựa chọn không thể thay thế. Nếu bạn cần một giải pháp an toàn, bền bỉ, hiệu quả với chi phí tối ưu, cửa nhôm Xingfa vẫn là một lựa chọn rất tốt.</p><p class='brand-desc-p'>Nhôm Kính Đại Phúc - Đơn Vị Thi Công Cửa Nhôm Slim Uy Tín, Chuyên Nghiệp</p><p class='brand-desc-p'>Để một sản phẩm cao cấp như cửa nhôm Slim phát huy hết giá trị, việc lựa chọn đơn vị thi công uy tín là yếu tố then chốt. Với kinh nghiệm nhiều năm trong ngành nhôm kính cao cấp, Nhôm Kính Đại Phúc tự hào là đối tác tin cậy, mang đến cho khách hàng những giải pháp cửa Slim hoàn hảo nhất.</p><p class='brand-desc-p'>Trình duyệt của bạn không hỗ trợ video.</p><p class='brand-desc-p'>Tại sao nên chọn Nhôm Kính Đại Phúc?</p><p class='brand-desc-p'>Chuyên môn sâu: Chúng tôi am hiểu tường tận về kết cấu, đặc tính kỹ thuật của từng hệ nhôm Slim, đảm bảo tư vấn giải pháp phù hợp và tối ưu nhất cho công trình của bạn.
+
+	Sản phẩm chính hãng: Nhôm Kính Đại Phúc cam kết chỉ sử dụng các hệ nhôm và phụ kiện Slim nhập khẩu chính hãng, có đầy đủ CO, CQ chứng minh nguồn gốc xuất xứ.
+
+	Đội ngũ kỹ thuật lành nghề: Đội ngũ của chúng tôi được đào tạo bài bản, có kinh nghiệm thực chiến qua hàng trăm công trình lớn nhỏ, đảm bảo quy trình lắp đặt chính xác đến từng milimet.
+
+	Nhà xưởng hiện đại: Hệ thống máy móc, trang thiết bị sản xuất tiên tiến giúp gia công sản phẩm đạt độ chính xác và thẩm mỹ cao nhất.</p><p class='brand-desc-p'>Cam kết về chất lượng và dịch vụ</p><p class='brand-desc-p'>Tại Nhôm Kính Đại Phúc, chúng tôi không chỉ bán sản phẩm, chúng tôi mang đến một giải pháp toàn diện. Chúng tôi cam kết: "Nhôm Kính Đại Phúc là đơn vị cung cấp thi công sản phẩm chất lượng, uy tín bảo hành dài hạn." Mọi sản phẩm đều được bảo hành chính hãng, đi kèm dịch vụ bảo trì định kỳ, mang lại sự an tâm tuyệt đối cho khách hàng.</p><p class='brand-desc-p'>Báo Giá Cửa Nhôm Slim Mới Nhất</p><p class='brand-desc-p'>Báo giá cửa nhôm Slim phụ thuộc vào nhiều yếu tố như:</p><p class='brand-desc-p'>Hệ nhôm và xuất xứ: Các hệ nhôm nhập khẩu từ châu Âu sẽ có giá cao hơn các hệ sản xuất trong nước.
+
+	Loại kính sử dụng: Kính hộp, kính dán an toàn sẽ có giá cao hơn kính cường lực.
+
+	Kích thước và số lượng cánh: Diện tích càng lớn, chi phí càng cao.
+
+	Hệ phụ kiện đi kèm: Thương hiệu phụ kiện cũng ảnh hưởng đến giá thành.
+
+	Độ phức tạp của thiết kế: Cửa lùa âm tường, cửa lùa góc sẽ có chi phí thi công cao hơn.</p><p class='brand-desc-p'>Do đó, để nhận được báo giá cửa nhôm Slim chính xác và chi tiết nhất cho công trình của mình, Quý khách hàng vui lòng liên hệ trực tiếp với Nhôm Kính Đại Phúc. Đội ngũ chuyên gia của chúng tôi sẽ tiến hành khảo sát, tư vấn và lên dự toán hoàn toàn miễn phí.</p><p class='brand-desc-p'>Kết Luận</p><p class='brand-desc-p'>Cửa nhôm Slim không còn là một sản phẩm xây dựng đơn thuần, nó đã trở thành một tác phẩm nghệ thuật kiến trúc, một biểu tượng cho phong cách sống hiện đại, tự do và phóng khoáng. Việc đầu tư vào hệ cửa này chính là đầu tư cho giá trị thẩm mỹ, cho trải nghiệm sống và cho đẳng cấp của công trình. Với vẻ đẹp thanh mảnh vượt thời gian và những công năng ưu việt, cửa Slim chắc chắn sẽ tiếp tục là xu hướng dẫn đầu trong nhiều năm tới. Và để biến ý tưởng về một không gian hoàn hảo thành hiện thực, hãy lựa chọn một đối tác thi công chuyên nghiệp như Nhôm Kính Đại Phúc, nơi chất lượng và uy tín luôn được đặt lên hàng đầu.</p><p class='brand-desc-p'>5 Câu Hỏi Thường Gặp Về Cửa Nhôm Slim</p><p class='brand-desc-p'>1. Cửa nhôm Slim có thực sự an toàn và chống trộm tốt không?</p><p class='brand-desc-p'>Hoàn toàn an toàn. Mặc dù có thiết kế thanh mảnh, cửa nhôm Slim được làm từ hợp kim nhôm siêu cứng, kết hợp với kính cường lực hoặc kính dán an toàn và hệ thống khóa đa điểm chắc chắn. Cấu trúc này khiến việc cạy phá từ bên ngoài là cực kỳ khó khăn, đảm bảo an ninh tuyệt đối cho ngôi nhà của bạn.</p><p class='brand-desc-p'>2. Cửa lùa Slim có dễ bị kẹt sau một thời gian sử dụng không?</p><p class='brand-desc-p'>Không. Vấn đề kẹt rít thường xảy ra với các loại cửa lùa giá rẻ sử dụng phụ kiện kém chất lượng. Cửa lùa Slim cao cấp sử dụng hệ thống bánh xe và ray trượt chuyên dụng, được tính toán chịu lực chính xác. Chỉ cần được lắp đặt đúng kỹ thuật bởi đơn vị uy tín như Nhôm Kính Đại Phúc và bảo dưỡng định kỳ, cửa sẽ vận hành êm ái, trơn tru trong suốt hàng chục năm.</p><p class='brand-desc-p'>3. Làm thế nào để vệ sinh và bảo dưỡng cửa nhôm Slim?</p><p class='brand-desc-p'>Việc vệ sinh rất đơn giản. Bạn chỉ cần dùng khăn mềm ẩm và dung dịch lau kính thông thường để làm sạch bề mặt kính. Đối với khung nhôm, chỉ cần lau bằng khăn ẩm, không sử dụng các chất tẩy rửa có tính axit hoặc kiềm mạnh. Nên kiểm tra và làm sạch ray trượt định kỳ để loại bỏ bụi bẩn, giúp cửa vận hành tốt nhất.</p><p class='brand-desc-p'>4. Cửa nhôm Slim có làm được kích thước siêu lớn, cao hết tầng không?</p><p class='brand-desc-p'>Có, đây chính là một trong những ưu điểm vượt trội của cửa nhôm Slim. Nhờ kết cấu nhôm vững chắc và khả năng chịu lực của hệ phụ kiện, cửa Slim hoàn toàn có thể được thiết kế với chiều cao lên tới 3m, 3.5m hoặc hơn, tạo thành những vách kính khổng lồ thông tầng đầy ấn tượng, điều mà các hệ nhôm thông thường rất khó thực hiện được.</p><p class='brand-desc-p'>5. Chi phí cho cửa nhôm Slim cao hơn cửa Xingfa bao nhiêu?</p><p class='brand-desc-p'>Giá cửa nhôm Slim thường cao hơn từ 2 đến 4 lần so với cửa nhôm Xingfa, tùy thuộc vào hệ nhôm, loại kính và phụ kiện bạn chọn. Mặc dù chi phí đầu tư ban đầu cao hơn, nhưng giá trị về thẩm mỹ, không gian sống, trải nghiệm sử dụng và đẳng cấp mà cửa Slim mang lại là hoàn toàn xứng đáng, góp phần nâng cao giá trị bất động sản của bạn.</p><p class='brand-desc-p'>THI CÔNG Cửa Nhôm Hệ Slim TRÊN TOÀN QUỐC</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Hồ Chí Minh</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Hà Nội</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Bình Dương</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Đà Nẵng</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Hải Phòng</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Long An</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Bà Rịa Vũng Tàu</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim An Giang</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Bắc Giang</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Bắc Kạn</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Bạc Liêu</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Bắc Ninh</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Bến Tre</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Bình Định</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Bình Phước</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Bình Thuận</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Cà Mau</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Cần Thơ</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Cao Bằng</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Đắk Lắk</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Đắk Nông</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Điện Biên</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Đồng Nai</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Đồng Tháp</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Gia Lai</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Hà Giang</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Hà Nam</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Hà Tĩnh</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Hải Dương</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Hậu Giang</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Hòa Bình</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Hưng Yên</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Khánh Hòa</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Kiên Giang</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Kon Tum</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Lai Châu</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Lâm Đồng</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Lạng Sơn</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Lào Cai</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Nam Định</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Nghệ An</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Ninh Bình</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Ninh Thuận</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Phú Thọ</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Phú Yên</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Quảng Bình</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Quảng Nam</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Quảng Ngãi</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Quảng Ninh</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Quảng Trị</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Sóc Trăng</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Sơn La</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Tây Ninh</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Thái Bình</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Thái Nguyên</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Thanh Hóa</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Thừa Thiên Huế</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Tiền Giang</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Trà Vinh</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Tuyên Quang</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Vĩnh Long</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Vĩnh Phúc</p><p class='brand-desc-p'>Cửa Nhôm Hệ Slim Yên Bái</p><p class='brand-desc-p'>Mở rộng</p>
+        </div>
+        
+        <div class="brand-sidebar">
+          <h3 class="sidebar-title">Thông Số Kỹ Thuật</h3>
+          <ul class="sidebar-list">
+            <li>Xuất xứ nhôm: <strong>Châu Âu (Tối giản)</strong></li>
+            <li>Phân khúc dự án: <strong>Cao cấp / Tối giản diện tích</strong></li>
+            <li>Sơn phủ bề mặt: <strong>Tĩnh điện / PVDF / Anodized</strong></li>
+            <li>Độ bền màu sắc: <strong>10 - 25 năm chính hãng</strong></li>
+            <li>Ứng dụng tối ưu: <strong>Cửa mở quay, cửa lùa trượt, vách ngăn</strong></li>
+          </ul>
+          
+          <div class="tech-download-card">
+            <div class="tech-download-title">
+              <i class="ri-folder-zip-line"></i> TÀI LIỆU KỸ THUẬT & CAD PROFILE
+            </div>
+            <p style="font-size:12px; color:#78350f; line-height:1.5; margin:0;">
+              Tải đầy đủ thư viện bản vẽ mặt cắt nhôm và tài liệu AutoCAD để hỗ trợ bóc tách khối lượng và thiết kế.
+            </p>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/05_Thư viện CAD/Cửa Slim/Ban_ve_mau_Cua_Slim.dxf" class="tech-download-btn" download>
+              Tải Bản Vẽ CAD (.dxf) <i class="ri-download-2-line"></i>
+            </a>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/08_Catalogue theo Hãng/ThuVien_HeCuaNhom_Slim.docx" class="tech-download-btn" style="background:transparent; border:1px solid #d97706; color:#d97706;" download>
+              Tải Sổ Tay Kỹ Thuật <i class="ri-file-pdf-2-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-products-section">
+    <div class="sv-container">
+      <div style="text-align:center;">
+        <span class="sv-section-tag">MẪU CỬA ĐẸP</span>
+        <h2 class="sv-section-title" style="margin-inline:auto;">Giải Pháp Thiết Kế Cửa Hệ Nhôm Slim Siêu Mảnh</h2>
+      </div>
+      
+      <div class="pk-grid">
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/banh-xe-giam-chan-cua-lua-slim_377335539699/phu-kien-cua-slim-banh-xe-giam-chan-cua-lua-slim.webp" alt="Cửa lùa Slim 2 cánh không ray dưới" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#475569;">Hệ Nhôm Slim Siêu Mảnh</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa lùa Slim 2 cánh không ray dưới</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #475569; color:#475569;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/cua-nhom-slim-1-canh-mo-quay_871152100477/cua-nhom-slim-1-canh-mo-quay.webp" alt="Cửa đi Slim mở quay 1 cánh thanh mảnh" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#475569;">Hệ Nhôm Slim Siêu Mảnh</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa đi Slim mở quay 1 cánh thanh mảnh</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #475569; color:#475569;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/vach-ngan-phong-he-slim-co-cua-mo-quay_735361595727/vach-ngan-phong-he-slim-co-cua-mo-quay.webp" alt="Vách ngăn phòng hệ Slim kính cường lực" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#475569;">Hệ Nhôm Slim Siêu Mảnh</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Vách ngăn phòng hệ Slim kính cường lực</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #475569; color:#475569;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-v2" role="contentinfo">
+    <div class="sv-container">
+      <div class="footer-v2-grid">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <div class="footer-logo-wrap" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+            <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 54px; width: auto; display: block;" />
+          </div>
+          <p class="footer-address" style="font-size: var(--sv-text-sm); color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 20px;">
+            Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng — chuyên cơ khí chính xác &amp; nhôm kính cao cấp.
+          </p>
+          <div class="footer-socials" aria-label="Mạng xã hội">
+            <a href="#" class="footer-social" aria-label="Facebook Sao Vàng"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="YouTube Sao Vàng"><i class="ri-youtube-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn Sao Vàng"><i class="ri-linkedin-fill" aria-hidden="true"></i></a>
+            <a href="tel:0869590279" class="footer-social" aria-label="Gọi hotline Sao Vàng"><i class="ri-phone-fill" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Cơ Khí Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Cơ Khí Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công cơ khí chính xác</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công CNC</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Kết cấu thép</a>
+            <a href="cau-thang-xoan.html" class="footer-link">Lan can, cầu thang, mái kính</a>
+            <a href="cong-nghe-thuat.html" class="footer-link">Cổng &amp; hàng rào</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công inox &amp; nhôm</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Nhôm Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Nhôm Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="cua-nhom-kinh.html" class="footer-link">Cửa nhôm kính cao cấp</a>
+            <a href="vach-kinh.html" class="footer-link">Vách kính mặt dựng</a>
+            <a href="lan-can-kinh.html" class="footer-link">Lan can kính</a>
+            <a href="thu-vien-profile-nhom.html" class="footer-link">Thư viện Profile Nhôm</a>
+            <a href="vach-kinh.html" class="footer-link">Phòng tắm kính</a>
+            <a href="vach-kinh.html" class="footer-link">Mái kính cường lực</a>
+            <a href="linh-vuc-nhom-kinh.html" class="footer-link">Phụ kiện nhôm kính</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Công ty -->
+        <div>
+          <h4 class="footer-col-title">Công Ty</h4>
+          <div class="footer-links">
+            <a href="gioi-thieu.html" class="footer-link">Giới thiệu</a>
+            <a href="linh-vuc-hoat-dong.html" class="footer-link">Lĩnh vực hoạt động</a>
+            <a href="du-an.html" class="footer-link">Dự án đã thực hiện</a>
+            <a href="san-pham.html" class="footer-link">Sản phẩm</a>
+            <a href="tin-tuc.html" class="footer-link">Tin tức</a>
+            <a href="lien-he.html" class="footer-link">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam.</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-line" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color: inherit; text-decoration: none;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <a href="mailto:info@cokhisaovang.com" style="color: inherit; text-decoration: none;">info@cokhisaovang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>Thứ 2 - Thứ 7: 8:00 - 17:00</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-global-line" aria-hidden="true"></i>
+              <a href="https://www.CoKhiSaoVang.com" target="_blank" style="color: inherit; text-decoration: none;">www.CoKhiSaoVang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-file-list-3-line" aria-hidden="true"></i>
+              <span>MST: 0110808047</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. All Rights Reserved. MST: 0110808047.</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+        <span>Design by <a href="https://readdy.ai" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; font-weight: 500;">Readdy.ai</a></span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════
+       FLOATING BUTTONS
+  ════════════════════════════════════════════ -->
+  <div class="floating-left" aria-label="Kênh liên hệ nhanh">
+    <a href="https://zalo.me/0869590279" class="float-btn float-btn-zalo"
+       target="_blank" rel="noopener" aria-label="Chat Zalo" title="Zalo: 0869 590 279">
+      <i class="ri-message-3-fill" aria-hidden="true"></i>
+    </a>
+    <a href="tel:0869590279" class="float-btn float-btn-phone"
+       aria-label="Gọi điện 0869 590 279" title="Gọi ngay">
+      <i class="ri-phone-fill" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="floating-right">
+    <button class="float-btn float-btn-top" id="scrollTopBtn" aria-label="Cuộn lên đầu trang" title="Lên đầu trang">
+      <i class="ri-arrow-up-line" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════════════════ -->
+  <script src="assets/js/main.js"></script>
+  <!-- navbar.js handles this -->
+  <script src="assets/js/modules/navbar.js"></script>
+  <script>
+    async function handleBannerSubmit(event, inputId, source) {
+      event.preventDefault();
+      const input = document.getElementById(inputId);
+      const phoneVal = input.value.trim();
+      const cleaned = phoneVal.replace(/\D/g, '');
+      if (cleaned.length < 9 || cleaned.length > 11) {
+        alert('Vui lòng nhập số điện thoại hợp lệ (từ 9 đến 11 chữ số).');
+        return;
+      }
+      
+      const btn = event.target.querySelector('button');
+      const origText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `<i class="ri-loader-4-line ri-spin"></i> GỬI...`;
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: 'Khách hàng liên hệ nhanh',
+            phone: phoneVal,
+            source: source,
+            note: `Khách hàng gửi số điện thoại từ hotline banner ${source} yêu cầu gọi lại tư vấn.`
+          })
+        });
+
+        if (response.ok) {
+          alert('Gửi số điện thoại thành công! Chúng tôi sẽ liên hệ lại ngay.');
+          input.value = '';
+        } else {
+          alert('Đã xảy ra lỗi, vui lòng thử lại sau.');
+        }
+      } catch (err) {
+        alert('Không thể kết nối tới máy chủ. Vui lòng thử lại.');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = origText;
+      }
+    }
+  </script>
+  <script src="assets/js/shared/internal-links.js"></script>
+  <!-- Sprint 3: Service CTA -->
+  <script src="assets/js/shared/service-cta.js"></script>
+    <!-- Sprint 2: Shared components -->
+  <script src="assets/js/shared/floating-widget.js"></script>
+  <script src="assets/js/shared/faq-accordion.js"></script>
+  <script src="assets/js/shared/breadcrumb.js"></script>
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>
+
+</body>
+</html>

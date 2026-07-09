@@ -4,10 +4,10 @@
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#9B1C1C" />
-  <title>Cổng Thông Tin Profile Nhôm & Catalogue Lắp Đặt | SAO VÀNG</title>
-  <meta name="description" content="Sao Vàng phân phối và thi công các hệ nhôm kính cao cấp chính hãng: Xingfa, Maxpro, Civro, Slim, Kogen, PMA. Tích hợp bản vẽ CAD và so sánh kỹ thuật." />
-  <meta name="keywords" content="nhôm xingfa, nhôm maxpro, nhôm civro, nhôm kogen, nhôm pma, profile nhôm, bản vẽ cad cửa nhôm" />
+  <meta name="theme-color" content="#1e293b" />
+  <title>Cửa Nhôm Nhôm Cầu Cách Nhiệt Civro Chính Hãng | SAO VÀNG</title>
+  <meta name="description" content="Sao Vàng cung cấp các giải pháp cửa nhôm Nhôm Cầu Cách Nhiệt Civro nhập khẩu cao cấp đồng bộ chính hãng. Tư vấn thiết kế, báo giá lắp đặt trọn gói rẻ nhất." />
+  <meta name="keywords" content="cửa nhôm civro, cửa nhôm Nhôm Cầu Cách Nhiệt Civro, Nhôm Cầu Cách Nhiệt Civro chính hãng, mặt cắt nhôm civro" />
   
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,89 +16,243 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   
   <style>
-    :root {
-      --sv-red: #9B1C1C;
-      --sv-gold: #d4af37;
-    }
-    .dashboard-hero {
-      background: linear-gradient(135deg, #0f1115 0%, #1a1c23 100%);
-      padding: 140px 0 80px;
+    .brand-hero {
+      background: linear-gradient(135deg,#0f172a 0%,#334155 100%);
+      padding: 120px 0 60px;
       color: #fff;
       text-align: center;
       position: relative;
       overflow: hidden;
     }
-    .dashboard-hero::before {
+    .brand-hero::after {
       content: '';
       position: absolute; inset: 0;
-      background: radial-gradient(circle at 50% 120%, rgba(155, 28, 28, 0.12), transparent 70%);
+      background: radial-gradient(circle at 50% 120%, rgba(255,255,255,0.1), transparent 70%);
     }
-    .dashboard-title {
+    .brand-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .brand-title {
       font-family: var(--sv-font-head);
-      font-size: clamp(32px, 5vw, 52px);
+      font-size: clamp(32px, 5vw, 56px);
       font-weight: 900;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
-    .dashboard-desc {
+    .brand-subtitle-hero {
       font-size: clamp(14px, 2vw, 18px);
-      color: rgba(255,255,255,0.7);
-      max-width: 680px;
-      margin: 0 auto 32px;
-      line-height: 1.6;
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto 24px;
     }
     
-    .brand-section {
-      padding: 80px 0;
-      background: #f8fafc;
-    }
-    .brand-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 24px;
-      margin-top: 40px;
-    }
-    .brand-card {
-      background: #ffffff;
-      border: 1px solid #e2e8f0;
-      border-radius: 16px;
-      padding: 30px 24px;
-      text-align: center;
-      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      text-decoration: none;
+    .brand-stats {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 220px;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 40px);
+      flex-wrap: wrap;
+      margin-top: 32px;
     }
-    .brand-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
-      border-color: var(--sv-red);
+    .brand-stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 24px;
+      min-width: 140px;
+      backdrop-filter: blur(8px);
     }
-    .brand-logo-name {
+    .brand-stat-num {
       font-family: var(--sv-font-head);
       font-size: 24px;
       font-weight: 900;
-      letter-spacing: 0.02em;
-      color: var(--sv-dark-900);
-      margin-bottom: 8px;
+      color: #fff;
     }
-    .brand-tagline {
-      font-size: 12px;
-      color: var(--sv-gray-text);
-      font-weight: 600;
+    .brand-stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
       text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .brand-detail-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+    .brand-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .brand-content-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .brand-info-column {
+      padding-right: 20px;
+    }
+    .brand-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin: 28px 0 14px;
+      border-left: 4px solid #1e293b;
+      padding-left: 14px;
+    }
+    .brand-sub-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sv-dark-800);
+      margin: 18px 0 8px;
+    }
+    .brand-desc-p {
+      font-size: var(--sv-fs-sm);
+      color: var(--sv-gray-text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    
+    .brand-sidebar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .sidebar-title {
+      font-family: var(--sv-font-head);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: 20px;
+    }
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .sidebar-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 13px;
+      color: var(--sv-gray-text);
+      display: flex;
+      justify-content: space-between;
+    }
+    .sidebar-list li strong {
+      color: var(--sv-dark-900);
+    }
+    
+    .brand-products-section {
+      padding: 80px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .pk-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .pk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+    .pk-card-img {
+      position: relative;
+      height: 220px;
+      background: #f1f5f9;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .pk-card-img img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .pk-card-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
       letter-spacing: 0.05em;
     }
-    .brand-btn-explore {
+    .pk-card-body {
+      padding: 20px;
+    }
+    .pk-card-name {
+      font-family: var(--sv-font-head);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: 16px;
+      min-height: 40px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .pk-card-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
       font-family: var(--sv-font-head);
       font-size: 12px;
       font-weight: 800;
-      color: var(--sv-red);
-      margin-top: 20px;
-      display: flex; align-items: center; gap: 4px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .tech-download-card {
+      background: #fffbeb;
+      border: 1px dashed #d97706;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 24px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .tech-download-title {
+      font-family: var(--sv-font-head);
+      font-size: 15px;
+      font-weight: 800;
+      color: #92400e;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .tech-download-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: #d97706;
+      color: #fff;
+      font-family: var(--sv-font-head);
+      font-size: 13px;
+      font-weight: 800;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .tech-download-btn:hover {
+      background: #b45309;
     }
   </style>
 </head>
@@ -124,80 +278,97 @@
         <a href="lien-he.html" class="nav-menu-link">Liên Hệ</a>
       </nav>
 
-  <section class="dashboard-hero">
+  <section class="brand-hero">
     <div class="sv-container">
-      <span class="brand-tag" style="background:rgba(255,255,255,0.1); padding:6px 14px; border-radius:20px; font-size:11px; font-weight:700; letter-spacing:0.1em;">CỔNG THÔNG TIN PROFILE</span>
-      <h1 class="dashboard-title">Hệ Thống Profile Nhôm Kính</h1>
-      <p class="dashboard-desc">
-        Xem chi tiết ưu nhược điểm, thông số kỹ thuật và tải bản vẽ AutoCAD mặt cắt hệ nhôm từ các thương hiệu hàng đầu thế giới.
-      </p>
+      <span class="brand-tag">HỆ THỐNG PROFILE NHÔM</span>
+      <h1 class="brand-title">Nhôm Cầu Cách Nhiệt Civro</h1>
+      <p class="brand-subtitle-hero">Dòng nhôm chất lượng cao được Sao Vàng lắp đặt chính hãng đồng bộ cho các giải pháp kiến trúc</p>
+      
+      <div class="brand-stats">
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Đức (Germany Technology)</div>
+          <div class="brand-stat-label">Xuất Xứ</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">2</div>
+          <div class="brand-stat-label">Mẫu Thiết Kế</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Siêu cao cấp / Biệt thự Luxury</div>
+          <div class="brand-stat-label">Phân Khúc</div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="brand-section">
+  <section class="brand-detail-section">
+    <div class="sv-container">
+      <div class="brand-content-grid">
+        <div class="brand-info-column">
+          <h2 class="sv-section-title" style="margin-left:0; text-align:left;">Ưu Điểm & Đặc Tính</h2>
+          <p class='brand-desc-p'>Thương hiệu nhôm kính Nhôm Cầu Cách Nhiệt Civro cao cấp, nhập khẩu đồng bộ chính hãng, mang lại khả năng cách âm, cách nhiệt hoàn hảo và độ bền cơ học vượt trội cho công trình.</p>
+        </div>
+        
+        <div class="brand-sidebar">
+          <h3 class="sidebar-title">Thông Số Kỹ Thuật</h3>
+          <ul class="sidebar-list">
+            <li>Xuất xứ nhôm: <strong>Đức (Germany Technology)</strong></li>
+            <li>Phân khúc dự án: <strong>Siêu cao cấp / Biệt thự Luxury</strong></li>
+            <li>Sơn phủ bề mặt: <strong>Tĩnh điện / PVDF / Anodized</strong></li>
+            <li>Độ bền màu sắc: <strong>10 - 25 năm chính hãng</strong></li>
+            <li>Ứng dụng tối ưu: <strong>Cửa mở quay, cửa lùa trượt, vách ngăn</strong></li>
+          </ul>
+          
+          <div class="tech-download-card">
+            <div class="tech-download-title">
+              <i class="ri-folder-zip-line"></i> TÀI LIỆU KỸ THUẬT & CAD PROFILE
+            </div>
+            <p style="font-size:12px; color:#78350f; line-height:1.5; margin:0;">
+              Tải đầy đủ thư viện bản vẽ mặt cắt nhôm và tài liệu AutoCAD để hỗ trợ bóc tách khối lượng và thiết kế.
+            </p>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/08_Catalogue theo Hãng/Catalogue_HeCuaNhom_Civro.xlsx" class="tech-download-btn" download>
+              Tải Bản Vẽ CAD (.dxf) <i class="ri-download-2-line"></i>
+            </a>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/08_Catalogue theo Hãng/ThuVien_HeCuaNhom_Civro.docx" class="tech-download-btn" style="background:transparent; border:1px solid #d97706; color:#d97706;" download>
+              Tải Sổ Tay Kỹ Thuật <i class="ri-file-pdf-2-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-products-section">
     <div class="sv-container">
       <div style="text-align:center;">
-        <span class="sv-section-tag">CHỌN HÃNG THÔNG TIN</span>
-        <h2 class="sv-section-title" style="margin-inline:auto;">Thương Hiệu Hệ Nhôm Phân Phối</h2>
+        <span class="sv-section-tag">MẪU CỬA ĐẸP</span>
+        <h2 class="sv-section-title" style="margin-inline:auto;">Giải Pháp Thiết Kế Cửa Nhôm Cầu Cách Nhiệt Civro</h2>
       </div>
       
-      <div class="brand-grid">
-        <a href="nhom-xingfa.html" class="brand-card">
-          <div>
-            <div class="brand-logo-name" style="color:#e11d48;">XINGFA</div>
-            <div class="brand-tagline">Quảng Đông (Trung Quốc)</div>
+      <div class="pk-grid">
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/catalogue/catalogue-nhom-civro_330059/catalogue-nhom-civro.webp" alt="Cửa đi mở quay trượt nâng Civro siêu tải" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">Nhôm Cầu Cách Nhiệt Civro</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa đi mở quay trượt nâng Civro siêu tải</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
           </div>
-          <div class="brand-btn-explore">Xem Kỹ Thuật & Bản Vẽ CAD <i class="ri-arrow-right-line"></i></div>
-        </a>
-        <a href="nhom-maxpro.html" class="brand-card">
-          <div>
-            <div class="brand-logo-name" style="color:#b45309;">MAXPRO.JP</div>
-            <div class="brand-tagline">Nhật Bản (Anodized)</div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/assets/images/nhomkinhdaiphuc/nhom-kinh-dai-phuc.webp" alt="Cửa xếp trượt Civro âm bản lề rãnh C" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#1e293b;">Nhôm Cầu Cách Nhiệt Civro</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa xếp trượt Civro âm bản lề rãnh C</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #1e293b; color:#1e293b;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
           </div>
-          <div class="brand-btn-explore">Xem Kỹ Thuật & Bản Vẽ CAD <i class="ri-arrow-right-line"></i></div>
-        </a>
-        <a href="nhom-civro.html" class="brand-card">
-          <div>
-            <div class="brand-logo-name" style="color:#1e293b;">CIVRO</div>
-            <div class="brand-tagline">Công Nghệ Đức</div>
-          </div>
-          <div class="brand-btn-explore">Xem Kỹ Thuật & Bản Vẽ CAD <i class="ri-arrow-right-line"></i></div>
-        </a>
-        <a href="nhom-slim.html" class="brand-card">
-          <div>
-            <div class="brand-logo-name" style="color:#475569;">SLIM SYSTEM</div>
-            <div class="brand-tagline">Cửa lùa siêu mảnh hiện đại</div>
-          </div>
-          <div class="brand-btn-explore">Xem Kỹ Thuật & Bản Vẽ CAD <i class="ri-arrow-right-line"></i></div>
-        </a>
-        <a href="nhom-kogen.html" class="brand-card">
-          <div>
-            <div class="brand-logo-name" style="color:#0369a1;">KOGEN</div>
-            <div class="brand-tagline">Phong cách Đức cao cấp</div>
-          </div>
-          <div class="brand-btn-explore">Xem Kỹ Thuật & Bản Vẽ CAD <i class="ri-arrow-right-line"></i></div>
-        </a>
-        <a href="nhom-pma.html" class="brand-card">
-          <div>
-            <div class="brand-logo-name" style="color:#15803d;">PMA</div>
-            <div class="brand-tagline">Tiêu Chuẩn Châu Âu</div>
-          </div>
-          <div class="brand-btn-explore">Xem Kỹ Thuật & Bản Vẽ CAD <i class="ri-arrow-right-line"></i></div>
-        </a>
-        <a href="nhom-owin.html" class="brand-card">
-          <div>
-            <div class="brand-logo-name" style="color:#4338ca;">OWIN</div>
-            <div class="brand-tagline">Nhôm Owin rãnh C</div>
-          </div>
-          <div class="brand-btn-explore">Xem Kỹ Thuật & Bản Vẽ CAD <i class="ri-arrow-right-line"></i></div>
-        </a>
-        <a href="nhom-topal.html" class="brand-card">
-          <div>
-            <div class="brand-logo-name" style="color:#b91c1c;">TOPAL</div>
-            <div class="brand-tagline">Tập đoàn Austdoor</div>
-          </div>
-          <div class="brand-btn-explore">Xem Kỹ Thuật & Bản Vẽ CAD <i class="ri-arrow-right-line"></i></div>
-        </a>
+        
       </div>
     </div>
   </section>

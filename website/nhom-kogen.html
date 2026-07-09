@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0369a1" />
+  <title>Cửa Nhôm Nhôm Kogen Phong Cách Đức Chính Hãng | SAO VÀNG</title>
+  <meta name="description" content="Sao Vàng cung cấp các giải pháp cửa nhôm Nhôm Kogen Phong Cách Đức nhập khẩu cao cấp đồng bộ chính hãng. Tư vấn thiết kế, báo giá lắp đặt trọn gói rẻ nhất." />
+  <meta name="keywords" content="cửa nhôm kogen, cửa nhôm Nhôm Kogen Phong Cách Đức, Nhôm Kogen Phong Cách Đức chính hãng, mặt cắt nhôm kogen" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  
+  <style>
+    .brand-hero {
+      background: linear-gradient(135deg,#0c4a6e 0%,#0284c7 100%);
+      padding: 120px 0 60px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 120%, rgba(255,255,255,0.1), transparent 70%);
+    }
+    .brand-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .brand-title {
+      font-family: var(--sv-font-head);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .brand-subtitle-hero {
+      font-size: clamp(14px, 2vw, 18px);
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    
+    .brand-stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 40px);
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .brand-stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 24px;
+      min-width: 140px;
+      backdrop-filter: blur(8px);
+    }
+    .brand-stat-num {
+      font-family: var(--sv-font-head);
+      font-size: 24px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .brand-stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .brand-detail-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+    .brand-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .brand-content-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .brand-info-column {
+      padding-right: 20px;
+    }
+    .brand-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin: 28px 0 14px;
+      border-left: 4px solid #0369a1;
+      padding-left: 14px;
+    }
+    .brand-sub-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sv-dark-800);
+      margin: 18px 0 8px;
+    }
+    .brand-desc-p {
+      font-size: var(--sv-fs-sm);
+      color: var(--sv-gray-text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    
+    .brand-sidebar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .sidebar-title {
+      font-family: var(--sv-font-head);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: 20px;
+    }
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .sidebar-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 13px;
+      color: var(--sv-gray-text);
+      display: flex;
+      justify-content: space-between;
+    }
+    .sidebar-list li strong {
+      color: var(--sv-dark-900);
+    }
+    
+    .brand-products-section {
+      padding: 80px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .pk-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .pk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+    .pk-card-img {
+      position: relative;
+      height: 220px;
+      background: #f1f5f9;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .pk-card-img img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .pk-card-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+    .pk-card-body {
+      padding: 20px;
+    }
+    .pk-card-name {
+      font-family: var(--sv-font-head);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: 16px;
+      min-height: 40px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .pk-card-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: var(--sv-font-head);
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .tech-download-card {
+      background: #fffbeb;
+      border: 1px dashed #d97706;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 24px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .tech-download-title {
+      font-family: var(--sv-font-head);
+      font-size: 15px;
+      font-weight: 800;
+      color: #92400e;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .tech-download-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: #d97706;
+      color: #fff;
+      font-family: var(--sv-font-head);
+      font-size: 13px;
+      font-weight: 800;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .tech-download-btn:hover {
+      background: #b45309;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-menu-link active">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html" class="nav-menu-link">Nhôm Sao Vàng</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan</a>
+            <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
+          </div>
+        </div>
+        <a href="phu-kien.html" class="nav-menu-link">Phụ Kiện</a>
+        <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
+        <a href="du-an.html" class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="lien-he.html" class="nav-menu-link">Liên Hệ</a>
+      </nav>
+
+  <section class="brand-hero">
+    <div class="sv-container">
+      <span class="brand-tag">HỆ THỐNG PROFILE NHÔM</span>
+      <h1 class="brand-title">Nhôm Kogen Phong Cách Đức</h1>
+      <p class="brand-subtitle-hero">Dòng nhôm chất lượng cao được Sao Vàng lắp đặt chính hãng đồng bộ cho các giải pháp kiến trúc</p>
+      
+      <div class="brand-stats">
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Đức (Kogen Technology)</div>
+          <div class="brand-stat-label">Xuất Xứ</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">3</div>
+          <div class="brand-stat-label">Mẫu Thiết Kế</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Cao cấp / Thiết kế hiện đại</div>
+          <div class="brand-stat-label">Phân Khúc</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-detail-section">
+    <div class="sv-container">
+      <div class="brand-content-grid">
+        <div class="brand-info-column">
+          <h2 class="sv-section-title" style="margin-left:0; text-align:left;">Ưu Điểm & Đặc Tính</h2>
+          <p class='brand-desc-p'>Trang chủSản phẩmCửa Nhôm Kogen            
+Cửa Nhôm Kogen</p><p class='brand-desc-p'>Cửa đi mở quay nhôm Kogen hệ 60</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa sổ mở quay nhôm Kogen hệ 60</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa đi mở trượt nhôm Kogen</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa đi mở trượt nhôm Kogen 3 ray</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Sổ Mở Trượt Nhôm Kogen</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Lùa Slim 138 Nhôm Kogen</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa nhôm Kogen xếp gấp hệ 68 ẩn bản lề</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa nhôm Slim xếp trượt hệ 50 Kogen</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa lùa Slim 3 ray hệ 206 nhôm Kogen</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Trượt Lật Nhôm Kogen</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Nội dung chính</p><p class='brand-desc-p'>Giới Thiệu Về Cửa Nhôm Kogen
+
+	Thiết Kế Bauhaus Tinh Tế – Đặc Trưng Của Cửa Nhôm Kogen</p><p class='brand-desc-p'>Phong Cách Bauhaus Từ Đức
+
+		Màu Sắc Tối Giản Và Hiện Đại</p><p class='brand-desc-p'>Các Dòng Sản Phẩm Cửa Nhôm Kogen</p><p class='brand-desc-p'>Cửa Nhôm Đa Khoang Hệ 60 Kogen</p><p class='brand-desc-p'>Thiết Kế Và Cấu Tạo Đa Khoang
+
+			Lựa Chọn Kính Đa Dạng
+
+			Hệ Thống Gioăng Cao Su EPDM Chất Lượng Cao
+
+			Phụ Kiện Rãnh C Cao Cấp</p><p class='brand-desc-p'>Cửa Xếp Gấp Ẩn Bản Lề Kogen</p><p class='brand-desc-p'>Thiết Kế Ẩn Bản Lề – Sự Tối Giản Sang Trọng
+
+			Hệ Thống Ray Inox Chịu Lực
+
+			Vận Hành Êm Ái Với Bánh Xe Dẫn Hướng
+
+			Bộ Chốt Khóa Tự Động</p><p class='brand-desc-p'>Cửa Lùa Slim Kogen</p><p class='brand-desc-p'>Profile Nhôm Độ Dày 2mm – Sự Vững Chãi Đến Từ Cấu Trúc
+
+			Hệ Thống Bánh Xe Tải Trọng Và Ray Inox Chịu Lực
+
+			Thanh Cánh Siêu Mỏng – Tối Ưu Không Gian</p><p class='brand-desc-p'>Ưu Điểm Nổi Bật Của Cửa Nhôm Kogen</p><p class='brand-desc-p'>Tính Thẩm Mỹ Cao
+
+		Giảm Âm, Giảm Nhiệt Hiệu Quả
+
+		Độ Bền Cao Và Khả Năng Chịu Lực Tốt
+
+		Đa Dạng Kiểu Dáng Và Mẫu Mã
+
+		Tính Ứng Dụng Cao</p><p class='brand-desc-p'>Ứng Dụng Cửa Nhôm Kogen Trong Kiến Trúc
+
+	Câu Hỏi Thường Gặp Về Cửa Nhôm Kogen</p><p class='brand-desc-p'>Cửa nhôm Kogen có những dòng sản phẩm nào?
+
+		Cửa nhôm Kogen có khả năng cách âm, cách nhiệt không?
+
+		Cửa nhôm Kogen phù hợp với những kiểu kiến trúc nào?
+
+		Cửa nhôm Kogen có độ bền cao không?
+
+		Giá cửa nhôm Kogen như thế nào?</p><p class='brand-desc-p'>Giới Thiệu Về Cửa Nhôm Kogen</p><p class='brand-desc-p'>Trong lĩnh vực kiến trúc hiện đại, cửa nhôm Kogen đã khẳng định được vị trí của mình như một biểu tượng của chất lượng và thẩm mỹ. Được sản xuất theo tiêu chuẩn Đức, dòng cửa này không chỉ mang đến sự sang trọng cho không gian sống mà còn đảm bảo độ bền vững theo thời gian.</p><p class='brand-desc-p'>Cửa nhôm Kogen là sản phẩm kết hợp giữa thiết kế tinh tế và công nghệ hiện đại, đáp ứng hoàn hảo nhu cầu của những công trình kiến trúc cao cấp. Hãy cùng chúng ta khám phá sâu hơn về dòng sản phẩm này để hiểu vì sao nó trở thành sự lựa chọn hàng đầu cho các công trình hiện đại.</p><p class='brand-desc-p'>Cửa Nhôm Kogen</p><p class='brand-desc-p'>Thiết Kế Bauhaus Tinh Tế – Đặc Trưng Của Cửa Nhôm Kogen</p><p class='brand-desc-p'>Phong Cách Bauhaus Từ Đức</p><p class='brand-desc-p'>Phong cách Bauhaus từ lâu đã được biết đến với những đường nét tối giản, tập trung vào công năng và tính thẩm mỹ. Cửa nhôm Kogen thừa hưởng hoàn hảo những đặc trưng này, mang đến vẻ đẹp mộc mạc nhưng không kém phần sang trọng. Thiết kế phẳng với các chi tiết tối giản giúp cửa nhôm Kogen dễ dàng hòa mình vào mọi không gian kiến trúc.</p><p class='brand-desc-p'>Màu Sắc Tối Giản Và Hiện Đại</p><p class='brand-desc-p'>Sản phẩm cửa nhôm Kogen được thiết kế với gam màu trung tính, thường là xám, trắng hoặc đen. Những màu sắc này không chỉ tạo cảm giác thanh lịch mà còn dễ dàng kết hợp với nội thất và kiến trúc tổng thể.</p><p class='brand-desc-p'>Các Dòng Sản Phẩm Cửa Nhôm Kogen</p><p class='brand-desc-p'>1. Cửa Nhôm Đa Khoang Hệ 60 Kogen</p><p class='brand-desc-p'>Thiết Kế Và Cấu Tạo Đa Khoang</p><p class='brand-desc-p'>Dòng sản phẩm Cửa nhôm đa khoang hệ 60 Kogen nổi bật với thiết kế thanh nhôm chia làm 3 khoang rỗng, giúp tăng cường khả năng cách âm và cách nhiệt. Kết cấu này không chỉ tăng cường độ bền mà còn giảm tiếng ồn từ môi trường bên ngoài, tạo không gian sống yên tĩnh và thoải mái.</p><p class='brand-desc-p'>Lựa Chọn Kính Đa Dạng</p><p class='brand-desc-p'>Với khả năng lắp đặt kính có độ dày tối đa lên đến 40mm, cửa nhôm Kogen hệ 60 cho phép bạn lựa chọn từ kính đơn đến kính hộp, tùy thuộc vào mục đích sử dụng như cách âm, cách nhiệt hoặc an toàn.</p><p class='brand-desc-p'>Hệ Thống Gioăng Cao Su EPDM Chất Lượng Cao</p><p class='brand-desc-p'>Cửa nhôm Kogen sử dụng gioăng cao su EPDM để tăng cường độ kín khít, ngăn chặn bụi bẩn và tiếng ồn xâm nhập vào không gian bên trong. Điều này giúp bảo vệ ngôi nhà của bạn khỏi các tác động bên ngoài, đồng thời kéo dài tuổi thọ của sản phẩm.</p><p class='brand-desc-p'>Phụ Kiện Rãnh C Cao Cấp</p><p class='brand-desc-p'>Để đảm bảo tính năng vận hành trơn tru và tăng tính thẩm mỹ, cửa nhôm Kogen hệ 60 được trang bị phụ kiện rãnh C cao cấp. Những chi tiết này được chăm chút tỉ mỉ, giúp cửa không chỉ bền bỉ mà còn sang trọng.</p><p class='brand-desc-p'>Mặt cắt cửa nhôm Kogen hệ 60</p><p class='brand-desc-p'>2. Cửa Xếp Gấp Ẩn Bản Lề Kogen</p><p class='brand-desc-p'>Thiết Kế Ẩn Bản Lề – Sự Tối Giản Sang Trọng</p><p class='brand-desc-p'>Cửa xếp gấp ẩn bản lề Kogen là lựa chọn lý tưởng cho những không gian mở. Thiết kế ẩn bản lề giúp loại bỏ những chi tiết không cần thiết, tạo nên vẻ đẹp hiện đại và tinh tế cho ngôi nhà của bạn.</p><p class='brand-desc-p'>Mặt cắt cửa xếp gấp ẩn bản lề Kogen</p><p class='brand-desc-p'>Hệ Thống Ray Inox Chịu Lực</p><p class='brand-desc-p'>Được trang bị hệ thống ray inox chịu lực, cửa xếp gấp Kogen đảm bảo sự chắc chắn và bền bỉ, ngay cả khi thi công những bộ cửa có kích thước lớn.</p><p class='brand-desc-p'>Vận Hành Êm Ái Với Bánh Xe Dẫn Hướng</p><p class='brand-desc-p'>Hệ thống bánh xe dẫn hướng giúp cửa xếp gấp Kogen vận hành êm ái, không gây ra tiếng ồn khi mở hoặc đóng cửa. Đây là một điểm cộng lớn khi bạn muốn giữ cho không gian sống luôn yên tĩnh.</p><p class='brand-desc-p'>Bộ Chốt Khóa Tự Động</p><p class='brand-desc-p'>Một tính năng đáng chú ý khác của cửa xếp gấp Kogen là hệ thống khóa tự động. Điều này không chỉ tăng cường an ninh mà còn mang lại sự tiện lợi cho người sử dụng.</p><p class='brand-desc-p'>Cửa Xếp Gấp Ẩn Bản Lề Nhôm Kogen Hệ 68</p><p class='brand-desc-p'>3. Cửa Lùa Slim Kogen</p><p class='brand-desc-p'>Profile Nhôm Độ Dày 2mm – Sự Vững Chãi Đến Từ Cấu Trúc</p><p class='brand-desc-p'>Cửa lùa Slim Kogen nổi bật với profile nhôm có độ dày 2mm, đảm bảo sự chắc chắn và bền bỉ. Thiết kế này giúp cửa chịu được lực tốt, đồng thời duy trì được sự mảnh mai, gọn nhẹ, đặc trưng của dòng cửa lùa Slim.</p><p class='brand-desc-p'>Hệ Thống Bánh Xe Tải Trọng Và Ray Inox Chịu Lực</p><p class='brand-desc-p'>Hệ thống tải trọng và ray inox chịu lực giúp cửa lùa Slim Kogen hoạt động mượt mà và êm ái, ngay cả khi cửa có kích thước lớn. Đây là điểm nhấn quan trọng giúp cửa lùa Slim Kogen trở thành lựa chọn hàng đầu cho các công trình hiện đại.</p><p class='brand-desc-p'>Thanh Cánh Siêu Mỏng – Tối Ưu Không Gian</p><p class='brand-desc-p'>Với thanh cánh chỉ rộng 28mm, cửa lùa Slim Kogen không chỉ tiết kiệm không gian mà còn mang lại vẻ đẹp hiện đại và thanh lịch. Thiết kế này giúp tối ưu hóa ánh sáng tự nhiên, tạo cảm giác thoáng đãng cho không gian sống.</p><p class='brand-desc-p'>Cửa Lùa Slim Kogen</p><p class='brand-desc-p'>Ưu Điểm Nổi Bật Của Cửa Nhôm Kogen</p><p class='brand-desc-p'>1. Tính Thẩm Mỹ Cao</p><p class='brand-desc-p'>Cửa nhôm Kogen sở hữu thiết kế tối giản và hiện đại, phù hợp với nhiều phong cách kiến trúc khác nhau. Sản phẩm này không chỉ mang lại vẻ đẹp cho ngôi nhà mà còn phản ánh gu thẩm mỹ tinh tế của gia chủ.</p><p class='brand-desc-p'>2. Giảm Âm, Giảm Nhiệt Hiệu Quả</p><p class='brand-desc-p'>Nhờ thiết kế thanh nhôm đa khoang và hệ thống phụ kiện cao cấp, cửa nhôm Kogen có khả năng cách âm, cách nhiệt vượt trội, giúp không gian sống trở nên yên tĩnh và thoải mái hơn.</p><p class='brand-desc-p'>3. Độ Bền Cao Và Khả Năng Chịu Lực Tốt</p><p class='brand-desc-p'>Với khả năng chịu tải trọng lớn và chống chịu thời tiết khắc nghiệt, cửa nhôm Kogen đảm bảo sự bền bỉ và an toàn trong suốt quá trình sử dụng.</p><p class='brand-desc-p'>4. Đa Dạng Kiểu Dáng Và Mẫu Mã</p><p class='brand-desc-p'>Cửa nhôm Kogen mang đến nhiều sự lựa chọn về kiểu dáng và mẫu mã, từ cửa đi mở quay, cửa sổ mở quay, cửa đi mở trượt, đến cửa sổ mở trượt. Điều này giúp khách hàng dễ dàng tìm được sản phẩm phù hợp với thiết kế tổng thể của công trình.</p><p class='brand-desc-p'>5. Tính Ứng Dụng Cao</p><p class='brand-desc-p'>Cửa nhôm Kogen phù hợp với nhiều không gian kiến trúc khác nhau, từ nhà riêng đến các tòa nhà cao tầng, cửa hàng thương mại, v.v. Đây là giải pháp linh hoạt và hiệu quả cho mọi nhu cầu sử dụng.</p><p class='brand-desc-p'>Ứng Dụng Cửa Nhôm Kogen Trong Kiến Trúc</p><p class='brand-desc-p'>Cửa nhôm Kogen không chỉ hoàn hảo cho các vị trí nội thất như cửa thông phòng mà còn phù hợp với các vị trí ngoại thất như cửa đi chính, cửa ban công, mang lại giá trị thẩm mỹ và tiện ích cho ngôi nhà của bạn.</p><p class='brand-desc-p'>Cửa nhôm Kogen không chỉ là sự lựa chọn về một sản phẩm cao cấp mà còn là quyết định đầu tư vào chất lượng sống và giá trị thẩm mỹ lâu dài. Sản phẩm này kết hợp hoàn hảo giữa thiết kế Bauhaus và công nghệ tiên tiến, phù hợp với xu hướng tiêu dùng hiện đại của người Việt Nam. Nếu bạn đang tìm kiếm một giải pháp cửa nhôm hoàn hảo cho ngôi nhà của mình, cửa nhôm Kogen chắc chắn là sự lựa chọn không thể bỏ qua.</p><p class='brand-desc-p'>5 Câu Hỏi Thường Gặp Về Cửa Nhôm Kogen</p><p class='brand-desc-p'>1. Cửa nhôm Kogen có những dòng sản phẩm nào?</p><p class='brand-desc-p'>Cửa nhôm Kogen bao gồm các dòng sản phẩm như cửa nhôm đa khoang hệ 60, cửa xếp gấp ẩn bản lề, và cửa lùa Slim, phù hợp với nhiều nhu cầu sử dụng khác nhau.</p><p class='brand-desc-p'>2. Cửa nhôm Kogen có khả năng cách âm, cách nhiệt không?</p><p class='brand-desc-p'>Có, cửa nhôm Kogen được thiết kế với thanh nhôm đa khoang và sử dụng hệ thống gioăng cao su EPDM chất lượng cao, giúp cách âm và cách nhiệt hiệu quả.</p><p class='brand-desc-p'>3. Cửa nhôm Kogen phù hợp với những kiểu kiến trúc nào?</p><p class='brand-desc-p'>Cửa nhôm Kogen phù hợp với nhiều phong cách kiến trúc khác nhau, từ hiện đại đến cổ điển, và có thể được sử dụng trong cả nội thất và ngoại thất.</p><p class='brand-desc-p'>4. Cửa nhôm Kogen có độ bền cao không?</p><p class='brand-desc-p'>Có, cửa nhôm Kogen được sản xuất theo tiêu chuẩn Đức với các vật liệu và phụ kiện cao cấp, đảm bảo độ bền và khả năng chống chịu thời tiết tốt.</p><p class='brand-desc-p'>5. Giá cửa nhôm Kogen như thế nào?</p><p class='brand-desc-p'>Giá cửa nhôm Kogen phụ thuộc vào dòng sản phẩm, kích thước, và các yêu cầu cụ thể của khách hàng. Bạn có thể liên hệ với các đại lý phân phối để nhận báo giá chi tiết.</p><p class='brand-desc-p'>THI CÔNG Cửa Nhôm Kogen TRÊN TOÀN QUỐC</p><p class='brand-desc-p'>Cửa Nhôm Kogen Hồ Chí Minh</p><p class='brand-desc-p'>Cửa Nhôm Kogen Hà Nội</p><p class='brand-desc-p'>Cửa Nhôm Kogen Bình Dương</p><p class='brand-desc-p'>Cửa Nhôm Kogen Đà Nẵng</p><p class='brand-desc-p'>Cửa Nhôm Kogen Hải Phòng</p><p class='brand-desc-p'>Cửa Nhôm Kogen Long An</p><p class='brand-desc-p'>Cửa Nhôm Kogen Bà Rịa Vũng Tàu</p><p class='brand-desc-p'>Cửa Nhôm Kogen An Giang</p><p class='brand-desc-p'>Cửa Nhôm Kogen Bắc Giang</p><p class='brand-desc-p'>Cửa Nhôm Kogen Bắc Kạn</p><p class='brand-desc-p'>Cửa Nhôm Kogen Bạc Liêu</p><p class='brand-desc-p'>Cửa Nhôm Kogen Bắc Ninh</p><p class='brand-desc-p'>Cửa Nhôm Kogen Bến Tre</p><p class='brand-desc-p'>Cửa Nhôm Kogen Bình Định</p><p class='brand-desc-p'>Cửa Nhôm Kogen Bình Phước</p><p class='brand-desc-p'>Cửa Nhôm Kogen Bình Thuận</p><p class='brand-desc-p'>Cửa Nhôm Kogen Cà Mau</p><p class='brand-desc-p'>Cửa Nhôm Kogen Cần Thơ</p><p class='brand-desc-p'>Cửa Nhôm Kogen Cao Bằng</p><p class='brand-desc-p'>Cửa Nhôm Kogen Đắk Lắk</p><p class='brand-desc-p'>Cửa Nhôm Kogen Đắk Nông</p><p class='brand-desc-p'>Cửa Nhôm Kogen Điện Biên</p><p class='brand-desc-p'>Cửa Nhôm Kogen Đồng Nai</p><p class='brand-desc-p'>Cửa Nhôm Kogen Đồng Tháp</p><p class='brand-desc-p'>Cửa Nhôm Kogen Gia Lai</p><p class='brand-desc-p'>Cửa Nhôm Kogen Hà Giang</p><p class='brand-desc-p'>Cửa Nhôm Kogen Hà Nam</p><p class='brand-desc-p'>Cửa Nhôm Kogen Hà Tĩnh</p><p class='brand-desc-p'>Cửa Nhôm Kogen Hải Dương</p><p class='brand-desc-p'>Cửa Nhôm Kogen Hậu Giang</p><p class='brand-desc-p'>Cửa Nhôm Kogen Hòa Bình</p><p class='brand-desc-p'>Cửa Nhôm Kogen Hưng Yên</p><p class='brand-desc-p'>Cửa Nhôm Kogen Khánh Hòa</p><p class='brand-desc-p'>Cửa Nhôm Kogen Kiên Giang</p><p class='brand-desc-p'>Cửa Nhôm Kogen Kon Tum</p><p class='brand-desc-p'>Cửa Nhôm Kogen Lai Châu</p><p class='brand-desc-p'>Cửa Nhôm Kogen Lâm Đồng</p><p class='brand-desc-p'>Cửa Nhôm Kogen Lạng Sơn</p><p class='brand-desc-p'>Cửa Nhôm Kogen Lào Cai</p><p class='brand-desc-p'>Cửa Nhôm Kogen Nam Định</p><p class='brand-desc-p'>Cửa Nhôm Kogen Nghệ An</p><p class='brand-desc-p'>Cửa Nhôm Kogen Ninh Bình</p><p class='brand-desc-p'>Cửa Nhôm Kogen Ninh Thuận</p><p class='brand-desc-p'>Cửa Nhôm Kogen Phú Thọ</p><p class='brand-desc-p'>Cửa Nhôm Kogen Phú Yên</p><p class='brand-desc-p'>Cửa Nhôm Kogen Quảng Bình</p><p class='brand-desc-p'>Cửa Nhôm Kogen Quảng Nam</p><p class='brand-desc-p'>Cửa Nhôm Kogen Quảng Ngãi</p><p class='brand-desc-p'>Cửa Nhôm Kogen Quảng Ninh</p><p class='brand-desc-p'>Cửa Nhôm Kogen Quảng Trị</p><p class='brand-desc-p'>Cửa Nhôm Kogen Sóc Trăng</p><p class='brand-desc-p'>Cửa Nhôm Kogen Sơn La</p><p class='brand-desc-p'>Cửa Nhôm Kogen Tây Ninh</p><p class='brand-desc-p'>Cửa Nhôm Kogen Thái Bình</p><p class='brand-desc-p'>Cửa Nhôm Kogen Thái Nguyên</p><p class='brand-desc-p'>Cửa Nhôm Kogen Thanh Hóa</p><p class='brand-desc-p'>Cửa Nhôm Kogen Thừa Thiên Huế</p><p class='brand-desc-p'>Cửa Nhôm Kogen Tiền Giang</p><p class='brand-desc-p'>Cửa Nhôm Kogen Trà Vinh</p><p class='brand-desc-p'>Cửa Nhôm Kogen Tuyên Quang</p><p class='brand-desc-p'>Cửa Nhôm Kogen Vĩnh Long</p><p class='brand-desc-p'>Cửa Nhôm Kogen Vĩnh Phúc</p><p class='brand-desc-p'>Cửa Nhôm Kogen Yên Bái</p><p class='brand-desc-p'>Mở rộng</p>
+        </div>
+        
+        <div class="brand-sidebar">
+          <h3 class="sidebar-title">Thông Số Kỹ Thuật</h3>
+          <ul class="sidebar-list">
+            <li>Xuất xứ nhôm: <strong>Đức (Kogen Technology)</strong></li>
+            <li>Phân khúc dự án: <strong>Cao cấp / Thiết kế hiện đại</strong></li>
+            <li>Sơn phủ bề mặt: <strong>Tĩnh điện / PVDF / Anodized</strong></li>
+            <li>Độ bền màu sắc: <strong>10 - 25 năm chính hãng</strong></li>
+            <li>Ứng dụng tối ưu: <strong>Cửa mở quay, cửa lùa trượt, vách ngăn</strong></li>
+          </ul>
+          
+          <div class="tech-download-card">
+            <div class="tech-download-title">
+              <i class="ri-folder-zip-line"></i> TÀI LIỆU KỸ THUẬT & CAD PROFILE
+            </div>
+            <p style="font-size:12px; color:#78350f; line-height:1.5; margin:0;">
+              Tải đầy đủ thư viện bản vẽ mặt cắt nhôm và tài liệu AutoCAD để hỗ trợ bóc tách khối lượng và thiết kế.
+            </p>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/08_Catalogue theo Hãng/Catalogue_HeCuaNhom_Slim.xlsx" class="tech-download-btn" download>
+              Tải Bản Vẽ CAD (.dxf) <i class="ri-download-2-line"></i>
+            </a>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/08_Catalogue theo Hãng/ThuVien_HeCuaNhom_Kogen.docx" class="tech-download-btn" style="background:transparent; border:1px solid #d97706; color:#d97706;" download>
+              Tải Sổ Tay Kỹ Thuật <i class="ri-file-pdf-2-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-products-section">
+    <div class="sv-container">
+      <div style="text-align:center;">
+        <span class="sv-section-tag">MẪU CỬA ĐẸP</span>
+        <h2 class="sv-section-title" style="margin-inline:auto;">Giải Pháp Thiết Kế Cửa Nhôm Kogen Phong Cách Đức</h2>
+      </div>
+      
+      <div class="pk-grid">
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/cua-lua-slim-138-nhom-kogen_142345095096/cua-lua-slim-138-nhom-kogen.webp" alt="Cửa lùa Slim 138 nhôm Kogen siêu rộng" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#0369a1;">Nhôm Kogen Phong Cách Đức</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa lùa Slim 138 nhôm Kogen siêu rộng</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #0369a1; color:#0369a1;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/cua-nhom-kogen-xep-gap-he-68-an-ban-le_868949141616/cua-nhom-kogen-xep-gap-he-68-an-ban-le.webp" alt="Cửa nhôm Kogen xếp gấp hệ 68 ẩn bản lề" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#0369a1;">Nhôm Kogen Phong Cách Đức</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa nhôm Kogen xếp gấp hệ 68 ẩn bản lề</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #0369a1; color:#0369a1;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/cua-truot-lat-nhom-kogen_509513106880/cua-truot-lat-nhom-kogen.webp" alt="Cửa trượt lật nhôm Kogen cao cấp" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#0369a1;">Nhôm Kogen Phong Cách Đức</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa trượt lật nhôm Kogen cao cấp</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #0369a1; color:#0369a1;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-v2" role="contentinfo">
+    <div class="sv-container">
+      <div class="footer-v2-grid">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <div class="footer-logo-wrap" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+            <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 54px; width: auto; display: block;" />
+          </div>
+          <p class="footer-address" style="font-size: var(--sv-text-sm); color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 20px;">
+            Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng — chuyên cơ khí chính xác &amp; nhôm kính cao cấp.
+          </p>
+          <div class="footer-socials" aria-label="Mạng xã hội">
+            <a href="#" class="footer-social" aria-label="Facebook Sao Vàng"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="YouTube Sao Vàng"><i class="ri-youtube-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn Sao Vàng"><i class="ri-linkedin-fill" aria-hidden="true"></i></a>
+            <a href="tel:0869590279" class="footer-social" aria-label="Gọi hotline Sao Vàng"><i class="ri-phone-fill" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Cơ Khí Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Cơ Khí Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công cơ khí chính xác</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công CNC</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Kết cấu thép</a>
+            <a href="cau-thang-xoan.html" class="footer-link">Lan can, cầu thang, mái kính</a>
+            <a href="cong-nghe-thuat.html" class="footer-link">Cổng &amp; hàng rào</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công inox &amp; nhôm</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Nhôm Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Nhôm Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="cua-nhom-kinh.html" class="footer-link">Cửa nhôm kính cao cấp</a>
+            <a href="vach-kinh.html" class="footer-link">Vách kính mặt dựng</a>
+            <a href="lan-can-kinh.html" class="footer-link">Lan can kính</a>
+            <a href="thu-vien-profile-nhom.html" class="footer-link">Thư viện Profile Nhôm</a>
+            <a href="vach-kinh.html" class="footer-link">Phòng tắm kính</a>
+            <a href="vach-kinh.html" class="footer-link">Mái kính cường lực</a>
+            <a href="linh-vuc-nhom-kinh.html" class="footer-link">Phụ kiện nhôm kính</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Công ty -->
+        <div>
+          <h4 class="footer-col-title">Công Ty</h4>
+          <div class="footer-links">
+            <a href="gioi-thieu.html" class="footer-link">Giới thiệu</a>
+            <a href="linh-vuc-hoat-dong.html" class="footer-link">Lĩnh vực hoạt động</a>
+            <a href="du-an.html" class="footer-link">Dự án đã thực hiện</a>
+            <a href="san-pham.html" class="footer-link">Sản phẩm</a>
+            <a href="tin-tuc.html" class="footer-link">Tin tức</a>
+            <a href="lien-he.html" class="footer-link">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam.</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-line" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color: inherit; text-decoration: none;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <a href="mailto:info@cokhisaovang.com" style="color: inherit; text-decoration: none;">info@cokhisaovang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>Thứ 2 - Thứ 7: 8:00 - 17:00</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-global-line" aria-hidden="true"></i>
+              <a href="https://www.CoKhiSaoVang.com" target="_blank" style="color: inherit; text-decoration: none;">www.CoKhiSaoVang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-file-list-3-line" aria-hidden="true"></i>
+              <span>MST: 0110808047</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. All Rights Reserved. MST: 0110808047.</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+        <span>Design by <a href="https://readdy.ai" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; font-weight: 500;">Readdy.ai</a></span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════
+       FLOATING BUTTONS
+  ════════════════════════════════════════════ -->
+  <div class="floating-left" aria-label="Kênh liên hệ nhanh">
+    <a href="https://zalo.me/0869590279" class="float-btn float-btn-zalo"
+       target="_blank" rel="noopener" aria-label="Chat Zalo" title="Zalo: 0869 590 279">
+      <i class="ri-message-3-fill" aria-hidden="true"></i>
+    </a>
+    <a href="tel:0869590279" class="float-btn float-btn-phone"
+       aria-label="Gọi điện 0869 590 279" title="Gọi ngay">
+      <i class="ri-phone-fill" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="floating-right">
+    <button class="float-btn float-btn-top" id="scrollTopBtn" aria-label="Cuộn lên đầu trang" title="Lên đầu trang">
+      <i class="ri-arrow-up-line" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════════════════ -->
+  <script src="assets/js/main.js"></script>
+  <!-- navbar.js handles this -->
+  <script src="assets/js/modules/navbar.js"></script>
+  <script>
+    async function handleBannerSubmit(event, inputId, source) {
+      event.preventDefault();
+      const input = document.getElementById(inputId);
+      const phoneVal = input.value.trim();
+      const cleaned = phoneVal.replace(/\D/g, '');
+      if (cleaned.length < 9 || cleaned.length > 11) {
+        alert('Vui lòng nhập số điện thoại hợp lệ (từ 9 đến 11 chữ số).');
+        return;
+      }
+      
+      const btn = event.target.querySelector('button');
+      const origText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `<i class="ri-loader-4-line ri-spin"></i> GỬI...`;
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: 'Khách hàng liên hệ nhanh',
+            phone: phoneVal,
+            source: source,
+            note: `Khách hàng gửi số điện thoại từ hotline banner ${source} yêu cầu gọi lại tư vấn.`
+          })
+        });
+
+        if (response.ok) {
+          alert('Gửi số điện thoại thành công! Chúng tôi sẽ liên hệ lại ngay.');
+          input.value = '';
+        } else {
+          alert('Đã xảy ra lỗi, vui lòng thử lại sau.');
+        }
+      } catch (err) {
+        alert('Không thể kết nối tới máy chủ. Vui lòng thử lại.');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = origText;
+      }
+    }
+  </script>
+  <script src="assets/js/shared/internal-links.js"></script>
+  <!-- Sprint 3: Service CTA -->
+  <script src="assets/js/shared/service-cta.js"></script>
+    <!-- Sprint 2: Shared components -->
+  <script src="assets/js/shared/floating-widget.js"></script>
+  <script src="assets/js/shared/faq-accordion.js"></script>
+  <script src="assets/js/shared/breadcrumb.js"></script>
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#b91c1c" />
+  <title>Cửa Nhôm Nhôm Topal Austdoor Chính Hãng | SAO VÀNG</title>
+  <meta name="description" content="Sao Vàng cung cấp các giải pháp cửa nhôm Nhôm Topal Austdoor nhập khẩu cao cấp đồng bộ chính hãng. Tư vấn thiết kế, báo giá lắp đặt trọn gói rẻ nhất." />
+  <meta name="keywords" content="cửa nhôm topal, cửa nhôm Nhôm Topal Austdoor, Nhôm Topal Austdoor chính hãng, mặt cắt nhôm topal" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  
+  <style>
+    .brand-hero {
+      background: linear-gradient(135deg,#7f1d1d 0%,#dc2626 100%);
+      padding: 120px 0 60px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 120%, rgba(255,255,255,0.1), transparent 70%);
+    }
+    .brand-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .brand-title {
+      font-family: var(--sv-font-head);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .brand-subtitle-hero {
+      font-size: clamp(14px, 2vw, 18px);
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    
+    .brand-stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 40px);
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .brand-stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 24px;
+      min-width: 140px;
+      backdrop-filter: blur(8px);
+    }
+    .brand-stat-num {
+      font-family: var(--sv-font-head);
+      font-size: 24px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .brand-stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .brand-detail-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+    .brand-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .brand-content-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .brand-info-column {
+      padding-right: 20px;
+    }
+    .brand-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin: 28px 0 14px;
+      border-left: 4px solid #b91c1c;
+      padding-left: 14px;
+    }
+    .brand-sub-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sv-dark-800);
+      margin: 18px 0 8px;
+    }
+    .brand-desc-p {
+      font-size: var(--sv-fs-sm);
+      color: var(--sv-gray-text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    
+    .brand-sidebar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .sidebar-title {
+      font-family: var(--sv-font-head);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: 20px;
+    }
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .sidebar-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 13px;
+      color: var(--sv-gray-text);
+      display: flex;
+      justify-content: space-between;
+    }
+    .sidebar-list li strong {
+      color: var(--sv-dark-900);
+    }
+    
+    .brand-products-section {
+      padding: 80px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .pk-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .pk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+    .pk-card-img {
+      position: relative;
+      height: 220px;
+      background: #f1f5f9;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .pk-card-img img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .pk-card-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+    .pk-card-body {
+      padding: 20px;
+    }
+    .pk-card-name {
+      font-family: var(--sv-font-head);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: 16px;
+      min-height: 40px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .pk-card-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: var(--sv-font-head);
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .tech-download-card {
+      background: #fffbeb;
+      border: 1px dashed #d97706;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 24px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .tech-download-title {
+      font-family: var(--sv-font-head);
+      font-size: 15px;
+      font-weight: 800;
+      color: #92400e;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .tech-download-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: #d97706;
+      color: #fff;
+      font-family: var(--sv-font-head);
+      font-size: 13px;
+      font-weight: 800;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .tech-download-btn:hover {
+      background: #b45309;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-menu-link active">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html" class="nav-menu-link">Nhôm Sao Vàng</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan</a>
+            <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
+          </div>
+        </div>
+        <a href="phu-kien.html" class="nav-menu-link">Phụ Kiện</a>
+        <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
+        <a href="du-an.html" class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="lien-he.html" class="nav-menu-link">Liên Hệ</a>
+      </nav>
+
+  <section class="brand-hero">
+    <div class="sv-container">
+      <span class="brand-tag">HỆ THỐNG PROFILE NHÔM</span>
+      <h1 class="brand-title">Nhôm Topal Austdoor</h1>
+      <p class="brand-subtitle-hero">Dòng nhôm chất lượng cao được Sao Vàng lắp đặt chính hãng đồng bộ cho các giải pháp kiến trúc</p>
+      
+      <div class="brand-stats">
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Tập đoàn Austdoor (Việt Nam)</div>
+          <div class="brand-stat-label">Xuất Xứ</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">2</div>
+          <div class="brand-stat-label">Mẫu Thiết Kế</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Phổ thông / Tiêu chuẩn quốc gia</div>
+          <div class="brand-stat-label">Phân Khúc</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-detail-section">
+    <div class="sv-container">
+      <div class="brand-content-grid">
+        <div class="brand-info-column">
+          <h2 class="sv-section-title" style="margin-left:0; text-align:left;">Ưu Điểm & Đặc Tính</h2>
+          <p class='brand-desc-p'>Trang chủSản phẩmCửa Nhôm Topal            
+Cửa Nhôm Topal</p><p class='brand-desc-p'>Cửa sổ nhôm Topal PRIMA  mở quay</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa sổ trượt nhôm Topal PRIMA</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa sổ nhôm Topal PRIMA hệ gấp trượt</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Sổ Trượt Topal Slima</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Sổ Mở Hất Topal Slima</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Sổ Mở Quay Topal Slima</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Đi Trượt Topal Prima</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Gấp Trượt Topal Prima</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Đi Mở Quay Topal Prima</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Đi Mở Quay Topal Prima</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Đi Trượt Topal Slima</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Mục lục</p><p class='brand-desc-p'>Giới thiệu về Cửa Nhôm Topal</p><p class='brand-desc-p'>Xu hướng sử dụng cửa nhôm Topal hiện nay
+
+		Ưu điểm nổi bật của cửa nhôm Topal</p><p class='brand-desc-p'>Các Loại Cửa Nhôm Topal Phổ Biến</p><p class='brand-desc-p'>Cửa nhôm Topal Prima: Sự lựa chọn hoàn hảo cho không gian sang trọng
+
+		Cửa nhôm Topal Austdoor: Kết hợp chất lượng và bền bỉ
+
+		Cửa nhôm Topal Slima: Giải pháp tối ưu cho không gian nhỏ hẹp</p><p class='brand-desc-p'>Ưu điểm của Cửa Nhôm Topal</p><p class='brand-desc-p'>Độ bền và khả năng chịu lực cao
+
+		Khả năng cách âm, cách nhiệt hiệu quả
+
+		Thiết kế đa dạng, phong phú</p><p class='brand-desc-p'>Ứng dụng của Cửa Nhôm Topal</p><p class='brand-desc-p'>Cửa nhôm Topal cho nhà ở
+
+		Cửa nhôm Topal cho văn phòng, công trình thương mại</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Topal: Sự kết hợp hoàn hảo</p><p class='brand-desc-p'>So sánh giữa cửa nhôm Topal và cửa nhôm Xingfa
+
+		Ưu điểm nổi bật của cửa nhôm Xingfa Topal</p><p class='brand-desc-p'>Mẫu Cửa Nhôm Topal Đẹp & Hiện Đại</p><p class='brand-desc-p'>Mẫu cửa nhôm Topal cho phòng khách
+
+		Mẫu cửa nhôm Topal cho phòng ngủ
+
+		Mẫu cửa nhôm Topal cho ban công</p><p class='brand-desc-p'>Bảng Báo Giá Cửa Nhôm Topal</p><p class='brand-desc-p'>Giá cửa nhôm Topal Prima
+
+		Giá cửa nhôm Topal Austdoor
+
+		Giá cửa nhôm Topal Slima</p><p class='brand-desc-p'>Quy trình sản xuất và lắp đặt cửa nhôm Topal</p><p class='brand-desc-p'>Các bước sản xuất cửa nhôm Topal
+
+		Quy trình lắp đặt cửa nhôm Topal</p><p class='brand-desc-p'>Lựa chọn đơn vị thi công cửa nhôm Topal uy tín</p><p class='brand-desc-p'>Tiêu chí lựa chọn đơn vị thi công
+
+		Những lưu ý khi lựa chọn đơn vị thi công</p><p class='brand-desc-p'>Bảo hành và bảo trì cửa nhôm Topal</p><p class='brand-desc-p'>Chính sách bảo hành của cửa nhôm Topal
+
+		Cách bảo trì cửa nhôm Topal hiệu quả</p><p class='brand-desc-p'>Các câu hỏi thường gặp về cửa nhôm Topal</p><p class='brand-desc-p'>Cửa nhôm Topal có dễ bị oxi hóa không?
+
+		Làm sao để vệ sinh cửa nhôm Topal hiệu quả?</p><p class='brand-desc-p'>Kết luận</p><p class='brand-desc-p'>Cửa Nhôm Topal đang trở thành một trong những lựa chọn hàng đầu của nhiều gia đình và công trình hiện nay. Với những ưu điểm vượt trội về độ bền, khả năng cách âm, cách nhiệt, cùng thiết kế đa dạng, sang trọng, cửa nhôm Topal không chỉ góp phần tạo nên vẻ đẹp thẩm mỹ cho không gian sống mà còn mang đến sự thoải mái, an toàn cho người sử dụng. Bài viết này sẽ giúp bạn hiểu rõ hơn về các loại cửa nhôm Topal, ưu điểm, ứng dụng, cũng như những yếu tố cần lưu ý khi lựa chọn và sử dụng loại cửa này.</p><p class='brand-desc-p'>Giới thiệu về Cửa Nhôm Topal</p><p class='brand-desc-p'>Profile Cửa Nhôm Topal</p><p class='brand-desc-p'>Cửa nhôm Topal là một sản phẩm cửa nhôm cao cấp được sản xuất trên dây chuyền công nghệ hiện đại, sử dụng vật liệu nhôm chất lượng cao, kết hợp với kính cường lực và phụ kiện đồng bộ. Trên thị trường hiện nay, cửa nhôm Topal được sản xuất bởi nhiều thương hiệu khác nhau, trong đó nổi bật là Topal Prima, Topal Austdoor, Topal Slima. Cửa nhôm Topal được đánh giá cao về chất lượng, độ bền, khả năng cách âm, cách nhiệt, khả năng chịu lực và thiết kế đa dạng.</p><p class='brand-desc-p'>Xu hướng sử dụng cửa nhôm Topal hiện nay</p><p class='brand-desc-p'>Xu hướng sử dụng cửa nhôm Topal đang ngày càng tăng cao trong lĩnh vực xây dựng và kiến trúc. Điều này lý giải bởi một số yếu tố sau:</p><p class='brand-desc-p'>Nhu cầu về không gian sống hiện đại: Với cuộc sống ngày càng phát triển, con người luôn hướng đến những không gian sống tiện nghi, sang trọng và an toàn. Cửa nhôm Topal đáp ứng được nhu cầu này nhờ vào thiết kế đẹp mắt, khả năng cách âm, cách nhiệt và độ bền vượt trội.
+
+	Tính thẩm mỹ cao: Cửa nhôm Topal với thiết kế đa dạng, màu sắc phong phú, phù hợp với nhiều phong cách kiến trúc khác nhau, từ hiện đại, tân cổ điển đến cổ điển. Điều này giúp cho công trình thêm phần sang trọng, tinh tế.
+
+	Khả năng tiết kiệm năng lượng: Cửa nhôm Topal có khả năng cách nhiệt, cách âm hiệu quả, giúp tiết kiệm năng lượng tiêu thụ cho việc làm mát và sưởi ấm không gian sống.
+
+	Độ bền cao và dễ bảo trì: Nhôm là vật liệu có độ bền cao, khả năng chống ăn mòn, oxy hóa tốt. Cửa nhôm Topal được sản xuất trên dây chuyền công nghệ hiện đại, với hệ thống gioăng, phụ kiện cao cấp, giúp đảm bảo độ bền và dễ dàng bảo trì, vệ sinh.
+
+	Giá cả hợp lý: So với các loại cửa khác như cửa gỗ, cửa nhựa, cửa nhôm Topal có giá thành tương đối phải chăng, phù hợp với nhiều đối tượng khách hàng.</p><p class='brand-desc-p'>Ưu điểm nổi bật của cửa nhôm Topal</p><p class='brand-desc-p'>Cửa Nhôm Topal - Một sản phẩm của thương hiệu Austdoor</p><p class='brand-desc-p'>Cửa Nhôm Topal được ưa chuộng bởi sở hữu những ưu điểm vượt trội so với các loại cửa truyền thống.</p><p class='brand-desc-p'>Độ bền cao: Nhôm là kim loại nhẹ nhưng có độ cứng cao, chịu được tác động của ngoại lực, thời tiết khắc nghiệt. Cửa nhôm Topal được sản xuất từ hợp kim nhôm cao cấp, có khả năng chống ăn mòn, oxy hóa, gỉ sét, giúp cửa luôn bền đẹp theo thời gian.
+
+	Khả năng cách âm, cách nhiệt hiệu quả: Hệ thống gioăng kép, kính cường lực, khung nhôm dày dặn của cửa nhôm Topal giúp ngăn chặn tối đa tiếng ồn từ bên ngoài, đồng thời giữ ấm vào mùa đông và mát mẻ vào mùa hè, giúp tiết kiệm chi phí năng lượng.
+
+	An toàn và bảo mật: Cửa nhôm Topal có khả năng chịu lực tốt, kết hợp với hệ thống khóa đa điểm, đảm bảo an ninh cho ngôi nhà.
+
+	Tính thẩm mỹ cao: Với thiết kế đa dạng, màu sắc phong phú, cửa nhôm Topal dễ dàng phối hợp với nhiều phong cách kiến trúc, trang trí nội thất, góp phần nâng tầm vẻ đẹp cho không gian sống.
+
+	Dễ dàng vệ sinh và bảo trì: Bề mặt nhôm sáng bóng, chống bám bụi, dễ dàng lau chùi, vệ sinh.</p><p class='brand-desc-p'>Các Loại Cửa Nhôm Topal Phổ Biến</p><p class='brand-desc-p'>Trên thị trường hiện nay, có nhiều loại cửa nhôm Topal được ưa chuộng, mỗi loại có những đặc điểm, ưu điểm riêng biệt, phục vụ cho nhu cầu sử dụng khác nhau.</p><p class='brand-desc-p'>Cửa nhôm Topal Prima: Sự lựa chọn hoàn hảo cho không gian sang trọng</p><p class='brand-desc-p'>Cửa nhôm Topal Prima là một trong những dòng cửa nhôm cao cấp được ưa chuộng trên thị trường.</p><p class='brand-desc-p'>Thiết kế sang trọng, hiện đại: Cửa nhôm Topal Prima sở hữu thiết kế tinh tế, bắt mắt với các đường nét mạnh mẽ, sắc sảo, kết hợp với hệ thống kính cường lực, tạo nên vẻ đẹp sang trọng, hiện đại cho không gian.
+
+	Chất lượng cao cấp: Cửa nhôm Topal Prima được sản xuất từ hợp kim nhôm cao cấp 6063, có độ bền cao, chịu được tác động của môi trường khắc nghiệt. Hệ thống gioăng kép, kính cường lực, phụ kiện cao cấp được lựa chọn kỹ càng, đảm bảo độ kín khít, cách âm, cách nhiệt hiệu quả.
+
+	Đa dạng về mẫu mã: Cửa nhôm Topal Prima có nhiều mẫu mã, kiểu dáng, phù hợp với nhiều phong cách kiến trúc khác nhau, từ hiện đại, tân cổ điển đến cổ điển.
+
+	Giá cả hợp lý: So với các dòng cửa nhôm cao cấp khác, cửa nhôm Topal Prima có mức giá hợp lý, phù hợp với nhiều đối tượng khách hàng.</p><p class='brand-desc-p'>Cửa nhôm Topal Prima là sự lựa chọn hoàn hảo cho những ai đang tìm kiếm một sản phẩm cửa nhôm cao cấp, vừa đảm bảo chất lượng, độ bền, vừa mang đến vẻ đẹp sang trọng, tinh tế cho không gian sống.</p><p class='brand-desc-p'>Cửa nhôm Topal Austdoor: Kết hợp chất lượng và bền bỉ</p><p class='brand-desc-p'>Văn Phòng Showroom Cửa Nhôm Topal</p><p class='brand-desc-p'>Cửa nhôm Topal Austdoor là sự kết hợp hoàn hảo giữa chất lượng và độ bền, được sản xuất bởi Austdoor – thương hiệu uy tín trong lĩnh vực cửa, vách ngăn.</p><p class='brand-desc-p'>Chất lượng vượt trội: Cửa nhôm Topal Austdoor được sản xuất trên dây chuyền công nghệ hiện đại, sử dụng vật liệu nhôm cao cấp, đảm bảo độ bền cao, chịu lực tốt, chống ăn mòn, oxy hóa.
+
+	Thiết kế đa dạng: Cửa nhôm Topal Austdoor có nhiều mẫu mã, màu sắc, phù hợp với nhiều không gian kiến trúc khác nhau.
+
+	Khả năng cách âm, cách nhiệt tốt: Hệ thống gioăng kép, kính cường lực, khung nhôm dày dặn của cửa nhôm Topal Austdoor giúp ngăn chặn tối đa tiếng ồn, giữ ấm vào mùa đông và mát mẻ vào mùa hè.
+
+	An toàn và bảo mật: Cửa nhôm Topal Austdoor được trang bị hệ thống khóa đa điểm, đảm bảo an ninh cho ngôi nhà.</p><p class='brand-desc-p'>Cửa nhôm Topal Austdoor là lựa chọn phù hợp cho những công trình yêu cầu độ bền cao, khả năng cách âm, cách nhiệt tốt, đáp ứng nhu cầu an ninh bảo mật.</p><p class='brand-desc-p'>Cửa nhôm Topal Slima: Giải pháp tối ưu cho không gian nhỏ hẹp</p><p class='brand-desc-p'>Hội Chợ Triển Lãm Cửa Nhôm Topal</p><p class='brand-desc-p'>Cửa nhôm Topal Slima là dòng cửa nhôm được thiết kế với khung nhôm thanh mảnh, tối ưu hóa diện tích, phù hợp cho các không gian nhỏ hẹp.</p><p class='brand-desc-p'>Thiết kế tối giản: Cửa nhôm Topal Slima với thiết kế khung nhôm thanh mảnh, tinh tế, giúp tối ưu hóa diện tích, tạo cảm giác thông thoáng cho không gian.
+
+	Khả năng cách âm, cách nhiệt tốt: Cửa nhôm Topal Slima vẫn đảm bảo khả năng cách âm, cách nhiệt hiệu quả nhờ vào hệ thống gioăng kép, kính cường lực.
+
+	Giá cả phải chăng: Cửa nhôm Topal Slima có giá thành hợp lý, phù hợp với những công trình, không gian có diện tích hạn chế.</p><p class='brand-desc-p'>Cửa nhôm Topal Slima là giải pháp tối ưu cho những không gian nhỏ hẹp, vừa đảm bảo tính thẩm mỹ, vừa tiết kiệm diện tích, tạo cảm giác thoải mái, thoáng đãng.</p><p class='brand-desc-p'>Ưu điểm của Cửa Nhôm Topal</p><p class='brand-desc-p'>Màu Sắc Cửa Nhôm Topal</p><p class='brand-desc-p'>Cửa nhôm Topal được đánh giá cao về chất lượng, độ bền, tính năng vượt trội, mang đến nhiều lợi ích cho người sử dụng.</p><p class='brand-desc-p'>Độ bền và khả năng chịu lực cao</p><p class='brand-desc-p'>Nhôm là kim loại có độ bền cao, khả năng chống ăn mòn, oxy hóa tốt. Cửa nhôm Topal được sản xuất từ hợp kim nhôm 6063 cao cấp, có khả năng chịu lực, chịu va đập mạnh, chống biến dạng.</p><p class='brand-desc-p'>Khả năng chịu lực tốt: Khung nhôm dày dặn, kết hợp với kính cường lực, đảm bảo cửa có khả năng chịu lực, chịu va đập mạnh, chống cong vênh, biến dạng trong suốt quá trình sử dụng.
+
+	Chống ăn mòn, oxi hóa: Hợp kim nhôm 6063 được xử lý bề mặt bằng lớp sơn tĩnh điện cao cấp, chống ăn mòn, oxy hóa, gỉ sét, giúp cửa luôn bền đẹp theo thời gian.
+
+	Khả năng chịu nhiệt tốt: Nhôm có khả năng chịu nhiệt tốt, không bị biến dạng, cong vênh khi tiếp xúc với nhiệt độ cao, phù hợp với điều kiện khí hậu nhiệt đới gió mùa của Việt Nam.</p><p class='brand-desc-p'>Khả năng cách âm, cách nhiệt hiệu quả</p><p class='brand-desc-p'>Góc Mẫu Cửa Nhôm Topal</p><p class='brand-desc-p'>Cửa nhôm Topal có khả năng cách âm, cách nhiệt hiệu quả, góp phần tạo nên không gian sống thoải mái, yên tĩnh.</p><p class='brand-desc-p'>Hệ thống gioăng kép: Hệ thống gioăng kép được làm từ chất liệu cao cấp, có độ đàn hồi tốt, giúp ngăn chặn bụi bẩn, nước mưa, côn trùng xâm nhập, đồng thời tăng cường khả năng cách âm, cách nhiệt.
+
+	Kính cường lực: Kính cường lực có khả năng cách âm, cách nhiệt tốt, giúp giảm thiểu tiếng ồn từ bên ngoài, giữ ấm vào mùa đông và mát mẻ vào mùa hè.
+
+	Khung nhôm dày dặn: Khung nhôm dày dặn giúp tăng cường khả năng cách âm, cách nhiệt, hạn chế sự truyền nhiệt từ bên ngoài vào bên trong, giúp tiết kiệm năng lượng.</p><p class='brand-desc-p'>Thiết kế đa dạng, phong phú</p><p class='brand-desc-p'>Cửa nhôm Topal có nhiều mẫu mã, kiểu dáng, màu sắc đa dạng, phù hợp với nhiều phong cách kiến trúc, từ hiện đại, tân cổ điển đến cổ điển.</p><p class='brand-desc-p'>Đa dạng về kiểu dáng: Cửa nhôm Topal có nhiều kiểu dáng khác nhau như cửa mở quay, cửa mở lùa, cửa xếp, cửa sổ mở hất, phù hợp với nhiều không gian kiến trúc khác nhau.
+
+	Phong phú về màu sắc: Cửa nhôm Topal có nhiều màu sắc khác nhau, từ màu trắng sứ, đen, ghi, vân gỗ, giúp dễ dàng phối hợp với màu sắc của ngôi nhà, tạo nên vẻ đẹp hài hòa, ấn tượng.
+
+	Khả năng kết hợp với nhiều loại kính: Cửa nhôm Topal có thể kết hợp với nhiều loại kính khác nhau như kính cường lực, kính phản quang, kính Low-E, tạo nên vẻ đẹp độc đáo, ấn tượng cho ngôi nhà.</p><p class='brand-desc-p'>Ứng dụng của Cửa Nhôm Topal</p><p class='brand-desc-p'>Cửa nhôm Topal được ứng dụng rộng rãi trong nhiều công trình kiến trúc khác nhau, từ nhà ở, văn phòng đến các công trình thương mại.</p><p class='brand-desc-p'>Cửa nhôm Topal cho nhà ở</p><p class='brand-desc-p'>Cửa nhôm Topal là lựa chọn lý tưởng cho các công trình nhà ở, mang đến vẻ đẹp hiện đại, sang trọng, đảm bảo sự an toàn và tiện nghi cho gia đình.</p><p class='brand-desc-p'>Cửa chính: Cửa nhôm Topal được sử dụng làm cửa chính, tạo điểm nhấn cho ngôi nhà, đồng thời đảm bảo an ninh, bảo mật cho gia đình.
+
+	Cửa sổ: Cửa nhôm Topal được sử dụng làm cửa sổ, giúp lấy sáng, thông gió cho ngôi nhà, đồng thời tạo nên vẻ đẹp thẩm mỹ cho không gian nội thất.
+
+	Cửa phòng ngủ: Cửa nhôm Topal được sử dụng làm cửa phòng ngủ, mang đến sự riêng tư, yên tĩnh cho không gian nghỉ ngơi.
+
+	Cửa ban công: Cửa nhôm Topal được sử dụng làm cửa ban công, giúp tạo không gian mở, thoáng đãng, kết nối không gian nội thất với không gian bên ngoài.</p><p class='brand-desc-p'>Cửa nhôm Topal cho văn phòng, công trình thương mại</p><p class='brand-desc-p'>Cửa Trượt Nhôm Topal</p><p class='brand-desc-p'>Cửa nhôm Topal cũng được ứng dụng rộng rãi trong các công trình văn phòng, công trình thương mại, tạo nên không gian làm việc hiện đại, chuyên nghiệp.</p><p class='brand-desc-p'>Cửa văn phòng: Cửa nhôm Topal được sử dụng làm cửa văn phòng, tạo nên không gian làm việc chuyên nghiệp, hiện đại, đồng thời đảm bảo sự an toàn, riêng tư cho nhân viên.
+
+	Cửa trung tâm thương mại: Cửa nhôm Topal được sử dụng làm cửa trung tâm thương mại, tạo nên vẻ đẹp hiện đại, sang trọng, thu hút khách hàng.
+
+	Cửa nhà hàng, khách sạn: Cửa nhôm Topal được sử dụng làm cửa nhà hàng, khách sạn, tạo nên không gian sang trọng, lịch sự, thu hút khách hàng.</p><p class='brand-desc-p'>Cửa Nhôm Xingfa Topal: Sự kết hợp hoàn hảo</p><p class='brand-desc-p'>Mẫu Nhôm Topal Mới Cập Nhật</p><p class='brand-desc-p'>Cửa nhôm Xingfa Topal là sự kết hợp hoàn hảo giữa khung nhôm Xingfa cao cấp và hệ phụ kiện Topal, mang đến sản phẩm cửa nhôm có chất lượng vượt trội, độ bền cao, tính năng ưu việt.</p><p class='brand-desc-p'>So sánh giữa cửa nhôm Topal và cửa nhôm Xingfa</p><p class='brand-desc-p'>Cả cửa nhôm Topal và cửa nhôm Xingfa đều là những dòng cửa nhôm cao cấp được ưa chuộng trên thị trường. Tuy nhiên, mỗi loại lại có những đặc điểm riêng biệt.</p><p class='brand-desc-p'>Vật liệu: Cửa nhôm Topal thường sử dụng hợp kim nhôm 6063, trong khi đó, cửa nhôm Xingfa sử dụng hợp kim nhôm 6061, có độ cứng và độ bền cao hơn.
+
+	Thiết kế: Cửa nhôm Topal và cửa nhôm Xingfa đều có nhiều mẫu mã, kiểu dáng đa dạng, tuy nhiên, cửa nhôm Xingfa thường có thiết kế hiện đại, tinh tế hơn.
+
+	Giá cả: Giá cửa nhôm Topal thường thấp hơn so với cửa nhôm Xingfa.
+
+	Khả năng cách âm, cách nhiệt: Cả hai loại cửa đều có khả năng cách âm, cách nhiệt tốt, tuy nhiên, cửa nhôm Xingfa thường có khả năng cách âm, cách nhiệt cao hơn nhờ vào hệ thống gioăng kép, kính cường lực cao cấp.</p><p class='brand-desc-p'>Ưu điểm nổi bật của cửa nhôm Xingfa Topal</p><p class='brand-desc-p'>Cửa nhôm Xingfa Topal kế thừa những ưu điểm của cả hai dòng sản phẩm, mang đến nhiều lợi ích cho người sử dụng.</p><p class='brand-desc-p'>Độ bền cao: Cửa nhôm Xingfa Topal được sản xuất từ hợp kim nhôm 6061 cao cấp, có độ cứng và độ bền cao hơn so với cửa nhôm Topal, chịu được tác động của môi trường khắc nghiệt.
+
+	Khả năng cách âm, cách nhiệt tốt: Hệ thống gioăng kép, kính cường lực, khung nhôm dày dặn của cửa nhôm Xingfa Topal giúp ngăn chặn tối đa tiếng ồn, giữ ấm vào mùa đông và mát mẻ vào mùa hè.
+
+	Tính thẩm mỹ cao: Cửa nhôm Xingfa Topal có thiết kế hiện đại, tinh tế, với nhiều màu sắc, kiểu dáng đa dạng, phù hợp với nhiều phong cách kiến trúc khác nhau.
+
+	An toàn và bảo mật: Cửa nhôm Xingfa Topal được trang bị hệ thống khóa đa điểm, đảm bảo an ninh cho ngôi nhà.
+
+	Dễ dàng bảo trì, vệ sinh: Bề mặt nhôm sáng bóng, chống bám bụi, dễ dàng lau chùi, vệ sinh, giúp cửa luôn sáng bóng, mới mẻ.</p><p class='brand-desc-p'>Cửa nhôm Xingfa Topal là lựa chọn lý tưởng cho những ai đang tìm kiếm một sản phẩm cửa nhôm cao cấp, vừa đảm bảo chất lượng, độ bền, vừa mang đến vẻ đẹp hiện đại, sang trọng cho không gian sống.</p><p class='brand-desc-p'>Mẫu Cửa Nhôm Topal Đẹp & Hiện Đại</p><p class='brand-desc-p'>Cửa nhôm Topal với thiết kế đa dạng, màu sắc phong phú, mang đến cho người dùng nhiều sự lựa chọn để tạo nên không gian sống ấn tượng, hiện đại.</p><p class='brand-desc-p'>Mẫu cửa nhôm Topal cho phòng khách</p><p class='brand-desc-p'>Phòng khách là không gian sinh hoạt chung của gia đình, là nơi tiếp đón khách khứa, vì vậy, việc lựa chọn cửa nhôm Topal phù hợp là điều rất quan trọng.</p><p class='brand-desc-p'>Kiểu dáng: Cửa nhôm Topal mở quay, mở lùa hoặc cửa xếp là những lựa chọn phổ biến cho phòng khách, tạo nên không gian mở, thông thoáng.
+
+	Màu sắc: Màu trắng sứ, đen, ghi sáng là những màu sắc phổ biến cho cửa nhôm Topal phòng khách, tạo nên vẻ đẹp hiện đại, sang trọng cho không gian.
+
+	Kính: Kính cường lực trong suốt hoặc kính mờ là những lựa chọn phổ biến, giúp lấy sáng tối đa cho phòng khách.
+
+	Yếu tố phong thủy: Lựa chọn cửa nhôm Topal phù hợp với hướng nhà, mệnh gia chủ để mang lại may mắn, tài lộc cho gia đình.</p><p class='brand-desc-p'>Cửa nhôm Topal không chỉ mang đến vẻ đẹp hiện đại, sang trọng cho phòng khách mà còn giúp tăng cường khả năng cách âm, cách nhiệt, mang đến sự thoải mái, tiện nghi cho gia đình.</p><p class='brand-desc-p'>Mẫu cửa nhôm Topal cho phòng ngủ</p><p class='brand-desc-p'>Phòng ngủ là không gian riêng tư, cần đảm bảo sự yên tĩnh, thoải mái để giúp bạn có giấc ngủ ngon.</p><p class='brand-desc-p'>Kiểu dáng: Cửa nhôm Topal mở quay là lựa chọn phổ biến cho phòng ngủ, giúp tiết kiệm diện tích, tạo nên vẻ đẹp đơn giản, tinh tế.
+
+	Màu sắc: Màu trắng sứ, màu ghi sáng là những màu sắc được ưa chuộng cho cửa nhôm Topal phòng ngủ, mang đến sự nhẹ nhàng, thư giãn.
+
+	Kính: Kính mờ, kính hoa văn là những lựa chọn phổ biến, tạo nên sự riêng tư, đồng thời giúp lấy sáng, thông gió cho phòng ngủ.</p><p class='brand-desc-p'>Mẫu cửa nhôm Topal cho ban công</p><p class='brand-desc-p'>Ban công là không gian thư giãn, tận hưởng không khí trong lành. Việc lựa chọn cửa nhôm Topal phù hợp sẽ giúp bạn tạo nên không gian đẹp mắt, tiện nghi.</p><p class='brand-desc-p'>Kiểu dáng: Cửa nhôm Topal mở lùa, cửa xếp là những lựa chọn phổ biến cho ban công, giúp tiết kiệm diện tích, tạo nên không gian mở, thoáng đãng.
+
+	Màu sắc: Màu trắng sứ, màu ghi sáng là những màu sắc phù hợp với cửa nhôm Topal ban công, tạo nên vẻ đẹp hiện đại, hài hòa với thiết kế của ngôi nhà.
+
+	Kính: Kính cường lực trong suốt, kính phản quang là những lựa chọn phổ biến, vừa giúp lấy sáng, vừa mang đến sự riêng tư cho không gian.</p><p class='brand-desc-p'>Bảng Báo Giá Cửa Nhôm Topal</p><p class='brand-desc-p'>Mẫu Cửa Nhôm Topal 1 Cánh</p><p class='brand-desc-p'>Giá cửa nhôm Topal phụ thuộc vào nhiều yếu tố như: loại cửa, kích thước, mẫu mã, phụ kiện, đơn vị thi công.</p><p class='brand-desc-p'>Giá cửa nhôm Topal Prima</p><p class='brand-desc-p'>Giá cửa nhôm Topal Prima dao động từ 2.000.000 đồng/m2 đến 3.500.000 đồng/m2, tùy thuộc vào kích thước, mẫu mã, phụ kiện.</p><p class='brand-desc-p'>Cửa đi: Giá cửa nhôm Topal Prima mở quay, mở lùa dao động từ 2.500.000 đồng/m2 đến 3.500.000 đồng/m2.
+
+	Cửa sổ: Giá cửa nhôm Topal Prima mở quay, mở hất dao động từ 2.000.000 đồng/m2 đến 3.000.000 đồng/m2.
+
+	Phụ kiện: Giá cửa nhôm Topal Prima bao gồm phụ kiện đồng bộ, có thể lựa chọn thêm các loại phụ kiện khác như khóa, bản lề, tay nắm...</p><p class='brand-desc-p'>Giá cửa nhôm Topal Austdoor</p><p class='brand-desc-p'>Giá cửa nhôm Topal Austdoor dao động từ 2.500.000 đồng/m2 đến 4.000.000 đồng/m2, tùy thuộc vào kích thước, mẫu mã, phụ kiện.</p><p class='brand-desc-p'>Cửa đi: Giá cửa nhôm Topal Austdoor mở quay, mở lùa dao động từ 3.000.000 đồng/m2 đến 4.000.000 đồng/m2.
+
+	Cửa sổ: Giá cửa nhôm Topal Austdoor mở quay, mở hất dao động từ 2.500.000 đồng/m2 đến 3.500.000 đồng/m2.
+
+	Phụ kiện: Giá cửa nhôm Topal Austdoor bao gồm phụ kiện đồng bộ, có thể lựa chọn thêm các loại phụ kiện khác như khóa, bản lề, tay nắm...</p><p class='brand-desc-p'>Giá cửa nhôm Topal Slima</p><p class='brand-desc-p'>Giá cửa nhôm Topal Slima dao động từ 1.500.000 đồng/m2 đến 2.500.000 đồng/m2, tùy thuộc vào kích thước, mẫu mã, phụ kiện.</p><p class='brand-desc-p'>Cửa đi: Giá cửa nhôm Topal Slima mở quay, mở lùa dao động từ 2.000.000 đồng/m2 đến 2.500.000 đồng/m2.
+
+	Cửa sổ: Giá cửa nhôm Topal Slima mở quay, mở hất dao động từ 1.500.000 đồng/m2 đến 2.000.000 đồng/m2.
+
+	Phụ kiện: Giá cửa nhôm Topal Slima bao gồm phụ kiện đồng bộ, có thể lựa chọn thêm các loại phụ kiện khác như khóa, bản lề, tay nắm...</p><p class='brand-desc-p'>Lưu ý: Đây chỉ là giá tham khảo, giá cả có thể thay đổi tùy thuộc vào từng thời điểm và đơn vị cung cấp.</p><p class='brand-desc-p'>Quy trình sản xuất và lắp đặt cửa nhôm Topal</p><p class='brand-desc-p'>Để đảm bảo chất lượng và độ bền cho cửa nhôm Topal, việc sản xuất và lắp đặt cần phải được thực hiện một cách bài bản, chuyên nghiệp.</p><p class='brand-desc-p'>Các bước sản xuất cửa nhôm Topal</p><p class='brand-desc-p'>Việc sản xuất cửa nhôm Topal bao gồm các bước sau:</p><p class='brand-desc-p'>Bước 1: Thiết kế, đo đạc: Dựa trên bản vẽ thiết kế, kỹ thuật viên sẽ tiến hành đo đạc kích thước cửa, xác định vị trí lắp đặt, tính toán kỹ thuật để đảm bảo phù hợp với yêu cầu của công trình.
+
+	Bước 2: Cắt, gia công khung nhôm: Khung nhôm được cắt, gia công theo kích thước đã xác định, đảm bảo độ chính xác cao.
+
+	Bước 3: Lắp ráp khung cửa: Các thanh nhôm được lắp ráp với nhau một cách khéo léo, sử dụng mối nối chuyên dụng, đảm bảo độ chắc chắn, ổn định cho khung cửa.
+
+	Bước 4: Lắp kính: Kính cường lực được cắt, gia công theo kích thước phù hợp, sau đó được lắp vào khung cửa bằng keo chuyên dụng, đảm bảo độ kín khít, an toàn.
+
+	Bước 5: Lắp đặt phụ kiện: Các loại phụ kiện như khóa, bản lề, tay nắm... được lắp đặt vào khung cửa, đảm bảo cửa hoạt động trơn tru, tiện lợi.
+
+	Bước 6: Kiểm tra, hoàn thiện: Sau khi hoàn thiện, sản phẩm sẽ được kiểm tra kỹ lưỡng về độ chắc chắn, kín khít, thẩm mỹ, trước khi chuyển sang bước lắp đặt.</p><p class='brand-desc-p'>Quy trình lắp đặt cửa nhôm Topal</p><p class='brand-desc-p'>Quy trình lắp đặt cửa nhôm Topal cần được thực hiện đúng kỹ thuật để đảm bảo độ bền, khả năng cách âm, cách nhiệt của cửa.</p><p class='brand-desc-p'>Bước 1: Chuẩn bị bề mặt: Bề mặt tường, khung bao cần được làm sạch, đảm bảo không có bụi bẩn, vật cản.
+
+	Bước 2: Lắp đặt khung bao: Khung bao được lắp đặt chắc chắn vào tường, đảm bảo độ thẳng, cân bằng.
+
+	Bước 3: Lắp đặt khung cửa: Khung cửa được lắp vào khung bao, sử dụng ốc vít chuyên dụng, đảm bảo khung cửa được cố định chắc chắn.
+
+	Bước 4: Điều chỉnh, căn chỉnh cửa: Cửa được điều chỉnh, căn chỉnh sao cho hoạt động trơn tru, không bị kẹt, xệ.
+
+	Bước 5: Hoàn thiện, vệ sinh: Sau khi lắp đặt hoàn thiện, bề mặt cửa sẽ được vệ sinh sạch sẽ, đảm bảo cửa luôn sáng bóng, mới mẻ.</p><p class='brand-desc-p'>Lựa chọn đơn vị thi công cửa nhôm Topal uy tín</p><p class='brand-desc-p'>Công Trình Sửa Dụng Cửa Nhôm Topal</p><p class='brand-desc-p'>Việc lựa chọn đơn vị thi công cửa nhôm Topal uy tín là yếu tố quan trọng quyết định chất lượng, độ bền của cửa, cũng như đảm bảo an toàn cho người sử dụng.</p><p class='brand-desc-p'>Tiêu chí lựa chọn đơn vị thi công</p><p class='brand-desc-p'>Khi lựa chọn đơn vị thi công cửa nhôm Topal, bạn cần lưu ý những tiêu chí sau:</p><p class='brand-desc-p'>Uy tín, kinh nghiệm: Lựa chọn những đơn vị có uy tín trên thị trường, có nhiều kinh nghiệm trong lĩnh vực thi công cửa nhôm.
+
+	Chất lượng sản phẩm: Đơn vị thi công cần sử dụng sản phẩm cửa nhôm Topal chính hãng, có nguồn gốc xuất xứ rõ ràng, đảm bảo chất lượng.
+
+	Giá cả hợp lý: So sánh giá cả của các đơn vị thi công khác nhau, lựa chọn đơn vị có giá cả hợp lý, phù hợp với ngân sách của bạn.
+
+	Đội ngũ kỹ thuật: Đội ngũ kỹ thuật viên của đơn vị thi công cần có tay nghề cao, kinh nghiệm, am hiểu về kỹ thuật thi công, lắp đặt cửa nhôm Topal.
+
+	Chế độ bảo hành, bảo trì: Đơn vị thi công cần có chế độ bảo hành, bảo trì rõ ràng, cam kết bảo hành sản phẩm trong thời gian dài.
+
+	Phản hồi khách hàng: Tìm hiểu ý kiến của khách hàng đã sử dụng dịch vụ của đơn vị thi công, xem xét sự hài lòng của họ đối với chất lượng dịch vụ.</p><p class='brand-desc-p'>Những lưu ý khi lựa chọn đơn vị thi công</p><p class='brand-desc-p'>Ngoài các tiêu chí trên, bạn cũng cần lưu ý thêm một số vấn đề sau:</p><p class='brand-desc-p'>Hợp đồng thi công: Ký kết hợp đồng thi công rõ ràng, ghi đầy đủ thông tin về sản phẩm, giá cả, thời gian thi công, chế độ bảo hành, bảo trì...
+
+	Thanh toán: Thực hiện thanh toán theo đúng thỏa thuận trong hợp đồng, tránh trường hợp bị phát sinh chi phí không đáng có.
+
+	Kiểm tra kỹ lưỡng: Kiểm tra kỹ lưỡng chất lượng sản phẩm, quá trình thi công, lắp đặt, trước khi nghiệm thu công trình.</p><p class='brand-desc-p'>Bảo hành và bảo trì cửa nhôm Topal</p><p class='brand-desc-p'>Để đảm bảo cửa nhôm Topal luôn hoạt động tốt, bền đẹp theo thời gian, bạn cần thực hiện bảo hành và bảo trì định kỳ.</p><p class='brand-desc-p'>Chính sách bảo hành của cửa nhôm Topal</p><p class='brand-desc-p'>Cửa nhôm Topal thường được các nhà sản xuất bảo hành từ 1 đến 2 năm, tùy thuộc vào từng sản phẩm và đơn vị cung cấp. Chính sách bảo hành thường bao gồm:</p><p class='brand-desc-p'>Bảo hành khung nhôm, kính cường lực trong trường hợp bị lỗi kỹ thuật từ nhà sản xuất.
+
+	Bảo hành các loại phụ kiện như khóa, bản lề, tay nắm... trong trường hợp bị hỏng hóc do lỗi vật liệu hoặc kỹ thuật.
+
+	Hướng dẫn sử dụng, bảo trì cửa nhôm, đảm bảo khách hàng sử dụng cửa một cách hiệu quả và an toàn.</p><p class='brand-desc-p'>Cách bảo trì cửa nhôm Topal hiệu quả</p><p class='brand-desc-p'>Để cửa nhôm Topal luôn bền đẹp, hoạt động ổn định, bạn cần thực hiện bảo trì định kỳ.</p><p class='brand-desc-p'>Vệ sinh cửa thường xuyên: Sử dụng khăn mềm, nước sạch để lau chùi bề mặt cửa, loại bỏ bụi bẩn, vết bẩn. Tránh sử dụng các loại hóa chất tẩy rửa mạnh, có thể làm ảnh hưởng đến lớp sơn tĩnh điện của cửa.
+
+	Kiểm tra gioăng, phụ kiện: Định kỳ kiểm tra gioăng, phụ kiện xem có bị hỏng hóc, nứt vỡ không. Nếu phát hiện có dấu hiệu hỏng hóc, cần thay thế ngay để tránh ảnh hưởng đến khả năng cách âm, cách nhiệt của cửa.
+
+	Bôi trơn bản lề, khóa: Bôi trơn định kỳ bản lề, khóa bằng dầu nhớt chuyên dụng để cửa hoạt động trơn tru, không bị kẹt, rít.
+
+	Kiểm tra, siết chặt ốc vít: Kiểm tra, siết chặt ốc vít định kỳ để đảm bảo khung cửa được cố định chắc chắn, không bị lung lay.
+
+	Tránh va đập mạnh: Tránh va đập mạnh vào cửa, có thể làm ảnh hưởng đến kết cấu của cửa.</p><p class='brand-desc-p'>Các câu hỏi thường gặp về cửa nhôm Topal</p><p class='brand-desc-p'>Một số câu hỏi thường gặp về cửa nhôm Topal được giải đáp dưới đây:</p><p class='brand-desc-p'>Cửa nhôm Topal có dễ bị oxi hóa không?</p><p class='brand-desc-p'>Cửa nhôm Topal được sản xuất từ hợp kim nhôm 6063 cao cấp, được xử lý bề mặt bằng lớp sơn tĩnh điện cao cấp, có khả năng chống ăn mòn, oxi hóa rất tốt. Do đó, cửa nhôm Topal rất khó bị oxi hóa, đảm bảo độ bền đẹp theo thời gian.</p><p class='brand-desc-p'>Làm sao để vệ sinh cửa nhôm Topal hiệu quả?</p><p class='brand-desc-p'>Để vệ sinh cửa nhôm Topal hiệu quả, bạn có thể thực hiện các bước sau:</p><p class='brand-desc-p'>Sử dụng khăn mềm, nước sạch để lau chùi bề mặt cửa, loại bỏ bụi bẩn, vết bẩn.
+
+	Sử dụng dung dịch chuyên dụng để làm sạch các vết bẩn cứng đầu, nhưng cần lưu ý không sử dụng các loại hóa chất tẩy rửa mạnh, có thể làm ảnh hưởng đến lớp sơn tĩnh điện của cửa.
+
+	Lau khô cửa sau khi vệ sinh, tránh để nước đọng lại trên bề mặt cửa, có thể gây ra các vết ố, làm giảm thẩm mỹ của cửa.</p><p class='brand-desc-p'>Kết luận</p><p class='brand-desc-p'>Cửa Nhôm Topal 4 Cánh Lùa</p><p class='brand-desc-p'>Cửa Nhôm Topal là giải pháp tối ưu cho những ai đang tìm kiếm một sản phẩm cửa nhôm chất lượng cao, bền đẹp, an toàn và tiện nghi. Với những ưu điểm vượt trội về độ bền, khả năng cách âm, cách nhiệt, thiết kế đa dạng, cửa nhôm Topal đã và đang trở thành lựa chọn hàng đầu của nhiều gia đình và công trình hiện nay. Chắc chắn rằng, việc lựa chọn và sử dụng cửa nhôm Topal sẽ góp phần mang đến một không gian sống hiện đại, sang trọng, tiện nghi và an toàn cho bạn và gia đình.</p><p class='brand-desc-p'>THI CÔNG Cửa Nhôm Topal TRÊN TOÀN QUỐC</p><p class='brand-desc-p'>Cửa Nhôm Topal Hồ Chí Minh</p><p class='brand-desc-p'>Cửa Nhôm Topal Hà Nội</p><p class='brand-desc-p'>Cửa Nhôm Topal Bình Dương</p><p class='brand-desc-p'>Cửa Nhôm Topal Đà Nẵng</p><p class='brand-desc-p'>Cửa Nhôm Topal Hải Phòng</p><p class='brand-desc-p'>Cửa Nhôm Topal Long An</p><p class='brand-desc-p'>Cửa Nhôm Topal Bà Rịa Vũng Tàu</p><p class='brand-desc-p'>Cửa Nhôm Topal An Giang</p><p class='brand-desc-p'>Cửa Nhôm Topal Bắc Giang</p><p class='brand-desc-p'>Cửa Nhôm Topal Bắc Kạn</p><p class='brand-desc-p'>Cửa Nhôm Topal Bạc Liêu</p><p class='brand-desc-p'>Cửa Nhôm Topal Bắc Ninh</p><p class='brand-desc-p'>Cửa Nhôm Topal Bến Tre</p><p class='brand-desc-p'>Cửa Nhôm Topal Bình Định</p><p class='brand-desc-p'>Cửa Nhôm Topal Bình Phước</p><p class='brand-desc-p'>Cửa Nhôm Topal Bình Thuận</p><p class='brand-desc-p'>Cửa Nhôm Topal Cà Mau</p><p class='brand-desc-p'>Cửa Nhôm Topal Cần Thơ</p><p class='brand-desc-p'>Cửa Nhôm Topal Cao Bằng</p><p class='brand-desc-p'>Cửa Nhôm Topal Đắk Lắk</p><p class='brand-desc-p'>Cửa Nhôm Topal Đắk Nông</p><p class='brand-desc-p'>Cửa Nhôm Topal Điện Biên</p><p class='brand-desc-p'>Cửa Nhôm Topal Đồng Nai</p><p class='brand-desc-p'>Cửa Nhôm Topal Đồng Tháp</p><p class='brand-desc-p'>Cửa Nhôm Topal Gia Lai</p><p class='brand-desc-p'>Cửa Nhôm Topal Hà Giang</p><p class='brand-desc-p'>Cửa Nhôm Topal Hà Nam</p><p class='brand-desc-p'>Cửa Nhôm Topal Hà Tĩnh</p><p class='brand-desc-p'>Cửa Nhôm Topal Hải Dương</p><p class='brand-desc-p'>Cửa Nhôm Topal Hậu Giang</p><p class='brand-desc-p'>Cửa Nhôm Topal Hòa Bình</p><p class='brand-desc-p'>Cửa Nhôm Topal Hưng Yên</p><p class='brand-desc-p'>Cửa Nhôm Topal Khánh Hòa</p><p class='brand-desc-p'>Cửa Nhôm Topal Kiên Giang</p><p class='brand-desc-p'>Cửa Nhôm Topal Kon Tum</p><p class='brand-desc-p'>Cửa Nhôm Topal Lai Châu</p><p class='brand-desc-p'>Cửa Nhôm Topal Lâm Đồng</p><p class='brand-desc-p'>Cửa Nhôm Topal Lạng Sơn</p><p class='brand-desc-p'>Cửa Nhôm Topal Lào Cai</p><p class='brand-desc-p'>Cửa Nhôm Topal Nam Định</p><p class='brand-desc-p'>Cửa Nhôm Topal Nghệ An</p><p class='brand-desc-p'>Cửa Nhôm Topal Ninh Bình</p><p class='brand-desc-p'>Cửa Nhôm Topal Ninh Thuận</p><p class='brand-desc-p'>Cửa Nhôm Topal Phú Thọ</p><p class='brand-desc-p'>Cửa Nhôm Topal Phú Yên</p><p class='brand-desc-p'>Cửa Nhôm Topal Quảng Bình</p><p class='brand-desc-p'>Cửa Nhôm Topal Quảng Nam</p><p class='brand-desc-p'>Cửa Nhôm Topal Quảng Ngãi</p><p class='brand-desc-p'>Cửa Nhôm Topal Quảng Ninh</p><p class='brand-desc-p'>Cửa Nhôm Topal Quảng Trị</p><p class='brand-desc-p'>Cửa Nhôm Topal Sóc Trăng</p><p class='brand-desc-p'>Cửa Nhôm Topal Sơn La</p><p class='brand-desc-p'>Cửa Nhôm Topal Tây Ninh</p><p class='brand-desc-p'>Cửa Nhôm Topal Thái Bình</p><p class='brand-desc-p'>Cửa Nhôm Topal Thái Nguyên</p><p class='brand-desc-p'>Cửa Nhôm Topal Thanh Hóa</p><p class='brand-desc-p'>Cửa Nhôm Topal Thừa Thiên Huế</p><p class='brand-desc-p'>Cửa Nhôm Topal Tiền Giang</p><p class='brand-desc-p'>Cửa Nhôm Topal Trà Vinh</p><p class='brand-desc-p'>Cửa Nhôm Topal Tuyên Quang</p><p class='brand-desc-p'>Cửa Nhôm Topal Vĩnh Long</p><p class='brand-desc-p'>Cửa Nhôm Topal Vĩnh Phúc</p><p class='brand-desc-p'>Cửa Nhôm Topal Yên Bái</p><p class='brand-desc-p'>Mở rộng</p>
+        </div>
+        
+        <div class="brand-sidebar">
+          <h3 class="sidebar-title">Thông Số Kỹ Thuật</h3>
+          <ul class="sidebar-list">
+            <li>Xuất xứ nhôm: <strong>Tập đoàn Austdoor (Việt Nam)</strong></li>
+            <li>Phân khúc dự án: <strong>Phổ thông / Tiêu chuẩn quốc gia</strong></li>
+            <li>Sơn phủ bề mặt: <strong>Tĩnh điện / PVDF / Anodized</strong></li>
+            <li>Độ bền màu sắc: <strong>10 - 25 năm chính hãng</strong></li>
+            <li>Ứng dụng tối ưu: <strong>Cửa mở quay, cửa lùa trượt, vách ngăn</strong></li>
+          </ul>
+          
+          <div class="tech-download-card">
+            <div class="tech-download-title">
+              <i class="ri-folder-zip-line"></i> TÀI LIỆU KỸ THUẬT & CAD PROFILE
+            </div>
+            <p style="font-size:12px; color:#78350f; line-height:1.5; margin:0;">
+              Tải đầy đủ thư viện bản vẽ mặt cắt nhôm và tài liệu AutoCAD để hỗ trợ bóc tách khối lượng và thiết kế.
+            </p>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/08_Catalogue theo Hãng/Catalogue_HeCuaNhom_Topal.xlsx" class="tech-download-btn" download>
+              Tải Bản Vẽ CAD (.dxf) <i class="ri-download-2-line"></i>
+            </a>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/08_Catalogue theo Hãng/ThuVien_HeCuaNhom_Topal.docx" class="tech-download-btn" style="background:transparent; border:1px solid #d97706; color:#d97706;" download>
+              Tải Sổ Tay Kỹ Thuật <i class="ri-file-pdf-2-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-products-section">
+    <div class="sv-container">
+      <div style="text-align:center;">
+        <span class="sv-section-tag">MẪU CỬA ĐẸP</span>
+        <h2 class="sv-section-title" style="margin-inline:auto;">Giải Pháp Thiết Kế Cửa Nhôm Topal Austdoor</h2>
+      </div>
+      
+      <div class="pk-grid">
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/catalogue/catalogue-nhom-topal-he-thuy-luc_211342/catalogue-nhom-topal-he-thuy-luc.webp" alt="Cửa nhôm Topal hệ thủy lực bản lớn" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#b91c1c;">Nhôm Topal Austdoor</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa nhôm Topal hệ thủy lực bản lớn</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #b91c1c; color:#b91c1c;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/catalogue/catalogue-nhom-topal_551789/catalogue-nhom-topal.webp" alt="Cửa đi mở quay Topal Prima rãnh C" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#b91c1c;">Nhôm Topal Austdoor</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa đi mở quay Topal Prima rãnh C</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #b91c1c; color:#b91c1c;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-v2" role="contentinfo">
+    <div class="sv-container">
+      <div class="footer-v2-grid">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <div class="footer-logo-wrap" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+            <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 54px; width: auto; display: block;" />
+          </div>
+          <p class="footer-address" style="font-size: var(--sv-text-sm); color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 20px;">
+            Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng — chuyên cơ khí chính xác &amp; nhôm kính cao cấp.
+          </p>
+          <div class="footer-socials" aria-label="Mạng xã hội">
+            <a href="#" class="footer-social" aria-label="Facebook Sao Vàng"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="YouTube Sao Vàng"><i class="ri-youtube-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn Sao Vàng"><i class="ri-linkedin-fill" aria-hidden="true"></i></a>
+            <a href="tel:0869590279" class="footer-social" aria-label="Gọi hotline Sao Vàng"><i class="ri-phone-fill" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Cơ Khí Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Cơ Khí Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công cơ khí chính xác</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công CNC</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Kết cấu thép</a>
+            <a href="cau-thang-xoan.html" class="footer-link">Lan can, cầu thang, mái kính</a>
+            <a href="cong-nghe-thuat.html" class="footer-link">Cổng &amp; hàng rào</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công inox &amp; nhôm</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Nhôm Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Nhôm Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="cua-nhom-kinh.html" class="footer-link">Cửa nhôm kính cao cấp</a>
+            <a href="vach-kinh.html" class="footer-link">Vách kính mặt dựng</a>
+            <a href="lan-can-kinh.html" class="footer-link">Lan can kính</a>
+            <a href="thu-vien-profile-nhom.html" class="footer-link">Thư viện Profile Nhôm</a>
+            <a href="vach-kinh.html" class="footer-link">Phòng tắm kính</a>
+            <a href="vach-kinh.html" class="footer-link">Mái kính cường lực</a>
+            <a href="linh-vuc-nhom-kinh.html" class="footer-link">Phụ kiện nhôm kính</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Công ty -->
+        <div>
+          <h4 class="footer-col-title">Công Ty</h4>
+          <div class="footer-links">
+            <a href="gioi-thieu.html" class="footer-link">Giới thiệu</a>
+            <a href="linh-vuc-hoat-dong.html" class="footer-link">Lĩnh vực hoạt động</a>
+            <a href="du-an.html" class="footer-link">Dự án đã thực hiện</a>
+            <a href="san-pham.html" class="footer-link">Sản phẩm</a>
+            <a href="tin-tuc.html" class="footer-link">Tin tức</a>
+            <a href="lien-he.html" class="footer-link">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam.</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-line" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color: inherit; text-decoration: none;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <a href="mailto:info@cokhisaovang.com" style="color: inherit; text-decoration: none;">info@cokhisaovang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>Thứ 2 - Thứ 7: 8:00 - 17:00</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-global-line" aria-hidden="true"></i>
+              <a href="https://www.CoKhiSaoVang.com" target="_blank" style="color: inherit; text-decoration: none;">www.CoKhiSaoVang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-file-list-3-line" aria-hidden="true"></i>
+              <span>MST: 0110808047</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. All Rights Reserved. MST: 0110808047.</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+        <span>Design by <a href="https://readdy.ai" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; font-weight: 500;">Readdy.ai</a></span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════
+       FLOATING BUTTONS
+  ════════════════════════════════════════════ -->
+  <div class="floating-left" aria-label="Kênh liên hệ nhanh">
+    <a href="https://zalo.me/0869590279" class="float-btn float-btn-zalo"
+       target="_blank" rel="noopener" aria-label="Chat Zalo" title="Zalo: 0869 590 279">
+      <i class="ri-message-3-fill" aria-hidden="true"></i>
+    </a>
+    <a href="tel:0869590279" class="float-btn float-btn-phone"
+       aria-label="Gọi điện 0869 590 279" title="Gọi ngay">
+      <i class="ri-phone-fill" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="floating-right">
+    <button class="float-btn float-btn-top" id="scrollTopBtn" aria-label="Cuộn lên đầu trang" title="Lên đầu trang">
+      <i class="ri-arrow-up-line" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════════════════ -->
+  <script src="assets/js/main.js"></script>
+  <!-- navbar.js handles this -->
+  <script src="assets/js/modules/navbar.js"></script>
+  <script>
+    async function handleBannerSubmit(event, inputId, source) {
+      event.preventDefault();
+      const input = document.getElementById(inputId);
+      const phoneVal = input.value.trim();
+      const cleaned = phoneVal.replace(/\D/g, '');
+      if (cleaned.length < 9 || cleaned.length > 11) {
+        alert('Vui lòng nhập số điện thoại hợp lệ (từ 9 đến 11 chữ số).');
+        return;
+      }
+      
+      const btn = event.target.querySelector('button');
+      const origText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `<i class="ri-loader-4-line ri-spin"></i> GỬI...`;
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: 'Khách hàng liên hệ nhanh',
+            phone: phoneVal,
+            source: source,
+            note: `Khách hàng gửi số điện thoại từ hotline banner ${source} yêu cầu gọi lại tư vấn.`
+          })
+        });
+
+        if (response.ok) {
+          alert('Gửi số điện thoại thành công! Chúng tôi sẽ liên hệ lại ngay.');
+          input.value = '';
+        } else {
+          alert('Đã xảy ra lỗi, vui lòng thử lại sau.');
+        }
+      } catch (err) {
+        alert('Không thể kết nối tới máy chủ. Vui lòng thử lại.');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = origText;
+      }
+    }
+  </script>
+  <script src="assets/js/shared/internal-links.js"></script>
+  <!-- Sprint 3: Service CTA -->
+  <script src="assets/js/shared/service-cta.js"></script>
+    <!-- Sprint 2: Shared components -->
+  <script src="assets/js/shared/floating-widget.js"></script>
+  <script src="assets/js/shared/faq-accordion.js"></script>
+  <script src="assets/js/shared/breadcrumb.js"></script>
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>
+
+</body>
+</html>

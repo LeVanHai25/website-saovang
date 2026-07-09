@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#4338ca" />
+  <title>Cửa Nhôm Nhôm Cao Cấp Owin Rãnh C Chính Hãng | SAO VÀNG</title>
+  <meta name="description" content="Sao Vàng cung cấp các giải pháp cửa nhôm Nhôm Cao Cấp Owin Rãnh C nhập khẩu cao cấp đồng bộ chính hãng. Tư vấn thiết kế, báo giá lắp đặt trọn gói rẻ nhất." />
+  <meta name="keywords" content="cửa nhôm owin, cửa nhôm Nhôm Cao Cấp Owin Rãnh C, Nhôm Cao Cấp Owin Rãnh C chính hãng, mặt cắt nhôm owin" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  
+  <style>
+    .brand-hero {
+      background: linear-gradient(135deg,#3730a3 0%,#4f46e5 100%);
+      padding: 120px 0 60px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 120%, rgba(255,255,255,0.1), transparent 70%);
+    }
+    .brand-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .brand-title {
+      font-family: var(--sv-font-head);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .brand-subtitle-hero {
+      font-size: clamp(14px, 2vw, 18px);
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    
+    .brand-stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 40px);
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .brand-stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 24px;
+      min-width: 140px;
+      backdrop-filter: blur(8px);
+    }
+    .brand-stat-num {
+      font-family: var(--sv-font-head);
+      font-size: 24px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .brand-stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .brand-detail-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+    .brand-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .brand-content-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .brand-info-column {
+      padding-right: 20px;
+    }
+    .brand-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin: 28px 0 14px;
+      border-left: 4px solid #4338ca;
+      padding-left: 14px;
+    }
+    .brand-sub-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sv-dark-800);
+      margin: 18px 0 8px;
+    }
+    .brand-desc-p {
+      font-size: var(--sv-fs-sm);
+      color: var(--sv-gray-text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    
+    .brand-sidebar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .sidebar-title {
+      font-family: var(--sv-font-head);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: 20px;
+    }
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .sidebar-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 13px;
+      color: var(--sv-gray-text);
+      display: flex;
+      justify-content: space-between;
+    }
+    .sidebar-list li strong {
+      color: var(--sv-dark-900);
+    }
+    
+    .brand-products-section {
+      padding: 80px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .pk-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .pk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+    .pk-card-img {
+      position: relative;
+      height: 220px;
+      background: #f1f5f9;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .pk-card-img img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .pk-card-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+    .pk-card-body {
+      padding: 20px;
+    }
+    .pk-card-name {
+      font-family: var(--sv-font-head);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: 16px;
+      min-height: 40px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .pk-card-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: var(--sv-font-head);
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .tech-download-card {
+      background: #fffbeb;
+      border: 1px dashed #d97706;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 24px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .tech-download-title {
+      font-family: var(--sv-font-head);
+      font-size: 15px;
+      font-weight: 800;
+      color: #92400e;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .tech-download-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: #d97706;
+      color: #fff;
+      font-family: var(--sv-font-head);
+      font-size: 13px;
+      font-weight: 800;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .tech-download-btn:hover {
+      background: #b45309;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-menu-link active">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html" class="nav-menu-link">Nhôm Sao Vàng</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan</a>
+            <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
+          </div>
+        </div>
+        <a href="phu-kien.html" class="nav-menu-link">Phụ Kiện</a>
+        <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
+        <a href="du-an.html" class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="lien-he.html" class="nav-menu-link">Liên Hệ</a>
+      </nav>
+
+  <section class="brand-hero">
+    <div class="sv-container">
+      <span class="brand-tag">HỆ THỐNG PROFILE NHÔM</span>
+      <h1 class="brand-title">Nhôm Cao Cấp Owin Rãnh C</h1>
+      <p class="brand-subtitle-hero">Dòng nhôm chất lượng cao được Sao Vàng lắp đặt chính hãng đồng bộ cho các giải pháp kiến trúc</p>
+      
+      <div class="brand-stats">
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Đức / OEM</div>
+          <div class="brand-stat-label">Xuất Xứ</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">1</div>
+          <div class="brand-stat-label">Mẫu Thiết Kế</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Trung cấp / Cao cấp</div>
+          <div class="brand-stat-label">Phân Khúc</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-detail-section">
+    <div class="sv-container">
+      <div class="brand-content-grid">
+        <div class="brand-info-column">
+          <h2 class="sv-section-title" style="margin-left:0; text-align:left;">Ưu Điểm & Đặc Tính</h2>
+          <p class='brand-desc-p'>Trang chủSản phẩmCửa Nhôm Owin            
+Cửa Nhôm Owin</p><p class='brand-desc-p'>Cửa Nhôm Thủy Lực Owin</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Trượt Quay Owin</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Nhôm Owin Hệ Khuôn Phào Bản Cánh 160</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Nhôm Owin Hệ Chấn Song</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Mục lục</p><p class='brand-desc-p'>Giới Thiệu Về Cửa Nhôm Owin
+
+      Đặc Điểm Nổi Bật Của Cửa Nhôm Owin</p><p class='brand-desc-p'>Chất Lượng Vượt Trội
+
+          Thiết Kế Đa Dạng Và Linh Hoạt
+
+          Tiết Kiệm Năng Lượng Và Bảo Vệ Môi Trường</p><p class='brand-desc-p'>Các Dòng Sản Phẩm Chính Của Cửa Nhôm Owin</p><p class='brand-desc-p'>Cửa Nhôm Owin Màu Vân Gỗ
+
+          Cửa Nhôm Thủy Lực Owin
+
+          Cửa Nhôm Trượt Quay Owin
+
+          Cửa Nhôm Hệ Chấn Song Owin
+
+          Cửa Nhôm Hệ Tủ Nội Thất Owin</p><p class='brand-desc-p'>Lợi Ích Khi Sử Dụng Cửa Nhôm Owin</p><p class='brand-desc-p'>Tăng Cường Giá Trị Thẩm Mỹ
+
+          Đảm Bảo An Toàn Và Bảo Mật
+
+          Dễ Dàng Lắp Đặt Và Bảo Trì
+
+          Tối Ưu Hóa Không Gian Sống
+
+          Tiết Kiệm Năng Lượng
+
+          Câu Hỏi Thường Gặp Về Cửa Nhôm Owin</p><p class='brand-desc-p'>Giới Thiệu Về Cửa Nhôm Owin</p><p class='brand-desc-p'>Cửa nhôm Owin đã khẳng định vị thế của mình trong ngành công nghiệp xây dựng nhờ vào sự kết hợp giữa chất lượng vượt trội và thiết kế hiện đại. Với các sản phẩm như Cửa nhôm Owin Màu Vân Gỗ, Cửa nhôm Thủy Lực Owin, Cửa nhôm Trượt Quay Owin, Cửa nhôm hệ chấn song Owin, và Cửa nhôm hệ tủ nội thất Owin, Owin mang đến những giải pháp tối ưu cho không gian sống và làm việc.</p><p class='brand-desc-p'>Đặc Điểm Nổi Bật Của Cửa Nhôm Owin</p><p class='brand-desc-p'>1. Chất Lượng Vượt Trội</p><p class='brand-desc-p'>Cửa nhôm Owin được sản xuất từ hợp kim nhôm cao cấp, đảm bảo khả năng chống ăn mòn, chịu lực tốt và bền bỉ theo thời gian. Nhờ vào công nghệ tiên tiến, Cửa nhôm Owin có thể chống lại mọi tác động của môi trường khắc nghiệt, từ nhiệt độ cao, gió, mưa đến tác động cơ học.</p><p class='brand-desc-p'>2. Thiết Kế Đa Dạng Và Linh Hoạt</p><p class='brand-desc-p'>Sản phẩm Cửa nhôm Owin không chỉ nổi bật bởi chất lượng mà còn bởi thiết kế đa dạng, phù hợp với nhiều phong cách kiến trúc khác nhau. Bạn có thể lựa chọn giữa nhiều dòng sản phẩm như Cửa nhôm Owin Màu Vân Gỗ mang đến vẻ đẹp tự nhiên và sang trọng, hay Cửa nhôm Trượt Quay Owin với tính năng tiết kiệm không gian vượt trội.</p><p class='brand-desc-p'>3. Tiết Kiệm Năng Lượng Và Bảo Vệ Môi Trường</p><p class='brand-desc-p'>Cửa nhôm Owin được thiết kế với khả năng cách nhiệt và cách âm tuyệt vời, giúp tiết kiệm năng lượng cho ngôi nhà của bạn. Nhờ vào lớp cách nhiệt đặc biệt, Cửa nhôm Owin giữ cho không gian bên trong mát mẻ vào mùa hè và ấm áp vào mùa đông, giảm thiểu nhu cầu sử dụng điều hòa hay lò sưởi, từ đó giúp bảo vệ môi trường.</p><p class='brand-desc-p'>Các Dòng Sản Phẩm Chính Của Cửa Nhôm Owin</p><p class='brand-desc-p'>1. Cửa Nhôm Owin Màu Vân Gỗ</p><p class='brand-desc-p'>Cửa nhôm Owin Màu Vân Gỗ là sự kết hợp hoàn hảo giữa vẻ đẹp tự nhiên của gỗ và độ bền vượt trội của nhôm. Với công nghệ sơn phủ đặc biệt, sản phẩm này mang đến vẻ đẹp sang trọng, hiện đại nhưng vẫn giữ được nét truyền thống ấm cúng.</p><p class='brand-desc-p'>Đặc điểm: Chống trầy xước, không phai màu, bền đẹp với thời gian.
+
+  Ứng dụng: Phù hợp cho các không gian như phòng khách, phòng ngủ, hoặc các khu vực cần tạo cảm giác ấm cúng và gần gũi.</p><p class='brand-desc-p'>Cửa nhôm thủy thực Owin màu vân gỗ trắc</p><p class='brand-desc-p'>2. Cửa Nhôm Thủy Lực Owin</p><p class='brand-desc-p'>Cửa nhôm Thủy Lực Owin mang lại sự tiện lợi và an toàn nhờ vào cơ chế vận hành bằng thủy lực. Sản phẩm này giúp cửa mở và đóng một cách nhẹ nhàng, êm ái, đồng thời đảm bảo an toàn cho người sử dụng.</p><p class='brand-desc-p'>Đặc điểm: Vận hành êm ái, bền bỉ, an toàn khi sử dụng.
+
+  Ứng dụng: Thích hợp cho cửa chính, cửa văn phòng, và các khu vực yêu cầu sự kín đáo.</p><p class='brand-desc-p'>3. Cửa Nhôm Trượt Quay Owin</p><p class='brand-desc-p'>Cửa nhôm Trượt Quay Owin là giải pháp lý tưởng cho những không gian hẹp, nơi cần tối ưu hóa diện tích. Với thiết kế thông minh, cửa có thể trượt và quay linh hoạt, giúp tiết kiệm không gian mà vẫn đảm bảo sự tiện dụng.</p><p class='brand-desc-p'>Đặc điểm: Tiết kiệm không gian, dễ dàng lắp đặt và sử dụng.
+
+  Ứng dụng: Phù hợp cho ban công, phòng ngủ, hoặc các không gian nhỏ cần sự linh hoạt.</p><p class='brand-desc-p'>4. Cửa Nhôm Hệ Chấn Song Owin</p><p class='brand-desc-p'>Cửa nhôm hệ chấn song Owin kết hợp giữa tính năng bảo vệ và thiết kế thẩm mỹ. Với các thanh chấn song chắc chắn, sản phẩm này không chỉ bảo vệ ngôi nhà khỏi các tác động từ bên ngoài mà còn mang lại vẻ đẹp thanh lịch, hiện đại.</p><p class='brand-desc-p'>Đặc điểm: Chắc chắn, an toàn, thiết kế đẹp mắt.
+
+  Ứng dụng: Thường được sử dụng cho cửa sổ, ban công, và các khu vực cần sự bảo vệ cao.</p><p class='brand-desc-p'>Cửa nhôm Owin hệ chấn song</p><p class='brand-desc-p'>5. Cửa Nhôm Hệ Tủ Nội Thất Owin</p><p class='brand-desc-p'>Cửa nhôm hệ tủ nội thất Owin là giải pháp lý tưởng cho các không gian nội thất hiện đại. Với thiết kế tinh tế và khả năng tùy chỉnh cao, sản phẩm này giúp tối ưu hóa không gian lưu trữ mà vẫn đảm bảo tính thẩm mỹ cho ngôi nhà.</p><p class='brand-desc-p'>Đặc điểm: Tùy chỉnh linh hoạt, bền bỉ, dễ dàng lắp đặt.
+
+  Ứng dụng: Thích hợp cho tủ quần áo, tủ bếp, và các không gian nội thất khác.</p><p class='brand-desc-p'>Tủ nhôm nội thất Owin</p><p class='brand-desc-p'>Lợi Ích Khi Sử Dụng Cửa Nhôm Owin</p><p class='brand-desc-p'>1. Tăng Cường Giá Trị Thẩm Mỹ</p><p class='brand-desc-p'>Sử dụng Cửa nhôm Owin không chỉ mang lại sự bền bỉ mà còn tăng cường giá trị thẩm mỹ cho ngôi nhà của bạn. Với thiết kế đa dạng và đẹp mắt, các sản phẩm của Owin giúp nâng tầm vẻ đẹp tổng thể cho không gian sống và làm việc.</p><p class='brand-desc-p'>2. Đảm Bảo An Toàn Và Bảo Mật</p><p class='brand-desc-p'>Với các dòng sản phẩm như Cửa nhôm hệ chấn song Owin, Cửa nhôm Thủy Lực Owin, Owin đảm bảo rằng ngôi nhà của bạn luôn được bảo vệ một cách tối ưu. Các sản phẩm này được trang bị hệ thống khóa an toàn và vật liệu chắc chắn, ngăn chặn mọi ý định xâm nhập trái phép.</p><p class='brand-desc-p'>3. Dễ Dàng Lắp Đặt Và Bảo Trì</p><p class='brand-desc-p'>Các sản phẩm Cửa nhôm Owin được thiết kế với tính năng dễ dàng lắp đặt và bảo trì, giúp tiết kiệm thời gian và công sức. Bạn có thể yên tâm sử dụng mà không phải lo lắng về việc bảo trì hay thay thế thường xuyên.</p><p class='brand-desc-p'>4. Tối Ưu Hóa Không Gian Sống</p><p class='brand-desc-p'>Với các dòng sản phẩm như Cửa nhôm Trượt Quay Owin, bạn có thể tối ưu hóa không gian sống của mình một cách hiệu quả. Các thiết kế tiết kiệm diện tích của Owin giúp không gian trở nên rộng rãi và thoáng đãng hơn.</p><p class='brand-desc-p'>5. Tiết Kiệm Năng Lượng</p><p class='brand-desc-p'>Cửa nhôm Owin được thiết kế với khả năng cách nhiệt và cách âm tốt, giúp giảm thiểu chi phí điện năng cho hệ thống điều hòa không khí và sưởi ấm. Điều này không chỉ tiết kiệm chi phí mà còn góp phần bảo vệ môi trường.</p><p class='brand-desc-p'>Cửa nhôm Owin là sự lựa chọn hoàn hảo cho những ai đang tìm kiếm sự kết hợp giữa thẩm mỹ, chất lượng và hiệu quả. Với các dòng sản phẩm đa dạng như Cửa nhôm Owin Màu Vân Gỗ, Cửa nhôm Thủy Lực Owin, Cửa nhôm Trượt Quay Owin, Cửa nhôm hệ chấn song Owin, và Cửa nhôm hệ tủ nội thất Owin, bạn có thể hoàn toàn yên tâm về sự bền bỉ, an toàn và tiện nghi cho không gian sống của mình.</p><p class='brand-desc-p'>Câu Hỏi Thường Gặp Về Cửa Nhôm Owin</p><p class='brand-desc-p'>Cửa nhôm Owin có những loại màu nào?</p><p class='brand-desc-p'>Cửa nhôm Owin có nhiều màu sắc, nhưng nổi bật nhất là màu vân gỗ tự nhiên, tạo vẻ đẹp sang trọng và hiện đại.</p><p class='brand-desc-p'>Lắp đặt cửa nhôm Thủy Lực Owin có phức tạp không?</p><p class='brand-desc-p'>Không, cửa nhôm Thủy Lực Owin được thiết kế để dễ dàng lắp đặt, với hướng dẫn chi tiết và đội ngũ hỗ trợ chuyên nghiệp từ Owin.</p><p class='brand-desc-p'>Cửa nhôm hệ chấn song Owin có an toàn không?</p><p class='brand-desc-p'>Rất an toàn, cửa nhôm hệ chấn song Owin được làm từ vật liệu chắc chắn và có hệ thống khóa bảo mật cao.</p><p class='brand-desc-p'>Cửa nhôm Owin có phù hợp với mọi không gian không?</p><p class='brand-desc-p'>Đúng vậy, với các dòng sản phẩm đa dạng, cửa nhôm Owin có thể tùy chỉnh để phù hợp với mọi không gian từ nhỏ đến lớn.</p><p class='brand-desc-p'>Làm thế nào để bảo trì cửa nhôm Owin?</p><p class='brand-desc-p'>Bạn chỉ cần lau chùi định kỳ bằng khăn ẩm và tránh sử dụng các hóa chất mạnh để giữ cửa luôn sạch đẹp.</p><p class='brand-desc-p'>THI CÔNG CỬA NHÔM XINGFA TRÊN TOÀN QUỐC</p><p class='brand-desc-p'>Nhôm Xingfa tại Hồ Chí Minh</p><p class='brand-desc-p'>Nhôm Xingfa tại Hà Nội</p><p class='brand-desc-p'>Nhôm Xingfa tại Bình Dương</p><p class='brand-desc-p'>Nhôm Xingfa tại Đà Nẵng</p><p class='brand-desc-p'>Nhôm Xingfa tại Hải Phòng</p><p class='brand-desc-p'>Nhôm Xingfa tại Long An</p><p class='brand-desc-p'>Nhôm Xingfa tại Bà Rịa Vũng Tàu</p><p class='brand-desc-p'>Nhôm Xingfa tại An Giang</p><p class='brand-desc-p'>Nhôm Xingfa tại Bắc Giang</p><p class='brand-desc-p'>Nhôm Xingfa tại Bắc Kạn</p><p class='brand-desc-p'>Nhôm Xingfa tại Bạc Liêu</p><p class='brand-desc-p'>Nhôm Xingfa tại Bắc Ninh</p><p class='brand-desc-p'>Nhôm Xingfa tại Bến Tre</p><p class='brand-desc-p'>Nhôm Xingfa tại Bình Định</p><p class='brand-desc-p'>Nhôm Xingfa tại Bình Phước</p><p class='brand-desc-p'>Nhôm Xingfa tại Bình Thuận</p><p class='brand-desc-p'>Nhôm Xingfa tại Cà Mau</p><p class='brand-desc-p'>Nhôm Xingfa tại Cần Thơ</p><p class='brand-desc-p'>Nhôm Xingfa tại Cao Bằng</p><p class='brand-desc-p'>Nhôm Xingfa tại Đắk Lắk</p><p class='brand-desc-p'>Nhôm Xingfa tại Đắk Nông</p><p class='brand-desc-p'>Nhôm Xingfa tại Điện Biên</p><p class='brand-desc-p'>Nhôm Xingfa tại Đồng Nai</p><p class='brand-desc-p'>Nhôm Xingfa tại Đồng Tháp</p><p class='brand-desc-p'>Nhôm Xingfa tại Gia Lai</p><p class='brand-desc-p'>Nhôm Xingfa tại Hà Giang</p><p class='brand-desc-p'>Nhôm Xingfa tại Hà Nam</p><p class='brand-desc-p'>Nhôm Xingfa tại Hà Tĩnh</p><p class='brand-desc-p'>Nhôm Xingfa tại Hải Dương</p><p class='brand-desc-p'>Nhôm Xingfa tại Hậu Giang</p><p class='brand-desc-p'>Nhôm Xingfa tại Hòa Bình</p><p class='brand-desc-p'>Nhôm Xingfa tại Hưng Yên</p><p class='brand-desc-p'>Nhôm Xingfa tại Khánh Hòa</p><p class='brand-desc-p'>Nhôm Xingfa tại Kiên Giang</p><p class='brand-desc-p'>Nhôm Xingfa tại Kon Tum</p><p class='brand-desc-p'>Nhôm Xingfa tại Lai Châu</p><p class='brand-desc-p'>Nhôm Xingfa tại Lâm Đồng</p><p class='brand-desc-p'>Nhôm Xingfa tại Lạng Sơn</p><p class='brand-desc-p'>Nhôm Xingfa tại Lào Cai</p><p class='brand-desc-p'>Nhôm Xingfa tại Nam Định</p><p class='brand-desc-p'>Nhôm Xingfa tại Nghệ An</p><p class='brand-desc-p'>Nhôm Xingfa tại Ninh Bình</p><p class='brand-desc-p'>Nhôm Xingfa tại Ninh Thuận</p><p class='brand-desc-p'>Nhôm Xingfa tại Phú Thọ</p><p class='brand-desc-p'>Nhôm Xingfa tại Phú Yên</p><p class='brand-desc-p'>Nhôm Xingfa tại Quảng Bình</p><p class='brand-desc-p'>Nhôm Xingfa tại Quảng Nam</p><p class='brand-desc-p'>Nhôm Xingfa tại Quảng Ngãi</p><p class='brand-desc-p'>Nhôm Xingfa tại Quảng Ninh</p><p class='brand-desc-p'>Nhôm Xingfa tại Quảng Trị</p><p class='brand-desc-p'>Nhôm Xingfa tại Sóc Trăng</p><p class='brand-desc-p'>Nhôm Xingfa tại Sơn La</p><p class='brand-desc-p'>Nhôm Xingfa tại Tây Ninh</p><p class='brand-desc-p'>Nhôm Xingfa tại Thái Bình</p><p class='brand-desc-p'>Nhôm Xingfa tại Thái Nguyên</p><p class='brand-desc-p'>Nhôm Xingfa tại Thanh Hóa</p><p class='brand-desc-p'>Nhôm Xingfa tại Thừa Thiên Huế</p><p class='brand-desc-p'>Nhôm Xingfa tại Tiền Giang</p><p class='brand-desc-p'>Nhôm Xingfa tại Trà Vinh</p><p class='brand-desc-p'>Nhôm Xingfa tại Tuyên Quang</p><p class='brand-desc-p'>Nhôm Xingfa tại Vĩnh Long</p><p class='brand-desc-p'>Nhôm Xingfa tại Vĩnh Phúc</p><p class='brand-desc-p'>Nhôm Xingfa tại Yên Bái</p><p class='brand-desc-p'>Mở rộng</p>
+        </div>
+        
+        <div class="brand-sidebar">
+          <h3 class="sidebar-title">Thông Số Kỹ Thuật</h3>
+          <ul class="sidebar-list">
+            <li>Xuất xứ nhôm: <strong>Đức / OEM</strong></li>
+            <li>Phân khúc dự án: <strong>Trung cấp / Cao cấp</strong></li>
+            <li>Sơn phủ bề mặt: <strong>Tĩnh điện / PVDF / Anodized</strong></li>
+            <li>Độ bền màu sắc: <strong>10 - 25 năm chính hãng</strong></li>
+            <li>Ứng dụng tối ưu: <strong>Cửa mở quay, cửa lùa trượt, vách ngăn</strong></li>
+          </ul>
+          
+          <div class="tech-download-card">
+            <div class="tech-download-title">
+              <i class="ri-folder-zip-line"></i> TÀI LIỆU KỸ THUẬT & CAD PROFILE
+            </div>
+            <p style="font-size:12px; color:#78350f; line-height:1.5; margin:0;">
+              Tải đầy đủ thư viện bản vẽ mặt cắt nhôm và tài liệu AutoCAD để hỗ trợ bóc tách khối lượng và thiết kế.
+            </p>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/08_Catalogue theo Hãng/Catalogue_HeCuaNhom_Owin.xlsx" class="tech-download-btn" download>
+              Tải Bản Vẽ CAD (.dxf) <i class="ri-download-2-line"></i>
+            </a>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/08_Catalogue theo Hãng/ThuVien_HeCuaNhom_Owin.docx" class="tech-download-btn" style="background:transparent; border:1px solid #d97706; color:#d97706;" download>
+              Tải Sổ Tay Kỹ Thuật <i class="ri-file-pdf-2-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-products-section">
+    <div class="sv-container">
+      <div style="text-align:center;">
+        <span class="sv-section-tag">MẪU CỬA ĐẸP</span>
+        <h2 class="sv-section-title" style="margin-inline:auto;">Giải Pháp Thiết Kế Cửa Nhôm Cao Cấp Owin Rãnh C</h2>
+      </div>
+      
+      <div class="pk-grid">
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/catalogue/catalogue-nhom-owin_363800/catalogue-nhom-owin.webp" alt="Cửa đi mở quay nhôm Owin đồng bộ" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#4338ca;">Nhôm Cao Cấp Owin Rãnh C</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa đi mở quay nhôm Owin đồng bộ</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #4338ca; color:#4338ca;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-v2" role="contentinfo">
+    <div class="sv-container">
+      <div class="footer-v2-grid">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <div class="footer-logo-wrap" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+            <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 54px; width: auto; display: block;" />
+          </div>
+          <p class="footer-address" style="font-size: var(--sv-text-sm); color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 20px;">
+            Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng — chuyên cơ khí chính xác &amp; nhôm kính cao cấp.
+          </p>
+          <div class="footer-socials" aria-label="Mạng xã hội">
+            <a href="#" class="footer-social" aria-label="Facebook Sao Vàng"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="YouTube Sao Vàng"><i class="ri-youtube-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn Sao Vàng"><i class="ri-linkedin-fill" aria-hidden="true"></i></a>
+            <a href="tel:0869590279" class="footer-social" aria-label="Gọi hotline Sao Vàng"><i class="ri-phone-fill" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Cơ Khí Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Cơ Khí Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công cơ khí chính xác</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công CNC</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Kết cấu thép</a>
+            <a href="cau-thang-xoan.html" class="footer-link">Lan can, cầu thang, mái kính</a>
+            <a href="cong-nghe-thuat.html" class="footer-link">Cổng &amp; hàng rào</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công inox &amp; nhôm</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Nhôm Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Nhôm Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="cua-nhom-kinh.html" class="footer-link">Cửa nhôm kính cao cấp</a>
+            <a href="vach-kinh.html" class="footer-link">Vách kính mặt dựng</a>
+            <a href="lan-can-kinh.html" class="footer-link">Lan can kính</a>
+            <a href="thu-vien-profile-nhom.html" class="footer-link">Thư viện Profile Nhôm</a>
+            <a href="vach-kinh.html" class="footer-link">Phòng tắm kính</a>
+            <a href="vach-kinh.html" class="footer-link">Mái kính cường lực</a>
+            <a href="linh-vuc-nhom-kinh.html" class="footer-link">Phụ kiện nhôm kính</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Công ty -->
+        <div>
+          <h4 class="footer-col-title">Công Ty</h4>
+          <div class="footer-links">
+            <a href="gioi-thieu.html" class="footer-link">Giới thiệu</a>
+            <a href="linh-vuc-hoat-dong.html" class="footer-link">Lĩnh vực hoạt động</a>
+            <a href="du-an.html" class="footer-link">Dự án đã thực hiện</a>
+            <a href="san-pham.html" class="footer-link">Sản phẩm</a>
+            <a href="tin-tuc.html" class="footer-link">Tin tức</a>
+            <a href="lien-he.html" class="footer-link">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam.</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-line" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color: inherit; text-decoration: none;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <a href="mailto:info@cokhisaovang.com" style="color: inherit; text-decoration: none;">info@cokhisaovang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>Thứ 2 - Thứ 7: 8:00 - 17:00</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-global-line" aria-hidden="true"></i>
+              <a href="https://www.CoKhiSaoVang.com" target="_blank" style="color: inherit; text-decoration: none;">www.CoKhiSaoVang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-file-list-3-line" aria-hidden="true"></i>
+              <span>MST: 0110808047</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. All Rights Reserved. MST: 0110808047.</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+        <span>Design by <a href="https://readdy.ai" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; font-weight: 500;">Readdy.ai</a></span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════
+       FLOATING BUTTONS
+  ════════════════════════════════════════════ -->
+  <div class="floating-left" aria-label="Kênh liên hệ nhanh">
+    <a href="https://zalo.me/0869590279" class="float-btn float-btn-zalo"
+       target="_blank" rel="noopener" aria-label="Chat Zalo" title="Zalo: 0869 590 279">
+      <i class="ri-message-3-fill" aria-hidden="true"></i>
+    </a>
+    <a href="tel:0869590279" class="float-btn float-btn-phone"
+       aria-label="Gọi điện 0869 590 279" title="Gọi ngay">
+      <i class="ri-phone-fill" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="floating-right">
+    <button class="float-btn float-btn-top" id="scrollTopBtn" aria-label="Cuộn lên đầu trang" title="Lên đầu trang">
+      <i class="ri-arrow-up-line" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════════════════ -->
+  <script src="assets/js/main.js"></script>
+  <!-- navbar.js handles this -->
+  <script src="assets/js/modules/navbar.js"></script>
+  <script>
+    async function handleBannerSubmit(event, inputId, source) {
+      event.preventDefault();
+      const input = document.getElementById(inputId);
+      const phoneVal = input.value.trim();
+      const cleaned = phoneVal.replace(/\D/g, '');
+      if (cleaned.length < 9 || cleaned.length > 11) {
+        alert('Vui lòng nhập số điện thoại hợp lệ (từ 9 đến 11 chữ số).');
+        return;
+      }
+      
+      const btn = event.target.querySelector('button');
+      const origText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `<i class="ri-loader-4-line ri-spin"></i> GỬI...`;
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: 'Khách hàng liên hệ nhanh',
+            phone: phoneVal,
+            source: source,
+            note: `Khách hàng gửi số điện thoại từ hotline banner ${source} yêu cầu gọi lại tư vấn.`
+          })
+        });
+
+        if (response.ok) {
+          alert('Gửi số điện thoại thành công! Chúng tôi sẽ liên hệ lại ngay.');
+          input.value = '';
+        } else {
+          alert('Đã xảy ra lỗi, vui lòng thử lại sau.');
+        }
+      } catch (err) {
+        alert('Không thể kết nối tới máy chủ. Vui lòng thử lại.');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = origText;
+      }
+    }
+  </script>
+  <script src="assets/js/shared/internal-links.js"></script>
+  <!-- Sprint 3: Service CTA -->
+  <script src="assets/js/shared/service-cta.js"></script>
+    <!-- Sprint 2: Shared components -->
+  <script src="assets/js/shared/floating-widget.js"></script>
+  <script src="assets/js/shared/faq-accordion.js"></script>
+  <script src="assets/js/shared/breadcrumb.js"></script>
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>
+
+</body>
+</html>

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#b45309" />
+  <title>Cửa Nhôm Nhôm Cao Cấp Maxpro.JP Chính Hãng | SAO VÀNG</title>
+  <meta name="description" content="Sao Vàng cung cấp các giải pháp cửa nhôm Nhôm Cao Cấp Maxpro.JP nhập khẩu cao cấp đồng bộ chính hãng. Tư vấn thiết kế, báo giá lắp đặt trọn gói rẻ nhất." />
+  <meta name="keywords" content="cửa nhôm maxpro, cửa nhôm Nhôm Cao Cấp Maxpro.JP, Nhôm Cao Cấp Maxpro.JP chính hãng, mặt cắt nhôm maxpro" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  
+  <style>
+    .brand-hero {
+      background: linear-gradient(135deg,#78350f 0%,#d97706 100%);
+      padding: 120px 0 60px;
+      color: #fff;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .brand-hero::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 120%, rgba(255,255,255,0.1), transparent 70%);
+    }
+    .brand-tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(4px);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .brand-title {
+      font-family: var(--sv-font-head);
+      font-size: clamp(32px, 5vw, 56px);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .brand-subtitle-hero {
+      font-size: clamp(14px, 2vw, 18px);
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto 24px;
+    }
+    
+    .brand-stats {
+      display: flex;
+      justify-content: center;
+      gap: clamp(16px, 4vw, 40px);
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .brand-stat-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 12px;
+      padding: 16px 24px;
+      min-width: 140px;
+      backdrop-filter: blur(8px);
+    }
+    .brand-stat-num {
+      font-family: var(--sv-font-head);
+      font-size: 24px;
+      font-weight: 900;
+      color: #fff;
+    }
+    .brand-stat-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 4px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    
+    .brand-detail-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+    .brand-content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .brand-content-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+    .brand-info-column {
+      padding-right: 20px;
+    }
+    .brand-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin: 28px 0 14px;
+      border-left: 4px solid #b45309;
+      padding-left: 14px;
+    }
+    .brand-sub-subtitle {
+      font-family: var(--sv-font-head);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--sv-dark-800);
+      margin: 18px 0 8px;
+    }
+    .brand-desc-p {
+      font-size: var(--sv-fs-sm);
+      color: var(--sv-gray-text);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    
+    .brand-sidebar {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 32px;
+    }
+    .sidebar-title {
+      font-family: var(--sv-font-head);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--sv-dark-900);
+      margin-bottom: 20px;
+    }
+    .sidebar-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+    }
+    .sidebar-list li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 13px;
+      color: var(--sv-gray-text);
+      display: flex;
+      justify-content: space-between;
+    }
+    .sidebar-list li strong {
+      color: var(--sv-dark-900);
+    }
+    
+    .brand-products-section {
+      padding: 80px 0;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+    
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .pk-card {
+      background: #fff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .pk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+    }
+    .pk-card-img {
+      position: relative;
+      height: 220px;
+      background: #f1f5f9;
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    .pk-card-img img {
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: contain;
+    }
+    .pk-card-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+    }
+    .pk-card-body {
+      padding: 20px;
+    }
+    .pk-card-name {
+      font-family: var(--sv-font-head);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sv-dark-900);
+      margin-bottom: 16px;
+      min-height: 40px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .pk-card-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      font-family: var(--sv-font-head);
+      font-size: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    
+    .tech-download-card {
+      background: #fffbeb;
+      border: 1px dashed #d97706;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 24px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .tech-download-title {
+      font-family: var(--sv-font-head);
+      font-size: 15px;
+      font-weight: 800;
+      color: #92400e;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .tech-download-btn {
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      background: #d97706;
+      color: #fff;
+      font-family: var(--sv-font-head);
+      font-size: 13px;
+      font-weight: 800;
+      padding: 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .tech-download-btn:hover {
+      background: #b45309;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-menu-link active">Trang Chủ</a>
+        <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html" class="nav-menu-link">Nhôm Sao Vàng</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan</a>
+            <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
+          </div>
+        </div>
+        <a href="phu-kien.html" class="nav-menu-link">Phụ Kiện</a>
+        <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
+        <a href="du-an.html" class="nav-menu-link">Dự Án Đã Thực Hiện</a>
+        <a href="lien-he.html" class="nav-menu-link">Liên Hệ</a>
+      </nav>
+
+  <section class="brand-hero">
+    <div class="sv-container">
+      <span class="brand-tag">HỆ THỐNG PROFILE NHÔM</span>
+      <h1 class="brand-title">Nhôm Cao Cấp Maxpro.JP</h1>
+      <p class="brand-subtitle-hero">Dòng nhôm chất lượng cao được Sao Vàng lắp đặt chính hãng đồng bộ cho các giải pháp kiến trúc</p>
+      
+      <div class="brand-stats">
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Nhật Bản (Anodized)</div>
+          <div class="brand-stat-label">Xuất Xứ</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">3</div>
+          <div class="brand-stat-label">Mẫu Thiết Kế</div>
+        </div>
+        <div class="brand-stat-card">
+          <div class="brand-stat-num">Cao cấp / Biệt thự biển</div>
+          <div class="brand-stat-label">Phân Khúc</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-detail-section">
+    <div class="sv-container">
+      <div class="brand-content-grid">
+        <div class="brand-info-column">
+          <h2 class="sv-section-title" style="margin-left:0; text-align:left;">Ưu Điểm & Đặc Tính</h2>
+          <p class='brand-desc-p'>Trang chủSản phẩmCửa Nhôm Maxpro.JP            
+Cửa Nhôm Maxpro.JP</p><p class='brand-desc-p'>Cửa sổ 1 cánh mở quay nhôm Maxpro.jp hệ 83</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa sổ 2 cánh mở quay nhôm Maxpro.jp hệ 83</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa sổ mở lùa 2 cánh nhôm Maxpro hệ 65</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa đi 4 cánh mở quay nhôm Maxpro.jp hệ 83</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa sổ 4 cánh nhôm MAXPRO.JP – hệ 83</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Sổ Lùa 4 Cánh Nhôm Maxpro hệ 65</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Đi 1 Cánh Nhôm Maxpro Hệ 55</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa Đi 2 Cánh Nhôm Maxpro Hệ 55</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa đi 4 cánh nhôm Maxpro hệ 55</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa sổ nhôm Maxpro hệ 55</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa đi nhôm Maxpro hệ 65</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>Cửa xếp trượt nhôm Maxpro hệ 80</p><p class='brand-desc-p'>Xem chi tiết</p><p class='brand-desc-p'>&laquo;  &#8249; 123 &#8250;  &raquo;</p><p class='brand-desc-p'>Mục lục</p><p class='brand-desc-p'>Giới Thiệu Về Cửa Nhôm Maxpro</p><p class='brand-desc-p'>Tính Năng Nổi Bật Của Cửa Nhôm Maxpro</p><p class='brand-desc-p'>Mẫu Cửa Nhôm Maxpro Phổ Biến</p><p class='brand-desc-p'>Cửa Đi Mở Quay Nhôm Maxpro Hệ 65, Hệ 83
+
+		Cửa Đi Mở Trượt/Lùa Nhôm Maxpro Hệ 115
+
+		Cửa Xếp Trượt Nhôm Maxpro Hệ 80
+
+		Cửa Sổ Mở Quay/Hất Nhôm Maxpro Hệ 65</p><p class='brand-desc-p'>Giá Cửa Nhôm Maxpro: Yếu Tố Quan Trọng Khi Lựa Chọn
+
+	Lợi Ích Khi Sử Dụng Cửa Nhôm Maxpro</p><p class='brand-desc-p'>Bền Bỉ Với Thời Gian
+
+		Tiết Kiệm Năng Lượng
+
+		Dễ Dàng Bảo Trì
+
+		Thẩm Mỹ Cao</p><p class='brand-desc-p'>Các Thương Hiệu Phụ Kiện Cho Cửa Nhôm Maxpro
+
+	Cách Chọn Cửa Nhôm Maxpro Phù Hợp Với Công Trình
+
+	Câu Hỏi Thường Gặp Về Cửa Nhôm Maxpro</p><p class='brand-desc-p'>Trong thế giới xây dựng ngày nay, cửa nhôm đã trở thành xu hướng được ưa chuộng bởi tính năng vượt trội, thẩm mỹ cao và độ bền tuyệt vời. Đặc biệt, Cửa Nhôm Maxpro là sản phẩm nổi bật, đang được nhiều chủ đầu tư, kiến trúc sư và nhà thầu lựa chọn. Bài viết này sẽ cung cấp cái nhìn chi tiết về mẫu cửa nhôm Maxpro, giá cửa nhôm Maxpro, cùng những lý do tại sao sản phẩm này trở thành lựa chọn hàng đầu cho các công trình kiến trúc.</p><p class='brand-desc-p'>Cửa Nhôm Maxpro lắp đặt cho biệt thự</p><p class='brand-desc-p'>Giới Thiệu Về Cửa Nhôm Maxpro</p><p class='brand-desc-p'>Cửa Nhôm Maxpro là thương hiệu đến từ Nhật Bản, được biết đến với chất lượng vượt trội và công nghệ sản xuất tiên tiến. Hợp tác giữa công ty TNHH Xuất Nhập Khẩu Trung Chính và Tập đoàn LIXIL, cửa nhôm Maxpro không chỉ được ưa chuộng tại Việt Nam mà còn trên toàn thế giới.</p><p class='brand-desc-p'>Sứ mệnh của Maxpro là cung cấp các giải pháp về hệ thống kiến trúc nhôm kính thông minh, chất lượng cao. Với phương châm "Chất lượng - Uy tín - Tận Tâm", cửa nhôm Maxpro mang đến cho khách hàng những sản phẩm với hiệu năng, độ bền cao và thiết kế đa dạng phù hợp với mọi loại công trình.</p><p class='brand-desc-p'>Tính Năng Nổi Bật Của Cửa Nhôm Maxpro</p><p class='brand-desc-p'>Độ Bền Vượt Trội: Sản phẩm được chế tạo từ nhôm chất lượng cao, có khả năng chịu lực tốt, chống ăn mòn, bền màu theo thời gian.
+
+	Thiết Kế Đa Dạng và Linh Hoạt: Được tối ưu hóa về thiết kế, cân bằng giữa thẩm mỹ và tính năng sử dụng. Các mẫu cửa nhôm Maxpro đa dạng từ cửa đi, cửa sổ mở quay, mở trượt, đến cửa xếp trượt, phù hợp với nhiều không gian kiến trúc khác nhau.
+
+	Khả Năng Cách Âm, Cách Nhiệt Tốt: Sử dụng hệ gioăng EPDM và các loại kính cường lực, kính hộp giúp cửa nhôm Maxpro có khả năng cách âm, cách nhiệt tuyệt vời.
+
+	Tiết Kiệm Không Gian: Đặc biệt là các dòng cửa trượt và cửa xếp trượt, giúp tiết kiệm không gian mở cửa, gia tăng diện tích sử dụng.</p><p class='brand-desc-p'>Mẫu Cửa Nhôm Maxpro Phổ Biến</p><p class='brand-desc-p'>1. Cửa Đi Mở Quay Nhôm Maxpro Hệ 65, Hệ 83</p><p class='brand-desc-p'>Thiết kế linh hoạt, có thể mở góc tối đa 90 độ. Sử dụng phụ kiện chất lượng cao như bản lề siêu chịu lực 4D, tay nắm và khóa đa điểm.
+
+	Ưu điểm: Độ bền cao, khả năng chống thấm, cách âm tốt. Phù hợp cho cửa đi chính, cửa sổ lớn tại các căn hộ, biệt thự.</p><p class='brand-desc-p'>Cửa Nhôm Maxpro Hệ 65</p><p class='brand-desc-p'>2. Cửa Đi Mở Trượt/Lùa Nhôm Maxpro Hệ 115</p><p class='brand-desc-p'>Thiết kế chống nước tối ưu với ống nước hướng ra ngoài, hạn chế nước chảy vào nhà. Sử dụng bản lề cối cao cấp, cửa hoạt động êm ái.
+
+	Ứng dụng: Thích hợp cho cửa mặt tiền, ban công của các nhà cao tầng, biệt thự, khu chung cư cao cấp, văn phòng.</p><p class='brand-desc-p'>Cửa Nhôm Maxpro Hệ 115</p><p class='brand-desc-p'>3. Cửa Xếp Trượt Nhôm Maxpro Hệ 80</p><p class='brand-desc-p'>Thiết kế với đường ray đặc biệt, có thể lên tới 10 cánh. Phù hợp cho không gian mở lớn, liên kết không gian trong nhà với ngoài trời.
+
+	Đặc điểm nổi bật: Cách âm, chống gió giật, phù hợp cho quán cà phê, sân vườn, khu vực ngoài trời.</p><p class='brand-desc-p'>Cửa Nhôm Maxpro Hệ 80</p><p class='brand-desc-p'>4. Cửa Sổ Mở Quay/Hất Nhôm Maxpro Hệ 65</p><p class='brand-desc-p'>Kết hợp linh hoạt giữa cửa sổ mở quay và mở hất, đảm bảo độ kín khít, chống thấm nước, cách âm cách nhiệt tuyệt đối.
+
+	Ứng dụng: Phù hợp với không gian nhỏ cần thông thoáng như nhà phố, chung cư, văn phòng.</p><p class='brand-desc-p'>Giá Cửa Nhôm Maxpro: Yếu Tố Quan Trọng Khi Lựa Chọn</p><p class='brand-desc-p'>Giá cửa nhôm Maxpro phụ thuộc vào nhiều yếu tố như kích thước, loại cửa, hệ nhôm, phụ kiện đi kèm và địa điểm lắp đặt. Để lựa chọn được giá cửa nhôm Maxpro hợp lý, chúng ta cần xem xét các yếu tố sau:</p><p class='brand-desc-p'>Kích Thước Cửa: Cửa lớn hơn sẽ có giá cao hơn do tốn nhiều vật liệu và phụ kiện.
+
+	Loại Cửa: Mỗi loại cửa có thiết kế và yêu cầu kỹ thuật khác nhau, dẫn đến sự chênh lệch về giá cả.
+
+	Phụ Kiện Đi Kèm: Phụ kiện như bản lề, khóa, tay nắm cũng ảnh hưởng đáng kể đến giá thành.
+
+	Địa Điểm Lắp Đặt: Chi phí vận chuyển và lắp đặt cũng là yếu tố cần xem xét khi xác định giá cửa nhôm Maxpro.</p><p class='brand-desc-p'>Lợi Ích Khi Sử Dụng Cửa Nhôm Maxpro</p><p class='brand-desc-p'>1. Bền Bỉ Với Thời Gian</p><p class='brand-desc-p'>Nhôm Maxpro sử dụng công nghệ phủ màu tiên tiến, đảm bảo sản phẩm không bị phai màu, chống bám bẩn và chịu được mọi điều kiện thời tiết khắc nghiệt, từ đó gia tăng tuổi thọ cho sản phẩm.</p><p class='brand-desc-p'>2. Tiết Kiệm Năng Lượng</p><p class='brand-desc-p'>Nhờ vào khả năng cách âm, cách nhiệt tốt, cửa nhôm Maxpro giúp tiết kiệm năng lượng tiêu thụ cho việc làm mát và sưởi ấm, đồng thời đảm bảo sự thoải mái cho không gian sống.</p><p class='brand-desc-p'>3. Dễ Dàng Bảo Trì</p><p class='brand-desc-p'>Với chất liệu nhôm cao cấp, cửa nhôm Maxpro không cần bảo trì thường xuyên, tiết kiệm chi phí bảo dưỡng và sửa chữa.</p><p class='brand-desc-p'>4. Thẩm Mỹ Cao</p><p class='brand-desc-p'>Mẫu cửa nhôm Maxpro đa dạng về màu sắc và kiểu dáng, từ màu trắng ngà tinh tế, màu vân gỗ trang nhã đến tone sâm banh hiện đại, phù hợp với mọi phong cách thiết kế nội thất.</p><p class='brand-desc-p'>Các Thương Hiệu Phụ Kiện Cho Cửa Nhôm Maxpro</p><p class='brand-desc-p'>Các phụ kiện như bản lề, tay nắm, khóa đóng vai trò quan trọng trong việc nâng cao thẩm mỹ và tính năng của cửa nhôm Maxpro. Các thương hiệu phụ kiện nổi tiếng như CMECH, ROTO, SIGICO, BOGO đã được chứng minh chất lượng trên thị trường, đảm bảo sự bền bỉ và an toàn cho người sử dụng.</p><p class='brand-desc-p'>Cách Chọn Cửa Nhôm Maxpro Phù Hợp Với Công Trình</p><p class='brand-desc-p'>Xác Định Loại Cửa: Tùy thuộc vào mục đích sử dụng và vị trí lắp đặt, bạn có thể chọn cửa đi mở quay, cửa trượt hay cửa xếp trượt.
+
+	Chọn Màu Sắc: Màu sắc cửa nhôm cần phù hợp với phong cách thiết kế tổng thể của ngôi nhà hoặc công trình.
+
+	Kiểm Tra Phụ Kiện: Đảm bảo các phụ kiện cửa nhôm đạt tiêu chuẩn chất lượng cao để đảm bảo tuổi thọ và tính an toàn.</p><p class='brand-desc-p'>Cửa Nhôm Maxpro với những tính năng vượt trội và đa dạng mẫu mã là lựa chọn lý tưởng cho các công trình hiện đại. Với sự kết hợp giữa chất lượng, thẩm mỹ và giá cả hợp lý, cửa nhôm Maxpro mang lại sự hài lòng tối đa cho người sử dụng.</p><p class='brand-desc-p'>5 Câu Hỏi Thường Gặp Về Cửa Nhôm Maxpro</p><p class='brand-desc-p'>Cửa Nhôm Maxpro có bền không?</p><p class='brand-desc-p'>Cửa Nhôm Maxpro được làm từ nhôm cao cấp, có độ bền vượt trội và khả năng chống chịu thời tiết tốt, đảm bảo tuổi thọ lâu dài.</p><p class='brand-desc-p'>Giá Cửa Nhôm Maxpro là bao nhiêu?</p><p class='brand-desc-p'>Giá cửa nhôm Maxpro phụ thuộc vào kích thước, loại cửa, hệ nhôm và phụ kiện. Bạn nên liên hệ nhà cung cấp để có báo giá cụ thể.</p><p class='brand-desc-p'>Có thể lắp cửa nhôm Maxpro cho nhà phố nhỏ không?</p><p class='brand-desc-p'>Có, cửa nhôm Maxpro có nhiều mẫu mã phù hợp với cả không gian nhỏ như nhà phố hoặc chung cư.</p><p class='brand-desc-p'>Cửa Nhôm Maxpro có chống trộm không?</p><p class='brand-desc-p'>Sản phẩm được trang bị các phụ kiện cao cấp như khóa đa điểm, bản lề chịu lực giúp tăng cường khả năng chống trộm.</p><p class='brand-desc-p'>Làm sao để bảo trì cửa nhôm Maxpro?</p><p class='brand-desc-p'>Cửa nhôm Maxpro cần vệ sinh định kỳ bằng khăn mềm và nước xà phòng loãng, tránh dùng chất tẩy rửa mạnh để không làm hỏng bề mặt cửa.</p><p class='brand-desc-p'>THI CÔNG Cửa Nhôm Maxpro.JP TRÊN TOÀN QUỐC</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Hồ Chí Minh</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Hà Nội</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Bình Dương</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Đà Nẵng</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Hải Phòng</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Long An</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Bà Rịa Vũng Tàu</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP An Giang</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Bắc Giang</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Bắc Kạn</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Bạc Liêu</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Bắc Ninh</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Bến Tre</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Bình Định</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Bình Phước</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Bình Thuận</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Cà Mau</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Cần Thơ</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Cao Bằng</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Đắk Lắk</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Đắk Nông</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Điện Biên</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Đồng Nai</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Đồng Tháp</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Gia Lai</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Hà Giang</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Hà Nam</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Hà Tĩnh</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Hải Dương</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Hậu Giang</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Hòa Bình</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Hưng Yên</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Khánh Hòa</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Kiên Giang</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Kon Tum</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Lai Châu</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Lâm Đồng</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Lạng Sơn</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Lào Cai</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Nam Định</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Nghệ An</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Ninh Bình</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Ninh Thuận</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Phú Thọ</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Phú Yên</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Quảng Bình</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Quảng Nam</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Quảng Ngãi</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Quảng Ninh</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Quảng Trị</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Sóc Trăng</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Sơn La</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Tây Ninh</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Thái Bình</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Thái Nguyên</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Thanh Hóa</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Thừa Thiên Huế</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Tiền Giang</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Trà Vinh</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Tuyên Quang</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Vĩnh Long</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Vĩnh Phúc</p><p class='brand-desc-p'>Cửa Nhôm Maxpro.JP Yên Bái</p><p class='brand-desc-p'>Mở rộng</p>
+        </div>
+        
+        <div class="brand-sidebar">
+          <h3 class="sidebar-title">Thông Số Kỹ Thuật</h3>
+          <ul class="sidebar-list">
+            <li>Xuất xứ nhôm: <strong>Nhật Bản (Anodized)</strong></li>
+            <li>Phân khúc dự án: <strong>Cao cấp / Biệt thự biển</strong></li>
+            <li>Sơn phủ bề mặt: <strong>Tĩnh điện / PVDF / Anodized</strong></li>
+            <li>Độ bền màu sắc: <strong>10 - 25 năm chính hãng</strong></li>
+            <li>Ứng dụng tối ưu: <strong>Cửa mở quay, cửa lùa trượt, vách ngăn</strong></li>
+          </ul>
+          
+          <div class="tech-download-card">
+            <div class="tech-download-title">
+              <i class="ri-folder-zip-line"></i> TÀI LIỆU KỸ THUẬT & CAD PROFILE
+            </div>
+            <p style="font-size:12px; color:#78350f; line-height:1.5; margin:0;">
+              Tải đầy đủ thư viện bản vẽ mặt cắt nhôm và tài liệu AutoCAD để hỗ trợ bóc tách khối lượng và thiết kế.
+            </p>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/05_Thư viện CAD/Vách mặt dựng/Ban_ve_mau_Vach_mat_dung.dxf" class="tech-download-btn" download>
+              Tải Bản Vẽ CAD (.dxf) <i class="ri-download-2-line"></i>
+            </a>
+            <a href="BaoCao_ThuVien_CuaNhom/THƯ VIỆN HỆ NHÔM SAO VÀNG/08_Catalogue theo Hãng/ThuVien_HeCuaNhom_Maxpro.docx" class="tech-download-btn" style="background:transparent; border:1px solid #d97706; color:#d97706;" download>
+              Tải Sổ Tay Kỹ Thuật <i class="ri-file-pdf-2-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand-products-section">
+    <div class="sv-container">
+      <div style="text-align:center;">
+        <span class="sv-section-tag">MẪU CỬA ĐẸP</span>
+        <h2 class="sv-section-title" style="margin-inline:auto;">Giải Pháp Thiết Kế Cửa Nhôm Cao Cấp Maxpro.JP</h2>
+      </div>
+      
+      <div class="pk-grid">
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/cua-di-4-canh-mo-quay-nhom-maxpro-jp-he-83_065319346843/cua-di-4-canh-mo-quay-nhom-maxpro-jp-he-83.webp" alt="Cửa đi mở quay nhôm Maxpro hệ 83" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#b45309;">Nhôm Cao Cấp Maxpro.JP</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa đi mở quay nhôm Maxpro hệ 83</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #b45309; color:#b45309;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/cua-so-lua-4-canh-nhom-maxpro-he-65_176059058518/cua-so-lua-4-canh-nhom-maxpro-he-65.webp" alt="Cửa sổ lùa 4 cánh nhôm Maxpro hệ 65" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#b45309;">Nhôm Cao Cấp Maxpro.JP</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa sổ lùa 4 cánh nhôm Maxpro hệ 65</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #b45309; color:#b45309;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+          <div class="pk-card" data-sv-reveal>
+            <div class="pk-card-img">
+              <img src="https://nhomkinhdaiphuc.com/thumb/350x350/1/upload/product/cua-xep-truot-nhom-maxpro-he-80_369042559844/cua-xep-truot-nhom-maxpro-he-80.webp" alt="Cửa xếp trượt nhôm Maxpro hệ 80" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <span class="pk-card-badge" style="background:#b45309;">Nhôm Cao Cấp Maxpro.JP</span>
+            </div>
+            <div class="pk-card-body">
+              <div class="pk-card-name">Cửa xếp trượt nhôm Maxpro hệ 80</div>
+              <a href="lien-he.html" class="pk-card-btn" style="background:transparent; border:1px solid #b45309; color:#b45309;">Báo giá công trình <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer-v2" role="contentinfo">
+    <div class="sv-container">
+      <div class="footer-v2-grid">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <div class="footer-logo-wrap" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+            <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 54px; width: auto; display: block;" />
+          </div>
+          <p class="footer-address" style="font-size: var(--sv-text-sm); color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 20px;">
+            Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng — chuyên cơ khí chính xác &amp; nhôm kính cao cấp.
+          </p>
+          <div class="footer-socials" aria-label="Mạng xã hội">
+            <a href="#" class="footer-social" aria-label="Facebook Sao Vàng"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="YouTube Sao Vàng"><i class="ri-youtube-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn Sao Vàng"><i class="ri-linkedin-fill" aria-hidden="true"></i></a>
+            <a href="tel:0869590279" class="footer-social" aria-label="Gọi hotline Sao Vàng"><i class="ri-phone-fill" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Cơ Khí Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Cơ Khí Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công cơ khí chính xác</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công CNC</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Kết cấu thép</a>
+            <a href="cau-thang-xoan.html" class="footer-link">Lan can, cầu thang, mái kính</a>
+            <a href="cong-nghe-thuat.html" class="footer-link">Cổng &amp; hàng rào</a>
+            <a href="linh-vuc-co-khi.html" class="footer-link">Gia công inox &amp; nhôm</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Nhôm Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Nhôm Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="cua-nhom-kinh.html" class="footer-link">Cửa nhôm kính cao cấp</a>
+            <a href="vach-kinh.html" class="footer-link">Vách kính mặt dựng</a>
+            <a href="lan-can-kinh.html" class="footer-link">Lan can kính</a>
+            <a href="thu-vien-profile-nhom.html" class="footer-link">Thư viện Profile Nhôm</a>
+            <a href="vach-kinh.html" class="footer-link">Phòng tắm kính</a>
+            <a href="vach-kinh.html" class="footer-link">Mái kính cường lực</a>
+            <a href="linh-vuc-nhom-kinh.html" class="footer-link">Phụ kiện nhôm kính</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Công ty -->
+        <div>
+          <h4 class="footer-col-title">Công Ty</h4>
+          <div class="footer-links">
+            <a href="gioi-thieu.html" class="footer-link">Giới thiệu</a>
+            <a href="linh-vuc-hoat-dong.html" class="footer-link">Lĩnh vực hoạt động</a>
+            <a href="du-an.html" class="footer-link">Dự án đã thực hiện</a>
+            <a href="san-pham.html" class="footer-link">Sản phẩm</a>
+            <a href="tin-tuc.html" class="footer-link">Tin tức</a>
+            <a href="lien-he.html" class="footer-link">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam.</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-line" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color: inherit; text-decoration: none;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <a href="mailto:info@cokhisaovang.com" style="color: inherit; text-decoration: none;">info@cokhisaovang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>Thứ 2 - Thứ 7: 8:00 - 17:00</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-global-line" aria-hidden="true"></i>
+              <a href="https://www.CoKhiSaoVang.com" target="_blank" style="color: inherit; text-decoration: none;">www.CoKhiSaoVang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-file-list-3-line" aria-hidden="true"></i>
+              <span>MST: 0110808047</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. All Rights Reserved. MST: 0110808047.</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinh-sach-bao-mat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lien-he.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+        <span>Design by <a href="https://readdy.ai" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; font-weight: 500;">Readdy.ai</a></span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ════════════════════════════════════════════
+       FLOATING BUTTONS
+  ════════════════════════════════════════════ -->
+  <div class="floating-left" aria-label="Kênh liên hệ nhanh">
+    <a href="https://zalo.me/0869590279" class="float-btn float-btn-zalo"
+       target="_blank" rel="noopener" aria-label="Chat Zalo" title="Zalo: 0869 590 279">
+      <i class="ri-message-3-fill" aria-hidden="true"></i>
+    </a>
+    <a href="tel:0869590279" class="float-btn float-btn-phone"
+       aria-label="Gọi điện 0869 590 279" title="Gọi ngay">
+      <i class="ri-phone-fill" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="floating-right">
+    <button class="float-btn float-btn-top" id="scrollTopBtn" aria-label="Cuộn lên đầu trang" title="Lên đầu trang">
+      <i class="ri-arrow-up-line" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <!-- ════════════════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════════════════ -->
+  <script src="assets/js/main.js"></script>
+  <!-- navbar.js handles this -->
+  <script src="assets/js/modules/navbar.js"></script>
+  <script>
+    async function handleBannerSubmit(event, inputId, source) {
+      event.preventDefault();
+      const input = document.getElementById(inputId);
+      const phoneVal = input.value.trim();
+      const cleaned = phoneVal.replace(/\D/g, '');
+      if (cleaned.length < 9 || cleaned.length > 11) {
+        alert('Vui lòng nhập số điện thoại hợp lệ (từ 9 đến 11 chữ số).');
+        return;
+      }
+      
+      const btn = event.target.querySelector('button');
+      const origText = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `<i class="ri-loader-4-line ri-spin"></i> GỬI...`;
+
+      try {
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: 'Khách hàng liên hệ nhanh',
+            phone: phoneVal,
+            source: source,
+            note: `Khách hàng gửi số điện thoại từ hotline banner ${source} yêu cầu gọi lại tư vấn.`
+          })
+        });
+
+        if (response.ok) {
+          alert('Gửi số điện thoại thành công! Chúng tôi sẽ liên hệ lại ngay.');
+          input.value = '';
+        } else {
+          alert('Đã xảy ra lỗi, vui lòng thử lại sau.');
+        }
+      } catch (err) {
+        alert('Không thể kết nối tới máy chủ. Vui lòng thử lại.');
+      } finally {
+        btn.disabled = false;
+        btn.innerHTML = origText;
+      }
+    }
+  </script>
+  <script src="assets/js/shared/internal-links.js"></script>
+  <!-- Sprint 3: Service CTA -->
+  <script src="assets/js/shared/service-cta.js"></script>
+    <!-- Sprint 2: Shared components -->
+  <script src="assets/js/shared/floating-widget.js"></script>
+  <script src="assets/js/shared/faq-accordion.js"></script>
+  <script src="assets/js/shared/breadcrumb.js"></script>
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>
+
+</body>
+</html>
