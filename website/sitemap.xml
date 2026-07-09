@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
@@ -222,4 +222,173 @@
     <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-  </url></urlset>
+  </url>
+  <!-- du-an-nhom.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/du-an-nhom.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- bao-gia-nhom.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/bao-gia-nhom.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- nhom-xingfa.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/nhom-xingfa.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- nhom-maxpro.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/nhom-maxpro.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- nhom-civro.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/nhom-civro.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- nhom-slim.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/nhom-slim.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- nhom-kogen.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/nhom-kogen.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- nhom-pma.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/nhom-pma.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- nhom-owin.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/nhom-owin.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- nhom-topal.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/nhom-topal.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- phu-kien-cmech.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/phu-kien-cmech.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- phu-kien-bogo.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/phu-kien-bogo.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- phu-kien-draho.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/phu-kien-draho.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- phu-kien-papo.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/phu-kien-papo.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- phu-kien-opk.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/phu-kien-opk.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- phu-kien-sigico.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/phu-kien-sigico.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- phu-kien-kinlong.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/phu-kien-kinlong.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- phu-kien-janus.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/phu-kien-janus.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- phu-kien-huy-hoang.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/phu-kien-huy-hoang.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- phu-kien-hafele.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/phu-kien-hafele.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- phu-kien-3h.html -->
+  <url>
+    <loc>https://www.cokhi-saovang.vn/phu-kien-3h.html</loc>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+</urlset>
