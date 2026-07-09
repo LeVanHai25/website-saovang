@@ -97,7 +97,7 @@
   <header class="header" id="header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="Cơ Khí Sao Vàng — Trang chủ">
-        <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" height="44" style="height:44px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <img fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" height="44" style="height:44px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
         <span class="logo-badge" aria-hidden="true" style="display:none;">SV</span>
       </a>
       
@@ -176,7 +176,7 @@
 
 <!-- HERO -->
 <div class="detail-hero" id="detailHero">
-  <img id="detailHeroImg" src="assets/images/project-villa.png" alt="Hình ảnh công trình Sao Vàng" />
+  <img width="800" height="600" decoding="async" loading="lazy" id="detailHeroImg" src="assets/images/project-villa.png" alt="Hình ảnh công trình Sao Vàng" />
   <div class="detail-hero-overlay"></div>
   <div class="detail-hero-content">
     <div class="container">
@@ -434,7 +434,7 @@ function renderDetail({ project: p, blocks, gallery, related }) {
     document.getElementById('gallerySection').style.display = 'block';
     document.getElementById('galleryGrid').innerHTML = gallery.map(img => `
       <div class="gallery-item" onclick="openLightbox('${CMS.imgUrl(img)}')">
-        <img src="${CMS.imgUrl(img)}" alt="${CMS.esc(p.title)}" loading="lazy" />
+        <img decoding="async" src="${CMS.imgUrl(img)}" alt="${CMS.esc(p.title)}" loading="lazy" />
       </div>`).join('');
   }
 
@@ -443,7 +443,7 @@ function renderDetail({ project: p, blocks, gallery, related }) {
     document.getElementById('relatedSection').style.display = 'block';
     document.getElementById('relatedGrid').innerHTML = related.map(r => `
       <a href="du-an-chi-tiet.html?slug=${r.slug || r.id}" class="related-card">
-        <img src="${CMS.imgUrl(r.thumbnail) || 'assets/images/project-villa.png'}" alt="${CMS.esc(r.title)}" loading="lazy" onerror="this.src='assets/images/project-villa.png'" />
+        <img decoding="async" src="${CMS.imgUrl(r.thumbnail) || 'assets/images/project-villa.png'}" alt="${CMS.esc(r.title)}" loading="lazy" onerror="this.src='assets/images/project-villa.png'" />
         <div class="related-card-body">
           <div class="related-card-cat">${CMS.esc(r.category || '')}</div>
           <div class="related-card-title">${CMS.esc(r.title)}</div>
@@ -457,7 +457,7 @@ function renderBlock(block) {
   try { data = typeof block.data === 'string' ? JSON.parse(block.data) : block.data; } catch {}
   switch (block.type) {
     case 'text':    return `<div class="detail-body" style="margin-bottom:20px">${data.content || data.html || ''}</div>`;
-    case 'image':   return `<figure style="margin:24px 0"><img src="${CMS.imgUrl(data.url||data.src||'')}" alt="${CMS.esc(data.alt||data.caption||'')}" style="width:100%;border-radius:6px" />${data.caption?`<figcaption style="font-size:13px;color:var(--gray-400);text-align:center;margin-top:8px">${CMS.esc(data.caption)}</figcaption>`:''}</figure>`;
+    case 'image':   return `<figure style="margin:24px 0"><img decoding="async" loading="lazy" src="${CMS.imgUrl(data.url||data.src||'')}" alt="${CMS.esc(data.alt||data.caption||'')}" style="width:100%;border-radius:6px" />${data.caption?`<figcaption style="font-size:13px;color:var(--gray-400);text-align:center;margin-top:8px">${CMS.esc(data.caption)}</figcaption>`:''}</figure>`;
     case 'quote':   return `<blockquote style="border-left:4px solid var(--gold);padding:16px 20px;margin:24px 0;background:var(--gray-50);border-radius:0 6px 6px 0"><p style="font-size:17px;font-style:italic;color:var(--dark);margin:0">${CMS.esc(data.text||data.quote||'')}</p>${data.author?`<cite style="font-size:13px;color:var(--gray-400);margin-top:8px;display:block">— ${CMS.esc(data.author)}</cite>`:''}</blockquote>`;
     default:        return '';
   }

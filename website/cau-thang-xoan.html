@@ -78,7 +78,7 @@
   <header class="header" id="header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="Cơ Khí Sao Vàng — Trang chủ">
-        <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" height="44" style="height:44px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <img fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" height="44" style="height:44px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
         <span class="logo-badge" aria-hidden="true" style="display:none;">SV</span>
       </a>
       
@@ -159,7 +159,7 @@
     <!-- PAGE HERO -->
     <section class="page-hero" role="banner">
       <div class="page-hero-bg">
-        <img src="assets/images/service-artistic-stairs.png" alt="Cầu thang xoắn ốc nghệ thuật đẳng cấp" />
+        <img width="800" height="600" decoding="async" loading="lazy" src="assets/images/service-artistic-stairs.png" alt="Cầu thang xoắn ốc nghệ thuật đẳng cấp" />
       </div>
       <div class="container page-hero-content">
         <span class="tag white">DỊCH VỤ MỸ THUẬT</span>
@@ -394,7 +394,7 @@
           const imgSrc = p.thumbnail ? CMS.imgUrl(p.thumbnail) : 'assets/images/project-villa.png';
           return `
             <a href="du-an-chi-tiet.html?slug=${p.slug || p.id}" class="proj-item">
-              <img src="${imgSrc}" alt="${p.title}" loading="lazy" onerror="this.src='assets/images/project-villa.png'" style="height:220px;width:100%;object-fit:cover;" />
+              <img decoding="async" src="${imgSrc}" alt="${p.title}" loading="lazy" onerror="this.src='assets/images/project-villa.png'" style="height:220px;width:100%;object-fit:cover;" />
               <div class="proj-info">
                 <span class="proj-info-cat">${p.category || 'Cầu thang'}</span>
                 <h3 style="font-size:16px;margin-block:6px;">${p.title}</h3>

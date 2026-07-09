@@ -96,7 +96,7 @@
   <header class="header" id="header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="Cơ Khí Sao Vàng — Trang chủ">
-        <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" height="44" style="height:44px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Ảnh minh họa bài viết">
+        <img fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" height="44" style="height:44px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" alt="Ảnh minh họa bài viết">
         <span class="logo-badge" aria-hidden="true" style="display:none;">SV</span>
       </a>
       
@@ -182,7 +182,7 @@
 <!-- ARTICLE HERO -->
 <div id="articleHero" style="display:none">
   <div class="article-hero">
-    <div class="article-hero-bg"><img id="heroBg" src="assets/images/hero-interior.png" alt="Hình ảnh bài viết Sao Vàng" / alt="Ảnh minh họa bài viết"></div>
+    <div class="article-hero-bg"><img width="1920" height="1080" fetchpriority="high" loading="eager" id="heroBg" src="assets/images/hero-interior.png" alt="Hình ảnh bài viết Sao Vàng" / alt="Ảnh minh họa bài viết"></div>
     <div class="container article-hero-content">
       <nav class="breadcrumb" style="margin-bottom:16px">
         <a href="index.html" style="color:rgba(255,255,255,.6)">Trang chủ</a>
@@ -408,7 +408,7 @@ function renderArticle({ article: a, blocks, related }) {
       let d = {}; try { d = typeof b.data==='string'?JSON.parse(b.data):b.data; } catch {}
       switch(b.type) {
         case 'text':    return `<div>${d.content || d.html || ''}</div>`;
-        case 'image':   return `<figure><img src="${CMS.imgUrl(d.url||d.src||'')}" alt="${CMS.esc(d.alt||'')}" / alt="Ảnh minh họa bài viết">${d.caption?`<figcaption style="font-size:13px;color:var(--gray-400);text-align:center;margin-top:6px">${CMS.esc(d.caption)}</figcaption>`:''}</figure>`;
+        case 'image':   return `<figure><img decoding="async" loading="lazy" src="${CMS.imgUrl(d.url||d.src||'')}" alt="${CMS.esc(d.alt||'')}" / alt="Ảnh minh họa bài viết">${d.caption?`<figcaption style="font-size:13px;color:var(--gray-400);text-align:center;margin-top:6px">${CMS.esc(d.caption)}</figcaption>`:''}</figure>`;
         case 'quote':   return `<blockquote>${CMS.esc(d.text||'')}</blockquote>`;
         case 'heading': return `<h2>${CMS.esc(d.text||'')}</h2>`;
         default:        return '';
@@ -433,7 +433,7 @@ function renderArticle({ article: a, blocks, related }) {
   if (related && related.length) {
     relEl.innerHTML = related.map(r=>`
       <a href="tin-tuc-chi-tiet.html?slug=${r.slug||r.id}" class="related-post">
-        <div class="related-post-img"><img src="${r.thumbnail?CMS.imgUrl(r.thumbnail):'assets/images/hero-interior.png'}" loading="lazy" / alt="Ảnh minh họa bài viết"></div>
+        <div class="related-post-img"><img decoding="async" src="${r.thumbnail?CMS.imgUrl(r.thumbnail):'assets/images/hero-interior.png'}" loading="lazy" / alt="Ảnh minh họa bài viết"></div>
         <div><div class="related-post-title">${CMS.esc(r.title)}</div><div class="related-post-date">${CMS.formatDate(r.published_at)}</div></div>
       </a>`).join('');
   } else {

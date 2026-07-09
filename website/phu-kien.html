@@ -2388,7 +2388,7 @@
           card.onclick = () => openDetailPanel(p);
           card.innerHTML = `
             <div class="pk-card-img">
-              <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
+              <img decoding="async" src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='assets/images/no-image.svg'" />
               <span class="pk-card-badge">${p.categoryName}</span>
             </div>
             <div class="pk-card-body">
@@ -2453,7 +2453,7 @@
         <!-- Col 1: Brand -->
         <div>
           <a href="index.html" class="footer-brand" aria-label="Trang chủ Sao Vàng">
-            <img src="assets/images/logo-sv-main.svg" alt="Sao Vàng Logo" width="52" height="52" />
+            <img fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="Sao Vàng Logo" width="52" height="52" />
             <div>
               <div class="footer-brand-name">SAO VÀNG</div>
               <div class="footer-brand-tagline">Cơ Khí & Nhôm Kính</div>
@@ -2660,7 +2660,7 @@
         thumbsHtml = `<div class="pk-gallery-thumbs">` + 
           details.images.map((img, idx) => `
             <div class="pk-gallery-thumb ${idx === 0 ? 'active' : ''}" onclick="changeMainImage('${img}', this)">
-              <img src="${img}" alt="Ảnh phụ ${idx + 1}" />
+              <img decoding="async" loading="lazy" src="${img}" alt="Ảnh phụ ${idx + 1}" />
             </div>
           `).join('') + `</div>`;
       }
@@ -2679,7 +2679,7 @@
       modalBody.innerHTML = `
         <div class="pk-modal-gallery">
           <div class="pk-gallery-main">
-            <img id="pkMainImg" src="${details.images[0]}" alt="${title}" />
+            <img decoding="async" loading="lazy" id="pkMainImg" src="${details.images[0]}" alt="${title}" />
           </div>
           ${thumbsHtml}
         </div>

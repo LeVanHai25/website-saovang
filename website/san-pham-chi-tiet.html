@@ -113,7 +113,7 @@
   <header class="header" id="header" role="banner">
     <div class="header-inner">
       <a href="index.html" class="logo" aria-label="Cơ Khí Sao Vàng — Trang chủ">
-        <img src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" height="44" style="height:44px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <img fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" height="44" style="height:44px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
         <span class="logo-badge" aria-hidden="true" style="display:none;">SV</span>
       </a>
       
@@ -211,7 +211,7 @@
         <!-- Gallery -->
         <div>
           <div class="prod-gallery-main">
-            <img id="mainProductImg" src="assets/images/product-inox.png" alt="" />
+            <img decoding="async" loading="lazy" id="mainProductImg" src="assets/images/product-inox.png" alt="" />
           </div>
           <div class="prod-gallery-thumbs" id="thumbsRow"></div>
         </div>
@@ -454,7 +454,7 @@ function renderProduct({ product: p, blocks, gallery, related }) {
   if (images.length > 1) {
     thumbsRow.innerHTML = images.map((img, i) => `
       <div class="prod-thumb ${i===0?'active':''}" onclick="switchMainImg('${CMS.imgUrl(img)}',this)">
-        <img src="${CMS.imgUrl(img)}" loading="lazy" />
+        <img decoding="async" src="${CMS.imgUrl(img)}" loading="lazy" />
       </div>`).join('');
   }
 
@@ -479,7 +479,7 @@ function renderProduct({ product: p, blocks, gallery, related }) {
       try { data = typeof b.data === 'string' ? JSON.parse(b.data) : b.data; } catch {}
       switch(b.type) {
         case 'text':  return `<div style="font-size:15px;line-height:1.85;color:var(--gray-600);margin-bottom:20px">${data.content||data.html||''}</div>`;
-        case 'image': return `<figure style="margin:20px 0"><img src="${CMS.imgUrl(data.url||data.src||'')}" style="width:100%;border-radius:6px" />${data.caption?`<figcaption style="font-size:13px;color:var(--gray-400);text-align:center;margin-top:6px">${CMS.esc(data.caption)}</figcaption>`:''}</figure>`;
+        case 'image': return `<figure style="margin:20px 0"><img decoding="async" loading="lazy" src="${CMS.imgUrl(data.url||data.src||'')}" style="width:100%;border-radius:6px" />${data.caption?`<figcaption style="font-size:13px;color:var(--gray-400);text-align:center;margin-top:6px">${CMS.esc(data.caption)}</figcaption>`:''}</figure>`;
         default:      return '';
       }
     }).join('');
@@ -505,7 +505,7 @@ function renderProduct({ product: p, blocks, gallery, related }) {
     document.getElementById('gallerySection').style.display = 'block';
     document.getElementById('galleryGrid').innerHTML = gallery.map(img =>
       `<div style="border-radius:4px;overflow:hidden;cursor:pointer;aspect-ratio:4/3" onclick="switchMainImg('${CMS.imgUrl(img)}',null)">
-        <img src="${CMS.imgUrl(img)}" style="width:100%;height:100%;object-fit:cover" loading="lazy" />
+        <img decoding="async" src="${CMS.imgUrl(img)}" style="width:100%;height:100%;object-fit:cover" loading="lazy" />
       </div>`
     ).join('');
   }
@@ -515,7 +515,7 @@ function renderProduct({ product: p, blocks, gallery, related }) {
     document.getElementById('relatedSection').style.display = 'block';
     document.getElementById('relatedGrid').innerHTML = related.map(r => `
       <a href="san-pham-chi-tiet.html?slug=${r.slug||r.id}" class="related-prod">
-        <img src="${r.thumbnail ? CMS.imgUrl(r.thumbnail) : 'assets/images/product-inox.png'}" alt="${CMS.esc(r.title)}" loading="lazy" onerror="this.src='assets/images/product-inox.png'" />
+        <img decoding="async" src="${r.thumbnail ? CMS.imgUrl(r.thumbnail) : 'assets/images/product-inox.png'}" alt="${CMS.esc(r.title)}" loading="lazy" onerror="this.src='assets/images/product-inox.png'" />
         <div class="related-prod-body">
           <div class="related-prod-cat">${CMS.esc(r.category||'')}</div>
           <div class="related-prod-name">${CMS.esc(r.title)}</div>
