@@ -329,10 +329,6 @@ PAGE_CONFIG = {
         "title":   "Tài Liệu Kỹ Thuật",
         "schemas": ["organization", "website", "breadcrumb"]
     },
-    "theo-doi.html": {
-        "title":   "Theo Dõi Đơn Hàng B2B",
-        "schemas": ["organization", "website", "breadcrumb"]
-    },
 }
 
 
