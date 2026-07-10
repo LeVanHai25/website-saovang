@@ -41,8 +41,8 @@ async function run() {
     const filePath = path.join(downloadDir, f);
     const stat = fs.statSync(filePath);
     
-    // Check if file is larger than 90MB (90 * 1024 * 1024 bytes)
-    if (stat.size > 90 * 1024 * 1024) {
+    // Check if file is larger than 50MB (50 * 1024 * 1024 bytes) — GitHub recommended max
+    if (stat.size > 50 * 1024 * 1024) {
       const sizeMB = (stat.size / 1024 / 1024).toFixed(1);
       console.log(`Large file found: ${f} (${sizeMB} MB)`);
 
