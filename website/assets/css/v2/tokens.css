@@ -69,6 +69,7 @@
   --sv-text-light:      var(--sv-white);
   --sv-border:          var(--sv-gray-100);
   --sv-border-gold:     rgba(201,162,39,0.35);
+  --sv-text-gold-aa:    var(--sv-gold-800); /* High-contrast gold for light backgrounds (WCAG 2.1 AA) */
 
   /* ── 2. TYPOGRAPHY ───────────────────────────────────────────── */
   --sv-font-head:       'Montserrat', 'Arial', sans-serif;
@@ -147,20 +148,21 @@
   --sv-radius-btn:      4px;   /* Radius chuẩn cho buttons */
 
   /* ── 6. SHADOWS ──────────────────────────────────────────────── */
-  --sv-shadow-xs:   0 1px 4px  rgba(0,0,0,0.06);
-  --sv-shadow-sm:   0 2px 10px rgba(0,0,0,0.08);
-  --sv-shadow-md:   0 4px 20px rgba(0,0,0,0.12);
-  --sv-shadow-lg:   0 8px 32px rgba(0,0,0,0.18);
-  --sv-shadow-xl:   0 16px 48px rgba(0,0,0,0.24);
-  --sv-shadow-2xl:  0 24px 64px rgba(0,0,0,0.32);
+  /* Premium Layered Ambient Soft Shadows */
+  --sv-shadow-xs:   0 1px 2px rgba(0,0,0,0.05);
+  --sv-shadow-sm:   0 2px 4px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --sv-shadow-md:   0 6px 12px -2px rgba(0,0,0,0.08), 0 3px 6px -3px rgba(0,0,0,0.04);
+  --sv-shadow-lg:   0 12px 24px -4px rgba(0,0,0,0.10), 0 4px 12px -2px rgba(0,0,0,0.06);
+  --sv-shadow-xl:   0 20px 40px -6px rgba(0,0,0,0.12), 0 8px 20px -4px rgba(0,0,0,0.08);
+  --sv-shadow-2xl:  0 30px 60px -10px rgba(0,0,0,0.15), 0 12px 30px -5px rgba(0,0,0,0.10);
 
   /* Colored shadows */
-  --sv-shadow-red:  0 4px 20px rgba(155,28,28,0.30);
-  --sv-shadow-gold: 0 4px 20px rgba(201,162,39,0.30);
-  --sv-shadow-gold-lg: 0 8px 32px rgba(201,162,39,0.25);
+  --sv-shadow-red:  0 6px 16px -2px rgba(155,28,28,0.22), 0 2px 6px -2px rgba(155,28,28,0.12);
+  --sv-shadow-gold: 0 6px 16px -2px rgba(201,162,39,0.22), 0 2px 6px -2px rgba(201,162,39,0.12);
+  --sv-shadow-gold-lg: 0 12px 28px -4px rgba(201,162,39,0.20), 0 4px 12px -2px rgba(201,162,39,0.10);
 
   /* Navbar shadow */
-  --sv-shadow-nav:  0 2px 16px rgba(0,0,0,0.25);
+  --sv-shadow-nav:  0 4px 20px -2px rgba(0,0,0,0.15), 0 2px 6px -2px rgba(0,0,0,0.10);
 
   /* ── 7. TRANSITIONS & ANIMATIONS ────────────────────────────── */
   --sv-ease-out:    cubic-bezier(0.25, 0.46, 0.45, 0.94);

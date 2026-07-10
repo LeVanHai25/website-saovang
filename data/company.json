@@ -1,0 +1,35 @@
+{
+  "company": {
+    "legalName": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG",
+    "brandName": "Cơ Khí Sao Vàng",
+    "productBrand": "SV ALUMINIUM",
+    "taxId": "0110808047",
+    "phone": "0869590279",
+    "email": "cokhisaovangvn@gmail.com",
+    "canonicalDomain": "https://www.cokhisaovang.com",
+    "addresses": {
+      "headquarters": {
+        "street": "Tầng 3, TT7-35 Khu đô thị Văn Phú",
+        "ward": "Phường Phú La",
+        "district": "Quận Hà Đông",
+        "city": "Hà Nội",
+        "country": "Việt Nam",
+        "type": "headquarters"
+      },
+      "factory": {
+        "street": "171 Đường Đi Bộ Hà Nội",
+        "ward": "Phường Khâu Hùng",
+        "city": "Hà Nội",
+        "country": "Việt Nam",
+        "type": "factory"
+      }
+    },
+    "founded": "2024",
+    "socialMedia": {
+      "facebook": "",
+      "youtube": "",
+      "zalo": "https://zalo.me/0869590279",
+      "linkedin": ""
+    }
+  }
+}

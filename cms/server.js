@@ -120,47 +120,61 @@ async function bootstrap() {
 
   // ── Contact / Quote form submission (with upload support) ───
   const { upload, getRelativePath } = require('./middleware/upload');
-  app.post('/api/contact', upload.single('drawing'), (req, res) => {
+  app.post('/api/contact', upload.single('drawing'), async (req, res) => {
     try {
       const { getDb } = require('./database/db');
       const db = getDb();
       const {
         name = '', phone = '', email = '', province = '',
-        budget = '', note = '', services = [], source = 'website'
+        budget = '', note = '', services = [], source = 'website',
+        company = ''
       } = req.body;
 
       if (!name || !phone) {
         return res.status(400).json({ error: 'name và phone là bắt buộc' });
       }
 
-      // Ensure leads table exists
+      // Ensure leads table exists with modern B2B schema
       db.prepare(`
         CREATE TABLE IF NOT EXISTS leads (
-          id        INTEGER PRIMARY KEY AUTOINCREMENT,
-          name      TEXT NOT NULL,
-          phone     TEXT NOT NULL,
-          email     TEXT,
-          province  TEXT,
-          budget    TEXT,
-          services  TEXT,
-          note      TEXT,
-          source    TEXT DEFAULT 'website',
-          status    TEXT DEFAULT 'new',
-          attachment TEXT,
-          created_at TEXT DEFAULT (datetime('now','localtime'))
+          id           INTEGER PRIMARY KEY AUTOINCREMENT,
+          name         TEXT NOT NULL,
+          phone        TEXT NOT NULL,
+          email        TEXT,
+          company      TEXT,
+          province     TEXT,
+          budget       TEXT,
+          services     TEXT,
+          note         TEXT,
+          source       TEXT DEFAULT 'website',
+          status       TEXT DEFAULT 'new',
+          attachment   TEXT,
+          lead_score   TEXT,
+          nda_path     TEXT,
+          sla_deadline TEXT,
+          crm_synced   INTEGER DEFAULT 0,
+          created_at   TEXT DEFAULT (datetime('now','localtime'))
         )
       `).run();
 
-      // Ensure column exists for retro-compatibility
-      try {
-        db.prepare('ALTER TABLE leads ADD COLUMN attachment TEXT').run();
-      } catch (e) {}
+      // Ensure B2B columns exist for retro-compatibility (safe ALTERs)
+      const alterCols = [
+        'ALTER TABLE leads ADD COLUMN company TEXT',
+        'ALTER TABLE leads ADD COLUMN attachment TEXT',
+        'ALTER TABLE leads ADD COLUMN lead_score TEXT',
+        'ALTER TABLE leads ADD COLUMN nda_path TEXT',
+        'ALTER TABLE leads ADD COLUMN sla_deadline TEXT',
+        'ALTER TABLE leads ADD COLUMN crm_synced INTEGER DEFAULT 0'
+      ];
+      for (const cmd of alterCols) {
+        try { db.prepare(cmd).run(); } catch(e) {}
+      }
 
       const attachment = req.file ? `/uploads${getRelativePath(req.file.path).replace(/\\/g, '/')}` : null;
 
       // Merge extra details (material, surface_finish, system_type, glass_type, dimensions, quantity, floors, area, etc.) into final note
       let finalNote = note || '';
-      const standardFields = ['name', 'phone', 'email', 'province', 'budget', 'services', 'note', 'source', 'division'];
+      const standardFields = ['name', 'phone', 'email', 'province', 'budget', 'services', 'note', 'source', 'division', 'company'];
       const extraDetails = [];
       for (const [key, value] of Object.entries(req.body)) {
         if (!standardFields.includes(key) && value) {
@@ -176,26 +190,93 @@ async function bootstrap() {
       }
 
       const insert = db.prepare(`
-        INSERT INTO leads (name, phone, email, province, budget, services, note, source, attachment)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO leads (name, phone, email, company, province, budget, services, note, source, attachment)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       `);
       const info = insert.run(
-        name, phone, email || null, province || null,
+        name, phone, email || null, company || null, province || null,
         budget || null,
         Array.isArray(services) ? services.join(',') : (services || null),
         finalNote || null, source, attachment
       );
 
-      console.log(`[LEAD] New lead #${info.lastInsertRowid}: ${name} — ${phone} (${source}) ${attachment ? 'with attachment' : ''}`);
+      const leadId = info.lastInsertRowid;
+      console.log(`[LEAD] Created lead #${leadId}: ${name} — ${phone} (${source})`);
+
+      // Invoke RFQ automation service
+      const { processRFQ } = require('./services/rfqAutomation');
+      const automations = await processRFQ(db, {
+        id: leadId, name, phone, email, budget, attachment, company
+      });
+
+      // Update lead record with scored information
+      db.prepare(`
+        UPDATE leads
+        SET lead_score = ?, nda_path = ?, sla_deadline = ?, crm_synced = ?
+        WHERE id = ?
+      `).run(automations.leadScore, automations.ndaPath, automations.slaDeadline, automations.crmSynced, leadId);
 
       res.json({
         success: true,
-        id: info.lastInsertRowid,
-        message: 'Yêu cầu đã được gửi thành công. Chúng tôi sẽ liên hệ trong 2 giờ làm việc.'
+        id: leadId,
+        message: 'Yêu cầu đã được gửi thành công. Chúng tôi sẽ liên hệ trong 2 giờ làm việc.',
+        ndaUrl: automations.ndaPath || null
       });
     } catch (err) {
       console.error('[CONTACT API]', err.message);
       res.status(500).json({ error: 'Lỗi máy chủ. Vui lòng thử lại sau.' });
+    }
+  });
+
+  // ── Track order progress (B2B Customer Portal) ───────────────
+  app.get('/api/track', (req, res) => {
+    try {
+      const { getDb } = require('./database/db');
+      const db = getDb();
+      const { phone = '', id = '' } = req.query;
+
+      if (!phone && !id) {
+        return res.status(400).json({ error: 'Vui lòng cung cấp Số điện thoại hoặc Mã dự án' });
+      }
+
+      let lead;
+      if (id) {
+        lead = db.prepare('SELECT * FROM leads WHERE id = ?').get(id);
+      } else {
+        // Query by last matching phone number (removing spaces to match)
+        const cleanPhone = phone.replace(/\s/g, '');
+        lead = db.prepare(`
+          SELECT * FROM leads 
+          WHERE replace(phone, ' ', '') = ? OR phone = ?
+          ORDER BY id DESC LIMIT 1
+        `).get(cleanPhone, phone);
+      }
+
+      if (!lead) {
+        return res.status(404).json({ error: 'Không tìm thấy thông tin dự án phù hợp' });
+      }
+
+      res.json({
+        success: true,
+        lead: {
+          id: lead.id,
+          name: lead.name,
+          phone: lead.phone,
+          company: lead.company || '',
+          province: lead.province || '',
+          budget: lead.budget || '',
+          services: lead.services || '',
+          status: lead.status || 'new',
+          nda_path: lead.nda_path || null,
+          attachment: lead.attachment || null,
+          lead_score: lead.lead_score || 'B2C - Standard',
+          sla_deadline: lead.sla_deadline || '',
+          created_at: lead.created_at
+        }
+      });
+    } catch (err) {
+      console.error('[TRACK API]', err.message);
+      res.status(500).json({ error: 'Lỗi hệ thống khi truy vấn tiến độ' });
     }
   });
 
@@ -209,7 +290,6 @@ async function bootstrap() {
       ).all();
       res.json({ leads, total: leads.length });
     } catch (err) {
-      // Table might not exist yet
       res.json({ leads: [], total: 0 });
     }
   });

@@ -512,3 +512,50 @@ p {
   .sv-grid-3 { grid-template-columns: repeat(2, 1fr); }
   .sv-grid-4 { grid-template-columns: repeat(2, 1fr); }
 }
+
+
+/* ──────────────────────────────────────────────────────────────
+   8. 12-COLUMN CSS GRID SYSTEM
+   ────────────────────────────────────────────────────────────── */
+
+.sv-grid-12 {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--sv-sp-6);
+}
+
+.sv-span-1  { grid-column: span 1; }
+.sv-span-2  { grid-column: span 2; }
+.sv-span-3  { grid-column: span 3; }
+.sv-span-4  { grid-column: span 4; }
+.sv-span-5  { grid-column: span 5; }
+.sv-span-6  { grid-column: span 6; }
+.sv-span-7  { grid-column: span 7; }
+.sv-span-8  { grid-column: span 8; }
+.sv-span-9  { grid-column: span 9; }
+.sv-span-10 { grid-column: span 10; }
+.sv-span-11 { grid-column: span 11; }
+.sv-span-12 { grid-column: span 12; }
+
+@media (max-width: 1024px) {
+  .sv-span-md-12 { grid-column: span 12; }
+  .sv-span-md-6  { grid-column: span 6; }
+  .sv-span-md-4  { grid-column: span 4; }
+}
+
+@media (max-width: 768px) {
+  .sv-span-sm-12 { grid-column: span 12; }
+  .sv-span-sm-6  { grid-column: span 6; }
+}
+
+
+/* ──────────────────────────────────────────────────────────────
+   9. ADDITIONAL ACCESSIBILITY CONTRAST UTILITIES
+   ────────────────────────────────────────────────────────────── */
+
+/* High-contrast gold text color for WCAG 2.1 AA compliance on light backgrounds */
+.sv-gold-aa,
+.text-gold-aa {
+  color: var(--sv-text-gold-aa) !important;
+}
+

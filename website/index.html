@@ -21,14 +21,14 @@
   <meta property="og:title" content="SAO VÀNG — Cơ Khí Chính Xác & Nhôm Kính Cao Cấp" />
   <meta property="og:description" content="Hai thương hiệu — một chất lượng. Chuyên gia CNC, kết cấu thép, inox & nhôm kính kiến trúc. Hotline: 0869 590 279" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.CoKhiSaoVang.com" />
-  <meta property="og:image" content="assets/images/hero-bg.jpg" />
-  <link rel="canonical" href="https://www.CoKhiSaoVang.com" />
+  <meta property="og:url" content="https://www.cokhisaovang.com" />
+  <meta property="og:image" content="https://www.cokhisaovang.com/assets/images/hero-bg.jpg" />
+  <link rel="canonical" href="https://www.cokhisaovang.com" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
@@ -37,669 +37,7 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <!-- Page-specific styles -->
-  <style>
-    /* ═══════════════════════════════════════════
-       HOMEPAGE — Inline Styles
-       Chỉ những gì không có trong Design System
-    ═══════════════════════════════════════════ */
-
-    /* ── HERO SECTION ──────────────────────── */
-    .hero-v2 {
-      position: relative;
-      min-height: 65vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      padding-top: var(--sv-navbar-h);
-    }
-    .hero-v2-bg {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-    .hero-v2-bg img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: center;
-      animation: sv-heroZoom 14s ease-in-out infinite alternate;
-    }
-    .hero-v2-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(0,0,0,0.65) 0%,
-        rgba(0,0,0,0.50) 40%,
-        rgba(0,0,0,0.72) 100%
-      );
-    }
-    .hero-v2-content {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      padding: var(--sv-sp-8) var(--sv-sp-6);
-      max-width: 900px;
-      width: 100%;
-    }
-    .hero-v2-company-name {
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-text-xs);
-      font-weight: 700;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
-      margin-bottom: var(--sv-sp-5);
-      animation: sv-fadeDown 0.7s ease both;
-    }
-    .hero-v2-logo-wrap {
-      width: 80px; height: 80px;
-      border: 2.5px solid var(--sv-gold-600);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      margin: 0 auto var(--sv-sp-6);
-      box-shadow: 0 0 32px rgba(201,162,39,0.25);
-      animation: sv-scaleIn 0.7s 0.1s var(--sv-ease-spring) both;
-    }
-    .hero-v2-logo-wrap svg { width: 40px; height: 40px; fill: var(--sv-gold-600); }
-    .hero-v2-title {
-      font-family: var(--sv-font-head);
-      font-size: clamp(2.2rem, 5.5vw, 5rem);
-      font-weight: 900;
-      color: var(--sv-white);
-      text-transform: uppercase;
-      line-height: 1.08;
-      letter-spacing: -0.01em;
-      margin-bottom: var(--sv-sp-4);
-      text-shadow: 0 2px 24px rgba(0,0,0,0.5);
-      animation: sv-fadeUp 0.8s 0.2s ease both;
-    }
-    .hero-v2-title .gold-text { color: var(--sv-gold-500); }
-    .hero-v2-tagline {
-      font-size: var(--sv-text-md);
-      font-style: italic;
-      color: var(--sv-gold-400);
-      letter-spacing: 0.1em;
-      margin-bottom: var(--sv-sp-5);
-      animation: sv-fadeUp 0.8s 0.3s ease both;
-    }
-    .hero-v2-desc {
-      font-size: var(--sv-text-base);
-      color: rgba(255,255,255,0.75);
-      line-height: var(--sv-leading-relaxed);
-      max-width: 580px;
-      margin: 0 auto var(--sv-sp-8);
-      animation: sv-fadeUp 0.8s 0.4s ease both;
-    }
-    .hero-v2-cta {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--sv-sp-4);
-      flex-wrap: wrap;
-      margin-bottom: var(--sv-sp-6);
-      animation: sv-fadeUp 0.8s 0.5s ease both;
-    }
-    .hero-v2-brands {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: var(--sv-sp-3);
-      flex-wrap: wrap;
-      margin-bottom: var(--sv-sp-10);
-      animation: sv-fadeUp 0.8s 0.6s ease both;
-    }
-    .hero-v2-brands-sep {
-      width: 4px; height: 4px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.3);
-    }
-
-    /* Stats row */
-    .hero-v2-stats {
-      position: relative;
-      z-index: 2;
-      width: 100%;
-      display: flex;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      animation: sv-fadeUp 0.8s 0.7s ease both;
-    }
-    .hero-v2-stat {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: var(--sv-sp-6) var(--sv-sp-4);
-      text-align: center;
-      position: relative;
-    }
-    .hero-v2-stat + .hero-v2-stat::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 20%; height: 60%;
-      width: 1px;
-      background: rgba(255,255,255,0.12);
-    }
-    .hero-v2-stat-num {
-      font-family: var(--sv-font-head);
-      font-size: clamp(1.8rem, 3vw, 2.5rem);
-      font-weight: 900;
-      color: var(--sv-gold-500);
-      line-height: 1;
-      margin-bottom: 4px;
-    }
-    .hero-v2-stat-lbl {
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-text-2xs);
-      font-weight: 600;
-      color: rgba(255,255,255,0.55);
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    /* Scroll indicator */
-    .hero-v2-scroll {
-      position: absolute;
-      bottom: 28px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 2;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      color: rgba(255,255,255,0.45);
-      font-family: var(--sv-font-head);
-      font-size: 10px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: color var(--sv-transition-base);
-    }
-    .hero-v2-scroll:hover { color: rgba(255,255,255,0.75); }
-    .hero-v2-scroll i { animation: sv-bounce 2s infinite; font-size: 20px; }
-
-    /* ── ABOUT SECTION ─────────────────────── */
-    .about-v2 {
-      padding-block: var(--sv-section-py);
-      background: var(--sv-white);
-    }
-    .about-v2-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--sv-sp-16);
-      align-items: center;
-    }
-    .about-v2-media {
-      position: relative;
-    }
-    .about-v2-img-main {
-      width: 100%; height: 480px;
-      object-fit: cover;
-      border-radius: var(--sv-radius-lg);
-      box-shadow: var(--sv-shadow-xl);
-    }
-    .about-v2-badge {
-      position: absolute;
-      bottom: -20px; right: -20px;
-      background: var(--sv-gold-600);
-      color: var(--sv-white);
-      border-radius: var(--sv-radius-md);
-      padding: var(--sv-sp-5) var(--sv-sp-6);
-      text-align: center;
-      box-shadow: var(--sv-shadow-gold-lg);
-    }
-    .about-v2-badge-num {
-      font-family: var(--sv-font-head);
-      font-size: 2.5rem;
-      font-weight: 900;
-      line-height: 1;
-      display: block;
-    }
-    .about-v2-badge-lbl {
-      font-family: var(--sv-font-head);
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.85);
-      margin-top: 4px;
-      display: block;
-    }
-    .about-v2-features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--sv-sp-3);
-      margin-top: var(--sv-sp-6);
-    }
-    .about-v2-feature {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: var(--sv-text-sm);
-      color: var(--sv-dark-600);
-      font-weight: 500;
-    }
-    .about-v2-feature i {
-      width: 28px; height: 28px;
-      display: flex; align-items: center; justify-content: center;
-      background: var(--sv-gold-100);
-      border-radius: 50%;
-      color: var(--sv-gold-700);
-      font-size: 14px;
-      flex-shrink: 0;
-    }
-
-    @media (max-width: 900px) {
-      .about-v2-grid { grid-template-columns: 1fr; gap: var(--sv-sp-10); }
-      .about-v2-badge { right: 16px; bottom: -16px; }
-    }
-
-    /* ── PRODUCT SLIDER SECTION ────────────── */
-    .products-v2 {
-      padding-block: var(--sv-section-py);
-    }
-    .products-v2-ck { background: var(--sv-white); }
-    .products-v2-nk { background: var(--sv-gray-025); }
-    .slider-section-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: var(--sv-sp-8);
-      padding-bottom: var(--sv-sp-5);
-      border-bottom: 2px solid var(--sv-gray-100);
-    }
-    .slider-section-brand {
-      display: flex;
-      align-items: center;
-      gap: var(--sv-sp-3);
-    }
-    .slider-brand-icon {
-      width: 36px; height: 36px;
-      display: flex; align-items: center; justify-content: center;
-      border-radius: var(--sv-radius-sm);
-      font-size: 18px;
-      font-weight: 900;
-      font-family: var(--sv-font-head);
-      color: var(--sv-white);
-      flex-shrink: 0;
-    }
-    .slider-brand-icon.ck { background: var(--sv-gold-600); }
-    .slider-brand-icon.nk { background: var(--sv-red-600); }
-    .slider-brand-name {
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-text-lg);
-      font-weight: 800;
-      color: var(--sv-dark-700);
-      letter-spacing: -0.01em;
-      text-transform: uppercase;
-    }
-    .slider-view-all {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-text-sm);
-      font-weight: 700;
-      color: var(--sv-red-600);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      transition: gap var(--sv-transition-base), color var(--sv-transition-base);
-    }
-    .slider-view-all:hover { color: var(--sv-gold-600); gap: 10px; }
-    .slider-view-all i { font-size: 16px; }
-
-    /* Slider track */
-    .slider-outer { position: relative; }
-    .slider-track-wrap { overflow: hidden; }
-    .slider-track {
-      display: flex;
-      gap: var(--sv-sp-5);
-      transition: transform 0.45s var(--sv-ease-out);
-      will-change: transform;
-      cursor: grab;
-      user-select: none;
-    }
-    .slider-track:active { cursor: grabbing; }
-    .slider-item { flex-shrink: 0; }
-
-    /* Product card */
-    .prod-card {
-      background: var(--sv-white);
-      border-radius: var(--sv-radius-md);
-      overflow: hidden;
-      border: 1px solid var(--sv-gray-100);
-      box-shadow: var(--sv-shadow-xs);
-      transition: transform var(--sv-transition-base), box-shadow var(--sv-transition-base), border-color var(--sv-transition-base);
-    }
-    .prod-card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--sv-shadow-lg);
-      border-color: var(--sv-border-gold);
-    }
-    .prod-card-img {
-      position: relative;
-      height: 220px;
-      overflow: hidden;
-      background: var(--sv-gray-100);
-    }
-    .prod-card-img img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s var(--sv-ease-out);
-    }
-    .prod-card:hover .prod-card-img img { transform: scale(1.07); }
-    .prod-card-body { padding: var(--sv-sp-5); }
-    .prod-card-title {
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-text-md);
-      font-weight: 700;
-      color: var(--sv-dark-700);
-      margin-bottom: var(--sv-sp-2);
-    }
-    .prod-card-desc {
-      font-size: var(--sv-text-sm);
-      color: var(--sv-gray-300);
-      line-height: var(--sv-leading-normal);
-      margin-bottom: var(--sv-sp-4);
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .prod-card-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      font-family: var(--sv-font-head);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--sv-red-600);
-      transition: gap var(--sv-transition-base), color var(--sv-transition-base);
-    }
-    .prod-card-link:hover { color: var(--sv-gold-600); gap: 9px; }
-
-    /* Slider controls */
-    .slider-controls {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: var(--sv-sp-6);
-    }
-    .slider-dots { display: flex; gap: 8px; align-items: center; }
-    .slider-dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--sv-gray-100);
-      border: none;
-      cursor: pointer;
-      transition: all var(--sv-transition-base);
-      padding: 0;
-    }
-    .slider-dot.active {
-      background: var(--sv-gold-600);
-      width: 24px;
-      border-radius: 4px;
-    }
-    .slider-arrows { display: flex; gap: 8px; }
-    .slider-arrow {
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      border: 1.5px solid var(--sv-gray-100);
-      background: var(--sv-white);
-      color: var(--sv-dark-600);
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer;
-      transition: all var(--sv-transition-base);
-      font-size: 18px;
-    }
-    .slider-arrow:hover {
-      background: var(--sv-gold-600);
-      border-color: var(--sv-gold-600);
-      color: var(--sv-white);
-    }
-    .slider-arrow:disabled { opacity: 0.3; pointer-events: none; }
-
-    /* ── CTA BANNER ────────────────────────── */
-    .cta-banner {
-      background: linear-gradient(135deg, var(--sv-red-700) 0%, var(--sv-red-900) 100%);
-      padding: var(--sv-sp-20) 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .cta-banner::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-    .cta-banner-inner { position: relative; z-index: 1; }
-    .cta-banner-title {
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-text-2xl);
-      font-weight: 900;
-      color: var(--sv-white);
-      margin-bottom: var(--sv-sp-3);
-      text-transform: uppercase;
-    }
-    .cta-banner-desc {
-      color: rgba(255,255,255,0.75);
-      font-size: var(--sv-text-md);
-      margin-bottom: var(--sv-sp-8);
-      max-width: 560px;
-      margin-inline: auto;
-    }
-    .cta-banner-btns { display: flex; gap: var(--sv-sp-4); justify-content: center; flex-wrap: wrap; }
-
-    /* ── PROJECTS SECTION ──────────────────── */
-    .projects-v2 {
-      padding-block: var(--sv-section-py);
-      background: var(--sv-gray-025);
-    }
-    .projects-grid-v2 {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--sv-sp-5);
-    }
-    .project-card {
-      position: relative;
-      border-radius: var(--sv-radius-md);
-      overflow: hidden;
-      aspect-ratio: 4/3;
-      background: var(--sv-dark-700);
-      cursor: pointer;
-      box-shadow: var(--sv-shadow-sm);
-    }
-    .project-card img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      transition: transform 0.6s var(--sv-ease-out), opacity 0.3s;
-    }
-    .project-card:hover img { transform: scale(1.07); opacity: 0.85; }
-    .project-card-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.35) 55%, transparent 100%);
-      display: flex; flex-direction: column; justify-content: flex-end;
-      padding: var(--sv-sp-5);
-      color: var(--sv-white);
-    }
-    .project-card-cat {
-      font-family: var(--sv-font-head);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--sv-gold-500);
-      margin-bottom: 5px;
-    }
-    .project-card-name {
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-text-md);
-      font-weight: 700;
-    }
-    @media (max-width: 900px) { .projects-grid-v2 { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 540px) { .projects-grid-v2 { grid-template-columns: 1fr; } }
-
-    /* ── HOTLINE BANNER ────────────────────── */
-    .hotline-banner {
-      background: var(--sv-gold-600);
-      padding: var(--sv-sp-8) 0;
-    }
-    .hotline-banner-inner {
-      display: grid;
-      grid-template-columns: 1fr auto 1fr;
-      align-items: center;
-      gap: var(--sv-sp-8);
-    }
-    .hotline-banner-text {
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-text-base);
-      color: rgba(255,255,255,0.9);
-      line-height: var(--sv-leading-normal);
-    }
-    .hotline-banner-text strong { color: var(--sv-white); font-weight: 800; }
-    .hotline-banner-logo {
-      width: 56px; height: 56px;
-      border: 2.5px solid rgba(255,255,255,0.5);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-    }
-    .hotline-banner-logo svg { width: 30px; height: 30px; fill: var(--sv-white); }
-    .hotline-banner-right { text-align: right; }
-    .hotline-label {
-      font-family: var(--sv-font-head);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.8);
-      margin-bottom: 4px;
-    }
-    .hotline-number {
-      font-family: var(--sv-font-head);
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      font-weight: 900;
-      color: var(--sv-red-700);
-      line-height: 1;
-    }
-    @media (max-width: 768px) {
-      .hotline-banner-inner { grid-template-columns: 1fr; text-align: center; }
-      .hotline-banner-right { text-align: center; }
-    }
-
-    /* ── CONTACT SECTION ───────────────────── */
-    .contact-v2 {
-      padding-block: var(--sv-section-py);
-      background: var(--sv-gray-025);
-    }
-    .contact-v2-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: var(--sv-sp-16);
-      align-items: start;
-    }
-    .contact-v2-info-title {
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-text-2xl);
-      font-weight: 800;
-      color: var(--sv-dark-700);
-      text-transform: uppercase;
-      line-height: var(--sv-leading-snug);
-      margin-bottom: var(--sv-sp-8);
-    }
-    .contact-v2-info-title span { color: var(--sv-red-600); }
-    .contact-info-items { display: flex; flex-direction: column; gap: var(--sv-sp-5); }
-    .contact-info-item {
-      display: flex;
-      align-items: flex-start;
-      gap: var(--sv-sp-4);
-    }
-    .contact-info-icon {
-      width: 44px; height: 44px;
-      background: var(--sv-red-100);
-      border-radius: var(--sv-radius-md);
-      display: flex; align-items: center; justify-content: center;
-      color: var(--sv-red-600);
-      font-size: 20px;
-      flex-shrink: 0;
-    }
-    .contact-info-content { flex: 1; }
-    .contact-info-label {
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-text-xs);
-      font-weight: 700;
-      color: var(--sv-gray-200);
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 3px;
-    }
-    .contact-info-value {
-      font-size: var(--sv-text-base);
-      color: var(--sv-dark-600);
-      font-weight: 500;
-      line-height: var(--sv-leading-normal);
-    }
-    /* Form */
-    .contact-v2-form-wrap {
-      background: var(--sv-white);
-      border-radius: var(--sv-radius-lg);
-      padding: var(--sv-sp-8);
-      box-shadow: var(--sv-shadow-md);
-    }
-    .contact-v2-form-title {
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-text-lg);
-      font-weight: 800;
-      color: var(--sv-dark-700);
-      margin-bottom: var(--sv-sp-6);
-      text-transform: uppercase;
-    }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sv-sp-4); }
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: var(--sv-sp-2);
-      margin-bottom: var(--sv-sp-4);
-    }
-    .form-label {
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-text-xs);
-      font-weight: 700;
-      color: var(--sv-dark-600);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-    .form-label .req { color: var(--sv-red-600); margin-left: 2px; }
-    .form-control {
-      width: 100%;
-      padding: 12px 16px;
-      border: 1.5px solid var(--sv-gray-100);
-      border-radius: var(--sv-radius-sm);
-      font-family: var(--sv-font-body);
-      font-size: var(--sv-text-base);
-      color: var(--sv-dark-700);
-      background: var(--sv-white);
-      transition: border-color var(--sv-transition-fast), box-shadow var(--sv-transition-fast);
-      appearance: none;
-    }
-    .form-control::placeholder { color: var(--sv-gray-200); }
-    .form-control:focus {
-      outline: none;
-      border-color: var(--sv-gold-600);
-      box-shadow: 0 0 0 3px var(--sv-gold-100);
-    }
-    textarea.form-control { resize: vertical; min-height: 110px; }
-    @media (max-width: 768px) {
-      .contact-v2-grid { grid-template-columns: 1fr; gap: var(--sv-sp-8); }
-      .form-row { grid-template-columns: 1fr; }
-    }
-
-  </style>
+    <link rel="stylesheet" href="assets/css/home.css" />
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
@@ -724,7 +62,7 @@
       <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
         <a href="index.html" class="nav-menu-link active">Trang Chủ</a>
         <a href="co-khi-sao-vang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
-        <a href="nhom-sao-vang.html" class="nav-menu-link">Nhôm Sao Vàng</a>
+        <a href="nhom-sao-vang.html" class="nav-menu-link">SV Aluminium</a>
 
         <!-- Dropdown Lĩnh Vực -->
         <div class="nav-dropdown-wrap">
@@ -732,9 +70,10 @@
           <div class="nav-dropdown-menu" role="menu">
             <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan</a>
             <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
-            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Kính SV Aluminium</a>
           </div>
         </div>
+        <a href="san-pham.html" class="nav-menu-link">Sản Phẩm</a>
         <a href="phu-kien.html" class="nav-menu-link">Phụ Kiện</a>
         <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
         <a href="du-an.html" class="nav-menu-link">Dự Án Đã Thực Hiện</a>
@@ -761,6 +100,7 @@
     <a href="co-khi-sao-vang.html" class="nav-drawer-link">Cơ Khí Sao Vàng</a>
     <a href="nhom-sao-vang.html" class="nav-drawer-link">Nhôm Sao Vàng</a>
     <a href="linh-vuc-hoat-dong.html" class="nav-drawer-link">Lĩnh Vực Hoạt Động</a>
+    <a href="san-pham.html" class="nav-drawer-link">Sản Phẩm</a>
     <a href="phu-kien.html" class="nav-drawer-link">Phụ Kiện</a>
     <a href="thu-vien-profile-nhom.html" class="nav-drawer-link">Profile Nhôm</a>
     <a href="du-an.html" class="nav-drawer-link">Dự Án Đã Thực Hiện</a>
@@ -782,8 +122,7 @@
         <img
           src="assets/images/hero-bg.jpg"
           alt="Cầu thang nghệ thuật lan can kính Sao Vàng"
-          onerror="this.style.background='linear-gradient(135deg,#0a0a0a 0%,#1a0808 100%)';this.style.opacity='1'"
-        />
+          onerror="this.style.background='linear-gradient(135deg,#0a0a0a 0%,#1a0808 100%)';this.style.opacity='1'" width="1920" height="1080">
         <div class="hero-v2-overlay"></div>
       </div>
 
@@ -861,8 +200,7 @@
               alt="Xưởng sản xuất cơ khí Sao Vàng"
               class="about-v2-img-main"
               loading="lazy"
-              onerror="this.src='https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80';this.onerror=null"
-            />
+              onerror="this.src='https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80';this.onerror=null" width="800" height="600">
             <!-- Badge overlay -->
             <div class="about-v2-badge" aria-label="Kinh nghiệm đội ngũ">
               <span class="about-v2-badge-num">7+</span>
@@ -945,7 +283,7 @@
                 <div class="prod-card" style="width:300px;">
                   <div class="prod-card-img">
                     <img decoding="async" src="assets/images/products/ck-cau-thang.jpg" alt="Cầu thang nghệ thuật CNC"
-                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80';this.onerror=null"/>
+                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80';this.onerror=null" width="800" height="600">
                   </div>
                   <div class="prod-card-body">
                     <h3 class="prod-card-title">Cầu Thang Nghệ Thuật</h3>
@@ -962,7 +300,7 @@
                 <div class="prod-card" style="width:300px;">
                   <div class="prod-card-img">
                     <img decoding="async" src="assets/images/products/ck-lan-can.jpg" alt="Lan can ban công inox"
-                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80';this.onerror=null"/>
+                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80';this.onerror=null" width="800" height="600">
                   </div>
                   <div class="prod-card-body">
                     <h3 class="prod-card-title">Lan Can Ban Công Inox</h3>
@@ -979,7 +317,7 @@
                 <div class="prod-card" style="width:300px;">
                   <div class="prod-card-img">
                     <img decoding="async" src="assets/images/products/ck-cong.jpg" alt="Cổng nhôm đúc nghệ thuật"
-                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80';this.onerror=null"/>
+                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80';this.onerror=null" width="800" height="600">
                   </div>
                   <div class="prod-card-body">
                     <h3 class="prod-card-title">Cổng Nhôm Đúc Nghệ Thuật</h3>
@@ -996,7 +334,7 @@
                 <div class="prod-card" style="width:300px;">
                   <div class="prod-card-img">
                     <img decoding="async" src="assets/images/products/ck-ket-cau.jpg" alt="Kết cấu thép"
-                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80';this.onerror=null"/>
+                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80';this.onerror=null" width="800" height="600">
                   </div>
                   <div class="prod-card-body">
                     <h3 class="prod-card-title">Kết Cấu Thép</h3>
@@ -1013,7 +351,7 @@
                 <div class="prod-card" style="width:300px;">
                   <div class="prod-card-img">
                     <img decoding="async" src="assets/images/products/ck-du-thuyen.jpg" alt="Inox du thuyền 316L"
-                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1520923642038-b4259acecbd7?w=600&q=80';this.onerror=null"/>
+                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1520923642038-b4259acecbd7?w=600&q=80';this.onerror=null" width="800" height="600">
                   </div>
                   <div class="prod-card-body">
                     <h3 class="prod-card-title">Inox Du Thuyền 316L</h3>
@@ -1030,7 +368,7 @@
                 <div class="prod-card" style="width:300px;">
                   <div class="prod-card-img">
                     <img decoding="async" src="assets/images/products/ck-cnc.jpg" alt="Gia công CNC chính xác"
-                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1565587041988-b7f68e897379?w=600&q=80';this.onerror=null"/>
+                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1565587041988-b7f68e897379?w=600&q=80';this.onerror=null" width="800" height="600">
                   </div>
                   <div class="prod-card-body">
                     <h3 class="prod-card-title">Gia Công CNC Chính Xác</h3>
@@ -1089,7 +427,7 @@
                 <div class="prod-card" style="width:300px;">
                   <div class="prod-card-img">
                     <img decoding="async" src="assets/images/products/nk-cua-nhom.jpg" alt="Cửa nhôm kính cao cấp"
-                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80';this.onerror=null"/>
+                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80';this.onerror=null" width="800" height="600">
                   </div>
                   <div class="prod-card-body">
                     <h3 class="prod-card-title">Cửa Nhôm Kính Cao Cấp</h3>
@@ -1106,7 +444,7 @@
                 <div class="prod-card" style="width:300px;">
                   <div class="prod-card-img">
                     <img decoding="async" src="assets/images/products/nk-vach-kinh.jpg" alt="Vách kính cường lực"
-                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80';this.onerror=null"/>
+                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=80';this.onerror=null" width="800" height="600">
                   </div>
                   <div class="prod-card-body">
                     <h3 class="prod-card-title">Vách Kính Cường Lực</h3>
@@ -1123,7 +461,7 @@
                 <div class="prod-card" style="width:300px;">
                   <div class="prod-card-img">
                     <img decoding="async" src="assets/images/products/nk-mat-dung.jpg" alt="Mặt dựng Facade"
-                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80';this.onerror=null"/>
+                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80';this.onerror=null" width="800" height="600">
                   </div>
                   <div class="prod-card-body">
                     <h3 class="prod-card-title">Mặt Dựng Facade</h3>
@@ -1140,7 +478,7 @@
                 <div class="prod-card" style="width:300px;">
                   <div class="prod-card-img">
                     <img decoding="async" src="assets/images/products/nk-lan-can.jpg" alt="Lan can kính ban công"
-                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=600&q=80';this.onerror=null"/>
+                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=600&q=80';this.onerror=null" width="800" height="600">
                   </div>
                   <div class="prod-card-body">
                     <h3 class="prod-card-title">Lan Can Kính Ban Công</h3>
@@ -1157,7 +495,7 @@
                 <div class="prod-card" style="width:300px;">
                   <div class="prod-card-img">
                     <img decoding="async" src="assets/images/products/nk-mai-kinh.jpg" alt="Mái kính nhôm"
-                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?w=600&q=80';this.onerror=null"/>
+                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1478145046317-39f10e56b5e9?w=600&q=80';this.onerror=null" width="800" height="600">
                   </div>
                   <div class="prod-card-body">
                     <h3 class="prod-card-title">Mái Kính Nhôm</h3>
@@ -1174,7 +512,7 @@
                 <div class="prod-card" style="width:300px;">
                   <div class="prod-card-img">
                     <img decoding="async" src="assets/images/products/nk-cua-keo.jpg" alt="Cửa kéo trượt nhôm"
-                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80';this.onerror=null"/>
+                      loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80';this.onerror=null" width="800" height="600">
                   </div>
                   <div class="prod-card-body">
                     <h3 class="prod-card-title">Cửa Kéo Trượt Nhôm</h3>
@@ -1259,7 +597,7 @@
           <!-- Card 1: Biệt thự Đà Lạt -->
           <a href="du-an.html?slug=biet-thu-nghi-duong-da-lat" class="project-card" data-category="nhom-kinh" style="text-decoration:none;">
             <img decoding="async" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Biệt Thự Nghỉ Dưỡng Đà Lạt"
-              loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80';this.onerror=null"/>
+              loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80';this.onerror=null" width="800" height="600">
             <div class="project-card-overlay">
               <span class="project-card-cat">Nhôm Kính · Đà Lạt</span>
               <h3 class="project-card-name">Biệt Thự Nghỉ Dưỡng Đà Lạt</h3>
@@ -1269,7 +607,7 @@
           <!-- Card 2: Du thuyền 28m -->
           <a href="du-an.html?slug=du-thuyen-cao-cap-28m" class="project-card" data-category="dac-biet" style="text-decoration:none;">
             <img decoding="async" src="https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?auto=format&fit=crop&w=800&q=80" alt="Du Thuyền Cao Cấp 28m"
-              loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800&q=80';this.onerror=null"/>
+              loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=800&q=80';this.onerror=null" width="800" height="600">
             <div class="project-card-overlay">
               <span class="project-card-cat">Đặc Biệt · Hạ Long</span>
               <h3 class="project-card-name">Du Thuyền Cao Cấp 28m</h3>
@@ -1279,7 +617,7 @@
           <!-- Card 3: Penthouse Hà Nội -->
           <a href="du-an.html?slug=penthouse-ha-noi" class="project-card" data-category="co-khi" style="text-decoration:none;">
             <img decoding="async" src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=800&q=80" alt="Penthouse Hà Nội"
-              loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&q=80';this.onerror=null"/>
+              loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=800&q=80';this.onerror=null" width="800" height="600">
             <div class="project-card-overlay">
               <span class="project-card-cat">Cơ Khí · Hà Nội</span>
               <h3 class="project-card-name">Penthouse Hà Nội</h3>
@@ -1289,7 +627,7 @@
           <!-- Card 4: Du thuyền Nội thất gỗ & inox -->
           <a href="du-an.html?slug=du-thuyen-noi-that-go-inox" class="project-card" data-category="dac-biet" style="text-decoration:none;">
             <img decoding="async" src="https://images.unsplash.com/photo-1520923642038-b4259acecbd7?auto=format&fit=crop&w=800&q=80" alt="Du Thuyền Nội Thất Gỗ & Inox"
-              loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1520923642038-b4259acecbd7?w=800&q=80';this.onerror=null"/>
+              loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1520923642038-b4259acecbd7?w=800&q=80';this.onerror=null" width="800" height="600">
             <div class="project-card-overlay">
               <span class="project-card-cat">Đặc Biệt · Nha Trang</span>
               <h3 class="project-card-name">Du Thuyền Nội Thất Gỗ &amp; Inox</h3>
@@ -1299,7 +637,7 @@
           <!-- Card 5: Cổng biệt thự -->
           <a href="du-an.html?slug=cong-hang-rao-biet-thu" class="project-card" data-category="co-khi" style="text-decoration:none;">
             <img decoding="async" src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Cổng & Hàng Rào Biệt Thự"
-              loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80';this.onerror=null"/>
+              loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80';this.onerror=null" width="800" height="600">
             <div class="project-card-overlay">
               <span class="project-card-cat">Cơ Khí · TP.HCM</span>
               <h3 class="project-card-name">Cổng &amp; Hàng Rào Biệt Thự</h3>
@@ -1309,7 +647,7 @@
           <!-- Card 6: Khung Thép Nhà Phố -->
           <a href="du-an.html?slug=khung-thep-nha-pho-5-tang" class="project-card" data-category="co-khi" style="text-decoration:none;">
             <img decoding="async" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" alt="Khung Thép Nhà Phố 5 Tầng"
-              loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80';this.onerror=null"/>
+              loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80';this.onerror=null" width="800" height="600">
             <div class="project-card-overlay">
               <span class="project-card-cat">Cơ Khí · Hà Nội</span>
               <h3 class="project-card-name">Khung Thép Nhà Phố 5 Tầng</h3>
@@ -1425,7 +763,7 @@
                 <div class="form-group">
                   <label for="contactEmail" class="form-label">Email <span class="req" aria-hidden="true">*</span></label>
                   <input type="email" id="contactEmail" name="email" class="form-control"
-                    placeholder="email@example.com" required autocomplete="email" />
+                    placeholder="cokhisaovangvn@gmail.com" required autocomplete="email" />
                 </div>
 
                 <div class="form-group">
@@ -2070,21 +1408,299 @@
 
     <!-- FAQ Schema JSON-LD for Google Rich Results -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
+      "@type": [
+        "Organization",
+        "LocalBusiness",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.cokhisaovang.com/#organization",
+      "name": "Cơ Khí Sao Vàng",
+      "legalName": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG",
+      "url": "https://www.cokhisaovang.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.cokhisaovang.com/assets/images/logo-sv-main.svg",
+        "width": 200,
+        "height": 200
+      },
+      "image": "https://www.cokhisaovang.com/assets/images/hero-bg.jpg",
+      "description": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG — Chuyên gia gia công cơ khí chính xác CNC, kết cấu thép, inox du thuyền, cửa nhôm kính, mặt dựng curtain wall và lan can kính cường lực tại Hà Nội. MST: 0110808047.",
+      "telephone": "+84869590279",
+      "email": "cokhisaovangvn@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tầng 3, TT7-35 Khu đô thị Văn Phú",
+        "addressLocality": "Quận Hà Đông",
+        "addressRegion": "Hà Nội",
+        "postalCode": "100000",
+        "addressCountry": "VN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "20.9715",
+        "longitude": "105.7825"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "52",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "17:30"
+        }
+      ],
+      "taxID": "0110808047",
+      "sameAs": [
+        "https://zalo.me/0869590279",
+        "https://www.cokhisaovang.com"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Việt Nam"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Dịch vụ Cơ Khí & Nhôm Kính Sao Vàng",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gia Công Cơ Khí Chính Xác CNC",
+              "url": "https://www.cokhisaovang.com/gia-cong-cnc-chinh-xac.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gia Công Inox Công Nghiệp & Mỹ Thuật",
+              "url": "https://www.cokhisaovang.com/gia-cong-inox.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Thiết Kế & Thi Công Kết Cấu Thép",
+              "url": "https://www.cokhisaovang.com/ket-cau-thep.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cơ Khí Mỹ Thuật & Sắt Nghệ Thuật",
+              "url": "https://www.cokhisaovang.com/co-khi-nghe-thuat.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Thi Công Cửa Nhôm Kính Cao Cấp",
+              "url": "https://www.cokhisaovang.com/cua-nhom-kinh.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vách Kính Mặt Dựng & Vách Ngăn Kính",
+              "url": "https://www.cokhisaovang.com/vach-kinh.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lan Can Kính Cường Lực",
+              "url": "https://www.cokhisaovang.com/lan-can-kinh.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mái Kính Cường Lực & Giếng Trời",
+              "url": "https://www.cokhisaovang.com/mai-kinh.html"
+            }
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Gia công cơ khí chính xác CNC",
+        "Kết cấu thép công nghiệp AWS D1.1",
+        "Cửa nhôm kính kiến trúc cao cấp",
+        "Mặt dựng kính curtain wall",
+        "Inox 316L marine grade",
+        "Lan can kính cường lực",
+        "Mái kính canopy giếng trời"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.cokhisaovang.com/#website",
+      "url": "https://www.cokhisaovang.com",
+      "name": "Cơ Khí Sao Vàng — B2B Industrial Mechanical & Architectural Glass",
+      "description": "Website chính thức của Công ty Cổ phần Sản xuất Cơ khí Sao Vàng",
+      "publisher": {
+        "@id": "https://www.cokhisaovang.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.cokhisaovang.com/san-pham.html?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "vi-VN"
+    },
+    {
       "@type": "FAQPage",
+      "@id": "https://www.cokhisaovang.com/#faq",
       "mainEntity": [
-        {"@type":"Question","name":"Chi phí gia công cơ khí tại Sao Vàng như thế nào?","acceptedAnswer":{"@type":"Answer","text":"Chi phí phụ thuộc vào vật liệu, độ phức tạp và số lượng. Sao Vàng cam kết báo giá minh bạch. Liên hệ 0869 590 279 để nhận báo giá miễn phí."}},
-        {"@type":"Question","name":"Thời gian thi công trung bình là bao lâu?","acceptedAnswer":{"@type":"Answer","text":"Cửa nhôm kính 5–10 ngày, kết cấu thép 15–30 ngày, cầu thang xoắn 20–45 ngày tuỳ độ phức tạp."}},
-        {"@type":"Question","name":"Sao Vàng có chế độ bảo hành không?","acceptedAnswer":{"@type":"Answer","text":"Có. Bảo hành 2–10 năm tuỳ hạng mục: cửa nhôm kính 5 năm, kết cấu thép và inox 10 năm."}},
-        {"@type":"Question","name":"Quy trình làm việc cụ thể ra sao?","acceptedAnswer":{"@type":"Answer","text":"5 bước: Tiếp nhận yêu cầu → Khảo sát miễn phí → Thiết kế & báo giá → Ký hợp đồng & sản xuất → Lắp đặt & bàn giao."}},
-        {"@type":"Question","name":"Sao Vàng có thi công toàn quốc không?","acceptedAnswer":{"@type":"Answer","text":"Có. Sao Vàng thi công toàn quốc, chi phí di chuyển thỏa thuận rõ ràng trong hợp đồng."}},
-        {"@type":"Question","name":"Nhôm kính Sao Vàng sử dụng thương hiệu nào?","acceptedAnswer":{"@type":"Answer","text":"Profile nhôm Xingfa, Eurowindow, Việt Pháp, TID. Kính Guardian, AGC, Pilkington."}},
-        {"@type":"Question","name":"Có khảo sát tại công trình miễn phí không?","acceptedAnswer":{"@type":"Answer","text":"Hoàn toàn miễn phí. Kỹ sư đến tận công trình đo đạc và tư vấn."}},
-        {"@type":"Question","name":"Chính sách thanh toán như thế nào?","acceptedAnswer":{"@type":"Answer","text":"30% đặt cọc, 60% khi bàn giao, 10% sau 30 ngày nghiệm thu. Hóa đơn VAT đầy đủ."}}
+        {
+          "@type": "Question",
+          "name": "Dung sai tối đa trong gia công phay tiện CNC tại Sao Vàng là bao nhiêu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Hệ thống máy phay CNC Haas (Mỹ) và máy tiện Mori Seiki (Nhật) của chúng tôi có khả năng đạt dung sai cơ khí gia công lặp lại tối thiểu là ±0.005mm đối với phay và ±0.003mm đối với tiện trong điều kiện phòng đo kiểm soát nhiệt độ. Với các lô sản xuất thông thường tại nhà máy, chúng tôi cam kết kiểm soát dung sai lắp ghép trong biên độ ±0.01mm đến ±0.02mm tùy theo yêu cầu bản vẽ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sao Vàng có hỗ trợ kiểm tra tính khả thi gia công bản vẽ (DFM check) miễn phí không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Có. Khi nhận được bản vẽ thiết kế (định dạng CAD .dwg, .dxf hoặc mô hình 3D .step, .igs) từ khách hàng, đội ngũ Kỹ sư Thiết kế & Gia công (DFM Engineers) của Sao Vàng sẽ tiến hành rà soát kỹ thuật hoàn toàn miễn phí. Chúng tôi sẽ phân tích các điểm nghẽn gia công, bán kính dao phay tối ưu, phương án chạy phôi tiết kiệm vật liệu nhất và gửi báo cáo phản hồi kèm đề xuất tối ưu hóa kết cấu trước khi báo giá chính thức."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Vật liệu Inox nào phù hợp nhất cho các phụ kiện ngoài trời hoặc môi trường muối biển?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Đối với môi trường ban công sát biển, du thuyền hoặc các khu công nghiệp hóa chất ăn mòn cao, chúng tôi khuyến cáo bắt buộc sử dụng thép không gỉ mác Inox SUS316 hoặc SUS316L (chứa Molypden tăng khả năng kháng rỗ). Inox SUS304 thông thường chỉ phù hợp cho nội thất khô ráo hoặc ngoài trời vùng nội địa. Mọi vật liệu inox đầu vào tại xưởng Sao Vàng đều có chứng chỉ chất lượng CO/CQ kiểm tra thành phần hóa học rõ ràng."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Mối hàn kết cấu thép của Sao Vàng tuân theo tiêu chuẩn kỹ thuật nào?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quy trình hàn chế tạo kết cấu dầm cột thép tại nhà xưởng Sao Vàng được thực hiện dựa trên đặc tả quy trình hàn WPS (Welding Procedure Specification) đã được chứng nhận đạt chuẩn AWS D1.1 (kết cấu thép carbon) của Hiệp hội Hàn Hoa Kỳ và ASME Section IX. 100% thợ hàn chịu lực chính của chúng tôi đều sở hữu chứng chỉ hàn AWS hợp lệ và mối hàn chịu ứng lực lớn đều được kiểm tra khuyết tật bằng phương pháp NDT (siêu âm UT hoặc chụp phim RT) trước khi xuất xưởng."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Thời gian hoàn thành đơn hàng gia công cơ khí trung bình là bao lâu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Thời gian hoàn thành phụ thuộc vào quy mô và độ khó của đơn hàng. Đối với các đơn hàng gia công chi tiết đơn lẻ hoặc đồ gá jig dưới 50 mẫu, thời gian giao hàng thường là 3 - 5 ngày làm việc. Đối với chế tạo kết cấu thép quy mô lớn hoặc cửa nhôm kính cho công trình biệt thự trọn gói, thời gian dao động từ 10 - 20 ngày. Tiến độ chính xác sẽ được cam kết rõ ràng bằng điều khoản thưởng/phạt trễ hạn trong hợp đồng kinh tế."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Chính sách bảo hành sản phẩm cửa nhôm kính và kết cấu thép như thế nào?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Chúng tôi áp dụng chính sách bảo hành dài hạn chuẩn Enterprise: Bảo hành 10 năm đối với kết cấu chịu lực của dầm thép kèo thép; Bảo hành 5 năm đối với lớp sơn phủ tĩnh điện ngoài trời của nhôm profile cao cấp (Civro, Maxpro); Bảo hành 2 năm đối với hệ thống phụ kiện kim khí (CMECH, Bogo, Hopo, Hafele) bao gồm các lỗi rỉ sét, xệ cánh hoặc kẹt ổ khóa dưới điều kiện vận hành bình thường."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tôi có cần cung cấp bản vẽ CAD 3D khi yêu cầu báo giá gia công kim loại tấm nghệ thuật không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Không nhất thiết. Nếu bạn đã có sẵn bản vẽ kỹ thuật CAD (.dwg) hoặc file vector (.dxf, .ai), đó là tài liệu lý tưởng nhất để chạy máy cắt laser tấm. Tuy nhiên, nếu bạn chỉ có bản vẽ phác thảo tay hoặc ý tưởng thiết kế, đội ngũ KTS và họa viên cơ khí của Sao Vàng sẽ hỗ trợ số hóa, vẽ lại bản vẽ CAD và dựng phối cảnh 3D hoàn thiện để bạn ký duyệt trước khi đưa vào sản xuất hàng loạt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sự khác biệt giữa nhôm cầu cách nhiệt và nhôm thường là gì?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nhôm cầu cách nhiệt (Thermal Break Aluminum) là hệ nhôm cao cấp có cấu trúc khoang trống được ngăn cách ở giữa bằng một dải polyamide cách nhiệt cực tốt. Dải này ngăn chặn dòng nhiệt truyền dẫn trực tiếp qua kim loại nhôm từ bên ngoài vào trong nhà (hoặc ngược lại). Kết hợp nhôm cầu cách nhiệt với kính hộp hút chân không bơm khí trơ giúp giảm 40% lượng nhiệt thất thoát, tối ưu hóa hóa đơn điện điều hòa và tăng khả năng cách âm vượt trội so với nhôm thường."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sao Vàng có hỗ trợ vận chuyển và lắp đặt tận nơi tại các tỉnh ngoài Hà Nội không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Có. Chúng tôi nhận thi công, vận chuyển và lắp đặt trọn gói trên toàn quốc, đặc biệt tập trung tại miền Bắc và miền Trung Việt Nam. Đội ngũ lắp dựng công trình của chúng tôi có đầy đủ chứng chỉ an toàn lao động trên cao, bảo hiểm trách nhiệm dân sự công trình và thiết bị hỗ trợ tự có để đảm bảo thi công đúng tiến độ kỹ thuật được duyệt."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Tại sao giá thi công vách kính mặt dựng lại phụ thuộc nhiều vào keo kết cấu silicone?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Mặt dựng vách kính hệ facade (Stick/Unitized) chịu tải trọng gió cực lớn trên các tòa nhà cao tầng. Keo silicone kết cấu (Structural Sealant - ví dụ Dow Corning 795, 995) đóng vai trò là liên kết duy nhất giữ các tấm kính nặng hàng trăm kg bám vào khung nhôm chịu lực mà không dùng kẹp cơ khí lộ thiên. Sử dụng keo kém chất lượng hoặc thi công sai quy trình không làm sạch bề mặt sẽ gây nứt vỡ, rơi kính cực kỳ nguy hiểm. Sao Vàng cam kết chỉ sử dụng keo nhập khẩu chính hãng có test bám dính đạt chuẩn ASTM."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://www.cokhisaovang.com/#howto",
+      "name": "Quy trình Báo giá & Triển khai thầu Cơ Khí - Nhôm Kính Sao Vàng",
+      "description": "5 bước chuẩn hóa chuyên nghiệp dành cho Chủ đầu tư và Tổng thầu Xây dựng.",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Tiếp nhận thông tin & Khảo sát",
+          "text": "Sao Vàng thu nhận hồ sơ dự toán thầu, bản vẽ CAD và đo đạc hiện trạng bằng máy laser chuyên dụng."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Tư vấn kỹ thuật & DFM Check",
+          "text": "Rà soát kỹ thuật bản vẽ hoàn toàn miễn phí, phân tích các rủi ro chế tạo và đề xuất phương án tối ưu hóa vật tư."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Đơn giá chi tiết & Đàm phán",
+          "text": "Lập bảng tiên lượng dự toán thầu (BOQ) và đề xuất biện pháp thi công tối ưu trong vòng 24 - 48 giờ."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "name": "Sản xuất gia công CNC",
+          "text": "Tiến hành gia công cơ khí phay tiện CNC, cắt laser kim loại tấm và đùn ép/sơn phủ nhôm tại nhà xưởng đạt chuẩn AWS/ASME."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "name": "Lắp dựng & Nghiệm thu",
+          "text": "Vận chuyển và lắp dựng tại công trường bởi đội thợ lành nghề, nghiệm thu đo kiểm bằng thiết bị chuyên sâu và bàn giao hồ sơ bảo hành."
+        }
       ]
     }
-    </script>
+  ]
+}
+</script>
 
   </section>
 
@@ -2158,7 +1774,7 @@
           <div class="footer-contact-items">
             <div class="footer-contact-item">
               <i class="ri-map-pin-2-line" aria-hidden="true"></i>
-              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam.</span>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Phú La, TP Hà Nội, Việt Nam.</span>
             </div>
             <div class="footer-contact-item">
               <i class="ri-phone-line" aria-hidden="true"></i>
@@ -2174,7 +1790,7 @@
             </div>
             <div class="footer-contact-item">
               <i class="ri-global-line" aria-hidden="true"></i>
-              <a href="https://www.CoKhiSaoVang.com" target="_blank" style="color: inherit; text-decoration: none;">www.CoKhiSaoVang.com</a>
+              <a href="https://www.cokhisaovang.com" target="_blank" style="color: inherit; text-decoration: none;">www.CoKhiSaoVang.com</a>
             </div>
             <div class="footer-contact-item">
               <i class="ri-file-list-3-line" aria-hidden="true"></i>
@@ -2223,77 +1839,7 @@
 
 
   <!-- Schema.org JSON-LD — Organization + LocalBusiness + WebSite -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://www.cokhi-saovang.vn/#organization",
-        "name": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG",
-        "alternateName": "SAO VANG MECHANICAL MANUFACTURING JOINT STOCK COMPANY",
-        "legalName": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG",
-        "taxID": "0110808047",
-        "url": "https://www.cokhi-saovang.vn",
-        "logo": "https://www.cokhi-saovang.vn/assets/images/logo-sv-main.svg",
-        "slogan": "Kiến Tạo Giá Trị Bền Vững",
-        "telephone": "+84-869-590-279",
-        "email": "info@cokhi-saovang.vn",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "171 Đi Bộ Hà Nội",
-          "addressLocality": "Hà Nội",
-          "addressCountry": "VN"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-          "opens": "07:30",
-          "closes": "17:30"
-        },
-        "sameAs": [
-          "https://www.facebook.com/CoKhiSaoVang",
-          "https://www.youtube.com/@CoKhiSaoVang"
-        ]
-      },
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://www.cokhi-saovang.vn/#localbusiness",
-        "name": "Cơ Khí Sao Vàng",
-        "image": "https://www.cokhi-saovang.vn/assets/images/hero-bg.jpg",
-        "url": "https://www.cokhi-saovang.vn",
-        "telephone": "+84-869-590-279",
-        "email": "info@cokhi-saovang.vn",
-        "priceRange": "$$",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "171 Đi Bộ Hà Nội",
-          "addressLocality": "Hà Nội",
-          "addressCountry": "VN"
-        },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
-          "opens": "07:30",
-          "closes": "17:30"
-        },
-        "areaServed": {
-          "@type": "Country",
-          "name": "Vietnam"
-        },
-        "description": "Chuyên gia gia công cơ khí chính xác CNC, kết cấu thép, inox, cửa nhôm kính, mặt dựng, lan can kính cường lực tại Hà Nội."
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://www.cokhi-saovang.vn/#website",
-        "url": "https://www.cokhi-saovang.vn",
-        "name": "SAO VÀNG — Cơ Khí Chính Xác & Nhôm Kính Cao Cấp",
-        "publisher": {"@id": "https://www.cokhi-saovang.vn/#organization"},
-        "inLanguage": "vi-VN"
-      }
-    ]
-  }
-  </script>
+  
 
   <!-- JS Modules -->
   <script src="assets/js/main.js"></script>

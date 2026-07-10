@@ -1,0 +1,34 @@
+[
+  {
+    "assetId": "dl-cap-statement",
+    "title": "Sao Vàng Corporate Capability Statement 2026",
+    "fileType": "PDF Document",
+    "fileSize": "12.4 MB",
+    "downloadUrl": "assets/docs/downloads/sao-vang-capability-statement-2026.pdf",
+    "description": "Hồ sơ năng lực điện tử chi tiết về hệ thống nhà xưởng, máy móc CNC, chứng chỉ kỹ thuật ISO/AWS và danh sách dự án thầu tiêu biểu của Sao Vàng."
+  },
+  {
+    "assetId": "dl-cat-sv-aluminium",
+    "title": "Catalogue Hệ Cửa Nhôm & Profile Kỹ Thuật SV Aluminium",
+    "fileType": "PDF Document",
+    "fileSize": "18.6 MB",
+    "downloadUrl": "assets/docs/downloads/sv-aluminium-profile-catalogue.pdf",
+    "description": "Tài liệu kỹ thuật tổng hợp mặt cắt thanh nhôm profile các hệ SV65, SV93, SV100 tích hợp dải cầu cách nhiệt và phương án phụ kiện lắp đặt."
+  },
+  {
+    "assetId": "dl-cad-sv65-facade",
+    "title": "Bản vẽ AutoCAD mặt dựng Facade kính hệ SV65",
+    "fileType": "ZIP Archive (DWG/DXF files)",
+    "fileSize": "4.8 MB",
+    "downloadUrl": "assets/docs/downloads/cad-sv65-facade-sections.zip",
+    "description": "Thư viện bản vẽ CAD kỹ thuật mặt cắt chi tiết nút giao vách kính mặt dựng hệ Stick và Unitized SV65 phục vụ KTS triển khai Shop Drawing."
+  },
+  {
+    "assetId": "dl-wps-aws-certs",
+    "title": "Quy trình đặc tả hàn WPS & Chứng chỉ thợ hàn AWS",
+    "fileType": "PDF Document",
+    "fileSize": "3.5 MB",
+    "downloadUrl": "assets/docs/downloads/sao-vang-wps-aws-certificates.pdf",
+    "description": "Hồ sơ quy trình kỹ thuật hàn kết cấu thép AWS D1.1 và hàn inox AWS D1.6 được chứng thực bởi Trung tâm Đo lường Chất lượng."
+  }
+]

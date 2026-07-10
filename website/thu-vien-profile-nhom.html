@@ -333,6 +333,7 @@
             <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Sao Vàng</a>
           </div>
         </div>
+        <a href="san-pham.html" class="nav-menu-link">Sản Phẩm</a>
         <a href="phu-kien.html" class="nav-menu-link">Phụ Kiện</a>
         <a href="thu-vien-profile-nhom.html" class="nav-menu-link">Profile Nhôm</a>
         <a href="du-an.html" class="nav-menu-link">Dự Án Đã Thực Hiện</a>
@@ -359,6 +360,7 @@
     <a href="co-khi-sao-vang.html" class="nav-drawer-link">Cơ Khí Sao Vàng</a>
     <a href="nhom-sao-vang.html" class="nav-drawer-link">Nhôm Sao Vàng</a>
     <a href="linh-vuc-hoat-dong.html" class="nav-drawer-link">Lĩnh Vực Hoạt Động</a>
+    <a href="san-pham.html" class="nav-drawer-link">Sản Phẩm</a>
     <a href="phu-kien.html" class="nav-drawer-link">Phụ Kiện</a>
     <a href="thu-vien-profile-nhom.html" class="nav-drawer-link active">Profile Nhôm</a>
     <a href="du-an.html" class="nav-drawer-link">Dự Án Đã Thực Hiện</a>
@@ -602,51 +604,6 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/modules/navbar.js"></script>
   <script>
-  // ═══════════════════════════════════════════════════
-  //  PROFILE NHÔM DATA — All 47 profiles from Đại Phúc
-  // ═══════════════════════════════════════════════════
-  const BASE = 'https://nhomkinhdaiphuc.com/';
-  const PROFILES = [
-    // Xingfa Quảng Đông
-    { slug: 'nhom-xingfa-quang-dong-mau-xam-ghi-14',       name: 'Profile Nhôm Xingfa Quảng Đông màu xám ghi',                    brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-xam-ghi_878588/nhom-xingfa-quang-dong-mau-xam-ghi.webp' },
-    { slug: 'nhom-xingfa-quang-dong-mau-trang-15',         name: 'Profile Nhôm Xingfa Quảng Đông màu trắng',                      brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-trang_967078/nhom-xingfa-quang-dong-mau-trang.webp' },
-    { slug: 'nhom-xingfa-quang-dong-mau-den-16',           name: 'Profile Nhôm Xingfa Quảng Đông màu đen',                        brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-den_528658/nhom-xingfa-quang-dong-mau-den.webp' },
-    { slug: 'nhom-xingfa-quang-dong-mau-nau-ca-phe-17',    name: 'Profile Nhôm Xingfa Quảng Đông màu nâu cà phê',                 brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-nau-ca-phe_558423/nhom-xingfa-quang-dong-mau-nau-ca-phe.webp' },
-    { slug: 'nhom-xingfa-quang-dong-mau-van-go-lim-18',    name: 'Profile Nhôm Xingfa Quảng Đông màu vân gỗ lim',                 brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-van-go-lim_039828/nhom-xingfa-quang-dong-mau-van-go-lim.webp' },
-    { slug: 'nhom-xingfa-quang-dong-mau-van-go-trac-19',   name: 'Profile Nhôm Xingfa Quảng Đông màu vân gỗ trắc',                brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-van-go-trac_346025/nhom-xingfa-quang-dong-mau-van-go-trac.webp' },
-    { slug: 'nhom-xingfa-quang-dong-mau-xam-ghi',          name: 'Profile Nhôm Xingfa Quảng Đông màu xám ghi (cơ bản)',           brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mau-xam-ghi_878588/nhom-xingfa-quang-dong-mau-xam-ghi.webp' },
-    { slug: 'nhom-xingfa-quang-dong-mat-dung-he-65-mau-xam-ghi-21', name: 'Profile Nhôm Xingfa Quảng Đông mặt dựng hệ 65 màu xám ghi', brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-mat-dung-he-65-mau-xam-ghi_484652/nhom-xingfa-quang-dong-mat-dung-he-65-mau-xam-ghi.webp' },
-    { slug: 'nhom-xingfa-quang-dong-cua-di-cua-so-cau-cach-nhiet-he-55-mau-xam-ghi-22', name: 'Profile Nhôm Xingfa Quảng Đông cầu cách nhiệt hệ 55 màu xám ghi', brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-quang-dong-cua-di-cua-so-cau-cach-nhiet-he-55-mau-xam-ghi_458792/nhom-xingfa-quang-dong-cua-di-cua-so-cau-cach-nhiet-he-55-mau-xam-ghi.webp' },
-    { slug: 'nhom-xinga-quang-dong-cua-lua-cau-cach-nhiet-he-sc80-mau-xam-ghi-23', name: 'Profile Nhôm Xingfa Quảng Đông cửa lùa cầu cách nhiệt hệ SC80 màu xám ghi', brand: 'xingfa-quang-dong', img: 'thumb/350x350/1/upload/henhom/nhom-xinga-quang-dong-cua-lua-cau-cach-nhiet-he-sc80-mau-xam-ghi_989782/nhom-xinga-quang-dong-cua-lua-cau-cach-nhiet-he-sc80-mau-xam-ghi.webp' },
-    // Xingfa Taiwan
-    { slug: 'nhom-xingfa-taiwan-day-2-0mm-mau-xam-ghi-24', name: 'Profile Nhôm Xingfa Taiwan dày 2.0mm màu xám ghi',              brand: 'xingfa-taiwan', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-taiwan-day-2-0mm-mau-xam-ghi_907287/nhom-xingfa-taiwan-day-2-0mm-mau-xam-ghi.webp' },
-    { slug: 'nhom-xingfa-taiwan-day-1-8mm-mau-xam-ghi-25', name: 'Profile Nhôm Xingfa Taiwan dày 1.8mm màu xám ghi',              brand: 'xingfa-taiwan', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-taiwan-day-1-8mm-mau-xam-ghi_523246/nhom-xingfa-taiwan-day-1-8mm-mau-xam-ghi.webp' },
-    { slug: 'nhom-xingfa-taiwan-day-1-4mm-mau-xam-ghi-26', name: 'Profile Nhôm Xingfa Taiwan dày 1.4mm màu xám ghi',              brand: 'xingfa-taiwan', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-taiwan-day-1-4mm-mau-xam-ghi_132465/nhom-xingfa-taiwan-day-1-4mm-mau-xam-ghi.webp' },
-    { slug: 'nhom-xingfa-taiwan-day-1-2mm-mau-xam-ghi-20', name: 'Profile Nhôm Xingfa Taiwan dày 1.2mm màu xám ghi',              brand: 'xingfa-taiwan', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-taiwan-day-1-2mm-mau-xam-ghi_914890/nhom-xingfa-taiwan-day-1-2mm-mau-xam-ghi.webp' },
-    // Maxpro.JP
-    { slug: 'nhom-maxpro-jp-mau-nau-thu-27',                name: 'Profile Nhôm Maxpro.JP màu nâu thu',                             brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-mau-nau-thu_207582/nhom-maxpro-jp-mau-nau-thu.webp' },
-    { slug: 'nhom-maxpro-jp-he-lan-can-mau-nau-thu-30',     name: 'Profile Nhôm Maxpro.JP hệ lan can màu nâu thu',                  brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-lan-can-mau-nau-thu_794291/nhom-maxpro-jp-he-lan-can-mau-nau-thu.webp' },
-    { slug: 'nhom-truot-quay-queenviet-mau-xam-ghi-31',     name: 'Profile Nhôm trượt quay QueenViet màu xám ghi',                  brand: 'queenviet', img: 'thumb/350x350/1/upload/henhom/nhom-truot-quay-queenviet-mau-xam-ghi_058391/nhom-truot-quay-queenviet-mau-xam-ghi.webp' },
-    { slug: 'nhom-slim-alugood-mau-den-nham-32',            name: 'Profile Nhôm Slim Alugood màu đen nhám',                         brand: 'alugood', img: 'thumb/350x350/1/upload/henhom/nhom-slim-alugood-mau-den-nham_046760/nhom-slim-alugood-mau-den-nham.webp' },
-    { slug: 'nhom-slim-alugood-mau-trang-33',               name: 'Profile Nhôm Slim Alugood màu trắng',                            brand: 'alugood', img: 'thumb/350x350/1/upload/henhom/nhom-slim-alugood-mau-trang_209227/nhom-slim-alugood-mau-trang.webp' },
-    { slug: 'nhom-slim-alugood-mau-vang-xuoc-34',           name: 'Profile Nhôm Slim Alugood màu vàng xước',                        brand: 'alugood', img: 'thumb/350x350/1/upload/henhom/nhom-slim-alugood-mau-vang-xuoc_828510/nhom-slim-alugood-mau-vang-xuoc.webp' },
-    { slug: 'nhom-truot-quay-queenviet-mau-van-go-35',      name: 'Profile Nhôm trượt quay QueenViet màu vân gỗ',                   brand: 'queenviet', img: 'thumb/350x350/1/upload/henhom/nhom-truot-quay-queenviet-mau-van-go_818152/nhom-truot-quay-queenviet-mau-van-go.webp' },
-    { slug: 'nhom-maxpro-jp-mau-sam-banh-36',               name: 'Profile Nhôm Maxpro.JP màu sâm banh',                            brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-mau-sam-banh_705349/nhom-maxpro-jp-mau-sam-banh.webp' },
-    { slug: 'nhom-maxpro-jp-mau-den-min-37',                name: 'Profile Nhôm Maxpro.JP màu đen mịn',                             brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-mau-den-min_264913/nhom-maxpro-jp-mau-den-min.webp' },
-    { slug: 'nhom-maxpro-jp-he-mat-dung-65-mau-sam-banh-38', name: 'Profile Nhôm Maxpro.JP hệ mặt dựng 65 màu sâm banh',           brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-mat-dung-65-mau-sam-banh_318778/nhom-maxpro-jp-he-mat-dung-65-mau-sam-banh.webp' },
-    { slug: 'nhom-maxpro-jp-he-mat-dung-65-mau-den-min-39', name: 'Profile Nhôm Maxpro.JP hệ mặt dựng 65 màu đen mịn',             brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-mat-dung-65-mau-den-min_505542/nhom-maxpro-jp-he-mat-dung-65-mau-den-min.webp' },
-    { slug: 'nhom-maxpro-jp-he-lan-can-mau-sam-banh-40',    name: 'Profile Nhôm Maxpro.JP hệ lan can màu sâm banh',                 brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-lan-can-mau-sam-banh_859178/nhom-maxpro-jp-he-lan-can-mau-sam-banh.webp' },
-    { slug: 'nhom-maxpro-jp-he-lan-can-mau-den-min-41',     name: 'Profile Nhôm Maxpro.JP hệ lan can màu đen mịn',                  brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-lan-can-mau-den-min_934368/nhom-maxpro-jp-he-lan-can-mau-den-min.webp' },
-    { slug: 'nhom-maxpro-jp-mau-trang-42',                  name: 'Profile Nhôm Maxpro.JP màu trắng',                               brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-mau-trang_646646/nhom-maxpro-jp-mau-trang.webp' },
-    { slug: 'nhom-xingfa-owin-mau-van-go-trac-43',          name: 'Profile Nhôm Xingfa Owin màu vân gỗ trắc',                       brand: 'owin', img: 'thumb/350x350/1/upload/henhom/nhom-xingfa-owin-mau-van-go-trac_/nhom-xingfa-owin-mau-van-go-trac.webp' },
-    { slug: 'nhom-noi-that-owin-mau-go-trac-44',            name: 'Profile Nhôm nội thất Owin màu gỗ trắc',                         brand: 'owin', img: 'thumb/350x350/1/upload/henhom/nhom-noi-that-owin-mau-go-trac_758628/nhom-noi-that-owin-mau-go-trac.webp' },
-    { slug: 'nhom-thuy-luc-owin-mau-go-trac-45',            name: 'Profile Nhôm thủy lực Owin màu gỗ trắc',                         brand: 'owin', img: 'thumb/350x350/1/upload/henhom/nhom-thuy-luc-owin-mau-go-trac_/nhom-thuy-luc-owin-mau-go-trac.webp' },
-    { slug: 'nhom-truong-thanh-mau-go-lim-46',              name: 'Profile Nhôm Trường Thành màu gỗ lim',                           brand: 'other', img: 'thumb/350x350/1/upload/henhom/nhom-truong-thanh-mau-go-lim_006931/nhom-truong-thanh-mau-go-lim.webp' },
-    { slug: 'mat-cat-nhom-slim-cover-47',                   name: 'Profile Mặt cắt nhôm Slim Cover',                                brand: 'other', img: 'thumb/350x350/1/upload/henhom/mat-cat-nhom-slim-cover_307357/mat-cat-nhom-slim-cover.webp' },
-    { slug: 'nhom-maxpro-jp-he-lan-can-mau-nau-thu-30',     name: 'Profile Nhôm Maxpro.JP hệ lan can màu nâu thu',                  brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-lan-can-mau-nau-thu_794291/nhom-maxpro-jp-he-lan-can-mau-nau-thu.webp' },
-    { slug: 'nhom-maxpro-jp-he-mat-dung-65-mau-nau-thu-29', name: 'Profile Nhôm Maxpro.JP hệ mặt dựng 65 màu nâu thu',             brand: 'maxpro-jp', img: 'thumb/350x350/1/upload/henhom/nhom-maxpro-jp-he-mat-dung-65-mau-nau-thu_330791/nhom-maxpro-jp-he-mat-dung-65-mau-nau-thu.webp' },
-  ];
-
   const BRAND_LABELS = {
     'xingfa-quang-dong': 'Xingfa Quảng Đông',
     'xingfa-taiwan':     'Xingfa Taiwan',
@@ -657,35 +614,72 @@
     'other':             'Khác',
   };
 
+  let PROFILES = [];
+
+  function brandKey(brandName) {
+    if (!brandName) return 'other';
+    const b = brandName.toLowerCase();
+    if (b.includes('xingfa quảng đông') || b.includes('quảng đông') || b.includes('xingfa')) return 'xingfa-quang-dong';
+    if (b.includes('taiwan')) return 'xingfa-taiwan';
+    if (b.includes('maxpro.jp') || b.includes('maxpro')) return 'maxpro-jp';
+    if (b.includes('queenviet')) return 'queenviet';
+    if (b.includes('slim') || b.includes('alugood') || b.includes('cover')) return 'alugood';
+    if (b.includes('owin')) return 'owin';
+    return 'other';
+  }
+
+  async function loadProfilesList() {
+    try {
+      const res = await fetch('data/profiles.json');
+      const data = await res.json();
+      PROFILES = data.map(p => ({
+        slug: p.id,
+        name: p.title,
+        brand: brandKey(p.origin || p.brandName),
+        img: p.drawings[0] ? p.drawings[0].imageUrl : 'assets/images/no-image.png'
+      }));
+      
+      // Update results counter
+      document.getElementById('resultCount').textContent = PROFILES.length;
+      
+      renderCards('all');
+    } catch(e) {
+      console.error('Failed to load profiles list', e);
+    }
+  }
+
   function renderCards(brand) {
     const grid = document.getElementById('profileGrid');
     const noRes = document.getElementById('noResults');
     const countEl = document.getElementById('resultCount');
     let filtered = brand === 'all' ? PROFILES : PROFILES.filter(p => p.brand === brand);
+    
     // Remove duplicates by slug
     const seen = new Set();
     filtered = filtered.filter(p => { if(seen.has(p.slug)) return false; seen.add(p.slug); return true; });
     countEl.textContent = filtered.length;
+    
     if (!filtered.length) {
       grid.innerHTML = '';
       noRes.style.display = 'block';
       return;
     }
+    
     noRes.style.display = 'none';
     grid.innerHTML = filtered.map(p => `
-      <article class="profile-card" data-brand="${p.brand}">
-        <div class="profile-card-img">
+      <article class="profile-card" data-brand="${p.brand}" style="display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--sv-border); border-radius: var(--sv-radius-card); background: var(--sv-white); box-shadow: var(--sv-shadow-sm); transition: transform var(--sv-transition-base), box-shadow var(--sv-transition-base);">
+        <div class="profile-card-img" style="height: 240px; overflow: hidden; background: #fafafa; display: flex; align-items: center; justify-content: center;">
           <img
-            src="${BASE}${p.img}"
+            src="${p.img}"
             alt="${p.name}"
             loading="lazy"
-            onerror="this.src='assets/images/no-image.png'"
-          />
+            style="max-width: 100%; max-height: 100%; object-fit: contain; padding: 10px;"
+            onerror="this.src='assets/images/no-image.png'">
         </div>
-        <div class="profile-card-body">
-          <div class="profile-card-brand">${BRAND_LABELS[p.brand] || p.brand}</div>
-          <h3 class="profile-card-name">${p.name}</h3>
-          <a href="profile-nhom-chi-tiet.html?slug=${p.slug}" class="profile-card-btn">
+        <div class="profile-card-body" style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+          <div class="profile-card-brand" style="font-family: var(--sv-font-head); font-size: 11px; color: var(--sv-text-gold-aa); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">${BRAND_LABELS[p.brand] || p.brand}</div>
+          <h3 class="profile-card-name" style="font-family: var(--sv-font-head); font-size: 14px; color: var(--sv-dark-700); font-weight: 800; line-height: 1.4; margin-bottom: 16px; flex: 1;">${p.name}</h3>
+          <a href="profile-nhom-chi-tiet.html?slug=${p.slug}" class="profile-card-btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px; border-radius: 6px; background: var(--sv-red-600); color: var(--sv-white); font-family: var(--sv-font-head); font-size: 12px; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; transition: background 0.2s;">
             <i class="ri-eye-line"></i> Xem chi tiết
           </a>
         </div>
@@ -703,8 +697,9 @@
     });
   });
 
-  // Initial render
-  renderCards('all');
+  // Initial load
+  loadProfilesList();
+
   </script>
   <script src="assets/js/shared/internal-links.js"></script>
   <!-- Sprint 3: Service CTA -->

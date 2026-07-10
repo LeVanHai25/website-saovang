@@ -1,0 +1,86 @@
+[
+  {
+    "materialId": "nhom-maxpro-ed",
+    "category": "Aluminium Profile",
+    "name": "Thanh nhôm profile Maxpro.JP ED",
+    "origin": "Nhật Bản",
+    "technicalSpecs": {
+      "surfaceTreatment": "Mạ điện di ED (Electrodeposition Anodized)",
+      "durabilityStandard": "JIS H8602 (Nhật Bản)",
+      "hardness": "10 - 12 Webster HW",
+      "saltSprayResistance": "> 2000 giờ thảm phun muối biển",
+      "warrantyColor": "25 - 40 năm"
+    }
+  },
+  {
+    "materialId": "nhom-civro-germany",
+    "category": "Aluminium Profile",
+    "name": "Thanh nhôm profile Civro rãnh C",
+    "origin": "Công nghệ Đức",
+    "technicalSpecs": {
+      "structure": "Cấu trúc đa khoang tích hợp rãnh C châu Âu",
+      "thermalBreak": "Dải polyamide cách nhiệt độ dày 24mm",
+      "uValue": "1.3 - 1.8 W/m2.K (Cản nhiệt cực cao)",
+      "compatibility": "Phụ kiện CMECH Mỹ, Sobinco Bỉ"
+    }
+  },
+  {
+    "materialId": "nhom-xingfa-qd",
+    "category": "Aluminium Profile",
+    "name": "Thanh nhôm profile Xingfa Quảng Đông nhập khẩu",
+    "origin": "Trung Quốc (Tem đỏ chính hãng)",
+    "technicalSpecs": {
+      "surfaceTreatment": "Sơn tĩnh điện bột ngoài trời AkzoNobel",
+      "alloyGrade": "6063-T5",
+      "thickness": "1.4mm - 2.5mm",
+      "warrantyColor": "5 năm"
+    }
+  },
+  {
+    "materialId": "kinh-hop-low-e-12mm",
+    "category": "Glass",
+    "name": "Kính hộp Low-E cản nhiệt hút chân không",
+    "origin": "Guardian Glass (Mỹ) gia công Quatest",
+    "technicalSpecs": {
+      "structure": "Kính 5mm Low-E + 12mm Argon Spacer + Kính 5mm cường lực",
+      "uValue": "< 1.5 W/m2.K",
+      "shgc": "0.38 (Hệ số hấp thụ nhiệt mặt trời thấp)",
+      "vlt": "62% (Hệ số truyền sáng tự nhiên cao)"
+    }
+  },
+  {
+    "materialId": "kinh-dan-cuong-luc-sgp",
+    "category": "Glass",
+    "name": "Kính dán an toàn nhiều lớp phim SentryGlas (SGP)",
+    "origin": "DuPont (Mỹ) gia công",
+    "technicalSpecs": {
+      "filmType": "SentryGlas Ionoplast Interlayer (SGP)",
+      "structure": "Kính cường lực 6mm + 1.52mm SGP film + Kính cường lực 6mm",
+      "strength": "Cứng hơn 5 lần, chịu lực uốn gấp 100 lần phim PVB thông thường",
+      "safety": "Kính vỡ vẫn giữ nguyên kết cấu đứng vững chịu bão lớn"
+    }
+  },
+  {
+    "materialId": "inox-316l-marine",
+    "category": "Stainless Steel",
+    "name": "Thép không gỉ mác Inox SUS316L chuyên dụng hàng hải",
+    "origin": "Posco (Hàn Quốc) nhập khẩu",
+    "technicalSpecs": {
+      "alloyGrade": "SUS316L (Low Carbon)",
+      "carbonContent": "< 0.03%",
+      "finish": "Bóng gương 8K (Mirror finish) hoặc xước niken mịn",
+      "corrosionResistance": "Kháng hóa chất clorua và muối mặn biển tuyệt đối"
+    }
+  },
+  {
+    "materialId": "keo-dow-corning-795",
+    "category": "Silicone Sealant",
+    "name": "Keo silicone kết cấu Dow Corning 795",
+    "origin": "Dow Chemical (Mỹ)",
+    "technicalSpecs": {
+      "jointMovement": "+-50% co giãn dịch chuyển",
+      "standard": "ASTM C920, ASTM C1184",
+      "application": "Dùng định vị liên kết kính mặt dựng facade vách kính lớn chịu tải gió"
+    }
+  }
+]

@@ -1,0 +1,162 @@
+[
+  {
+    "id": "gia-cong-cnc-chinh-xac",
+    "slug": "gia-cong-cnc-chinh-xac",
+    "title": "Gia Công Cơ Khí Chính Xác CNC",
+    "shortDescription": "Gia công chi tiết máy, đồ gá, jig, khuôn mẫu cơ khí chính xác CNC với dung sai ±0.01mm.",
+    "fullDescription": "Cơ Khí Sao Vàng chuyên cung cấp dịch vụ phay CNC, tiện CNC chính xác cao cho các chi tiết máy phức tạp. Hệ thống máy móc hiện đại nhập khẩu trực tiếp cùng quy trình kiểm tra chất lượng (CMM) nghiêm ngặt giúp đáp ứng các tiêu chuẩn dung sai lắp ghép khắt khe của đối tác trong và ngoài nước.",
+    "technicalSpecs": [
+      "Dung sai gia công đạt chuẩn: ±0.01mm",
+      "Kích thước bàn máy lớn nhất: 1200mm x 600mm",
+      "Vật liệu gia công: Inox 304/316, thép hợp kim, nhôm định hình, đồng, nhựa kỹ thuật",
+      "Hỗ trợ phân tích bản vẽ & tối ưu hóa chế tạo (Design for Manufacturing - DFM)"
+    ],
+    "leadTimeRange": "3 - 7 ngày tùy khối lượng",
+    "minOrderQty": 1,
+    "relatedProductIds": [],
+    "relatedMachineIds": ["cnc-haas-vf2", "cnc-dmg-mori"],
+    "heroImagePath": "assets/images/services/cnc-machining.webp",
+    "seoTitle": "Gia Công Cơ Khí Chính Xác CNC Tại Hà Nội | Dung Sai ±0.01mm",
+    "seoDescription": "Dịch vụ gia công phay CNC, tiện CNC chính xác chất lượng cao. Dung sai phay tiện ±0.01mm. Hỗ trợ thiết kế DFM và đo kiểm CMM chuyên nghiệp."
+  },
+  {
+    "id": "gia-cong-inox",
+    "slug": "gia-cong-inox",
+    "title": "Gia Công Inox Công Nghiệp & Mỹ Thuật",
+    "shortDescription": "Gia công inox định hình, inox du thuyền, bồn bể công nghiệp, và inox mạ PVD cao cấp.",
+    "fullDescription": "Cung cấp giải pháp gia công và chế tạo các sản phẩm từ thép không gỉ (Inox 304, Inox 316, Inox 316L). Ứng dụng kỹ thuật hàn TIG chuyên sâu cùng công nghệ xử lý bề mặt cao cấp (Hairline, Mirror, PVD Gold) đạt độ bóng và độ bền ăn mòn vượt trội trong môi trường biển.",
+    "technicalSpecs": [
+      "Vật liệu chuyên dụng: SUS304, SUS316, SUS316L chuyên dụng cho du thuyền & hóa chất",
+      "Công nghệ hàn: Hàn TIG bảo vệ khí Argon, xử lý tẩy mối hàn bằng điện hóa",
+      "Bề mặt hoàn thiện: Đạt độ bóng gương (Mirror 8K) hoặc xước mịn (Hairline)",
+      "Đáp ứng chứng chỉ hàn tiêu chuẩn AWS D1.6 (thép không gỉ)"
+    ],
+    "leadTimeRange": "5 - 10 ngày",
+    "minOrderQty": 1,
+    "relatedProductIds": [],
+    "relatedMachineIds": ["laser-cutting-fiber", "bending-machine-cnc"],
+    "heroImagePath": "assets/images/services/inox-machining.webp",
+    "seoTitle": "Gia Công Inox Du Thuyền & Inox Mỹ Thuật Đạt Chuẩn AWS | Sao Vàng",
+    "seoDescription": "Dịch vụ gia công thép không gỉ SUS316L, SUS304 uốn chấn CNC chính xác. Mối hàn TIG đạt chuẩn AWS D1.6. Xử lý bề mặt gương mạ PVD sang trọng."
+  },
+  {
+    "id": "ket-cau-thep",
+    "slug": "ket-cau-thep",
+    "title": "Thiết Kế & Thi Công Kết Cấu Thép",
+    "shortDescription": "Sản xuất và lắp dựng khung kết cấu thép nhà xưởng công nghiệp, dầm thép kèo thép khẩu độ lớn.",
+    "fullDescription": "Dịch vụ trọn gói từ khâu thiết kế bản vẽ kỹ thuật kết cấu, tính toán ứng lực (FEA analysis), chế tạo dầm cột tại xưởng đến thi công lắp dựng ngoài công trường. Quy trình hàn tự động đạt tiêu chuẩn ASME và AWS bảo đảm tính bền vững tối đa cho công trình nhà xưởng.",
+    "technicalSpecs": [
+      "Tiêu chuẩn thiết kế kết cấu: TCVN 5575:2012, Eurocode 3",
+      "Chứng chỉ quy trình hàn: WPS đạt chuẩn AWS D1.1 (kết cấu thép)",
+      "Quy cách sơn phủ: Sơn Epoxy 3 lớp hoặc mạ kẽm nhúng nóng bảo vệ chống ăn mòn 20 năm",
+      "Thiết bị cẩu lắp đặt tải trọng lên đến 50 tấn"
+    ],
+    "leadTimeRange": "15 - 30 ngày tùy quy mô dự án",
+    "minOrderQty": 1,
+    "relatedProductIds": [],
+    "relatedMachineIds": ["laser-cutting-fiber"],
+    "heroImagePath": "assets/images/services/steel-structure.webp",
+    "seoTitle": "Thi Công Kết Cấu Thép Nhà Xưởng Đạt Chuẩn AWS D1.1 | Sao Vàng",
+    "seoDescription": "Dịch vụ chế tạo kết cấu dầm kèo thép công nghiệp, nhà thép tiền chế. Quy trình hàn đạt chuẩn WPS AWS D1.1. Cam kết an toàn và tiến độ thầu."
+  },
+  {
+    "id": "co-khi-nghe-thuat",
+    "slug": "co-khi-nghe-thuat",
+    "title": "Cơ Khí Mỹ Thuật & Sắt Nghệ Thuật",
+    "shortDescription": "Chế tác và thi công cổng nhôm đúc, cổng sắt nghệ thuật uốn, cầu thang sắt xoắn CNC hoa văn sang trọng.",
+    "fullDescription": "Kết hợp giữa công nghệ cắt CNC chính xác cao và tay nghề rèn đúc thủ công nghệ thuật. Chúng tôi tạo nên các sản phẩm ngoại thất (cổng, cửa, lan can) độc bản có độ sắc sảo vượt trội, sơn phủ chống gỉ nhiều lớp thích hợp cho các dự án biệt thự cao cấp.",
+    "technicalSpecs": [
+      "Công nghệ tạo hình: Cắt sắt tấm CNC Laser độ dày đến 20mm, đúc nhôm hợp kim áp lực",
+      "Sử dụng công nghệ sơn hấp sấy tĩnh điện giả cổ cao cấp, bảo hành bề mặt sơn 5 năm",
+      "Quy trình lắp ghép mối nối chốt định vị âm giấu mối hàn thẩm mỹ",
+      "Tùy biến 100% mẫu hoa văn theo bản vẽ thiết kế mỹ thuật của Kiến trúc sư"
+    ],
+    "leadTimeRange": "10 - 20 ngày",
+    "minOrderQty": 1,
+    "relatedProductIds": [],
+    "relatedMachineIds": ["laser-cutting-fiber"],
+    "heroImagePath": "assets/images/services/art-metal.webp",
+    "seoTitle": "Thi Công Cổng Sắt Nghệ Thuật & Cầu Thang Xoắn Biệt Thự Cao Cấp",
+    "seoDescription": "Chuyên chế tác cầu thang xoắn CNC, cổng sắt uốn nghệ thuật, cổng nhôm đúc sang trọng cho biệt thự, lâu đài. Sơn giả cổ cao cấp bền đẹp."
+  },
+  {
+    "id": "cua-nhom-kinh",
+    "slug": "cua-nhom-kinh",
+    "title": "Thi Công Cửa Nhôm Kính Cao Cấp",
+    "shortDescription": "Sản xuất lắp đặt các hệ cửa nhôm Xingfa, Civro, Maxpro, Slim cao cấp tiêu chuẩn Châu Âu.",
+    "fullDescription": "Hệ thống cửa nhôm kính cao cấp được sản xuất trên dây chuyền ép góc tự động chính xác. Sử dụng thanh nhôm profile chính hãng (nhôm cầu cách nhiệt, anodized chống muối biển) tích hợp kính hộp cách âm cách nhiệt Low-E và phụ kiện đồng bộ cao cấp CMECH, Bogo.",
+    "technicalSpecs": [
+      "Hệ nhôm phân phối: Xingfa Quảng Đông, Civro Đức, Maxpro Nhật Bản, nhôm Slim siêu mảnh",
+      "Độ dày thanh nhôm profile: 1.4mm - 2.5mm",
+      "Công nghệ liên kết góc: Ép góc thủy lực tự động bơm keo chịu lực polyurethane",
+      "Phụ kiện tích hợp: CMECH (Mỹ), Sigico (Đức), Bogo, Hopo đồng bộ đạt 100.000 lần đóng mở"
+    ],
+    "leadTimeRange": "7 - 14 ngày",
+    "minOrderQty": 1,
+    "relatedProductIds": [],
+    "relatedMachineIds": ["bending-machine-cnc"],
+    "heroImagePath": "assets/images/services/aluminum-door.webp",
+    "seoTitle": "Lắp Đặt Cửa Nhôm Kính Civro, Maxpro, Slim Cao Cấp | SV Aluminium",
+    "seoDescription": "Đơn vị ủy quyền thi công cửa nhôm Civro (Đức), Maxpro (Nhật Bản). Kính hộp Low-E cách âm cách nhiệt. Phụ kiện CMECH chính hãng cao cấp."
+  },
+  {
+    "id": "vach-kinh",
+    "slug": "vach-kinh",
+    "title": "Vách Kính Mặt Dựng & Vách Ngăn Kính",
+    "shortDescription": "Thi công vách kính mặt dựng facade tòa nhà, vách ngăn phòng tắm kính, phòng làm việc kính cường lực.",
+    "fullDescription": "Chuyên thi công các hệ mặt dựng facade tòa nhà văn phòng (hệ Unitized, Semi-Unitized, Stick) sử dụng khung nhôm chịu lực cao kết hợp kính an toàn nhiều lớp phản quang, chống tia UV. Đội ngũ kỹ sư kết cấu tính toán tải trọng gió và động đất chi tiết.",
+    "technicalSpecs": [
+      "Chất liệu kính: Kính dán an toàn 2 lớp PVB/SGP, kính Temper cường lực độ dày đến 19mm",
+      "Tiêu chuẩn mặt dựng tòa nhà: Đáp ứng tiêu chuẩn ASTM về độ cản gió và độ kín nước",
+      "Keo silicon kết cấu: Dùng keo chuyên dụng Dow Corning (Mỹ) chống chịu thời tiết",
+      "Hệ thống spider liên kết: Inox SUS316 đúc nguyên khối chịu lực cao"
+    ],
+    "leadTimeRange": "15 - 30 ngày",
+    "minOrderQty": 10,
+    "relatedProductIds": [],
+    "relatedMachineIds": [],
+    "heroImagePath": "assets/images/services/glass-facade.webp",
+    "seoTitle": "Thi Công Vách Kính Mặt Dựng Facade Tòa Nhà Văn Phòng U-Value Thấp",
+    "seoDescription": "Dịch vụ lắp dựng mặt dựng nhôm kính facade tòa nhà cao tầng. Đội ngũ kỹ sư tính toán tải lực chuyên nghiệp. Sử dụng kính dán an toàn dán keo Dow Corning."
+  },
+  {
+    "id": "lan-can-kinh",
+    "slug": "lan-can-kinh",
+    "title": "Lan Can Kính Cường Lực",
+    "shortDescription": "Lắp đặt lan can kính ban công, lan can kính cầu thang hệ pát inox hoặc âm sàn hiện đại.",
+    "fullDescription": "Lan can kính cường lực mang lại tầm nhìn thoáng đãng và vẻ đẹp tinh tế cho các kiến trúc hiện đại. Sử dụng pad đỡ Inox 316 chống gỉ sét tuyệt đối kết hợp tay vịn nhôm hoặc gỗ sồi sang trọng. Thiết kế không trụ (frameless) hoặc bán không trụ đạt độ an toàn cao.",
+    "technicalSpecs": [
+      "Loại kính: Kính cường lực 10mm, 12mm hoặc kính dán cường lực an toàn 12.38mm (6+6)",
+      "Phụ kiện định vị: Pad đơn, pad đôi Inox 316 đặc nguyên khối, hoặc u nhôm âm sàn chịu lực",
+      "Tay vịn đi kèm: Inox 304 xước mờ, nhôm Anodized, hoặc gỗ căm xe uốn lượn thẩm mỹ",
+      "Độ cao tiêu chuẩn: 900mm - 1100mm đảm bảo an toàn cho trẻ nhỏ theo TCVN"
+    ],
+    "leadTimeRange": "5 - 10 ngày",
+    "minOrderQty": 5,
+    "relatedProductIds": [],
+    "relatedMachineIds": [],
+    "heroImagePath": "assets/images/services/glass-balustrade.webp",
+    "seoTitle": "Lắp Đặt Lan Can Kính Ban Công Inox 316 Âm Sàn Cao Cấp",
+    "seoDescription": "Dịch vụ thi công lan can kính cường lực ban công, cầu thang. Sử dụng pát định vị Inox 316 chống muối biển và u nhôm âm sàn hiện đại sang trọng."
+  },
+  {
+    "id": "mai-kinh",
+    "slug": "mai-kinh",
+    "title": "Mái Kính Cường Lực & Giếng Trời",
+    "shortDescription": "Thi công mái kính nghệ thuật chân nhện, mái kính trượt giếng trời tự động kết cấu khung thép đỡ vững chắc.",
+    "fullDescription": "Giải pháp mái đón canopy kính cường lực cho sảnh tòa nhà và mái kính giếng trời lấy sáng cho nhà phố. Hệ khung chịu lực được thiết kế an toàn vượt tải, sơn phủ Epoxy chống ăn mòn hoặc kết cấu inox thẩm mỹ, phụ kiện chân nhện Spider giúp phân tán ứng lực co giãn nhiệt của kính.",
+    "technicalSpecs": [
+      "Kết cấu khung: Thép hình I, H mạ kẽm sơn tĩnh điện hoặc Inox SUS304 dày 3mm - 8mm",
+      "Loại kính mái: Kính dán an toàn cường lực 2 lớp (Temper Laminated Glass) tối thiểu 11.52mm",
+      "Liên kết kính: Sử dụng chân nhện Spider inox đúc phân tán tải trọng gió và co giãn nhiệt",
+      "Tích hợp hệ thống cảm biến mưa tự động đóng mở đối với giếng trời trượt thông minh"
+    ],
+    "leadTimeRange": "10 - 18 ngày",
+    "minOrderQty": 1,
+    "relatedProductIds": [],
+    "relatedMachineIds": ["laser-cutting-fiber"],
+    "heroImagePath": "assets/images/services/glass-roof.webp",
+    "seoTitle": "Thi Công Mái Kính Cường Lực Canopy Sảnh Chân Nhện Spider Inox",
+    "seoDescription": "Chuyên thi công mái kính sảnh canopy, giếng trời kính cường lực dán an toàn. Kết cấu khung thép vững chắc tính ứng lực an toàn dài lâu."
+  }
+]

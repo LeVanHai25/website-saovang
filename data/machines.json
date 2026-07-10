@@ -1,0 +1,87 @@
+[
+  {
+    "id": "cnc-haas-vf2",
+    "name": "Máy Phay CNC Haas VF-2 YT",
+    "brandName": "Haas Automation",
+    "modelNumber": "VF-2YT",
+    "origin": "Hoa Kỳ",
+    "capabilities": [
+      "Phay CNC chi tiết máy chính xác cao",
+      "Gia công khuôn mẫu kim loại dung sai khắt khe",
+      "Khoan, taro tự động tốc độ cao",
+      "Gia công phôi nhôm, đồng, inox, thép carbon"
+    ],
+    "workingArea": "X-axis: 762mm, Y-axis: 508mm, Z-axis: 508mm",
+    "precisionTolerance": "+-0.005mm",
+    "yearInstalled": 2024,
+    "imageUrl": "assets/images/machines/haas-vf2.webp"
+  },
+  {
+    "id": "cnc-dmg-mori",
+    "name": "Máy Tiện CNC Mori Seiki NLX 2000",
+    "brandName": "DMG MORI",
+    "modelNumber": "NLX 2000",
+    "origin": "Nhật Bản / Đức",
+    "capabilities": [
+      "Tiện CNC chi tiết tròn xoay biên dạng phức tạp",
+      "Cắt ren chính xác cao hệ mét và hệ inch",
+      "Tích hợp trục phay phụ gia công phức hợp trục Y",
+      "Gia công chi tiết trục truyền động, ống lót định vị"
+    ],
+    "workingArea": "Đường kính tiện tối đa: 366mm, Chiều dài tiện tối đa: 510mm",
+    "precisionTolerance": "+-0.003mm",
+    "yearInstalled": 2025,
+    "imageUrl": "assets/images/machines/dmg-mori-nlx.webp"
+  },
+  {
+    "id": "laser-cutting-fiber",
+    "name": "Máy Cắt Laser Fiber Kim Loại Tấm Bodor C3",
+    "brandName": "Bodor",
+    "modelNumber": "C3-3015",
+    "origin": "Thụy Sĩ / Trung Quốc",
+    "capabilities": [
+      "Cắt laser thép tấm, inox tấm độ dày lớn",
+      "Cắt hoa văn mỹ thuật cổng sắt, cầu thang tấm CNC",
+      "Cắt biên dạng chi tiết kết cấu dầm bản mã kèo thép",
+      "Cắt phôi inox gương tấm không ba-via"
+    ],
+    "workingArea": "3000mm x 1500mm",
+    "precisionTolerance": "+-0.03mm",
+    "yearInstalled": 2024,
+    "imageUrl": "assets/images/machines/bodor-laser.webp"
+  },
+  {
+    "id": "bending-machine-cnc",
+    "name": "Máy Chấn Thủy Lực CNC Amada Promecam",
+    "brandName": "Amada",
+    "modelNumber": "ITS2-103",
+    "origin": "Nhật Bản",
+    "capabilities": [
+      "Chấn định hình tấm kim loại (inox uốn gập profile)",
+      "Uốn chấn khung bao cửa nhôm kính, cửa thép chống cháy",
+      "Chấn bản mã chịu lực kết cấu thép",
+      "Lập trình góc chấn tự động bù sai số đàn hồi kim loại"
+    ],
+    "workingArea": "Chiều dài chấn tối đa: 3100mm, Lực chấn: 100 tấn",
+    "precisionTolerance": "+-0.1mm",
+    "yearInstalled": 2024,
+    "imageUrl": "assets/images/machines/amada-bending.webp"
+  },
+  {
+    "id": "welding-mig-tig",
+    "name": "Máy Hàn Điện Tử TIG & MIG Miller Dynasty 280",
+    "brandName": "Miller Welds",
+    "modelNumber": "Dynasty 280 DX",
+    "origin": "Hoa Kỳ",
+    "capabilities": [
+      "Hàn TIG inox du thuyền SUS316L chất lượng mối hàn cao",
+      "Hàn MIG kết cấu dầm thép công nghiệp tốc độ cao",
+      "Hàn hợp kim nhôm định hình mỏng không biến dạng nhiệt",
+      "Hợp chuẩn quy trình hàn WPS cho các dự án tổng thầu"
+    ],
+    "workingArea": "Phạm vi dòng hàn: 5A - 280A (chu kỳ tải 60%)",
+    "precisionTolerance": "Đạt chuẩn mối hàn AWS D1.1 & D1.6",
+    "yearInstalled": 2024,
+    "imageUrl": "assets/images/machines/miller-welder.webp"
+  }
+]

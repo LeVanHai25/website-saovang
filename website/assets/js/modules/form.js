@@ -160,6 +160,11 @@
       const result = await res.json();
 
       if (result.success) {
+        if (result.ndaUrl) {
+          sessionStorage.setItem('sv_nda_url', result.ndaUrl);
+        } else {
+          sessionStorage.removeItem('sv_nda_url');
+        }
         showToast(result.message || 'Đã gửi thành công! Đang chuyển hướng...', 'success', 3000);
         form.reset();
         // Reset file label
@@ -191,13 +196,43 @@
     });
   }
 
-  /* ─── File upload label ────────────────────────────────────── */
+  /* ─── File upload validation & label ────────────────────────── */
   function bindFileUploads(form) {
     form.querySelectorAll('input[type="file"]').forEach(input => {
-      const label = input.closest('.file-upload-wrapper')?.querySelector('.file-name');
+      const wrapper = input.closest('.file-upload-wrapper');
+      const label = wrapper?.querySelector('.file-name');
       if (!label) return;
+
       input.addEventListener('change', () => {
-        label.textContent = input.files[0]?.name || 'Chưa chọn file nào';
+        const file = input.files[0];
+        clearFieldError(input);
+
+        if (!file) {
+          label.textContent = 'Chưa chọn file nào';
+          return;
+        }
+
+        // 1. Check max size: 50MB
+        const maxSize = 50 * 1024 * 1024;
+        if (file.size > maxSize) {
+          setFieldError(input, `Tệp quá lớn. Giới hạn: 50MB. Tệp hiện tại: ${(file.size / (1024 * 1024)).toFixed(1)}MB.`);
+          showToast('Dung lượng tệp vượt quá giới hạn 50MB.', 'error');
+          input.value = '';
+          label.textContent = 'Chưa chọn file nào';
+          return;
+        }
+
+        // 2. Check B2B approved extensions
+        const allowed = /\.(dwg|dxf|pdf|zip|rar|step|stp|igs|png|jpg|jpeg)$/i;
+        if (!allowed.test(file.name)) {
+          setFieldError(input, 'Định dạng tệp không được hỗ trợ. Chấp nhận CAD, PDF, ZIP/RAR hoặc ảnh.');
+          showToast('Định dạng tệp không được hỗ trợ.', 'error');
+          input.value = '';
+          label.textContent = 'Chưa chọn file nào';
+          return;
+        }
+
+        label.textContent = `${file.name} (${(file.size / (1024 * 1024)).toFixed(2)}MB)`;
       });
     });
   }

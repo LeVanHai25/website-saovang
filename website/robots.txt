@@ -8,4 +8,13 @@ Disallow: /assets/js/modules/cms-pages/
 Disallow: /data/
 
 # Sitemap
-Sitemap: https://www.cokhi-saovang.vn/sitemap.xml
+Sitemap: https://www.cokhisaovang.com/sitemap.xml
+
+# Generative Engine Optimization (GEO)
+User-agent: GPTBot
+Allow: /thu-vien-profile-nhom/
+Allow: /linh-vuc-co-khi/
+
+User-agent: PerplexityBot
+Allow: /
+

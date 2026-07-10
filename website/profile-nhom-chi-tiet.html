@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
@@ -870,9 +870,11 @@ function exportNhom() {
 }
 
 // ── INIT PAGE ──
-function initPage() {
+async function initPage() {
+  await loadProfilesDb();
+  
   const params = new URLSearchParams(location.search);
-  const slug = params.get('slug') || 'nhom-xingfa-quang-dong-mau-xam-ghi-14';
+  const slug = params.get('slug') || 'mat-cat-nhom-slim-cover-cau-tao-ky-thuat-giai-phap-kien-truc';
 
   let profile = PROFILE_DATA[slug];
   if (!profile) {

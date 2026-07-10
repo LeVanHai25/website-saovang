@@ -1,0 +1,50 @@
+[
+  {
+    "mediaId": "media-factory-cnc",
+    "category": "Factory",
+    "path": "assets/images/factory/workshop-cnc-main.webp",
+    "webpVersion": "assets/images/factory/workshop-cnc-main.webp",
+    "thumbnail": "assets/images/factory/thumb-workshop-cnc.webp",
+    "altText": "Toàn cảnh khu vực gia công cơ khí chính xác CNC với máy phay Haas tại xưởng Sao Vàng Hà Nội",
+    "tags": [
+      "factory",
+      "cnc",
+      "haas",
+      "machining"
+    ],
+    "keywords": "xưởng cơ khí hà nội, máy cnc haas, xưởng gia công chính xác",
+    "license": "Copyright © 2026 Sao Vang JSC. All rights reserved."
+  },
+  {
+    "mediaId": "media-machine-laser",
+    "category": "Machines",
+    "path": "assets/images/machines/laser-bodor-c3.webp",
+    "webpVersion": "assets/images/machines/laser-bodor-c3.webp",
+    "thumbnail": "assets/images/machines/thumb-laser-bodor.webp",
+    "altText": "Máy cắt laser fiber Bodor C3 đang gia công cắt bản mã dầm thép tại xưởng",
+    "tags": [
+      "machines",
+      "laser-cutting",
+      "bodor",
+      "metalplate"
+    ],
+    "keywords": "máy cắt laser fiber bodor, cắt laser bản mã thép",
+    "license": "Copyright © 2026 Sao Vang JSC. All rights reserved."
+  },
+  {
+    "mediaId": "media-proj-sanctuary",
+    "category": "Projects",
+    "path": "assets/images/projects/sanctuary-villa-lounge.webp",
+    "webpVersion": "assets/images/projects/sanctuary-villa-lounge.webp",
+    "thumbnail": "assets/images/projects/thumb-sanctuary-villa.webp",
+    "altText": "Hệ cửa nhôm kính lùa slim SV Aluminium mạ điện di ED Maxpro lắp dựng tại resort Sanctuary Hồ Tràm",
+    "tags": [
+      "projects",
+      "sv-aluminium",
+      "maxpro-ed",
+      "villa"
+    ],
+    "keywords": "cửa nhôm slim biệt thự biển, nhôm maxpro ed hồ tràm",
+    "license": "Copyright © 2026 Sao Vang JSC. All rights reserved."
+  }
+]

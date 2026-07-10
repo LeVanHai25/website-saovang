@@ -1,0 +1,850 @@
+{
+  "summary": {
+    "scannedDirectory": "d:\\Sao Vàng\\Website-SaoVang\\website",
+    "totalFilesScanned": 56,
+    "totalFilesWithIssues": 56,
+    "totalIssuesFound": 182
+  },
+  "details": {
+    "404.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      }
+    ],
+    "bao-cao-msmv.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://saovang.vn/bao-cao-msmv.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "bao-gia-nhom.html": [
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/bao-gia-nhom.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "bao-gia.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: email@example.com (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://saovang.vn/bao-gia.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "cau-thang-xoan.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      }
+    ],
+    "chinh-sach-bao-mat.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: info@cokhi-saovang.vn (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: info@cokhi-saovang.vn (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.cokhi-saovang.vn/chinh-sach-bao-mat.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "co-khi-nghe-thuat.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      }
+    ],
+    "co-khi-sao-vang.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: contact@company.com (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/co-khi-sao-vang.html (Official domain root is: https://www.cokhisaovang.com)"
+      },
+      {
+        "type": "RELATIVE_OG_IMAGE",
+        "message": "OpenGraph og:image uses a relative path: assets/images/workshop_cnc.png (Should be absolute URL)"
+      }
+    ],
+    "cong-nghe-thuat.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      }
+    ],
+    "cua-nhom-kinh.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      }
+    ],
+    "du-an-chi-tiet.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://saovang.vn/du-an-chi-tiet.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "du-an-nhom.html": [
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/du-an-nhom.html (Official domain root is: https://www.cokhisaovang.com)"
+      },
+      {
+        "type": "RELATIVE_OG_IMAGE",
+        "message": "OpenGraph og:image uses a relative path: assets/images/project-villa.png (Should be absolute URL)"
+      }
+    ],
+    "du-an.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://saovang.vn/du-an.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "gioi-thieu.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://saovang.vn/gioi-thieu.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "index.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: email@example.com (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: info@cokhi-saovang.vn (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: info@cokhi-saovang.vn (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com (Official domain root is: https://www.cokhisaovang.com)"
+      },
+      {
+        "type": "RELATIVE_OG_IMAGE",
+        "message": "OpenGraph og:image uses a relative path: assets/images/hero-bg.jpg (Should be absolute URL)"
+      }
+    ],
+    "lan-can-kinh.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      }
+    ],
+    "lien-he.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: info@saovang.vn (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: info@saovang.vn (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: email@example.com (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://saovang.vn/lien-he.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "linh-vuc-co-khi.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      }
+    ],
+    "linh-vuc-hoat-dong.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      }
+    ],
+    "linh-vuc-nhom-kinh.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      }
+    ],
+    "lp-cau-thang-xoan-cnc.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: remixicon@3.5.0 (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.cokhi-saovang.vn/lp-cau-thang-xoan-cnc.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "lp-co-khi-chinh-xac.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: remixicon@3.5.0 (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.cokhi-saovang.vn/lp-co-khi-chinh-xac.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "lp-cua-nhom-xingfa.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.cokhi-saovang.vn/lp-cua-nhom-xingfa.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "lp-lan-can-kinh.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: remixicon@3.5.0 (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.cokhi-saovang.vn/lp-lan-can-kinh.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "lp-mat-dung-kinh.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: remixicon@3.5.0 (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.cokhi-saovang.vn/lp-mat-dung-kinh.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "nang-luc.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      }
+    ],
+    "nhom-civro.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/nhom-civro.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "nhom-kogen.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/nhom-kogen.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "nhom-maxpro.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/nhom-maxpro.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "nhom-owin.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/nhom-owin.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "nhom-pma.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/nhom-pma.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "nhom-sao-vang.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/nhom-sao-vang.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "nhom-slim.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/nhom-slim.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "nhom-topal.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/nhom-topal.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "nhom-xingfa.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/nhom-xingfa.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "phu-kien-3h.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/phu-kien-3h.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "phu-kien-bogo.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/phu-kien-bogo.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "phu-kien-cmech.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/phu-kien-cmech.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "phu-kien-draho.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/phu-kien-draho.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "phu-kien-hafele.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/phu-kien-hafele.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "phu-kien-huy-hoang.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/phu-kien-huy-hoang.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "phu-kien-janus.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/phu-kien-janus.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "phu-kien-kinlong.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/phu-kien-kinlong.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "phu-kien-opk.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/phu-kien-opk.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "phu-kien-papo.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_EMAIL",
+        "message": "Found inconsistent email address: service@papo.com.tw (Official is: cokhisaovangvn@gmail.com)"
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/phu-kien-papo.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "phu-kien-sigico.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/phu-kien-sigico.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "phu-kien.html": [
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/phu-kien.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "profile-nhom-chi-tiet.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/profile-nhom-chi-tiet.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "san-pham-chi-tiet.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://saovang.vn/san-pham-chi-tiet.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "san-pham.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://saovang.vn/san-pham.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "thank-you.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      }
+    ],
+    "thu-vien-profile-nhom.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/thu-vien-profile-nhom.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "thu-vien-sp.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://www.CoKhiSaoVang.com/thu-vien-sp.html (Official domain root is: https://www.cokhisaovang.com)"
+      },
+      {
+        "type": "RELATIVE_OG_IMAGE",
+        "message": "OpenGraph og:image uses a relative path: assets/images/project-dalat-villa.png (Should be absolute URL)"
+      }
+    ],
+    "tin-tuc-chi-tiet.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://saovang.vn/tin-tuc-chi-tiet.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "tin-tuc.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      },
+      {
+        "type": "INCONSISTENT_ADDRESS",
+        "message": "Found legacy headquarters ward 'Kiến Hưng' (Official is 'Phú La')."
+      },
+      {
+        "type": "CANONICAL_DOMAIN_MISMATCH",
+        "message": "Canonical URL domain mismatch: https://saovang.vn/tin-tuc.html (Official domain root is: https://www.cokhisaovang.com)"
+      }
+    ],
+    "vach-kinh.html": [
+      {
+        "type": "GTM_PLACEHOLDER",
+        "message": "Found GTM-XXXXXXX placeholder in Google Tag Manager scripts."
+      },
+      {
+        "type": "CLARITY_PLACEHOLDER",
+        "message": "Found XXXXXXXXXX placeholder in Microsoft Clarity tracking code."
+      }
+    ]
+  }
+}

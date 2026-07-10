@@ -36,6 +36,20 @@ async function runSeed() {
       }
     });
   });
+
+  console.log('📦 Running products seeder...');
+  const productsProcess = spawn('node', ['cms/database/seed-products-daiphuc.js'], { stdio: 'inherit', shell: true });
+  
+  await new Promise((resolve, reject) => {
+    productsProcess.on('close', (code) => {
+      if (code === 0) {
+        console.log('✅ Products seeding completed successfully.');
+        resolve();
+      } else {
+        reject(new Error(`Products seeding failed with exit code: ${code}`));
+      }
+    });
+  });
 }
 
 async function run() {

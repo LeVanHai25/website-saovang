@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#9B1C1C" />
+  <title>Tài Liệu Kỹ Thuật | Cơ Khí Sao Vàng — Download Center</title>
+  <meta name="description" content="Tải miễn phí hồ sơ năng lực, catalogue profile nhôm, bản vẽ CAD mặt dựng và chứng chỉ hàn AWS/ISO của Cơ Khí Sao Vàng. Tài liệu kỹ thuật B2B chuyên sâu dành cho KTS, Kỹ sư và Tổng thầu xây dựng." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.cokhisaovang.com/tai-lieu.html" />
+  <meta property="og:title" content="Download Center — Tài Liệu Kỹ Thuật Cơ Khí Sao Vàng" />
+  <meta property="og:description" content="Tải miễn phí hồ sơ năng lực, catalogue profile nhôm, bản vẽ CAD và chứng chỉ kỹ thuật AWS/ISO của Sao Vàng." />
+  <meta property="og:image" content="https://www.cokhisaovang.com/assets/images/og-image.jpg" />
+  <meta property="og:locale" content="vi_VN" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="assets/css/v2/index.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    /* ══ DOWNLOAD CENTER PAGE ═══════════════════════════════════════ */
+
+    /* Hero */
+    .dl-hero {
+      background: linear-gradient(160deg, var(--sv-dark-900) 0%, #1a0808 60%, #0d0404 100%);
+      padding: clamp(100px, 14vw, 160px) 0 clamp(64px, 8vw, 100px);
+      position: relative;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(201,162,39,0.2);
+    }
+    .dl-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse 60% 60% at 80% 30%, rgba(155,28,28,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 20% 70%, rgba(201,162,39,0.08) 0%, transparent 60%);
+    }
+    .dl-hero-content {
+      position: relative; z-index: 1;
+      max-width: 760px;
+    }
+    .dl-hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201,162,39,0.12);
+      border: 1px solid rgba(201,162,39,0.35);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-family: var(--sv-font-head);
+      font-size: 11px; font-weight: 700;
+      color: var(--sv-gold-600);
+      letter-spacing: 0.12em; text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+    .dl-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      color: var(--sv-white);
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+    .dl-hero h1 .accent { color: var(--sv-gold-600); }
+    .dl-hero p {
+      font-size: clamp(0.95rem, 2vw, 1.1rem);
+      color: rgba(255,255,255,0.65);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+
+    /* Stats row */
+    .dl-stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .dl-stat { display: flex; align-items: center; gap: 10px; }
+    .dl-stat-num {
+      font-family: var(--sv-font-head);
+      font-size: 1.5rem; font-weight: 900;
+      color: var(--sv-gold-600);
+    }
+    .dl-stat-label { font-size: 0.8rem; color: rgba(255,255,255,0.5); }
+
+    /* Filter bar */
+    .dl-filters {
+      background: var(--sv-gray-025);
+      border-bottom: 1px solid var(--sv-border);
+      padding: 20px 0;
+      position: sticky; top: 0; z-index: 50;
+    }
+    .dl-filter-inner {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+    }
+    .dl-filter-label {
+      font-family: var(--sv-font-head);
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--sv-gray-300);
+      margin-right: 4px;
+    }
+    .dl-filter-btn {
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-size: 12px; font-weight: 600;
+      font-family: var(--sv-font-head);
+      cursor: pointer; transition: all 0.2s;
+      border: 1.5px solid var(--sv-border);
+      background: var(--sv-white);
+      color: var(--sv-gray-300);
+    }
+    .dl-filter-btn.active, .dl-filter-btn:hover {
+      background: var(--sv-red-600);
+      border-color: var(--sv-red-600);
+      color: var(--sv-white);
+    }
+
+    /* Download grid */
+    .dl-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      padding: 48px 0;
+    }
+
+    /* Download card */
+    .dl-card {
+      background: var(--sv-white);
+      border: 1px solid var(--sv-border);
+      border-radius: var(--sv-radius-lg);
+      overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s;
+      display: flex; flex-direction: column;
+    }
+    .dl-card:hover {
+      box-shadow: var(--sv-shadow-lg);
+      transform: translateY(-4px);
+      border-color: rgba(155,28,28,0.3);
+    }
+    .dl-card-header {
+      padding: 24px 24px 20px;
+      display: flex; align-items: flex-start; gap: 16px;
+    }
+    .dl-icon-wrap {
+      width: 56px; height: 56px; flex-shrink: 0;
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+    }
+    .dl-icon-wrap.pdf   { background: rgba(220,38,38,0.1); color: #dc2626; }
+    .dl-icon-wrap.zip   { background: rgba(234,179,8,0.1);  color: #ca8a04; }
+    .dl-icon-wrap.dwg   { background: rgba(59,130,246,0.1); color: #2563eb; }
+    .dl-icon-wrap.other { background: rgba(100,116,139,0.1); color: #64748b; }
+
+    .dl-card-meta { flex: 1; }
+    .dl-card-type {
+      font-family: var(--sv-font-head);
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--sv-gold-800);
+      margin-bottom: 6px;
+    }
+    .dl-card-title {
+      font-family: var(--sv-font-head);
+      font-size: 0.95rem; font-weight: 700;
+      color: var(--sv-dark-700);
+      line-height: 1.35;
+    }
+    .dl-card-body {
+      padding: 0 24px 20px;
+      flex: 1;
+    }
+    .dl-card-desc {
+      font-size: 0.82rem;
+      color: var(--sv-gray-300);
+      line-height: 1.6;
+    }
+    .dl-card-footer {
+      padding: 16px 24px;
+      border-top: 1px solid var(--sv-gray-025);
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px;
+    }
+    .dl-card-size {
+      font-size: 11px;
+      color: var(--sv-gray-300);
+      display: flex; align-items: center; gap: 4px;
+    }
+    .dl-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 20px;
+      border-radius: 6px;
+      font-family: var(--sv-font-head);
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      cursor: pointer; transition: all 0.2s;
+      border: none;
+      background: var(--sv-red-600);
+      color: var(--sv-white);
+    }
+    .dl-btn:hover {
+      background: var(--sv-red-700);
+      box-shadow: var(--sv-shadow-red);
+      transform: translateY(-1px);
+    }
+
+    /* Lead-gate modal */
+    .dl-modal-overlay {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(0,0,0,0.72);
+      backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: center;
+      padding: 20px;
+      opacity: 0; visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+    .dl-modal-overlay.open { opacity: 1; visibility: visible; }
+
+    .dl-modal {
+      background: var(--sv-white);
+      border-radius: 16px;
+      max-width: 480px; width: 100%;
+      box-shadow: var(--sv-shadow-2xl);
+      overflow: hidden;
+      transform: scale(0.94) translateY(12px);
+      transition: transform 0.3s;
+    }
+    .dl-modal-overlay.open .dl-modal { transform: scale(1) translateY(0); }
+
+    .dl-modal-head {
+      background: var(--sv-dark-900);
+      padding: 28px 28px 24px;
+      position: relative;
+    }
+    .dl-modal-close {
+      position: absolute; top: 16px; right: 16px;
+      width: 32px; height: 32px;
+      border-radius: 50%; border: none;
+      background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.7);
+      cursor: pointer; font-size: 18px;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .dl-modal-close:hover { background: rgba(255,255,255,0.2); }
+    .dl-modal-file-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: rgba(201,162,39,0.15);
+      border: 1px solid rgba(201,162,39,0.3);
+      border-radius: 100px; padding: 4px 12px;
+      font-size: 11px; font-weight: 700;
+      font-family: var(--sv-font-head);
+      color: var(--sv-gold-600);
+      letter-spacing: 0.08em; text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .dl-modal-title {
+      font-family: var(--sv-font-head);
+      font-size: 1rem; font-weight: 800;
+      color: var(--sv-white);
+      line-height: 1.3;
+    }
+
+    .dl-modal-body { padding: 28px; }
+    .dl-modal-subtitle {
+      font-size: 0.9rem; color: var(--sv-gray-300);
+      margin-bottom: 20px; line-height: 1.55;
+    }
+    .dl-form-group { margin-bottom: 16px; }
+    .dl-form-label {
+      display: block;
+      font-family: var(--sv-font-head);
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--sv-dark-700);
+      margin-bottom: 6px;
+    }
+    .dl-form-label .req { color: var(--sv-red-600); }
+    .dl-form-input {
+      width: 100%; padding: 11px 14px;
+      border: 1.5px solid var(--sv-border);
+      border-radius: 8px;
+      font-size: 0.9rem; font-family: var(--sv-font-body);
+      color: var(--sv-dark-700);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      outline: none;
+      background: var(--sv-white);
+    }
+    .dl-form-input:focus {
+      border-color: var(--sv-red-600);
+      box-shadow: 0 0 0 3px rgba(155,28,28,0.08);
+    }
+    .dl-submit-btn {
+      width: 100%; padding: 14px;
+      background: var(--sv-red-600);
+      color: var(--sv-white); border: none;
+      border-radius: 8px; cursor: pointer;
+      font-family: var(--sv-font-head);
+      font-size: 13px; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+      transition: all 0.2s;
+      box-shadow: 0 4px 16px rgba(155,28,28,0.3);
+    }
+    .dl-submit-btn:hover {
+      background: var(--sv-red-700);
+      box-shadow: 0 6px 24px rgba(155,28,28,0.45);
+      transform: translateY(-1px);
+    }
+    .dl-privacy-note {
+      font-size: 11px; color: #9ca3af; text-align: center;
+      margin-top: 12px; line-height: 1.5;
+    }
+
+    /* CTA section */
+    .dl-cta-section {
+      background: linear-gradient(135deg, var(--sv-red-600) 0%, var(--sv-red-700) 100%);
+      border-radius: var(--sv-radius-lg);
+      padding: 48px;
+      text-align: center;
+      margin-bottom: 64px;
+    }
+    .dl-cta-section h2 { color: var(--sv-white); margin-bottom: 12px; }
+    .dl-cta-section p { color: rgba(255,255,255,0.8); margin-bottom: 28px; }
+
+    @media (max-width: 768px) {
+      .dl-stats { gap: 20px; }
+      .dl-filter-inner { gap: 8px; }
+      .dl-grid { grid-template-columns: 1fr; }
+      .dl-cta-section { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "LocalBusiness",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.cokhisaovang.com/#organization",
+      "name": "Cơ Khí Sao Vàng",
+      "legalName": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG",
+      "url": "https://www.cokhisaovang.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.cokhisaovang.com/assets/images/logo-sv-main.svg",
+        "width": 200,
+        "height": 200
+      },
+      "image": "https://www.cokhisaovang.com/assets/images/hero-bg.jpg",
+      "description": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG — Chuyên gia gia công cơ khí chính xác CNC, kết cấu thép, inox du thuyền, cửa nhôm kính, mặt dựng curtain wall và lan can kính cường lực tại Hà Nội. MST: 0110808047.",
+      "telephone": "+84869590279",
+      "email": "cokhisaovangvn@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tầng 3, TT7-35 Khu đô thị Văn Phú",
+        "addressLocality": "Quận Hà Đông",
+        "addressRegion": "Hà Nội",
+        "postalCode": "100000",
+        "addressCountry": "VN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "20.9715",
+        "longitude": "105.7825"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "52",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "17:30"
+        }
+      ],
+      "taxID": "0110808047",
+      "sameAs": [
+        "https://zalo.me/0869590279",
+        "https://www.cokhisaovang.com"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Việt Nam"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Dịch vụ Cơ Khí & Nhôm Kính Sao Vàng",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gia Công Cơ Khí Chính Xác CNC",
+              "url": "https://www.cokhisaovang.com/gia-cong-cnc-chinh-xac.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gia Công Inox Công Nghiệp & Mỹ Thuật",
+              "url": "https://www.cokhisaovang.com/gia-cong-inox.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Thiết Kế & Thi Công Kết Cấu Thép",
+              "url": "https://www.cokhisaovang.com/ket-cau-thep.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cơ Khí Mỹ Thuật & Sắt Nghệ Thuật",
+              "url": "https://www.cokhisaovang.com/co-khi-nghe-thuat.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Thi Công Cửa Nhôm Kính Cao Cấp",
+              "url": "https://www.cokhisaovang.com/cua-nhom-kinh.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vách Kính Mặt Dựng & Vách Ngăn Kính",
+              "url": "https://www.cokhisaovang.com/vach-kinh.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lan Can Kính Cường Lực",
+              "url": "https://www.cokhisaovang.com/lan-can-kinh.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mái Kính Cường Lực & Giếng Trời",
+              "url": "https://www.cokhisaovang.com/mai-kinh.html"
+            }
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Gia công cơ khí chính xác CNC",
+        "Kết cấu thép công nghiệp AWS D1.1",
+        "Cửa nhôm kính kiến trúc cao cấp",
+        "Mặt dựng kính curtain wall",
+        "Inox 316L marine grade",
+        "Lan can kính cường lực",
+        "Mái kính canopy giếng trời"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.cokhisaovang.com/#website",
+      "url": "https://www.cokhisaovang.com",
+      "name": "Cơ Khí Sao Vàng — B2B Industrial Mechanical & Architectural Glass",
+      "description": "Website chính thức của Công ty Cổ phần Sản xuất Cơ khí Sao Vàng",
+      "publisher": {
+        "@id": "https://www.cokhisaovang.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.cokhisaovang.com/san-pham.html?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "vi-VN"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://www.cokhisaovang.com/tai-lieu.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Trang Chủ",
+          "item": "https://www.cokhisaovang.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tài Liệu Kỹ Thuật",
+          "item": "https://www.cokhisaovang.com/tai-lieu.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Hero -->
+<section class="dl-hero">
+  <div class="container">
+    <div class="dl-hero-content" data-reveal>
+      <div class="dl-hero-badge">
+        <i class="ri-folder-open-fill"></i>
+        Technical Resource Center
+      </div>
+      <h1>Thư Viện <span class="accent">Tài Liệu Kỹ Thuật</span><br>Cơ Khí Sao Vàng</h1>
+      <p>Tải miễn phí hồ sơ năng lực, catalogue profile nhôm, bản vẽ CAD mặt dựng và chứng chỉ hàn AWS/ISO. Tài liệu kỹ thuật B2B chuyên sâu dành cho Kiến trúc sư, Kỹ sư kết cấu và Tổng thầu xây dựng.</p>
+
+      <div class="dl-stats">
+        <div class="dl-stat">
+          <span class="dl-stat-num" id="totalDocs">—</span>
+          <span class="dl-stat-label">Tài liệu<br>kỹ thuật</span>
+        </div>
+        <div class="dl-stat">
+          <span class="dl-stat-num">100%</span>
+          <span class="dl-stat-label">Miễn phí<br>tải về</span>
+        </div>
+        <div class="dl-stat">
+          <span class="dl-stat-num">2h</span>
+          <span class="dl-stat-label">Phản hồi<br>tư vấn</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Filter Bar -->
+<div class="dl-filters">
+  <div class="container">
+    <div class="dl-filter-inner">
+      <span class="dl-filter-label">Loại tài liệu:</span>
+      <button class="dl-filter-btn active" data-filter="all">Tất cả</button>
+      <button class="dl-filter-btn" data-filter="pdf">PDF Document</button>
+      <button class="dl-filter-btn" data-filter="zip">CAD / ZIP</button>
+    </div>
+  </div>
+</div>
+
+<!-- Download Grid -->
+<main id="main-content">
+  <div class="container">
+    <div class="dl-grid" id="dlGrid">
+      <!-- Cards rendered by JS from downloads.json -->
+      <div style="grid-column: 1/-1; text-align:center; padding: 60px 0; color: var(--sv-gray-300);">
+        <i class="ri-loader-4-line" style="font-size: 32px; animation: spin 1s linear infinite; display: block; margin-bottom: 12px;"></i>
+        Đang tải danh sách tài liệu...
+      </div>
+    </div>
+
+    <!-- Call to Action -->
+    <div class="dl-cta-section" data-reveal>
+      <h2 class="sv-section-title" style="color:white; margin-bottom: 12px;">Cần tài liệu kỹ thuật chuyên biệt?</h2>
+      <p class="sv-section-desc" style="color: rgba(255,255,255,0.8); margin: 0 auto 28px;">
+        Nếu bạn cần bản vẽ Shop Drawing, WPS tùy chỉnh theo dự án hoặc tài liệu chứng nhận cho cơ quan thẩm định, hãy gửi yêu cầu để được hỗ trợ trong vòng 2 giờ làm việc.
+      </p>
+      <a href="lien-he.html" class="dl-btn" style="display: inline-flex; font-size: 13px; padding: 13px 28px; border-radius: 8px; background: white; color: var(--sv-red-600);">
+        <i class="ri-mail-send-line"></i>
+        Gửi Yêu Cầu Tài Liệu
+      </a>
+    </div>
+  </div>
+</main>
+
+<!-- Lead-Gate Modal -->
+<div class="dl-modal-overlay" id="dlGateOverlay" role="dialog" aria-modal="true" aria-labelledby="dlModalTitle">
+  <div class="dl-modal">
+    <div class="dl-modal-head">
+      <button class="dl-modal-close" id="dlModalClose" aria-label="Đóng">
+        <i class="ri-close-line"></i>
+      </button>
+      <div class="dl-modal-file-badge" id="dlFileBadge">
+        <i class="ri-file-pdf-line"></i> PDF Document
+      </div>
+      <h2 class="dl-modal-title" id="dlModalTitle">Hồ sơ năng lực Sao Vàng 2026</h2>
+    </div>
+
+    <div class="dl-modal-body">
+      <p class="dl-modal-subtitle">
+        Nhập thông tin để tải xuống ngay lập tức. Chúng tôi tôn trọng quyền riêng tư của bạn — không spam, không chia sẻ dữ liệu với bên thứ ba.
+      </p>
+
+      <form id="dlGateForm" novalidate>
+        <input type="hidden" id="dlTargetUrl" value="" />
+
+        <div class="dl-form-group">
+          <label class="dl-form-label" for="dlName">Họ và tên <span class="req">*</span></label>
+          <input class="dl-form-input" type="text" id="dlName" name="name" placeholder="Nguyễn Văn A" required autocomplete="name" />
+        </div>
+
+        <div class="dl-form-group">
+          <label class="dl-form-label" for="dlPhone">Số điện thoại <span class="req">*</span></label>
+          <input class="dl-form-input" type="tel" id="dlPhone" name="phone" placeholder="0869 590 279" required autocomplete="tel" />
+        </div>
+
+        <div class="dl-form-group">
+          <label class="dl-form-label" for="dlCompany">Công ty / Đơn vị</label>
+          <input class="dl-form-input" type="text" id="dlCompany" name="company" placeholder="Tên công ty hoặc dự án" autocomplete="organization" />
+        </div>
+
+        <button type="submit" class="dl-submit-btn" id="dlSubmitBtn">
+          <i class="ri-download-2-line"></i>
+          Tải Xuống Ngay
+        </button>
+        <p class="dl-privacy-note">
+          <i class="ri-lock-2-line"></i>
+          Dữ liệu được mã hóa và bảo mật. Chúng tôi cam kết không chia sẻ thông tin của bạn.
+        </p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+
+<script src="assets/js/main.js"></script>
+<script src="assets/js/modules/navbar.js"></script>
+<script src="assets/js/shared/floating-widget.js"></script>
+<script src="assets/js/shared/analytics.js"></script>
+
+<script>
+(async function initDownloadCenter() {
+  const grid      = document.getElementById('dlGrid');
+  const overlay   = document.getElementById('dlGateOverlay');
+  const closeBtn  = document.getElementById('dlModalClose');
+  const form      = document.getElementById('dlGateForm');
+  const submitBtn = document.getElementById('dlSubmitBtn');
+  const totalEl   = document.getElementById('totalDocs');
+
+  // ─── Load downloads.json ──────────────────────────────────────────
+  let downloads = [];
+  try {
+    const res = await fetch('data/downloads.json');
+    downloads = await res.json();
+    totalEl.textContent = downloads.length;
+  } catch(e) {
+    grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:60px 0;color:#dc2626;">Không thể tải danh sách tài liệu. Vui lòng thử lại sau.</div>';
+    return;
+  }
+
+  // ─── Determine icon class from file type ──────────────────────────
+  function iconFor(fileType, assetId) {
+    if (fileType.toLowerCase().includes('pdf'))   return { cls: 'pdf',  icon: 'ri-file-pdf-2-fill' };
+    if (fileType.toLowerCase().includes('zip'))   return { cls: 'zip',  icon: 'ri-folder-zip-fill' };
+    if (fileType.toLowerCase().includes('dwg') || fileType.toLowerCase().includes('dxf'))
+      return { cls: 'dwg', icon: 'ri-map-2-fill' };
+    return { cls: 'other', icon: 'ri-file-fill' };
+  }
+
+  function filterKey(fileType) {
+    if (fileType.toLowerCase().includes('pdf'))  return 'pdf';
+    if (fileType.toLowerCase().includes('zip') || fileType.toLowerCase().includes('dwg'))  return 'zip';
+    return 'other';
+  }
+
+  // ─── Render cards ─────────────────────────────────────────────────
+  function renderCards(filter = 'all') {
+    const filtered = filter === 'all' ? downloads : downloads.filter(d => filterKey(d.fileType) === filter);
+    if (!filtered.length) {
+      grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:40px;color:var(--sv-gray-300);">Không có tài liệu nào trong danh mục này.</div>';
+      return;
+    }
+    grid.innerHTML = filtered.map(dl => {
+      const { cls, icon } = iconFor(dl.fileType, dl.assetId);
+      return `
+        <article class="dl-card" data-reveal>
+          <div class="dl-card-header">
+            <div class="dl-icon-wrap ${cls}">
+              <i class="${icon}"></i>
+            </div>
+            <div class="dl-card-meta">
+              <div class="dl-card-type">${dl.fileType}</div>
+              <h3 class="dl-card-title">${dl.title}</h3>
+            </div>
+          </div>
+          <div class="dl-card-body">
+            <p class="dl-card-desc">${dl.description}</p>
+          </div>
+          <div class="dl-card-footer">
+            <span class="dl-card-size">
+              <i class="ri-hard-drive-2-line"></i>
+              ${dl.fileSize}
+            </span>
+            <button
+              class="dl-btn"
+              data-url="${dl.downloadUrl}"
+              data-title="${dl.title}"
+              data-type="${dl.fileType}"
+              aria-label="Tải xuống ${dl.title}"
+            >
+              <i class="ri-download-2-line"></i>
+              Tải Xuống
+            </button>
+          </div>
+        </article>
+      `;
+    }).join('');
+  }
+
+  renderCards();
+
+  // ─── Filter buttons ───────────────────────────────────────────────
+  document.querySelectorAll('.dl-filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.dl-filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      renderCards(btn.dataset.filter);
+    });
+  });
+
+  // ─── Open lead-gate modal ─────────────────────────────────────────
+  document.addEventListener('click', e => {
+    const btn = e.target.closest('.dl-btn[data-url]');
+    if (!btn) return;
+    document.getElementById('dlTargetUrl').value = btn.dataset.url;
+    document.getElementById('dlModalTitle').textContent = btn.dataset.title;
+    document.getElementById('dlFileBadge').innerHTML = `<i class="ri-file-line"></i> ${btn.dataset.type}`;
+    overlay.classList.add('open');
+    document.getElementById('dlName').focus();
+    document.body.style.overflow = 'hidden';
+  });
+
+  // ─── Close modal ──────────────────────────────────────────────────
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    form.reset();
+  }
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  // ─── Validate Vietnamese phone ────────────────────────────────────
+  function isValidPhoneVN(v) {
+    return /^(0|\+84)[3-9]\d{8}$/.test(v.replace(/\s/g,''));
+  }
+
+  // ─── Handle gate form submission ──────────────────────────────────
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+
+    const name    = document.getElementById('dlName').value.trim();
+    const phone   = document.getElementById('dlPhone').value.trim();
+    const company = document.getElementById('dlCompany').value.trim();
+    const fileUrl = document.getElementById('dlTargetUrl').value;
+
+    // Validate
+    if (!name) { document.getElementById('dlName').focus(); return; }
+    if (!isValidPhoneVN(phone)) {
+      alert('Vui lòng nhập số điện thoại hợp lệ (10 số, bắt đầu bằng 0 hoặc +84).');
+      document.getElementById('dlPhone').focus();
+      return;
+    }
+
+    // Track download lead in GTM dataLayer
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: 'dl_gate_submit',
+        lead_name: name,
+        lead_phone: phone.replace(/\s/g,''),
+        lead_company: company,
+        document_url: fileUrl,
+        document_title: document.getElementById('dlModalTitle').textContent
+      });
+    }
+
+    // Submit lead to backend (best-effort, do not block download)
+    try {
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name, phone, company,
+          source: 'download_gate',
+          document: fileUrl
+        })
+      });
+    } catch(_) { /* non-blocking */ }
+
+    // Change button to show download is starting
+    submitBtn.innerHTML = '<i class="ri-loader-4-line"></i> Đang mở tệp...';
+    submitBtn.disabled = true;
+
+    // Trigger download after short delay for UX feedback
+    setTimeout(() => {
+      const a = document.createElement('a');
+      a.href = fileUrl;
+      a.download = '';
+      a.target = '_blank';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      closeModal();
+      submitBtn.innerHTML = '<i class="ri-download-2-line"></i> Tải Xuống Ngay';
+      submitBtn.disabled = false;
+
+      // Show success toast if SV.toast is available
+      if (window.SV && window.SV.toast) {
+        window.SV.toast('Tài liệu đang được tải xuống. Cảm ơn bạn đã quan tâm đến Sao Vàng!', 'success', 5000);
+      }
+    }, 800);
+  });
+})();
+</script>
+
+</body>
+</html>

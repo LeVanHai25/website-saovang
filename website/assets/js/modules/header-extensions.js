@@ -699,6 +699,119 @@
           flex: 0 0 calc(50% - 6px);
         }
       }
+      /* ── B2B Search Widget Styles ── */
+      .sv-search-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+        backdrop-filter: blur(8px);
+        z-index: 10000;
+        display: flex;
+        justify-content: center;
+        padding-top: 10vh;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+      .sv-search-overlay.open {
+        opacity: 1;
+        visibility: visible;
+      }
+      .sv-search-modal {
+        width: 90%;
+        max-width: 650px;
+        background: #0A0A0A;
+        border: 1px solid rgba(201,162,39,0.35);
+        border-radius: 12px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        max-height: 75vh;
+        transform: translateY(-20px);
+        transition: transform 0.3s ease;
+      }
+      .sv-search-overlay.open .sv-search-modal {
+        transform: translateY(0);
+      }
+      .sv-search-header {
+        padding: 16px 20px;
+        border-bottom: 1px solid #222;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: #080808;
+      }
+      .sv-search-input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        font-family: 'Inter', sans-serif;
+        outline: none;
+      }
+      .sv-search-close {
+        color: #aaa;
+        cursor: pointer;
+        font-size: 22px;
+        transition: color 0.2s;
+      }
+      .sv-search-close:hover {
+        color: #fff;
+      }
+      .sv-search-results {
+        overflow-y: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        max-height: 60vh;
+      }
+      .sv-search-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .sv-search-group-title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        color: #C9A227;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 4px;
+        border-bottom: 1px solid #222;
+        padding-bottom: 4px;
+      }
+      .sv-search-item {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 14px;
+        background: #111;
+        border-radius: 6px;
+        transition: background 0.2s, transform 0.2s;
+        text-decoration: none;
+        border: 1px solid #222;
+      }
+      .sv-search-item:hover {
+        background: rgba(155,28,28,0.1);
+        border-color: #9B1C1C;
+        transform: translateX(4px);
+      }
+      .sv-search-item-title {
+        font-weight: 600;
+        color: #fff;
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+      .sv-search-item-desc {
+        font-size: 12px;
+        color: #bbb;
+        line-height: 1.4;
+      }
+
     `;
     document.head.appendChild(styleSheet);
   }
@@ -738,11 +851,17 @@
               <span>Email: </span>
               <a href="mailto:cokhisaovangvn@gmail.com">cokhisaovangvn@gmail.com</a>
             </span>
+            <span class="contact-separator">|</span>
+            <span class="contact-item sv-search-trigger-btn" style="cursor: pointer;" title="Tìm kiếm nhanh (Ctrl + K)">
+              <i class="ri-search-line" style="color: #E2B13C;"></i>
+              <span style="font-weight: 700; color: #E2B13C;">Tìm kiếm</span>
+            </span>
+
           </div>
           <div class="contact-row-2">
             <span class="contact-item">
               <i class="ri-map-pin-fill"></i>
-              <span>Địa chỉ: Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam</span>
+              <span>Địa chỉ: Tầng 3, TT7-35 KĐT Văn Phú, phường Phú La, quận Hà Đông, TP Hà Nội, Việt Nam</span>
             </span>
           </div>
         </div>
@@ -927,7 +1046,7 @@
               </div>
               <div class="contact-list-item">
                 <i class="ri-map-pin-2-fill"></i>
-                <span>Địa chỉ: Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội, Việt Nam</span>
+                <span>Địa chỉ: Tầng 3, TT7-35 KĐT Văn Phú, phường Phú La, quận Hà Đông, TP Hà Nội, Việt Nam</span>
               </div>
               <div class="contact-list-item">
                 <i class="ri-file-list-3-fill"></i>
@@ -1145,6 +1264,226 @@
     });
   }
 
+
+  // ─── B2B Search Widget Functionality ──────────────────────────────────
+  let searchData = null;
+
+  async function loadSearchData() {
+    if (searchData) return;
+    try {
+      const [servicesRes, projectsRes, faqRes] = await Promise.all([
+        fetch('data/services.json').then(r => r.json()),
+        fetch('data/projects.json').then(r => r.json()),
+        fetch('data/faq.json').then(r => r.json())
+      ]);
+      searchData = {
+        services: servicesRes,
+        projects: projectsRes,
+        faq: faqRes
+      };
+    } catch (e) {
+      console.error('[Search] Failed to load database files:', e);
+    }
+  }
+
+  function renderSearchResults(query, container) {
+    if (!searchData) return;
+    const q = query.toLowerCase().trim();
+    if (!q) {
+      container.innerHTML = '<div style="color:#aaa; text-align:center; padding: 20px;">Gõ từ khóa để tìm kiếm dịch vụ, dự án hoặc câu hỏi kỹ thuật...</div>';
+      return;
+    }
+
+    let html = '';
+    
+    // 1. Search Services
+    const matchedServices = searchData.services.filter(s => 
+      s.title.toLowerCase().includes(q) || 
+      s.shortDescription.toLowerCase().includes(q)
+    );
+    if (matchedServices.length > 0) {
+      html += `<div class="sv-search-group">
+        <div class="sv-search-group-title">Dịch Vụ & Lĩnh Vực</div>`;
+      matchedServices.forEach(s => {
+        html += `
+          <a href="${s.slug}.html" class="sv-search-item">
+            <span class="sv-search-item-title">${s.title}</span>
+            <span class="sv-search-item-desc">${s.shortDescription}</span>
+          </a>
+        `;
+      });
+      html += `</div>`;
+    }
+
+    // 2. Search Projects
+    const matchedProjects = searchData.projects.filter(p => 
+      p.title.toLowerCase().includes(q) || 
+      p.location.toLowerCase().includes(q) ||
+      p.scopeOfWork.toLowerCase().includes(q)
+    );
+    if (matchedProjects.length > 0) {
+      html += `<div class="sv-search-group">
+        <div class="sv-search-group-title">Dự Án Đã Thực Hiện</div>`;
+      matchedProjects.forEach(p => {
+        html += `
+          <a href="du-an-chi-tiet.html?id=${p.projectId}" class="sv-search-item">
+            <span class="sv-search-item-title">${p.title}</span>
+            <span class="sv-search-item-desc">📍 Vị trí: ${p.location} — ${p.scopeOfWork.substring(0, 100)}...</span>
+          </a>
+        `;
+      });
+      html += `</div>`;
+    }
+
+    // 3. Search FAQ
+    const matchedFAQ = searchData.faq.filter(f => 
+      f.question.toLowerCase().includes(q) || 
+      f.answer.toLowerCase().includes(q)
+    );
+    if (matchedFAQ.length > 0) {
+      html += `<div class="sv-search-group">
+        <div class="sv-search-group-title">Giải Đáp Kỹ Thuật (FAQ)</div>`;
+      matchedFAQ.forEach(f => {
+        html += `
+          <div class="sv-search-item" style="cursor: default;">
+            <span class="sv-search-item-title" style="color: #C9A227;">Q: ${f.question}</span>
+            <span class="sv-search-item-desc">A: ${f.answer}</span>
+          </div>
+        `;
+      });
+      html += `</div>`;
+    }
+
+    if (!html) {
+      container.innerHTML = '<div style="color:#aaa; text-align:center; padding: 20px;">Không tìm thấy kết quả phù hợp. Thử từ khóa khác (ví dụ: CNC, Inox, Civro, Maxpro)...</div>';
+    } else {
+      container.innerHTML = html;
+    }
+  }
+
+  function setupSearchWidget() {
+    // Inject search modal markup
+    const overlay = document.createElement('div');
+    overlay.className = 'sv-search-overlay';
+    overlay.id = 'globalSearchOverlay';
+    overlay.innerHTML = `
+      <div class="sv-search-modal">
+        <div class="sv-search-header">
+          <i class="ri-search-line" style="color: #C9A227; font-size: 20px;"></i>
+          <input type="text" class="sv-search-input" id="globalSearchInput" placeholder="Tìm kiếm dịch vụ, dự án, tài liệu kỹ thuật..." autocomplete="off">
+          <i class="ri-close-line sv-search-close" id="globalSearchClose"></i>
+        </div>
+        <div class="sv-search-results" id="globalSearchResults">
+          <div style="color:#aaa; text-align:center; padding: 20px;">Gõ từ khóa để tìm kiếm...</div>
+        </div>
+      </div>
+    `;
+    document.body.appendChild(overlay);
+
+    const input = document.getElementById('globalSearchInput');
+    const results = document.getElementById('globalSearchResults');
+    const closeBtn = document.getElementById('globalSearchClose');
+
+    const openSearch = async () => {
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      input.focus();
+      await loadSearchData();
+    };
+
+    const closeSearch = () => {
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+      input.value = '';
+      results.innerHTML = '<div style="color:#aaa; text-align:center; padding: 20px;">Gõ từ khóa để tìm kiếm...</div>';
+    };
+
+    // Bind triggers
+    document.addEventListener('click', e => {
+      const trigger = e.target.closest('.sv-search-trigger-btn');
+      if (trigger) {
+        e.preventDefault();
+        openSearch();
+      }
+    });
+
+    closeBtn.addEventListener('click', closeSearch);
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) closeSearch();
+    });
+
+    // Keyboard bindings (Ctrl + K)
+    document.addEventListener('keydown', e => {
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        if (overlay.classList.contains('open')) {
+          closeSearch();
+        } else {
+          openSearch();
+        }
+      }
+      if (e.key === 'Escape' && overlay.classList.contains('open')) {
+        closeSearch();
+      }
+    });
+
+    // Input events
+    input.addEventListener('input', (e) => {
+      renderSearchResults(e.target.value, results);
+    });
+  }
+
+
+  // ─── Dynamic Navigation Links Injection ────────────────────────────────
+  function setupNavLinks() {
+    // 1. Desktop Nav Menu
+    const navMenu = document.getElementById('navMenu');
+    if (navMenu) {
+      // Find "Liên Hệ" link
+      const contactLink = Array.from(navMenu.querySelectorAll('.nav-menu-link'))
+        .find(link => link.getAttribute('href') === 'lien-he.html');
+      
+      if (contactLink && !navMenu.querySelector('[href="tai-lieu.html"]')) {
+        const link = document.createElement('a');
+        link.href = 'tai-lieu.html';
+        link.className = 'nav-menu-link';
+        link.textContent = 'Tài Liệu Kỹ Thuật';
+        navMenu.insertBefore(link, contactLink);
+      }
+      
+      if (contactLink && !navMenu.querySelector('[href="theo-doi.html"]')) {
+        const link = document.createElement('a');
+        link.href = 'theo-doi.html';
+        link.className = 'nav-menu-link';
+        link.textContent = 'Theo Dõi Đơn Hàng';
+        navMenu.insertBefore(link, contactLink);
+      }
+    }
+
+    // 2. Mobile Nav Drawer
+    const navDrawer = document.getElementById('navDrawer');
+    if (navDrawer) {
+      const contactLink = Array.from(navDrawer.querySelectorAll('.nav-drawer-link'))
+        .find(link => link.getAttribute('href') === 'lien-he.html');
+      
+      if (contactLink && !navDrawer.querySelector('[href="tai-lieu.html"]')) {
+        const link = document.createElement('a');
+        link.href = 'tai-lieu.html';
+        link.className = 'nav-drawer-link';
+        link.textContent = 'Tài Liệu Kỹ Thuật';
+        navDrawer.insertBefore(link, contactLink);
+      }
+      
+      if (contactLink && !navDrawer.querySelector('[href="theo-doi.html"]')) {
+        const link = document.createElement('a');
+        link.href = 'theo-doi.html';
+        link.className = 'nav-drawer-link';
+        link.textContent = 'Theo Dõi Đơn Hàng';
+        navDrawer.insertBefore(link, contactLink);
+      }
+    }
+  }
+
   // Initialize on load
   function init() {
     injectGoogleFonts();
@@ -1154,6 +1493,8 @@
     renderFooter();
     setupHomepageSlider();
     setupLogos();
+    setupSearchWidget();
+    setupNavLinks();
   }
 
   if (document.readyState === 'loading') {

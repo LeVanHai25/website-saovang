@@ -1,0 +1,142 @@
+[
+  {
+    "id": "faq-01",
+    "question": "Dung sai tối đa trong gia công phay tiện CNC tại Sao Vàng là bao nhiêu?",
+    "answer": "Hệ thống máy phay CNC Haas (Mỹ) và máy tiện Mori Seiki (Nhật) của chúng tôi có khả năng đạt dung sai cơ khí gia công lặp lại tối thiểu là ±0.005mm đối với phay và ±0.003mm đối với tiện trong điều kiện phòng đo kiểm soát nhiệt độ. Với các lô sản xuất thông thường tại nhà máy, chúng tôi cam kết kiểm soát dung sai lắp ghép trong biên độ ±0.01mm đến ±0.02mm tùy theo yêu cầu bản vẽ.",
+    "category": "technical",
+    "relatedServiceIds": ["gia-cong-cnc-chinh-xac"]
+  },
+  {
+    "id": "faq-02",
+    "question": "Sao Vàng có hỗ trợ kiểm tra tính khả thi gia công bản vẽ (DFM check) miễn phí không?",
+    "answer": "Có. Khi nhận được bản vẽ thiết kế (định dạng CAD .dwg, .dxf hoặc mô hình 3D .step, .igs) từ khách hàng, đội ngũ Kỹ sư Thiết kế & Gia công (DFM Engineers) của Sao Vàng sẽ tiến hành rà soát kỹ thuật hoàn toàn miễn phí. Chúng tôi sẽ phân tích các điểm nghẽn gia công, bán kính dao phay tối ưu, phương án chạy phôi tiết kiệm vật liệu nhất và gửi báo cáo phản hồi kèm đề xuất tối ưu hóa kết cấu trước khi báo giá chính thức.",
+    "category": "process",
+    "relatedServiceIds": ["gia-cong-cnc-chinh-xac", "gia-cong-inox"]
+  },
+  {
+    "id": "faq-03",
+    "question": "Vật liệu Inox nào phù hợp nhất cho các phụ kiện ngoài trời hoặc môi trường muối biển?",
+    "answer": "Đối với môi trường ban công sát biển, du thuyền hoặc các khu công nghiệp hóa chất ăn mòn cao, chúng tôi khuyến cáo bắt buộc sử dụng thép không gỉ mác Inox SUS316 hoặc SUS316L (chứa Molypden tăng khả năng kháng rỗ). Inox SUS304 thông thường chỉ phù hợp cho nội thất khô ráo hoặc ngoài trời vùng nội địa. Mọi vật liệu inox đầu vào tại xưởng Sao Vàng đều có chứng chỉ chất lượng CO/CQ kiểm tra thành phần hóa học rõ ràng.",
+    "category": "technical",
+    "relatedServiceIds": ["gia-cong-inox", "lan-can-kinh"]
+  },
+  {
+    "id": "faq-04",
+    "question": "Mối hàn kết cấu thép của Sao Vàng tuân theo tiêu chuẩn kỹ thuật nào?",
+    "answer": "Quy trình hàn chế tạo kết cấu dầm cột thép tại nhà xưởng Sao Vàng được thực hiện dựa trên đặc tả quy trình hàn WPS (Welding Procedure Specification) đã được chứng nhận đạt chuẩn AWS D1.1 (kết cấu thép carbon) của Hiệp hội Hàn Hoa Kỳ và ASME Section IX. 100% thợ hàn chịu lực chính của chúng tôi đều sở hữu chứng chỉ hàn AWS hợp lệ và mối hàn chịu ứng lực lớn đều được kiểm tra khuyết tật bằng phương pháp NDT (siêu âm UT hoặc chụp phim RT) trước khi xuất xưởng.",
+    "category": "technical",
+    "relatedServiceIds": ["ket-cau-thep"]
+  },
+  {
+    "id": "faq-05",
+    "question": "Thời gian hoàn thành đơn hàng gia công cơ khí trung bình là bao lâu?",
+    "answer": "Thời gian hoàn thành phụ thuộc vào quy mô và độ khó của đơn hàng. Đối với các đơn hàng gia công chi tiết đơn lẻ hoặc đồ gá jig dưới 50 mẫu, thời gian giao hàng thường là 3 - 5 ngày làm việc. Đối với chế tạo kết cấu thép quy mô lớn hoặc cửa nhôm kính cho công trình biệt thự trọn gói, thời gian dao động từ 10 - 20 ngày. Tiến độ chính xác sẽ được cam kết rõ ràng bằng điều khoản thưởng/phạt trễ hạn trong hợp đồng kinh tế.",
+    "category": "delivery",
+    "relatedServiceIds": ["gia-cong-cnc-chinh-xac", "cua-nhom-kinh"]
+  },
+  {
+    "id": "faq-06",
+    "question": "Chính sách bảo hành sản phẩm cửa nhôm kính và kết cấu thép như thế nào?",
+    "answer": "Chúng tôi áp dụng chính sách bảo hành dài hạn chuẩn Enterprise: Bảo hành 10 năm đối với kết cấu chịu lực của dầm thép kèo thép; Bảo hành 5 năm đối với lớp sơn phủ tĩnh điện ngoài trời của nhôm profile cao cấp (Civro, Maxpro); Bảo hành 2 năm đối với hệ thống phụ kiện kim khí (CMECH, Bogo, Hopo, Hafele) bao gồm các lỗi rỉ sét, xệ cánh hoặc kẹt ổ khóa dưới điều kiện vận hành bình thường.",
+    "category": "warranty",
+    "relatedServiceIds": ["cua-nhom-kinh", "ket-cau-thep"]
+  },
+  {
+    "id": "faq-07",
+    "question": "Tôi có cần cung cấp bản vẽ CAD 3D khi yêu cầu báo giá gia công kim loại tấm nghệ thuật không?",
+    "answer": "Không nhất thiết. Nếu bạn đã có sẵn bản vẽ kỹ thuật CAD (.dwg) hoặc file vector (.dxf, .ai), đó là tài liệu lý tưởng nhất để chạy máy cắt laser tấm. Tuy nhiên, nếu bạn chỉ có bản vẽ phác thảo tay hoặc ý tưởng thiết kế, đội ngũ KTS và họa viên cơ khí của Sao Vàng sẽ hỗ trợ số hóa, vẽ lại bản vẽ CAD và dựng phối cảnh 3D hoàn thiện để bạn ký duyệt trước khi đưa vào sản xuất hàng loạt.",
+    "category": "process",
+    "relatedServiceIds": ["co-khi-nghe-thuat"]
+  },
+  {
+    "id": "faq-08",
+    "question": "Sự khác biệt giữa nhôm cầu cách nhiệt và nhôm thường là gì?",
+    "answer": "Nhôm cầu cách nhiệt (Thermal Break Aluminum) là hệ nhôm cao cấp có cấu trúc khoang trống được ngăn cách ở giữa bằng một dải polyamide cách nhiệt cực tốt. Dải này ngăn chặn dòng nhiệt truyền dẫn trực tiếp qua kim loại nhôm từ bên ngoài vào trong nhà (hoặc ngược lại). Kết hợp nhôm cầu cách nhiệt với kính hộp hút chân không bơm khí trơ giúp giảm 40% lượng nhiệt thất thoát, tối ưu hóa hóa đơn điện điều hòa và tăng khả năng cách âm vượt trội so với nhôm thường.",
+    "category": "technical",
+    "relatedServiceIds": ["cua-nhom-kinh"]
+  },
+  {
+    "id": "faq-09",
+    "question": "Sao Vàng có hỗ trợ vận chuyển và lắp đặt tận nơi tại các tỉnh ngoài Hà Nội không?",
+    "answer": "Có. Chúng tôi nhận thi công, vận chuyển và lắp đặt trọn gói trên toàn quốc, đặc biệt tập trung tại miền Bắc và miền Trung Việt Nam. Đội ngũ lắp dựng công trình của chúng tôi có đầy đủ chứng chỉ an toàn lao động trên cao, bảo hiểm trách nhiệm dân sự công trình và thiết bị hỗ trợ tự có để đảm bảo thi công đúng tiến độ kỹ thuật được duyệt.",
+    "category": "delivery",
+    "relatedServiceIds": ["cua-nhom-kinh", "vach-kinh", "lan-can-kinh"]
+  },
+  {
+    "id": "faq-10",
+    "question": "Tại sao giá thi công vách kính mặt dựng lại phụ thuộc nhiều vào keo kết cấu silicone?",
+    "answer": "Mặt dựng vách kính hệ facade (Stick/Unitized) chịu tải trọng gió cực lớn trên các tòa nhà cao tầng. Keo silicone kết cấu (Structural Sealant - ví dụ Dow Corning 795, 995) đóng vai trò là liên kết duy nhất giữ các tấm kính nặng hàng trăm kg bám vào khung nhôm chịu lực mà không dùng kẹp cơ khí lộ thiên. Sử dụng keo kém chất lượng hoặc thi công sai quy trình không làm sạch bề mặt sẽ gây nứt vỡ, rơi kính cực kỳ nguy hiểm. Sao Vàng cam kết chỉ sử dụng keo nhập khẩu chính hãng có test bám dính đạt chuẩn ASTM.",
+    "category": "technical",
+    "relatedServiceIds": ["vach-kinh"]
+  },
+  {
+    "id": "faq-11",
+    "question": "Quy trình báo giá thầu dự án lớn của Sao Vàng bao gồm những bước nào?",
+    "answer": "Quy trình chuẩn hóa 5 bước của chúng tôi gồm: 1. Tiếp nhận hồ sơ thầu, bản vẽ kỹ thuật và bảng tiên lượng dự toán (BOQ). 2. Rà soát DFM, tính toán phương án gia công tối ưu vật tư. 3. Lập bảng phân tích đơn giá chi tiết gửi khách hàng trong vòng 24 - 48 giờ. 4. Đàm phán kỹ thuật, làm rõ biện pháp thi công. 5. Ký kết hợp đồng thầu phụ và chốt kế hoạch sản xuất.",
+    "category": "process",
+    "relatedServiceIds": ["ket-cau-thep", "vach-kinh"]
+  },
+  {
+    "id": "faq-12",
+    "question": "Làm thế nào để đảm bảo lan can kính cường lực không bị tự nổ?",
+    "answer": "Kính cường lực thông thường có tỷ lệ tự nổ nhỏ do tạp chất Niken Sulfua (NiS) giãn nở nhiệt trong lòng kính. Để loại bỏ hoàn toàn rủi ro này cho lan can kính nhà cao tầng, Sao Vàng áp dụng 2 giải pháp kỹ thuật: 1. Đưa kính qua quy trình kiểm tra sốc nhiệt Heat Soak Test (HST) để kích nổ cưỡng bức các tấm kính lỗi tại nhà máy trước khi lắp dựng. 2. Khuyên dùng kính dán cường lực an toàn ghép bởi dải phim PVB/SGP chịu lực, nếu kính có vỡ vẫn bám chặt vào lớp phim mà không rơi xuống.",
+    "category": "technical",
+    "relatedServiceIds": ["lan-can-kinh"]
+  },
+  {
+    "id": "faq-13",
+    "question": "Khách thầu B2B có thể đến kiểm tra nhà xưởng của Sao Vàng trước khi đặt hàng không?",
+    "answer": "Chúng tôi cực kỳ hoan nghênh và khuyến khích Ban quản lý dự án, bộ phận Mua hàng (Procurement) của đối tác đến tham quan trực tiếp năng lực sản xuất tại xưởng cơ khí và nhôm kính của chúng tôi tại địa chỉ 171 Đường Đi Bộ Hà Nội, Phường Khâu Hùng, Hà Nội. Vui lòng liên hệ Hotline 0869 590 279 trước 24 giờ để chúng tôi sắp xếp nhân sự kỹ thuật đón tiếp và hướng dẫn tham quan quy trình sản xuất.",
+    "category": "process",
+    "relatedServiceIds": ["gia-cong-cnc-chinh-xac", "cua-nhom-kinh"]
+  },
+  {
+    "id": "faq-14",
+    "question": "Nhôm hệ Maxpro.JP có điểm gì vượt trội so với nhôm Xingfa thông thường?",
+    "answer": "Nhôm Maxpro.JP được sản xuất theo công nghệ xử lý bề mặt xi mạ Anodize Electrodeposition (ED) độc quyền của Nhật Bản. Lớp phủ bề mặt này giúp thanh nhôm đạt độ cứng bề mặt cực cao, khả năng chống ăn mòn bởi nước mưa axit và muối biển vượt trội gấp nhiều lần so với lớp sơn tĩnh điện bột thông thường của nhôm Xingfa. Maxpro.JP được hãng cam kết bảo hành bề mặt lên tới 25 năm, rất phù hợp cho công trình biệt thự ven biển.",
+    "category": "technical",
+    "relatedServiceIds": ["cua-nhom-kinh"]
+  },
+  {
+    "id": "faq-15",
+    "question": "Sự khác biệt giữa kính dán an toàn và kính cường lực thông thường là gì?",
+    "answer": "Kính cường lực là kính đơn được gia nhiệt đến 700 độ C rồi thổi lạnh nhanh để tăng khả năng chịu lực gấp 4 - 5 lần, khi vỡ tạo thành các hạt lựu nhỏ không sắc cạnh. Kính dán an toàn là sự kết hợp của 2 hoặc nhiều tấm kính dính chặt với nhau bằng các lớp phim nhựa PVB. Kính dán an toàn khi bị vỡ sẽ nứt rạn chân chim và mảnh vỡ vẫn bám chặt trên lớp phim nhựa ở giữa, ngăn ngừa hoàn toàn nguy cơ rơi tự do gây chấn thương.",
+    "category": "technical",
+    "relatedServiceIds": ["lan-can-kinh", "vach-kinh"]
+  },
+  {
+    "id": "faq-16",
+    "question": "Sao Vàng có cung cấp mẫu sản phẩm thực tế cho KTS trình chủ đầu tư duyệt không?",
+    "answer": "Có. Chúng tôi cung cấp miễn phí các mẫu góc thanh nhôm profile ép góc hoàn thiện, mẫu kính hộp cách âm cách nhiệt cắt nhỏ và các catalogue giới thiệu catalog kỹ thuật phụ kiện chính hãng để các đơn vị tư vấn thiết kế và KTS làm mẫu trình duyệt vật liệu (Sample Submission) cho Ban quản lý dự án hoặc Chủ đầu tư.",
+    "category": "process",
+    "relatedServiceIds": ["cua-nhom-kinh", "vach-kinh"]
+  },
+  {
+    "id": "faq-17",
+    "question": "Chi phí gia công cơ khí chính xác tại Sao Vàng được tính toán dựa trên cơ sở nào?",
+    "answer": "Đơn giá gia công CNC được cấu thành từ 4 yếu tố chính: 1. Chi phí phôi vật liệu đầu vào (Inox, thép, đồng, nhôm) dựa trên khối lượng thực tế. 2. Thời gian chạy máy phay/tiện CNC thực tế (tính theo giờ máy vận hành). 3. Mức độ hao mòn dao cụ chuyên dụng đối với vật liệu cứng. 4. Chi phí nhân công lập trình kỹ thuật và đo kiểm chất lượng QC.",
+    "category": "pricing",
+    "relatedServiceIds": ["gia-cong-cnc-chinh-xac"]
+  },
+  {
+    "id": "faq-18",
+    "question": "Mái kính sảnh canopy lớn có cần lắp đặt chân nhện Spider inox không?",
+    "answer": "Đối với các mái kính sảnh canopy có kích thước tấm kính lớn và liên kết khung thép rộng, việc lắp đặt chân nhện Spider inox SUS316 là giải pháp kỹ thuật tối ưu. Chân nhện Spider cho phép các tấm kính có sự dịch chuyển vi mô nhất định khi có biến động tải trọng gió, rung chấn động đất hoặc giãn nở nhiệt của hệ khung thép đỡ. Điều này giảm thiểu việc tích tụ ứng suất tập trung tại các điểm liên kết cứng, ngăn chặn tối đa nguy cơ nứt kính tự nhiên.",
+    "category": "technical",
+    "relatedServiceIds": ["mai-kinh"]
+  },
+  {
+    "id": "faq-19",
+    "question": "Tôi muốn gia công cấu kiện inox du thuyền thì chất lượng hoàn thiện bóng gương 8K có được cam kết không?",
+    "answer": "Được cam kết hoàn toàn. Đối với phân khúc thiết bị inox du thuyền, chúng tôi sử dụng phôi Inox SUS316L (Carbon cực thấp chống rỉ kẽ mối hàn) uốn tạo hình bằng máy CNC chuyên dụng, sau đó mài bóng gương thủ công qua 5 cấp độ để đạt cấp độ hoàn thiện gương Mirror 8K siêu mịn, phản chiếu không méo hình và có lớp thụ động hóa bề mặt chống ăn mòn muối biển.",
+    "category": "technical",
+    "relatedServiceIds": ["gia-cong-inox"]
+  },
+  {
+    "id": "faq-20",
+    "question": "Tôi có thể gửi hồ sơ thầu bằng file PDF lớn kèm bản vẽ CAD qua website không?",
+    "answer": "Có. Form liên hệ yêu cầu báo giá của Sao Vàng được tích hợp module tải lên tệp dung lượng tối đa 50MB. Hệ thống hỗ trợ hoàn hảo các định dạng bản vẽ kỹ thuật phổ biến như .dwg, .dxf (AutoCAD), .step, .stp, .igs (các phần mềm 3D cơ khí như SolidWorks, Inventor) và các tệp văn bản .pdf, .zip, .rar để truyền tải đầy đủ hồ sơ dự toán thầu.",
+    "category": "process",
+    "relatedServiceIds": ["gia-cong-cnc-chinh-xac", "ket-cau-thep", "vach-kinh"]
+  }
+]
