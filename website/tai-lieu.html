@@ -622,54 +622,6 @@
   </div>
 </main>
 
-<!-- Lead-Gate Modal -->
-<div class="dl-modal-overlay" id="dlGateOverlay" role="dialog" aria-modal="true" aria-labelledby="dlModalTitle">
-  <div class="dl-modal">
-    <div class="dl-modal-head">
-      <button class="dl-modal-close" id="dlModalClose" aria-label="Đóng">
-        <i class="ri-close-line"></i>
-      </button>
-      <div class="dl-modal-file-badge" id="dlFileBadge">
-        <i class="ri-file-pdf-line"></i> PDF Document
-      </div>
-      <h2 class="dl-modal-title" id="dlModalTitle">Hồ sơ năng lực Sao Vàng 2026</h2>
-    </div>
-
-    <div class="dl-modal-body">
-      <p class="dl-modal-subtitle">
-        Nhập thông tin để tải xuống ngay lập tức. Chúng tôi tôn trọng quyền riêng tư của bạn — không spam, không chia sẻ dữ liệu với bên thứ ba.
-      </p>
-
-      <form id="dlGateForm" novalidate>
-        <input type="hidden" id="dlTargetUrl" value="" />
-
-        <div class="dl-form-group">
-          <label class="dl-form-label" for="dlName">Họ và tên <span class="req">*</span></label>
-          <input class="dl-form-input" type="text" id="dlName" name="name" placeholder="Nguyễn Văn A" required autocomplete="name" />
-        </div>
-
-        <div class="dl-form-group">
-          <label class="dl-form-label" for="dlPhone">Số điện thoại <span class="req">*</span></label>
-          <input class="dl-form-input" type="tel" id="dlPhone" name="phone" placeholder="0869 590 279" required autocomplete="tel" />
-        </div>
-
-        <div class="dl-form-group">
-          <label class="dl-form-label" for="dlCompany">Công ty / Đơn vị</label>
-          <input class="dl-form-input" type="text" id="dlCompany" name="company" placeholder="Tên công ty hoặc dự án" autocomplete="organization" />
-        </div>
-
-        <button type="submit" class="dl-submit-btn" id="dlSubmitBtn">
-          <i class="ri-download-2-line"></i>
-          Tải Xuống Ngay
-        </button>
-        <p class="dl-privacy-note">
-          <i class="ri-lock-2-line"></i>
-          Dữ liệu được mã hóa và bảo mật. Chúng tôi cam kết không chia sẻ thông tin của bạn.
-        </p>
-      </form>
-    </div>
-  </div>
-</div>
 
 <!-- PDF Viewer Modal -->
 <div class="pdf-viewer-overlay" id="pdfViewerOverlay" style="position: fixed; inset: 0; z-index: 10000; background: rgba(0,0,0,0.85); backdrop-filter: blur(10px); display: flex; flex-direction: column; opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s;" role="dialog" aria-modal="true" aria-labelledby="pdfViewerTitle">
@@ -708,12 +660,8 @@
 
 <script>
 (async function initDownloadCenter() {
-  const grid      = document.getElementById('dlGrid');
-  const overlay   = document.getElementById('dlGateOverlay');
-  const closeBtn  = document.getElementById('dlModalClose');
-  const form      = document.getElementById('dlGateForm');
-  const submitBtn = document.getElementById('dlSubmitBtn');
-  const totalEl   = document.getElementById('totalDocs');
+  const grid    = document.getElementById('dlGrid');
+  const totalEl = document.getElementById('totalDocs');
 
   // ─── Load downloads.json ──────────────────────────────────────────
   let downloads = [];
@@ -868,15 +816,12 @@
   pdfViewerOverlay.addEventListener('click', e => { if (e.target === pdfViewerOverlay) closePdfViewer(); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closePdfViewer(); });
 
-  // ─── Pending action state for Lead Gate ────────────────────────────
-  let pendingAction = null; // { type: 'view'|'download', url, title, fileType }
-
-  function executeAction(action) {
-    if (action.type === 'view') {
-      openPdfViewer(action.url, action.title);
-    } else if (action.type === 'download') {
+  function executeAction(type, url, title) {
+    if (type === 'view') {
+      openPdfViewer(url, title);
+    } else if (type === 'download') {
       const a = document.createElement('a');
-      a.href = action.url;
+      a.href = url;
       a.download = '';
       a.target = '_blank';
       document.body.appendChild(a);
@@ -889,139 +834,17 @@
     }
   }
 
-  // ─── Close modal ──────────────────────────────────────────────────
-  function closeModal() {
-    overlay.classList.remove('open');
-    document.body.style.overflow = '';
-    form.reset();
-  }
-  closeBtn.addEventListener('click', closeModal);
-  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-  // ─── Open lead-gate modal or execute directly if already submitted ───
-  function handleDocumentAction(type, btn) {
-    const action = {
-      type: type,
-      url: btn.dataset.url,
-      title: btn.dataset.title,
-      fileType: btn.dataset.type
-    };
-
-    // Check localStorage for prior submission
-    const storedLead = localStorage.getItem('sv_lead_info');
-    if (storedLead) {
-      executeAction(action);
-      
-      try {
-        const lead = JSON.parse(storedLead);
-        if (window.dataLayer) {
-          window.dataLayer.push({
-            event: 'dl_gate_auto_bypass',
-            lead_name: lead.name,
-            lead_phone: lead.phone,
-            lead_company: lead.company,
-            document_url: action.url,
-            document_title: action.title,
-            action_type: type
-          });
-        }
-      } catch(_) {}
-      return;
-    }
-
-    // Set pending action and open lead gate
-    pendingAction = action;
-    document.getElementById('dlTargetUrl').value = action.url;
-    document.getElementById('dlModalTitle').textContent = action.title;
-    document.getElementById('dlFileBadge').innerHTML = `<i class="ri-file-line"></i> ${action.fileType}`;
-    
-    if (type === 'view') {
-      submitBtn.innerHTML = '<i class="ri-eye-line"></i> Xem Trực Tiếp';
-    } else {
-      submitBtn.innerHTML = '<i class="ri-download-2-line"></i> Tải Xuống Ngay';
-    }
-
-    overlay.classList.add('open');
-    document.getElementById('dlName').focus();
-    document.body.style.overflow = 'hidden';
-  }
-
   document.addEventListener('click', e => {
     const viewBtn = e.target.closest('.dl-btn-view');
     if (viewBtn) {
-      handleDocumentAction('view', viewBtn);
+      executeAction('view', viewBtn.dataset.url, viewBtn.dataset.title);
       return;
     }
     const downloadBtn = e.target.closest('.dl-btn-download');
     if (downloadBtn) {
-      handleDocumentAction('download', downloadBtn);
+      executeAction('download', downloadBtn.dataset.url, downloadBtn.dataset.title);
       return;
     }
-  });
-
-  // ─── Validate Vietnamese phone ────────────────────────────────────
-  function isValidPhoneVN(v) {
-    return /^(0|\+84)[3-9]\d{8}$/.test(v.replace(/\s/g,''));
-  }
-
-  // ─── Handle gate form submission ──────────────────────────────────
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-
-    const name    = document.getElementById('dlName').value.trim();
-    const phone   = document.getElementById('dlPhone').value.trim();
-    const company = document.getElementById('dlCompany').value.trim();
-    const fileUrl = document.getElementById('dlTargetUrl').value;
-
-    // Validate
-    if (!name) { document.getElementById('dlName').focus(); return; }
-    if (!isValidPhoneVN(phone)) {
-      alert('Vui lòng nhập số điện thoại hợp lệ (10 số, bắt đầu bằng 0 hoặc +84).');
-      document.getElementById('dlPhone').focus();
-      return;
-    }
-
-    // Store in localStorage to prevent repeat gate questions
-    localStorage.setItem('sv_lead_info', JSON.stringify({ name, phone, company }));
-
-    // Track download lead in GTM dataLayer
-    if (window.dataLayer) {
-      window.dataLayer.push({
-        event: 'dl_gate_submit',
-        lead_name: name,
-        lead_phone: phone.replace(/\s/g,''),
-        lead_company: company,
-        document_url: fileUrl,
-        document_title: document.getElementById('dlModalTitle').textContent,
-        action_type: pendingAction ? pendingAction.type : 'download'
-      });
-    }
-
-    // Submit lead to backend
-    try {
-      await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          name, phone, company,
-          source: 'download_gate',
-          document: fileUrl
-        })
-      });
-    } catch(_) {}
-
-    submitBtn.innerHTML = '<i class="ri-loader-4-line"></i> Đang mở tệp...';
-    submitBtn.disabled = true;
-
-    setTimeout(() => {
-      if (pendingAction) {
-        executeAction(pendingAction);
-      }
-      closeModal();
-      submitBtn.innerHTML = '<i class="ri-download-2-line"></i> Tải Xuống Ngay';
-      submitBtn.disabled = false;
-    }, 800);
   });
 })();
 </script>
