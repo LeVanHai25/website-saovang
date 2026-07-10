@@ -399,12 +399,5 @@
     <priority>0.80</priority>
   </url>
 
-  <!-- theo-doi.html -->
-  <url>
-    <loc>https://www.cokhisaovang.com/theo-doi.html</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
 
 </urlset>

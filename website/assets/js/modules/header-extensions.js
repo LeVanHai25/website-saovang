@@ -1450,14 +1450,6 @@
         link.textContent = 'Tài Liệu Kỹ Thuật';
         navMenu.insertBefore(link, contactLink);
       }
-      
-      if (contactLink && !navMenu.querySelector('[href="theo-doi.html"]')) {
-        const link = document.createElement('a');
-        link.href = 'theo-doi.html';
-        link.className = 'nav-menu-link';
-        link.textContent = 'Theo Dõi Đơn Hàng';
-        navMenu.insertBefore(link, contactLink);
-      }
     }
 
     // 2. Mobile Nav Drawer
@@ -1471,14 +1463,6 @@
         link.href = 'tai-lieu.html';
         link.className = 'nav-drawer-link';
         link.textContent = 'Tài Liệu Kỹ Thuật';
-        navDrawer.insertBefore(link, contactLink);
-      }
-      
-      if (contactLink && !navDrawer.querySelector('[href="theo-doi.html"]')) {
-        const link = document.createElement('a');
-        link.href = 'theo-doi.html';
-        link.className = 'nav-drawer-link';
-        link.textContent = 'Theo Dõi Đơn Hàng';
         navDrawer.insertBefore(link, contactLink);
       }
     }
