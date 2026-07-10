@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
@@ -226,85 +226,73 @@
 
   <!-- HEADER PLACEHOLDER - WILL BE PATCHED -->
   <!-- SECTION 1 - HEADER -->
-  <header class="header" id="header" role="banner">
-    <div class="header-inner">
-      <a href="index.html" class="logo" aria-label="Cơ Khí Sao Vàng — Trang chủ">
-        <img fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" height="44" style="height:44px;width:auto;display:block;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" width="160">
-        <span class="logo-badge" aria-hidden="true" style="display:none;">SV</span>
+    <!-- SECTION 1 - HEADER -->
+  <header class="header-v2" id="navbar" role="banner">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="Sao Vàng — Trang chủ">
+        <img width="200" height="60" fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" style="height: 48px; width: auto; display: block;" />
       </a>
-      
-      <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
-        <a href="index.html" class="nav-item active" aria-current="page" data-i18n="nav_home">TRANG CHỦ</a>
-        
-        <div class="nav-dropdown">
-          <a href="linh-vuc-co-khi.html" class="nav-item" data-i18n="nav_mechanical">
-            CƠ KHÍ
-          </a>
-          <div class="dropdown-menu">
-            <a href="linh-vuc-co-khi.html" class="dropdown-item">
-              <span class="dropdown-title">Gia công theo bản vẽ</span>
-              <span class="dropdown-desc">Tiện, phay CNC, cắt laser chi tiết máy chính xác</span>
-            </a>
-            <a href="linh-vuc-co-khi.html" class="dropdown-item">
-              <span class="dropdown-title">Gia công Inox</span>
-              <span class="dropdown-desc">Hàn, chấn, dập hoàn thiện inox công nghiệp &amp; trang trí</span>
-            </a>
-            <a href="linh-vuc-co-khi.html" class="dropdown-item">
-              <span class="dropdown-title">Cơ khí công trình</span>
-              <span class="dropdown-desc">Lắp dựng kết cấu thép nhà xưởng, khung giàn tiền chế</span>
-            </a>
-            <a href="linh-vuc-co-khi.html" class="dropdown-item">
-              <span class="dropdown-title">Cơ khí chế tạo &amp; lắp ráp</span>
-              <span class="dropdown-desc">Chế tạo bồn bể, băng tải, thiết bị phụ trợ công nghiệp</span>
-            </a>
+
+      <!-- Desktop nav menu -->
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html"           class="nav-menu-link ">Trang Chủ</a>
+        <a href="gioi-thieu.html"      class="nav-menu-link ">Giới Thiệu</a>
+        <a href="co-khi-sao-vang.html" class="nav-menu-link ">Cơ Khí Sao Vàng</a>
+        <a href="nhom-sao-vang.html"   class="nav-menu-link ">SV Aluminium</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linh-vuc-hoat-dong.html" class="nav-menu-link active">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linh-vuc-hoat-dong.html" class="nav-dropdown-item" role="menuitem">Tổng quan Lĩnh vực</a>
+            <a href="linh-vuc-co-khi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linh-vuc-nhom-kinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Kính SV Aluminium</a>
           </div>
         </div>
 
-        <div class="nav-dropdown">
-          <a href="linh-vuc-nhom-kinh.html" class="nav-item" data-i18n="nav_facade">
-            NHÔM KÍNH
-          </a>
-          <div class="dropdown-menu">
-            <a href="cua-nhom-kinh.html" class="dropdown-item">
-              <span class="dropdown-title">Cửa nhôm cao cấp</span>
-              <span class="dropdown-desc">Hệ Slim, Civro, Maxpro profile nhôm Châu Âu</span>
-            </a>
-            <a href="vach-kinh.html" class="dropdown-item">
-              <span class="dropdown-title">Vách kính &amp; Cabin tắm</span>
-              <span class="dropdown-desc">Hệ vách ngăn kính cường lực khổ lớn, cabin mạ vàng PVD</span>
-            </a>
-            <a href="linh-vuc-nhom-kinh.html#giai-phap" class="dropdown-item">
-              <span class="dropdown-title">Vách mặt dựng (Facade)</span>
-              <span class="dropdown-desc">Mặt dựng Unitized, Stick cản nhiệt Low-E tòa nhà</span>
-            </a>
-          </div>
-        </div>
-
-        <a href="du-an.html" class="nav-item" data-i18n="nav_projects">DỰ ÁN</a>
-        <a href="nang-luc.html" class="nav-item" data-i18n="nav_capacity">NĂNG LỰC</a>
-        <a href="tin-tuc.html" class="nav-item" data-i18n="nav_news">TIN TỨC</a>
-        <a href="lien-he.html" class="nav-item" data-i18n="nav_contact">LIÊN HỆ</a>
+        <a href="san-pham.html"              class="nav-menu-link ">Sản Phẩm</a>
+        <a href="phu-kien.html"              class="nav-menu-link ">Phụ Kiện</a>
+        <a href="thu-vien-profile-nhom.html" class="nav-menu-link ">Profile Nhôm</a>
+        <a href="du-an.html"                 class="nav-menu-link ">Dự Án</a>
+        <a href="tai-lieu.html"              class="nav-menu-link ">Tài Liệu Kỹ Thuật</a>
+        <a href="tin-tuc.html"               class="nav-menu-link ">Tin Tức</a>
+        <a href="lien-he.html"               class="nav-menu-link ">Liên Hệ</a>
       </nav>
 
-      <div style="display: flex; align-items: center;">
-        <a href="tel:0869590279" class="header-phone" aria-label="Gọi hotline 0869 590 279">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
-          <span data-i18n="nav_hotline">0869 590 279</span>
+      <!-- Hotline + Hamburger -->
+      <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+        <a href="tel:0869590279" class="nav-hotline" aria-label="Gọi hotline 0869 590 279">
+          <i class="ri-phone-fill" aria-hidden="true"></i>
+          <span>0869 590 279</span>
         </a>
-        
-        <div class="lang-switcher">
-          <button class="lang-btn" data-lang="vi">VI</button>
-          <button class="lang-btn" data-lang="en">EN</button>
-          <button class="lang-btn" data-lang="jp">JP</button>
-        </div>
-
-        <button class="hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navDrawer">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
   </header>
+
+  <!-- Mobile drawer -->
   <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html"                 class="nav-drawer-link ">Trang Chủ</a>
+    <a href="gioi-thieu.html"            class="nav-drawer-link ">Giới Thiệu</a>
+    <a href="co-khi-sao-vang.html"      class="nav-drawer-link ">Cơ Khí Sao Vàng</a>
+    <a href="nhom-sao-vang.html"        class="nav-drawer-link ">Nhôm Sao Vàng</a>
+    <a href="linh-vuc-hoat-dong.html"   class="nav-drawer-link active">Lĩnh Vực Hoạt Động</a>
+    <a href="san-pham.html"             class="nav-drawer-link ">Sản Phẩm</a>
+    <a href="phu-kien.html"             class="nav-drawer-link ">Phụ Kiện</a>
+    <a href="thu-vien-profile-nhom.html" class="nav-drawer-link ">Profile Nhôm</a>
+    <a href="du-an.html"                class="nav-drawer-link ">Dự Án</a>
+    <a href="tai-lieu.html"              class="nav-drawer-link ">Tài Liệu Kỹ Thuật</a>
+    <a href="tin-tuc.html"              class="nav-drawer-link ">Tin Tức</a>
+    <a href="lien-he.html"              class="nav-drawer-link ">Liên Hệ</a>
+    <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
+      <i class="ri-phone-fill"></i> 0869 590 279
+    </a>
+  </nav>
 
   <main role="main">
     <!-- PAGE HERO -->
@@ -627,5 +615,7 @@
   </script>
   <!-- End Microsoft Clarity -->
   <script src="assets/js/shared/analytics.js"></script>
+
+  <script src="assets/js/modules/navbar.js"></script>
 </body>
 </html>
