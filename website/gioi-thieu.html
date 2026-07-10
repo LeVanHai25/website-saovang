@@ -137,19 +137,209 @@
     padding: 10px 16px;
     padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
     box-shadow: 0 -4px 24px rgba(0,0,0,.4);
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" crossorigin="anonymous" />
+  <!-- ═══ Google Tag Manager — Sprint 6 ═══
+       Thay GTM-XXXXXXX bằng Container ID thực của bạn
+       Lấy tại: tagmanager.google.com
+  ═══════════════════════════════════════ -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="theme-color" content="#B5121B" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Giới Thiệu Công Ty | SAO VÀNG</title>
+  <meta name="description" content="Công ty TNHH ĐT TM và DV Kỹ Thuật Sao Vàng — Chuyên cơ khí nghệ thuật và nhôm kính kiến trúc cao cấp. Đội ngũ chuyên nghiệp, xưởng sản xuất hiện đại." />
+  <link rel="preload" as="image" href="assets/images/hero-interior.png" />
+    <meta property="og:title" content="Giới Thiệu Công Thiệu | SAO VÀNG" />
+  <meta property="og:description" content="Công ty Sao Vàng chuyên cơ khí nghệ thuật &amp; nhôm kính cao cấp, đội ngũ kỹ sư giàu kinh nghiệm, chứng nhận quốc tế AWS và ASME." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cokhisaovang.com/gioi-thieu.html" />
+  <meta property="og:image" content="https://www.cokhisaovang.com/assets/images/hero-interior.png" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+  /* ══ STORY ═══════════════════════════════════════════════════ */
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(32px, 6vw, 64px);
+    align-items: center;
+  }
+  .story-text .lead {
+    font-size: clamp(16px, 2.2vw, 20px);
+    font-weight: 700; color: var(--dark);
+    line-height: 1.55; margin-bottom: var(--sp-4);
+    border-left: 4px solid var(--gold);
+    padding-left: clamp(14px, 2vw, 20px);
+  }
+  .story-text p { font-size: var(--fs-body-lg); font-weight: 300; color: var(--gray-500); line-height: 1.85; margin-bottom: var(--sp-3); }
+  .story-img { position: relative; margin-top: 24px; }
+  .story-img-main { border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 4/3; }
+  .story-img-main img { width: 100%; height: 100%; object-fit: cover; }
+  .story-stats {
+    position: static;
+    margin-top: clamp(16px, 3vw, 24px);
+    background: var(--red); color: var(--white);
+    padding: clamp(16px, 3vw, 24px) clamp(20px, 3vw, 28px);
+    border-radius: var(--radius-md);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 14px 24px;
+  }
+  .sstats-item .sn { font-family: var(--ff-head); font-size: clamp(22px, 4vw, 28px); font-weight: 900; color: var(--gold-light); line-height: 1; }
+  .sstats-item .sl { font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; opacity: .75; margin-top: 3px; }
+
+  /* ══ VISION MISSION ══════════════════════════════════════════ */
+  .vm-grid { display: grid; grid-template-columns: 1fr; gap: clamp(16px, 3vw, 28px); }
+  .vm-card { padding: clamp(24px, 4vw, 40px) clamp(20px, 4vw, 36px); border-radius: var(--radius-md); }
+  .vm-card.vision { background: var(--dark); color: var(--white); }
+  .vm-card.mission { background: var(--red); color: var(--white); }
+  .vm-icon { width: 52px; height: 52px; border-radius: var(--radius); background: rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; margin-bottom: var(--sp-5); color: var(--gold-light); }
+  .vm-card h3 { font-family: var(--ff-head); font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--gold-light); margin-bottom: var(--sp-3); }
+  .vm-card h2 { font-family: var(--ff-head); font-size: clamp(18px, 2.5vw, 28px); font-weight: 800; line-height: 1.25; margin-bottom: var(--sp-3); }
+  .vm-card p { font-size: var(--fs-body); font-weight: 300; line-height: 1.8; opacity: .85; }
+
+  /* ══ CORE VALUES ══════════════════════════════════════════════ */
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(12px, 3vw, 24px);
+  }
+  .value-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-md); padding: clamp(20px, 4vw, 32px) clamp(16px, 3vw, 26px); transition: all .25s; text-align: center; }
+  .value-card:hover { border-color: var(--gold); box-shadow: 0 6px 24px rgba(200,134,10,.12); transform: translateY(-3px); }
+  .value-icon { width: 52px; height: 52px; border-radius: 50%; background: rgba(139,0,0,.07); display: flex; align-items: center; justify-content: center; margin: 0 auto var(--sp-4); color: var(--red); }
+  .value-card h3 { font-family: var(--ff-head); font-size: clamp(13px, 1.5vw, 16px); font-weight: 700; color: var(--dark); margin-bottom: var(--sp-2); }
+  .value-card p { font-size: var(--fs-sm); color: var(--gray-500); line-height: 1.7; }
+
+  /* ══ CAPABILITIES ════════════════════════════════════════════ */
+  .cap-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(12px, 3vw, 28px);
+  }
+  .cap-card { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-md); padding: clamp(20px, 4vw, 36px) clamp(16px, 3vw, 28px); text-align: center; }
+  .cap-num { font-family: var(--ff-head); font-size: clamp(32px, 5vw, 60px); font-weight: 900; color: var(--gold-a11y); line-height: 1; margin-bottom: var(--sp-2); }
+  .cap-unit { font-family: var(--ff-head); font-size: 11px; font-weight: 700; color: var(--gray-400); letter-spacing: .08em; text-transform: uppercase; margin-bottom: var(--sp-2); }
+  .cap-card h3 { font-family: var(--ff-head); font-size: clamp(13px, 1.5vw, 15px); font-weight: 700; color: var(--dark); margin-bottom: var(--sp-2); }
+  .cap-card p { font-size: var(--fs-sm); color: var(--gray-500); line-height: 1.65; }
+
+  /* ══ CERTIFICATIONS ══════════════════════════════════════════ */
+  .cert-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(10px, 2vw, 20px);
+  }
+  .cert-card { display: flex; align-items: flex-start; gap: var(--sp-4); padding: clamp(14px, 3vw, 22px); border: 1px solid var(--gray-200); border-radius: var(--radius-md); }
+  .cert-icon { width: 44px; height: 44px; min-width: 44px; border-radius: var(--radius); background: rgba(200,134,10,.1); display: flex; align-items: center; justify-content: center; color: var(--gold-a11y); }
+  .cert-card strong { display: block; font-family: var(--ff-head); font-size: clamp(12px, 1.5vw, 14px); font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+  .cert-card p { font-size: var(--fs-sm); color: var(--gray-500); line-height: 1.6; margin: 0; }
+
+  /* ══ RESPONSIVE BREAKPOINTS ══════════════════════════════════ */
+  @media (min-width: 640px) {
+    .vm-grid    { grid-template-columns: 1fr 1fr; }
+    .cert-grid  { grid-template-columns: 1fr 1fr; }
+  }
+  @media (min-width: 1024px) {
+    .story-grid { grid-template-columns: 1fr 1fr; gap: clamp(48px, 6vw, 80px); }
+    .story-img  { margin-top: 0; }
+    .story-stats {
+      position: absolute;
+      bottom: -24px; left: -24px;
+      margin-top: 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,.15);
+    }
+    .values-grid  { grid-template-columns: repeat(4, 1fr); }
+    .cap-grid     { grid-template-columns: repeat(3, 1fr); }
+    .cert-grid    { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (min-width: 1440px) {
+    .story-img { padding-right: 24px; }
+  }
+
+  /* ══ STICKY BOTTOM CTA (mobile) ══════════════════════════════ */
+  .sticky-cta-bar {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 890;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background: #111;
+    border-top: 1px solid rgba(255,255,255,.1);
+    padding: 10px 16px;
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -4px 24px rgba(0,0,0,.4);
     transform: translateY(100%);
     transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94);
   }
   .sticky-cta-bar .btn { flex: 1; justify-content: center; min-height: 40px; }
   @media (min-width: 1024px) { .sticky-cta-bar { display: none !important; } }
   
-  /* ── prefers-reduced-motion ─────────────────────────────── */
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: 0.01ms !important;
-      transition-duration: 0.01ms !important;
-    }
-    [data-reveal] { opacity: 1 !important; transform: none !important; }
+  /* ══ COMMITMENTS ═════════════════════════════════════════════ */
+  .commitments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .commitment-item {
+    display: flex;
+    align-items: flex-start;
+    gap: clamp(16px, 3vw, 24px);
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .commitment-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .commitment-icon-wrap {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: var(--white);
+    margin-top: 4px;
+  }
+  .commitment-icon-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--red) 0%, var(--gold) 100%);
+    transform: rotate(45deg);
+    border-radius: 6px;
+    z-index: 1;
+    transition: transform 0.3s ease;
+  }
+  .commitment-item:hover .commitment-icon-wrap::before {
+    transform: rotate(135deg);
+  }
+  .commitment-icon-wrap i {
+    position: relative;
+    z-index: 2;
+    font-size: 20px;
+  }
+  .commitment-text h3 {
+    font-family: var(--ff-head);
+    font-size: clamp(14px, 1.8vw, 17px);
+    font-weight: 700;
+    color: var(--dark);
+    margin: 0 0 6px 0;
+  }
+  .commitment-text p {
+    font-size: var(--fs-sm);
+    color: var(--gray-500);
+    line-height: 1.65;
+    margin: 0;
   }
 </style>
   <link rel="canonical" href="https://www.cokhisaovang.com/gioi-thieu.html" />
@@ -561,6 +751,89 @@
   </div>
 </section>
 
+<!-- WHY CHOOSE US -->
+<section class="section bg-white" style="border-top: 1px solid var(--sv-border);">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-text" data-reveal>
+        <span class="tag">Thế Mạnh</span>
+        <h2 class="section-title">Tại Sao Chọn <span class="gold">Sao Vàng</span>?</h2>
+        <p class="lead">Chúng tôi tự hào là nhà Tư vấn – Thiết kế – Sản xuất – Thi công trọn gói các giải pháp Cơ khí chính xác CNC, Kết cấu thép chịu lực, Kim loại nghệ thuật và Nhôm kính kiến trúc cao cấp.</p>
+        <p>Với cam kết kiến tạo giá trị bền vững, Sao Vàng không ngừng đầu tư hệ thống máy móc cắt Laser Fiber, chấn phay CNC hiện đại cùng đội ngũ kỹ sư trình độ cao, thợ hàn đạt chứng chỉ quốc tế AWS. Chúng tôi luôn nghiên cứu và ứng dụng những công nghệ chế tác tiên tiến nhất, đáp ứng các yêu cầu kỹ thuật khắt khe của dự án B2B và tiêu chuẩn thẩm mỹ đỉnh cao của các công trình biệt thự, penthouse cao cấp.</p>
+        
+        <div style="margin-top: 32px; display: flex; justify-content: flex-start;">
+          <a href="lien-he.html" class="sv-btn sv-btn-red">
+            Đăng Ký Tư Vấn Ngay
+            <i class="ri-arrow-right-line"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="commitments-list" data-reveal data-reveal-delay="2">
+        <div class="commitment-item">
+          <div class="commitment-icon-wrap">
+            <i class="ri-shield-check-line"></i>
+          </div>
+          <div class="commitment-text">
+            <h3>Chất Lượng Tiêu Chuẩn Quốc Tế</h3>
+            <p>Sao Vàng áp dụng quy trình kiểm soát chất lượng nghiêm ngặt theo tiêu chuẩn ISO 9001:2015. Các sản phẩm cơ khí và nhôm kính được gia công chính xác tuyệt đối trên dây chuyền máy móc hiện đại, đảm bảo tính đồng bộ và độ bền vượt trội trước mọi thử thách thời tiết.</p>
+          </div>
+        </div>
+        
+        <div class="commitment-item">
+          <div class="commitment-icon-wrap">
+            <i class="ri-time-line"></i>
+          </div>
+          <div class="commitment-text">
+            <h3>Tối Ưu Tiến Độ Công Trình</h3>
+            <p>Chúng tôi hiểu rằng thời gian là vàng ngọc của chủ đầu tư. Với quy trình DFM (Design for Manufacturing) chuyên nghiệp và năng lực sản xuất lớn từ hệ thống nhà xưởng hiện đại, Sao Vàng cam kết bàn giao sản phẩm đúng tiến độ cam kết, lắp dựng nhanh ráp an toàn.</p>
+          </div>
+        </div>
+        
+        <div class="commitment-item">
+          <div class="commitment-icon-wrap">
+            <i class="ri-money-dollar-circle-line"></i>
+          </div>
+          <div class="commitment-text">
+            <h3>Giải Pháp Tối Ưu Chi Phí</h3>
+            <p>Bằng việc làm chủ công nghệ từ khâu thiết kế bản vẽ kỹ thuật đến khâu trực tiếp sản xuất tại xưởng, không qua trung gian, chúng tôi mang đến cho khách hàng giải pháp tối ưu hóa chi phí vật liệu và thi công hợp lý nhất, cam kết không phát sinh chi phí ngoài hợp đồng.</p>
+          </div>
+        </div>
+        
+        <div class="commitment-item">
+          <div class="commitment-icon-wrap">
+            <i class="ri-handshake-line"></i>
+          </div>
+          <div class="commitment-text">
+            <h3>Đảm Bảo Uy Tín & Trách Nhiệm</h3>
+            <p>Với phương châm lấy uy tín làm nền móng và chất lượng làm cột trụ, Sao Vàng luôn đặt lợi ích của khách hàng lên hàng đầu. Mọi dự án của chúng tôi đều được bảo hành dài hạn và bảo trì định kỳ chu đáo để quý khách hoàn toàn an tâm.</p>
+          </div>
+        </div>
+        
+        <div class="commitment-item">
+          <div class="commitment-icon-wrap">
+            <i class="ri-user-star-line"></i>
+          </div>
+          <div class="commitment-text">
+            <h3>Đội Ngũ Chuyên Gia Đầu Ngành</h3>
+            <p>Đội ngũ kỹ sư cơ khí chế tạo máy từ các trường đại học danh tiếng (được điều hành bởi KS. Lê Văn Hải) kết hợp với các nghệ nhân uốn sắt thủ công giàu kinh nghiệm, mang đến sự kết hợp hoàn hảo giữa kỹ thuật chính xác và nghệ thuật chế tác.</p>
+          </div>
+        </div>
+        
+        <div class="commitment-item">
+          <div class="commitment-icon-wrap">
+            <i class="ri-customer-service-2-line"></i>
+          </div>
+          <div class="commitment-text">
+            <h3>Dịch Vụ Hỗ Trợ Kỹ Thuật 24/7</h3>
+            <p>Hệ thống tư vấn kỹ thuật và chăm sóc khách hàng của Sao Vàng luôn sẵn sàng hỗ trợ quý khách hàng mọi lúc mọi nơi. Chúng tôi hỗ trợ khảo sát thực tế, đo đạc công trình tận nơi và giải quyết mọi yêu cầu phát sinh một cách nhanh nhất.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CAPABILITIES -->
 <section class="section bg-gray">
   <div class="container">
@@ -700,7 +973,7 @@
           </a>
           <p style="font-size: var(--text-sm); color: var(--gray-400); line-height: 1.6;">
             <strong>CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG</strong><br>
-            MST: 0110461829 — Sở KH&ĐT Hà Nội cấp.<br>
+            MST: 0110808047 — Sở KH&ĐT Hà Nội cấp.<br>
             📍 VP: Tầng 3, TT7-35 KĐT Văn Phú, Hà Đông, Hà Nội.<br>
             🏭 Xưởng: Đường CN 6, KCN Bắc Từ Liêm, Hà Nội.
           </p>
