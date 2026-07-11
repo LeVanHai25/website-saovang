@@ -363,6 +363,9 @@
       .dl-cta-section { padding: 32px 24px; }
     }
   </style>
+  <!-- dFlip PDF Flipbook Stylesheets -->
+  <link rel="stylesheet" href="assets/js/dflip/css/dflip.min.css" />
+  <link rel="stylesheet" href="assets/js/dflip/css/themify-icons.min.css" />
 </head>
 <body>
 
@@ -712,8 +715,8 @@
       </button>
     </div>
   </div>
-  <div class="pdf-viewer-body" style="flex: 1; background: #525659; position: relative; display: flex; justify-content: center; align-items: center;">
-    <iframe id="pdfViewerIframe" src="" style="width: 100%; height: 100%; border: none; display: block;" allow="fullscreen"></iframe>
+  <div class="pdf-viewer-body" style="flex: 1; background: #1a1a1a; position: relative;">
+    <div id="flipbookContainer" style="width: 100%; height: 100%; position: absolute; inset: 0;"></div>
   </div>
 </div>
 
@@ -721,6 +724,17 @@
   @keyframes spin { to { transform: rotate(360deg); } }
 </style>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="assets/js/dflip/js/dflip.min.js"></script>
+<script>
+  // Cấu hình CDN cho các thành phần mở rộng của dFlip (pdf.js và three.js)
+  var DFLIP = window.DFLIP || {};
+  DFLIP.defaults = DFLIP.defaults || {};
+  DFLIP.defaults.pdfjsSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js";
+  DFLIP.defaults.pdfjsWorkerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+  DFLIP.defaults.threejsSrc = "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js";
+  DFLIP.defaults.soundEnable = true;
+</script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/modules/navbar.js"></script>
 <script src="assets/js/shared/floating-widget.js"></script>
@@ -849,25 +863,59 @@
     });
   });
 
-  // ─── PDF Viewer Modal Logic ──────────────────────────────────────
+  // ─── PDF Viewer Modal Logic (Tích Hợp Sách Lật 3D dFlip) ──────────
   const pdfViewerOverlay = document.getElementById('pdfViewerOverlay');
   const pdfViewerTitle = document.getElementById('pdfViewerTitle');
-  const pdfViewerIframe = document.getElementById('pdfViewerIframe');
   const pdfViewerDownloadBtn = document.getElementById('pdfViewerDownloadBtn');
   const pdfViewerClose = document.getElementById('pdfViewerClose');
+  let flipBook = null;
 
   function openPdfViewer(url, title) {
     pdfViewerTitle.textContent = title;
     pdfViewerDownloadBtn.href = url;
     
-    // For local files or remote files, direct PDF viewing via iframe
-    let viewUrl = url;
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-    if (isMobile && url.startsWith('http')) {
-      viewUrl = `https://docs.google.com/gview?url=${encodeURIComponent(url)}&embedded=true`;
+    // Hủy flipbook cũ nếu đang tồn tại để giải phóng bộ nhớ WebGL/Canvas
+    if (flipBook && flipBook.destroy) {
+      try { flipBook.destroy(); } catch(e) {}
     }
     
-    pdfViewerIframe.src = viewUrl;
+    const container = $("#flipbookContainer");
+    container.empty();
+    
+    // Cấu hình các tham số sách lật cao cấp tương ứng Đại Phúc
+    const options = {
+      webgl: true,
+      webglShadow: true,
+      soundEnable: true,
+      showSearchControl: true,
+      height: "100%",
+      autoEnableOutline: false,
+      autoEnableThumbnail: false,
+      overwritePDFOutline: false,
+      enableDownload: false,
+      duration: 800,
+      backgroundColor: "#1a1a1a",
+      text: {
+        toggleSound: "Bật / tắt âm thanh",
+        toggleThumbnails: "Danh sách ảnh nhỏ",
+        toggleOutline: "Mục lục",
+        previousPage: "Trang trước",
+        nextPage: "Trang sau",
+        toggleFullscreen: "Chế độ toàn màn hình",
+        zoomIn: "Phóng to",
+        zoomOut: "Thu nhỏ",
+        toggleHelp: "Trợ giúp",
+        singlePageMode: "Chế độ trang đơn",
+        doublePageMode: "Chế độ trang kép",
+        downloadPDFFile: "Tải file PDF",
+        search: "Tìm kiếm",
+        loading: "Đang tải tài liệu..."
+      }
+    };
+    
+    // Khởi tạo sách lật dFlip từ đường dẫn PDF
+    flipBook = container.flipBook(url, options);
+    
     pdfViewerOverlay.style.opacity = '1';
     pdfViewerOverlay.style.visibility = 'visible';
     document.body.style.overflow = 'hidden';
@@ -876,8 +924,16 @@
   function closePdfViewer() {
     pdfViewerOverlay.style.opacity = '0';
     pdfViewerOverlay.style.visibility = 'hidden';
-    pdfViewerIframe.src = '';
     document.body.style.overflow = '';
+    
+    // Giải phóng bộ nhớ và xóa phần tử flipbook
+    if (flipBook && flipBook.destroy) {
+      try {
+        flipBook.destroy();
+        flipBook = null;
+      } catch(e) {}
+    }
+    $("#flipbookContainer").empty();
   }
 
   pdfViewerClose.addEventListener('click', closePdfViewer);
