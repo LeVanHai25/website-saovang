@@ -1259,6 +1259,7 @@ html_content = """<!DOCTYPE html>
 
   <script src="assets/js/main.js"></script>
   <script src="assets/js/aluminium-finder.js"></script>
+  <script src="assets/js/aluminium-rfq.js"></script>
   <script>
     function handleAluminiumRfq(e) {
       e.preventDefault();

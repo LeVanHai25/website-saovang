@@ -333,7 +333,7 @@ cuanhomkinh_html = """<!DOCTYPE html>
       </div>
 
       <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 32px;">
-        <form onsubmit="event.preventDefault(); alert('Cảm ơn Quý khách! Kỹ sư SV Aluminium sẽ liên hệ tư vấn trong 24h.');">
+        <form id="doorRfqForm" onsubmit="event.preventDefault();">
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
             <input type="text" required placeholder="Họ tên / Đơn vị *" style="padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 14px; background: #FFF;" />
             <input type="tel" required placeholder="Số điện thoại / Zalo *" style="padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 14px; background: #FFF;" />
@@ -355,6 +355,10 @@ cuanhomkinh_html = """<!DOCTYPE html>
               <option>Cửa Thủy Lực VH65</option>
               <option>Chưa xác định (Cần tư vấn)</option>
             </select>
+          </div>
+          <div style="margin-bottom: 16px;">
+            <input type="file" id="doorRfqFile" multiple style="width: 100%; padding: 10px; border: 1px dashed #94A3B8; border-radius: 6px; background: #FFFFFF; font-size: 13px;" />
+            <span style="font-size: 11px; color: #64748B; margin-top: 4px; display: block;">Hỗ trợ upload bản vẽ (.dwg, .dxf, .pdf, .step, .zip) tối đa 50MB</span>
           </div>
           <div style="margin-bottom: 20px;">
             <textarea rows="3" placeholder="Ghi chú kích thước sơ bộ hoặc yêu cầu kỹ thuật..." style="width: 100%; padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 14px; background: #FFF; resize: vertical;"></textarea>
@@ -406,6 +410,7 @@ cuanhomkinh_html = """<!DOCTYPE html>
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/aluminium-rfq.js"></script>
 </body>
 </html>
 """
@@ -651,7 +656,7 @@ vachkinh_html = """<!DOCTYPE html>
       </div>
 
       <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 32px;">
-        <form onsubmit="event.preventDefault(); alert('Cảm ơn Quý khách! Kỹ sư kết cấu SV Aluminium sẽ liên hệ tư vấn trong 24h.');">
+        <form id="facadeRfqForm" onsubmit="event.preventDefault();">
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
             <input type="text" required placeholder="Họ tên / Đơn vị tư vấn thiết kế *" style="padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 14px; background: #FFF;" />
             <input type="tel" required placeholder="Số điện thoại / Zalo *" style="padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 14px; background: #FFF;" />
@@ -665,6 +670,10 @@ vachkinh_html = """<!DOCTYPE html>
               <option>Mái Kính Canopy &amp; Giếng Trời</option>
             </select>
             <input type="text" placeholder="Địa điểm công trình (Tỉnh/TP)" style="padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 14px; background: #FFF;" />
+          </div>
+          <div style="margin-bottom: 16px;">
+            <input type="file" id="facadeRfqFile" multiple style="width: 100%; padding: 10px; border: 1px dashed #94A3B8; border-radius: 6px; background: #FFFFFF; font-size: 13px;" />
+            <span style="font-size: 11px; color: #64748B; margin-top: 4px; display: block;">Hỗ trợ upload bản vẽ CAD (.dwg, .dxf), file PDF, STEP hoặc ZIP (Tối đa 50MB)</span>
           </div>
           <div style="margin-bottom: 20px;">
             <textarea rows="3" placeholder="Ghi chú khối lượng m2 ước tính hoặc yêu cầu kính (Low-E, phản quang, kính hộp)..." style="width: 100%; padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 14px; background: #FFF; resize: vertical;"></textarea>
@@ -716,16 +725,15 @@ vachkinh_html = """<!DOCTYPE html>
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/aluminium-rfq.js"></script>
 </body>
 </html>
 """
 
 with open(r"d:\Sao Vàng\Website-SaoVang\website\cuanhomkinh.html", "w", encoding="utf-8") as f:
     f.write(cuanhomkinh_html)
-print("✅ Generated cuanhomkinh.html")
+print("✅ Updated cuanhomkinh.html with aluminium-rfq.js")
 
 with open(r"d:\Sao Vàng\Website-SaoVang\website\vachkinh.html", "w", encoding="utf-8") as f:
     f.write(vachkinh_html)
-print("✅ Generated vachkinh.html")
-
-print("🎉 PHASE 3 SUCCESS: Product Application Suite (cuanhomkinh.html & vachkinh.html) generated!")
+print("✅ Updated vachkinh.html with aluminium-rfq.js")

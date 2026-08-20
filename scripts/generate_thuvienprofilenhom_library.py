@@ -325,6 +325,7 @@ html_content = """<!DOCTYPE html>
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/aluminium-rfq.js"></script>
   <script>
     let allSystems = [];
     let currentGroup = 'all';
