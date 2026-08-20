@@ -1,0 +1,5 @@
+File: d:/Sao Vàng/Website-SaoVang\CKSV\bảng duyển dụng\CKSV THANG BẢNG LƯƠNG & FOM TUYỂN DỤNG.xlsx
+Sheet: theo dõi sơ bộ cv của việt
+Cell: A6
+Value: ct monaco hạ long
+------------------------------------------------------------

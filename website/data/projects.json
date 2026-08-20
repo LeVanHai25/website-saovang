@@ -1,187 +1,273 @@
 {
   "taxonomy": {
-    "sectors": ["mechanical", "facade"],
-    "systems": ["gate", "staircase", "balustrade", "structural-inox", "window-door", "curtain-wall"],
-    "materials": ["stainless-steel-316", "wrought-iron", "cast-aluminum", "anodized-aluminum", "low-e-glass", "tempered-glass"]
+    "sectors": [
+      "residential-metalwork",
+      "yacht-metalwork",
+      "custom-metalwork"
+    ],
+    "systems": [
+      "balustrade-railing",
+      "staircase-handrail",
+      "gate-fence",
+      "canopy-skylight",
+      "yacht-railing",
+      "yacht-louver",
+      "yacht-drainage",
+      "custom-metal"
+    ],
+    "materials": [
+      "stainless-steel-316",
+      "stainless-steel-304",
+      "structural-steel",
+      "tempered-glass",
+      "laminated-glass"
+    ]
   },
   "projects": [
     {
-      "id": "sv-proj-001",
-      "sector": "mechanical",
-      "system": "gate",
-      "materials": ["cast-aluminum"],
-      "image": "assets/images/project-mansion-gate.png",
+      "id": "sv-proj-villa-anvuong",
+      "sector": "residential-metalwork",
+      "system": "balustrade-railing",
+      "materials": [
+        "stainless-steel-304",
+        "tempered-glass"
+      ],
+      "image": "assets/images/projects/villa-an-vuong/hero.jpg",
+      "gallery": [
+        "assets/images/projects/villa-an-vuong/hero.jpg",
+        "assets/images/projects/villa-an-vuong/detail-01.jpg",
+        "assets/images/projects/villa-an-vuong/detail-02.jpg",
+        "assets/images/projects/villa-an-vuong/detail-03.jpg"
+      ],
       "translations": {
         "vi": {
-          "title": "Cổng Đúc Biệt Thự Lâu Đài Tây Hồ",
-          "description": "Chế tác cổng nhôm đúc chân không hợp kim nguyên khối sơn mạ đồng giả cổ.",
-          "location": "Tây Hồ, Hà Nội",
-          "scale": "Cửa cổng cao 3.8m, nặng 1.2 tấn",
-          "value": "1.2 Tỷ VNĐ"
+          "title": "Biệt Thự An Vượng Villa",
+          "description": "Gia công và lắp đặt hoàn thiện hệ lan can kính, lan can kim loại và các chi tiết cơ khí kiến trúc theo thiết kế biệt thự cao cấp.",
+          "location": "KĐT Nam Cường - Dương Nội, Hà Nội",
+          "scale": "Toàn bộ hệ lan can & chi tiết kim loại hoàn thiện biệt thự",
+          "status": "Hoàn thành & Bàn giao"
         },
         "en": {
-          "title": "Cast Aluminum Gate - West Lake Mansion",
-          "description": "Vacuum-cast single-block aluminum alloy gates with antique bronze coating.",
-          "location": "West Lake, Hanoi",
-          "scale": "3.8m height gate, weight 1.2 tons",
-          "value": "$52,000 USD"
-        },
-        "jp": {
-          "title": "西湖マンション アルミ鋳物正門",
-          "description": "真空鋳造によるアルミ合金製大型門扉、アンティークブロンズ塗装仕上げ。",
-          "location": "ハノイ、タイホー区",
-          "scale": "門扉高さ3.8m、重量1.2t",
-          "value": "780万円"
+          "title": "An Vuong Luxury Villa",
+          "description": "Fabrication and installation of glass balustrades, metal railings, and architectural metalwork according to customized villa design.",
+          "location": "Hanoi, Vietnam",
+          "scale": "Complete balustrade system & finished metal details",
+          "status": "Completed"
         }
       }
     },
     {
-      "id": "sv-proj-002",
-      "sector": "mechanical",
-      "system": "structural-inox",
-      "materials": ["stainless-steel-316"],
-      "image": "assets/images/welding_work.png",
+      "id": "sv-proj-villa-dothanh",
+      "sector": "residential-metalwork",
+      "system": "balustrade-railing",
+      "materials": [
+        "structural-steel",
+        "stainless-steel-304"
+      ],
+      "image": "assets/images/projects/villa-do-thanh/hero.jpg",
+      "gallery": [
+        "assets/images/projects/villa-do-thanh/hero.jpg",
+        "assets/images/projects/villa-do-thanh/detail-01.jpg",
+        "assets/images/projects/villa-do-thanh/detail-02.jpg"
+      ],
       "translations": {
         "vi": {
-          "title": "Gia Công Bồn Bể &amp; Hệ Thống Inox Vi Sinh",
-          "description": "Chế tạo bồn bể chứa áp lực inox 304/316L, hệ thống đường ống inox vi sinh kết cấu hàn TIG độ thẩm mỹ cao cho nhà máy.",
-          "location": "KCN Bắc Từ Liêm, Hà Nội",
-          "scale": "Tổ hợp 8 bồn chứa vi sinh công nghiệp",
-          "value": "1.8 Tỷ VNĐ"
+          "title": "Biệt Thự Đô Thành Villa",
+          "description": "Triển khai kỹ thuật và thi công các hạng mục lan can ban công, hàng rào kim loại và tay vịn theo bản vẽ thiết kế.",
+          "location": "Việt Nam",
+          "scale": "Hệ lan can, cổng rào và kết cấu kim loại hoàn thiện",
+          "status": "Hoàn thành & Bàn giao"
         },
         "en": {
-          "title": "Industrial Stainless Steel Tank &amp; Piping System",
-          "description": "Fabrication of 304/316L stainless steel pressure tanks and sanitary piping with high-quality TIG welding.",
-          "location": "North Tu Liem IP, Hanoi",
-          "scale": "Assembly of 8 industrial sanitary tanks",
-          "value": "$78,000 USD"
-        },
-        "jp": {
-          "title": "産業用ステンレス製タンク・配管システム",
-          "description": "製薬・食品工場向けの高品質TIG溶接によるステンレス製圧力タンクおよびサニタリー配管の製造。",
-          "location": "ハノイ市バクツリエム工業団地",
-          "scale": "産業用サニタリータンク8基組立",
-          "value": "1,170万円"
+          "title": "Do Thanh Residence Villa",
+          "description": "Engineering and execution of balcony railings, metal fencing, and handrails following architectural specifications.",
+          "location": "Vietnam",
+          "scale": "Balustrades, fencing, and architectural metalwork",
+          "status": "Completed"
         }
       }
     },
     {
-      "id": "sv-proj-003",
-      "sector": "mechanical",
-      "system": "staircase",
-      "materials": ["wrought-iron", "tempered-glass"],
-      "image": "assets/images/project-penthouse.png",
+      "id": "sv-proj-villa-linhhue",
+      "sector": "residential-metalwork",
+      "system": "gate-fence",
+      "materials": [
+        "structural-steel",
+        "stainless-steel-304"
+      ],
+      "image": "assets/images/projects/villa-linh-hue/hero.jpg",
+      "gallery": [
+        "assets/images/projects/villa-linh-hue/hero.jpg",
+        "assets/images/projects/villa-linh-hue/detail-01.jpg",
+        "assets/images/projects/villa-linh-hue/detail-02.jpg"
+      ],
       "translations": {
         "vi": {
-          "title": "Cầu Thang Xoắn Ốc Penthouse Sky Garden",
-          "description": "Cấu trúc xương cá thép bản cắt CNC uốn lượn kết hợp lan can kính cường lực cong ôm.",
-          "location": "Quận 7, TP. HCM",
-          "scale": "Cầu thang cao 4.2m kết cấu chịu lực độc lập",
-          "value": "850 Triệu VNĐ"
+          "title": "Biệt Thự Linh Huệ Villa",
+          "description": "Chế tác và lắp dựng hệ cổng biệt thự, lan can kim loại và hạng mục cơ khí hoàn thiện theo hồ sơ thiết kế.",
+          "location": "Việt Nam",
+          "scale": "Cổng chính biệt thự, hệ lan can và chi tiết kim loại",
+          "status": "Hoàn thành & Bàn giao"
         },
         "en": {
-          "title": "Spiral Staircase - Sky Garden Penthouse",
-          "description": "CNC-cut steel plate spine structure with curved structural glass balustrades.",
-          "location": "District 7, HCMC",
-          "scale": "4.2m height cantilevered structural stairs",
-          "value": "$36,000 USD"
-        },
-        "jp": {
-          "title": "スカイガーデン・ペントハウス 螺旋階段",
-          "description": "CNC切断による特殊鋼板構造に曲げ強化ガラスの手すりを組み合わせたデザイン階段。",
-          "location": "ホーチミン市7区",
-          "scale": "高さ4.2m 自立式構造体",
-          "value": "550万円"
+          "title": "Linh Hue Luxury Villa",
+          "description": "Fabrication and erection of entrance gates, metal railings, and finishing metalwork according to engineering drawings.",
+          "location": "Vietnam",
+          "scale": "Main entrance gate, balustrades, and metal details",
+          "status": "Completed"
         }
       }
     },
     {
-      "id": "sv-proj-004",
-      "sector": "facade",
-      "system": "curtain-wall",
-      "materials": ["low-e-glass", "anodized-aluminum"],
-      "image": "assets/images/project-dalat-villa.png",
+      "id": "sv-proj-villa-thanhhoa",
+      "sector": "residential-metalwork",
+      "system": "custom-metal",
+      "materials": [
+        "structural-steel",
+        "stainless-steel-304",
+        "tempered-glass"
+      ],
+      "image": "assets/images/projects/villa-thanh-hoa/hero.jpg",
+      "gallery": [
+        "assets/images/projects/villa-thanh-hoa/hero.jpg",
+        "assets/images/projects/villa-thanh-hoa/detail-01.jpg"
+      ],
       "translations": {
         "vi": {
-          "title": "Mặt Dựng Vách Kính Villa Đà Lạt",
-          "description": "Vách dựng kính Unitized kết hợp kính hộp Low-E cản nhiệt, cách âm vượt trội cho villa đồi.",
-          "location": "Đà Lạt, Lâm Đồng",
-          "scale": "350 m² kính mặt dựng khổ lớn",
-          "value": "2.5 Tỷ VNĐ"
+          "title": "Công Trình Nhà Ở Cao Cấp Thanh Hóa",
+          "description": "Gia công kết cấu thép, hệ lan can và khung kim loại kiến trúc hoàn thiện đồng bộ tại công trình.",
+          "location": "Thanh Hóa, Việt Nam",
+          "scale": "Toàn bộ hệ cơ khí hoàn thiện nhà ở",
+          "status": "Hoàn thành & Bàn giao"
         },
         "en": {
-          "title": "Glass Facade Curtain Wall - Da Lat Hill Villa",
-          "description": "Unitized glass facade with insulated Low-E glass panels for optimal thermal control.",
-          "location": "Da Lat, Lam Dong",
-          "scale": "350 m² of large-span glass facade",
-          "value": "$108,000 USD"
-        },
-        "jp": {
-          "title": "ダラット・ヒルヴィラ ガラスファサード",
-          "description": "高断熱Low-Eペアガラスと高強度アルミサッシによるユニット式カーテンウォール。",
-          "location": "ラムドン省ダラット市",
-          "scale": "大スパンガラスファサード 350 m²",
-          "value": "1,620万円"
+          "title": "Thanh Hoa Premium Residence",
+          "description": "Fabrication of structural steel frames, railings, and synchronized architectural metal finishes.",
+          "location": "Thanh Hoa, Vietnam",
+          "scale": "Complete residential metalwork package",
+          "status": "Completed"
         }
       }
     },
     {
-      "id": "sv-proj-005",
-      "sector": "facade",
-      "system": "window-door",
-      "materials": ["anodized-aluminum", "tempered-glass"],
-      "image": "assets/images/project-vinhomes-villa.png",
+      "id": "sv-proj-yacht-tulip",
+      "sector": "yacht-metalwork",
+      "system": "yacht-railing",
+      "materials": [
+        "stainless-steel-316",
+        "tempered-glass"
+      ],
+      "image": "assets/images/projects/yacht-tulip/hero.jpg",
+      "gallery": [
+        "assets/images/projects/yacht-tulip/hero.jpg",
+        "assets/images/projects/yacht-tulip/detail-01.jpg",
+        "assets/images/projects/yacht-tulip/detail-02.jpg",
+        "assets/images/projects/yacht-tulip/detail-03.jpg"
+      ],
       "translations": {
         "vi": {
-          "title": "Hệ Cửa Nhôm Slim Biệt Thự Vinhomes Riverside",
-          "description": "Hệ thống cửa đi lùa Slim profile siêu mỏng góc nhìn panorama rộng, đóng mở êm ái tích hợp giảm chấn.",
-          "location": "Long Biên, Hà Nội",
-          "scale": "Trọn gói cửa biệt thự 3 tầng",
-          "value": "1.5 Tỷ VNĐ"
+          "title": "Du Thuyền Tulip Cruise (5 Sao)",
+          "description": "Chế tác và lắp dựng toàn bộ hệ lan can inox hàng hải 316, lan can kính boong ngắm cảnh, hệ máng nước inox và chi tiết kim loại hoàn thiện du thuyền.",
+          "location": "Vịnh Hạ Long, Quảng Ninh",
+          "scale": "Toàn bộ hệ lan can inox 316, lan can kính mạn tàu & chi tiết inox boong",
+          "status": "Hoàn thành & Bàn giao"
         },
         "en": {
-          "title": "Slim Profile Aluminum Doors - Vinhomes Riverside Villa",
-          "description": "Ultra-thin profile sliding doors for panorama views, integrated with soft-close hardware.",
-          "location": "Long Bien, Hanoi",
-          "scale": "Entire sliding door system for a 3-story villa",
-          "value": "$65,000 USD"
-        },
-        "jp": {
-          "title": "ビンホームズ・リバーサイド 高級スリムアルミサッシ",
-          "description": "パノラマビューを実現する極細プロファイルの引き戸システム、ソフトクローズ機能付。",
-          "location": "ハノイ、ロンビエン区",
-          "scale": "3階建てヴィラ全体サッシ工事一式",
-          "value": "970万円"
+          "title": "Tulip Cruise 5-Star Luxury Yacht",
+          "description": "Fabrication and installation of marine-grade 316 stainless steel railings, sun deck glass balustrades, stainless drainage, and yacht metal fittings.",
+          "location": "Ha Long Bay, Vietnam",
+          "scale": "Complete 316 SS railing package & sun deck glass balustrades",
+          "status": "Completed"
         }
       }
     },
     {
-      "id": "sv-proj-006",
-      "sector": "facade",
-      "system": "balustrade",
-      "materials": ["tempered-glass", "stainless-steel-316"],
-      "image": "assets/images/project-villa.png",
+      "id": "sv-proj-yacht-azura",
+      "sector": "yacht-metalwork",
+      "system": "yacht-railing",
+      "materials": [
+        "stainless-steel-316",
+        "tempered-glass"
+      ],
+      "image": "assets/images/projects/yacht-azura/hero.jpg",
+      "gallery": [
+        "assets/images/projects/yacht-azura/hero.jpg",
+        "assets/images/projects/yacht-azura/detail-01.jpg",
+        "assets/images/projects/yacht-azura/detail-02.jpg"
+      ],
       "translations": {
         "vi": {
-          "title": "Lan Can Kính Âm Sàn Penthouse Sunshine",
-          "description": "Lan can kính âm sàn không trụ đứng tối ưu tầm nhìn, phụ kiện Hafele inox 316 đánh bóng gương.",
-          "location": "Tây Hồ, Hà Nội",
-          "scale": "80m lan can kính ban công ngoài trời",
-          "value": "600 Triệu VNĐ"
+          "title": "Du Thuyền Azura Cruise",
+          "description": "Triển khai kỹ thuật và gia công hệ lan can inox 316, lan can kính mạn tàu, hệ louver điều hòa và máng thoát nước inox chống ăn mòn biển.",
+          "location": "Hạ Long, Quảng Ninh",
+          "scale": "Hệ lan can inox 316 & chi tiết cơ khí hoàn thiện du thuyền",
+          "status": "Hoàn thành & Bàn giao"
         },
         "en": {
-          "title": "Frameless Glass Balustrades - Sunshine Penthouse",
-          "description": "U-channel recessed glass balustrades with Hafele mirror-polished Marine 316 fittings.",
-          "location": "West Lake, Hanoi",
-          "scale": "80m of outdoor balcony glass balustrades",
-          "value": "$26,000 USD"
+          "title": "Azura Cruise Luxury Yacht",
+          "description": "Engineering and fabrication of 316 stainless steel railings, shipside glass balustrades, AC louvers, and corrosion-resistant marine drainage.",
+          "location": "Ha Long Bay, Vietnam",
+          "scale": "316 SS railings and marine finishing metalwork",
+          "status": "Completed"
+        }
+      }
+    },
+    {
+      "id": "sv-proj-yacht-calista",
+      "sector": "yacht-metalwork",
+      "system": "yacht-louver",
+      "materials": [
+        "stainless-steel-316"
+      ],
+      "image": "assets/images/projects/yacht-calista/hero.jpg",
+      "gallery": [
+        "assets/images/projects/yacht-calista/hero.jpg",
+        "assets/images/projects/yacht-calista/detail-01.jpg"
+      ],
+      "translations": {
+        "vi": {
+          "title": "Du Thuyền Calista Cruise",
+          "description": "Gia công hệ lan can inox du thuyền, máng nước inox, louver điều hòa và các hạng mục cơ khí hoàn thiện theo thiết kế du thuyền.",
+          "location": "Quảng Ninh, Việt Nam",
+          "scale": "Hạng mục cơ khí hoàn thiện du thuyền",
+          "status": "Hoàn thành & Bàn giao"
         },
-        "jp": {
-          "title": "サンシャイン・ペントハウス フレームレスガラス手すり",
-          "description": "床埋込式Uチャンネル固定による柱のない手すり、ヘフェレ社製金具使用。",
-          "location": "ハノイ、タイホー区",
-          "scale": "屋外バルコニー用ガラス手すり 80m",
-          "value": "390万円"
+        "en": {
+          "title": "Calista Cruise Luxury Yacht",
+          "description": "Fabrication of yacht stainless steel railings, stainless gutters, AC louvers, and customized marine metal details.",
+          "location": "Vietnam",
+          "scale": "Complete yacht metalwork and finishing package",
+          "status": "Completed"
+        }
+      }
+    },
+    {
+      "id": "sv-proj-yacht-leona",
+      "sector": "yacht-metalwork",
+      "system": "yacht-railing",
+      "materials": [
+        "stainless-steel-316",
+        "tempered-glass"
+      ],
+      "image": "assets/images/projects/yacht-leona/hero.jpg",
+      "gallery": [
+        "assets/images/projects/yacht-leona/hero.jpg",
+        "assets/images/projects/yacht-leona/detail-01.jpg"
+      ],
+      "translations": {
+        "vi": {
+          "title": "Du Thuyền Leona Cruise Hạ Long",
+          "description": "Sản xuất và lắp đặt hệ lan can inox 316, lan can kính boong tàu và các kết cấu kim loại hoàn thiện trên du thuyền tham quan cao cấp.",
+          "location": "Vịnh Hạ Long, Quảng Ninh",
+          "scale": "Toàn bộ hệ lan can và kết cấu inox du thuyền",
+          "status": "Hoàn thành & Bàn giao"
+        },
+        "en": {
+          "title": "Leona Cruise Ha Long",
+          "description": "Manufacturing and installation of 316 stainless steel railings, deck glass balustrades, and finishing metal structures on luxury day cruise.",
+          "location": "Ha Long Bay, Vietnam",
+          "scale": "Full yacht railings and stainless steel structures",
+          "status": "Completed"
         }
       }
     }

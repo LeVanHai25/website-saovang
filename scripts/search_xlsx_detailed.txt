@@ -1,0 +1,114 @@
+CHECKED FILES:
+d:/Sao Vàng/Website-SaoVang\Bang_Danh_Gia_Nang_Luc_Tho_Co_Khi_ASV.xlsx
+d:/Sao Vàng/Website-SaoVang\Bao_Gia_Sao_Vang_Chuyen_Nghiep.xlsx
+d:/Sao Vàng/Website-SaoVang\CKSV_Bo_Cong_Cu_Tuyen_Dung_Tho_Co_Khi.xlsx
+d:/Sao Vàng/Website-SaoVang\CKSV_Form_Tuyen_Dung_Tho_Co_Khi.xlsx
+d:/Sao Vàng/Website-SaoVang\CKSV_Form_Tuyen_Dung_Tho_Co_Khi_Phan_Bo.xlsx
+d:/Sao Vàng/Website-SaoVang\Danh_Sach_20_San_Pham_Tai_Che_CNC.xlsx
+d:/Sao Vàng/Website-SaoVang\KeToan_SaoVang_1Bang.xlsx
+d:/Sao Vàng/Website-SaoVang\~$CKSV_Bo_Cong_Cu_Tuyen_Dung_Tho_Co_Khi.xlsx
+d:/Sao Vàng/Website-SaoVang\~$CKSV_Bo_Cong_Cu_Tuyen_Dung_Tho_Co_Khi.xlsx -> ERROR: PermissionError(13, 'Permission denied')
+d:/Sao Vàng/Website-SaoVang\~$CKSV_Form_Tuyen_Dung_Tho_Co_Khi.xlsx
+d:/Sao Vàng/Website-SaoVang\~$CKSV_Form_Tuyen_Dung_Tho_Co_Khi.xlsx -> ERROR: PermissionError(13, 'Permission denied')
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_Civro.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_EuroVN.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_Eurowindow.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_Hondalex.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_Kogen.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_KOSO.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_Maxpro.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_Owin.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_PAG.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_PMA.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_PMI.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_Slim.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_Soco.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_Topal.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_VietPhap.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_VietY.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_Viralwindow.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_Xingfa.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Catalogue_HeCuaNhom_Yangli.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\Master_Tracker_HeCuaNhom.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\02_Cơ sở Dữ liệu Gốc.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\02_Cơ sở Dữ liệu Gốc_DANHGIA_MOI.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\03_Danh mục Catalogue theo Hãng.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\04_Bảng theo dõi Tiến độ.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\04_Bảng theo dõi Tiến độ_DANHGIA_MOI.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\08_Catalogue theo Hãng\Catalogue_HeCuaNhom_Civro.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\08_Catalogue theo Hãng\Catalogue_HeCuaNhom_EuroVN.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\08_Catalogue theo Hãng\Catalogue_HeCuaNhom_Maxpro.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\08_Catalogue theo Hãng\Catalogue_HeCuaNhom_Owin.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\08_Catalogue theo Hãng\Catalogue_HeCuaNhom_PAG.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\08_Catalogue theo Hãng\Catalogue_HeCuaNhom_Slim.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\08_Catalogue theo Hãng\Catalogue_HeCuaNhom_Soco.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\08_Catalogue theo Hãng\Catalogue_HeCuaNhom_Topal.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\08_Catalogue theo Hãng\Catalogue_HeCuaNhom_Viralwindow.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_CuaNhom\THƯ VIỆN HỆ NHÔM SAO VÀNG\08_Catalogue theo Hãng\Catalogue_HeCuaNhom_Yangli.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_3H.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_Bogo.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_Candy.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_Cmech.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_CuaSlim.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_CuaSlim_CoAnh.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_CuaTruotQuay.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_Daishin.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_Draho.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_Hopo.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_HuyHoang.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_Janus.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_Kinlong.xlsx
+d:/Sao Vàng/Website-SaoVang\BaoCao_ThuVien_PhuKien\Tổng  hợp phụ kiện cửa nhôm các hãng\Catalogue_PhuKien_Sigico.xlsx
+d:/Sao Vàng/Website-SaoVang\CKSV\00, VAD, Mẫu thẻ điểm --.xlsx
+d:/Sao Vàng/Website-SaoVang\CKSV\1, CKSV, Nhiệm vụ phòng Thiết kế - Dự toán - 010.9.24 (1).xlsx
+d:/Sao Vàng/Website-SaoVang\CKSV\1b, VAD, Thẻ điểm vị trí kế toán thuế - 10.3.22.xlsx
+d:/Sao Vàng/Website-SaoVang\CKSV\3, CKSV, Nhiệm vụ Tổng đội thi công - 10.9.24.xlsx
+d:/Sao Vàng/Website-SaoVang\CKSV\CKSV, Biểu mẫu quản lý sản xuất - 06.10.24.xls
+d:/Sao Vàng/Website-SaoVang\CKSV\CKSV, Biểu mẫu quản lý sản xuất - 06.10.24.xls -> ERROR: InvalidFileException('openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format.')
+d:/Sao Vàng/Website-SaoVang\CKSV\CKSV, Bảng tuyển dụng TP Kỹ thuật- 09.8.24.xlsx
+d:/Sao Vàng/Website-SaoVang\CKSV\~$3, CKSV, Nhiệm vụ Tổng đội thi công - 10.9.24.xlsx
+d:/Sao Vàng/Website-SaoVang\CKSV\~$3, CKSV, Nhiệm vụ Tổng đội thi công - 10.9.24.xlsx -> ERROR: PermissionError(13, 'Permission denied')
+d:/Sao Vàng/Website-SaoVang\CKSV\bảng duyển dụng\CKSV BIỂU MẪU LÀM VIỆC TUẦN.xls
+d:/Sao Vàng/Website-SaoVang\CKSV\bảng duyển dụng\CKSV BIỂU MẪU LÀM VIỆC TUẦN.xls -> ERROR: InvalidFileException('openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format.')
+d:/Sao Vàng/Website-SaoVang\CKSV\bảng duyển dụng\CKSV THANG BẢNG LƯƠNG & FOM TUYỂN DỤNG.xlsx
+d:/Sao Vàng/Website-SaoVang\CKSV\bảng duyển dụng\CKSV, Tự đánh gia bản thân - 31.7.24.xlsx
+d:/Sao Vàng/Website-SaoVang\CKSV\bảng duyển dụng\CKSV,_Sơ_đồ_tổ_chức_công_ty_và_quỹ_lương,_Gốc.xlsx
+d:/Sao Vàng/Website-SaoVang\CKSV\bảng duyển dụng\VGR, Thang bảng lương ngạch bậc - Gốc.xls
+d:/Sao Vàng/Website-SaoVang\CKSV\bảng duyển dụng\VGR, Thang bảng lương ngạch bậc - Gốc.xls -> ERROR: InvalidFileException('openpyxl does not support the old .xls file format, please use xlrd to read this file, or convert it to the more recent .xlsx file format.')
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_HoSo_SV55\DanhMuc_Checklist_BatBuoc_SVAluminium.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_HoSo_SV55\DanhMuc_ChungMinhNguonGoc_SVAluminium.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_HoSo_SV55\DanhMuc_HoSoDauThau_SVAluminium.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_HoSo_SV55\KeHoach_HoSo_SV55.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_HoSo_SV55\KeHoach_HoSo_SV55_v2.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_HoSo_SV55\KeHoach_HoSo_SV55_v3.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_HoSo_SV55\KeHoach_HoSo_SV55_v4.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Báo cáo\SV_Aluminium_Catalog.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Báo cáo\SV_BangSoSanh_Yangli_vs_Viralwindow.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Báo cáo\SV_BoTieuChuanMauSon.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Báo cáo\SV_BoTieuChuanMauSon_3Ben.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Báo cáo\SV_SoSanh_Viral_Yangli_Coso.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Báo cáo\SV_TechnicalBenchmarkReport_Yangli_vs_Viral.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Báo cáo\SV_ThietKeHeNhomMoi.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\BangMau_Yangli_vs_Seaaluk.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\BangPhanBoMau_3Hang.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\BaoCao_DoiChieu_4Hang_ToanDien.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\BaoCao_KiemThu_ToanBo_HeNhom.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\BaoCao_PhapLy_KyThuat_OEM_SV.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\Database_Viralwindow.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\DoiChieu_MatCat_Viral_vs_NhaMay.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\Kho nhôm Viralwindow.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\MatTran_MatCat_Sealuck.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\MatTran_MatCat_Viralwindow.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\MatTran_MatCat_Yangli.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\MatTran_QuyHoach_SanPham_SV_Aluminium.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\MatTran_SoSanh_TongHop_3Hang.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\SoSanh_ChiTiet_KichThuoc_DoDay_4Hang.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\SoSanh_HeNhom_4Hang.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\SV_Aluminium_OEM_Research_Master.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\SV_Aluminium_Product_Master_Database.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Catalog\MatCat_Viralwindow\Database_Viralwindow.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Kho nhôm viral đầy đủ nhất\KOSO - TK NHÔM THÁNG 04.2026.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Kho nhôm viral đầy đủ nhất\VIRAL - TK NHÔM THÁNG 04.2026.xlsx
+d:/Sao Vàng/Website-SaoVang\SV_Aluminium_Project\Kho nhôm viral đầy đủ nhất\YANGLY - TK NHÔM THÁNG 04.2026.xlsx
+
+FOUND FILES:
