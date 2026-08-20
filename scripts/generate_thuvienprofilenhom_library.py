@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+import os
+import sys
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+html_content = """<!DOCTYPE html>
 <html lang="vi">
 <head>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
@@ -520,3 +525,9 @@
   </script>
 </body>
 </html>
+"""
+
+with open(r"d:\Sao Vàng\Website-SaoVang\website\thuvienprofilenhom.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print("✅ Generated thuvienprofilenhom.html Aluminium System Library!")
