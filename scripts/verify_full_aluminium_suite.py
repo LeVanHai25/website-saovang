@@ -50,7 +50,7 @@ html_pages = {
     "nhomsaovang.html": ["al-hero", "marketsSection", "levelsSection", "solutionsSection", "systemsSection", "finishesSection", "caseStudiesSection", "smartFinderSection", "rfqSection"],
     "cuanhomkinh.html": ["door-hero", "openingDoors", "slidingDoors", "slimDoors", "specialDoors", "doorConfiguratorSection", "doorRfq"],
     "vachkinh.html": ["facade-hero", "facadeList", "vachTieuChuan", "vachSlim", "matDungMD50", "matDungMD65", "vachBespoke", "glassMatrixSection", "facadeRfq"],
-    "thuvienprofilenhom.html": ["lib-hero", "filter-panel", "lib-table-wrap", "detailDrawer"]
+    "thuvienprofilenhom.html": ["lib-hero", "filter-panel", "lib-table-wrap", "resourceCenter", "detailDrawer"]
 }
 
 print("\n[3/5] Kiểm tra cấu trúc các trang HTML & Cột mốc UX:")

@@ -1,4 +1,18 @@
-<!DOCTYPE html>
+import os
+import sys
+import json
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+ROOT_DIR = r"d:\Sao Vàng\Website-SaoVang"
+DATA_DIR = os.path.join(ROOT_DIR, "website", "data", "aluminium")
+OUTPUT_FILE = os.path.join(ROOT_DIR, "website", "thuvienprofilenhom.html")
+
+# Load JSON Data
+with open(os.path.join(DATA_DIR, "systems.json"), "r", encoding="utf-8") as f:
+    systems = json.load(f)
+
+html_content = f"""<!DOCTYPE html>
 <html lang="vi">
 <head>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
@@ -23,7 +37,7 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <style>
-    :root {
+    :root {{
       --sv-dark: #0F172A;
       --sv-dark-card: #1E293B;
       --sv-gold: #C9A227;
@@ -32,114 +46,114 @@
       --sv-bg-light: #F8FAFC;
       --ff-head: 'Montserrat', sans-serif;
       --ff-body: 'Inter', sans-serif;
-    }
+    }}
 
-    body { font-family: var(--ff-body); color: #334155; background-color: #FFFFFF; overflow-x: hidden; }
+    body {{ font-family: var(--ff-body); color: #334155; background-color: #FFFFFF; overflow-x: hidden; }}
     
-    .al-tag {
+    .al-tag {{
       display: inline-flex; align-items: center; gap: 6px;
       font-family: var(--ff-head); font-size: 11px; font-weight: 800;
       letter-spacing: 0.14em; text-transform: uppercase; color: var(--sv-gold); margin-bottom: 12px;
-    }
-    .al-title {
+    }}
+    .al-title {{
       font-family: var(--ff-head); font-size: clamp(24px, 4vw, 36px);
       font-weight: 800; color: var(--sv-dark); line-height: 1.25; margin-bottom: 16px;
-    }
+    }}
 
     /* HERO */
-    .lib-hero {
+    .lib-hero {{
       position: relative; background: radial-gradient(circle at 50% 30%, #1E293B 0%, #0F172A 100%);
       color: #FFFFFF; padding: 150px 0 80px; text-align: center; border-bottom: 1px solid rgba(201, 162, 39, 0.2);
-    }
-    .lib-hero-badge {
+    }}
+    .lib-hero-badge {{
       display: inline-flex; align-items: center; gap: 8px;
       background: rgba(201, 162, 39, 0.12); border: 1px solid rgba(201, 162, 39, 0.4);
       padding: 6px 18px; border-radius: 30px; font-family: var(--ff-head);
       font-size: 11px; font-weight: 800; color: var(--sv-gold); text-transform: uppercase;
       letter-spacing: 0.12em; margin-bottom: 20px;
-    }
-    .lib-hero-h1 {
+    }}
+    .lib-hero-h1 {{
       font-family: var(--ff-head); font-size: clamp(28px, 5vw, 48px);
       font-weight: 900; line-height: 1.2; margin-bottom: 16px;
-    }
-    .lib-hero-h1 span {
+    }}
+    .lib-hero-h1 span {{
       background: linear-gradient(135deg, #FFFFFF 0%, var(--sv-gold) 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .lib-hero-p { font-size: clamp(14.5px, 1.8vw, 17px); color: #94A3B8; max-width: 760px; margin: 0 auto 24px; line-height: 1.7; }
+    }}
+    .lib-hero-p {{ font-size: clamp(14.5px, 1.8vw, 17px); color: #94A3B8; max-width: 760px; margin: 0 auto 24px; line-height: 1.7; }}
 
     /* FILTER BAR */
-    .filter-panel {
+    .filter-panel {{
       background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px;
       padding: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); margin-top: -40px;
       position: relative; z-index: 10; margin-bottom: 40px;
-    }
-    .filter-row {
+    }}
+    .filter-row {{
       display: flex; gap: 16px; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-bottom: 16px;
-    }
-    .filter-search-box {
+    }}
+    .filter-search-box {{
       flex: 1; min-width: 260px; position: relative;
-    }
-    .filter-search-box input {
+    }}
+    .filter-search-box input {{
       width: 100%; padding: 12px 16px 12px 42px; border: 1px solid #CBD5E1;
       border-radius: 8px; font-size: 14px; outline: none; transition: border-color 0.2s;
-    }
-    .filter-search-box input:focus { border-color: var(--sv-gold); }
-    .filter-search-icon {
+    }}
+    .filter-search-box input:focus {{ border-color: var(--sv-gold); }}
+    .filter-search-icon {{
       position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
       color: #94A3B8; font-size: 18px;
-    }
+    }}
 
-    .filter-tab-group {
+    .filter-tab-group {{
       display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; max-width: 100%;
-    }
-    .filter-tab {
+    }}
+    .filter-tab {{
       padding: 8px 16px; border-radius: 20px; font-family: var(--ff-head);
       font-size: 12px; font-weight: 700; background: #F1F5F9; color: #475569;
       border: 1px solid transparent; cursor: pointer; white-space: nowrap; transition: all 0.2s;
-    }
-    .filter-tab:hover { background: #E2E8F0; }
-    .filter-tab.active { background: #0F172A; color: #FFFFFF; border-color: var(--sv-gold); }
+    }}
+    .filter-tab:hover {{ background: #E2E8F0; }}
+    .filter-tab.active {{ background: #0F172A; color: #FFFFFF; border-color: var(--sv-gold); }}
 
     /* TABLE */
-    .lib-table-wrap {
+    .lib-table-wrap {{
       overflow-x: auto; background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; margin-bottom: 50px;
-    }
-    .lib-table {
+    }}
+    .lib-table {{
       width: 100%; border-collapse: collapse; text-align: left; font-size: 13.5px;
-    }
-    .lib-table th {
+    }}
+    .lib-table th {{
       background: #0F172A; color: #FFFFFF; font-family: var(--ff-head);
       font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em;
       padding: 16px; border-bottom: 2px solid var(--sv-gold); white-space: nowrap;
-    }
-    .lib-table td {
+    }}
+    .lib-table td {{
       padding: 16px; border-bottom: 1px solid #F1F5F9; color: #334155; vertical-align: middle;
-    }
-    .lib-table tr:hover td { background: #F8FAFC; }
+    }}
+    .lib-table tr:hover td {{ background: #F8FAFC; }}
 
     /* DETAIL DRAWER */
-    .detail-drawer-overlay {
+    .detail-drawer-overlay {{
       position: fixed; inset: 0; background: rgba(15, 23, 42, 0.75); backdrop-filter: blur(4px);
       z-index: 999; display: none; opacity: 0; transition: opacity 0.3s ease;
-    }
-    .detail-drawer-overlay.open { display: block; opacity: 1; }
-    .detail-drawer {
+    }}
+    .detail-drawer-overlay.open {{ display: block; opacity: 1; }}
+    .detail-drawer {{
       position: fixed; top: 0; right: 0; bottom: 0; width: 100%; max-width: 600px;
       background: #FFFFFF; z-index: 1000; box-shadow: -10px 0 40px rgba(0,0,0,0.25);
       transform: translateX(100%); transition: transform 0.3s ease; display: flex;
       flex-direction: column; overflow-y: auto;
-    }
-    .detail-drawer.open { transform: translateX(0); }
-    .drawer-header {
+    }}
+    .detail-drawer.open {{ transform: translateX(0); }}
+    .drawer-header {{
       background: #0F172A; color: #FFFFFF; padding: 24px; display: flex;
       justify-content: space-between; align-items: flex-start; position: sticky; top: 0; z-index: 10;
-    }
-    .drawer-body { padding: 24px; flex: 1; }
-    .drawer-footer {
+    }}
+    .drawer-body {{ padding: 24px; flex: 1; }}
+    .drawer-footer {{
       padding: 20px 24px; background: #F8FAFC; border-top: 1px solid #E2E8F0;
       position: sticky; bottom: 0; z-index: 10; display: flex; gap: 12px; flex-wrap: wrap;
-    }
+    }}
   </style>
 </head>
 <body>
@@ -175,7 +189,7 @@
       <div class="lib-hero-badge"><i class="ri-archive-line"></i> SV ALUMINIUM &bull; ARCHITECTURAL PROFILE LIBRARY</div>
       <h1 class="lib-hero-h1">THƯ VIỆN PROFILE KỸ THUẬT &amp;<br><span>ARCHITECT RESOURCE CENTER</span></h1>
       <p class="lib-hero-p">
-        Tra cứu thông số 16 hệ profile nhôm chiến lược: Độ dày, giới hạn khẩu độ $W \times H$, nguồn profile chính thức (Seaaluk / Yongxing), tiêu chuẩn Rãnh C Châu Âu và tải tài liệu CAD/BOM.
+        Tra cứu thông số 16 hệ profile nhôm chiến lược: Độ dày, giới hạn khẩu độ $W \\times H$, nguồn profile chính thức (Seaaluk / Yongxing), tiêu chuẩn Rãnh C Châu Âu và tải tài liệu CAD/BOM.
       </p>
     </div>
   </section>
@@ -338,53 +352,53 @@
     let systemsData = [];
     let currentGroup = 'all';
 
-    async function loadSystemsLibrary() {
-      try {
+    async function loadSystemsLibrary() {{
+      try {{
         const res = await fetch('data/aluminium/systems.json');
         systemsData = await res.json();
         renderSystemsTable(systemsData);
         checkUrlParams();
-      } catch (e) {
+      }} catch (e) {{
         console.warn('Could not load systems for library:', e);
-      }
-    }
+      }}
+    }}
 
-    function renderSystemsTable(items) {
+    function renderSystemsTable(items) {{
       const tbody = document.getElementById('systemsTableBody');
       if (!tbody) return;
 
-      if (!items || items.length === 0) {
+      if (!items || items.length === 0) {{
         tbody.innerHTML = '<tr><td colspan="9" style="text-align: center; padding: 30px; color: #94A3B8;">Không tìm thấy hệ nhôm phù hợp với bộ lọc.</td></tr>';
         return;
-      }
+      }}
 
       tbody.innerHTML = items.map(sys => `
         <tr>
-          <td><strong style="font-family: var(--ff-head); color: #0F172A;">${sys.code}</strong></td>
+          <td><strong style="font-family: var(--ff-head); color: #0F172A;">${{sys.code}}</strong></td>
           <td>
-            <div style="font-weight: 700; color: #0F172A;">${sys.name}</div>
-            <div style="font-size: 11.5px; color: #64748B;">${sys.description.substring(0, 50)}...</div>
+            <div style="font-weight: 700; color: #0F172A;">${{sys.name}}</div>
+            <div style="font-size: 11.5px; color: #64748B;">${{sys.description.substring(0, 50)}}...</div>
           </td>
-          <td><span style="font-size: 12px; font-weight: 600; color: #475569;">${sys.manufacturer_source}</span></td>
-          <td><span style="font-size: 12px; color: #64748B;">${sys.group_name}</span></td>
-          <td><span style="font-family: var(--ff-head); font-size: 11.5px; font-weight: 800; color: #C9A227;">${sys.investment_level}</span></td>
-          <td>${sys.specs.thickness}</td>
-          <td>${sys.specs.max_width_leaf} x ${sys.specs.max_height_leaf}</td>
-          <td><span style="font-size: 11px; font-weight: 700; color: #16A34A; background: #DCFCE7; padding: 2px 6px; border-radius: 4px;">${sys.verification.badge}</span></td>
+          <td><span style="font-size: 12px; font-weight: 600; color: #475569;">${{sys.manufacturer_source}}</span></td>
+          <td><span style="font-size: 12px; color: #64748B;">${{sys.group_name}}</span></td>
+          <td><span style="font-family: var(--ff-head); font-size: 11.5px; font-weight: 800; color: #C9A227;">${{sys.investment_level}}</span></td>
+          <td>${{sys.specs.thickness}}</td>
+          <td>${{sys.specs.max_width_leaf}} x ${{sys.specs.max_height_leaf}}</td>
+          <td><span style="font-size: 11px; font-weight: 700; color: #16A34A; background: #DCFCE7; padding: 2px 6px; border-radius: 4px;">${{sys.verification.badge}}</span></td>
           <td style="text-align: right;">
-            <button onclick="openDetailDrawer('${sys.id}')" style="background: #0F172A; color: #FFF; font-family: var(--ff-head); font-size: 11.5px; font-weight: 700; padding: 6px 12px; border-radius: 4px; border: none; cursor: pointer; transition: all 0.2s;">
+            <button onclick="openDetailDrawer('${{sys.id}}')" style="background: #0F172A; color: #FFF; font-family: var(--ff-head); font-size: 11.5px; font-weight: 700; padding: 6px 12px; border-radius: 4px; border: none; cursor: pointer; transition: all 0.2s;">
               Xem Hồ Sơ &rarr;
             </button>
           </td>
         </tr>
       `).join('');
-    }
+    }}
 
-    function filterSystems() {
+    function filterSystems() {{
       const query = (document.getElementById('libSearchInput').value || '').toLowerCase();
       const level = document.getElementById('libLevelFilter').value;
 
-      const filtered = systemsData.filter(sys => {
+      const filtered = systemsData.filter(sys => {{
         const matchGroup = currentGroup === 'all' || sys.group_id === currentGroup;
         const matchLevel = level === 'all' || sys.level_id === level;
         const matchSearch = sys.name.toLowerCase().includes(query) || 
@@ -393,19 +407,19 @@
                             sys.manufacturer_source.toLowerCase().includes(query);
 
         return matchGroup && matchLevel && matchSearch;
-      });
+      }});
 
       renderSystemsTable(filtered);
-    }
+    }}
 
-    function setGroupFilter(groupKey, el) {
+    function setGroupFilter(groupKey, el) {{
       currentGroup = groupKey;
       el.parentElement.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
       el.classList.add('active');
       filterSystems();
-    }
+    }}
 
-    function openDetailDrawer(sysId) {
+    function openDetailDrawer(sysId) {{
       const sys = systemsData.find(s => s.id === sysId);
       if (!sys) return;
 
@@ -415,31 +429,31 @@
       document.getElementById('drawerBody').innerHTML = `
         <div style="margin-bottom: 20px;">
           <span style="display: inline-block; font-size: 11px; font-weight: 700; color: #16A34A; background: #DCFCE7; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px;">
-            ${sys.verification.badge} (${sys.verification.document})
+            ${{sys.verification.badge}} (${{sys.verification.document}})
           </span>
-          <p style="font-size: 14px; color: #475569; line-height: 1.6;">${sys.description}</p>
+          <p style="font-size: 14px; color: #475569; line-height: 1.6;">${{sys.description}}</p>
         </div>
 
         <h4 style="font-family: var(--ff-head); font-size: 14px; font-weight: 800; color: #0F172A; text-transform: uppercase; margin-bottom: 12px; border-bottom: 1px solid #E2E8F0; padding-bottom: 6px;">
           THÔNG SỐ KỸ THUẬT CHI TIẾT
         </h4>
         <div style="background: #F8FAFC; border-radius: 8px; padding: 14px; font-size: 13px; color: #334155; margin-bottom: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-          <div><strong>Độ dày nhôm:</strong> ${sys.specs.thickness}</div>
-          <div><strong>Khẩu độ W max:</strong> ${sys.specs.max_width_leaf}</div>
-          <div><strong>Khẩu độ H max:</strong> ${sys.specs.max_height_leaf}</div>
-          <div><strong>Tải trọng cánh:</strong> ${sys.specs.max_weight_leaf}</div>
-          <div><strong>Kính tương thích:</strong> ${sys.specs.glass_thickness}</div>
-          <div><strong>Tiêu chuẩn rãnh:</strong> ${sys.specs.groove_standard}</div>
-          <div><strong>Hệ gioăng:</strong> ${sys.specs.gasket}</div>
-          <div><strong>Khóa & Phụ kiện:</strong> ${sys.specs.lock_type}</div>
+          <div><strong>Độ dày nhôm:</strong> ${{sys.specs.thickness}}</div>
+          <div><strong>Khẩu độ W max:</strong> ${{sys.specs.max_width_leaf}}</div>
+          <div><strong>Khẩu độ H max:</strong> ${{sys.specs.max_height_leaf}}</div>
+          <div><strong>Tải trọng cánh:</strong> ${{sys.specs.max_weight_leaf}}</div>
+          <div><strong>Kính tương thích:</strong> ${{sys.specs.glass_thickness}}</div>
+          <div><strong>Tiêu chuẩn rãnh:</strong> ${{sys.specs.groove_standard}}</div>
+          <div><strong>Hệ gioăng:</strong> ${{sys.specs.gasket}}</div>
+          <div><strong>Khóa & Phụ kiện:</strong> ${{sys.specs.lock_type}}</div>
         </div>
 
         <h4 style="font-family: var(--ff-head); font-size: 14px; font-weight: 800; color: #0F172A; text-transform: uppercase; margin-bottom: 12px; border-bottom: 1px solid #E2E8F0; padding-bottom: 6px;">
           MÀU SẮC & XỬ LÝ BỀ MẶT
         </h4>
         <div style="font-size: 13px; color: #475569; margin-bottom: 20px;">
-          <div style="margin-bottom: 6px;"><strong>Màu sắc có sẵn:</strong> ${sys.finishes.join(', ')}</div>
-          <div><strong>Hỗ trợ Anodize ED:</strong> ${sys.anodize_compatible ? 'Có hỗ trợ mạ Anodize ED Champagne kháng muối biển' : 'Sơn tĩnh điện tiêu chuẩn'}</div>
+          <div style="margin-bottom: 6px;"><strong>Màu sắc có sẵn:</strong> ${{sys.finishes.join(', ')}}</div>
+          <div><strong>Hỗ trợ Anodize ED:</strong> ${{sys.anodize_compatible ? 'Có hỗ trợ mạ Anodize ED Champagne kháng muối biển' : 'Sơn tĩnh điện tiêu chuẩn'}}</div>
         </div>
 
         <div style="background: rgba(201, 162, 39, 0.1); border-left: 3px solid #C9A227; padding: 12px; font-size: 12px; color: #78350F; line-height: 1.5; border-radius: 4px;">
@@ -449,22 +463,28 @@
 
       document.getElementById('detailDrawerOverlay').classList.add('open');
       document.getElementById('detailDrawer').classList.add('open');
-    }
+    }}
 
-    function closeDetailDrawer() {
+    function closeDetailDrawer() {{
       document.getElementById('detailDrawerOverlay').classList.remove('open');
       document.getElementById('detailDrawer').classList.remove('open');
-    }
+    }}
 
-    function checkUrlParams() {
+    function checkUrlParams() {{
       const params = new URLSearchParams(window.location.search);
       const sysId = params.get('sys');
-      if (sysId) {
+      if (sysId) {{
         openDetailDrawer(sysId);
-      }
-    }
+      }}
+    }}
 
     document.addEventListener('DOMContentLoaded', loadSystemsLibrary);
   </script>
 </body>
 </html>
+"""
+
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"✅ Successfully generated Technical Library {OUTPUT_FILE} with Slide-Out Drawer and Resource Center!")
