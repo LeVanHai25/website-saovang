@@ -22,7 +22,7 @@
     'cau-thang-xoan'        : 'Cầu thang xoắn',
     'co-khi-nghe-thuat'     : 'Cơ khí nghệ thuật',
     'cong-nghe-thuat'       : 'Cổng nghệ thuật',
-    'nhom-sao-vang'         : 'Nhôm Sao Vàng',
+    'nhom-sao-vang'         : 'SV Aluminium',
     'linh-vuc-nhom-kinh'    : 'Dịch vụ nhôm kính',
     'cua-nhom-kinh'         : 'Cửa nhôm kính',
     'vach-kinh'             : 'Vách kính & Mặt dựng',

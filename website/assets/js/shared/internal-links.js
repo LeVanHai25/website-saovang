@@ -21,7 +21,7 @@
     'co-khi-nghe-thuat'  : { label:'Cơ Khí Nghệ Thuật',     icon:'ri-brush-3-fill',      color:'#9B1C1C', cat:'Cơ Khí' },
     'cong-nghe-thuat'    : { label:'Cổng Nghệ Thuật',        icon:'ri-door-lock-box-fill',color:'#9B1C1C', cat:'Cơ Khí' },
     /* Nhôm Kính */
-    'nhom-sao-vang'      : { label:'Nhôm Sao Vàng',          icon:'ri-home-gear-fill',    color:'#1a5276', cat:'Nhôm Kính' },
+    'nhom-sao-vang'      : { label:'SV Aluminium',          icon:'ri-home-gear-fill',    color:'#1a5276', cat:'Nhôm Kính' },
     'linh-vuc-nhom-kinh' : { label:'Dịch Vụ Nhôm Kính',     icon:'ri-window-fill',       color:'#1a5276', cat:'Nhôm Kính' },
     'cua-nhom-kinh'      : { label:'Cửa Nhôm Kính',          icon:'ri-door-fill',         color:'#1a5276', cat:'Nhôm Kính' },
     'vach-kinh'          : { label:'Vách Kính Mặt Dựng',     icon:'ri-building-2-fill',   color:'#1a5276', cat:'Nhôm Kính' },
