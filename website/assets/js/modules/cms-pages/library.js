@@ -1,6 +1,6 @@
 /* ════════════════════════════════════════════════════════════════
    SAO VÀNG — modules/cms-pages/library.js  v1.0
-   Controller cho trang Thư Viện Kỹ Thuật (thu-vien-sp.html).
+   Controller cho trang Thư Viện Kỹ Thuật (thuviensp.html).
    Xử lý:
    1. Bộ chuyển đổi hệ nhôm (Aluminum Systems Switcher)
    2. Cuộn mượt với offset tránh đè bởi header sticky

@@ -1,6 +1,6 @@
 /**
  * SAO VÀNG — Final Smoke Test v2
- * Tests all 11 pages (bao-gia.html included)
+ * Tests all 11 pages (baogia.html included)
  */
 const fs   = require('fs');
 const http = require('http');
@@ -8,17 +8,17 @@ const http = require('http');
 const path = require('path');
 const WEBSITE_DIR = path.join(__dirname, '../../website');
 const PAGES = [
-  'index.html', 'gioi-thieu.html', 'linh-vuc-hoat-dong.html',
-  'du-an.html', 'san-pham.html', 'tin-tuc.html', 'lien-he.html',
-  'du-an-chi-tiet.html', 'san-pham-chi-tiet.html', 'tin-tuc-chi-tiet.html',
-  'bao-gia.html',
+  'index.html', 'gioithieu.html', 'linhvuchoatdong.html',
+  'duan.html', 'sanpham.html', 'tintuc.html', 'lienhe.html',
+  'duanchitiet.html', 'sanphamchitiet.html', 'tintucchitiet.html',
+  'baogia.html',
 ];
 
 const HTML_CHECKS = [
   'nav-backdrop', 'aria-expanded', 'zalo.me',
   'sticky-cta-bar', 'prefers-reduced-motion',
   'og:title', 'canonical', 'loading="lazy"',
-  'bao-gia.html',              // nav link to quote page
+  'baogia.html',              // nav link to quote page
 ];
 
 const API_CHECKS = [
@@ -38,8 +38,8 @@ PAGES.forEach(filename => {
     return;
   }
   const html = fs.readFileSync(fp, 'utf8');
-  // bao-gia.html has no og:title check (uses its own format)
-  const checks = filename === 'bao-gia.html'
+  // baogia.html has no og:title check (uses its own format)
+  const checks = filename === 'baogia.html'
     ? HTML_CHECKS.filter(c => c !== 'loading="lazy"')
     : HTML_CHECKS;
   const missing = checks.filter(c => !html.includes(c));

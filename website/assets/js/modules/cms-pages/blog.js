@@ -1,6 +1,6 @@
 /* ════════════════════════════════════════════════════════════════
    SAO VÀNG — modules/cms-pages/blog.js  v1.0
-   Controller cho trang Tin Tức (tin-tuc.html).
+   Controller cho trang Tin Tức (tintuc.html).
    Phụ thuộc: cms-client.js (window.CMS)
 ════════════════════════════════════════════════════════════════ */
 
@@ -57,7 +57,7 @@
       } else {
         el.innerHTML = `<div class="category-list">` +
           cats.map(c => `
-            <div class="cat-item" onclick="window.location.href='tin-tuc.html?cat=${c.slug}'">
+            <div class="cat-item" onclick="window.location.href='tintuc.html?cat=${c.slug}'">
               <span>${CMS.esc(c.name)}</span>
               <span class="cat-count">${c.count || ''}</span>
             </div>`).join('') +
@@ -68,8 +68,8 @@
     const footer = document.getElementById('footerCats');
     if (footer) {
       footer.innerHTML =
-        `<li><a href="tin-tuc.html">Tất cả bài viết</a></li>` +
-        cats.map(c => `<li><a href="tin-tuc.html?cat=${c.slug}">${CMS.esc(c.name)}</a></li>`).join('');
+        `<li><a href="tintuc.html">Tất cả bài viết</a></li>` +
+        cats.map(c => `<li><a href="tintuc.html?cat=${c.slug}">${CMS.esc(c.name)}</a></li>`).join('');
     }
   }
 
@@ -79,7 +79,7 @@
     const date = CMS.formatDate(a.published_at);
     const cls  = featured ? 'article-card featured' : 'article-card';
 
-    return `<a href="tin-tuc-chi-tiet.html?slug=${a.slug || a.id}" class="${cls}" data-reveal>
+    return `<a href="tintucchitiet.html?slug=${a.slug || a.id}" class="${cls}" data-reveal>
       <div class="article-thumb">
         <img src="${CMS.esc(img)}" alt="${CMS.esc(a.title)}" loading="lazy" onerror="this.src='assets/images/hero-interior.png'" />
       </div>
@@ -140,7 +140,7 @@
     }
 
     el.innerHTML = data.map(a => `
-      <a href="tin-tuc-chi-tiet.html?slug=${a.slug || a.id}" class="sidebar-article">
+      <a href="tintucchitiet.html?slug=${a.slug || a.id}" class="sidebar-article">
         <div class="sidebar-thumb">
           <img src="${a.thumbnail ? CMS.imgUrl(a.thumbnail) : 'assets/images/hero-interior.png'}"
                loading="lazy" onerror="this.src='assets/images/hero-interior.png'" alt="" />

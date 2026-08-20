@@ -1,6 +1,6 @@
 /* ════════════════════════════════════════════════════════════════
    SAO VÀNG — modules/cms-pages/projects.js  v1.0
-   Controller cho trang Dự Án (du-an.html).
+   Controller cho trang Dự Án (duan.html).
    Phụ thuộc: cms-client.js (window.CMS)
 ════════════════════════════════════════════════════════════════ */
 
@@ -75,7 +75,7 @@
     const cls = 'proj-item'; // All cards are uniform, no special featured class size to avoid clipping
     const badgeColor = '#E2B13C'; // Warm gold/yellow category pill background
 
-    return `<a href="du-an-chi-tiet.html?slug=${p.slug || p.id}" class="${cls}" data-slug="${p.slug || p.id}" data-reveal>
+    return `<a href="duanchitiet.html?slug=${p.slug || p.id}" class="${cls}" data-slug="${p.slug || p.id}" data-reveal>
       <div class="proj-img-wrap" style="position: relative; overflow: hidden; aspect-ratio: 16/10; width: 100%;">
         <img src="${CMS.esc(img)}" alt="${CMS.esc(p.title)}" loading="lazy" onerror="this.src='assets/images/project-villa.png'" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);" />
         <span class="proj-badge" style="position: absolute; top: 16px; left: 16px; background: ${badgeColor}; color: #fff; font-family: var(--ff-head); font-size: 10px; font-weight: 800; padding: 5px 12px; border-radius: 20px; text-transform: uppercase; z-index: 2; letter-spacing: 0.05em; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">${CMS.esc(p.category || 'Dự án')}</span>
@@ -197,7 +197,7 @@
     setEl('modalResult',    p.result    || 'Dự án bàn giao hoàn thiện, đạt chuẩn quốc tế, nhận được sự hài lòng tuyệt đối của chủ đầu tư.');
 
     const linkEl = document.getElementById('modalStandaloneLink');
-    if (linkEl) linkEl.href = `du-an-chi-tiet.html?slug=${p.slug || p.id}`;
+    if (linkEl) linkEl.href = `duanchitiet.html?slug=${p.slug || p.id}`;
 
     // Gallery thumbnails
     let gallery = [];
@@ -236,7 +236,7 @@
 
     const footerList = document.getElementById('footerCatList');
     if (footerList && cats.length) {
-      footerList.innerHTML = cats.map(c => `<li><a href="du-an.html?cat=${c.slug}">${c.name}</a></li>`).join('');
+      footerList.innerHTML = cats.map(c => `<li><a href="duan.html?cat=${c.slug}">${c.name}</a></li>`).join('');
     }
 
     // Restore URL param

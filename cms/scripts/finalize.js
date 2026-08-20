@@ -18,7 +18,7 @@ const STICKY_BAR_HTML = `
     Gọi Ngay
   </a>
   <a href="https://zalo.me/0937729909" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
-  <a href="lien-he.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
+  <a href="lienhe.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
 </div>`;
 
 // Sticky CTA CSS block (always inject after last } in <style>)
@@ -50,24 +50,24 @@ const REDUCED_MOTION_CSS = `
 
 // Meta for detail pages (dynamic — generic fallback)
 const DETAIL_META = {
-  'du-an-chi-tiet.html': {
+  'duanchitiet.html': {
     title: 'Chi Tiết Dự Án | SAO VÀNG',
     desc:  'Xem chi tiết dự án cơ khí cao cấp của Sao Vàng — hình ảnh, thông số kỹ thuật và giá trị công trình.',
   },
-  'san-pham-chi-tiet.html': {
+  'sanphamchitiet.html': {
     title: 'Chi Tiết Sản Phẩm | SAO VÀNG',
     desc:  'Thông tin chi tiết sản phẩm cơ khí cao cấp Sao Vàng — thông số, vật liệu, giá và hướng dẫn đặt hàng.',
   },
-  'tin-tuc-chi-tiet.html': {
+  'tintucchitiet.html': {
     title: 'Bài Viết | SAO VÀNG',
     desc:  'Tin tức, kiến thức và xu hướng thiết kế cơ khí cao cấp từ đội ngũ chuyên gia Sao Vàng.',
   },
 };
 
 const ALL_PAGES = [
-  'index.html','gioi-thieu.html','linh-vuc-hoat-dong.html',
-  'du-an.html','san-pham.html','tin-tuc.html','lien-he.html',
-  'du-an-chi-tiet.html','san-pham-chi-tiet.html','tin-tuc-chi-tiet.html',
+  'index.html','gioithieu.html','linhvuchoatdong.html',
+  'duan.html','sanpham.html','tintuc.html','lienhe.html',
+  'duanchitiet.html','sanphamchitiet.html','tintucchitiet.html',
 ];
 
 let pass = 0;

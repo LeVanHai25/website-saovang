@@ -15,12 +15,12 @@ const BASE_URL = 'https://saovang.vn';
 
 const PAGES = {
   'index.html':              { title: 'SAO VÀNG — Thiết Kế & Thi Công Cơ Khí Nhà Ở & Du Thuyền Cao Cấp', desc: 'Công ty TNHH Sao Vàng — Thiết kế, gia công và lắp đặt cơ khí nhà ở, biệt thự và du thuyền cao cấp từ năm 2024. 300+ công trình, 50+ du thuyền, bảo hành 5 năm.' },
-  'gioi-thieu.html':         { title: 'Giới Thiệu Công Ty | SAO VÀNG', desc: 'Công ty Sao Vàng thành lập 2024, đội ngũ 120+ kỹ sư, xưởng sản xuất 5,000m², chứng nhận quốc tế AWS và ASME.' },
-  'linh-vuc-hoat-dong.html': { title: 'Lĩnh Vực Hoạt Động | SAO VÀNG', desc: 'Cơ khí nhà ở, du thuyền, cầu thang & lan can, cổng & hàng rào, cửa & vách kính, bảo trì.' },
-  'du-an.html':              { title: 'Dự Án Đã Thực Hiện | SAO VÀNG', desc: '300+ công trình từ biệt thự đến du thuyền cao cấp tại TP.HCM, Hà Nội, Đà Lạt và Vịnh Hạ Long.' },
-  'san-pham.html':           { title: 'Sản Phẩm | SAO VÀNG', desc: 'Catalog sản phẩm cơ khí cao cấp: inox 316, kính cường lực, nhôm định hình, hàng rào và lan can.' },
-  'tin-tuc.html':            { title: 'Tin Tức & Kiến Thức | SAO VÀNG', desc: 'Tin tức, kiến thức kỹ thuật và xu hướng thiết kế cơ khí cao cấp từ đội ngũ chuyên gia Sao Vàng.' },
-  'lien-he.html':            { title: 'Liên Hệ | SAO VÀNG', desc: 'Liên hệ Sao Vàng để được tư vấn miễn phí. Hotline: 093 7729 909. Email: info@saovang.vn.' },
+  'gioithieu.html':         { title: 'Giới Thiệu Công Ty | SAO VÀNG', desc: 'Công ty Sao Vàng thành lập 2024, đội ngũ 120+ kỹ sư, xưởng sản xuất 5,000m², chứng nhận quốc tế AWS và ASME.' },
+  'linhvuchoatdong.html': { title: 'Lĩnh Vực Hoạt Động | SAO VÀNG', desc: 'Cơ khí nhà ở, du thuyền, cầu thang & lan can, cổng & hàng rào, cửa & vách kính, bảo trì.' },
+  'duan.html':              { title: 'Dự Án Đã Thực Hiện | SAO VÀNG', desc: '300+ công trình từ biệt thự đến du thuyền cao cấp tại TP.HCM, Hà Nội, Đà Lạt và Vịnh Hạ Long.' },
+  'sanpham.html':           { title: 'Sản Phẩm | SAO VÀNG', desc: 'Catalog sản phẩm cơ khí cao cấp: inox 316, kính cường lực, nhôm định hình, hàng rào và lan can.' },
+  'tintuc.html':            { title: 'Tin Tức & Kiến Thức | SAO VÀNG', desc: 'Tin tức, kiến thức kỹ thuật và xu hướng thiết kế cơ khí cao cấp từ đội ngũ chuyên gia Sao Vàng.' },
+  'lienhe.html':            { title: 'Liên Hệ | SAO VÀNG', desc: 'Liên hệ Sao Vàng để được tư vấn miễn phí. Hotline: 093 7729 909. Email: info@saovang.vn.' },
 };
 
 // Schema.org LocalBusiness JSON-LD for homepage
@@ -117,7 +117,7 @@ Object.entries(PAGES).forEach(([filename, meta]) => {
   if (filename === 'index.html' && !html.includes('application/ld+json')) {
     html = html.replace('</body>', SCHEMA_LD + '\n</body>');
   }
-  if (filename === 'lien-he.html' && !html.includes('application/ld+json')) {
+  if (filename === 'lienhe.html' && !html.includes('application/ld+json')) {
     html = html.replace('</body>', FAQ_SCHEMA + '\n</body>');
   }
 

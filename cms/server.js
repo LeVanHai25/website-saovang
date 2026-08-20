@@ -317,66 +317,33 @@ async function bootstrap() {
     app.get('*', (req, res, next) => {
       if (req.path.startsWith('/api') || req.path.startsWith('/admin') || req.path.startsWith('/uploads')) return next();
       
-      const cleanPath = req.path.toLowerCase().replace(/\/$/, '');
-      let fileToServe = 'index.html';
-      
-      // Map deep preview and clean URLs to their corresponding physical HTML files
-      if (cleanPath.endsWith('/thu-vien-san-pham') || cleanPath.endsWith('/thu-vien-sp') || cleanPath.endsWith('/thu-vien-sp.html')) {
-        fileToServe = 'thu-vien-sp.html';
-      } else if (cleanPath.endsWith('/thu-vien-profile-nhom') || cleanPath.endsWith('/thu-vien-profile-nhom.html')) {
-        fileToServe = 'thu-vien-profile-nhom.html';
-      } else if (cleanPath.endsWith('/profile-nhom-chi-tiet') || cleanPath.endsWith('/profile-nhom-chi-tiet.html')) {
-        fileToServe = 'profile-nhom-chi-tiet.html';
-      } else if (cleanPath.endsWith('/du-an') || cleanPath.endsWith('/du-an.html')) {
-        fileToServe = 'du-an.html';
-      } else if (cleanPath.endsWith('/san-pham') || cleanPath.endsWith('/san-pham.html')) {
-        fileToServe = 'san-pham.html';
-      } else if (cleanPath.endsWith('/tin-tuc') || cleanPath.endsWith('/tin-tuc.html')) {
-        fileToServe = 'tin-tuc.html';
-      } else if (cleanPath.endsWith('/lien-he') || cleanPath.endsWith('/lien-he.html')) {
-        fileToServe = 'lien-he.html';
-      } else if (cleanPath.endsWith('/bao-gia') || cleanPath.endsWith('/bao-gia.html')) {
-        fileToServe = 'bao-gia.html';
-      } else if (cleanPath.endsWith('/co-khi-sao-vang') || cleanPath.endsWith('/co-khi-sao-vang.html')) {
-        fileToServe = 'co-khi-sao-vang.html';
-      } else if (cleanPath.endsWith('/nhom-sao-vang') || cleanPath.endsWith('/nhom-sao-vang.html')) {
-        fileToServe = 'nhom-sao-vang.html';
-      } else if (cleanPath.endsWith('/linh-vuc-hoat-dong') || cleanPath.endsWith('/linh-vuc-hoat-dong.html')) {
-        fileToServe = 'linh-vuc-hoat-dong.html';
-      } else if (cleanPath.endsWith('/linh-vuc-co-khi') || cleanPath.endsWith('/linh-vuc-co-khi.html') || cleanPath.endsWith('/linh-vuc-hoat-dong/co-khi')) {
-        fileToServe = 'linh-vuc-co-khi.html';
-      } else if (cleanPath.endsWith('/linh-vuc-nhom-kinh') || cleanPath.endsWith('/linh-vuc-nhom-kinh.html') || cleanPath.endsWith('/linh-vuc-hoat-dong/nhom-kinh')) {
-        fileToServe = 'linh-vuc-nhom-kinh.html';
-      } else if (cleanPath.endsWith('/gioi-thieu') || cleanPath.endsWith('/gioi-thieu.html')) {
-        fileToServe = 'gioi-thieu.html';
-      } else if (cleanPath.endsWith('/nang-luc') || cleanPath.endsWith('/nang-luc.html')) {
-        fileToServe = 'nang-luc.html';
-      } else if (cleanPath.endsWith('/cua-nhom-kinh') || cleanPath.endsWith('/cua-nhom-kinh.html')) {
-        fileToServe = 'cua-nhom-kinh.html';
-      } else if (cleanPath.endsWith('/vach-kinh') || cleanPath.endsWith('/vach-kinh.html')) {
-        fileToServe = 'vach-kinh.html';
-      } else if (cleanPath.endsWith('/lan-can-kinh') || cleanPath.endsWith('/lan-can-kinh.html')) {
-        fileToServe = 'lan-can-kinh.html';
-      } else if (cleanPath.endsWith('/cau-thang-xoan') || cleanPath.endsWith('/cau-thang-xoan.html')) {
-        fileToServe = 'cau-thang-xoan.html';
-      } else if (cleanPath.endsWith('/co-khi-nghe-thuat') || cleanPath.endsWith('/co-khi-nghe-thuat.html')) {
-        fileToServe = 'co-khi-nghe-thuat.html';
-      } else if (cleanPath.endsWith('/cong-nghe-thuat') || cleanPath.endsWith('/cong-nghe-thuat.html')) {
-        fileToServe = 'cong-nghe-thuat.html';
-      } else if (cleanPath.endsWith('/san-pham-chi-tiet') || cleanPath.endsWith('/san-pham-chi-tiet.html')) {
-        fileToServe = 'san-pham-chi-tiet.html';
-      } else if (cleanPath.endsWith('/du-an-chi-tiet') || cleanPath.endsWith('/du-an-chi-tiet.html')) {
-        fileToServe = 'du-an-chi-tiet.html';
-      } else if (cleanPath.endsWith('/tin-tuc-chi-tiet') || cleanPath.endsWith('/tin-tuc-chi-tiet.html')) {
-        fileToServe = 'tin-tuc-chi-tiet.html';
+      const rawPath = req.path.toLowerCase().replace(/\/$/, '');
+      const noDashPath = rawPath.replace(/-/g, '');
+      const pathWithHtml = (rawPath + '.html').replace(/^\//, '');
+      const noDashWithHtml = (noDashPath + '.html').replace(/^\//, '');
+      const directFile = rawPath.replace(/^\//, '');
+
+      // 1. Direct file check (e.g. /cokhisaovang.html)
+      if (directFile && fs.existsSync(path.join(WEBSITE_PATH, directFile))) {
+        return res.sendFile(path.join(WEBSITE_PATH, directFile));
       }
-      
-      const targetFile = path.join(WEBSITE_PATH, fileToServe);
-      if (fs.existsSync(targetFile)) {
-        res.sendFile(targetFile);
-      } else {
-        next();
+
+      // 2. No-dash html check (e.g. /cokhisaovang -> cokhisaovang.html)
+      if (noDashWithHtml && fs.existsSync(path.join(WEBSITE_PATH, noDashWithHtml))) {
+        return res.sendFile(path.join(WEBSITE_PATH, noDashWithHtml));
       }
+
+      // 3. Raw with html check (e.g. /du-an -> duan.html)
+      if (pathWithHtml && fs.existsSync(path.join(WEBSITE_PATH, pathWithHtml))) {
+        return res.sendFile(path.join(WEBSITE_PATH, pathWithHtml));
+      }
+
+      // Default to 404 or index.html
+      const notFoundFile = path.join(WEBSITE_PATH, '404.html');
+      if (fs.existsSync(notFoundFile)) {
+        return res.status(404).sendFile(notFoundFile);
+      }
+      next();
     });
   }
 

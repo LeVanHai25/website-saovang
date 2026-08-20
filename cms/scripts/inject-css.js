@@ -10,10 +10,10 @@ const read  = f => fs.readFileSync(`${WEBSITE_DIR}\\${f}`, 'utf8');
 const write = (f, c) => fs.writeFileSync(`${WEBSITE_DIR}\\${f}`, c, 'utf8');
 
 /* ══════════════════════════════════════════════════════════════
-   linh-vuc-hoat-dong.html — Services page
+   linhvuchoatdong.html — Services page
 ══════════════════════════════════════════════════════════════ */
 function fixLinhVuc() {
-  let html = read('linh-vuc-hoat-dong.html');
+  let html = read('linhvuchoatdong.html');
   const oldStyle = html.match(/<style>([\s\S]*?)<\/style>/)?.[0];
   if (!oldStyle) return console.warn('linh-vuc: no <style> found');
 
@@ -91,15 +91,15 @@ function fixLinhVuc() {
 </style>`;
 
   html = html.replace(oldStyle, newStyle);
-  write('linh-vuc-hoat-dong.html', html);
-  console.log('  ✓  linh-vuc-hoat-dong.html');
+  write('linhvuchoatdong.html', html);
+  console.log('  ✓  linhvuchoatdong.html');
 }
 
 /* ══════════════════════════════════════════════════════════════
-   lien-he.html — Contact page
+   lienhe.html — Contact page
 ══════════════════════════════════════════════════════════════ */
 function fixLienHe() {
-  let html = read('lien-he.html');
+  let html = read('lienhe.html');
   const oldStyle = html.match(/<style>([\s\S]*?)<\/style>/)?.[0];
   if (!oldStyle) return console.warn('lien-he: no <style> found');
 
@@ -186,15 +186,15 @@ function fixLienHe() {
 </style>`;
 
   html = html.replace(oldStyle, newStyle);
-  write('lien-he.html', html);
-  console.log('  ✓  lien-he.html');
+  write('lienhe.html', html);
+  console.log('  ✓  lienhe.html');
 }
 
 /* ══════════════════════════════════════════════════════════════
-   du-an.html — Projects listing
+   duan.html — Projects listing
 ══════════════════════════════════════════════════════════════ */
 function fixDuAn() {
-  let html = read('du-an.html');
+  let html = read('duan.html');
   const oldStyle = html.match(/<style>([\s\S]*?)<\/style>/)?.[0];
   if (!oldStyle) return console.warn('du-an: no <style> found');
 
@@ -253,15 +253,15 @@ function fixDuAn() {
 </style>`;
 
   html = html.replace(oldStyle, newStyle);
-  write('du-an.html', html);
-  console.log('  ✓  du-an.html');
+  write('duan.html', html);
+  console.log('  ✓  duan.html');
 }
 
 /* ══════════════════════════════════════════════════════════════
-   san-pham.html — Products listing
+   sanpham.html — Products listing
 ══════════════════════════════════════════════════════════════ */
 function fixSanPham() {
-  let html = read('san-pham.html');
+  let html = read('sanpham.html');
   const oldStyle = html.match(/<style>([\s\S]*?)<\/style>/)?.[0];
   if (!oldStyle) return console.warn('san-pham: no <style> found');
 
@@ -310,15 +310,15 @@ function fixSanPham() {
 </style>`;
 
   html = html.replace(oldStyle, newStyle);
-  write('san-pham.html', html);
-  console.log('  ✓  san-pham.html');
+  write('sanpham.html', html);
+  console.log('  ✓  sanpham.html');
 }
 
 /* ══════════════════════════════════════════════════════════════
-   tin-tuc.html — News listing
+   tintuc.html — News listing
 ══════════════════════════════════════════════════════════════ */
 function fixTinTuc() {
-  let html = read('tin-tuc.html');
+  let html = read('tintuc.html');
   const oldStyle = html.match(/<style>([\s\S]*?)<\/style>/)?.[0];
   if (!oldStyle) return console.warn('tin-tuc: no <style> found');
 
@@ -388,15 +388,15 @@ function fixTinTuc() {
 </style>`;
 
   html = html.replace(oldStyle, newStyle);
-  write('tin-tuc.html', html);
-  console.log('  ✓  tin-tuc.html');
+  write('tintuc.html', html);
+  console.log('  ✓  tintuc.html');
 }
 
 /* ══════════════════════════════════════════════════════════════
-   du-an-chi-tiet.html — Project detail
+   duanchitiet.html — Project detail
 ══════════════════════════════════════════════════════════════ */
 function fixDuAnChiTiet() {
-  let html = read('du-an-chi-tiet.html');
+  let html = read('duanchitiet.html');
   const oldStyle = html.match(/<style>([\s\S]*?)<\/style>/)?.[0];
   if (!oldStyle) return console.warn('du-an-chi-tiet: no <style> found');
 
@@ -454,15 +454,15 @@ function fixDuAnChiTiet() {
 </style>`;
 
   html = html.replace(oldStyle, newStyle);
-  write('du-an-chi-tiet.html', html);
-  console.log('  ✓  du-an-chi-tiet.html');
+  write('duanchitiet.html', html);
+  console.log('  ✓  duanchitiet.html');
 }
 
 /* ══════════════════════════════════════════════════════════════
-   san-pham-chi-tiet.html — Product detail
+   sanphamchitiet.html — Product detail
 ══════════════════════════════════════════════════════════════ */
 function fixSanPhamChiTiet() {
-  let html = read('san-pham-chi-tiet.html');
+  let html = read('sanphamchitiet.html');
   const oldStyle = html.match(/<style>([\s\S]*?)<\/style>/)?.[0];
   if (!oldStyle) return console.warn('san-pham-chi-tiet: no <style> found');
 
@@ -536,15 +536,15 @@ function fixSanPhamChiTiet() {
 </style>`;
 
   html = html.replace(oldStyle, newStyle);
-  write('san-pham-chi-tiet.html', html);
-  console.log('  ✓  san-pham-chi-tiet.html');
+  write('sanphamchitiet.html', html);
+  console.log('  ✓  sanphamchitiet.html');
 }
 
 /* ══════════════════════════════════════════════════════════════
-   tin-tuc-chi-tiet.html — Article detail
+   tintucchitiet.html — Article detail
 ══════════════════════════════════════════════════════════════ */
 function fixTinTucChiTiet() {
-  let html = read('tin-tuc-chi-tiet.html');
+  let html = read('tintucchitiet.html');
   const oldStyle = html.match(/<style>([\s\S]*?)<\/style>/)?.[0];
   if (!oldStyle) return console.warn('tin-tuc-chi-tiet: no <style> found');
 
@@ -601,8 +601,8 @@ function fixTinTucChiTiet() {
 </style>`;
 
   html = html.replace(oldStyle, newStyle);
-  write('tin-tuc-chi-tiet.html', html);
-  console.log('  ✓  tin-tuc-chi-tiet.html');
+  write('tintucchitiet.html', html);
+  console.log('  ✓  tintucchitiet.html');
 }
 
 // ── Run all ──────────────────────────────────────────────────

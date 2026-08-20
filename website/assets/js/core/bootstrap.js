@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (e.target.closest('a')) return;
       tracker.trackEvent('Navigation', 'Click Mechanical Hero Segment', 'Mechanical Segment', 5);
       appState.setUserPersona('mechanical-investor');
-      window.location.href = 'linh-vuc-co-khi.html';
+      window.location.href = 'linhvuccokhi.html';
     });
   }
 
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (e.target.closest('a')) return;
       tracker.trackEvent('Navigation', 'Click Facade Hero Segment', 'Facade Segment', 5);
       appState.setUserPersona('facade-investor');
-      window.location.href = 'linh-vuc-nhom-kinh.html';
+      window.location.href = 'linhvucnhomkinh.html';
     });
   }
 });

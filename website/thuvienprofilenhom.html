@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <!-- ═══ Google Tag Manager — Sprint 6 ═══
+       Thay GTM-XXXXXXX bằng Container ID thực của bạn
+       Lấy tại: tagmanager.google.com
+  ═══════════════════════════════════════ -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#9B1C1C" />
+  <title>Thư Viện Profile Nhôm — Bảng Tính Giá Nhôm Thanh Định Hình | Sao Vàng</title>
+  <meta name="description" content="Thư viện profile nhôm định hình đầy đủ: Xingfa Quảng Đông, Xingfa Taiwan, Maxpro.JP, QueenViet, Alugood, Owin. Bảng tính giá nhôm chính xác theo tỷ trọng." />
+  <meta name="keywords" content="profile nhôm, thư viện nhôm, bảng tính giá nhôm, nhôm xingfa, mặt cắt nhôm" />
+  <meta property="og:title" content="Thư Viện Profile Nhôm — Sao Vàng" />
+  <meta property="og:description" content="Thư viện profile nhôm định hình đầy đủ với bảng tính giá chính xác." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.CoKhiSaoVang.com/thuvienprofilenhom.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+
+  <!-- Design System -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    /* ── Page Hero ── */
+    .profile-hero {
+      position: relative;
+      height: 38vh;
+      min-height: 260px;
+      max-height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(135deg, #0f2027 0%, #1a3a4a 50%, #0d2233 100%);
+    }
+    .profile-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('https://nhomkinhdaiphuc.com/upload/app/profile-nhom_231921731178.webp') center/cover no-repeat;
+      opacity: 0.35;
+    }
+    .profile-hero-content {
+      position: relative;
+      z-index: 2;
+      padding-inline: 24px;
+    }
+    .profile-hero-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      color: #f5c842;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 12px;
+    }
+    .profile-hero-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: 900;
+      color: #fff;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      margin-bottom: 12px;
+    }
+    .profile-hero-desc {
+      font-size: clamp(13px, 2vw, 16px);
+      color: rgba(255,255,255,0.75);
+      max-width: 600px;
+      margin-inline: auto;
+    }
+
+    /* ── Breadcrumb ── */
+    .breadcrumb-bar {
+      background: #f8f9fa;
+      border-bottom: 1px solid #e9ecef;
+      padding: 12px 0;
+    }
+    .breadcrumb-inner {
+      max-width: 1280px;
+      margin-inline: auto;
+      padding-inline: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #6c757d;
+    }
+    .breadcrumb-inner a { color: #6c757d; text-decoration: none; }
+    .breadcrumb-inner a:hover { color: #c0392b; }
+    .breadcrumb-inner i { font-size: 10px; }
+
+    /* ── Filter Tabs ── */
+    .filter-section {
+      background: #fff;
+      padding: 32px 0 0;
+      border-bottom: 2px solid #f0f0f0;
+    }
+    .filter-inner {
+      max-width: 1280px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+    .filter-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #1a2940;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .filter-title span {
+      color: #c0392b;
+    }
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      padding-bottom: 0;
+      justify-content: center;
+    }
+    .filter-tab {
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      border: 2px solid #e0e0e0;
+      background: #fff;
+      color: #555;
+      transition: all 0.2s;
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 0.02em;
+    }
+    .filter-tab:hover { border-color: #c0392b; color: #c0392b; }
+    .filter-tab.active {
+      background: #c0392b;
+      border-color: #c0392b;
+      color: #fff;
+    }
+
+    /* ── Profile Grid ── */
+    .profile-grid-section {
+      background: #f7f8fa;
+      padding: 40px 0 60px;
+    }
+    .profile-grid-inner {
+      max-width: 1280px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px) { .profile-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .profile-grid { grid-template-columns: 1fr; } }
+
+    .profile-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      transition: transform 0.25s, box-shadow 0.25s;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid #edf0f4;
+    }
+    .profile-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+    }
+    .profile-card.hidden { display: none; }
+
+    .profile-card-img {
+      background: linear-gradient(135deg, #e8f4f8 0%, #d6eaf7 100%);
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 220px;
+      overflow: hidden;
+    }
+    .profile-card-img img {
+      max-width: 100%;
+      max-height: 180px;
+      object-fit: contain;
+      transition: transform 0.3s;
+    }
+    .profile-card:hover .profile-card-img img {
+      transform: scale(1.05);
+    }
+
+    .profile-card-body {
+      padding: 18px 20px 20px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .profile-card-brand {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #1a6a8a;
+      margin-bottom: 6px;
+    }
+    .profile-card-name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1a2940;
+      line-height: 1.4;
+      margin-bottom: 16px;
+      flex: 1;
+    }
+    .profile-card-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 18px;
+      background: transparent;
+      border: 2px solid #1a6a8a;
+      color: #1a6a8a;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-family: 'Montserrat', sans-serif;
+      align-self: flex-start;
+    }
+    .profile-card-btn:hover {
+      background: #1a6a8a;
+      color: #fff;
+    }
+    .profile-card-btn i { font-size: 14px; }
+
+    /* ── Results count ── */
+    .results-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .results-count {
+      font-size: 14px;
+      color: #666;
+    }
+    .results-count strong { color: #1a2940; }
+
+    /* ── No results ── */
+    .no-results {
+      text-align: center;
+      padding: 60px 24px;
+      color: #999;
+      font-size: 16px;
+      display: none;
+    }
+
+    /* ── SEO Content ── */
+    .seo-section {
+      background: #fff;
+      padding: 48px 0;
+      border-top: 1px solid #edf0f4;
+    }
+    .seo-inner {
+      max-width: 900px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+    .seo-inner h2 { font-size: 22px; font-weight: 700; color: #1a2940; margin: 28px 0 12px; }
+    .seo-inner h3 { font-size: 17px; font-weight: 600; color: #1a3a55; margin: 20px 0 8px; }
+    .seo-inner p { font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 12px; }
+    .seo-inner ul, .seo-inner ol { padding-left: 22px; margin-bottom: 12px; }
+    .seo-inner li { font-size: 15px; line-height: 1.7; color: #444; margin-bottom: 4px; }
+    .seo-inner hr { border: none; border-top: 1px solid #e8ecf0; margin: 24px 0; }
+
+    /* ── Active nav highlight ── */
+    .header-v2 .nav-menu-link[href="thuvienprofilenhom.html"] {
+      color: var(--sv-gold-600);
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <a href="#main-content" class="skip-link">Bỏ qua điều hướng</a>
+
+  <!-- NAVBAR -->
+    <!-- SECTION 1 - HEADER -->
+  <header class="header-v2" id="navbar" role="banner">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="Sao Vàng — Trang chủ">
+        <img width="200" height="60" fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" style="height: 48px; width: auto; display: block;" />
+      </a>
+
+      <!-- Desktop nav menu -->
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html"           class="nav-menu-link ">Trang Chủ</a>
+        <a href="gioithieu.html"      class="nav-menu-link ">Giới Thiệu</a>
+        <a href="cokhisaovang.html" class="nav-menu-link ">Cơ Khí Sao Vàng</a>
+        <a href="nhomsaovang.html"   class="nav-menu-link ">SV Aluminium</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linhvuchoatdong.html" class="nav-menu-link ">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linhvuchoatdong.html" class="nav-dropdown-item" role="menuitem">Tổng quan Lĩnh vực</a>
+            <a href="linhvuccokhi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linhvucnhomkinh.html"  class="nav-dropdown-item" role="menuitem">Nhôm Kính SV Aluminium</a>
+          </div>
+        </div>
+
+        <a href="sanpham.html"              class="nav-menu-link ">Sản Phẩm</a>
+        <a href="phukien.html"              class="nav-menu-link ">Phụ Kiện</a>
+        <a href="thuvienprofilenhom.html" class="nav-menu-link active">Profile Nhôm</a>
+        <a href="duan.html"                 class="nav-menu-link ">Dự Án</a>
+        <a href="tailieu.html"              class="nav-menu-link ">Tài Liệu Kỹ Thuật</a>
+        <a href="tintuc.html"               class="nav-menu-link ">Tin Tức</a>
+        <a href="lienhe.html"               class="nav-menu-link ">Liên Hệ</a>
+      </nav>
+
+      <!-- Hotline + Hamburger -->
+      <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+        <a href="tel:0869590279" class="nav-hotline" aria-label="Gọi hotline 0869 590 279">
+          <i class="ri-phone-fill" aria-hidden="true"></i>
+          <span>0869 590 279</span>
+        </a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html"                 class="nav-drawer-link ">Trang Chủ</a>
+    <a href="gioithieu.html"            class="nav-drawer-link ">Giới Thiệu</a>
+    <a href="cokhisaovang.html"      class="nav-drawer-link ">Cơ Khí Sao Vàng</a>
+    <a href="nhomsaovang.html"        class="nav-drawer-link ">Nhôm Sao Vàng</a>
+    <a href="linhvuchoatdong.html"   class="nav-drawer-link ">Lĩnh Vực Hoạt Động</a>
+    <a href="sanpham.html"             class="nav-drawer-link ">Sản Phẩm</a>
+    <a href="phukien.html"             class="nav-drawer-link ">Phụ Kiện</a>
+    <a href="thuvienprofilenhom.html" class="nav-drawer-link active">Profile Nhôm</a>
+    <a href="duan.html"                class="nav-drawer-link ">Dự Án</a>
+    <a href="tailieu.html"              class="nav-drawer-link ">Tài Liệu Kỹ Thuật</a>
+    <a href="tintuc.html"              class="nav-drawer-link ">Tin Tức</a>
+    <a href="lienhe.html"              class="nav-drawer-link ">Liên Hệ</a>
+    <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
+      <i class="ri-phone-fill"></i> 0869 590 279
+    </a>
+  </nav>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="profile-hero" aria-label="Thư Viện Profile Nhôm">
+      <div class="profile-hero-bg" aria-hidden="true"></div>
+      <div class="profile-hero-content">
+        <span class="profile-hero-tag">Kỹ Thuật Nhôm Cao Cấp</span>
+        <h1 class="profile-hero-title">THƯ VIỆN PROFILE NHÔM</h1>
+        <p class="profile-hero-desc">Bảng tính giá nhôm định hình đầy đủ — Mã nhôm · Mặt cắt · Tỷ trọng kg/m · Số lượng · Thành tiền</p>
+      </div>
+    </section>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb-bar">
+      <div class="breadcrumb-inner">
+        <a href="index.html">Trang chủ</a>
+        <i class="ri-arrow-right-s-line"></i>
+        <span>Thư Viện Profile Nhôm</span>
+      </div>
+    </div>
+
+    <!-- ── BRAND CAD PORTAL ── -->
+    <section style="background:#fff; padding:60px 0; border-bottom:1px solid #e2e8f0;">
+      <div style="max-width:1280px; margin:0 auto; padding-inline:24px;">
+        <div style="text-align:center; margin-bottom:36px;">
+          <span style="display:inline-block; background:#9B1C1C; color:#fff; font-size:10px; font-weight:800; letter-spacing:0.15em; padding:4px 14px; border-radius:20px; text-transform:uppercase; margin-bottom:12px;">CỔNG TÀI LIỆU KỸ THUẬT</span>
+          <h2 style="font-family:'Montserrat',sans-serif; font-size:clamp(22px,3vw,32px); font-weight:900; color:#1a2940; margin:0 0 12px;">Tải Bản Vẽ CAD & Catalogue Kỹ Thuật</h2>
+          <p style="font-size:14px; color:#64748b; max-width:580px; margin:0 auto; line-height:1.6;">Mỗi hãng nhôm có trang riêng với đầy đủ thông số cấu tạo, ưu điểm kỹ thuật và tài liệu bản vẽ AutoCAD để bóc tách khối lượng.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:20px;">
+          <!-- XINGFA -->
+          <a href="nhomxingfa.html" style="text-decoration:none; background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:10px; transition:all .3s; cursor:pointer;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.07)';this.style.borderColor='#e11d48'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#e2e8f0'">
+            <div style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:900; color:#e11d48;">XINGFA</div>
+            <div style="font-size:11px; color:#64748b; font-weight:700; text-transform:uppercase; letter-spacing:.05em;">Quảng Đông · Trung Quốc</div>
+            <div style="font-size:12px; color:#374151; line-height:1.5;">Hệ nhôm phổ thông đến cao cấp, đa dạng mẫu mã, sơn tĩnh điện bền màu.</div>
+            <div style="margin-top:auto; display:flex; align-items:center; gap:6px; color:#e11d48; font-size:12px; font-weight:800;">Xem chi tiết & CAD <i class="ri-arrow-right-line"></i></div>
+          </a>
+          <!-- MAXPRO -->
+          <a href="nhommaxpro.html" style="text-decoration:none; background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:10px; transition:all .3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.07)';this.style.borderColor='#b45309'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#e2e8f0'">
+            <div style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:900; color:#b45309;">MAXPRO.JP</div>
+            <div style="font-size:11px; color:#64748b; font-weight:700; text-transform:uppercase; letter-spacing:.05em;">Nhật Bản · Anodized</div>
+            <div style="font-size:12px; color:#374151; line-height:1.5;">Nhôm cao cấp chống muối mặn Anodized, hệ 55 – 65 – 83, phù hợp biệt thự biển.</div>
+            <div style="margin-top:auto; display:flex; align-items:center; gap:6px; color:#b45309; font-size:12px; font-weight:800;">Xem chi tiết & CAD <i class="ri-arrow-right-line"></i></div>
+          </a>
+          <!-- CIVRO -->
+          <a href="nhomcivro.html" style="text-decoration:none; background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:10px; transition:all .3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.07)';this.style.borderColor='#1e293b'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#e2e8f0'">
+            <div style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:900; color:#1e293b;">CIVRO</div>
+            <div style="font-size:11px; color:#64748b; font-weight:700; text-transform:uppercase; letter-spacing:.05em;">Công nghệ Đức · Luxury</div>
+            <div style="font-size:12px; color:#374151; line-height:1.5;">Cầu cách nhiệt cao cấp, profile siêu rộng, dùng cho công trình biệt thự Luxury.</div>
+            <div style="margin-top:auto; display:flex; align-items:center; gap:6px; color:#1e293b; font-size:12px; font-weight:800;">Xem chi tiết & CAD <i class="ri-arrow-right-line"></i></div>
+          </a>
+          <!-- SLIM -->
+          <a href="nhomslim.html" style="text-decoration:none; background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:10px; transition:all .3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.07)';this.style.borderColor='#475569'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#e2e8f0'">
+            <div style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:900; color:#475569;">SLIM SYSTEM</div>
+            <div style="font-size:11px; color:#64748b; font-weight:700; text-transform:uppercase; letter-spacing:.05em;">Tối giản · Châu Âu</div>
+            <div style="font-size:12px; color:#374151; line-height:1.5;">Cửa lùa không ray dưới, khung siêu mảnh, tầm nhìn Panorama tối đa.</div>
+            <div style="margin-top:auto; display:flex; align-items:center; gap:6px; color:#475569; font-size:12px; font-weight:800;">Xem chi tiết & CAD <i class="ri-arrow-right-line"></i></div>
+          </a>
+          <!-- KOGEN -->
+          <a href="nhomkogen.html" style="text-decoration:none; background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:10px; transition:all .3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.07)';this.style.borderColor='#0369a1'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#e2e8f0'">
+            <div style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:900; color:#0369a1;">KOGEN</div>
+            <div style="font-size:11px; color:#64748b; font-weight:700; text-transform:uppercase; letter-spacing:.05em;">Phong cách Đức · Cao cấp</div>
+            <div style="font-size:12px; color:#374151; line-height:1.5;">Cửa xếp gấp ẩn bản lề, trượt lật, lùa Slim – phong cách kiến trúc hiện đại.</div>
+            <div style="margin-top:auto; display:flex; align-items:center; gap:6px; color:#0369a1; font-size:12px; font-weight:800;">Xem chi tiết & CAD <i class="ri-arrow-right-line"></i></div>
+          </a>
+          <!-- PMA -->
+          <a href="nhompma.html" style="text-decoration:none; background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:10px; transition:all .3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.07)';this.style.borderColor='#15803d'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#e2e8f0'">
+            <div style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:900; color:#15803d;">PMA</div>
+            <div style="font-size:11px; color:#64748b; font-weight:700; text-transform:uppercase; letter-spacing:.05em;">Tiêu chuẩn Châu Âu</div>
+            <div style="font-size:12px; color:#374151; line-height:1.5;">Rãnh C Lux65, Classic 58, Platinum XF – hệ nhôm phổ biến rộng rãi tại VN.</div>
+            <div style="margin-top:auto; display:flex; align-items:center; gap:6px; color:#15803d; font-size:12px; font-weight:800;">Xem chi tiết & CAD <i class="ri-arrow-right-line"></i></div>
+          </a>
+          <!-- OWIN -->
+          <a href="nhomowin.html" style="text-decoration:none; background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:10px; transition:all .3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.07)';this.style.borderColor='#4338ca'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#e2e8f0'">
+            <div style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:900; color:#4338ca;">OWIN</div>
+            <div style="font-size:11px; color:#64748b; font-weight:700; text-transform:uppercase; letter-spacing:.05em;">Nhôm rãnh C · OEM</div>
+            <div style="font-size:12px; color:#374151; line-height:1.5;">Cửa đi mở quay hệ Owin rãnh C đồng bộ, phù hợp nhà phố và văn phòng.</div>
+            <div style="margin-top:auto; display:flex; align-items:center; gap:6px; color:#4338ca; font-size:12px; font-weight:800;">Xem chi tiết & CAD <i class="ri-arrow-right-line"></i></div>
+          </a>
+          <!-- TOPAL -->
+          <a href="nhomtopal.html" style="text-decoration:none; background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:24px; display:flex; flex-direction:column; gap:10px; transition:all .3s;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 30px rgba(0,0,0,.07)';this.style.borderColor='#b91c1c'" onmouseout="this.style.transform='';this.style.boxShadow='';this.style.borderColor='#e2e8f0'">
+            <div style="font-family:'Montserrat',sans-serif; font-size:20px; font-weight:900; color:#b91c1c;">TOPAL</div>
+            <div style="font-size:11px; color:#64748b; font-weight:700; text-transform:uppercase; letter-spacing:.05em;">Austdoor · Việt Nam</div>
+            <div style="font-size:12px; color:#374151; line-height:1.5;">Nhôm Topal tiêu chuẩn quốc gia, hệ thủy lực bản lớn và cửa mở quay phổ thông.</div>
+            <div style="margin-top:auto; display:flex; align-items:center; gap:6px; color:#b91c1c; font-size:12px; font-weight:800;">Xem chi tiết & CAD <i class="ri-arrow-right-line"></i></div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- ── END BRAND CAD PORTAL ── -->
+
+    <!-- FILTER TABS -->
+    <div class="filter-section">
+      <div class="filter-inner">
+        <h2 class="filter-title">Thư Viện <span>Profile Nhôm</span> Định Hình</h2>
+        <div class="filter-tabs" id="filterTabs" role="tablist">
+          <button class="filter-tab active" data-brand="all" role="tab" aria-selected="true">Tất Cả</button>
+          <button class="filter-tab" data-brand="xingfa-quang-dong" role="tab">Xingfa Quảng Đông</button>
+          <button class="filter-tab" data-brand="xingfa-taiwan" role="tab">Xingfa Taiwan</button>
+          <button class="filter-tab" data-brand="maxpro-jp" role="tab">Maxpro.JP</button>
+          <button class="filter-tab" data-brand="queenviet" role="tab">QueenViet</button>
+          <button class="filter-tab" data-brand="alugood" role="tab">Alugood Slim</button>
+          <button class="filter-tab" data-brand="owin" role="tab">Owin</button>
+          <button class="filter-tab" data-brand="other" role="tab">Khác</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROFILE GRID -->
+    <section class="profile-grid-section" aria-label="Danh sách profile nhôm">
+      <div class="profile-grid-inner">
+        <div class="results-bar">
+          <p class="results-count">Hiển thị <strong id="resultCount">47</strong> profile nhôm</p>
+        </div>
+        <div class="profile-grid" id="profileGrid">
+          <!-- Cards are rendered by JS below -->
+        </div>
+        <div class="no-results" id="noResults">
+          <i class="ri-search-line" style="font-size:48px; color:#ddd; display:block; margin-bottom:12px;"></i>
+          Không tìm thấy profile phù hợp.
+        </div>
+      </div>
+    </section>
+
+    <!-- SEO CONTENT -->
+    <section class="seo-section" aria-label="Thông tin Profile Nhôm Định Hình">
+      <div class="seo-inner">
+        <h2>1. Giới Thiệu về Profile Nhôm Định Hình</h2>
+        <p><strong>Profile nhôm định hình</strong> là sản phẩm được chế tạo thông qua quá trình đùn ép, tạo thành các thanh nhôm có hình dạng cố định với đặc tính chịu lực tốt, nhẹ và dễ gia công. Vật liệu này không chỉ giúp tối ưu hóa trong xây dựng và công nghiệp mà còn góp phần nâng cao thẩm mỹ cho các sản phẩm nội thất.</p>
+        <hr />
+        <h2>2. Phân Loại Profile Nhôm Định Hình</h2>
+        <h3>2.1. Theo Kích Thước</h3>
+        <ul>
+          <li><strong>20x20 mm:</strong> Dùng cho khung giá kệ và băng tải nhỏ.</li>
+          <li><strong>40x80 mm:</strong> Phù hợp làm khung chịu lực cho các hệ thống máy móc, năng lượng mặt trời.</li>
+          <li><strong>50x100 mm:</strong> Sử dụng cho các thiết bị yêu cầu độ ổn định cao, giúp giảm rung lắc trong quá trình vận hành.</li>
+        </ul>
+        <h3>2.2. Theo Chức Năng</h3>
+        <ul>
+          <li><strong>Nhôm nội thất:</strong> Ứng dụng trong tủ bếp, cửa sổ, và hệ thống đèn LED.</li>
+          <li><strong>Nhôm công nghiệp:</strong> Được dùng để làm khung máy, băng tải và hệ thống tản nhiệt.</li>
+        </ul>
+        <hr />
+        <h2>3. Ưu Điểm của Profile Nhôm Định Hình</h2>
+        <ul>
+          <li><strong>Bền và nhẹ:</strong> Dễ dàng vận chuyển và lắp đặt mà không ảnh hưởng đến độ bền.</li>
+          <li><strong>Chống ăn mòn:</strong> Công nghệ anod hóa giúp bảo vệ nhôm khỏi tác động môi trường.</li>
+          <li><strong>Thân thiện môi trường:</strong> Nhôm có thể tái chế mà không làm mất đi các đặc tính ban đầu.</li>
+        </ul>
+        <hr />
+        <h2>4. Bảng Tính Giá Nhôm Thanh Định Hình</h2>
+        <p>Công thức tính giá nhôm chính xác: <strong>Thành tiền = Đơn giá (VNĐ/kg) × Tỷ trọng (kg/m) × Khổ nhôm (m) × Số lượng (thanh)</strong></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner sv-container">
+      <div>
+        <div style="margin-bottom: 16px;">
+          <img width="200" height="60" fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 54px; width: auto; display: block;" />
+        </div>
+        <p class="footer-address" style="font-size: var(--sv-text-sm); color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 20px;">
+          Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng — chuyên cơ khí chính xác &amp; nhôm kính cao cấp.
+        </p>
+        <div class="footer-socials" aria-label="Mạng xã hội">
+          <a href="#" class="footer-social" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+          <a href="#" class="footer-social" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+          <a href="#" class="footer-social" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+          <a href="tel:0869590279" class="footer-social" aria-label="Hotline"><i class="ri-phone-fill"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Nhôm Sao Vàng</h4>
+        <div class="footer-links">
+          <a href="cuanhomkinh.html" class="footer-link">Cửa nhôm kính cao cấp</a>
+          <a href="vachkinh.html" class="footer-link">Vách kính mặt dựng</a>
+          <a href="lancankinh.html" class="footer-link">Lan can kính</a>
+          <a href="thuvienprofilenhom.html" class="footer-link">Thư viện Profile Nhôm</a>
+          <a href="thuviensp.html" class="footer-link">Thư viện sản phẩm</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Cơ Khí Sao Vàng</h4>
+        <div class="footer-links">
+          <a href="linhvuccokhi.html" class="footer-link">Gia công cơ khí chính xác</a>
+          <a href="cauthangxoan.html" class="footer-link">Lan can, cầu thang</a>
+          <a href="congnghethuat.html" class="footer-link">Cổng &amp; hàng rào</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer-col-title">Liên Hệ</h4>
+        <div class="footer-contact-items">
+          <div class="footer-contact-item">
+            <i class="ri-map-pin-2-line"></i>
+            <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Kiến Hưng, TP Hà Nội.</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ri-phone-line"></i>
+            <a href="tel:0869590279" style="color:inherit;text-decoration:none;">0869 590 279</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="ri-mail-line"></i>
+            <a href="mailto:cokhisaovangvn@gmail.com" style="color:inherit;text-decoration:none;">cokhisaovangvn@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. All Rights Reserved.</span>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <div class="floating-left">
+    <a href="https://zalo.me/0869590279" class="float-btn float-btn-zalo" target="_blank" rel="noopener" aria-label="Chat Zalo">
+      <i class="ri-message-3-fill"></i>
+    </a>
+    <a href="tel:0869590279" class="float-btn float-btn-phone" aria-label="Gọi điện">
+      <i class="ri-phone-fill"></i>
+    </a>
+  </div>
+  <div class="floating-right">
+    <button class="float-btn float-btn-top" id="scrollTopBtn" aria-label="Lên đầu trang">
+      <i class="ri-arrow-up-line"></i>
+    </button>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/modules/navbar.js"></script>
+  <script>
+  const BRAND_LABELS = {
+    'xingfa-quang-dong': 'Xingfa Quảng Đông',
+    'xingfa-taiwan':     'Xingfa Taiwan',
+    'maxpro-jp':         'Maxpro.JP',
+    'queenviet':         'QueenViet',
+    'alugood':           'Alugood Slim',
+    'owin':              'Owin',
+    'other':             'Khác',
+  };
+
+  let PROFILES = [];
+
+  function brandKey(brandName) {
+    if (!brandName) return 'other';
+    const b = brandName.toLowerCase();
+    if (b.includes('xingfa quảng đông') || b.includes('quảng đông') || b.includes('xingfa')) return 'xingfa-quang-dong';
+    if (b.includes('taiwan')) return 'xingfa-taiwan';
+    if (b.includes('maxpro.jp') || b.includes('maxpro')) return 'maxpro-jp';
+    if (b.includes('queenviet')) return 'queenviet';
+    if (b.includes('slim') || b.includes('alugood') || b.includes('cover')) return 'alugood';
+    if (b.includes('owin')) return 'owin';
+    return 'other';
+  }
+
+  async function loadProfilesList() {
+    try {
+      const res = await fetch('data/profiles.json');
+      const data = await res.json();
+      PROFILES = data.map(p => ({
+        slug: p.id,
+        name: p.title,
+        brand: brandKey(p.origin || p.brandName),
+        img: p.drawings[0] ? p.drawings[0].imageUrl : 'assets/images/no-image.png'
+      }));
+      
+      // Update results counter
+      document.getElementById('resultCount').textContent = PROFILES.length;
+      
+      renderCards('all');
+    } catch(e) {
+      console.error('Failed to load profiles list', e);
+    }
+  }
+
+  function renderCards(brand) {
+    const grid = document.getElementById('profileGrid');
+    const noRes = document.getElementById('noResults');
+    const countEl = document.getElementById('resultCount');
+    let filtered = brand === 'all' ? PROFILES : PROFILES.filter(p => p.brand === brand);
+    
+    // Remove duplicates by slug
+    const seen = new Set();
+    filtered = filtered.filter(p => { if(seen.has(p.slug)) return false; seen.add(p.slug); return true; });
+    countEl.textContent = filtered.length;
+    
+    if (!filtered.length) {
+      grid.innerHTML = '';
+      noRes.style.display = 'block';
+      return;
+    }
+    
+    noRes.style.display = 'none';
+    grid.innerHTML = filtered.map(p => `
+      <article class="profile-card" data-brand="${p.brand}" style="display: flex; flex-direction: column; overflow: hidden; border: 1px solid var(--sv-border); border-radius: var(--sv-radius-card); background: var(--sv-white); box-shadow: var(--sv-shadow-sm); transition: transform var(--sv-transition-base), box-shadow var(--sv-transition-base);">
+        <div class="profile-card-img" style="height: 240px; overflow: hidden; background: #fafafa; display: flex; align-items: center; justify-content: center;">
+          <img
+            src="${p.img}"
+            alt="${p.name}"
+            loading="lazy"
+            style="max-width: 100%; max-height: 100%; object-fit: contain; padding: 10px;"
+            onerror="this.src='assets/images/no-image.png'">
+        </div>
+        <div class="profile-card-body" style="padding: 20px; display: flex; flex-direction: column; flex: 1;">
+          <div class="profile-card-brand" style="font-family: var(--sv-font-head); font-size: 11px; color: var(--sv-text-gold-aa); font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px;">${BRAND_LABELS[p.brand] || p.brand}</div>
+          <h3 class="profile-card-name" style="font-family: var(--sv-font-head); font-size: 14px; color: var(--sv-dark-700); font-weight: 800; line-height: 1.4; margin-bottom: 16px; flex: 1;">${p.name}</h3>
+          <a href="profilenhomchitiet.html?slug=${p.slug}" class="profile-card-btn" style="display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 10px; border-radius: 6px; background: var(--sv-red-600); color: var(--sv-white); font-family: var(--sv-font-head); font-size: 12px; font-weight: 700; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; transition: background 0.2s;">
+            <i class="ri-eye-line"></i> Xem chi tiết
+          </a>
+        </div>
+      </article>
+    `).join('');
+  }
+
+  // Filter tabs
+  document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.filter-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected','true');
+      renderCards(tab.dataset.brand);
+    });
+  });
+
+  // Initial load
+  loadProfilesList();
+
+  </script>
+  <script src="assets/js/shared/internal-links.js"></script>
+  <!-- Sprint 3: Service CTA -->
+  <script src="assets/js/shared/service-cta.js"></script>
+    <!-- Chính sách bảo mật strip -->
+  <div style="background:#0a0a0a;text-align:center;padding:10px 16px;font-size:11.5px;color:rgba(255,255,255,.35);font-family:'Montserrat',sans-serif;">
+    © 2026 Cơ Khí Sao Vàng — MST: 0110808047 &nbsp;|&nbsp;
+    <a href="chinhsachbaomat.html" style="color:rgba(255,255,255,.5);text-decoration:none;" onmouseover="this.style.color='#C9A227'" onmouseout="this.style.color='rgba(255,255,255,.5)'">Chính sách bảo mật</a>
+  </div>
+  <!-- Sprint 2: Shared components -->
+  <script src="assets/js/shared/floating-widget.js"></script>
+  <script src="assets/js/shared/faq-accordion.js"></script>
+  <script src="assets/js/shared/breadcrumb.js"></script>
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>

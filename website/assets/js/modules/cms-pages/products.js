@@ -1,6 +1,6 @@
 /* ════════════════════════════════════════════════════════════════
    SAO VÀNG — modules/cms-pages/products.js  v1.0
-   Controller cho trang Sản Phẩm (san-pham.html).
+   Controller cho trang Sản Phẩm (sanpham.html).
    Phụ thuộc: cms-client.js (window.CMS)
 ════════════════════════════════════════════════════════════════ */
 
@@ -104,7 +104,7 @@
     const unit     = p.unit  ? ` / ${p.unit}` : '';
     const brand    = p.brand || p.category || 'SAO VÀNG';
 
-    return `<a href="san-pham-chi-tiet.html?slug=${p.slug || p.id}" class="prod-card" data-reveal>
+    return `<a href="sanphamchitiet.html?slug=${p.slug || p.id}" class="prod-card" data-reveal>
       <div class="prod-thumb">
         <img src="${CMS.esc(img)}" alt="${CMS.esc(p.title)}" loading="lazy" onerror="this.src='assets/images/product-inox.png'" />
         <div class="prod-badge-wrap">
@@ -188,7 +188,7 @@
 
     const footerList = document.getElementById('footerCatList');
     if (footerList && cats.length) {
-      footerList.innerHTML = cats.map(c => `<li><a href="san-pham.html?cat=${c.slug}">${c.name}</a></li>`).join('');
+      footerList.innerHTML = cats.map(c => `<li><a href="sanpham.html?cat=${c.slug}">${c.name}</a></li>`).join('');
     }
 
     const catParam = new URLSearchParams(window.location.search).get('cat');

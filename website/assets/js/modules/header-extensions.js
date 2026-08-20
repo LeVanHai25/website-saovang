@@ -1092,16 +1092,16 @@
           <div class="footer-column">
             <h4 class="footer-column-title">SẢN PHẨM</h4>
             <div class="footer-links-list">
-              <a href="cua-nhom-kinh.html">Cửa Nhôm Xingfa</a>
-              <a href="cua-nhom-kinh.html">Cửa Trượt Quay</a>
-              <a href="cua-nhom-kinh.html">Cửa Nhôm Hệ Slim</a>
-              <a href="cua-nhom-kinh.html">Cửa Nhôm Slim Cover</a>
-              <a href="lan-can-kinh.html">Cửa Kính Cường Lực</a>
-              <a href="cua-nhom-kinh.html">Cửa Nhôm Thủy Lực</a>
-              <a href="cua-nhom-kinh.html">Cửa Nhôm Maxpro.JP</a>
-              <a href="vach-kinh.html">Phòng Tắm Kính</a>
-              <a href="cau-thang-xoan.html">Cầu Thang - Lan Can Kính</a>
-              <a href="cua-nhom-kinh.html">Cửa Tự Động</a>
+              <a href="cuanhomkinh.html">Cửa Nhôm Xingfa</a>
+              <a href="cuanhomkinh.html">Cửa Trượt Quay</a>
+              <a href="cuanhomkinh.html">Cửa Nhôm Hệ Slim</a>
+              <a href="cuanhomkinh.html">Cửa Nhôm Slim Cover</a>
+              <a href="lancankinh.html">Cửa Kính Cường Lực</a>
+              <a href="cuanhomkinh.html">Cửa Nhôm Thủy Lực</a>
+              <a href="cuanhomkinh.html">Cửa Nhôm Maxpro.JP</a>
+              <a href="vachkinh.html">Phòng Tắm Kính</a>
+              <a href="cauthangxoan.html">Cầu Thang - Lan Can Kính</a>
+              <a href="cuanhomkinh.html">Cửa Tự Động</a>
             </div>
           </div>
 
@@ -1326,7 +1326,7 @@
         <div class="sv-search-group-title">Dự Án Đã Thực Hiện</div>`;
       matchedProjects.forEach(p => {
         html += `
-          <a href="du-an-chi-tiet.html?id=${p.projectId}" class="sv-search-item">
+          <a href="duanchitiet.html?id=${p.projectId}" class="sv-search-item">
             <span class="sv-search-item-title">${p.title}</span>
             <span class="sv-search-item-desc">📍 Vị trí: ${p.location} — ${p.scopeOfWork.substring(0, 100)}...</span>
           </a>
@@ -1441,11 +1441,11 @@
     if (navMenu) {
       // Find "Liên Hệ" link
       const contactLink = Array.from(navMenu.querySelectorAll('.nav-menu-link'))
-        .find(link => link.getAttribute('href') === 'lien-he.html');
+        .find(link => link.getAttribute('href') === 'lienhe.html');
       
-      if (contactLink && !navMenu.querySelector('[href="tai-lieu.html"]')) {
+      if (contactLink && !navMenu.querySelector('[href="tailieu.html"]')) {
         const link = document.createElement('a');
-        link.href = 'tai-lieu.html';
+        link.href = 'tailieu.html';
         link.className = 'nav-menu-link';
         link.textContent = 'Tài Liệu Kỹ Thuật';
         navMenu.insertBefore(link, contactLink);
@@ -1456,11 +1456,11 @@
     const navDrawer = document.getElementById('navDrawer');
     if (navDrawer) {
       const contactLink = Array.from(navDrawer.querySelectorAll('.nav-drawer-link'))
-        .find(link => link.getAttribute('href') === 'lien-he.html');
+        .find(link => link.getAttribute('href') === 'lienhe.html');
       
-      if (contactLink && !navDrawer.querySelector('[href="tai-lieu.html"]')) {
+      if (contactLink && !navDrawer.querySelector('[href="tailieu.html"]')) {
         const link = document.createElement('a');
-        link.href = 'tai-lieu.html';
+        link.href = 'tailieu.html';
         link.className = 'nav-drawer-link';
         link.textContent = 'Tài Liệu Kỹ Thuật';
         navDrawer.insertBefore(link, contactLink);

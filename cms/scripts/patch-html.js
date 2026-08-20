@@ -19,30 +19,30 @@ const WEBSITE_DIR = path.join(__dirname, '../../website');
 const HEADER_TEMPLATE = (activeHref) => {
   const items = [
     { href: 'index.html',            label: 'TRANG CHỦ' },
-    { href: 'gioi-thieu.html',       label: 'GIỚI THIỆU' },
-    { href: 'linh-vuc-hoat-dong.html', label: 'LĨNH VỰC' },
-    { href: 'du-an.html',            label: 'DỰ ÁN' },
-    { href: 'nang-luc.html',         label: 'NĂNG LỰC' },
-    { href: 'san-pham.html',         label: 'SẢN PHẨM' },
-    { href: 'tin-tuc.html',          label: 'TIN TỨC' },
-    { href: 'lien-he.html',          label: 'LIÊN HỆ' },
-    { href: 'bao-gia.html',          label: 'BÁO GIÁ', isGold: true },
+    { href: 'gioithieu.html',       label: 'GIỚI THIỆU' },
+    { href: 'linhvuchoatdong.html', label: 'LĨNH VỰC' },
+    { href: 'duan.html',            label: 'DỰ ÁN' },
+    { href: 'nangluc.html',         label: 'NĂNG LỰC' },
+    { href: 'sanpham.html',         label: 'SẢN PHẨM' },
+    { href: 'tintuc.html',          label: 'TIN TỨC' },
+    { href: 'lienhe.html',          label: 'LIÊN HỆ' },
+    { href: 'baogia.html',          label: 'BÁO GIÁ', isGold: true },
   ];
   const navItems = items.map(i => {
     const active = i.href === activeHref ? ' active" aria-current="page' : '';
     const styleAttr = i.isGold ? ' style="color:var(--gold);font-weight:700"' : '';
-    if (i.href === 'linh-vuc-hoat-dong.html') {
+    if (i.href === 'linhvuchoatdong.html') {
       return `      <div class="nav-dropdown">
-        <a href="linh-vuc-hoat-dong.html" class="nav-item${active}">
+        <a href="linhvuchoatdong.html" class="nav-item${active}">
           ${i.label}
           <svg class="chevron" viewBox="0 0 24 24" width="10" height="10" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
         </a>
         <div class="dropdown-menu" style="min-width: 300px;">
-          <a href="linh-vuc-co-khi.html" class="dropdown-item" style="padding: 16px 20px;">
+          <a href="linhvuccokhi.html" class="dropdown-item" style="padding: 16px 20px;">
             <span class="dropdown-title" style="font-size: 16px; margin-bottom: 6px;">Cơ Khí Biệt Thự &amp; Lâu Đài</span>
             <span class="dropdown-desc" style="font-size: 13px; opacity: 0.8;">Cổng đúc, Hàng rào, Mái kính, Cầu thang nghệ thuật</span>
           </a>
-          <a href="linh-vuc-nhom-kinh.html" class="dropdown-item" style="padding: 16px 20px;">
+          <a href="linhvucnhomkinh.html" class="dropdown-item" style="padding: 16px 20px;">
             <span class="dropdown-title" style="font-size: 16px; margin-bottom: 6px;">Nhôm Kính Kiến Trúc Cao Cấp</span>
             <span class="dropdown-desc" style="font-size: 13px; opacity: 0.8;">Cửa nhôm Slim, Xingfa, Vách dựng Unitized, Lan can kính</span>
           </a>
@@ -60,7 +60,7 @@ const HEADER_TEMPLATE = (activeHref) => {
     </a>
     <nav class="nav" id="navMenu" role="navigation" aria-label="Menu chính">
 ${navItems}
-      <a href="san-pham.html" class="nav-item premium">+ CAO CẤP</a>
+      <a href="sanpham.html" class="nav-item premium">+ CAO CẤP</a>
     </nav>
     <a href="tel:0869590279" class="header-phone" aria-label="Gọi hotline 0869 590 279">
       <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
@@ -83,7 +83,7 @@ const STICKY_CTA = `
     Gọi Điện
   </a>
   <a href="https://zalo.me/0869590279" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener" style="background:#0068ff; color:#fff; border-color:#0068ff;">Zalo</a>
-  <a href="bao-gia.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
+  <a href="baogia.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
   <a href="https://maps.google.com/?q=TT7-35+KĐT+Văn+Phú,+Hà+Đông,+Hà+Nội" class="btn btn-sm" target="_blank" rel="noopener" style="background:rgba(255,255,255,.05);color:#fff;border-color:rgba(255,255,255,.1)">Chỉ Đường</a>
 </div>`;
 
@@ -97,7 +97,7 @@ const FLOATS_HTML = `<!-- FLOATING BUTTONS -->
     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
   </a>
 </div>
-<a href="lien-he.html" class="float-support" aria-label="Hỗ trợ kỹ thuật">
+<a href="lienhe.html" class="float-support" aria-label="Hỗ trợ kỹ thuật">
   <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>
 </a>`;
 
@@ -126,21 +126,21 @@ const FOOTER_TEMPLATE = `<footer class="footer" role="contentinfo">
       <div class="footer-col">
         <h4>Lĩnh Vực Chuyên Sâu</h4>
         <ul>
-          <li><a href="linh-vuc-co-khi.html">Cơ Khí Biệt Thự &amp; Lâu Đài</a></li>
-          <li><a href="linh-vuc-nhom-kinh.html">Nhôm Kính Kiến Trúc Cao Cấp</a></li>
-          <li><a href="du-an.html?cat=gia-cong-du-thuyen">Gia Công Inox Du Thuyền</a></li>
-          <li><a href="san-pham.html">Sản Phẩm Trang Trí</a></li>
+          <li><a href="linhvuccokhi.html">Cơ Khí Biệt Thự &amp; Lâu Đài</a></li>
+          <li><a href="linhvucnhomkinh.html">Nhôm Kính Kiến Trúc Cao Cấp</a></li>
+          <li><a href="duan.html?cat=gia-cong-du-thuyen">Gia Công Inox Du Thuyền</a></li>
+          <li><a href="sanpham.html">Sản Phẩm Trang Trí</a></li>
         </ul>
       </div>
       
       <div class="footer-col">
         <h4>Công Ty</h4>
         <ul>
-          <li><a href="gioi-thieu.html">Về Cơ Khí Sao Vàng</a></li>
-          <li><a href="du-an.html">Dự án thực hiện</a></li>
-          <li><a href="nang-luc.html">Hồ sơ năng lực</a></li>
-          <li><a href="tin-tuc.html">Tin tức &amp; Sự kiện</a></li>
-          <li><a href="lien-he.html">Liên hệ trực tiếp</a></li>
+          <li><a href="gioithieu.html">Về Cơ Khí Sao Vàng</a></li>
+          <li><a href="duan.html">Dự án thực hiện</a></li>
+          <li><a href="nangluc.html">Hồ sơ năng lực</a></li>
+          <li><a href="tintuc.html">Tin tức &amp; Sự kiện</a></li>
+          <li><a href="lienhe.html">Liên hệ trực tiếp</a></li>
         </ul>
       </div>
       
@@ -184,25 +184,25 @@ const STICKY_CTA_CSS = `
 // Mapping: filename → which nav item is active
 const PAGE_ACTIVE_NAV = {
   'index.html':             'index.html',
-  'bao-gia.html':           'bao-gia.html',
-  'gioi-thieu.html':        'gioi-thieu.html',
-  'linh-vuc-hoat-dong.html':'linh-vuc-hoat-dong.html',
-  'linh-vuc-co-khi.html':   'linh-vuc-hoat-dong.html',
-  'linh-vuc-nhom-kinh.html':'linh-vuc-hoat-dong.html',
-  'du-an.html':             'du-an.html',
-  'du-an-chi-tiet.html':    'du-an.html',
-  'nang-luc.html':          'nang-luc.html',
-  'co-khi-nghe-thuat.html': 'linh-vuc-hoat-dong.html',
-  'cau-thang-xoan.html':    'linh-vuc-hoat-dong.html',
-  'cong-nghe-thuat.html':   'linh-vuc-hoat-dong.html',
-  'cua-nhom-kinh.html':     'linh-vuc-hoat-dong.html',
-  'vach-kinh.html':         'linh-vuc-hoat-dong.html',
-  'lan-can-kinh.html':      'linh-vuc-hoat-dong.html',
-  'san-pham.html':          'san-pham.html',
-  'san-pham-chi-tiet.html': 'san-pham.html',
-  'tin-tuc.html':           'tin-tuc.html',
-  'tin-tuc-chi-tiet.html':  'tin-tuc.html',
-  'lien-he.html':           'lien-he.html',
+  'baogia.html':           'baogia.html',
+  'gioithieu.html':        'gioithieu.html',
+  'linhvuchoatdong.html':'linhvuchoatdong.html',
+  'linhvuccokhi.html':   'linhvuchoatdong.html',
+  'linhvucnhomkinh.html':'linhvuchoatdong.html',
+  'duan.html':             'duan.html',
+  'duanchitiet.html':    'duan.html',
+  'nangluc.html':          'nangluc.html',
+  'cokhinghethuat.html': 'linhvuchoatdong.html',
+  'cauthangxoan.html':    'linhvuchoatdong.html',
+  'congnghethuat.html':   'linhvuchoatdong.html',
+  'cuanhomkinh.html':     'linhvuchoatdong.html',
+  'vachkinh.html':         'linhvuchoatdong.html',
+  'lancankinh.html':      'linhvuchoatdong.html',
+  'sanpham.html':          'sanpham.html',
+  'sanphamchitiet.html': 'sanpham.html',
+  'tintuc.html':           'tintuc.html',
+  'tintucchitiet.html':  'tintuc.html',
+  'lienhe.html':           'lienhe.html',
 };
 
 let patchCount = 0;

@@ -7,7 +7,7 @@
      · Loading state (disable button, spinner)
      · Reset form sau khi gửi thành công
 
-   Dùng cho: #contactForm (lien-he.html), #homeQuoteForm (index.html)
+   Dùng cho: #contactForm (lienhe.html), #homeQuoteForm (index.html)
 ════════════════════════════════════════════════════════════════ */
 
 (function initForm() {
@@ -172,7 +172,7 @@
         if (fileLabel) fileLabel.textContent = 'Chưa chọn file nào';
         // Redirect sang Thank You Page để đo lường conversion GA4/Ads
         setTimeout(() => {
-          window.location.href = 'thank-you.html';
+          window.location.href = 'thankyou.html';
         }, 1200);
       } else {
         showToast(result.error || 'Có lỗi xảy ra, vui lòng thử lại.', 'error');

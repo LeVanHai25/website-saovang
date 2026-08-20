@@ -19,7 +19,7 @@
 
   const HOTLINE    = '0869590279';
   const ZALO_LINK  = 'https://zalo.me/0869590279';
-  const QUOTE_URL  = 'lien-he.html?ref=service-cta';
+  const QUOTE_URL  = 'lienhe.html?ref=service-cta';
 
   // Trang dịch vụ cần hiển thị (whitelist theo filename)
   const SERVICE_PAGES = [

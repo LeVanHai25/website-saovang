@@ -1,10 +1,10 @@
 /**
- * Clean-rewrite <style> block in lien-he.html
+ * Clean-rewrite <style> block in lienhe.html
  * Removes all duplicate/old CSS, keeps only the correct version
  */
 const fs = require('fs');
 const path = require('path');
-const filePath = path.join(__dirname, '../../website/lien-he.html');
+const filePath = path.join(__dirname, '../../website/lienhe.html');
 let html = fs.readFileSync(filePath, 'utf8');
 
 // Extract everything before <style> and after </style>
@@ -179,4 +179,4 @@ const CLEAN_STYLE = `<style>
 
 html = before + CLEAN_STYLE + after;
 fs.writeFileSync(filePath, html, 'utf8');
-console.log('✓  lien-he.html style block cleaned. Lines:', html.split('\n').length);
+console.log('✓  lienhe.html style block cleaned. Lines:', html.split('\n').length);
