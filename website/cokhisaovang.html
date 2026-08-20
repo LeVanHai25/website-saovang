@@ -355,6 +355,251 @@
       margin: 0;
     }
 
+    /* Section 03: Luxury Residential Architecture */
+    .lux-residential-sec {
+      padding: 100px 0;
+      background: var(--sv-luxury-offwhite);
+      border-top: 1px solid #E2E8F0;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .lux-res-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    @media (max-width: 860px) {
+      .lux-res-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .lux-res-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .lux-res-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+      border-color: rgba(201, 162, 39, 0.4);
+    }
+    .lux-res-img-wrap {
+      position: relative;
+      height: 280px;
+      overflow: hidden;
+      background: #0F172A;
+    }
+    .lux-res-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .lux-res-card:hover .lux-res-img-wrap img {
+      transform: scale(1.06);
+    }
+    .lux-res-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: rgba(15, 23, 42, 0.8);
+      color: var(--sv-luxury-gold);
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 4px;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(201, 162, 39, 0.3);
+    }
+    .lux-res-body {
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .lux-res-title {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--sv-luxury-dark);
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+    .lux-res-desc {
+      font-size: 14px;
+      color: #64748B;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+    .lux-res-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .lux-res-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13.5px;
+      color: #334155;
+      line-height: 1.5;
+    }
+    .lux-res-list li i {
+      color: var(--sv-luxury-gold);
+      font-size: 16px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .lux-res-footer {
+      margin-top: auto;
+      padding-top: 20px;
+      border-top: 1px solid #F1F5F9;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .lux-res-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sv-luxury-dark);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .lux-res-link:hover {
+      color: var(--sv-luxury-gold);
+    }
+    .lux-res-link i {
+      font-size: 14px;
+      transition: transform 0.2s ease;
+    }
+    .lux-res-link:hover i {
+      transform: translateX(4px);
+    }
+
+    /* Section 05: Custom Metalwork */
+    .lux-custom-sec {
+      padding: 100px 0;
+      background: var(--sv-luxury-dark);
+      color: #FFFFFF;
+      position: relative;
+    }
+    .lux-custom-inner {
+      border: 1px solid rgba(201, 162, 39, 0.25);
+      border-radius: 12px;
+      padding: 60px 48px;
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.9) 100%);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+    }
+    @media (max-width: 768px) {
+      .lux-custom-inner {
+        padding: 36px 20px;
+      }
+    }
+    .lux-custom-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 48px;
+    }
+    .lux-custom-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--sv-luxury-gold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .lux-custom-title {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 900;
+      color: #FFFFFF;
+      margin-bottom: 14px;
+      line-height: 1.25;
+    }
+    .lux-custom-slogan {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--sv-luxury-gold-light);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .lux-custom-desc {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #94A3B8;
+      font-weight: 300;
+    }
+    .lux-custom-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 900px) {
+      .lux-custom-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .lux-custom-card {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 32px 28px;
+      transition: all 0.3s ease;
+    }
+    .lux-custom-card:hover {
+      border-color: var(--sv-luxury-gold);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+      background: rgba(15, 23, 42, 0.9);
+    }
+    .lux-custom-num {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--sv-luxury-gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .lux-custom-card-title {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 16px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .lux-custom-card-desc {
+      font-size: 13.5px;
+      color: #94A3B8;
+      line-height: 1.7;
+      margin: 0;
+      font-weight: 300;
+    }
+
+
 
     /* Sub Navigation */
     .brand-intro {
@@ -1498,183 +1743,153 @@
 
 
     <!-- ════════════════════════════════════════════
-         SECTION 5: 4 TRỤ CỘT NĂNG LỰC DỊCH VỤ (EPCM)
+         COMPONENT 03: LUXURY RESIDENTIAL ARCHITECTURE
     ════════════════════════════════════════════ -->
-    <section class="division-section" style="background: var(--sv-white);" aria-label="4 trụ cột năng lực hoạt động">
+    <section class="lux-residential-sec" id="residentialSection" aria-label="Cơ khí kiến trúc cho Villa, Residence & Nhà ở cao cấp">
       <div class="sv-container">
         
-        <div style="text-align:center; margin-bottom:var(--sv-sp-8);" data-sv-reveal>
-          <span class="sv-section-tag">NĂNG LỰC HÀNH ĐỘNG</span>
-          <h2 class="sv-section-title" style="margin-inline:auto;">4 Trụ Cột Năng Lực Dịch Vụ</h2>
-          <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); max-width:600px; margin-inline:auto; margin-top:var(--sv-sp-2);">
-            Cơ cấu năng lực của CKSV được tổ chức chặt chẽ theo 4 mảng chiến lược đại diện cho chuỗi giá trị đầy đủ của một dự án cơ khí hiện đại.
+        <div class="lux-sec-header" data-sv-reveal>
+          <span class="lux-sec-tag">01 — LUXURY RESIDENTIAL</span>
+          <h2 class="lux-sec-title">CƠ KHÍ KIẾN TRÚC CHO VILLA, RESIDENCE &amp; NHÀ Ở CAO CẤP</h2>
+          <p class="lux-sec-desc">
+            Tư vấn kỹ thuật, chế tác và lắp dựng các hạng mục kim loại hoàn thiện theo hồ sơ thiết kế. Đảm bảo sự tinh tế trong từng đường nét và độ chính xác khi kết hợp cùng kính, đá và gỗ.
           </p>
         </div>
 
-        <div class="epcm-tabs-container">
-          <!-- Tab Buttons -->
-          <div class="epcm-tabs">
-            <button class="epcm-tab-btn active" data-tab="tab-engineering">01. Engineering (Kỹ Thuật)</button>
-            <button class="epcm-tab-btn" data-tab="tab-manufacturing">02. Manufacturing (Gia Công)</button>
-            <button class="epcm-tab-btn" data-tab="tab-installation">03. Installation (Thi Công)</button>
-            <button class="epcm-tab-btn" data-tab="tab-maintenance">04. Maintenance (Bảo Trì)</button>
-          </div>
-
-          <!-- Tab Content 1 -->
-          <div class="epcm-tab-content active" id="tab-engineering">
-            <div>
-              <h3 class="sv-section-title" style="font-size: 24px; text-align: left; margin-bottom: var(--sv-sp-4);">Trụ Cột 01: Engineering Services (Kỹ Thuật &amp; Thiết Kế)</h3>
-              <p style="font-size:var(--sv-fs-sm); line-height:1.6; color:var(--sv-gray-text); margin-bottom:var(--sv-sp-4);">
-                Đây là giai đoạn khởi đầu quyết định sự thành bại và tính kinh tế của dự án. Chúng tôi biến mọi ý tưởng sơ khởi của đối tác thành giải pháp kỹ thuật có tính khả thi cao trước khi đưa vào sản xuất hàng loạt.
-              </p>
-              <div class="epcm-features-list">
-                <span class="epcm-feature-item">Khảo sát &amp; đo đạc hiện trạng laser 3D</span>
-                <span class="epcm-feature-item">Tư vấn giải pháp kỹ thuật tối ưu hóa kết cấu</span>
-                <span class="epcm-feature-item">Thiết kế kỹ thuật 2D/3D SolidWorks, Inventor</span>
-                <span class="epcm-feature-item">Triển khai bản vẽ Shop Drawing định hướng DFM</span>
-                <span class="epcm-feature-item">Phân tích chịu lực &amp; mô phỏng ứng suất FEA</span>
-                <span class="epcm-feature-item">Bóc tách khối lượng BOM vật tư chuẩn xác</span>
+        <div class="lux-res-grid">
+          
+          <!-- Residential Item 1: Lan can & Railing -->
+          <article class="lux-res-card" data-sv-reveal data-sv-delay="1">
+            <div class="lux-res-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/villa-an-vuong/hero.jpg" alt="Lan can ban công & lan can kính Biệt thự An Vượng" width="800" height="500">
+              <span class="lux-res-badge">Inox &amp; Thép Kiến Trúc</span>
+            </div>
+            <div class="lux-res-body">
+              <h3 class="lux-res-title">Lan Can &amp; Railing (Inox &amp; Thép)</h3>
+              <p class="lux-res-desc">Chế tác và thi công hoàn thiện hệ lan can ban công, lan can kính và lan can bảo vệ theo ngôn ngữ kiến trúc công trình.</p>
+              <ul class="lux-res-list">
+                <li><i class="ri-check-line"></i> <span>Lan can ban công inox, thép sơn hoàn thiện theo thiết kế kiến trúc</span></li>
+                <li><i class="ri-check-line"></i> <span>Lan can kính cường lực/dán an toàn kết hợp ngàm &amp; tay vịn inox/thép</span></li>
+                <li><i class="ri-check-line"></i> <span>Lan can sân thượng, logia, ban công cong uốn lượn cho Villa &amp; Penthouse</span></li>
+              </ul>
+              <div class="lux-res-footer">
+                <a href="#quickQuote" class="lux-res-link">Tư vấn kỹ thuật <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11.5px; color: #94A3B8; font-weight: 500;">Dự án thực tế: An Vượng Villa</span>
               </div>
             </div>
-            <div class="epcm-tab-img">
-              <img decoding="async" loading="lazy" src="https://i.pinimg.com/736x/88/a4/09/88a409e51c89f53835cc988d451e5e6e3c.jpg" alt="Thiết kế cơ khí Solidworks DFM tại Sao Vàng" width="800" height="600">
-            </div>
-          </div>
+          </article>
 
-          <!-- Tab Content 2 -->
-          <div class="epcm-tab-content" id="tab-manufacturing">
-            <div>
-              <h3 class="sv-section-title" style="font-size: 24px; text-align: left; margin-bottom: var(--sv-sp-4);">Trụ Cột 02: Manufacturing Services (Gia Công &amp; Chế Tạo)</h3>
-              <p style="font-size:var(--sv-fs-sm); line-height:1.6; color:var(--sv-gray-text); margin-bottom:var(--sv-sp-4);">
-                Sơ hữu hệ thống nhà xưởng hiện đại cùng trang thiết bị CNC đồng bộ kết hợp tay nghề thủ công tinh xảo, chúng tôi sản xuất chính xác từng micromet, đáp ứng các yêu cầu khắt khe của đối tác B2B.
-              </p>
-              <div class="epcm-features-list">
-                <span class="epcm-feature-item">Gia công cơ khí chính xác phay, tiện CNC</span>
-                <span class="epcm-feature-item">Cắt laser fiber kim loại tấm, inox, nhôm</span>
-                <span class="epcm-feature-item">Chấn gấp thủy lực CNC độ chính xác cao</span>
-                <span class="epcm-feature-item">Chế tạo dầm thép nhà tiền chế, kết cấu chịu lực</span>
-                <span class="epcm-feature-item">Gia công Inox 316L Marine Grade chuyên dụng du thuyền</span>
-                <span class="epcm-feature-item">Sản xuất OEM/ODM vỏ máy, jig gá số lượng lớn</span>
+          <!-- Residential Item 2: Cầu thang & Handrail -->
+          <article class="lux-res-card" data-sv-reveal data-sv-delay="2">
+            <div class="lux-res-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/villa-do-thanh/detail-01.jpg" alt="Cầu thang & tay vịn Biệt thự Đô Thành" width="800" height="500">
+              <span class="lux-res-badge">Kết Cấu Hoàn Thiện</span>
+            </div>
+            <div class="lux-res-body">
+              <h3 class="lux-res-title">Cầu Thang &amp; Handrail (Inox &amp; Thép)</h3>
+              <p class="lux-res-desc">Gia công chính xác kết cấu chịu lực cầu thang kim loại và các hệ tay vịn tinh xảo, đáp ứng yêu cầu thẩm mỹ khắt khe.</p>
+              <ul class="lux-res-list">
+                <li><i class="ri-check-line"></i> <span>Cầu thang thép, cầu thang kết cấu kim loại theo bản vẽ kỹ thuật</span></li>
+                <li><i class="ri-check-line"></i> <span>Hệ tay vịn inox, tay vịn thép hoàn thiện tinh xảo, mối ghép phẳng mịn</span></li>
+                <li><i class="ri-check-line"></i> <span>Kết cấu chịu lực và chi tiết liên kết chuẩn xác theo tải trọng tính toán</span></li>
+              </ul>
+              <div class="lux-res-footer">
+                <a href="#quickQuote" class="lux-res-link">Tư vấn kỹ thuật <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11.5px; color: #94A3B8; font-weight: 500;">Dự án thực tế: Đô Thành Villa</span>
               </div>
             </div>
-            <div class="epcm-tab-img">
-              <img decoding="async" loading="lazy" src="https://i.pinimg.com/736x/2a/39/fa/2a39fabec655ea7df8a0c2ff665a6a0a.jpg" alt="Đầu cắt laser fiber CNC gia công tấm" width="800" height="600">
-            </div>
-          </div>
+          </article>
 
-          <!-- Tab Content 3 -->
-          <div class="epcm-tab-content" id="tab-installation">
-            <div>
-              <h3 class="sv-section-title" style="font-size: 24px; text-align: left; margin-bottom: var(--sv-sp-4);">Trụ Cột 03: Installation Services (Thi Công &amp; Lắp Đặt)</h3>
-              <p style="font-size:var(--sv-fs-sm); line-height:1.6; color:var(--sv-gray-text); margin-bottom:var(--sv-sp-4);">
-                Đội ngũ kỹ thuật thi công lành nghề trực tiếp lắp dựng an toàn tại hiện trường bằng thiết bị cẩu nâng chuyên dụng, cam kết lực xiết bu-lông, độ thăng bằng phẳng và nghiệm thu chất lượng chuẩn mực.
-              </p>
-              <div class="epcm-features-list">
-                <span class="epcm-feature-item">Lắp dựng kết cấu thép dầm cột nhà xưởng</span>
-                <span class="epcm-feature-item">Thi công cầu thang xoắn ốc thép bản Penthouse biệt thự</span>
-                <span class="epcm-feature-item">Lắp đặt vách kính mặt dựng Unitized, cabin tắm mạ vàng</span>
-                <span class="epcm-feature-item">Định vị cân chỉnh đồng tâm băng tải, thiết bị bồn bể</span>
-                <span class="epcm-feature-item">Đo đạc kiểm thử độ võng kết cấu</span>
-                <span class="epcm-feature-item">Nghiệm thu kiểm thử mối hàn không phá hủy NDT</span>
+          <!-- Residential Item 3: Cổng & Hàng rào -->
+          <article class="lux-res-card" data-sv-reveal data-sv-delay="3">
+            <div class="lux-res-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/villa-linh-hue/hero.jpg" alt="Cổng chính & hàng rào Biệt thự Linh Huệ" width="800" height="500">
+              <span class="lux-res-badge">Ngoại Thất Cao Cấp</span>
+            </div>
+            <div class="lux-res-body">
+              <h3 class="lux-res-title">Cổng &amp; Hàng Rào (Inox &amp; Thép)</h3>
+              <p class="lux-res-desc">Sản xuất và lắp đặt hệ cổng chính, cổng phụ và hàng rào kim loại bảo vệ, tôn vinh vị thế kiến trúc ngoại thất.</p>
+              <ul class="lux-res-list">
+                <li><i class="ri-check-line"></i> <span>Cổng chính biệt thự bằng thép, inox hoàn thiện sơn hoặc mạ theo thiết kế</span></li>
+                <li><i class="ri-check-line"></i> <span>Hàng rào kim loại đồng bộ tỷ lệ và ngôn ngữ kiến trúc công trình</span></li>
+                <li><i class="ri-check-line"></i> <span>Tích hợp phụ kiện bản lề chịu tải, khóa cơ khí và motor tự động</span></li>
+              </ul>
+              <div class="lux-res-footer">
+                <a href="#quickQuote" class="lux-res-link">Tư vấn kỹ thuật <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11.5px; color: #94A3B8; font-weight: 500;">Dự án thực tế: Linh Huệ Villa</span>
               </div>
             </div>
-            <div class="epcm-tab-img">
-              <img decoding="async" loading="lazy" src="https://i.pinimg.com/736x/0d/16/a6/0d16a6cb8f1b6269b61dbdbef7bc9f1a2.jpg" alt="Thi công kết cấu thép ngoài hiện trường" width="800" height="600">
-            </div>
-          </div>
+          </article>
 
-          <!-- Tab Content 4 -->
-          <div class="epcm-tab-content" id="tab-maintenance">
-            <div>
-              <h3 class="sv-section-title" style="font-size: 24px; text-align: left; margin-bottom: var(--sv-sp-4);">Trụ Cột 04: Maintenance Services (Bảo Trì &amp; Vận Hành)</h3>
-              <p style="font-size:var(--sv-fs-sm); line-height:1.6; color:var(--sv-gray-text); margin-bottom:var(--sv-sp-4);">
-                Sự đồng hành của CKSV không dừng lại sau khi bàn giao nghiệm thu. Chúng tôi cung cấp chính sách bảo trì vận hành dài lâu giúp bảo vệ tuyệt đối giá trị đầu tư của đối tác qua thời gian.
-              </p>
-              <div class="epcm-features-list">
-                <span class="epcm-feature-item">Kiểm tra định kỳ độ võng kết cấu thép</span>
-                <span class="epcm-feature-item">Đo kiểm tra an toàn áp lực bồn bể chứa hóa chất</span>
-                <span class="epcm-feature-item">Bảo dưỡng, bôi trơn con lăn hệ thống băng tải</span>
-                <span class="epcm-feature-item">Xử lý khẩn cấp sự cố hư hỏng mối hàn trong 24 giờ</span>
-                <span class="epcm-feature-item">Tính toán gia cường, cải tạo nâng tải trọng khung thép</span>
-                <span class="epcm-feature-item">Cải tạo hệ thống đường ống công nghệ nhà máy</span>
+          <!-- Residential Item 4: Mái kính & Kết cấu kim loại -->
+          <article class="lux-res-card" data-sv-reveal data-sv-delay="4">
+            <div class="lux-res-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/villa-thanh-hoa/hero.jpg" alt="Mái kính canopy & kết cấu kim loại Thanh Hóa" width="800" height="500">
+              <span class="lux-res-badge">Kiến Trúc Kim Loại</span>
+            </div>
+            <div class="lux-res-body">
+              <h3 class="lux-res-title">Mái Kính &amp; Kết Cấu Kim Loại Hoàn Thiện</h3>
+              <p class="lux-res-desc">Thi công hệ khung canopy sảnh đón, giếng trời và các chi tiết kết cấu kim loại trang trí mặt đứng công trình.</p>
+              <ul class="lux-res-list">
+                <li><i class="ri-check-line"></i> <span>Khung mái kính canopy sảnh chính, mái kính sân vườn và hiên đón</span></li>
+                <li><i class="ri-check-line"></i> <span>Kết cấu khung kim loại trang trí mặt tiền, lam chắn nắng và giếng trời</span></li>
+                <li><i class="ri-check-line"></i> <span>Xử lý liên kết ngàm kính, phụ kiện spider và gioăng chống thấm chuẩn</span></li>
+              </ul>
+              <div class="lux-res-footer">
+                <a href="#quickQuote" class="lux-res-link">Tư vấn kỹ thuật <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11.5px; color: #94A3B8; font-weight: 500;">Dự án thực tế: Thanh Hóa</span>
               </div>
             </div>
-            <div class="epcm-tab-img">
-              <img decoding="async" loading="lazy" src="https://i.pinimg.com/736x/2e/ab/cc/2eabcc08a80808047ce561c28cdeaa31.jpg" alt="Inox du thuyền 316L hàng hải" width="800" height="600">
-            </div>
-          </div>
+          </article>
+
         </div>
 
       </div>
     </section>
 
-    <!-- Tab Interactive Script -->
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const tabBtns = document.querySelectorAll('.epcm-tab-btn');
-        const tabContents = document.querySelectorAll('.epcm-tab-content');
-        
-        tabBtns.forEach(btn => {
-          btn.addEventListener('click', () => {
-            const targetId = btn.getAttribute('data-tab');
-            
-            tabBtns.forEach(b => b.classList.remove('active'));
-            tabContents.forEach(c => c.classList.remove('active'));
-            
-            btn.classList.add('active');
-            document.getElementById(targetId).classList.add('active');
-          });
-        });
-      });
-    </script>
-
 
     <!-- ════════════════════════════════════════════
-         SECTION 5.5: CHIẾN LƯỢC PHÂN TÁCH ĐỐI TƯỢNG KHÁCH HÀNG
+         COMPONENT 05: CUSTOM METALWORK THEO BẢN VẼ
     ════════════════════════════════════════════ -->
-    <section class="client-segments" aria-label="Phân tách phân khúc khách hàng">
+    <section class="lux-custom-sec" id="customMetalworkSection" aria-label="Dịch vụ cơ khí chế tác Custom Metalwork theo yêu cầu">
       <div class="sv-container">
-        
-        <div style="text-align:center; margin-bottom:var(--sv-sp-8);" data-sv-reveal>
-          <span class="sv-section-tag">TIẾP CẬN CHUYÊN BIỆT</span>
-          <h2 class="sv-section-title" style="margin-inline:auto;">Giải Pháp Chuyên Biệt Cho Từng Phân Khúc</h2>
-          <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); max-width:600px; margin-inline:auto; margin-top:var(--sv-sp-2);">
-            Chúng tôi hiểu rằng mỗi nhóm đối tượng khách hàng có những yêu cầu khắt khe khác nhau về mặt kỹ thuật và tính thẩm mỹ.
-          </p>
-        </div>
-
-        <div class="segments-grid">
-          <!-- Segment 1: B2B Project & Industrial -->
-          <div class="segment-card" data-sv-reveal>
-            <div class="segment-header">Khách Hàng Dự Án &amp; Công Nghiệp (B2B)</div>
-            <div class="segment-body">
-              <p class="segment-desc">Dành cho các Tổng thầu xây dựng lớn, Chủ đầu tư dự án công nghiệp, nhà máy FDI (Nhật Bản, Hàn Quốc, Đài Loan...) và các đơn vị vận hành hàng hải, cảng biển.</p>
-              <div class="segment-criteria-title">Tiêu chí quyết định mua hàng:</div>
-              <div class="segment-criteria-list">
-                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Năng lực pháp lý, hồ sơ đấu thầu và chứng chỉ hành nghề</span>
-                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Chứng chỉ vật liệu đầu vào chính gốc (100% CO/CQ)</span>
-                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Tiêu chuẩn kỹ thuật hàn quốc tế AWS, ASME và kiểm soát dung sai</span>
-                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Cam kết đúng tiến độ dự án và bảo hành kết cấu lâu dài</span>
-              </div>
-            </div>
+        <div class="lux-custom-inner" data-sv-reveal>
+          
+          <div class="lux-custom-header">
+            <span class="lux-custom-tag"><i class="ri-compass-3-line"></i> CƠ KHÍ CHẾ TÁC RIÊNG BIỆT</span>
+            <h2 class="lux-custom-title">CUSTOM METALWORK THEO BẢN VẼ &amp; YÊU CẦU DỰ ÁN</h2>
+            <p class="lux-custom-slogan">Theo thiết kế — Theo yêu cầu — Theo từng dự án</p>
+            <p class="lux-custom-desc">
+              Chúng tôi không cung cấp sản phẩm đại trà có sẵn. Mọi cấu kiện kim loại đều được triển khai dựa trên hồ sơ bản vẽ, quy cách vật liệu và yêu cầu thẩm mỹ riêng biệt của từng công trình.
+            </p>
           </div>
 
-          <!-- Segment 2: B2C Architecture & Residential -->
-          <div class="segment-card" data-sv-reveal data-sv-delay="1">
-            <div class="segment-header">Khách Hàng Kiến Trúc &amp; Dân Dụng (B2C &amp; B2B2C)</div>
-            <div class="segment-body">
-              <p class="segment-desc">Dành cho Chủ biệt thự lâu đài hạng sang, các Kiến trúc sư thiết kế nội/ngoại thất, và các Nhà thầu xây dựng nhà dân dụng cao cấp.</p>
-              <div class="segment-criteria-title">Tiêu chí quyết định mua hàng:</div>
-              <div class="segment-criteria-list">
-                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Tính thẩm mỹ tinh xảo, độ uốn lượn uốn cong mượt mà độc bản</span>
-                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Chất lượng hoàn thiện bề mặt (đánh bóng gương, mối hàn vô hình)</span>
-                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Sự phối hợp hài hòa đa vật liệu (thép rèn, inox PVD, kính cường lực)</span>
-                <span class="segment-criteria-item"><i class="ri-checkbox-circle-fill"></i> Thương hiệu uy tín, có hồ sơ các công trình cao cấp thực tế</span>
-              </div>
+          <div class="lux-custom-grid">
+            
+            <!-- Step 1 -->
+            <div class="lux-custom-card">
+              <span class="lux-custom-num">01 — GIAI ĐOẠN KHẢO SÁT &amp; DFM</span>
+              <h3 class="lux-custom-card-title">Đọc Hiểu Hồ Sơ &amp; Tư Vấn Kỹ Thuật DFM</h3>
+              <p class="lux-custom-card-desc">Phân tích bản vẽ kiến trúc, tư vấn giải pháp liên kết, biện pháp thi công khả thi và tối ưu hóa chi tiết kết cấu trước khi đưa vào sản xuất tại xưởng.</p>
             </div>
-          </div>
-        </div>
 
+            <!-- Step 2 -->
+            <div class="lux-custom-card">
+              <span class="lux-custom-num">02 — GIAI ĐOẠN SẢN XUẤT</span>
+              <h3 class="lux-custom-card-title">Chế Tác Chính Xác Theo Quy Cách</h3>
+              <p class="lux-custom-card-desc">Gia công cấu kiện theo đúng kích thước, dung sai và chủng loại vật liệu (Inox 304, Inox 316, Thép kết cấu) đã được Chủ đầu tư và Tư vấn phê duyệt.</p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="lux-custom-card">
+              <span class="lux-custom-num">03 — GIAI ĐOẠN HOÀN THIỆN</span>
+              <h3 class="lux-custom-card-title">Đồng Bộ Hoàn Hảo Với Vật Liệu Khác</h3>
+              <p class="lux-custom-card-desc">Phối hợp chuẩn xác với các nhà thầu kính, đá ốp, gỗ nội thất để đảm bảo độ ăn khớp hoàn hảo, kín khít và thẩm mỹ đồng nhất tại công trường.</p>
+            </div>
+
+          </div>
+
+        </div>
       </div>
     </section>
 
