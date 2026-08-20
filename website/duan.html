@@ -554,32 +554,34 @@
   </nav>
 
 <section class="page-hero">
-  <div class="page-hero-bg"><img width="800" height="600" decoding="async" loading="lazy" src="assets/images/project-yacht.png" alt="Dự án Sao Vàng" /><div class="page-hero-overlay"></div></div>
+  <div class="page-hero-bg"><img width="1600" height="900" decoding="async" loading="eager" src="assets/images/projects/yacht-tulip/hero.jpg" alt="Dự án thực tế Cơ khí Sao Vàng" /><div class="page-hero-overlay" style="background: linear-gradient(180deg, rgba(15,23,42,0.8) 0%, rgba(15,23,42,0.92) 100%);"></div></div>
   <div class="container page-hero-content">
-    <span class="tag">Dự Án</span>
-    <h1 class="page-hero-title">Dự Án Đã Thực Hiện</h1>
-    <p class="page-hero-sub">Nhà ở, biệt thự &amp; du thuyền cao cấp</p>
-    <nav class="breadcrumb"><a href="index.html">Trang chủ</a><span class="sep"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span><span class="current">Dự án</span></nav>
+    <span class="tag" style="background: rgba(201, 162, 39, 0.2); color: #C9A227; border: 1px solid rgba(201, 162, 39, 0.4);">HỒ SƠ CÔNG TRÌNH THỰC TẾ</span>
+    <h1 class="page-hero-title">Dự Án Cơ Khí Kiến Trúc &amp; Du Thuyền</h1>
+    <p class="page-hero-sub">100% hình ảnh thực tế từ các công trình Villa, Residence và Du thuyền cao cấp do Cơ khí Sao Vàng trực tiếp chế tác và thi công hoàn thiện</p>
+    <nav class="breadcrumb"><a href="index.html">Trang chủ</a><span class="sep"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span><span class="current">Dự án thực tế</span></nav>
   </div>
 </section>
 
-<!-- FILTER BAR — populated from CMS -->
-<div style="background:var(--white);border-bottom:1px solid var(--gray-200);padding:20px 0;">
+<!-- FILTER BAR -->
+<div style="background: #FFFFFF; border-bottom: 1px solid #E2E8F0; padding: 20px 0; position: sticky; top: 70px; z-index: 90; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
   <div class="container">
-    <div class="filter-bar" id="filterBar">
-      <button class="filter-btn active" data-filter="all">Tất cả</button>
-      <!-- Categories loaded dynamically -->
+    <div class="filter-bar" id="filterBar" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+      <button class="filter-btn active" data-filter="all">Tất Cả Dự Án (8)</button>
+      <button class="filter-btn" data-filter="residential">01 — Luxury Residential (4)</button>
+      <button class="filter-btn" data-filter="yacht">02 — Luxury Yacht (4)</button>
     </div>
   </div>
 </div>
 
 <!-- PROJECTS GRID -->
-<section class="section" style="padding-top:48px;">
+<section class="section" style="padding-top: 48px; background: #F8FAFC;">
   <div class="container">
-    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:32px; flex-wrap: wrap; gap: 16px;">
       <div>
-        <h2 class="section-title" style="margin:0">Danh Mục <span style="color:var(--red)">Dự Án</span></h2>
-        <p id="projectCount" style="font-size:13px;color:var(--gray-400);margin-top:4px">Đang tải...</p>
+        <span style="font-family: var(--ff-head); font-size: 11px; font-weight: 800; letter-spacing: 0.15em; color: #C9A227; text-transform: uppercase;">DANH MỤC CÔNG TRÌNH</span>
+        <h2 class="section-title" style="margin:4px 0 0 0; font-size: 26px; color: #0F172A;">Hồ Sơ Dự Án <span style="color:#C9A227">Đã Bàn Giao</span></h2>
+        <p id="projectCount" style="font-size:13px;color:#64748B;margin-top:4px">Đang tải dữ liệu thực tế...</p>
       </div>
     </div>
     <div class="projects-grid" id="projectsGrid">
@@ -594,21 +596,30 @@
 </section>
 
 <!-- STATS STRIP -->
-<div class="container">
-  <div class="project-stats">
-    <div class="pstat"><div class="pstat-num" data-counter>50+</div><div class="pstat-lbl">Công Trình Bàn Giao</div></div>
-    <div class="pstat"><div class="pstat-num" data-counter>10+</div><div class="pstat-lbl">Dự Án Hàng Hải</div></div>
-    <div class="pstat"><div class="pstat-num" data-counter>7+</div><div class="pstat-lbl">Năm KN Đội Ngũ</div></div>
-    <div class="pstat"><div class="pstat-num">100%</div><div class="pstat-lbl">Khách Hàng Hài Lòng</div></div>
+<div style="background: #0F172A; padding: 48px 0; border-top: 1px solid rgba(201, 162, 39, 0.2); border-bottom: 1px solid rgba(201, 162, 39, 0.2);">
+  <div class="container">
+    <div class="project-stats" style="background: transparent; margin: 0; padding: 0;">
+      <div class="pstat"><div class="pstat-num" style="color: #C9A227;">8</div><div class="pstat-lbl">Dự Án Tiêu Biểu</div></div>
+      <div class="pstat"><div class="pstat-num" style="color: #C9A227;">112+</div><div class="pstat-lbl">Hình Ảnh Thực Tế</div></div>
+      <div class="pstat"><div class="pstat-num" style="color: #C9A227;">100%</div><div class="pstat-lbl">Chuẩn Mác Thép &amp; Vật Tư</div></div>
+      <div class="pstat"><div class="pstat-num" style="color: #C9A227;">100%</div><div class="pstat-lbl">Đã Nghiệm Thu Bàn Giao</div></div>
+    </div>
   </div>
 </div>
 
-<section style="padding:72px 0;text-align:center;background:var(--sv-white);">
-  <div class="sv-container" style="text-align:center;">
-    <span class="sv-section-tag">Bắt Đầu</span>
-    <h2 class="sv-section-title" style="margin-inline:auto;margin-bottom:12px;">Có Dự Án Cần Thi Công?</h2>
-    <p style="font-size:15px;color:var(--sv-gray-text);margin-bottom:32px;">Liên hệ ngay để được tư vấn và nhận báo giá miễn phí — đội kỹ sư sẵn sàng khảo sát thực tế</p>
-    <a href="lienhe.html" class="sv-btn sv-btn-gold">Yêu Cầu Báo Giá Ngay <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+<section style="padding:80px 0;text-align:center;background:#FFFFFF;">
+  <div class="sv-container" style="text-align:center; max-width: 760px; margin: 0 auto;">
+    <span class="sv-section-tag" style="color: #C9A227;">TIẾP NHẬN BẢN VẼ &amp; BÁO GIÁ DỰ TOÁN</span>
+    <h2 class="sv-section-title" style="margin-inline:auto;margin-bottom:14px; font-size: 28px; color: #0F172A;">Quý Khách Cần Triển Khai Cơ Khí Kiến Trúc Hoặc Du Thuyền?</h2>
+    <p style="font-size:15px;color:#64748B;line-height: 1.7;margin-bottom:32px;">Gửi hồ sơ bản vẽ kiến trúc hoặc yêu cầu gia công để đội ngũ kỹ sư Sao Vàng phân tích, tư vấn giải pháp liên kết và phản hồi dự toán chi tiết kèm cam kết bảo mật NDA.</p>
+    <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+      <a href="cokhisaovang.html#quickQuote" class="sv-btn sv-btn-gold" style="padding: 14px 28px; font-weight: 800;">
+        <i class="ri-file-upload-line"></i> GỬI BẢN VẼ &amp; NHẬN DỰ TOÁN
+      </a>
+      <a href="tel:0869590279" class="sv-btn sv-btn-outline-gold" style="padding: 14px 28px; font-weight: 800;">
+        <i class="ri-phone-fill"></i> HOTLINE: 0869 590 279
+      </a>
+    </div>
   </div>
 </section>
 

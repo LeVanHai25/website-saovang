@@ -50,6 +50,20 @@ async function runSeed() {
       }
     });
   });
+
+  console.log('🏛️ Running real projects seeder (8 authentic projects & 112 photos)...');
+  const realProjectsProcess = spawn('node', ['scripts/seed_real_projects_to_db.js'], { stdio: 'inherit', shell: true });
+  
+  await new Promise((resolve, reject) => {
+    realProjectsProcess.on('close', (code) => {
+      if (code === 0) {
+        console.log('✅ Real projects seeding completed successfully.');
+        resolve();
+      } else {
+        reject(new Error(`Real projects seeding failed with exit code: ${code}`));
+      }
+    });
+  });
 }
 
 async function run() {

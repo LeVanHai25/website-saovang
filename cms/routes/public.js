@@ -42,24 +42,13 @@ router.get('/projects', (req, res) => {
   const params = [];
 
   if (category && category !== 'all') {
-    if (category === 'co-khi') {
-      where.push(`EXISTS (
-        SELECT 1 FROM categories cat
-        WHERE cat.name = c.category AND cat.content_type = 'project'
-        AND (cat.slug LIKE '%co-khi%' OR cat.slug LIKE '%sat%' OR cat.slug LIKE '%thep%' OR cat.slug LIKE '%inox%' OR cat.slug LIKE '%cau-thang%' OR cat.slug LIKE '%lan-can%' OR cat.slug LIKE '%cong%' OR cat.slug LIKE '%hang-rao%')
-      )`);
-    } else if (category === 'nhom-kinh') {
-      where.push(`EXISTS (
-        SELECT 1 FROM categories cat
-        WHERE cat.name = c.category AND cat.content_type = 'project'
-        AND (cat.slug LIKE '%nhom%' OR cat.slug LIKE '%kinh%' OR cat.slug LIKE '%cua%' OR cat.slug LIKE '%vach%')
-      )`);
+    if (category === 'residential' || category === 'villa' || category === 'co-khi') {
+      where.push(`(c.category LIKE '%Villa%' OR c.category LIKE '%Nhà ở%' OR c.slug LIKE '%villa%' OR c.slug LIKE '%thanh-hoa%')`);
+    } else if (category === 'yacht' || category === 'du-thuyen' || category === 'marine') {
+      where.push(`(c.category LIKE '%Du Thuyền%' OR c.slug LIKE '%yacht%')`);
     } else {
-      where.push(`(c.category = ? OR EXISTS (
-        SELECT 1 FROM categories cat
-        WHERE cat.name = c.category AND cat.slug = ? AND cat.content_type = 'project'
-      ))`);
-      params.push(category, category);
+      where.push(`(c.category LIKE ? OR c.slug LIKE ?)`);
+      params.push(`%${category}%`, `%${category}%`);
     }
   }
 

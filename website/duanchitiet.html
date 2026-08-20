@@ -499,10 +499,55 @@ async function initDetailPage() {
   if (settings.logo_badge)    { ['logoBadge','footerLogoBadge'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = settings.logo_badge; }); }
   if (settings.company_short) { ['logoName','footerLogoName'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = settings.company_short; }); }
 
-  const slug = CMS.getSlugFromUrl();
+  const urlParams = new URLSearchParams(window.location.search);
+  const slug = urlParams.get('slug') || urlParams.get('id') || CMS.getSlugFromUrl();
   if (!slug) { showError(); return; }
 
-  const result = await CMS.getProject(slug);
+  let result = await CMS.getProject(slug);
+  
+  // Fallback to local projects.json if CMS API doesn't return
+  if (!result || !result.project) {
+    try {
+      const res = await fetch('data/projects.json');
+      const data = await res.json();
+      const p = data.projects.find(x => x.slug === slug || x.id === slug);
+      if (p) {
+        const vi = p.translations.vi;
+        const isYacht = p.sector === 'yacht-metalwork';
+        result = {
+          project: {
+            title: vi.title,
+            slug: p.slug,
+            excerpt: vi.description,
+            thumbnail: '/' + p.image,
+            category: isYacht ? 'Du Thuyền & Inox Hàng Hải' : 'Cơ Khí Kiến Trúc Villa',
+            client: vi.client,
+            project_value: vi.value,
+            location: vi.location,
+            year: '2025',
+            area: vi.scale,
+            duration: vi.timeline,
+            materials: vi.materials,
+            finishing: vi.finishing,
+            challenge: `Công trình đòi hỏi độ chính xác cao về dung sai, độ ăn khớp đa vật liệu và khả năng kháng chịu môi trường khắc nghiệt (${isYacht ? 'muối biển ăn mòn cao' : 'thời tiết nhiệt đới ẩm'}).`,
+            solution: `Ứng dụng gia công CNC laser fiber, chấn gấp chính xác, hàn TIG thẩm mỹ và quy trình xử lý bề mặt ${vi.finishing}.`,
+            result: `Dự án đã bàn giao hoàn thiện, nghiệm thu đạt 100% tiêu chuẩn kỹ thuật thiết kế và nhận được đánh giá cao từ chủ đầu tư.`,
+            highlights: vi.highlights
+          },
+          gallery: p.gallery.map(img => '/' + img),
+          related: data.projects.filter(x => x.slug !== slug && x.sector === p.sector).slice(0, 3).map(r => ({
+            title: r.translations.vi.title,
+            slug: r.slug,
+            thumbnail: '/' + r.image,
+            category: r.sector === 'yacht-metalwork' ? 'Du Thuyền' : 'Villa & Nhà Ở'
+          }))
+        };
+      }
+    } catch (e) {
+      console.warn('Fallback error:', e);
+    }
+  }
+
   if (!result || !result.project) { showError(); return; }
 
   renderDetail(result);
@@ -527,53 +572,63 @@ function renderDetail({ project: p, blocks, gallery, related }) {
 
   // Category
   document.getElementById('detailCat').innerHTML = `
-    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
-    ${CMS.esc(p.category || '')}`;
+    <i class="ri-shield-star-line" style="color: #C9A227; margin-right: 4px;"></i>
+    ${CMS.esc(p.category || 'Cơ Khí Sao Vàng')}`;
 
   document.getElementById('detailTitle').textContent = p.title;
   document.getElementById('detailExcerpt').textContent = p.excerpt || '';
 
   // Meta sidebar
   const metaRows = [
-    { label: 'Chủ đầu tư',  val: p.client,         cls: '' },
-    { label: 'Giá trị',     val: p.project_value,  cls: 'gold' },
-    { label: 'Địa điểm',   val: p.location,        cls: '' },
-    { label: 'Năm thực hiện',val: p.year,           cls: '' },
-    { label: 'Diện tích',  val: p.area,            cls: '' },
-    { label: 'Thời gian',  val: p.duration,        cls: '' },
-    { label: 'Danh mục',   val: p.category,        cls: '' },
+    { label: 'Chủ đầu tư / Đơn vị', val: p.client,         cls: '' },
+    { label: 'Địa điểm công trình', val: p.location,       cls: '' },
+    { label: 'Quy mô công trình',   val: p.area,           cls: '' },
+    { label: 'Chủng loại vật liệu', val: p.materials,      cls: '' },
+    { label: 'Tiêu chuẩn bề mặt',   val: p.finishing,      cls: '' },
+    { label: 'Thời gian thi công',  val: p.duration,       cls: '' },
+    { label: 'Tổng giá trị dự án',  val: p.project_value,  cls: 'gold' },
+    { label: 'Trạng thái dự án',    val: 'Đã nghiệm thu bàn giao', cls: '' },
   ].filter(r => r.val);
 
   document.getElementById('metaBody').innerHTML = metaRows.map(r => `
-    <div class="meta-row">
-      <span class="meta-row-label">${r.label}</span>
-      <span class="meta-row-val ${r.cls}">${CMS.esc(r.val)}</span>
+    <div class="meta-row" style="padding: 10px 0; border-bottom: 1px solid #F1F5F9; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; font-size: 13px;">
+      <span class="meta-row-label" style="color: #64748B; font-weight: 500; flex-shrink: 0;">${r.label}:</span>
+      <span class="meta-row-val ${r.cls}" style="color: ${r.cls === 'gold' ? '#C9A227' : '#0F172A'}; font-weight: 700; text-align: right;">${CMS.esc(r.val)}</span>
     </div>`).join('');
 
-  // Body blocks
+  // Body blocks / Highlights
   const bodyEl = document.getElementById('detailBody');
-  if (blocks && blocks.length) {
+  if (p.highlights && Array.isArray(p.highlights)) {
+    bodyEl.innerHTML = `
+      <div style="background: #F8FAFC; border-left: 4px solid #C9A227; padding: 20px; border-radius: 0 8px 8px 0; margin-bottom: 24px;">
+        <h3 style="font-family: var(--ff-head); font-size: 16px; font-weight: 800; color: #0F172A; margin-bottom: 12px;">ĐIỂM NỔI BẬT KỸ THUẬT &amp; CÔNG NGHỆ CHẾ TÁC</h3>
+        <ul style="margin: 0; padding-left: 20px; color: #475569; font-size: 14px; line-height: 1.8;">
+          ${p.highlights.map(h => `<li>${CMS.esc(h)}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+  } else if (blocks && blocks.length) {
     bodyEl.innerHTML = blocks.map(b => renderBlock(b)).join('');
   } else if (p.excerpt) {
-    bodyEl.innerHTML = `<p>${CMS.esc(p.excerpt)}</p>`;
+    bodyEl.innerHTML = `<p style="font-size: 15px; color: #475569; line-height: 1.8;">${CMS.esc(p.excerpt)}</p>`;
   }
 
   // Challenge / Solution / Result
   if (p.challenge || p.solution || p.result) {
     const csrEl = document.getElementById('csr');
     csrEl.innerHTML = [
-      p.challenge ? `<h2 class="detail-section-title">Thách Thức</h2><div class="detail-body">${CMS.esc(p.challenge)}</div>` : '',
-      p.solution  ? `<h2 class="detail-section-title">Giải Pháp</h2><div class="detail-body">${CMS.esc(p.solution)}</div>`  : '',
-      p.result    ? `<h2 class="detail-section-title">Kết Quả</h2><div class="detail-body">${CMS.esc(p.result)}</div>`     : '',
+      p.challenge ? `<h2 class="detail-section-title" style="font-family: var(--ff-head); font-size: 18px; font-weight: 800; color: #0F172A; margin-top: 24px;">Thách Thức Kỹ Thuật</h2><div class="detail-body" style="color: #475569; line-height: 1.7; margin-bottom: 16px;">${CMS.esc(p.challenge)}</div>` : '',
+      p.solution  ? `<h2 class="detail-section-title" style="font-family: var(--ff-head); font-size: 18px; font-weight: 800; color: #0F172A; margin-top: 24px;">Giải Pháp Của Sao Vàng</h2><div class="detail-body" style="color: #475569; line-height: 1.7; margin-bottom: 16px;">${CMS.esc(p.solution)}</div>`  : '',
+      p.result    ? `<h2 class="detail-section-title" style="font-family: var(--ff-head); font-size: 18px; font-weight: 800; color: #0F172A; margin-top: 24px;">Kết Quả Nghiệm Thu</h2><div class="detail-body" style="color: #475569; line-height: 1.7; margin-bottom: 16px;">${CMS.esc(p.result)}</div>`     : '',
     ].join('');
   }
 
   // Gallery
   if (gallery && gallery.length) {
     document.getElementById('gallerySection').style.display = 'block';
-    document.getElementById('galleryGrid').innerHTML = gallery.map(img => `
-      <div class="gallery-item" onclick="openLightbox('${CMS.imgUrl(img)}')">
-        <img decoding="async" src="${CMS.imgUrl(img)}" alt="${CMS.esc(p.title)}" loading="lazy" width="800" height="600">
+    document.getElementById('galleryGrid').innerHTML = gallery.map((img, idx) => `
+      <div class="gallery-item" onclick="openLightbox('${CMS.imgUrl(img)}')" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.06); cursor: pointer; aspect-ratio: 4/3; background: #0F172A;">
+        <img decoding="async" src="${CMS.imgUrl(img)}" alt="${CMS.esc(p.title)} - Ảnh ${idx + 1}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
       </div>`).join('');
   }
 
@@ -581,11 +636,13 @@ function renderDetail({ project: p, blocks, gallery, related }) {
   if (related && related.length) {
     document.getElementById('relatedSection').style.display = 'block';
     document.getElementById('relatedGrid').innerHTML = related.map(r => `
-      <a href="duanchitiet.html?slug=${r.slug || r.id}" class="related-card">
-        <img decoding="async" src="${CMS.imgUrl(r.thumbnail) || 'assets/images/project-villa.png'}" alt="${CMS.esc(r.title)}" loading="lazy" onerror="this.src='assets/images/project-villa.png'" width="800" height="600">
-        <div class="related-card-body">
-          <div class="related-card-cat">${CMS.esc(r.category || '')}</div>
-          <div class="related-card-title">${CMS.esc(r.title)}</div>
+      <a href="duanchitiet.html?slug=${r.slug || r.id}" class="related-card" style="text-decoration: none; border-radius: 8px; overflow: hidden; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column;">
+        <div style="aspect-ratio: 16/10; overflow: hidden; background: #0F172A;">
+          <img decoding="async" src="${CMS.imgUrl(r.thumbnail) || 'assets/images/project-villa.png'}" alt="${CMS.esc(r.title)}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="related-card-body" style="padding: 16px;">
+          <div class="related-card-cat" style="font-size: 10px; font-weight: 800; color: #C9A227; text-transform: uppercase; margin-bottom: 6px;">${CMS.esc(r.category || '')}</div>
+          <div class="related-card-title" style="font-family: var(--ff-head); font-size: 14.5px; font-weight: 800; color: #0F172A; line-height: 1.35;">${CMS.esc(r.title)}</div>
         </div>
       </a>`).join('');
   }

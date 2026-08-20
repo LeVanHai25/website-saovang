@@ -43,11 +43,10 @@
     const bar = document.getElementById('filterBar');
     if (!bar) return;
 
-    // Simplified to exactly 3 tabs matching the mockup screenshots
     const filterItems = [
-      { name: 'Tất cả', slug: 'all', icon: 'ri-grid-fill' },
-      { name: 'Cơ Khí', slug: 'co-khi', icon: 'ri-hammer-fill' },
-      { name: 'Nhôm Kính', slug: 'nhom-kinh', icon: 'ri-window-fill' }
+      { name: 'Tất Cả Dự Án (8)', slug: 'all', icon: 'ri-layout-grid-line' },
+      { name: '01 — Luxury Residential (4)', slug: 'residential', icon: 'ri-home-8-line' },
+      { name: '02 — Luxury Yacht (4)', slug: 'yacht', icon: 'ri-ship-line' }
     ];
 
     bar.innerHTML = filterItems.map(item => {
@@ -72,38 +71,66 @@
   /* ─── Project card HTML ─────────────────────────────────────── */
   function cardHTML(p, featured) {
     const img = p.thumbnail ? CMS.imgUrl(p.thumbnail) : 'assets/images/project-villa.png';
-    const cls = 'proj-item'; // All cards are uniform, no special featured class size to avoid clipping
-    const badgeColor = '#E2B13C'; // Warm gold/yellow category pill background
+    const cls = 'proj-item';
+    
+    // Parse gallery to count real photos
+    let photoCount = 1;
+    try {
+      if (p.gallery) {
+        const gal = typeof p.gallery === 'string' ? JSON.parse(p.gallery) : p.gallery;
+        if (Array.isArray(gal)) photoCount = gal.length;
+      }
+    } catch {}
 
-    return `<a href="duanchitiet.html?slug=${p.slug || p.id}" class="${cls}" data-slug="${p.slug || p.id}" data-reveal>
-      <div class="proj-img-wrap" style="position: relative; overflow: hidden; aspect-ratio: 16/10; width: 100%;">
-        <img src="${CMS.esc(img)}" alt="${CMS.esc(p.title)}" loading="lazy" onerror="this.src='assets/images/project-villa.png'" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);" />
-        <span class="proj-badge" style="position: absolute; top: 16px; left: 16px; background: ${badgeColor}; color: #fff; font-family: var(--ff-head); font-size: 10px; font-weight: 800; padding: 5px 12px; border-radius: 20px; text-transform: uppercase; z-index: 2; letter-spacing: 0.05em; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">${CMS.esc(p.category || 'Dự án')}</span>
-      </div>
-      <div class="proj-body" style="padding: 24px; display: flex; flex-direction: column; gap: 10px; background: var(--white); flex-grow: 1;">
-        <h3 class="proj-title" style="font-family: var(--ff-head); font-size: 16px; font-weight: 800; color: #9B1C1C; margin: 0; line-height: 1.35; text-transform: none; letter-spacing: normal;">${CMS.esc(p.title)}</h3>
-        <p class="proj-desc" style="font-size: 12.5px; color: #555; line-height: 1.5; font-weight: 300; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 38px;">${CMS.esc(p.excerpt || '')}</p>
+    const isYacht = (p.slug && p.slug.includes('yacht')) || (p.category && p.category.includes('Du Thuyền'));
+    const badgeText = isYacht ? 'Du Thuyền Cao Cấp' : 'Biệt Thự & Villa';
+
+    return `<div class="${cls}" data-slug="${p.slug || p.id}" data-reveal>
+      <div class="proj-img-wrap" style="position: relative; overflow: hidden; aspect-ratio: 16/10.5; width: 100%; background: #0F172A;">
+        <img src="${CMS.esc(img)}" alt="${CMS.esc(p.title)}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);" />
         
-        <div class="proj-specs" style="display: flex; flex-direction: column; gap: 8px; border-top: 1px dashed rgba(0,0,0,0.08); padding-top: 12px; margin-top: 4px;">
+        <span class="proj-badge" style="position: absolute; top: 14px; left: 14px; background: rgba(15, 23, 42, 0.85); color: #C9A227; font-family: var(--ff-head); font-size: 10px; font-weight: 800; padding: 5px 12px; border-radius: 4px; text-transform: uppercase; z-index: 2; letter-spacing: 0.08em; backdrop-filter: blur(6px); border: 1px solid rgba(201, 162, 39, 0.3);">${badgeText}</span>
+        
+        <span style="position: absolute; bottom: 12px; right: 12px; background: rgba(0, 0, 0, 0.75); color: #FFFFFF; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; backdrop-filter: blur(4px); z-index: 2; display: flex; align-items: center; gap: 4px;">
+          <i class="ri-camera-lens-line" style="color: #C9A227;"></i> ${photoCount} Ảnh thực tế
+        </span>
+      </div>
+      
+      <div class="proj-body" style="padding: 24px; display: flex; flex-direction: column; gap: 12px; background: #FFFFFF; flex-grow: 1;">
+        <div style="font-size: 12px; color: #64748B; display: flex; align-items: center; gap: 5px;">
+          <i class="ri-map-pin-2-line" style="color: #C9A227;"></i>
+          <span>${CMS.esc(p.location || 'Việt Nam')}</span>
+        </div>
+        
+        <h3 class="proj-title" style="font-family: var(--ff-head); font-size: 17px; font-weight: 800; color: #0F172A; margin: 0; line-height: 1.35;">
+          ${CMS.esc(p.title)}
+        </h3>
+        
+        <p class="proj-desc" style="font-size: 13px; color: #475569; line-height: 1.6; font-weight: 400; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; min-height: 42px;">
+          ${CMS.esc(p.excerpt || '')}
+        </p>
+        
+        <div class="proj-specs" style="display: flex; flex-direction: column; gap: 8px; border-top: 1px solid #F1F5F9; padding-top: 14px; margin-top: 4px;">
           <div class="proj-spec-row" style="display: flex; justify-content: space-between; align-items: center; font-size: 12.5px;">
-            <span style="color: #888; font-weight: 400;">Chủ đầu tư:</span>
-            <span style="color: #222; font-weight: 700; text-align: right;">${CMS.esc(p.client || 'Gia đình')}</span>
+            <span style="color: #64748B;">Chủ đầu tư:</span>
+            <span style="color: #0F172A; font-weight: 700; text-align: right;">${CMS.esc(p.client || 'Chủ đầu tư')}</span>
           </div>
           <div class="proj-spec-row" style="display: flex; justify-content: space-between; align-items: center; font-size: 12.5px;">
-            <span style="color: #888; font-weight: 400;">Giá trị:</span>
+            <span style="color: #64748B;">Giá trị hoàn thiện:</span>
             <span style="color: #C9A227; font-weight: 800; text-align: right;">${CMS.esc(p.project_value || 'Liên hệ')}</span>
           </div>
-          <div class="proj-spec-row" style="display: flex; justify-content: space-between; align-items: center; font-size: 12.5px;">
-            <span style="color: #888; font-weight: 400;">Năm:</span>
-            <span style="color: #222; font-weight: 600; text-align: right;">${CMS.esc(p.year || '2024')}</span>
-          </div>
-          <div class="proj-spec-row" style="display: flex; justify-content: space-between; align-items: center; font-size: 12.5px;">
-            <span style="color: #888; font-weight: 400;">Phạm vi:</span>
-            <span style="color: #222; font-weight: 600; text-align: right;">${CMS.esc(p.area || '—')}</span>
-          </div>
+        </div>
+
+        <div style="display: flex; gap: 8px; margin-top: 8px; padding-top: 12px; border-top: 1px solid #F1F5F9;">
+          <button type="button" class="btn-quick-view" onclick="SV.Projects.openModal('${p.slug || p.id}')" style="flex: 1; padding: 9px 12px; background: #F8FAFC; border: 1px solid #CBD5E1; border-radius: 6px; color: #0F172A; font-family: var(--ff-head); font-size: 11.5px; font-weight: 700; text-transform: uppercase; cursor: pointer; transition: all 0.2s ease;">
+            <i class="ri-eye-line"></i> Xem nhanh
+          </button>
+          <a href="duanchitiet.html?slug=${p.slug || p.id}" style="flex: 1; padding: 9px 12px; background: #0F172A; border: 1px solid #0F172A; border-radius: 6px; color: #C9A227; font-family: var(--ff-head); font-size: 11.5px; font-weight: 700; text-transform: uppercase; text-decoration: none; text-align: center; display: flex; align-items: center; justify-content: center; gap: 4px; transition: all 0.2s ease;">
+            Hồ sơ <i class="ri-arrow-right-line"></i>
+          </a>
         </div>
       </div>
-    </a>`;
+    </div>`;
   }
 
   /* ─── Load projects ─────────────────────────────────────────── */

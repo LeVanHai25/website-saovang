@@ -25,249 +25,586 @@
   },
   "projects": [
     {
-      "id": "sv-proj-villa-anvuong",
-      "sector": "residential-metalwork",
-      "system": "balustrade-railing",
-      "materials": [
-        "stainless-steel-304",
-        "tempered-glass"
-      ],
-      "image": "assets/images/projects/villa-an-vuong/hero.jpg",
-      "gallery": [
-        "assets/images/projects/villa-an-vuong/hero.jpg",
-        "assets/images/projects/villa-an-vuong/detail-01.jpg",
-        "assets/images/projects/villa-an-vuong/detail-02.jpg",
-        "assets/images/projects/villa-an-vuong/detail-03.jpg"
-      ],
-      "translations": {
-        "vi": {
-          "title": "Biệt Thự An Vượng Villa",
-          "description": "Gia công và lắp đặt hoàn thiện hệ lan can kính, lan can kim loại và các chi tiết cơ khí kiến trúc theo thiết kế biệt thự cao cấp.",
-          "location": "KĐT Nam Cường - Dương Nội, Hà Nội",
-          "scale": "Toàn bộ hệ lan can & chi tiết kim loại hoàn thiện biệt thự",
-          "status": "Hoàn thành & Bàn giao"
-        },
-        "en": {
-          "title": "An Vuong Luxury Villa",
-          "description": "Fabrication and installation of glass balustrades, metal railings, and architectural metalwork according to customized villa design.",
-          "location": "Hanoi, Vietnam",
-          "scale": "Complete balustrade system & finished metal details",
-          "status": "Completed"
-        }
-      }
-    },
-    {
-      "id": "sv-proj-villa-dothanh",
-      "sector": "residential-metalwork",
-      "system": "balustrade-railing",
-      "materials": [
-        "structural-steel",
-        "stainless-steel-304"
-      ],
-      "image": "assets/images/projects/villa-do-thanh/hero.jpg",
-      "gallery": [
-        "assets/images/projects/villa-do-thanh/hero.jpg",
-        "assets/images/projects/villa-do-thanh/detail-01.jpg",
-        "assets/images/projects/villa-do-thanh/detail-02.jpg"
-      ],
-      "translations": {
-        "vi": {
-          "title": "Biệt Thự Đô Thành Villa",
-          "description": "Triển khai kỹ thuật và thi công các hạng mục lan can ban công, hàng rào kim loại và tay vịn theo bản vẽ thiết kế.",
-          "location": "Việt Nam",
-          "scale": "Hệ lan can, cổng rào và kết cấu kim loại hoàn thiện",
-          "status": "Hoàn thành & Bàn giao"
-        },
-        "en": {
-          "title": "Do Thanh Residence Villa",
-          "description": "Engineering and execution of balcony railings, metal fencing, and handrails following architectural specifications.",
-          "location": "Vietnam",
-          "scale": "Balustrades, fencing, and architectural metalwork",
-          "status": "Completed"
-        }
-      }
-    },
-    {
-      "id": "sv-proj-villa-linhhue",
-      "sector": "residential-metalwork",
-      "system": "gate-fence",
-      "materials": [
-        "structural-steel",
-        "stainless-steel-304"
-      ],
-      "image": "assets/images/projects/villa-linh-hue/hero.jpg",
-      "gallery": [
-        "assets/images/projects/villa-linh-hue/hero.jpg",
-        "assets/images/projects/villa-linh-hue/detail-01.jpg",
-        "assets/images/projects/villa-linh-hue/detail-02.jpg"
-      ],
-      "translations": {
-        "vi": {
-          "title": "Biệt Thự Linh Huệ Villa",
-          "description": "Chế tác và lắp dựng hệ cổng biệt thự, lan can kim loại và hạng mục cơ khí hoàn thiện theo hồ sơ thiết kế.",
-          "location": "Việt Nam",
-          "scale": "Cổng chính biệt thự, hệ lan can và chi tiết kim loại",
-          "status": "Hoàn thành & Bàn giao"
-        },
-        "en": {
-          "title": "Linh Hue Luxury Villa",
-          "description": "Fabrication and erection of entrance gates, metal railings, and finishing metalwork according to engineering drawings.",
-          "location": "Vietnam",
-          "scale": "Main entrance gate, balustrades, and metal details",
-          "status": "Completed"
-        }
-      }
-    },
-    {
-      "id": "sv-proj-villa-thanhhoa",
-      "sector": "residential-metalwork",
-      "system": "custom-metal",
-      "materials": [
-        "structural-steel",
-        "stainless-steel-304",
-        "tempered-glass"
-      ],
-      "image": "assets/images/projects/villa-thanh-hoa/hero.jpg",
-      "gallery": [
-        "assets/images/projects/villa-thanh-hoa/hero.jpg",
-        "assets/images/projects/villa-thanh-hoa/detail-01.jpg"
-      ],
-      "translations": {
-        "vi": {
-          "title": "Công Trình Nhà Ở Cao Cấp Thanh Hóa",
-          "description": "Gia công kết cấu thép, hệ lan can và khung kim loại kiến trúc hoàn thiện đồng bộ tại công trình.",
-          "location": "Thanh Hóa, Việt Nam",
-          "scale": "Toàn bộ hệ cơ khí hoàn thiện nhà ở",
-          "status": "Hoàn thành & Bàn giao"
-        },
-        "en": {
-          "title": "Thanh Hoa Premium Residence",
-          "description": "Fabrication of structural steel frames, railings, and synchronized architectural metal finishes.",
-          "location": "Thanh Hoa, Vietnam",
-          "scale": "Complete residential metalwork package",
-          "status": "Completed"
-        }
-      }
-    },
-    {
       "id": "sv-proj-yacht-tulip",
+      "slug": "yacht-tulip",
       "sector": "yacht-metalwork",
       "system": "yacht-railing",
-      "materials": [
-        "stainless-steel-316",
-        "tempered-glass"
-      ],
+      "badge": "Du Thuyền 5 Sao",
       "image": "assets/images/projects/yacht-tulip/hero.jpg",
       "gallery": [
         "assets/images/projects/yacht-tulip/hero.jpg",
         "assets/images/projects/yacht-tulip/detail-01.jpg",
         "assets/images/projects/yacht-tulip/detail-02.jpg",
-        "assets/images/projects/yacht-tulip/detail-03.jpg"
+        "assets/images/projects/yacht-tulip/detail-03.jpg",
+        "assets/images/projects/yacht-tulip/detail-04.jpg",
+        "assets/images/projects/yacht-tulip/detail-05.jpg",
+        "assets/images/projects/yacht-tulip/detail-06.jpg",
+        "assets/images/projects/yacht-tulip/detail-07.webp",
+        "assets/images/projects/yacht-tulip/detail-08.webp",
+        "assets/images/projects/yacht-tulip/detail-09.webp",
+        "assets/images/projects/yacht-tulip/detail-10.jpg",
+        "assets/images/projects/yacht-tulip/detail-11.jpg",
+        "assets/images/projects/yacht-tulip/detail-12.jpg",
+        "assets/images/projects/yacht-tulip/detail-13.jpg",
+        "assets/images/projects/yacht-tulip/detail-14.jpg",
+        "assets/images/projects/yacht-tulip/detail-15.jpg",
+        "assets/images/projects/yacht-tulip/detail-16.jpg",
+        "assets/images/projects/yacht-tulip/detail-17.jpg",
+        "assets/images/projects/yacht-tulip/detail-18.jpg",
+        "assets/images/projects/yacht-tulip/detail-19.jpg",
+        "assets/images/projects/yacht-tulip/detail-20.jpg",
+        "assets/images/projects/yacht-tulip/detail-21.jpg",
+        "assets/images/projects/yacht-tulip/detail-22.jpg",
+        "assets/images/projects/yacht-tulip/detail-23.jpg",
+        "assets/images/projects/yacht-tulip/detail-24.jpg",
+        "assets/images/projects/yacht-tulip/detail-25.jpg",
+        "assets/images/projects/yacht-tulip/detail-26.webp"
       ],
+      "photoCount": 27,
       "translations": {
         "vi": {
-          "title": "Du Thuyền Tulip Cruise (5 Sao)",
-          "description": "Chế tác và lắp dựng toàn bộ hệ lan can inox hàng hải 316, lan can kính boong ngắm cảnh, hệ máng nước inox và chi tiết kim loại hoàn thiện du thuyền.",
-          "location": "Vịnh Hạ Long, Quảng Ninh",
-          "scale": "Toàn bộ hệ lan can inox 316, lan can kính mạn tàu & chi tiết inox boong",
-          "status": "Hoàn thành & Bàn giao"
+          "title": "Du Thuyền Nghỉ Dưỡng Tulip Cruise (5 Sao)",
+          "client": "Công ty Du thuyền Quốc tế Tulip Cruise",
+          "location": "Vịnh Hạ Long & Vịnh Lan Hạ, Quảng Ninh",
+          "scale": "Du thuyền nghỉ dưỡng 5 sao vỏ thép, 4 tầng boong (48 phòng nghỉ VIP)",
+          "categories": [
+            "Lan can Inox 316 hàng hải toàn bộ 4 tầng boong",
+            "Lan can kính mạn tàu & boong ngắm cảnh Sundeck 360 độ",
+            "Hệ thống máng thu thoát nước Inox 316 kín nước tuyệt đối",
+            "Hệ louver điều hòa, lam chắn gió buồng máy và nẹp chỉ trang trí"
+          ],
+          "materials": "100% Inox 316 & 316L Marine Grade, Kính dán an toàn 2 lớp 15.52mm, Bulông Inox 316",
+          "finishing": "Đánh bóng gương siêu mịn (Mirror Polish Ra < 0.2µm) & Xước Satin sang trọng",
+          "timeline": "90 ngày (Khảo sát lấy dưỡng tại vỏ tàu -> Chế tác xưởng -> Lắp dựng hoàn thiện)",
+          "value": "~2.4 Tỷ VNĐ",
+          "description": "Dự án du thuyền nghỉ dưỡng siêu sang chuẩn quốc tế tại Vịnh Hạ Long, đòi hỏi toàn bộ cấu kiện kim loại phải sử dụng chuẩn mác thép Inox 316 kháng ăn mòn muối biển khắt khe và độ hoàn thiện bóng gương không tì vết để phục vụ khách du lịch thượng lưu.",
+          "highlights": [
+            "Toàn bộ đường ống Inox 316 được uốn 3D bám sát 100% độ cong khí động học của thân vỏ tàu.",
+            "Xử lý thụ động hóa mối hàn (Passivation) ngăn chặn triệt để hiện tượng ăn mòn rỗ (pitting) trong môi trường biển mặn.",
+            "Hệ lan can kính vô cực boong Sundeck chịu tải trọng gió bão cấp cao và triệt tiêu rung chấn khi tàu hành trình."
+          ],
+          "status": "Đã hoàn thành & Bàn giao"
         },
         "en": {
-          "title": "Tulip Cruise 5-Star Luxury Yacht",
-          "description": "Fabrication and installation of marine-grade 316 stainless steel railings, sun deck glass balustrades, stainless drainage, and yacht metal fittings.",
-          "location": "Ha Long Bay, Vietnam",
-          "scale": "Complete 316 SS railing package & sun deck glass balustrades",
-          "status": "Completed"
+          "title": "Du Thuyền Nghỉ Dưỡng Tulip Cruise (5 Sao)",
+          "client": "Công ty Du thuyền Quốc tế Tulip Cruise",
+          "location": "Vịnh Hạ Long & Vịnh Lan Hạ, Quảng Ninh",
+          "scale": "Du thuyền nghỉ dưỡng 5 sao vỏ thép, 4 tầng boong (48 phòng nghỉ VIP)",
+          "categories": [
+            "Lan can Inox 316 hàng hải toàn bộ 4 tầng boong",
+            "Lan can kính mạn tàu & boong ngắm cảnh Sundeck 360 độ",
+            "Hệ thống máng thu thoát nước Inox 316 kín nước tuyệt đối",
+            "Hệ louver điều hòa, lam chắn gió buồng máy và nẹp chỉ trang trí"
+          ],
+          "materials": "100% Inox 316 & 316L Marine Grade, Kính dán an toàn 2 lớp 15.52mm, Bulông Inox 316",
+          "finishing": "Đánh bóng gương siêu mịn (Mirror Polish Ra < 0.2µm) & Xước Satin sang trọng",
+          "timeline": "90 ngày (Khảo sát lấy dưỡng tại vỏ tàu -> Chế tác xưởng -> Lắp dựng hoàn thiện)",
+          "value": "~2.4 Tỷ VNĐ",
+          "description": "Dự án du thuyền nghỉ dưỡng siêu sang chuẩn quốc tế tại Vịnh Hạ Long, đòi hỏi toàn bộ cấu kiện kim loại phải sử dụng chuẩn mác thép Inox 316 kháng ăn mòn muối biển khắt khe và độ hoàn thiện bóng gương không tì vết để phục vụ khách du lịch thượng lưu.",
+          "highlights": [
+            "Toàn bộ đường ống Inox 316 được uốn 3D bám sát 100% độ cong khí động học của thân vỏ tàu.",
+            "Xử lý thụ động hóa mối hàn (Passivation) ngăn chặn triệt để hiện tượng ăn mòn rỗ (pitting) trong môi trường biển mặn.",
+            "Hệ lan can kính vô cực boong Sundeck chịu tải trọng gió bão cấp cao và triệt tiêu rung chấn khi tàu hành trình."
+          ],
+          "status": "Completed & Handed over"
+        }
+      }
+    },
+    {
+      "id": "sv-proj-villa-anvuong",
+      "slug": "villa-an-vuong",
+      "sector": "residential-metalwork",
+      "system": "balustrade-railing",
+      "badge": "Biệt Thự Cao Cấp",
+      "image": "assets/images/projects/villa-an-vuong/hero.jpg",
+      "gallery": [
+        "assets/images/projects/villa-an-vuong/hero.jpg",
+        "assets/images/projects/villa-an-vuong/detail-01.jpg",
+        "assets/images/projects/villa-an-vuong/detail-02.jpg",
+        "assets/images/projects/villa-an-vuong/detail-03.jpg",
+        "assets/images/projects/villa-an-vuong/detail-04.jpg",
+        "assets/images/projects/villa-an-vuong/detail-05.jpg",
+        "assets/images/projects/villa-an-vuong/detail-06.jpg",
+        "assets/images/projects/villa-an-vuong/detail-07.jpg",
+        "assets/images/projects/villa-an-vuong/detail-08.jpg",
+        "assets/images/projects/villa-an-vuong/detail-09.jpg",
+        "assets/images/projects/villa-an-vuong/detail-10.jpg",
+        "assets/images/projects/villa-an-vuong/detail-11.jpg",
+        "assets/images/projects/villa-an-vuong/detail-12.jpg",
+        "assets/images/projects/villa-an-vuong/detail-13.jpg",
+        "assets/images/projects/villa-an-vuong/detail-14.jpg",
+        "assets/images/projects/villa-an-vuong/detail-15.jpg",
+        "assets/images/projects/villa-an-vuong/detail-16.png",
+        "assets/images/projects/villa-an-vuong/detail-17.png"
+      ],
+      "photoCount": 18,
+      "translations": {
+        "vi": {
+          "title": "Biệt Thự Cao Cấp An Vượng Villa",
+          "client": "Tư gia Chủ đầu tư (KĐT Nam Cường)",
+          "location": "Phân khu An Vượng Villa, KĐT Dương Nội, Hà Đông, Hà Nội",
+          "scale": "Biệt thự song lập 3 tầng + 1 tum (Diện tích sàn ~450m²)",
+          "categories": [
+            "Hệ lan can kính cường lực an toàn âm sàn toàn bộ ban công mặt tiền",
+            "Tay vịn Inox 304 xước mờ Hairline gia công uốn góc liền khối",
+            "Khung kim loại bảo vệ, lam trang trí giếng trời & sảnh đón",
+            "Chi tiết nẹp hoàn thiện liên kết đa vật liệu (kim loại - kính - đá)"
+          ],
+          "materials": "Inox 304 Architectural Grade, Kính dán an toàn 2 lớp 13.52mm Low-Iron siêu trong, Chân ngàm Inox đúc",
+          "finishing": "Xước mịn Hairline tinh tế, Sơn sấy nhiệt ngoài trời",
+          "timeline": "45 ngày (Lập Shop Drawing -> Chế tác -> Thi công hoàn thiện)",
+          "value": "~680 Triệu VNĐ",
+          "description": "Dự án biệt thự phong cách hiện đại tối giản (Minimalism), đòi hỏi hệ lan can ban công mở rộng tối đa tầm nhìn cảnh quan mà vẫn đảm bảo độ chịu lực, an toàn tuyệt đối và tính thẩm mỹ đồng nhất với kiến trúc tổng thể.",
+          "highlights": [
+            "Kỹ thuật ngàm kính âm sàn triệt tiêu hoàn toàn trụ đỡ lộ ra ngoài, tạo hiệu ứng kính tràn viền vô cực sang trọng.",
+            "Khe ngàm được chèn đệm cao su kỹ thuật EPDM chống rung lắc và chống nứt kính dưới áp lực gió tầng cao.",
+            "Tay vịn Inox xước Hairline đồng màu, mối ghép phẳng mịn không gờ mép."
+          ],
+          "status": "Đã hoàn thành & Bàn giao"
+        },
+        "en": {
+          "title": "Biệt Thự Cao Cấp An Vượng Villa",
+          "client": "Tư gia Chủ đầu tư (KĐT Nam Cường)",
+          "location": "Phân khu An Vượng Villa, KĐT Dương Nội, Hà Đông, Hà Nội",
+          "scale": "Biệt thự song lập 3 tầng + 1 tum (Diện tích sàn ~450m²)",
+          "categories": [
+            "Hệ lan can kính cường lực an toàn âm sàn toàn bộ ban công mặt tiền",
+            "Tay vịn Inox 304 xước mờ Hairline gia công uốn góc liền khối",
+            "Khung kim loại bảo vệ, lam trang trí giếng trời & sảnh đón",
+            "Chi tiết nẹp hoàn thiện liên kết đa vật liệu (kim loại - kính - đá)"
+          ],
+          "materials": "Inox 304 Architectural Grade, Kính dán an toàn 2 lớp 13.52mm Low-Iron siêu trong, Chân ngàm Inox đúc",
+          "finishing": "Xước mịn Hairline tinh tế, Sơn sấy nhiệt ngoài trời",
+          "timeline": "45 ngày (Lập Shop Drawing -> Chế tác -> Thi công hoàn thiện)",
+          "value": "~680 Triệu VNĐ",
+          "description": "Dự án biệt thự phong cách hiện đại tối giản (Minimalism), đòi hỏi hệ lan can ban công mở rộng tối đa tầm nhìn cảnh quan mà vẫn đảm bảo độ chịu lực, an toàn tuyệt đối và tính thẩm mỹ đồng nhất với kiến trúc tổng thể.",
+          "highlights": [
+            "Kỹ thuật ngàm kính âm sàn triệt tiêu hoàn toàn trụ đỡ lộ ra ngoài, tạo hiệu ứng kính tràn viền vô cực sang trọng.",
+            "Khe ngàm được chèn đệm cao su kỹ thuật EPDM chống rung lắc và chống nứt kính dưới áp lực gió tầng cao.",
+            "Tay vịn Inox xước Hairline đồng màu, mối ghép phẳng mịn không gờ mép."
+          ],
+          "status": "Completed & Handed over"
         }
       }
     },
     {
       "id": "sv-proj-yacht-azura",
+      "slug": "yacht-azura",
       "sector": "yacht-metalwork",
       "system": "yacht-railing",
-      "materials": [
-        "stainless-steel-316",
-        "tempered-glass"
-      ],
+      "badge": "Du Thuyền Nghỉ Dưỡng",
       "image": "assets/images/projects/yacht-azura/hero.jpg",
       "gallery": [
         "assets/images/projects/yacht-azura/hero.jpg",
         "assets/images/projects/yacht-azura/detail-01.jpg",
-        "assets/images/projects/yacht-azura/detail-02.jpg"
+        "assets/images/projects/yacht-azura/detail-02.jpg",
+        "assets/images/projects/yacht-azura/detail-03.jpg",
+        "assets/images/projects/yacht-azura/detail-04.jpg",
+        "assets/images/projects/yacht-azura/detail-05.webp",
+        "assets/images/projects/yacht-azura/detail-06.png",
+        "assets/images/projects/yacht-azura/detail-07.png",
+        "assets/images/projects/yacht-azura/detail-08.png",
+        "assets/images/projects/yacht-azura/detail-09.png",
+        "assets/images/projects/yacht-azura/detail-10.png",
+        "assets/images/projects/yacht-azura/detail-11.png",
+        "assets/images/projects/yacht-azura/detail-12.png"
       ],
+      "photoCount": 13,
       "translations": {
         "vi": {
-          "title": "Du Thuyền Azura Cruise",
-          "description": "Triển khai kỹ thuật và gia công hệ lan can inox 316, lan can kính mạn tàu, hệ louver điều hòa và máng thoát nước inox chống ăn mòn biển.",
-          "location": "Hạ Long, Quảng Ninh",
-          "scale": "Hệ lan can inox 316 & chi tiết cơ khí hoàn thiện du thuyền",
-          "status": "Hoàn thành & Bàn giao"
+          "title": "Du Thuyền Nghỉ Dưỡng Azura Cruise",
+          "client": "Đơn vị Quản lý Khai thác Du thuyền Azura",
+          "location": "Cảng Tuần Châu / Vịnh Hạ Long, Quảng Ninh",
+          "scale": "Du thuyền tham quan & nghỉ dưỡng cao cấp 3 tầng",
+          "categories": [
+            "Lan can mạn tàu Inox 316 đánh bóng gương cao cấp",
+            "Hệ lan can vách kính boong trên và khu vực mũi tàu",
+            "Cụm Louver kỹ thuật thoát nhiệt hệ thống điều hòa trung tâm",
+            "Máng xối Inox và cầu thang leo boong kỹ thuật"
+          ],
+          "materials": "Inox 316 Marine Grade, Kính cường lực an toàn 12mm, Phụ kiện Inox 316",
+          "finishing": "Đánh bóng gương (Mirror Polish) & Hoàn thiện Satin mờ",
+          "timeline": "60 ngày",
+          "value": "~1.6 Tỷ VNĐ",
+          "description": "Hạng mục cơ khí hoàn thiện du thuyền Azura Cruise tập trung vào hệ thống lan can và vách kính mở rộng tối đa tầm nhìn cho du khách, đồng thời hệ thống louver buồng máy vận hành thông gió tối ưu chống đọng muối.",
+          "highlights": [
+            "Chân ngàm kính cắt CNC từ phôi Inox 316 nguyên khối chịu lực va đập của sóng gió cấp cao.",
+            "Các cụm module được chia nhỏ thông minh, lắp ghép nhanh chóng tại bến tàu mà không ảnh hưởng đến tiến độ đóng tàu.",
+            "Bề mặt Inox 316 xử lý bóng gương hoàn hảo, tăng vẻ tráng lệ khi phản chiếu ánh hoàng hôn trên vịnh."
+          ],
+          "status": "Đã hoàn thành & Bàn giao"
         },
         "en": {
-          "title": "Azura Cruise Luxury Yacht",
-          "description": "Engineering and fabrication of 316 stainless steel railings, shipside glass balustrades, AC louvers, and corrosion-resistant marine drainage.",
-          "location": "Ha Long Bay, Vietnam",
-          "scale": "316 SS railings and marine finishing metalwork",
-          "status": "Completed"
+          "title": "Du Thuyền Nghỉ Dưỡng Azura Cruise",
+          "client": "Đơn vị Quản lý Khai thác Du thuyền Azura",
+          "location": "Cảng Tuần Châu / Vịnh Hạ Long, Quảng Ninh",
+          "scale": "Du thuyền tham quan & nghỉ dưỡng cao cấp 3 tầng",
+          "categories": [
+            "Lan can mạn tàu Inox 316 đánh bóng gương cao cấp",
+            "Hệ lan can vách kính boong trên và khu vực mũi tàu",
+            "Cụm Louver kỹ thuật thoát nhiệt hệ thống điều hòa trung tâm",
+            "Máng xối Inox và cầu thang leo boong kỹ thuật"
+          ],
+          "materials": "Inox 316 Marine Grade, Kính cường lực an toàn 12mm, Phụ kiện Inox 316",
+          "finishing": "Đánh bóng gương (Mirror Polish) & Hoàn thiện Satin mờ",
+          "timeline": "60 ngày",
+          "value": "~1.6 Tỷ VNĐ",
+          "description": "Hạng mục cơ khí hoàn thiện du thuyền Azura Cruise tập trung vào hệ thống lan can và vách kính mở rộng tối đa tầm nhìn cho du khách, đồng thời hệ thống louver buồng máy vận hành thông gió tối ưu chống đọng muối.",
+          "highlights": [
+            "Chân ngàm kính cắt CNC từ phôi Inox 316 nguyên khối chịu lực va đập của sóng gió cấp cao.",
+            "Các cụm module được chia nhỏ thông minh, lắp ghép nhanh chóng tại bến tàu mà không ảnh hưởng đến tiến độ đóng tàu.",
+            "Bề mặt Inox 316 xử lý bóng gương hoàn hảo, tăng vẻ tráng lệ khi phản chiếu ánh hoàng hôn trên vịnh."
+          ],
+          "status": "Completed & Handed over"
+        }
+      }
+    },
+    {
+      "id": "sv-proj-villa-dothanh",
+      "slug": "villa-do-thanh",
+      "sector": "residential-metalwork",
+      "system": "staircase-handrail",
+      "badge": "Biệt Thự Tư Gia",
+      "image": "assets/images/projects/villa-do-thanh/hero.jpg",
+      "gallery": [
+        "assets/images/projects/villa-do-thanh/hero.jpg",
+        "assets/images/projects/villa-do-thanh/detail-01.jpg",
+        "assets/images/projects/villa-do-thanh/detail-02.jpg",
+        "assets/images/projects/villa-do-thanh/detail-03.jpg",
+        "assets/images/projects/villa-do-thanh/detail-04.jpg",
+        "assets/images/projects/villa-do-thanh/detail-05.jpg",
+        "assets/images/projects/villa-do-thanh/detail-06.jpg",
+        "assets/images/projects/villa-do-thanh/detail-07.jpg",
+        "assets/images/projects/villa-do-thanh/detail-08.jpg",
+        "assets/images/projects/villa-do-thanh/detail-09.jpg",
+        "assets/images/projects/villa-do-thanh/detail-10.jpg",
+        "assets/images/projects/villa-do-thanh/detail-11.jpg",
+        "assets/images/projects/villa-do-thanh/detail-12.jpg",
+        "assets/images/projects/villa-do-thanh/detail-13.jpg",
+        "assets/images/projects/villa-do-thanh/detail-14.jpg"
+      ],
+      "photoCount": 15,
+      "translations": {
+        "vi": {
+          "title": "Biệt Thự Đô Thành Villa",
+          "client": "Tư gia Chủ đầu tư cao cấp",
+          "location": "Khu Biệt thự Đô Thành, Việt Nam",
+          "scale": "Biệt thự đơn lập sân vườn (Diện tích sàn ~600m²)",
+          "categories": [
+            "Cầu thang kết cấu thép bản dày kết hợp tay vịn kim loại chế tác",
+            "Hệ lan can ban công thép định hình sơn hoàn thiện cao cấp",
+            "Hàng rào kim loại bảo vệ khuôn viên đồng bộ phong cách kiến trúc",
+            "Khung trang trí kim loại khu vực logia và hiên sau"
+          ],
+          "materials": "Thép kết cấu SS400, Inox 304, Hệ sơn Epoxy giàu kẽm + Sơn phủ PU chống thời tiết",
+          "finishing": "Sơn hoàn thiện PU 2 thành phần ngoài trời, Mối hàn xử lý phẳng mịn",
+          "timeline": "60 ngày",
+          "value": "~850 Triệu VNĐ",
+          "description": "Tổ hợp cơ khí kiến trúc hoàn thiện từ nội thất đến ngoại thất cho biệt thự, yêu cầu cao về độ cứng vững của kết cấu xương thang chịu lực và độ phẳng mịn của các mối hàn nối kim loại.",
+          "highlights": [
+            "Kết cấu dầm thép cầu thang được tính toán ứng suất chính xác, triệt tiêu độ rung khi di chuyển.",
+            "Toàn bộ mối ghép thép được mài phẳng và xử lý bề mặt trước khi sơn, tạo bề mặt nhẵn bóng không vết nối.",
+            "Hàng rào thép hộp mạ kẽm sơn phủ 4 lớp bền màu trên 10 năm."
+          ],
+          "status": "Đã hoàn thành & Bàn giao"
+        },
+        "en": {
+          "title": "Biệt Thự Đô Thành Villa",
+          "client": "Tư gia Chủ đầu tư cao cấp",
+          "location": "Khu Biệt thự Đô Thành, Việt Nam",
+          "scale": "Biệt thự đơn lập sân vườn (Diện tích sàn ~600m²)",
+          "categories": [
+            "Cầu thang kết cấu thép bản dày kết hợp tay vịn kim loại chế tác",
+            "Hệ lan can ban công thép định hình sơn hoàn thiện cao cấp",
+            "Hàng rào kim loại bảo vệ khuôn viên đồng bộ phong cách kiến trúc",
+            "Khung trang trí kim loại khu vực logia và hiên sau"
+          ],
+          "materials": "Thép kết cấu SS400, Inox 304, Hệ sơn Epoxy giàu kẽm + Sơn phủ PU chống thời tiết",
+          "finishing": "Sơn hoàn thiện PU 2 thành phần ngoài trời, Mối hàn xử lý phẳng mịn",
+          "timeline": "60 ngày",
+          "value": "~850 Triệu VNĐ",
+          "description": "Tổ hợp cơ khí kiến trúc hoàn thiện từ nội thất đến ngoại thất cho biệt thự, yêu cầu cao về độ cứng vững của kết cấu xương thang chịu lực và độ phẳng mịn của các mối hàn nối kim loại.",
+          "highlights": [
+            "Kết cấu dầm thép cầu thang được tính toán ứng suất chính xác, triệt tiêu độ rung khi di chuyển.",
+            "Toàn bộ mối ghép thép được mài phẳng và xử lý bề mặt trước khi sơn, tạo bề mặt nhẵn bóng không vết nối.",
+            "Hàng rào thép hộp mạ kẽm sơn phủ 4 lớp bền màu trên 10 năm."
+          ],
+          "status": "Completed & Handed over"
         }
       }
     },
     {
       "id": "sv-proj-yacht-calista",
+      "slug": "yacht-calista",
       "sector": "yacht-metalwork",
       "system": "yacht-louver",
-      "materials": [
-        "stainless-steel-316"
-      ],
+      "badge": "Du Thuyền Boutique",
       "image": "assets/images/projects/yacht-calista/hero.jpg",
       "gallery": [
         "assets/images/projects/yacht-calista/hero.jpg",
-        "assets/images/projects/yacht-calista/detail-01.jpg"
+        "assets/images/projects/yacht-calista/detail-01.jpg",
+        "assets/images/projects/yacht-calista/detail-02.webp",
+        "assets/images/projects/yacht-calista/detail-03.jpg",
+        "assets/images/projects/yacht-calista/detail-04.jpg",
+        "assets/images/projects/yacht-calista/detail-05.webp",
+        "assets/images/projects/yacht-calista/detail-06.webp"
       ],
+      "photoCount": 7,
       "translations": {
         "vi": {
           "title": "Du Thuyền Calista Cruise",
-          "description": "Gia công hệ lan can inox du thuyền, máng nước inox, louver điều hòa và các hạng mục cơ khí hoàn thiện theo thiết kế du thuyền.",
-          "location": "Quảng Ninh, Việt Nam",
-          "scale": "Hạng mục cơ khí hoàn thiện du thuyền",
-          "status": "Hoàn thành & Bàn giao"
+          "client": "Calista Cruises Vietnam",
+          "location": "Vịnh Hạ Long, Tỉnh Quảng Ninh",
+          "scale": "Du thuyền du lịch boutique sang trọng",
+          "categories": [
+            "Hệ louver thông gió và lấy khí tươi điều hòa buồng máy chống tạt nước",
+            "Hệ thống máng thoát nước boong Inox gia công uốn theo độ dốc thoát nước",
+            "Tay vịn Inox boong tàu và khu vực nhà hàng ngoài trời",
+            "Nẹp chỉ kim loại ốp trang trí ngoại thất cabin"
+          ],
+          "materials": "Inox 316 & 316L Marine Grade chuyên dụng",
+          "finishing": "Satin Hairline & Đánh bóng gương",
+          "timeline": "45 ngày",
+          "value": "~1.1 Tỷ VNĐ",
+          "description": "Tập trung vào các chi tiết cơ khí kỹ thuật chuyên sâu của du thuyền Calista Cruise, nơi xử lý thoát nước và đối lưu khí buồng máy đòi hỏi độ chính xác tuyệt đối theo đường cong thân tàu.",
+          "highlights": [
+            "Cấu tạo louver khí động học 2 lớp: ngăn 99% tia nước biển tạt vào nhưng vẫn đảm bảo lưu lượng gió làm mát máy phát điện.",
+            "Đường hàn TIG vi sinh phẳng nhẵn bên trong lòng máng nước giúp nước thoát nhanh, không đọng cặn bẩn.",
+            "Vật tư 100% Inox 316L chống rỗ bề mặt trong môi trường biển nhiệt đới."
+          ],
+          "status": "Đã hoàn thành & Bàn giao"
         },
         "en": {
-          "title": "Calista Cruise Luxury Yacht",
-          "description": "Fabrication of yacht stainless steel railings, stainless gutters, AC louvers, and customized marine metal details.",
-          "location": "Vietnam",
-          "scale": "Complete yacht metalwork and finishing package",
-          "status": "Completed"
+          "title": "Du Thuyền Calista Cruise",
+          "client": "Calista Cruises Vietnam",
+          "location": "Vịnh Hạ Long, Tỉnh Quảng Ninh",
+          "scale": "Du thuyền du lịch boutique sang trọng",
+          "categories": [
+            "Hệ louver thông gió và lấy khí tươi điều hòa buồng máy chống tạt nước",
+            "Hệ thống máng thoát nước boong Inox gia công uốn theo độ dốc thoát nước",
+            "Tay vịn Inox boong tàu và khu vực nhà hàng ngoài trời",
+            "Nẹp chỉ kim loại ốp trang trí ngoại thất cabin"
+          ],
+          "materials": "Inox 316 & 316L Marine Grade chuyên dụng",
+          "finishing": "Satin Hairline & Đánh bóng gương",
+          "timeline": "45 ngày",
+          "value": "~1.1 Tỷ VNĐ",
+          "description": "Tập trung vào các chi tiết cơ khí kỹ thuật chuyên sâu của du thuyền Calista Cruise, nơi xử lý thoát nước và đối lưu khí buồng máy đòi hỏi độ chính xác tuyệt đối theo đường cong thân tàu.",
+          "highlights": [
+            "Cấu tạo louver khí động học 2 lớp: ngăn 99% tia nước biển tạt vào nhưng vẫn đảm bảo lưu lượng gió làm mát máy phát điện.",
+            "Đường hàn TIG vi sinh phẳng nhẵn bên trong lòng máng nước giúp nước thoát nhanh, không đọng cặn bẩn.",
+            "Vật tư 100% Inox 316L chống rỗ bề mặt trong môi trường biển nhiệt đới."
+          ],
+          "status": "Completed & Handed over"
+        }
+      }
+    },
+    {
+      "id": "sv-proj-villa-linhhue",
+      "slug": "villa-linh-hue",
+      "sector": "residential-metalwork",
+      "system": "gate-fence",
+      "badge": "Biệt Thự Tân Cổ Điển",
+      "image": "assets/images/projects/villa-linh-hue/hero.jpg",
+      "gallery": [
+        "assets/images/projects/villa-linh-hue/hero.jpg",
+        "assets/images/projects/villa-linh-hue/detail-01.jpg",
+        "assets/images/projects/villa-linh-hue/detail-02.jpg",
+        "assets/images/projects/villa-linh-hue/detail-03.jpg",
+        "assets/images/projects/villa-linh-hue/detail-04.jpg",
+        "assets/images/projects/villa-linh-hue/detail-05.jpg",
+        "assets/images/projects/villa-linh-hue/detail-06.jpg",
+        "assets/images/projects/villa-linh-hue/detail-07.jpg",
+        "assets/images/projects/villa-linh-hue/detail-08.jpg",
+        "assets/images/projects/villa-linh-hue/detail-09.jpg",
+        "assets/images/projects/villa-linh-hue/detail-10.jpg",
+        "assets/images/projects/villa-linh-hue/detail-11.jpg",
+        "assets/images/projects/villa-linh-hue/detail-12.jpg",
+        "assets/images/projects/villa-linh-hue/detail-13.jpg",
+        "assets/images/projects/villa-linh-hue/detail-14.jpg",
+        "assets/images/projects/villa-linh-hue/detail-15.jpg"
+      ],
+      "photoCount": 16,
+      "translations": {
+        "vi": {
+          "title": "Biệt Thự Linh Huệ Villa",
+          "client": "Gia đình Anh/Chị Linh Huệ",
+          "location": "Khu biệt thự cao cấp, Việt Nam",
+          "scale": "Biệt thự lâu đài tân cổ điển (Diện tích khuôn viên ~800m²)",
+          "categories": [
+            "Cổng chính biệt thự bằng thép & inox kết cấu mỹ thuật mạ màu cao cấp",
+            "Hệ thống bản lề chịu tải lớn tích hợp motor cổng tự động âm sàn",
+            "Lan can ban công uốn lượn phong cách tân cổ điển",
+            "Hàng rào kim loại bao quanh khuôn viên và cổng phụ"
+          ],
+          "materials": "Thép rèn đặc uốn mỹ thuật, Khung chịu lực Inox/Thép bản dày, Sơn bảo vệ 4 lớp",
+          "finishing": "Sơn giả cổ đồng cao cấp phủ bóng bảo vệ ngoài trời",
+          "timeline": "50 ngày",
+          "value": "~920 Triệu VNĐ",
+          "description": "Cổng chính và hàng rào đóng vai trò là điểm nhấn nhận diện thương quyền của toàn bộ công trình, đòi hỏi kỹ thuật uốn uốn cong kim loại chính xác theo bản vẽ phối cảnh của Kiến trúc sư.",
+          "highlights": [
+            "Cổng nặng hơn 1 tấn nhưng vận hành đóng mở êm ái nhờ hệ bản lề cơ khí gia công CNC chính xác.",
+            "Lớp sơn phủ chống ngả màu và chống rỉ sét đạt độ bền màu trên 10 năm trước thời tiết khắc nghiệt.",
+            "Họa tiết kim loại được đúc và uốn thủ công tinh xảo, tỷ lệ cân đối hoàn hảo."
+          ],
+          "status": "Đã hoàn thành & Bàn giao"
+        },
+        "en": {
+          "title": "Biệt Thự Linh Huệ Villa",
+          "client": "Gia đình Anh/Chị Linh Huệ",
+          "location": "Khu biệt thự cao cấp, Việt Nam",
+          "scale": "Biệt thự lâu đài tân cổ điển (Diện tích khuôn viên ~800m²)",
+          "categories": [
+            "Cổng chính biệt thự bằng thép & inox kết cấu mỹ thuật mạ màu cao cấp",
+            "Hệ thống bản lề chịu tải lớn tích hợp motor cổng tự động âm sàn",
+            "Lan can ban công uốn lượn phong cách tân cổ điển",
+            "Hàng rào kim loại bao quanh khuôn viên và cổng phụ"
+          ],
+          "materials": "Thép rèn đặc uốn mỹ thuật, Khung chịu lực Inox/Thép bản dày, Sơn bảo vệ 4 lớp",
+          "finishing": "Sơn giả cổ đồng cao cấp phủ bóng bảo vệ ngoài trời",
+          "timeline": "50 ngày",
+          "value": "~920 Triệu VNĐ",
+          "description": "Cổng chính và hàng rào đóng vai trò là điểm nhấn nhận diện thương quyền của toàn bộ công trình, đòi hỏi kỹ thuật uốn uốn cong kim loại chính xác theo bản vẽ phối cảnh của Kiến trúc sư.",
+          "highlights": [
+            "Cổng nặng hơn 1 tấn nhưng vận hành đóng mở êm ái nhờ hệ bản lề cơ khí gia công CNC chính xác.",
+            "Lớp sơn phủ chống ngả màu và chống rỉ sét đạt độ bền màu trên 10 năm trước thời tiết khắc nghiệt.",
+            "Họa tiết kim loại được đúc và uốn thủ công tinh xảo, tỷ lệ cân đối hoàn hảo."
+          ],
+          "status": "Completed & Handed over"
         }
       }
     },
     {
       "id": "sv-proj-yacht-leona",
+      "slug": "yacht-leona",
       "sector": "yacht-metalwork",
       "system": "yacht-railing",
-      "materials": [
-        "stainless-steel-316",
-        "tempered-glass"
-      ],
-      "image": "assets/images/projects/yacht-leona/hero.jpg",
+      "badge": "Du Thuyền Tham Quan",
+      "image": "assets/images/projects/yacht-leona/hero.webp",
       "gallery": [
-        "assets/images/projects/yacht-leona/hero.jpg",
-        "assets/images/projects/yacht-leona/detail-01.jpg"
+        "assets/images/projects/yacht-leona/hero.webp",
+        "assets/images/projects/yacht-leona/detail-01.jpg",
+        "assets/images/projects/yacht-leona/detail-02.png",
+        "assets/images/projects/yacht-leona/detail-03.png",
+        "assets/images/projects/yacht-leona/detail-04.png",
+        "assets/images/projects/yacht-leona/detail-05.png",
+        "assets/images/projects/yacht-leona/detail-06.png"
       ],
+      "photoCount": 7,
       "translations": {
         "vi": {
           "title": "Du Thuyền Leona Cruise Hạ Long",
-          "description": "Sản xuất và lắp đặt hệ lan can inox 316, lan can kính boong tàu và các kết cấu kim loại hoàn thiện trên du thuyền tham quan cao cấp.",
-          "location": "Vịnh Hạ Long, Quảng Ninh",
-          "scale": "Toàn bộ hệ lan can và kết cấu inox du thuyền",
-          "status": "Hoàn thành & Bàn giao"
+          "client": "Leona Cruise Group",
+          "location": "Cảng tàu khách Quốc tế Hạ Long, Quảng Ninh",
+          "scale": "Du thuyền tham quan trong ngày (Day Cruise) chuẩn VIP",
+          "categories": [
+            "Lan can Inox 316 boong ngắm cảnh tầng 2 và tầng 3",
+            "Vách kính chắn gió phía trước mũi tàu",
+            "Khung cửa Inox và tay vịn hành lang du khách",
+            "Máng nước Inox và phụ kiện liên kết boong"
+          ],
+          "materials": "Inox 316 Marine Grade, Kính dán an toàn 2 lớp, Phụ kiện Inox 316",
+          "finishing": "Đánh bóng gương (Mirror Polish)",
+          "timeline": "40 ngày",
+          "value": "~950 Triệu VNĐ",
+          "description": "Phục vụ lượng lớn khách du lịch mỗi ngày, yêu cầu hệ lan can có độ bền cơ học cao, tay vịn thoải mái và thẩm mỹ sang trọng, dễ dàng lau chùi vệ sinh trong suốt quá trình vận hành tour.",
+          "highlights": [
+            "Bề mặt Inox được đánh bóng gương cao cấp, hạn chế tối đa bám dấu vân tay và bụi bẩn.",
+            "Kết cấu chân cột lan can bắt bulông âm sàn Inox 316 gia cường bên dưới boong tàu, đảm bảo an toàn tuyệt đối khi đông người cùng tựa ngắm cảnh.",
+            "Khung kính chắn gió mũi tàu chịu áp lực gió biển vận tốc cao khi tàu chạy nhanh."
+          ],
+          "status": "Đã hoàn thành & Bàn giao"
         },
         "en": {
-          "title": "Leona Cruise Ha Long",
-          "description": "Manufacturing and installation of 316 stainless steel railings, deck glass balustrades, and finishing metal structures on luxury day cruise.",
-          "location": "Ha Long Bay, Vietnam",
-          "scale": "Full yacht railings and stainless steel structures",
-          "status": "Completed"
+          "title": "Du Thuyền Leona Cruise Hạ Long",
+          "client": "Leona Cruise Group",
+          "location": "Cảng tàu khách Quốc tế Hạ Long, Quảng Ninh",
+          "scale": "Du thuyền tham quan trong ngày (Day Cruise) chuẩn VIP",
+          "categories": [
+            "Lan can Inox 316 boong ngắm cảnh tầng 2 và tầng 3",
+            "Vách kính chắn gió phía trước mũi tàu",
+            "Khung cửa Inox và tay vịn hành lang du khách",
+            "Máng nước Inox và phụ kiện liên kết boong"
+          ],
+          "materials": "Inox 316 Marine Grade, Kính dán an toàn 2 lớp, Phụ kiện Inox 316",
+          "finishing": "Đánh bóng gương (Mirror Polish)",
+          "timeline": "40 ngày",
+          "value": "~950 Triệu VNĐ",
+          "description": "Phục vụ lượng lớn khách du lịch mỗi ngày, yêu cầu hệ lan can có độ bền cơ học cao, tay vịn thoải mái và thẩm mỹ sang trọng, dễ dàng lau chùi vệ sinh trong suốt quá trình vận hành tour.",
+          "highlights": [
+            "Bề mặt Inox được đánh bóng gương cao cấp, hạn chế tối đa bám dấu vân tay và bụi bẩn.",
+            "Kết cấu chân cột lan can bắt bulông âm sàn Inox 316 gia cường bên dưới boong tàu, đảm bảo an toàn tuyệt đối khi đông người cùng tựa ngắm cảnh.",
+            "Khung kính chắn gió mũi tàu chịu áp lực gió biển vận tốc cao khi tàu chạy nhanh."
+          ],
+          "status": "Completed & Handed over"
+        }
+      }
+    },
+    {
+      "id": "sv-proj-villa-thanhhoa",
+      "slug": "villa-thanh-hoa",
+      "sector": "residential-metalwork",
+      "system": "custom-metal",
+      "badge": "Nhà Ở Cao Cấp",
+      "image": "assets/images/projects/villa-thanh-hoa/hero.jpg",
+      "gallery": [
+        "assets/images/projects/villa-thanh-hoa/hero.jpg",
+        "assets/images/projects/villa-thanh-hoa/detail-01.jpg",
+        "assets/images/projects/villa-thanh-hoa/detail-02.jpg",
+        "assets/images/projects/villa-thanh-hoa/detail-03.jpg",
+        "assets/images/projects/villa-thanh-hoa/detail-04.jpg",
+        "assets/images/projects/villa-thanh-hoa/detail-05.jpg",
+        "assets/images/projects/villa-thanh-hoa/detail-06.jpg",
+        "assets/images/projects/villa-thanh-hoa/detail-07.jpg",
+        "assets/images/projects/villa-thanh-hoa/detail-08.jpg"
+      ],
+      "photoCount": 9,
+      "translations": {
+        "vi": {
+          "title": "Công Trình Nhà Ở Cao Cấp Thanh Hóa",
+          "client": "Chủ đầu tư tư nhân",
+          "location": "TP. Thanh Hóa, Tỉnh Thanh Hóa",
+          "scale": "Nhà phố biệt thự 4 tầng kết hợp kinh doanh cao cấp",
+          "categories": [
+            "Mái kính canopy sảnh chính kết cấu khung thép treo chịu lực",
+            "Hệ lan can ban công kính kết hợp tay vịn kim loại",
+            "Khung thép trang trí giếng trời lấy sáng tự nhiên",
+            "Cửa cổng và vách ngăn kim loại theo thiết kế"
+          ],
+          "materials": "Thép hình I/H kết cấu, Kính cường lực 15mm, Phụ kiện Spider Inox 304, Sơn Epoxy",
+          "finishing": "Sơn tĩnh điện & Sơn PU 2 thành phần chống gỉ",
+          "timeline": "35 ngày",
+          "value": "~550 Triệu VNĐ",
+          "description": "Hạng mục mái sảnh kính vươn dài tạo điểm nhấn kiến trúc bề thế cho mặt tiền công trình, tích hợp hệ thống máng xối gom nước mưa âm kín đáo và hệ lan can kính thanh thoát.",
+          "highlights": [
+            "Hệ ty treo chịu lực mái sảnh tính toán chịu tải trọng gió bão vùng ven biển miền Trung.",
+            "Mối nối kính và khung thép được xử lý silicon kết cấu chống thấm nước tuyệt đối.",
+            "Hệ khung sơn tĩnh điện chống trầy xước và bền bỉ theo thời gian."
+          ],
+          "status": "Đã hoàn thành & Bàn giao"
+        },
+        "en": {
+          "title": "Công Trình Nhà Ở Cao Cấp Thanh Hóa",
+          "client": "Chủ đầu tư tư nhân",
+          "location": "TP. Thanh Hóa, Tỉnh Thanh Hóa",
+          "scale": "Nhà phố biệt thự 4 tầng kết hợp kinh doanh cao cấp",
+          "categories": [
+            "Mái kính canopy sảnh chính kết cấu khung thép treo chịu lực",
+            "Hệ lan can ban công kính kết hợp tay vịn kim loại",
+            "Khung thép trang trí giếng trời lấy sáng tự nhiên",
+            "Cửa cổng và vách ngăn kim loại theo thiết kế"
+          ],
+          "materials": "Thép hình I/H kết cấu, Kính cường lực 15mm, Phụ kiện Spider Inox 304, Sơn Epoxy",
+          "finishing": "Sơn tĩnh điện & Sơn PU 2 thành phần chống gỉ",
+          "timeline": "35 ngày",
+          "value": "~550 Triệu VNĐ",
+          "description": "Hạng mục mái sảnh kính vươn dài tạo điểm nhấn kiến trúc bề thế cho mặt tiền công trình, tích hợp hệ thống máng xối gom nước mưa âm kín đáo và hệ lan can kính thanh thoát.",
+          "highlights": [
+            "Hệ ty treo chịu lực mái sảnh tính toán chịu tải trọng gió bão vùng ven biển miền Trung.",
+            "Mối nối kính và khung thép được xử lý silicon kết cấu chống thấm nước tuyệt đối.",
+            "Hệ khung sơn tĩnh điện chống trầy xước và bền bỉ theo thời gian."
+          ],
+          "status": "Completed & Handed over"
         }
       }
     }
