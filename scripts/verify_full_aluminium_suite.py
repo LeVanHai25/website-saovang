@@ -49,7 +49,7 @@ with open(os.path.join(DATA_DIR, "systems.json"), "r", encoding="utf-8") as f:
 html_pages = {
     "nhomsaovang.html": ["al-hero", "marketsSection", "levelsSection", "solutionsSection", "systemsSection", "finishesSection", "caseStudiesSection", "smartFinderSection", "rfqSection"],
     "cuanhomkinh.html": ["door-hero", "openingDoors", "slidingDoors", "slimDoors", "specialDoors", "doorConfiguratorSection", "doorRfq"],
-    "vachkinh.html": ["facade-hero", "facadeList", "facadeRfq"],
+    "vachkinh.html": ["facade-hero", "facadeList", "vachTieuChuan", "vachSlim", "matDungMD50", "matDungMD65", "vachBespoke", "glassMatrixSection", "facadeRfq"],
     "thuvienprofilenhom.html": ["lib-hero", "filter-panel", "lib-table-wrap", "detailDrawer"]
 }
 

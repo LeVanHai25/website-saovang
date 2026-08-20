@@ -1,4 +1,21 @@
-<!DOCTYPE html>
+import os
+import sys
+import json
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+ROOT_DIR = r"d:\Sao Vàng\Website-SaoVang"
+DATA_DIR = os.path.join(ROOT_DIR, "website", "data", "aluminium")
+OUTPUT_FILE = os.path.join(ROOT_DIR, "website", "vachkinh.html")
+
+# Load JSON Data
+with open(os.path.join(DATA_DIR, "systems.json"), "r", encoding="utf-8") as f:
+    systems = json.load(f)
+
+with open(os.path.join(DATA_DIR, "materials.json"), "r", encoding="utf-8") as f:
+    materials = json.load(f)
+
+html_content = f"""<!DOCTYPE html>
 <html lang="vi">
 <head>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
@@ -23,7 +40,7 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <style>
-    :root {
+    :root {{
       --sv-dark: #0F172A;
       --sv-dark-card: #1E293B;
       --sv-gold: #C9A227;
@@ -32,75 +49,75 @@
       --sv-bg-light: #F8FAFC;
       --ff-head: 'Montserrat', sans-serif;
       --ff-body: 'Inter', sans-serif;
-    }
+    }}
 
-    body { font-family: var(--ff-body); color: #334155; background-color: #FFFFFF; overflow-x: hidden; }
+    body {{ font-family: var(--ff-body); color: #334155; background-color: #FFFFFF; overflow-x: hidden; }}
     
-    .al-tag {
+    .al-tag {{
       display: inline-flex; align-items: center; gap: 6px;
       font-family: var(--ff-head); font-size: 11px; font-weight: 800;
       letter-spacing: 0.14em; text-transform: uppercase; color: var(--sv-gold); margin-bottom: 12px;
-    }
-    .al-title {
+    }}
+    .al-title {{
       font-family: var(--ff-head); font-size: clamp(24px, 4vw, 36px);
       font-weight: 800; color: var(--sv-dark); line-height: 1.25; margin-bottom: 16px;
-    }
-    .al-title-light { color: #FFFFFF; }
-    .al-subtitle { font-size: clamp(14px, 1.8vw, 16px); color: var(--sv-slate); line-height: 1.7; max-width: 700px; }
+    }}
+    .al-title-light {{ color: #FFFFFF; }}
+    .al-subtitle {{ font-size: clamp(14px, 1.8vw, 16px); color: var(--sv-slate); line-height: 1.7; max-width: 700px; }}
 
     /* HERO */
-    .facade-hero {
+    .facade-hero {{
       position: relative; background: radial-gradient(circle at 50% 30%, #1E293B 0%, #0F172A 100%);
       color: #FFFFFF; padding: 150px 0 90px; text-align: center; border-bottom: 1px solid rgba(201, 162, 39, 0.2);
-    }
-    .facade-hero-badge {
+    }}
+    .facade-hero-badge {{
       display: inline-flex; align-items: center; gap: 8px;
       background: rgba(201, 162, 39, 0.12); border: 1px solid rgba(201, 162, 39, 0.4);
       padding: 6px 18px; border-radius: 30px; font-family: var(--ff-head);
       font-size: 11px; font-weight: 800; color: var(--sv-gold); text-transform: uppercase;
       letter-spacing: 0.12em; margin-bottom: 20px;
-    }
-    .facade-hero-h1 {
+    }}
+    .facade-hero-h1 {{
       font-family: var(--ff-head); font-size: clamp(28px, 5vw, 48px);
       font-weight: 900; line-height: 1.2; margin-bottom: 16px;
-    }
-    .facade-hero-h1 span {
+    }}
+    .facade-hero-h1 span {{
       background: linear-gradient(135deg, #FFFFFF 0%, var(--sv-gold) 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .facade-hero-p { font-size: clamp(14.5px, 1.8vw, 17px); color: #94A3B8; max-width: 760px; margin: 0 auto 30px; line-height: 1.7; }
+    }}
+    .facade-hero-p {{ font-size: clamp(14.5px, 1.8vw, 17px); color: #94A3B8; max-width: 760px; margin: 0 auto 30px; line-height: 1.7; }}
 
     /* STICKY SUB NAV */
-    .facade-subnav {
+    .facade-subnav {{
       position: sticky; top: var(--sv-navbar-h, 70px); z-index: 90;
       background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(8px);
       border-bottom: 1px solid #334155; padding: 10px 0;
-    }
-    .facade-subnav-inner {
+    }}
+    .facade-subnav-inner {{
       display: flex; gap: 10px; overflow-x: auto; white-space: nowrap; padding: 4px 0;
       scrollbar-width: none;
-    }
-    .facade-subnav-inner::-webkit-scrollbar { display: none; }
-    .subnav-link {
+    }}
+    .facade-subnav-inner::-webkit-scrollbar {{ display: none; }}
+    .subnav-link {{
       color: #94A3B8; font-family: var(--ff-head); font-size: 12px; font-weight: 700;
       padding: 6px 14px; border-radius: 20px; text-decoration: none; border: 1px solid transparent;
       transition: all 0.2s ease;
-    }
-    .subnav-link:hover, .subnav-link.active {
+    }}
+    .subnav-link:hover, .subnav-link.active {{
       color: #FFFFFF; border-color: var(--sv-gold); background: rgba(201, 162, 39, 0.15);
-    }
+    }}
 
     /* SECTIONS */
-    .facade-sec { padding: 80px 0; }
-    .facade-sec-alt { background: var(--sv-bg-light); }
-    .facade-sec-dark { background: var(--sv-dark); color: #FFFFFF; }
+    .facade-sec {{ padding: 80px 0; }}
+    .facade-sec-alt {{ background: var(--sv-bg-light); }}
+    .facade-sec-dark {{ background: var(--sv-dark); color: #FFFFFF; }}
 
     /* CARDS */
-    .facade-card {
+    .facade-card {{
       background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px;
       padding: 32px; margin-bottom: 30px; transition: all 0.3s ease;
-    }
-    .facade-card:hover { border-color: var(--sv-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+    }}
+    .facade-card:hover {{ border-color: var(--sv-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }}
   </style>
 </head>
 <body>
@@ -271,39 +288,20 @@
       </div>
 
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+"""
 
+for g in materials['glass_systems'][:4]:
+    html_content += f"""
         <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 22px;">
           <div style="font-family: var(--ff-head); font-size: 15px; font-weight: 800; color: #0F172A; margin-bottom: 6px;">
-            <i class="ri-checkbox-circle-fill" style="color: #C9A227;"></i> Kính dán an toàn 2 lớp (Laminated Glass)
+            <i class="ri-checkbox-circle-fill" style="color: #C9A227;"></i> {g['name']}
           </div>
-          <div style="font-size: 12px; font-weight: 700; color: #C9A227; margin-bottom: 8px;">Độ dày: 6.38 - 12.38 mm</div>
-          <p style="font-size: 13px; color: #64748B; line-height: 1.6; margin: 0;">Chống vỡ rơi vụn, an toàn tuyệt đối.</p>
+          <div style="font-size: 12px; font-weight: 700; color: #C9A227; margin-bottom: 8px;">Độ dày: {g['thickness']}</div>
+          <p style="font-size: 13px; color: #64748B; line-height: 1.6; margin: 0;">{g['feature']}</p>
         </div>
-    
-        <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 22px;">
-          <div style="font-family: var(--ff-head); font-size: 15px; font-weight: 800; color: #0F172A; margin-bottom: 6px;">
-            <i class="ri-checkbox-circle-fill" style="color: #C9A227;"></i> Kính cường lực an toàn (Tempered Glass)
-          </div>
-          <div style="font-size: 12px; font-weight: 700; color: #C9A227; margin-bottom: 8px;">Độ dày: 8 - 15 mm</div>
-          <p style="font-size: 13px; color: #64748B; line-height: 1.6; margin: 0;">Chịu lực va đập gấp 5 lần kính thường.</p>
-        </div>
-    
-        <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 22px;">
-          <div style="font-family: var(--ff-head); font-size: 15px; font-weight: 800; color: #0F172A; margin-bottom: 6px;">
-            <i class="ri-checkbox-circle-fill" style="color: #C9A227;"></i> Kính hộp cản nhiệt (Insulating Glass Unit - IGU)
-          </div>
-          <div style="font-size: 12px; font-weight: 700; color: #C9A227; margin-bottom: 8px;">Độ dày: 19 - 36 mm</div>
-          <p style="font-size: 13px; color: #64748B; line-height: 1.6; margin: 0;">Khoang khí trơ Argon cách âm và cản nhiệt tối đa.</p>
-        </div>
-    
-        <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 22px;">
-          <div style="font-family: var(--ff-head); font-size: 15px; font-weight: 800; color: #0F172A; margin-bottom: 6px;">
-            <i class="ri-checkbox-circle-fill" style="color: #C9A227;"></i> Kính Low-E / Solar Control
-          </div>
-          <div style="font-size: 12px; font-weight: 700; color: #C9A227; margin-bottom: 8px;">Độ dày: 20 - 32 mm</div>
-          <p style="font-size: 13px; color: #64748B; line-height: 1.6; margin: 0;">Chặn 99% tia UV và 80% bức xạ nhiệt mặt trời.</p>
-        </div>
-    
+    """
+
+html_content += f"""
       </div>
     </div>
   </section>
@@ -393,3 +391,9 @@
   <script src="assets/js/aluminium-rfq.js"></script>
 </body>
 </html>
+"""
+
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"✅ Successfully generated Facade Hub {OUTPUT_FILE} with MD50/MD65 and Yacht Glazing!")
