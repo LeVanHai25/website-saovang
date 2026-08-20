@@ -48,7 +48,7 @@ with open(os.path.join(DATA_DIR, "systems.json"), "r", encoding="utf-8") as f:
 # 3. Check HTML Pages Existence & Key Markers
 html_pages = {
     "nhomsaovang.html": ["al-hero", "marketsSection", "levelsSection", "solutionsSection", "systemsSection", "finishesSection", "caseStudiesSection", "smartFinderSection", "rfqSection"],
-    "cuanhomkinh.html": ["door-hero", "openingDoors", "slidingDoors", "slimDoors", "specialDoors", "doorRfq"],
+    "cuanhomkinh.html": ["door-hero", "openingDoors", "slidingDoors", "slimDoors", "specialDoors", "doorConfiguratorSection", "doorRfq"],
     "vachkinh.html": ["facade-hero", "facadeList", "facadeRfq"],
     "thuvienprofilenhom.html": ["lib-hero", "filter-panel", "lib-table-wrap", "detailDrawer"]
 }

@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+import os
+import sys
+import json
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+ROOT_DIR = r"d:\Sao Vàng\Website-SaoVang"
+DATA_DIR = os.path.join(ROOT_DIR, "website", "data", "aluminium")
+OUTPUT_FILE = os.path.join(ROOT_DIR, "website", "cuanhomkinh.html")
+
+# Load JSON Data
+with open(os.path.join(DATA_DIR, "systems.json"), "r", encoding="utf-8") as f:
+    systems = json.load(f)
+
+with open(os.path.join(DATA_DIR, "door_models.json"), "r", encoding="utf-8") as f:
+    door_models = json.load(f)
+
+with open(os.path.join(DATA_DIR, "materials.json"), "r", encoding="utf-8") as f:
+    materials = json.load(f)
+
+with open(os.path.join(DATA_DIR, "hardware.json"), "r", encoding="utf-8") as f:
+    hardware = json.load(f)
+
+html_content = f"""<!DOCTYPE html>
 <html lang="vi">
 <head>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
@@ -23,7 +46,7 @@
   <link rel="stylesheet" href="assets/css/main.css" />
 
   <style>
-    :root {
+    :root {{
       --sv-dark: #0F172A;
       --sv-dark-card: #1E293B;
       --sv-gold: #C9A227;
@@ -32,89 +55,89 @@
       --sv-bg-light: #F8FAFC;
       --ff-head: 'Montserrat', sans-serif;
       --ff-body: 'Inter', sans-serif;
-    }
+    }}
 
-    body { font-family: var(--ff-body); color: #334155; background-color: #FFFFFF; overflow-x: hidden; }
+    body {{ font-family: var(--ff-body); color: #334155; background-color: #FFFFFF; overflow-x: hidden; }}
     
-    .al-tag {
+    .al-tag {{
       display: inline-flex; align-items: center; gap: 6px;
       font-family: var(--ff-head); font-size: 11px; font-weight: 800;
       letter-spacing: 0.14em; text-transform: uppercase; color: var(--sv-gold); margin-bottom: 12px;
-    }
-    .al-title {
+    }}
+    .al-title {{
       font-family: var(--ff-head); font-size: clamp(24px, 4vw, 36px);
       font-weight: 800; color: var(--sv-dark); line-height: 1.25; margin-bottom: 16px;
-    }
-    .al-title-light { color: #FFFFFF; }
-    .al-subtitle { font-size: clamp(14px, 1.8vw, 16px); color: var(--sv-slate); line-height: 1.7; max-width: 700px; }
+    }}
+    .al-title-light {{ color: #FFFFFF; }}
+    .al-subtitle {{ font-size: clamp(14px, 1.8vw, 16px); color: var(--sv-slate); line-height: 1.7; max-width: 700px; }}
 
     /* HERO */
-    .door-hero {
+    .door-hero {{
       position: relative; background: radial-gradient(circle at 50% 30%, #1E293B 0%, #0F172A 100%);
       color: #FFFFFF; padding: 150px 0 90px; text-align: center; border-bottom: 1px solid rgba(201, 162, 39, 0.2);
-    }
-    .door-hero-badge {
+    }}
+    .door-hero-badge {{
       display: inline-flex; align-items: center; gap: 8px;
       background: rgba(201, 162, 39, 0.12); border: 1px solid rgba(201, 162, 39, 0.4);
       padding: 6px 18px; border-radius: 30px; font-family: var(--ff-head);
       font-size: 11px; font-weight: 800; color: var(--sv-gold); text-transform: uppercase;
       letter-spacing: 0.12em; margin-bottom: 20px;
-    }
-    .door-hero-h1 {
+    }}
+    .door-hero-h1 {{
       font-family: var(--ff-head); font-size: clamp(28px, 5vw, 48px);
       font-weight: 900; line-height: 1.2; margin-bottom: 16px;
-    }
-    .door-hero-h1 span {
+    }}
+    .door-hero-h1 span {{
       background: linear-gradient(135deg, #FFFFFF 0%, var(--sv-gold) 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .door-hero-p { font-size: clamp(14.5px, 1.8vw, 17px); color: #94A3B8; max-width: 760px; margin: 0 auto 30px; line-height: 1.7; }
+    }}
+    .door-hero-p {{ font-size: clamp(14.5px, 1.8vw, 17px); color: #94A3B8; max-width: 760px; margin: 0 auto 30px; line-height: 1.7; }}
 
     /* STICKY SUB NAV */
-    .door-subnav {
+    .door-subnav {{
       position: sticky; top: var(--sv-navbar-h, 70px); z-index: 90;
       background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(8px);
       border-bottom: 1px solid #334155; padding: 10px 0;
-    }
-    .door-subnav-inner {
+    }}
+    .door-subnav-inner {{
       display: flex; gap: 10px; overflow-x: auto; white-space: nowrap; padding: 4px 0;
       scrollbar-width: none;
-    }
-    .door-subnav-inner::-webkit-scrollbar { display: none; }
-    .subnav-link {
+    }}
+    .door-subnav-inner::-webkit-scrollbar {{ display: none; }}
+    .subnav-link {{
       color: #94A3B8; font-family: var(--ff-head); font-size: 12px; font-weight: 700;
       padding: 6px 14px; border-radius: 20px; text-decoration: none; border: 1px solid transparent;
       transition: all 0.2s ease;
-    }
-    .subnav-link:hover, .subnav-link.active {
+    }}
+    .subnav-link:hover, .subnav-link.active {{
       color: #FFFFFF; border-color: var(--sv-gold); background: rgba(201, 162, 39, 0.15);
-    }
+    }}
 
     /* SECTIONS */
-    .door-sec { padding: 80px 0; }
-    .door-sec-alt { background: var(--sv-bg-light); }
-    .door-sec-dark { background: var(--sv-dark); color: #FFFFFF; }
+    .door-sec {{ padding: 80px 0; }}
+    .door-sec-alt {{ background: var(--sv-bg-light); }}
+    .door-sec-dark {{ background: var(--sv-dark); color: #FFFFFF; }}
 
     /* CARDS */
-    .door-card {
+    .door-card {{
       background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px;
       padding: 24px; transition: all 0.3s ease; display: flex; flex-direction: column;
       justify-content: space-between; height: 100%;
-    }
-    .door-card:hover {
+    }}
+    .door-card:hover {{
       border-color: var(--sv-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.06); transform: translateY(-3px);
-    }
-    .door-model-grid {
+    }}
+    .door-model-grid {{
       display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;
-    }
+    }}
 
-    .config-step {
+    .config-step {{
       margin-bottom: 22px;
-    }
-    .config-label {
+    }}
+    .config-label {{
       display: block; font-family: var(--ff-head); font-size: 12.5px; font-weight: 800;
       color: var(--sv-gold); text-transform: uppercase; margin-bottom: 8px;
-    }
+    }}
   </style>
 </head>
 <body>
@@ -638,19 +661,19 @@
   <script src="assets/js/main.js"></script>
   <script src="assets/js/aluminium-rfq.js"></script>
   <script>
-    function setCfgLeaf(val, el) {
+    function setCfgLeaf(val, el) {{
       document.getElementById('cfgLeafVal').value = val;
       el.parentElement.querySelectorAll('.finder-pill').forEach(b => b.classList.remove('active'));
       el.classList.add('active');
-    }
+    }}
 
-    function quickFillConfig(name, sysId) {
+    function quickFillConfig(name, sysId) {{
       const sysSelect = document.getElementById('cfgSystem');
       if (sysSelect) sysSelect.value = sysId;
-      document.getElementById('doorConfiguratorSection').scrollIntoView({ behavior: 'smooth' });
-    }
+      document.getElementById('doorConfiguratorSection').scrollIntoView({{ behavior: 'smooth' }});
+    }}
 
-    function generateProjectSpec() {
+    function generateProjectSpec() {{
       const sysSelect = document.getElementById('cfgSystem');
       const sysName = sysSelect.options[sysSelect.selectedIndex].text;
       const leaf = document.getElementById('cfgLeafVal').value;
@@ -664,30 +687,33 @@
 
       document.getElementById('specSheetCode').innerText = specCode;
       document.getElementById('specContent').innerHTML = `
-        <div><strong style="color: #E5C158;">Hệ Nhôm:</strong> ${sysName}</div>
-        <div><strong style="color: #E5C158;">Quy Cách:</strong> ${leaf}</div>
-        <div><strong style="color: #E5C158;">Kích Thước:</strong> ${width} x ${height} mm (${area} m²)</div>
-        <div><strong style="color: #E5C158;">Chủng Loại Kính:</strong> ${glass}</div>
-        <div><strong style="color: #E5C158;">Bề Mặt & Màu Sắc:</strong> ${finish}</div>
-        <div><strong style="color: #E5C158;">Phụ Kiện Đồng Bộ:</strong> ${hardware}</div>
+        <div><strong style="color: #E5C158;">Hệ Nhôm:</strong> ${{sysName}}</div>
+        <div><strong style="color: #E5C158;">Quy Cách:</strong> ${{leaf}}</div>
+        <div><strong style="color: #E5C158;">Kích Thước:</strong> ${{width}} x ${{height}} mm (${{area}} m²)</div>
+        <div><strong style="color: #E5C158;">Chủng Loại Kính:</strong> ${{glass}}</div>
+        <div><strong style="color: #E5C158;">Bề Mặt & Màu Sắc:</strong> ${{finish}}</div>
+        <div><strong style="color: #E5C158;">Phụ Kiện Đồng Bộ:</strong> ${{hardware}}</div>
       `;
 
       document.getElementById('specSheetResult').style.display = 'block';
-      document.getElementById('specSheetResult').scrollIntoView({ behavior: 'smooth' });
-    }
+      document.getElementById('specSheetResult').scrollIntoView({{ behavior: 'smooth' }});
+    }}
 
-    function copySpecToRfq() {
+    function copySpecToRfq() {{
       const specCode = document.getElementById('specSheetCode').innerText;
       const content = document.getElementById('specContent').innerText;
       const rfqNotes = document.getElementById('doorRfqNotes');
-      if (rfqNotes) {
-        rfqNotes.value = `[ĐÍNH KÈM HỒ SƠ ${specCode}]
-${content}
-
-Yêu cầu kỹ sư Sao Vàng khảo sát & lập dự toán chi tiết.`;
-      }
-      document.getElementById('doorRfq').scrollIntoView({ behavior: 'smooth' });
-    }
+      if (rfqNotes) {{
+        rfqNotes.value = `[ĐÍNH KÈM HỒ SƠ ${{specCode}}]\n${{content}}\n\nYêu cầu kỹ sư Sao Vàng khảo sát & lập dự toán chi tiết.`;
+      }}
+      document.getElementById('doorRfq').scrollIntoView({{ behavior: 'smooth' }});
+    }}
   </script>
 </body>
 </html>
+"""
+
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print(f"✅ Successfully generated Door Hub {OUTPUT_FILE} with Visual Configurator!")
