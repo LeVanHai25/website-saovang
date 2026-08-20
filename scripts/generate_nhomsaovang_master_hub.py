@@ -526,8 +526,8 @@ html_content = """<!DOCTYPE html>
   <!-- SECTION 1 - HEADER -->
   <header class="header-v2" id="navbar" role="banner">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Sao Vàng — Trang chủ">
-        <img width="200" height="60" fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" style="height: 48px; width: auto; display: block;" />
+      <a href="index.html" class="nav-logo" aria-label="SV ALUMINIUM — Trang chủ">
+        <img width="220" height="60" fetchpriority="high" loading="eager" src="assets/images/logo-nhom.png" alt="SV ALUMINIUM — Architectural Systems" style="height: 46px; width: auto; display: block;" />
       </a>
       <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
         <a href="index.html" class="nav-menu-link">Trang Chủ</a>
@@ -1230,7 +1230,7 @@ html_content = """<!DOCTYPE html>
       <div class="footer-grid">
         <div class="footer-col">
           <div class="footer-brand">
-            <img width="180" height="54" loading="lazy" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 44px; width: auto; display: block; margin-bottom: 12px;" />
+            <img width="200" height="60" loading="lazy" src="assets/images/logo-nhom-white.png" alt="SV ALUMINIUM" style="height: 44px; width: auto; display: block; margin-bottom: 12px;" />
             <p class="footer-desc">SV ALUMINIUM &bull; Architectural Aluminium Systems — Giải pháp nhôm kính từ phân khúc tiêu chuẩn đến kiến trúc cao cấp cho Residence, Villa, Hospitality &amp; Yacht.</p>
           </div>
         </div>
