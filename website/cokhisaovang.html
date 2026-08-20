@@ -599,6 +599,78 @@
       font-weight: 300;
     }
 
+    /* Section 04: Luxury Yacht Division */
+    .lux-yacht-sec {
+      padding: 100px 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    /* Section 06: Chi tiết tạo nên sự khác biệt */
+    .lux-details-sec {
+      padding: 100px 0;
+      background: #FFFFFF;
+      border-top: 1px solid #E2E8F0;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .lux-details-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 960px) {
+      .lux-details-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .lux-details-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .lux-detail-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 32px 28px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .lux-detail-card:hover {
+      background: #FFFFFF;
+      border-color: var(--sv-luxury-gold);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+    }
+    .lux-detail-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      background: rgba(201, 162, 39, 0.12);
+      border: 1px solid rgba(201, 162, 39, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sv-luxury-gold);
+      font-size: 20px;
+      margin-bottom: 18px;
+    }
+    .lux-detail-title {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--sv-luxury-dark);
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .lux-detail-desc {
+      font-size: 13.5px;
+      color: #64748B;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+
 
 
     /* Sub Navigation */
@@ -1849,6 +1921,112 @@
 
 
     <!-- ════════════════════════════════════════════
+         COMPONENT 04: LUXURY YACHT DIVISION
+    ════════════════════════════════════════════ -->
+    <section class="lux-yacht-sec" id="yachtSection" aria-label="Cơ khí hoàn thiện cho Du thuyền cao cấp">
+      <div class="sv-container">
+        
+        <div class="lux-sec-header" data-sv-reveal>
+          <span class="lux-sec-tag">02 — LUXURY YACHT</span>
+          <h2 class="lux-sec-title">CƠ KHÍ HOÀN THIỆN CHO DU THUYỀN CAO CẤP</h2>
+          <p class="lux-sec-desc">
+            Gia công và lắp dựng các hạng mục kim loại chuyên dụng cho du thuyền. Yêu cầu vật liệu chống ăn mòn muối biển, kỹ thuật xử lý bề mặt cao cấp và độ chính xác tuyệt đối theo dưỡng thực tế tại vỏ tàu.
+          </p>
+        </div>
+
+        <div class="lux-res-grid">
+          
+          <!-- Yacht Item 1: Lan can Inox Hàng Hải -->
+          <article class="lux-res-card" data-sv-reveal data-sv-delay="1">
+            <div class="lux-res-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/yacht-tulip/hero.jpg" alt="Lan can Inox 316 Du thuyền Tulip Cruise 5 sao" width="800" height="500">
+              <span class="lux-res-badge">Inox 316 / 316L Hàng Hải</span>
+            </div>
+            <div class="lux-res-body">
+              <h3 class="lux-res-title">Lan Can Inox Hàng Hải (Inox 316 / 316L)</h3>
+              <p class="lux-res-desc">Chế tác hệ lan can Inox 316 chuyên dụng chịu môi trường biển khắt khe, đạt độ hoàn thiện đánh bóng gương hoặc xước Satin cao cấp.</p>
+              <ul class="lux-res-list">
+                <li><i class="ri-check-line"></i> <span>Lan can inox boong tàu, boong ngắm cảnh (sundeck) và lan can bảo vệ mạn tàu</span></li>
+                <li><i class="ri-check-line"></i> <span>Sử dụng chuẩn mác thép Inox 316 / 316L kháng ăn mòn muối biển vượt trội</span></li>
+                <li><i class="ri-check-line"></i> <span>Xử lý đánh bóng gương (Mirror Polish) hoặc hoàn thiện xước Satin sang trọng</span></li>
+              </ul>
+              <div class="lux-res-footer">
+                <a href="#quickQuote" class="lux-res-link">Tư vấn kỹ thuật <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11.5px; color: #94A3B8; font-weight: 500;">Dự án thực tế: Tulip Cruise (5 Sao)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Yacht Item 2: Lan can kính mạn tàu -->
+          <article class="lux-res-card" data-sv-reveal data-sv-delay="2">
+            <div class="lux-res-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/yacht-azura/hero.jpg" alt="Lan can kính mạn tàu Du thuyền Azura Cruise" width="800" height="500">
+              <span class="lux-res-badge">Kính &amp; Inox Boong Tàu</span>
+            </div>
+            <div class="lux-res-body">
+              <h3 class="lux-res-title">Lan Can Kính Mạn Tàu &amp; Chân Đế Inox</h3>
+              <p class="lux-res-desc">Giải pháp vách kính mạn tàu mở rộng tầm nhìn toàn cảnh vô cực, sử dụng hệ chân đế và phụ kiện inox chuyên dụng hàng hải.</p>
+              <ul class="lux-res-list">
+                <li><i class="ri-check-line"></i> <span>Hệ lan can kính tầm nhìn vô cực cho boong ngắm cảnh và mạn phòng nghỉ</span></li>
+                <li><i class="ri-check-line"></i> <span>Chân đế, pass kẹp và ngàm kính gia công từ Inox 316 đúc/cắt CNC chịu lực</span></li>
+                <li><i class="ri-check-line"></i> <span>Kết cấu chống rung lắc, chịu tải trọng gió bão và an toàn vận hành trên biển</span></li>
+              </ul>
+              <div class="lux-res-footer">
+                <a href="#quickQuote" class="lux-res-link">Tư vấn kỹ thuật <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11.5px; color: #94A3B8; font-weight: 500;">Dự án thực tế: Azura Cruise</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Yacht Item 3: Louver điều hòa & Lam gió -->
+          <article class="lux-res-card" data-sv-reveal data-sv-delay="3">
+            <div class="lux-res-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/yacht-calista/hero.jpg" alt="Hệ louver điều hòa Inox Du thuyền Calista Cruise" width="800" height="500">
+              <span class="lux-res-badge">Khí Động Học &amp; Chống Muối</span>
+            </div>
+            <div class="lux-res-body">
+              <h3 class="lux-res-title">Louver Điều Hòa &amp; Lam Gió Chống Ăn Mòn</h3>
+              <p class="lux-res-desc">Chế tác hệ lam gió kỹ thuật và louver thoát nhiệt hệ thống điều hòa buồng máy, đảm bảo thông gió tối ưu và chống nước biển tạt.</p>
+              <ul class="lux-res-list">
+                <li><i class="ri-check-line"></i> <span>Hệ lam gió, louver hút gió và thoát nhiệt điều hòa buồng máy, cabin tàu</span></li>
+                <li><i class="ri-check-line"></i> <span>Gia công Inox 316 uốn gấp chính xác theo đường cong khí động học vỏ tàu</span></li>
+                <li><i class="ri-check-line"></i> <span>Xử lý khe gom thoát nước và ngăn sương muối biển tạt vào không gian máy</span></li>
+              </ul>
+              <div class="lux-res-footer">
+                <a href="#quickQuote" class="lux-res-link">Tư vấn kỹ thuật <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11.5px; color: #94A3B8; font-weight: 500;">Dự án thực tế: Calista Cruise</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Yacht Item 4: Máng nước Inox & Phụ kiện du thuyền -->
+          <article class="lux-res-card" data-sv-reveal data-sv-delay="4">
+            <div class="lux-res-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/yacht-leona/hero.webp" alt="Máng nước Inox & chi tiết kim loại Du thuyền Leona Cruise" width="800" height="500">
+              <span class="lux-res-badge">Chi Tiết Hoàn Thiện Tàu</span>
+            </div>
+            <div class="lux-res-body">
+              <h3 class="lux-res-title">Máng Nước Inox &amp; Phụ Kiện Kim Loại Du Thuyền</h3>
+              <p class="lux-res-desc">Sản xuất máng thoát nước, nẹp chỉ trang trí và phụ kiện inox chuyên dụng theo dưỡng dưỡng cong thực tế tại từng thân tàu.</p>
+              <ul class="lux-res-list">
+                <li><i class="ri-check-line"></i> <span>Hệ thống máng thu thoát nước mưa và nước boong bằng Inox 316 độ kín tuyệt đối</span></li>
+                <li><i class="ri-check-line"></i> <span>Nẹp chỉ trang trí inox, khung viền boong, tay vịn và phụ kiện mạn tàu</span></li>
+                <li><i class="ri-check-line"></i> <span>Thi công lấy dưỡng trực tiếp theo độ cong thực tế của kết cấu vỏ tàu</span></li>
+              </ul>
+              <div class="lux-res-footer">
+                <a href="#quickQuote" class="lux-res-link">Tư vấn kỹ thuật <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11.5px; color: #94A3B8; font-weight: 500;">Dự án thực tế: Leona Cruise Hạ Long</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════
          COMPONENT 05: CUSTOM METALWORK THEO BẢN VẼ
     ════════════════════════════════════════════ -->
     <section class="lux-custom-sec" id="customMetalworkSection" aria-label="Dịch vụ cơ khí chế tác Custom Metalwork theo yêu cầu">
@@ -1890,6 +2068,70 @@
           </div>
 
         </div>
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════
+         COMPONENT 06: CHI TIẾT TẠO NÊN SỰ KHÁC BIỆT
+    ════════════════════════════════════════════ -->
+    <section class="lux-details-sec" id="detailsSection" aria-label="Tiêu chuẩn chi tiết tạo nên sự khác biệt">
+      <div class="sv-container">
+        
+        <div class="lux-sec-header" data-sv-reveal>
+          <span class="lux-sec-tag">TIÊU CHUẨN THI CÔNG</span>
+          <h2 class="lux-sec-title">CHI TIẾT TẠO NÊN SỰ KHÁC BIỆT</h2>
+          <p class="lux-sec-desc">
+            Sự cao cấp của một sản phẩm cơ khí kiến trúc không chỉ nằm ở bản vẽ tổng thể, mà thể hiện rõ nhất tại các điểm liên kết, góc bo và bề mặt hoàn thiện.
+          </p>
+        </div>
+
+        <div class="lux-details-grid">
+          
+          <!-- Detail 1 -->
+          <div class="lux-detail-card" data-sv-reveal data-sv-delay="1">
+            <div class="lux-detail-icon-wrap"><i class="ri-focus-2-line"></i></div>
+            <h3 class="lux-detail-title">Xử Lý Mối Ghép &amp; Điểm Liên Kết</h3>
+            <p class="lux-detail-desc">Mối nối kim loại được xử lý phẳng mịn, liền mạch và hạn chế tối đa tì vết trước khi chuyển qua công đoạn xử lý bề mặt.</p>
+          </div>
+
+          <!-- Detail 2 -->
+          <div class="lux-detail-card" data-sv-reveal data-sv-delay="2">
+            <div class="lux-detail-icon-wrap"><i class="ri-sparkling-2-line"></i></div>
+            <h3 class="lux-detail-title">Hoàn Thiện Bề Mặt Inox Đa Dạng</h3>
+            <p class="lux-detail-desc">Tùy chọn xử lý bề mặt từ xước Satin mịn đồng đều đến đánh bóng gương (Mirror Finish) độ phản chiếu cao theo đúng thiết kế.</p>
+          </div>
+
+          <!-- Detail 3 -->
+          <div class="lux-detail-card" data-sv-reveal data-sv-delay="3">
+            <div class="lux-detail-icon-wrap"><i class="ri-ruler-2-line"></i></div>
+            <h3 class="lux-detail-title">Kiểm Soát Dung Sai Kích Thước</h3>
+            <p class="lux-detail-desc">Chế tạo bám sát dưỡng đo đạc và kích thước khảo sát thực tế, đảm bảo độ ăn khớp chính xác khi lắp dựng tại công trình.</p>
+          </div>
+
+          <!-- Detail 4 -->
+          <div class="lux-detail-card" data-sv-reveal data-sv-delay="4">
+            <div class="lux-detail-icon-wrap"><i class="ri-layout-grid-line"></i></div>
+            <h3 class="lux-detail-title">Liên Kết Kính &amp; Kim Loại Chuẩn Xác</h3>
+            <p class="lux-detail-desc">Khe ngàm, gioăng đệm và pass kẹp định vị kính an toàn, phân bổ tải trọng đều và triệt tiêu rung chấn trong quá trình sử dụng.</p>
+          </div>
+
+          <!-- Detail 5 -->
+          <div class="lux-detail-card" data-sv-reveal data-sv-delay="5">
+            <div class="lux-detail-icon-wrap"><i class="ri-shield-check-line"></i></div>
+            <h3 class="lux-detail-title">Lựa Chọn Vật Tư Chuẩn Mác Thép</h3>
+            <p class="lux-detail-desc">Sử dụng đúng chủng loại vật liệu (Inox 304, Inox 316, Thép kết cấu) phù hợp môi trường sử dụng của từng công trình và du thuyền.</p>
+          </div>
+
+          <!-- Detail 6 -->
+          <div class="lux-detail-card" data-sv-reveal data-sv-delay="6">
+            <div class="lux-detail-icon-wrap"><i class="ri-sun-foggy-line"></i></div>
+            <h3 class="lux-detail-title">Xử Lý Chống Ăn Mòn &amp; Thời Tiết</h3>
+            <p class="lux-detail-desc">Quy trình sơn phủ chuyên dụng và thụ động hóa bề mặt inox giúp sản phẩm bền bỉ trước điều kiện khí hậu nhiệt đới ẩm và vùng biển.</p>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
