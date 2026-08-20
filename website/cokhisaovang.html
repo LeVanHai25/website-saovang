@@ -670,6 +670,305 @@
       margin: 0;
     }
 
+    /* Section 10: Selected Projects Showcase */
+    .lux-showcase-sec {
+      padding: 100px 0;
+      background: var(--sv-luxury-offwhite);
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .lux-filter-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    .lux-filter-btn {
+      padding: 10px 24px;
+      border-radius: 30px;
+      border: 1px solid #CBD5E1;
+      background: #FFFFFF;
+      color: #475569;
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .lux-filter-btn:hover {
+      border-color: var(--sv-luxury-gold);
+      color: var(--sv-luxury-dark);
+    }
+    .lux-filter-btn.active {
+      background: var(--sv-luxury-dark);
+      color: var(--sv-luxury-gold);
+      border-color: var(--sv-luxury-dark);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.15);
+    }
+    .lux-proj-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 1200px) {
+      .lux-proj-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 640px) {
+      .lux-proj-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .lux-proj-card {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
+      transition: all 0.35s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .lux-proj-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+      border-color: rgba(201, 162, 39, 0.4);
+    }
+    .lux-proj-img-wrap {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      background: #0F172A;
+    }
+    .lux-proj-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .lux-proj-card:hover .lux-proj-img-wrap img {
+      transform: scale(1.08);
+    }
+    .lux-proj-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.85);
+      color: var(--sv-luxury-gold);
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(201, 162, 39, 0.3);
+    }
+    .lux-proj-body {
+      padding: 22px 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+    .lux-proj-loc {
+      font-size: 12px;
+      color: #94A3B8;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+    .lux-proj-loc i {
+      color: var(--sv-luxury-gold);
+      font-size: 13px;
+    }
+    .lux-proj-title {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--sv-luxury-dark);
+      margin-bottom: 8px;
+      line-height: 1.35;
+    }
+    .lux-proj-desc {
+      font-size: 12.5px;
+      color: #64748B;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .lux-proj-footer {
+      padding-top: 14px;
+      border-top: 1px solid #F1F5F9;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .lux-proj-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--sv-luxury-dark);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .lux-proj-link:hover {
+      color: var(--sv-luxury-gold);
+    }
+
+    /* Section 11: Luxury RFQ Form & NDA */
+    .lux-rfq-sec {
+      padding: 100px 0;
+      background: var(--sv-luxury-dark);
+      color: #FFFFFF;
+      position: relative;
+    }
+    .lux-rfq-container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, rgba(30, 41, 59, 0.7) 0%, rgba(15, 23, 42, 0.95) 100%);
+      border: 1px solid rgba(201, 162, 39, 0.3);
+      border-radius: 12px;
+      padding: 56px 48px;
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+    }
+    @media (max-width: 768px) {
+      .lux-rfq-container {
+        padding: 36px 20px;
+      }
+    }
+    .lux-rfq-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .lux-rfq-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .lux-form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 640px) {
+      .lux-form-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    .lux-form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .lux-form-label {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #CBD5E1;
+    }
+    .lux-form-input,
+    .lux-form-select,
+    .lux-form-textarea {
+      width: 100%;
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 6px;
+      padding: 12px 16px;
+      color: #FFFFFF;
+      font-family: var(--sv-font-body, 'Inter', sans-serif);
+      font-size: 13.5px;
+      outline: none;
+      transition: all 0.25s ease;
+    }
+    .lux-form-input:focus,
+    .lux-form-select:focus,
+    .lux-form-textarea:focus {
+      border-color: var(--sv-luxury-gold);
+      background: rgba(15, 23, 42, 0.95);
+      box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.15);
+    }
+    .lux-form-select option {
+      background: #0F172A;
+      color: #FFFFFF;
+    }
+    .lux-file-drop {
+      border: 2px dashed rgba(201, 162, 39, 0.35);
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+      background: rgba(15, 23, 42, 0.4);
+      cursor: pointer;
+      position: relative;
+      transition: all 0.25s ease;
+    }
+    .lux-file-drop:hover {
+      border-color: var(--sv-luxury-gold);
+      background: rgba(201, 162, 39, 0.05);
+    }
+    .lux-file-input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+    }
+    .lux-nda-badge {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: rgba(201, 162, 39, 0.08);
+      border: 1px solid rgba(201, 162, 39, 0.2);
+      border-radius: 6px;
+      padding: 14px 18px;
+      font-size: 12.5px;
+      color: #E2E8F0;
+      line-height: 1.5;
+    }
+    .lux-nda-badge i {
+      color: var(--sv-luxury-gold);
+      font-size: 18px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .lux-btn-submit {
+      background: var(--sv-luxury-gold);
+      color: var(--sv-luxury-dark);
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 6px;
+      padding: 16px 36px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+    }
+    .lux-btn-submit:hover {
+      background: var(--sv-luxury-gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(201, 162, 39, 0.3);
+    }
+
+
 
 
 
@@ -2137,150 +2436,289 @@
 
 
     <!-- ════════════════════════════════════════════
-         SECTION 6: DỰ ÁN CƠ KHÍ TIÊU BIỂU
+         COMPONENT 10: SELECTED PROJECTS SHOWCASE
     ════════════════════════════════════════════ -->
-    <section class="projects-section" aria-label="Dự án cơ khí tiêu biểu">
+    <section class="lux-showcase-sec" id="projectsSection" aria-label="Hồ sơ dự án cơ khí thực tế tiêu biểu">
       <div class="sv-container">
         
-        <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:var(--sv-sp-8); flex-wrap:wrap; gap:16px;">
-          <div data-sv-reveal>
-            <span class="sv-section-tag">HỒ SƠ CÔNG TRÌNH THỰC TẾ</span>
-            <h2 class="sv-section-title" style="margin-bottom:0;">Công Trình Cơ Khí Tiêu Biểu</h2>
-          </div>
-          <a href="duan.html" class="sv-btn sv-btn-outline-gold" data-sv-reveal="fade">XEM TẤT CẢ DỰ ÁN <i class="ri-arrow-right-up-line"></i></a>
+        <div class="lux-sec-header" data-sv-reveal>
+          <span class="lux-sec-tag">HỒ SƠ CÔNG TRÌNH THỰC TẾ</span>
+          <h2 class="lux-sec-title">DỰ ÁN TIÊU BIỂU ĐÃ THỰC HIỆN</h2>
+          <p class="lux-sec-desc">
+            100% hình ảnh thực tế từ các công trình Villa, Residence và Du thuyền cao cấp do Cơ khí Sao Vàng trực tiếp chế tác và thi công hoàn thiện.
+          </p>
         </div>
 
-        <div class="projects-grid">
+        <!-- Filter Tabs -->
+        <div class="lux-filter-tabs" data-sv-reveal>
+          <button class="lux-filter-btn active" data-filter="all">Tất Cả Dự Án (8)</button>
+          <button class="lux-filter-btn" data-filter="residential">01 — Luxury Residential (4)</button>
+          <button class="lux-filter-btn" data-filter="yacht">02 — Luxury Yacht (4)</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="lux-proj-grid">
           
-          <!-- Dự án 1 -->
-          <article class="project-card" data-category="cokhi" data-sv-reveal data-sv-delay="1">
-            <div class="project-card-image">
-              <img decoding="async" src="https://i.pinimg.com/736x/0d/16/a6/0d16a6cb8f1b6269b61dbdbef7bc9f1a2.jpg" alt="Cẩu dựng khung kết cấu thép nhà xưởng" loading="lazy" width="800" height="600">
-              <div class="project-card-overlay">
-                <span class="project-card-view-lbl">Xem chi tiết <i class="ri-arrow-right-line" aria-hidden="true"></i></span>
-              </div>
+          <!-- Project 1: Tulip Cruise -->
+          <article class="lux-proj-card" data-category="yacht" data-sv-reveal data-sv-delay="1">
+            <div class="lux-proj-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/yacht-tulip/hero.jpg" alt="Du thuyền Tulip Cruise 5 sao" width="600" height="400">
+              <span class="lux-proj-tag">Du Thuyền 5 Sao</span>
             </div>
-            <div class="project-card-info">
-              <span class="project-card-cat">Kết Cấu Thép</span>
-              <h3 class="project-card-title">Kết Cấu Thép Khung Nhà Xưởng FDI</h3>
-              <p class="project-card-desc">Lắp dựng hệ dầm cột chịu tải cho nhà máy sản xuất công nghiệp.</p>
-              <a href="duanchitiet.html" class="project-card-link" aria-label="Xem dự án Kết cấu thép nhà xưởng"></a>
+            <div class="lux-proj-body">
+              <div class="lux-proj-loc"><i class="ri-map-pin-2-line"></i> Vịnh Hạ Long, Quảng Ninh</div>
+              <h3 class="lux-proj-title">Du Thuyền Tulip Cruise</h3>
+              <p class="lux-proj-desc">Hệ lan can Inox 316 hàng hải, lan can kính boong ngắm cảnh, máng nước inox và phụ kiện hoàn thiện du thuyền.</p>
+              <div class="lux-proj-footer">
+                <a href="duan.html" class="lux-proj-link">Xem chi tiết <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11px; color: #10B981; font-weight: 600;">Đã bàn giao</span>
+              </div>
             </div>
           </article>
 
-          <!-- Dự án 2 -->
-          <article class="project-card" data-category="cokhi" data-sv-reveal data-sv-delay="2">
-            <div class="project-card-image">
-              <img decoding="async" src="https://i.pinimg.com/736x/2e/ab/cc/2eabcc08a80808047ce561c28cdeaa31.jpg" alt="Inox lan can du thuyền Marina 316" loading="lazy" width="800" height="600">
-              <div class="project-card-overlay">
-                <span class="project-card-view-lbl">Xem chi tiết <i class="ri-arrow-right-line" aria-hidden="true"></i></span>
-              </div>
+          <!-- Project 2: An Vượng Villa -->
+          <article class="lux-proj-card" data-category="residential" data-sv-reveal data-sv-delay="2">
+            <div class="lux-proj-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/villa-an-vuong/hero.jpg" alt="Biệt Thự An Vượng Villa" width="600" height="400">
+              <span class="lux-proj-tag">Biệt Thự Cao Cấp</span>
             </div>
-            <div class="project-card-info">
-              <span class="project-card-cat">Inox Hàng Hải</span>
-              <h3 class="project-card-title">Hệ Lan Can Inox Du Thuyền 316L</h3>
-              <p class="project-card-desc">Gia công chế tác và đánh bóng gương lan can du thuyền kháng ăn mòn muối biển.</p>
-              <a href="duanchitiet.html" class="project-card-link" aria-label="Xem dự án Inox Du Thuyền"></a>
+            <div class="lux-proj-body">
+              <div class="lux-proj-loc"><i class="ri-map-pin-2-line"></i> KĐT Nam Cường, Hà Nội</div>
+              <h3 class="lux-proj-title">Biệt Thự An Vượng Villa</h3>
+              <p class="lux-proj-desc">Gia công lắp đặt hoàn thiện hệ lan can kính, lan can kim loại và các chi tiết cơ khí kiến trúc theo thiết kế biệt thự.</p>
+              <div class="lux-proj-footer">
+                <a href="duan.html" class="lux-proj-link">Xem chi tiết <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11px; color: #10B981; font-weight: 600;">Đã bàn giao</span>
+              </div>
             </div>
           </article>
 
-          <!-- Dự án 3 -->
-          <article class="project-card" data-category="cokhi" data-sv-reveal data-sv-delay="3">
-            <div class="project-card-image">
-              <img decoding="async" src="https://i.pinimg.com/736x/fa/69/cf/fa69cf2418241829e15ce6e3c8872e42.jpg" alt="Cầu thang xoắn ốc thép bản CNC nghệ thuật" loading="lazy" width="800" height="600">
-              <div class="project-card-overlay">
-                <span class="project-card-view-lbl">Xem chi tiết <i class="ri-arrow-right-line" aria-hidden="true"></i></span>
+          <!-- Project 3: Azura Cruise -->
+          <article class="lux-proj-card" data-category="yacht" data-sv-reveal data-sv-delay="3">
+            <div class="lux-proj-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/yacht-azura/hero.jpg" alt="Du Thuyền Azura Cruise" width="600" height="400">
+              <span class="lux-proj-tag">Du Thuyền Cao Cấp</span>
+            </div>
+            <div class="lux-proj-body">
+              <div class="lux-proj-loc"><i class="ri-map-pin-2-line"></i> Vịnh Hạ Long, Quảng Ninh</div>
+              <h3 class="lux-proj-title">Du Thuyền Azura Cruise</h3>
+              <p class="lux-proj-desc">Triển khai kỹ thuật hệ lan can inox 316, lan can kính mạn tàu, hệ louver điều hòa và máng thoát nước inox chống ăn mòn.</p>
+              <div class="lux-proj-footer">
+                <a href="duan.html" class="lux-proj-link">Xem chi tiết <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11px; color: #10B981; font-weight: 600;">Đã bàn giao</span>
               </div>
             </div>
-            <div class="project-card-info">
-              <span class="project-card-cat">Cầu Thang Xoắn</span>
-              <h3 class="project-card-title">Cầu Thang Thép Bản Xoắn Ốc Penthouse</h3>
-              <p class="project-card-desc">Thiết kế rèn uốn cong xoắn nghệ thuật tạo điểm nhấn cho không gian sang trọng.</p>
-              <a href="duanchitiet.html" class="project-card-link" aria-label="Xem dự án Cầu Thang Xoắn Penthouse"></a>
+          </article>
+
+          <!-- Project 4: Đô Thành Villa -->
+          <article class="lux-proj-card" data-category="residential" data-sv-reveal data-sv-delay="4">
+            <div class="lux-proj-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/villa-do-thanh/hero.jpg" alt="Biệt Thự Đô Thành Villa" width="600" height="400">
+              <span class="lux-proj-tag">Biệt Thự Tư Gia</span>
+            </div>
+            <div class="lux-proj-body">
+              <div class="lux-proj-loc"><i class="ri-map-pin-2-line"></i> Việt Nam</div>
+              <h3 class="lux-proj-title">Biệt Thự Đô Thành Villa</h3>
+              <p class="lux-proj-desc">Triển khai kỹ thuật và thi công các hạng mục lan can ban công, hàng rào kim loại và tay vịn theo bản vẽ thiết kế.</p>
+              <div class="lux-proj-footer">
+                <a href="duan.html" class="lux-proj-link">Xem chi tiết <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11px; color: #10B981; font-weight: 600;">Đã bàn giao</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 5: Calista Cruise -->
+          <article class="lux-proj-card" data-category="yacht" data-sv-reveal data-sv-delay="5">
+            <div class="lux-proj-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/yacht-calista/hero.jpg" alt="Du Thuyền Calista Cruise" width="600" height="400">
+              <span class="lux-proj-tag">Du Thuyền Cao Cấp</span>
+            </div>
+            <div class="lux-proj-body">
+              <div class="lux-proj-loc"><i class="ri-map-pin-2-line"></i> Quảng Ninh, Việt Nam</div>
+              <h3 class="lux-proj-title">Du Thuyền Calista Cruise</h3>
+              <p class="lux-proj-desc">Gia công hệ lan can inox du thuyền, máng nước inox, louver điều hòa và các hạng mục cơ khí hoàn thiện boong tàu.</p>
+              <div class="lux-proj-footer">
+                <a href="duan.html" class="lux-proj-link">Xem chi tiết <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11px; color: #10B981; font-weight: 600;">Đã bàn giao</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 6: Linh Huệ Villa -->
+          <article class="lux-proj-card" data-category="residential" data-sv-reveal data-sv-delay="6">
+            <div class="lux-proj-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/villa-linh-hue/hero.jpg" alt="Biệt Thự Linh Huệ Villa" width="600" height="400">
+              <span class="lux-proj-tag">Biệt Thự Cao Cấp</span>
+            </div>
+            <div class="lux-proj-body">
+              <div class="lux-proj-loc"><i class="ri-map-pin-2-line"></i> Việt Nam</div>
+              <h3 class="lux-proj-title">Biệt Thự Linh Huệ Villa</h3>
+              <p class="lux-proj-desc">Chế tác và lắp dựng hệ cổng chính biệt thự, lan can kim loại và hạng mục cơ khí hoàn thiện theo hồ sơ thiết kế.</p>
+              <div class="lux-proj-footer">
+                <a href="duan.html" class="lux-proj-link">Xem chi tiết <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11px; color: #10B981; font-weight: 600;">Đã bàn giao</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 7: Leona Cruise -->
+          <article class="lux-proj-card" data-category="yacht" data-sv-reveal data-sv-delay="7">
+            <div class="lux-proj-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/yacht-leona/hero.webp" alt="Du Thuyền Leona Cruise Hạ Long" width="600" height="400">
+              <span class="lux-proj-tag">Du Thuyền Tham Quan</span>
+            </div>
+            <div class="lux-proj-body">
+              <div class="lux-proj-loc"><i class="ri-map-pin-2-line"></i> Vịnh Hạ Long, Quảng Ninh</div>
+              <h3 class="lux-proj-title">Du Thuyền Leona Cruise</h3>
+              <p class="lux-proj-desc">Sản xuất và lắp đặt hệ lan can inox 316, lan can kính boong tàu và các kết cấu kim loại hoàn thiện du thuyền tham quan.</p>
+              <div class="lux-proj-footer">
+                <a href="duan.html" class="lux-proj-link">Xem chi tiết <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11px; color: #10B981; font-weight: 600;">Đã bàn giao</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 8: Thanh Hóa -->
+          <article class="lux-proj-card" data-category="residential" data-sv-reveal data-sv-delay="8">
+            <div class="lux-proj-img-wrap">
+              <img decoding="async" loading="lazy" src="assets/images/projects/villa-thanh-hoa/hero.jpg" alt="Công Trình Nhà Ở Thanh Hóa" width="600" height="400">
+              <span class="lux-proj-tag">Nhà Ở Cao Cấp</span>
+            </div>
+            <div class="lux-proj-body">
+              <div class="lux-proj-loc"><i class="ri-map-pin-2-line"></i> Thanh Hóa, Việt Nam</div>
+              <h3 class="lux-proj-title">Công Trình Nhà Ở Thanh Hóa</h3>
+              <p class="lux-proj-desc">Gia công kết cấu thép, hệ lan can và khung kim loại kiến trúc hoàn thiện đồng bộ tại công trình.</p>
+              <div class="lux-proj-footer">
+                <a href="duan.html" class="lux-proj-link">Xem chi tiết <i class="ri-arrow-right-line"></i></a>
+                <span style="font-size: 11px; color: #10B981; font-weight: 600;">Đã bàn giao</span>
+              </div>
             </div>
           </article>
 
         </div>
+
       </div>
     </section>
 
+    <!-- Interactive Filter Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const filterBtns = document.querySelectorAll('.lux-filter-btn');
+        const projCards = document.querySelectorAll('.lux-proj-card');
+
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            projCards.forEach(card => {
+              if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                card.style.display = 'flex';
+              } else {
+                card.style.display = 'none';
+              }
+            });
+          });
+        });
+      });
+    </script>
+
 
     <!-- ════════════════════════════════════════════
-         SECTION 7: SMART QUOTE & NDA FORM
+         COMPONENT 11: LUXURY RFQ FORM & NDA GUARANTEE
     ════════════════════════════════════════════ -->
-    <section class="smart-quote-section" id="quickQuote" aria-label="Yêu cầu báo giá nhanh và cam kết bảo mật NDA">
+    <section class="lux-rfq-sec" id="quickQuote" aria-label="Tiếp nhận bản vẽ và tư vấn kỹ thuật cơ khí">
       <div class="sv-container">
-        <div class="smart-quote-container">
+        <div class="lux-rfq-container" data-sv-reveal>
           
-          <div style="text-align:center; margin-bottom:var(--sv-sp-6);">
-            <span class="sv-section-tag" style="color: var(--sv-gold-500);">YÊU CẦU BÁO GIÁ THÔNG MINH</span>
-            <h2 class="sv-section-title" style="color: var(--sv-white); margin-inline:auto;">Gửi Bản Vẽ — Nhận Báo Giá Kèm Cam Kết Bảo Mật NDA</h2>
-            <p style="font-size:var(--sv-fs-sm); color:rgba(255,255,255,0.7); max-width:620px; margin-inline:auto; margin-top:var(--sv-sp-2); font-weight: 300;">
-              CKSV cam kết bảo vệ tuyệt đối bản vẽ công nghệ độc quyền của khách hàng. Hãy tải lên file thiết kế (.dwg, .dxf, .step, .pdf, .zip), đội ngũ kỹ sư của chúng tôi sẽ phản hồi báo giá chi tiết và tư vấn DFM trong vòng 24 giờ.
+          <div class="lux-rfq-header">
+            <span class="lux-sec-tag" style="color: var(--sv-luxury-gold);">TIẾP NHẬN HỒ SƠ &amp; TƯ VẤN KỸ THUẬT</span>
+            <h2 class="lux-sec-title" style="color: #FFFFFF;">GỬI BẢN VẼ — NHẬN TƯ VẤN DỰ TOÁN KỸ THUẬT</h2>
+            <p class="lux-sec-desc" style="color: #94A3B8; max-width: 680px; margin: 0 auto;">
+              Gửi hồ sơ bản vẽ kiến trúc, thiết kế kỹ thuật hoặc yêu cầu gia công để đội ngũ kỹ sư Sao Vàng phân tích, tư vấn giải pháp liên kết và lập dự toán chi tiết.
             </p>
           </div>
 
-          <form class="smart-quote-form" id="smartQuoteForm" enctype="multipart/form-data">
-            <div class="sq-form-row">
-              <div class="sq-form-group">
-                <label for="sqName">Họ và Tên / Tên Doanh Nghiệp *</label>
-                <input type="text" id="sqName" name="name" required placeholder="Ví dụ: Công ty Cổ phần A" />
+          <form class="lux-rfq-form" id="smartQuoteForm" enctype="multipart/form-data">
+            
+            <div class="lux-form-row">
+              <div class="lux-form-group">
+                <label class="lux-form-label" for="sqName">Họ &amp; Tên / Đơn Vị Yêu Cầu *</label>
+                <input type="text" id="sqName" name="name" class="lux-form-input" required placeholder="Ví dụ: KTS. Nguyễn Văn A / Công ty Cổ phần Kiến trúc B" />
               </div>
-              <div class="sq-form-group">
-                <label for="sqPhone">Số Điện Thoại Liên Hệ *</label>
-                <input type="tel" id="sqPhone" name="phone" required placeholder="Ví dụ: 0912345678" />
+              <div class="lux-form-group">
+                <label class="lux-form-label" for="sqPhone">Số Điện Thoại Liên Hệ *</label>
+                <input type="tel" id="sqPhone" name="phone" class="lux-form-input" required placeholder="Ví dụ: 0912 345 678" />
               </div>
             </div>
 
-            <div class="sq-form-row">
-              <div class="sq-form-group">
-                <label for="sqEmail">Địa Chỉ Email *</label>
-                <input type="email" id="sqEmail" name="email" required placeholder="Ví dụ: contact@company.com" />
+            <div class="lux-form-row">
+              <div class="lux-form-group">
+                <label class="lux-form-label" for="sqEmail">Địa Chỉ Email *</label>
+                <input type="email" id="sqEmail" name="email" class="lux-form-input" required placeholder="Ví dụ: contact@studio.com" />
               </div>
-              <div class="sq-form-group">
-                <label for="sqPillar">Dịch Vụ Quan Tâm</label>
-                <select id="sqPillar" name="pillar">
-                  <option value="engineering">Engineering (Thiết kế Shop Drawing, FEA uốn kéo)</option>
-                  <option value="manufacturing">Manufacturing (Gia công CNC, Kim loại tấm, Cắt Laser)</option>
-                  <option value="installation">Installation (Lắp dựng Kết cấu thép, Cầu thang xoắn, Kính)</option>
-                  <option value="maintenance">Maintenance (Bảo trì kết cấu định kỳ, Sửa chữa khẩn cấp)</option>
+              <div class="lux-form-group">
+                <label class="lux-form-label" for="sqSegment">Phân Loại Công Trình *</label>
+                <select id="sqSegment" name="segment" class="lux-form-select">
+                  <option value="residential">01 — Luxury Residential (Villa, Biệt thự, Penthouse)</option>
+                  <option value="yacht">02 — Luxury Yacht (Du thuyền, Công trình biển)</option>
+                  <option value="custom">03 — Custom Metalwork (Gia công kim loại theo bản vẽ)</option>
                 </select>
               </div>
             </div>
 
-            <div class="sq-form-row">
-              <div class="sq-form-group">
-                <label for="sqMessage">Yêu Cầu Chi Tiết (Mác vật liệu, Dung sai, Độ dày sơn...)</label>
-                <textarea id="sqMessage" name="message" rows="3" placeholder="Mô tả sơ bộ các yêu cầu kỹ thuật đặc thù của dự án..."></textarea>
-              </div>
-              <div class="sq-form-group" style="justify-content: flex-end;">
-                <label>Đính Kèm Bản Vẽ Kỹ Thuật (Tối đa 20MB)</label>
-                <div class="sq-file-upload-wrapper">
-                  <input type="file" id="sqFile" name="attachment" class="sq-file-upload-input" accept=".pdf,.dwg,.dxf,.step,.zip,.rar" />
-                  <div class="sq-file-upload-btn">
-                    <i class="ri-upload-cloud-2-line"></i> Tải bản vẽ lên...
-                  </div>
-                  <span class="sq-file-name" id="sqFileName">Chưa có file nào được chọn</span>
-                </div>
-                <div class="sq-nda-wrapper">
-                  <input type="checkbox" id="sqNda" required checked />
-                  <label for="sqNda">Tôi yêu cầu ký kết thỏa thuận bảo mật <a href="chinhsachbaomat.html" target="_blank">NDA</a> trước khi gửi thông tin chi tiết.</label>
+            <div class="lux-form-group">
+              <label class="lux-form-label" for="sqService">Hạng Mục Cơ Khí Quan Tâm</label>
+              <select id="sqService" name="service" class="lux-form-select">
+                <option value="balustrade">Hệ Lan Can Inox / Thép &amp; Lan Can Kính Âm Sàn</option>
+                <option value="staircase">Cầu Thang Kết Cấu Thép &amp; Hệ Tay Vịn Kim Loại</option>
+                <option value="gate-fence">Cổng Biệt Thự &amp; Hàng Rào Kim Loại Theo Thiết Kế</option>
+                <option value="canopy">Mái Kính Canopy &amp; Khung Kim Loại Hoàn Thiện Mặt Tiền</option>
+                <option value="yacht-fittings">Cơ Khí Du Thuyền (Lan can Inox 316, Louver, Máng nước Inox)</option>
+                <option value="full-package">Gói Thầu Cơ Khí Hoàn Thiện Tổng Thể</option>
+              </select>
+            </div>
+
+            <div class="lux-form-group">
+              <label class="lux-form-label" for="sqMessage">Mô Tả Yêu Cầu Kỹ Thuật (Quy cách vật liệu, Tiến độ, Vị trí công trình...)</label>
+              <textarea id="sqMessage" name="message" class="lux-form-textarea" rows="3" placeholder="Mô tả sơ bộ các yêu cầu kỹ thuật đặc thù, tiêu chuẩn hoàn thiện bề mặt hoặc gửi kèm link Google Drive/OneDrive nếu file dung lượng lớn..."></textarea>
+            </div>
+
+            <div class="lux-form-group">
+              <label class="lux-form-label">Đính Kèm Bản Vẽ Kỹ Thuật (.PDF, .DWG, .DXF, .STEP, .ZIP, .RAR — Tối đa 25MB)</label>
+              <div class="lux-file-drop">
+                <input type="file" id="sqFile" name="attachment" class="lux-file-input" accept=".pdf,.dwg,.dxf,.step,.zip,.rar" />
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                  <i class="ri-upload-cloud-2-line" style="font-size: 32px; color: var(--sv-luxury-gold);"></i>
+                  <span style="font-size: 13.5px; color: #FFFFFF; font-weight: 600;">Kéo thả file bản vẽ vào đây hoặc bấm để chọn tệp</span>
+                  <span class="sq-file-name" id="sqFileName" style="font-size: 12px; color: #94A3B8;">Chưa có file nào được chọn</span>
                 </div>
               </div>
             </div>
 
-            <div style="margin-top: 24px;">
-              <button type="submit" class="sq-btn-submit">Gửi Bản Vẽ &amp; Nhận Báo Giá DFM Trong 24 Giờ</button>
+            <div class="lux-nda-badge">
+              <i class="ri-shield-keyhole-line"></i>
+              <div>
+                <strong>CAM KẾT BẢO MẬT HỒ SƠ (NDA GUARANTEE):</strong> Chúng tôi cam kết bảo mật tuyệt đối 100% bản quyền thiết kế, hồ sơ bản vẽ kiến trúc và thông tin dự án của Quý đối tác theo quy chuẩn bảo mật dự án.
+              </div>
+            </div>
+
+            <div>
+              <button type="submit" class="lux-btn-submit">
+                <i class="ri-send-plane-fill"></i> GỬI BẢN VẼ &amp; NHẬN TƯ VẤN DỰ TOÁN
+              </button>
             </div>
             
-            <div id="sqAlert" style="margin-top: 16px; padding: 12px; border-radius: 4px; display: none; font-size: 13px; text-align: center;"></div>
+            <div id="sqAlert" style="margin-top: 16px; padding: 12px; border-radius: 6px; display: none; font-size: 13.5px; text-align: center;"></div>
           </form>
 
         </div>
       </div>
     </section>
 
-    <!-- File name selection and Form submit logic -->
+    <!-- File selection & Form submit logic -->
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const fileInput = document.getElementById('sqFile');
@@ -2289,9 +2727,11 @@
         if (fileInput && fileNameSpan) {
           fileInput.addEventListener('change', (e) => {
             if (e.target.files.length > 0) {
-              fileNameSpan.textContent = e.target.files[0].name;
+              fileNameSpan.textContent = "Đã chọn: " + e.target.files[0].name;
+              fileNameSpan.style.color = "var(--sv-luxury-gold)";
             } else {
               fileNameSpan.textContent = "Chưa có file nào được chọn";
+              fileNameSpan.style.color = "#94A3B8";
             }
           });
         }
@@ -2307,10 +2747,10 @@
             alertBox.style.display = 'block';
             alertBox.style.background = '#fef3c7';
             alertBox.style.color = '#92400e';
-            alertBox.textContent = 'Đang mã hóa dữ liệu bản vẽ và truyền tải bảo mật...';
+            alertBox.textContent = 'Đang tiếp nhận hồ sơ bản vẽ và khởi tạo cam kết bảo mật...';
             
             const formData = new FormData(form);
-            formData.append('source', 'Form Báo giá Thông minh CKSV');
+            formData.append('source', 'Form Báo Giá & Tư Vấn Kỹ Thuật Cơ Khí Sao Vàng');
             
             try {
               const response = await fetch('/api/contact', {
@@ -2321,9 +2761,12 @@
               if (response.ok) {
                 alertBox.style.background = '#d1fae5';
                 alertBox.style.color = '#065f46';
-                alertBox.textContent = 'Gửi dữ liệu thành công! Cam kết NDA đã được kích hoạt. Bộ phận kỹ sư sẽ gửi phản hồi báo giá DFM trong 24 giờ.';
+                alertBox.textContent = 'Tiếp nhận hồ sơ thành công! Đội ngũ kỹ sư Cơ khí Sao Vàng sẽ liên hệ tư vấn kỹ thuật và gửi dự toán chi tiết tới Quý đối tác sớm nhất.';
                 form.reset();
-                fileNameSpan.textContent = "Chưa có file nào được chọn";
+                if (fileNameSpan) {
+                  fileNameSpan.textContent = "Chưa có file nào được chọn";
+                  fileNameSpan.style.color = "#94A3B8";
+                }
               } else {
                 throw new Error(result.error || 'Có lỗi phát sinh khi truyền tải dữ liệu.');
               }
