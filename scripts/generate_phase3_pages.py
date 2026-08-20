@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+import os
+import sys
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+# 1. cuanhomkinh.html
+cuanhomkinh_html = """<!DOCTYPE html>
 <html lang="vi">
 <head>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
@@ -402,3 +408,324 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+"""
+
+# 2. vachkinh.html
+vachkinh_html = """<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0F172A" />
+  <title>Vách Kính &amp; Mặt Dựng Kiến Trúc | SV ALUMINIUM — Sao Vàng</title>
+  <meta name="description" content="Giải pháp vách kính thông tầng, vách ngăn Slim nội thất và mặt dựng nhôm kính MD50/MD52/MD65 cho biệt thự hiện đại, showroom và tòa nhà quy mô của SV ALUMINIUM." />
+  <meta name="keywords" content="vách kính mặt dựng, mặt dựng nhôm kính md65, vách kính slim nội thất, vách kính thông tầng, mặt dựng stick giấu đố, sao vàng aluminium" />
+  
+  <meta property="og:title" content="Vách Kính &amp; Mặt Dựng Kiến Trúc | SV ALUMINIUM — Sao Vàng" />
+  <meta property="og:description" content="Giải pháp mặt dựng và vách kính kiến trúc cho công trình quy mô và yêu cầu kỹ thuật cao." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/projects/yacht-tulip/hero.jpg" />
+  <link rel="canonical" href="https://www.cokhisaovang.com/vachkinh.html" />
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+
+  <style>
+    :root {
+      --sv-dark: #0F172A;
+      --sv-dark-card: #1E293B;
+      --sv-gold: #C9A227;
+      --sv-gold-light: #E5C158;
+      --sv-slate: #64748B;
+      --sv-bg-light: #F8FAFC;
+      --ff-head: 'Montserrat', sans-serif;
+      --ff-body: 'Inter', sans-serif;
+    }
+
+    body { font-family: var(--ff-body); color: #334155; background-color: #FFFFFF; }
+    
+    .al-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-family: var(--ff-head); font-size: 11px; font-weight: 800;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--sv-gold); margin-bottom: 12px;
+    }
+    .al-title {
+      font-family: var(--ff-head); font-size: clamp(24px, 4vw, 36px);
+      font-weight: 800; color: var(--sv-dark); line-height: 1.25; margin-bottom: 16px;
+    }
+    .al-title-light { color: #FFFFFF; }
+    .al-subtitle { font-size: clamp(14px, 1.8vw, 16px); color: var(--sv-slate); line-height: 1.7; max-width: 700px; }
+
+    /* HERO */
+    .facade-hero {
+      position: relative; background: radial-gradient(circle at 50% 30%, #1E293B 0%, #0F172A 100%);
+      color: #FFFFFF; padding: 150px 0 90px; text-align: center; border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+    }
+    .facade-hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(201, 162, 39, 0.12); border: 1px solid rgba(201, 162, 39, 0.4);
+      padding: 6px 18px; border-radius: 30px; font-family: var(--ff-head);
+      font-size: 11px; font-weight: 800; color: var(--sv-gold); text-transform: uppercase;
+      letter-spacing: 0.12em; margin-bottom: 20px;
+    }
+    .facade-hero-h1 {
+      font-family: var(--ff-head); font-size: clamp(28px, 5vw, 48px);
+      font-weight: 900; line-height: 1.2; margin-bottom: 16px;
+    }
+    .facade-hero-h1 span {
+      background: linear-gradient(135deg, #FFFFFF 0%, var(--sv-gold) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .facade-hero-p { font-size: clamp(14.5px, 1.8vw, 17px); color: #94A3B8; max-width: 760px; margin: 0 auto 30px; line-height: 1.7; }
+
+    /* FACADE CARD */
+    .facade-card {
+      background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 12px;
+      padding: 36px; margin-bottom: 30px; transition: all 0.3s ease;
+    }
+    .facade-card:hover { border-color: var(--sv-gold); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+    .facade-header {
+      display: flex; justify-content: space-between; align-items: flex-start;
+      margin-bottom: 20px; flex-wrap: wrap; gap: 16px; border-bottom: 1px solid #F1F5F9; padding-bottom: 16px;
+    }
+    .facade-title { font-family: var(--ff-head); font-size: 22px; font-weight: 800; color: var(--sv-dark); }
+    .facade-desc { font-size: 13.5px; color: var(--sv-slate); line-height: 1.6; }
+
+    .al-btn-gold {
+      background: linear-gradient(135deg, #C9A227 0%, #B89218 100%);
+      color: #0F172A; font-family: var(--ff-head); font-size: 13px; font-weight: 800;
+      padding: 12px 24px; border-radius: 6px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;
+      box-shadow: 0 4px 14px rgba(201, 162, 39, 0.3); transition: all 0.3s ease;
+    }
+    .al-btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(201, 162, 39, 0.5); color: #000; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header-v2" id="navbar" role="banner">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Sao Vàng">
+        <img width="200" height="60" fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 48px; width: auto; display: block;" />
+      </a>
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html" class="nav-menu-link">Trang Chủ</a>
+        <a href="gioithieu.html" class="nav-menu-link">Giới Thiệu</a>
+        <a href="cokhisaovang.html" class="nav-menu-link">Cơ Khí Sao Vàng</a>
+        <a href="nhomsaovang.html" class="nav-menu-link">SV Aluminium</a>
+        <a href="cuanhomkinh.html" class="nav-menu-link">Cửa Nhôm Kính</a>
+        <a href="vachkinh.html" class="nav-menu-link active">Vách Kính &amp; Mặt Dựng</a>
+        <a href="thuvienprofilenhom.html" class="nav-menu-link">Thư Viện Profile</a>
+        <a href="duan.html" class="nav-menu-link">Dự Án</a>
+        <a href="lienhe.html" class="nav-menu-link">Liên Hệ</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="vachkinh.html#facadeRfq" class="btn-primary" style="font-family: var(--ff-head); font-size: 12.5px; font-weight: 800; padding: 10px 20px; border-radius: 4px; background: #C9A227; color: #0F172A; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+          <i class="ri-file-text-line"></i> DỰ TOÁN VÁCH
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="facade-hero">
+    <div class="container">
+      <div class="facade-hero-badge"><i class="ri-building-2-line"></i> SV ALUMINIUM &bull; ARCHITECTURAL FACADES</div>
+      <h1 class="facade-hero-h1">HỆ VÁCH KÍNH &amp;<br><span>MẶT DỰNG KIẾN TRÚC</span></h1>
+      <p class="facade-hero-p">
+        Giải pháp mặt dựng nhôm kính MD50/MD52/MD65 và vách ngăn Slim nội thất cho biệt thự thông tầng, tòa nhà văn phòng, showroom và công trình quy mô yêu cầu kỹ thuật cao.
+      </p>
+      <div style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;">
+        <a href="#facadeList" class="al-btn-gold"><i class="ri-arrow-down-line"></i> KHÁM PHÁ CÁC GIẢI PHÁP MẶT DỰNG</a>
+        <a href="thuvienprofilenhom.html" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #FFF; padding: 12px 24px; border-radius: 6px; font-family: var(--ff-head); font-size: 13px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;">
+          <i class="ri-book-read-line"></i> TRA CỨU TIẾT DIỆN PROFILE
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 FACADE CATEGORIES -->
+  <section style="padding: 80px 0; background: #F8FAFC;" id="facadeList">
+    <div class="container">
+
+      <!-- 01. VÁCH KÍNH CỐ ĐỊNH -->
+      <div class="facade-card">
+        <div class="facade-header">
+          <div>
+            <span class="al-tag"><i class="ri-layout-masonry-line"></i> 01 — VÁCH KÍNH NHÔM TIÊU CHUẨN</span>
+            <div class="facade-title">Vách Kính Cố Định Cách Âm &amp; Lấy Sáng</div>
+            <div class="facade-desc">Giải pháp vách kính nhôm hệ định hình ngăn chia không gian phòng khách, phòng ngủ và hành lang.</div>
+          </div>
+          <span style="font-size: 11.5px; font-weight: 700; color: #0284C7; background: #E0F2FE; padding: 6px 12px; border-radius: 4px;">
+            Nhà Ở &bull; Căn Hộ
+          </span>
+        </div>
+        <p style="font-size: 13.5px; color: #475569; line-height: 1.7; margin: 0;">
+          Sử dụng hệ thanh nhôm định hình kết hợp kính an toàn dán 2 lớp hoặc kính cường lực, gioăng đệm EPDM chống rung, triệt tiêu tiếng ồn đô thị và đón trọn vẹn ánh sáng tự nhiên.
+        </p>
+      </div>
+
+      <!-- 02. SLIM INTERIOR -->
+      <div class="facade-card">
+        <div class="facade-header">
+          <div>
+            <span class="al-tag"><i class="ri-layout-grid-line"></i> 02 — VÁCH KÍNH SLIM NỘI THẤT</span>
+            <div class="facade-title">Vách Ngăn Slim 40 Khung Siêu Mảnh (Minimalist)</div>
+            <div class="facade-desc">Đường nét thanh mảnh tối giản, xóa nhòa ranh giới giữa các phòng chức năng.</div>
+          </div>
+          <span style="font-size: 11.5px; font-weight: 700; color: #7C3AED; background: #EDE9FE; padding: 6px 12px; border-radius: 4px;">
+            Minimalist Interior
+          </span>
+        </div>
+        <p style="font-size: 13.5px; color: #475569; line-height: 1.7; margin: 0;">
+          Ứng dụng hệ nhôm Slim 40 phôi siêu mỏng kết hợp kính siêu trong (Low-Iron) hoặc kính sọc Fluted, tạo không gian mở sang trọng giữa phòng khách, phòng ăn và phòng làm việc.
+        </p>
+      </div>
+
+      <!-- 03. MD50 / MD52 -->
+      <div class="facade-card">
+        <div class="facade-header">
+          <div>
+            <span class="al-tag"><i class="ri-building-line"></i> 03 — MẶT DỰNG MD50 / MD52</span>
+            <div class="facade-title">Mặt Dựng Nhôm Kính MD50 &amp; MD52 (Lộ Đố / Giấu Đố)</div>
+            <div class="facade-desc">Giải pháp bao che mặt tiền showroom, văn phòng và vách kính thông tầng biệt thự.</div>
+          </div>
+          <span style="font-size: 11.5px; font-weight: 700; color: #D97706; background: #FEF3C7; padding: 6px 12px; border-radius: 4px;">
+            Mã: Seaaluk, Yongxing
+          </span>
+        </div>
+        <p style="font-size: 13.5px; color: #475569; line-height: 1.7; margin: 0;">
+          Hệ mặt dựng Stick bản nhôm 50-52mm chắc khỏe, cho phép lựa chọn hai phong cách: Giấu đố liền mạch tạo bức tường kính phẳng tắp hoặc Lộ đố ngang/dọc tạo điểm nhấn hình khối khỏe khoắn cho công trình.
+        </p>
+      </div>
+
+      <!-- 04. MD65 HIGH-SPAN -->
+      <div class="facade-card" style="border-color: #C9A227; background: #0F172A; color: #FFFFFF;">
+        <div class="facade-header" style="border-bottom-color: #334155;">
+          <div>
+            <span class="al-tag" style="color: #C9A227;"><i class="ri-shield-star-line"></i> 04 — MẶT DỰNG KHỔ LỚN MD65</span>
+            <div class="facade-title" style="color: #FFFFFF;">Mặt Dựng Khổ Lớn MD65 (High-Rise &amp; Marine Facade)</div>
+            <div class="facade-desc" style="color: #94A3B8;">Giải pháp mặt dựng cho công trình quy mô và yêu cầu kỹ thuật cao.</div>
+          </div>
+          <span style="font-size: 11.5px; font-weight: 800; color: #0F172A; background: #C9A227; padding: 6px 12px; border-radius: 4px;">
+            Ultra Luxury Facade
+          </span>
+        </div>
+        <p style="font-size: 13.5px; color: #CBD5E1; line-height: 1.7; margin: 0;">
+          Bản nhôm kết cấu 65mm gia cường mô-men quán tính chống võng dầm nhịp lớn, tối ưu cho tòa nhà cao tầng, resort biển chịu tải trọng gió bão lớn và vách kính khổ lớn thông tầng 2-3 tầng biệt thự.
+        </p>
+      </div>
+
+      <!-- 05. BESPOKE GLAZING -->
+      <div class="facade-card">
+        <div class="facade-header">
+          <div>
+            <span class="al-tag"><i class="ri-magic-line"></i> 05 — GIẢI PHÁP THEO THIẾT KẾ RIÊNG</span>
+            <div class="facade-title">Vách Kính Canopy, Giếng Trời &amp; Góc Uốn Cong (Bespoke)</div>
+            <div class="facade-desc">Gia công chính xác theo bản vẽ kiến trúc độc bản của Kiến trúc sư.</div>
+          </div>
+          <span style="font-size: 11.5px; font-weight: 700; color: #059669; background: #D1FAE5; padding: 6px 12px; border-radius: 4px;">
+            Bespoke Architecture
+          </span>
+        </div>
+        <p style="font-size: 13.5px; color: #475569; line-height: 1.7; margin: 0;">
+          Kết hợp giữa kết cấu dầm thép định hình và chân spider Inox 304/316, kính hộp Low-E dán an toàn chống nóng tạo nên các mái sảnh canopy vươn dài, giếng trời đón sáng và vách kính uốn cong mềm mại.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RFQ FORM -->
+  <section style="padding: 80px 0; background: #FFFFFF;" id="facadeRfq">
+    <div class="container" style="max-width: 800px;">
+      <div style="text-align: center; margin-bottom: 36px;">
+        <span class="al-tag"><i class="ri-file-text-line"></i> DỰ TOÁN MẶT DỰNG &amp; VÁCH KÍNH</span>
+        <h2 class="al-title">Gửi Bản Vẽ &amp; Yêu Cầu Kỹ Thuật Mặt Dựng</h2>
+        <p class="al-subtitle" style="margin: 0 auto;">Đội ngũ kỹ sư kết cấu Sao Vàng sẽ phân tích tải trọng, đề xuất phương án và phản hồi dự toán chi tiết.</p>
+      </div>
+
+      <div style="background: #F8FAFC; border: 1px solid #E2E8F0; border-radius: 12px; padding: 32px;">
+        <form onsubmit="event.preventDefault(); alert('Cảm ơn Quý khách! Kỹ sư kết cấu SV Aluminium sẽ liên hệ tư vấn trong 24h.');">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+            <input type="text" required placeholder="Họ tên / Đơn vị tư vấn thiết kế *" style="padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 14px; background: #FFF;" />
+            <input type="tel" required placeholder="Số điện thoại / Zalo *" style="padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 14px; background: #FFF;" />
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+            <select style="padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 14px; background: #FFF;">
+              <option>Hạng mục: Mặt Dựng MD65 Khổ Lớn</option>
+              <option>Mặt Dựng MD50 / MD52</option>
+              <option>Vách Kính Slim 40 Nội Thất</option>
+              <option>Vách Kính Thông Tầng Biệt Thự</option>
+              <option>Mái Kính Canopy &amp; Giếng Trời</option>
+            </select>
+            <input type="text" placeholder="Địa điểm công trình (Tỉnh/TP)" style="padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 14px; background: #FFF;" />
+          </div>
+          <div style="margin-bottom: 20px;">
+            <textarea rows="3" placeholder="Ghi chú khối lượng m2 ước tính hoặc yêu cầu kính (Low-E, phản quang, kính hộp)..." style="width: 100%; padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 14px; background: #FFF; resize: vertical;"></textarea>
+          </div>
+          <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 6px; padding: 12px 16px; margin-bottom: 20px; font-size: 12.5px; color: #64748B;">
+            <i class="ri-shield-check-line" style="color: #C9A227;"></i> Hỗ trợ tiếp nhận hồ sơ dự án theo thỏa thuận bảo mật (NDA) khi có yêu cầu.
+          </div>
+          <div style="text-align: center;">
+            <button type="submit" class="al-btn-gold" style="border: none; cursor: pointer; padding: 14px 32px; font-size: 14px;">
+              <i class="ri-send-plane-line"></i> GỬI YÊU CẦU DỰ TOÁN VÁCH KÍNH
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-v2" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img width="180" height="54" loading="lazy" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 44px; width: auto; display: block; margin-bottom: 12px;" />
+            <p class="footer-desc">SV ALUMINIUM &bull; Architectural Aluminium Systems — Giải pháp nhôm kính từ phân khúc tiêu chuẩn đến kiến trúc cao cấp cho Residence, Villa, Hospitality &amp; Yacht.</p>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">HỆ THỐNG NHÔM KÍNH</div>
+          <div class="footer-links">
+            <a href="cuanhomkinh.html" class="footer-link">Cửa Nhôm Kính Cao Cấp</a>
+            <a href="vachkinh.html" class="footer-link">Vách Kính &amp; Mặt Dựng</a>
+            <a href="thuvienprofilenhom.html" class="footer-link">Thư Viện Profile Nhôm</a>
+            <a href="nhomsaovang.html#finishesSection" class="footer-link">Bảng Màu &amp; Anodize ED</a>
+            <a href="duan.html" class="footer-link">Dự Án Đã Thực Hiện</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-title">LIÊN HỆ KỸ THUẬT</div>
+          <div class="footer-contact-item"><i class="ri-phone-fill"></i> Hotline / Zalo: 0869 590 279</div>
+          <div class="footer-contact-item"><i class="ri-mail-fill"></i> cokhisaovangvn@gmail.com</div>
+          <div class="footer-contact-item"><i class="ri-map-pin-fill"></i> Tầng 3, TT7-35 KĐT Văn Phú, Hà Đông, Hà Nội</div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG. MST: 0110808047.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+"""
+
+with open(r"d:\Sao Vàng\Website-SaoVang\website\cuanhomkinh.html", "w", encoding="utf-8") as f:
+    f.write(cuanhomkinh_html)
+print("✅ Generated cuanhomkinh.html")
+
+with open(r"d:\Sao Vàng\Website-SaoVang\website\vachkinh.html", "w", encoding="utf-8") as f:
+    f.write(vachkinh_html)
+print("✅ Generated vachkinh.html")
+
+print("🎉 PHASE 3 SUCCESS: Product Application Suite (cuanhomkinh.html & vachkinh.html) generated!")
