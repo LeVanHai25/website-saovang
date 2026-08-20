@@ -623,20 +623,34 @@ function renderDetail({ project: p, blocks, gallery, related }) {
     ].join('');
   }
 
-  // Gallery
-  if (gallery && gallery.length) {
+  // Gallery with Captions
+  const galList = p.galleryWithCaptions || (Array.isArray(gallery) ? gallery.map((g, idx) => ({ url: typeof g === 'string' ? g : g.url, caption: typeof g === 'string' ? `${p.title} - Chi tiết ${idx + 1}` : g.caption })) : []);
+  
+  if (galList && galList.length) {
     document.getElementById('gallerySection').style.display = 'block';
-    document.getElementById('galleryGrid').innerHTML = gallery.map((img, idx) => `
-      <div class="gallery-item" onclick="openLightbox('${CMS.imgUrl(img)}')" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.06); cursor: pointer; aspect-ratio: 4/3; background: #0F172A;">
-        <img decoding="async" src="${CMS.imgUrl(img)}" alt="${CMS.esc(p.title)} - Ảnh ${idx + 1}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;" onmouseover="this.style.transform='scale(1.06)'" onmouseout="this.style.transform='scale(1)'">
-      </div>`).join('');
+    document.getElementById('galleryGrid').innerHTML = galList.map((item, idx) => {
+      const imgUrl = item.url || item;
+      const caption = item.caption || `${p.title} - Ảnh chi tiết ${idx + 1}`;
+      return `
+      <div class="gallery-item-card" onclick="openLightbox('${CMS.imgUrl(imgUrl)}', '${CMS.esc(caption)}')" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 14px rgba(0,0,0,0.06); cursor: pointer; background: #FFFFFF; border: 1px solid #E2E8F0; display: flex; flex-direction: column; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+        <div style="aspect-ratio: 16/11; overflow: hidden; background: #0F172A; position: relative;">
+          <img decoding="async" src="${CMS.imgUrl(imgUrl)}" alt="${CMS.esc(caption)}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+          <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(15,23,42,0.85); color: #C9A227; font-size: 11px; font-weight: 700; padding: 4px 8px; border-radius: 4px; backdrop-filter: blur(4px); display: flex; align-items: center; gap: 4px;">
+            <i class="ri-zoom-in-line"></i> Phóng to
+          </span>
+        </div>
+        <div style="padding: 12px 16px; font-size: 12.5px; color: #475569; line-height: 1.5; font-weight: 500; border-top: 1px solid #F1F5F9; background: #FFFFFF;">
+          ${CMS.esc(caption)}
+        </div>
+      </div>`;
+    }).join('');
   }
 
   // Related projects
   if (related && related.length) {
     document.getElementById('relatedSection').style.display = 'block';
     document.getElementById('relatedGrid').innerHTML = related.map(r => `
-      <a href="duanchitiet.html?slug=${r.slug || r.id}" class="related-card" style="text-decoration: none; border-radius: 8px; overflow: hidden; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column;">
+      <a href="duanchitiet.html?slug=${r.slug || r.id}" class="related-card" style="text-decoration: none; border-radius: 8px; overflow: hidden; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 4px 12px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: transform 0.3s ease;">
         <div style="aspect-ratio: 16/10; overflow: hidden; background: #0F172A;">
           <img decoding="async" src="${CMS.imgUrl(r.thumbnail) || 'assets/images/project-villa.png'}" alt="${CMS.esc(r.title)}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
         </div>
@@ -659,13 +673,26 @@ function renderBlock(block) {
   }
 }
 
-function openLightbox(url) {
-  document.getElementById('lightboxImg').src = url;
-  document.getElementById('lightbox').style.display = 'flex';
+function openLightbox(url, caption) {
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightboxImg');
+  if (img) img.src = url;
+  
+  let capEl = document.getElementById('lightboxCaption');
+  if (!capEl && lb) {
+    capEl = document.createElement('div');
+    capEl.id = 'lightboxCaption';
+    capEl.style.cssText = 'position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); background: rgba(15,23,42,0.9); color: #FFFFFF; padding: 10px 24px; border-radius: 30px; font-size: 13.5px; font-weight: 600; text-align: center; max-width: 90%; backdrop-filter: blur(6px); border: 1px solid rgba(201,162,39,0.3);';
+    lb.appendChild(capEl);
+  }
+  if (capEl) capEl.textContent = caption || '';
+
+  if (lb) lb.style.display = 'flex';
   document.body.style.overflow = 'hidden';
 }
 function closeLightbox() {
-  document.getElementById('lightbox').style.display = 'none';
+  const lb = document.getElementById('lightbox');
+  if (lb) lb.style.display = 'none';
   document.body.style.overflow = '';
 }
 window.openLightbox = openLightbox;

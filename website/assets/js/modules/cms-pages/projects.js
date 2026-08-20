@@ -92,7 +92,7 @@
         <span class="proj-badge" style="position: absolute; top: 14px; left: 14px; background: rgba(15, 23, 42, 0.85); color: #C9A227; font-family: var(--ff-head); font-size: 10px; font-weight: 800; padding: 5px 12px; border-radius: 4px; text-transform: uppercase; z-index: 2; letter-spacing: 0.08em; backdrop-filter: blur(6px); border: 1px solid rgba(201, 162, 39, 0.3);">${badgeText}</span>
         
         <span style="position: absolute; bottom: 12px; right: 12px; background: rgba(0, 0, 0, 0.75); color: #FFFFFF; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 20px; backdrop-filter: blur(4px); z-index: 2; display: flex; align-items: center; gap: 4px;">
-          <i class="ri-camera-lens-line" style="color: #C9A227;"></i> ${photoCount} Ảnh thực tế
+          <i class="ri-camera-lens-line" style="color: #C9A227;"></i> ${photoCount} Ảnh chọn lọc
         </span>
       </div>
       
