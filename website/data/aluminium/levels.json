@@ -1,0 +1,36 @@
+{
+  "levels": [
+    {
+      "id": "essential",
+      "name_vi": "Essential",
+      "label_vi": "Phân Khúc Tiêu Chuẩn",
+      "tagline_vi": "Functional Architectural Solutions",
+      "description_vi": "Giải pháp nhôm kính thiết thực, đảm bảo 100% công năng, kết cấu bền bỉ và tối ưu chi phí đầu tư.",
+      "badge_color": "#475569"
+    },
+    {
+      "id": "premium",
+      "name_vi": "Premium",
+      "label_vi": "Phân Khúc Nâng Cao",
+      "tagline_vi": "Enhanced Architectural Solutions",
+      "description_vi": "Hoàn thiện bề mặt cao cấp, cấu hình cách âm cách nhiệt tăng cường, đa dạng tùy chọn màu sắc thời thượng.",
+      "badge_color": "#0284C7"
+    },
+    {
+      "id": "signature",
+      "name_vi": "Signature",
+      "label_vi": "Phân Khúc Cao Cấp",
+      "tagline_vi": "High-End Architectural Systems",
+      "description_vi": "Hệ nhôm rãnh C Châu Âu, hệ lùa 3 ray bản lớn và cửa Slim tối giản định hình phong cách kiến trúc tinh tế.",
+      "badge_color": "#D97706"
+    },
+    {
+      "id": "ultra-luxury",
+      "name_vi": "Ultra Luxury",
+      "label_vi": "Phân Khúc Độc Bản & Siêu Cao Cấp",
+      "tagline_vi": "Bespoke Architectural Solutions",
+      "description_vi": "Giải pháp cửa trượt nâng Panorama L180, xếp trượt khẩu độ lớn và bề mặt mạ Anodize ED cho các công trình siêu sang.",
+      "badge_color": "#C9A227"
+    }
+  ]
+}

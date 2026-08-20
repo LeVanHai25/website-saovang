@@ -1,0 +1,15 @@
+{
+  "policy": "No unverified technical parameters or absolute warranty claims shall be published without manufacturer test reports or official certificates.",
+  "status_definitions": {
+    "verified": "Thông số đã được đối chiếu và xác minh với hồ sơ kỹ thuật chính thức từ nhà máy sản xuất.",
+    "pending_verification": "Thông số đang trong quá trình chờ cung cấp và xác thực tài liệu từ đối tác/nhà máy.",
+    "not_available": "Thông số chưa có sẵn hoặc được sản xuất theo yêu cầu đặt hàng riêng (Bespoke)."
+  },
+  "anodize_ed_warranty_claim_policy": {
+    "status": "pending_official_warranty_certificate",
+    "guideline": "Hiển thị 'Anodize ED | Champagne Series — Lựa chọn hoàn thiện phù hợp cho công trình ngoài trời và ven biển'. Chỉ công bố mốc '15 năm' khi có chứng thư bảo hành chính thức."
+  },
+  "nda_policy": {
+    "wording": "Hỗ trợ tiếp nhận hồ sơ dự án theo thỏa thuận bảo mật (NDA) khi có yêu cầu."
+  }
+}

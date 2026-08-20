@@ -1,0 +1,54 @@
+{
+  "applications": [
+    {
+      "id": "main-entrance",
+      "name_vi": "Cửa Đi Chính Sảnh",
+      "group": "door"
+    },
+    {
+      "id": "balcony-sliding",
+      "name_vi": "Cửa Đi Ban Công Lùa",
+      "group": "door"
+    },
+    {
+      "id": "living-panorama",
+      "name_vi": "Cửa Panorama Phòng Khách",
+      "group": "door"
+    },
+    {
+      "id": "bedroom-door",
+      "name_vi": "Cửa Đi Thông Phòng",
+      "group": "door"
+    },
+    {
+      "id": "window-casement",
+      "name_vi": "Cửa Sổ Mở Quay / Hất",
+      "group": "window"
+    },
+    {
+      "id": "window-sliding",
+      "name_vi": "Cửa Sổ Lùa Trượt",
+      "group": "window"
+    },
+    {
+      "id": "garden-folding",
+      "name_vi": "Cửa Xếp Trượt Sân Vườn",
+      "group": "door"
+    },
+    {
+      "id": "slim-interior-partition",
+      "name_vi": "Vách Kính & Cửa Slim Nội Thất",
+      "group": "slim"
+    },
+    {
+      "id": "slim-exterior-door",
+      "name_vi": "Cửa Slim Ngoại Thất Chịu Lực",
+      "group": "slim"
+    },
+    {
+      "id": "curtain-wall-facade",
+      "name_vi": "Mặt Dựng Vách Kính Tòa Nhà",
+      "group": "facade"
+    }
+  ]
+}

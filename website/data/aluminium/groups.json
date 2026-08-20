@@ -1,0 +1,87 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-20",
+  "groups": [
+    {
+      "id": "opening",
+      "order": 1,
+      "code": "GRP-01",
+      "name_vi": "Cửa Mở Quay Châu Âu",
+      "name_en": "European Opening Systems",
+      "tagline_vi": "Giải pháp cửa đi và cửa sổ mở quay tiêu chuẩn rãnh C và đa khoang",
+      "tagline_en": "Standard & thermal-break opening door & window systems",
+      "description_vi": "Hệ thống cửa mở quay 1 cánh, 2 cánh, 4 cánh và cửa sổ mở hất/quay tích hợp rãnh C tiêu chuẩn Châu Âu và gioăng EPDM đa tầng cách âm kín khít.",
+      "icon": "ri-door-open-line",
+      "system_ids": [
+        "xf55-flat",
+        "xf55-multi",
+        "c55",
+        "c65",
+        "xfv55"
+      ]
+    },
+    {
+      "id": "sliding-panorama",
+      "order": 2,
+      "code": "GRP-02",
+      "name_vi": "Cửa Lùa & Panorama Khổ Lớn",
+      "name_en": "Large Sliding & Panoramic Systems",
+      "tagline_vi": "Mở rộng không gian và tối đa hóa tầm nhìn cảnh quan",
+      "tagline_en": "Expansive architectural sliding & lift-and-slide systems",
+      "description_vi": "Hệ cửa lùa trượt 2 ray, 3 ray và trượt nâng (Lift & Slide) khẩu độ lớn, vận hành êm ái, tối ưu cho phòng khách view sân vườn, penthouse và biệt thự hướng biển.",
+      "icon": "ri-aspect-ratio-line",
+      "system_ids": [
+        "xf93",
+        "l94-l95",
+        "l120",
+        "l180"
+      ]
+    },
+    {
+      "id": "slim",
+      "order": 3,
+      "code": "GRP-03",
+      "name_vi": "Hệ Nhôm Slim Tối Giản",
+      "name_en": "Minimalist Slim Aluminium Systems",
+      "tagline_vi": "Khung nhôm siêu mảnh tối ưu ánh sáng và độ thông thoáng",
+      "tagline_en": "Ultra-slim profile systems for modern minimal aesthetics",
+      "description_vi": "Đường nét thanh mảnh hiện đại cho không gian nội thất tối giản (Slim 40) và hệ cửa Slim ngoại thất chịu lực tải gió (Slim 130).",
+      "icon": "ri-layout-grid-line",
+      "system_ids": [
+        "slim-40",
+        "slim-130"
+      ]
+    },
+    {
+      "id": "special",
+      "order": 4,
+      "code": "GRP-04",
+      "name_vi": "Cửa Thủy Lực & Xếp Trượt Đặc Biệt",
+      "name_en": "Hydraulic & Heavy-Duty Folding Systems",
+      "tagline_vi": "Bản cánh lớn bề thế cho sảnh chính và giải pháp xếp trượt siêu rộng",
+      "tagline_en": "Grand entrance hydraulic doors & multi-panel bi-fold systems",
+      "description_vi": "Cửa thủy lực bản cánh lớn chịu tải cao cho đại sảnh và cửa xếp trượt đa cánh giải phóng 100% không gian mở liên kết sân vườn hồ bơi.",
+      "icon": "ri-split-cells-horizontal",
+      "system_ids": [
+        "vh65-tl60",
+        "f63",
+        "x80-soco80"
+      ]
+    },
+    {
+      "id": "facade",
+      "order": 5,
+      "code": "GRP-05",
+      "name_vi": "Vách Kính & Mặt Dựng Kiến Trúc",
+      "name_en": "Architectural Facade & Curtain Wall Systems",
+      "tagline_vi": "Giải pháp bao che mặt đứng cho công trình quy mô và kiến trúc hiện đại",
+      "tagline_en": "Engineered building envelope & curtain wall solutions",
+      "description_vi": "Hệ mặt dựng lộ đố, giấu đố và vách kính thông tầng khổ lớn được thiết kế đồng bộ với hệ thống phụ kiện liên kết chịu lực chuyên dụng.",
+      "icon": "ri-building-2-line",
+      "system_ids": [
+        "md50-md52",
+        "md65"
+      ]
+    }
+  ]
+}

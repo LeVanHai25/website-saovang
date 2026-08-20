@@ -1,0 +1,104 @@
+{
+  "tiers": [
+    {
+      "id": "powder-coating",
+      "name_vi": "Sơn Tĩnh Điện Cao Cấp",
+      "name_en": "Premium Powder Coating",
+      "description_vi": "Công nghệ sơn sấy tĩnh điện tự động bảo vệ bề mặt chống oxy hóa, bền màu trước tác động thời tiết.",
+      "colors": [
+        {
+          "id": "white",
+          "name_vi": "Trắng Sứ",
+          "hex": "#F8FAFC",
+          "is_feature": false
+        },
+        {
+          "id": "cafe",
+          "name_vi": "Nâu Café",
+          "hex": "#4A3728",
+          "is_feature": false
+        },
+        {
+          "id": "black",
+          "name_vi": "Đen Tiêu Chuẩn",
+          "hex": "#1E293B",
+          "is_feature": false
+        },
+        {
+          "id": "wood",
+          "name_vi": "Vân Gỗ Tự Nhiên",
+          "hex": "#8B5A2B",
+          "is_feature": false
+        },
+        {
+          "id": "stone-gray",
+          "name_vi": "Xám Đá",
+          "hex": "#64748B",
+          "is_feature": false
+        },
+        {
+          "id": "metallic-gray",
+          "name_vi": "Xám Ánh Kim",
+          "hex": "#475569",
+          "is_feature": true,
+          "badge": "Màu Chủ Lực"
+        },
+        {
+          "id": "infinity-silver-gray",
+          "name_vi": "Xám Vô Cực Nhũ Bạc",
+          "hex": "#334155",
+          "is_feature": true,
+          "badge": "Màu Độc Bản"
+        }
+      ]
+    },
+    {
+      "id": "special-finish",
+      "name_vi": "Xử Lý Bề Mặt Tinh Chỉnh",
+      "name_en": "Special Architectural Finish",
+      "description_vi": "Dòng hoàn thiện bề mặt mờ sâu và xử lý chuyên dụng cho không gian nội thất cao cấp.",
+      "colors": [
+        {
+          "id": "matte-black",
+          "name_vi": "Đen Mờ (Matte Black)",
+          "hex": "#0F172A",
+          "is_feature": false
+        },
+        {
+          "id": "anode-black",
+          "name_vi": "Đen Anode",
+          "hex": "#18181B",
+          "is_feature": true
+        },
+        {
+          "id": "matte-gold",
+          "name_vi": "Vàng Mờ (Matte Gold)",
+          "hex": "#CA8A04",
+          "is_feature": false
+        }
+      ]
+    },
+    {
+      "id": "anodize-ed",
+      "name_vi": "Mạ Anodize ED · Champagne Series",
+      "name_en": "Anodize ED Champagne Series",
+      "description_vi": "Công nghệ mạ điện di (Electrodeposition Anodizing) tạo lớp phủ cứng vững chống ăn mòn muối biển, phù hợp cho môi trường ven biển và du thuyền.",
+      "colors": [
+        {
+          "id": "champagne-v8",
+          "name_vi": "Champagne V8",
+          "hex": "#D4AF37",
+          "is_feature": true,
+          "badge": "Cao Cấp Ngoài Trời"
+        },
+        {
+          "id": "champagne-y01",
+          "name_vi": "Champagne Y01",
+          "hex": "#E5C158",
+          "is_feature": true,
+          "badge": "Kháng Khí Hậu Biển"
+        }
+      ]
+    }
+  ]
+}

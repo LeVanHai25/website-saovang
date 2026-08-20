@@ -1,0 +1,82 @@
+{
+  "markets": [
+    {
+      "id": "residential",
+      "name_vi": "Nhà Ở & Nhà Phố",
+      "name_en": "Townhouse & Residential",
+      "description_vi": "Giải pháp nhôm kính bền bỉ, tối ưu công năng, thẩm mỹ hiện đại và chi phí hợp lý.",
+      "icon": "ri-home-4-line",
+      "typical_systems": [
+        "xf55-flat",
+        "xfv55",
+        "xf93",
+        "l94-l95"
+      ]
+    },
+    {
+      "id": "apartment",
+      "name_vi": "Căn Hộ & Chung Cư Cao Cấp",
+      "name_en": "Apartment & Condominium",
+      "description_vi": "Cách âm chống ồn, chống thấm nước mưa áp lực cao, an toàn cho ban công và logia tầng cao.",
+      "icon": "ri-building-line",
+      "typical_systems": [
+        "xf55-multi",
+        "c65",
+        "l94-l95",
+        "slim-40"
+      ]
+    },
+    {
+      "id": "villa",
+      "name_vi": "Biệt Thự & Penthouse",
+      "name_en": "Luxury Villa & Penthouse",
+      "description_vi": "Hệ cửa khẩu độ lớn Panorama, cửa Slim tràn viền và màu sắc tinh xảo nâng tầm kiến trúc độc bản.",
+      "icon": "ri-hotel-line",
+      "typical_systems": [
+        "l180",
+        "slim-130",
+        "c65",
+        "x80-soco80",
+        "vh65-tl60"
+      ]
+    },
+    {
+      "id": "hospitality",
+      "name_vi": "Resort & Khách Sạn Nghỉ Dưỡng",
+      "name_en": "Resort & Hospitality",
+      "description_vi": "Tối ưu hóa góc nhìn đại dương, đón ánh sáng tự nhiên và khả năng vận hành bền bỉ trước khí hậu biển.",
+      "icon": "ri-sun-cloudy-line",
+      "typical_systems": [
+        "l180",
+        "x80-soco80",
+        "c65",
+        "md65"
+      ]
+    },
+    {
+      "id": "commercial",
+      "name_vi": "Tòa Nhà & Showroom Thương Mại",
+      "name_en": "Commercial & Building Facade",
+      "description_vi": "Hệ mặt dựng kết cấu chịu lực, vách kính khổ lớn và cửa tự động/thủy lực lưu lượng lớn.",
+      "icon": "ri-store-2-line",
+      "typical_systems": [
+        "md50-md52",
+        "md65",
+        "vh65-tl60"
+      ]
+    },
+    {
+      "id": "yacht",
+      "name_vi": "Du Thuyền & Công Trình Biển Mặn (Yacht Division)",
+      "name_en": "Yacht & Marine Metalwork Division",
+      "is_dedicated_division": true,
+      "description_vi": "Phân nhánh chuyên biệt với yêu cầu vật liệu Inox 316/Nhôm kháng muối biển và tiêu chuẩn kỹ thuật hàng hải.",
+      "icon": "ri-ship-line",
+      "typical_systems": [
+        "l180",
+        "slim-130",
+        "c65"
+      ]
+    }
+  ]
+}
