@@ -14,21 +14,21 @@
   })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
   <!-- End Google Tag Manager -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#9B1C1C" />
-  <title>Cơ Khí Sao Vàng — Chế Tác Kim Loại Mỹ Thuật & CNC Chính Xác</title>
-  <meta name="description" content="Cơ Khí Sao Vàng — Chuyên gia CNC, kết cấu thép, cầu thang xoắn, cổng nghệ thuật & gia công inox chính xác tại Hà Nội. Bảo hành 10 năm. Hotline: 0869 590 279." />
-  <meta name="keywords" content="cơ khí sao vàng, gia công cnc, cầu thang nghệ thuật, cổng nhôm đúc, inox du thuyền, kết cấu thép" />
-  <meta property="og:title" content="Cơ Khí Sao Vàng — Chế Tác Kim Loại Mỹ Thuật & CNC Chính Xác" />
-  <meta property="og:description" content="Chuyên gia công cơ khí chính xác CNC, gia công cơ khí theo bản vẽ, gia công inox công nghiệp, thi công cơ khí công trình kết cấu thép." />
+  <meta name="theme-color" content="#0F172A" />
+  <title>Cơ Khí Cao Cấp | Inox & Thép — Sao Vàng</title>
+  <meta name="description" content="Tư vấn giải pháp, triển khai kỹ thuật, gia công và lắp đặt các hạng mục cơ khí hoàn thiện bằng inox và thép cho Villa, Residence và Luxury Yacht theo thiết kế." />
+  <meta name="keywords" content="cơ khí cao cấp, inox du thuyền, lan can inox 316, cầu thang thép, mái kính biệt thự, cổng thép nghệ thuật, custom metalwork" />
+  <meta property="og:title" content="Cơ Khí Cao Cấp | Inox & Thép — Sao Vàng" />
+  <meta property="og:description" content="Tư vấn giải pháp, triển khai kỹ thuật, gia công và lắp đặt các hạng mục cơ khí hoàn thiện bằng inox và thép cho Villa, Residence và Luxury Yacht theo thiết kế." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.cokhisaovang.com/cokhisaovang.html" />
-  <meta property="og:image" content="https://www.cokhisaovang.com/assets/images/workshop_cnc.png" />
+  <meta property="og:image" content="https://www.cokhisaovang.com/assets/images/project-vinhomes-villa.png" />
   <link rel="canonical" href="https://www.cokhisaovang.com/cokhisaovang.html" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" />
@@ -36,67 +36,325 @@
   <!-- Design System v2 -->
   <link rel="stylesheet" href="assets/css/main.css" />
 
-  <!-- Page-specific styles -->
+  <!-- Page-specific styles: Luxury Metalwork -->
   <style>
-    /* Page Hero (50vh) */
-    .page-hero {
+    :root {
+      --sv-luxury-dark: #0F172A;
+      --sv-luxury-slate: #1E293B;
+      --sv-luxury-navy: #0B132B;
+      --sv-luxury-gold: #C9A227;
+      --sv-luxury-gold-light: #DFBE56;
+      --sv-luxury-gray: #64748B;
+      --sv-luxury-offwhite: #F8FAFC;
+    }
+
+    /* Page Hero (Minimalist Luxury) */
+    .lux-hero {
       position: relative;
-      height: 50vh;
-      min-height: 350px;
+      min-height: 85vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      background: var(--sv-dark-900);
-      color: var(--sv-white);
-      padding-top: var(--sv-navbar-h);
+      background: var(--sv-luxury-dark);
+      color: #FFFFFF;
+      padding-top: var(--sv-navbar-h, 80px);
+      padding-bottom: 80px;
       overflow: hidden;
     }
-    .page-hero-bg {
+    .lux-hero-bg {
       position: absolute;
       inset: 0;
       z-index: 1;
     }
-    .page-hero-bg img {
+    .lux-hero-bg img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      filter: brightness(0.65);
-      transform: scale(1.03);
-      animation: sv-heroZoom 20s infinite alternate;
+      filter: brightness(0.45);
+      transform: scale(1.02);
+      transition: transform 10s ease;
     }
-    .page-hero-content {
-      position: relative;
+    .lux-hero:hover .lux-hero-bg img {
+      transform: scale(1.05);
+    }
+    .lux-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.4) 0%, rgba(15, 23, 42, 0.85) 100%);
       z-index: 2;
-      max-width: 800px;
-      padding-inline: var(--sv-container-px);
     }
-    .page-hero-tag {
-      display: inline-block;
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-fs-xs);
+    .lux-hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 920px;
+      padding-inline: 24px;
+      margin: 0 auto;
+    }
+    .lux-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 11px;
       font-weight: 800;
-      color: var(--sv-gold-600);
+      color: var(--sv-luxury-gold);
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      margin-bottom: var(--sv-sp-3);
+      letter-spacing: 0.25em;
+      margin-bottom: 20px;
+      padding: 6px 16px;
+      border: 1px solid rgba(201, 162, 39, 0.4);
+      border-radius: 100px;
+      background: rgba(201, 162, 39, 0.08);
+      backdrop-filter: blur(4px);
     }
-    .page-hero-title {
-      font-family: var(--sv-font-head);
-      font-size: var(--sv-fs-3xl);
+    .lux-hero-title {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: clamp(32px, 5.5vw, 56px);
       font-weight: 900;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
       line-height: 1.15;
-      text-shadow: 0 4px 12px rgba(0,0,0,0.5);
-      margin-bottom: var(--sv-sp-3);
+      text-transform: uppercase;
+      color: #FFFFFF;
+      margin-bottom: 18px;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
     }
-    .page-hero-desc {
-      font-size: var(--sv-fs-md);
-      color: rgba(255,255,255,0.75);
-      max-width: 600px;
-      margin-inline: auto;
+    .lux-hero-slogan {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: clamp(14px, 2vw, 18px);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sv-luxury-gold-light);
+      margin-bottom: 18px;
+    }
+    .lux-hero-desc {
+      font-family: var(--sv-font-body, 'Inter', sans-serif);
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 780px;
+      margin: 0 auto 36px;
       font-weight: 300;
     }
+    .lux-hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .lux-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--sv-luxury-gold);
+      color: var(--sv-luxury-dark);
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(201, 162, 39, 0.3);
+    }
+    .lux-btn-primary:hover {
+      background: var(--sv-luxury-gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201, 162, 39, 0.45);
+    }
+    .lux-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 14px 28px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      backdrop-filter: blur(4px);
+    }
+    .lux-btn-secondary:hover {
+      border-color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* Dual Pillars Quick Selector */
+    .lux-dual-pillars {
+      background: var(--sv-luxury-slate);
+      padding: 40px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .lux-pillars-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    @media (max-width: 768px) {
+      .lux-pillars-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .lux-pillar-card {
+      position: relative;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      overflow: hidden;
+    }
+    .lux-pillar-card:hover {
+      border-color: var(--sv-luxury-gold);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    }
+    .lux-pillar-num {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      color: var(--sv-luxury-gold);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .lux-pillar-title {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 18px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 6px;
+    }
+    .lux-pillar-desc {
+      font-size: 13px;
+      color: var(--sv-luxury-gray);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+    .lux-pillar-arrow {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      font-size: 18px;
+      flex-shrink: 0;
+      transition: all 0.25s ease;
+    }
+    .lux-pillar-card:hover .lux-pillar-arrow {
+      background: var(--sv-luxury-gold);
+      color: var(--sv-luxury-dark);
+      border-color: var(--sv-luxury-gold);
+      transform: translateX(4px);
+    }
+
+    /* Section 02: Philosophy & 4 Values */
+    .lux-philosophy-sec {
+      padding: 90px 0;
+      background: #FFFFFF;
+    }
+    .lux-sec-header {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 56px;
+    }
+    .lux-sec-tag {
+      display: inline-block;
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--sv-luxury-gold);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      margin-bottom: 12px;
+    }
+    .lux-sec-title {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: clamp(24px, 3.5vw, 36px);
+      font-weight: 900;
+      color: var(--sv-luxury-dark);
+      line-height: 1.25;
+      margin-bottom: 18px;
+    }
+    .lux-sec-desc {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #475569;
+      font-weight: 400;
+    }
+    .lux-values-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 1024px) {
+      .lux-values-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .lux-values-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .lux-value-card {
+      background: var(--sv-luxury-offwhite);
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 32px 24px;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .lux-value-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--sv-luxury-gold);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+      background: #FFFFFF;
+    }
+    .lux-value-code {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--sv-luxury-gold);
+      letter-spacing: 0.15em;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .lux-value-title {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--sv-luxury-dark);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .lux-value-desc {
+      font-size: 13.5px;
+      color: #64748B;
+      line-height: 1.65;
+      margin: 0;
+    }
+
 
     /* Sub Navigation */
     .brand-intro {
@@ -1136,137 +1394,105 @@
   <main id="main-content">
 
     <!-- ════════════════════════════════════════════
-         SECTION 2: PAGE HERO
+         COMPONENT 01: HERO SECTION (MINIMALIST LUXURY)
     ════════════════════════════════════════════ -->
-    <section class="page-hero" aria-label="Cơ Khí Sao Vàng Hero Banner">
-      <div class="page-hero-bg" aria-hidden="true">
-        <img decoding="async" loading="lazy" src="https://i.pinimg.com/736x/2a/39/fa/2a39fabec655ea7df8a0c2ff665a6a0a.jpg" alt="Xưởng cơ khí CNC Sao Vàng" width="800" height="600">
+    <section class="lux-hero" aria-label="Cơ Khí Cao Cấp Sao Vàng Hero Banner">
+      <div class="lux-hero-bg" aria-hidden="true">
+        <img decoding="async" loading="eager" fetchpriority="high" src="assets/images/project-vinhomes-villa.png" alt="Công trình biệt thự cao cấp — Cơ Khí Sao Vàng" width="1920" height="1080">
       </div>
-      <div class="page-hero-content">
-        <span class="page-hero-tag">Giải Pháp EPCM Tổng Thể</span>
-        <h1 class="page-hero-title">CƠ KHÍ SAO VÀNG</h1>
-        <p class="page-hero-desc" style="font-weight: 700; text-transform: uppercase; color: var(--sv-gold-500); margin-bottom: 12px; letter-spacing: 0.05em;">Giải Pháp Cơ Khí Toàn Diện — Từ Ý Tưởng Đến Công Trình</p>
-        <p class="page-hero-desc" style="font-size: 15px;">Chúng tôi đồng hành cùng khách hàng từ ý tưởng, thiết kế DFM, sản xuất tại xưởng đến thi công lắp đặt và bảo trì công trình trọn gói (EPCM), loại bỏ mọi rủi ro nhà thầu phụ trung gian.</p>
+      <div class="lux-hero-overlay" aria-hidden="true"></div>
+      <div class="lux-hero-content" data-sv-reveal>
+        <span class="lux-hero-tag"><i class="ri-shield-star-line"></i> CƠ KHÍ CAO CẤP | INOX & THÉP</span>
+        <h1 class="lux-hero-title">CHO NHỮNG CÔNG TRÌNH ĐƯỢC TẠO NÊN TỪ TỪNG CHI TIẾT</h1>
+        <p class="lux-hero-desc">
+          Tư vấn giải pháp, triển khai kỹ thuật, gia công và lắp đặt các hạng mục cơ khí hoàn thiện bằng inox và thép cho Villa, Residence, công trình nhà ở cao cấp và du thuyền cao cấp — theo thiết kế, yêu cầu kỹ thuật và tiêu chuẩn hoàn thiện của từng dự án.
+        </p>
+        <div class="lux-hero-actions">
+          <a href="#quickQuote" class="lux-btn-primary"><i class="ri-file-upload-line"></i> GỬI YÊU CẦU DỰ ÁN</a>
+          <a href="#residentialSection" class="lux-btn-secondary">KHÁM PHÁ NĂNG LỰC <i class="ri-arrow-down-line"></i></a>
+        </div>
       </div>
     </section>
 
 
     <!-- ════════════════════════════════════════════
-         SECTION 3: GIỚI THIỆU THƯƠNG HIỆU & TẦM NHÌN
+         DUAL PILLARS QUICK SELECTOR
     ════════════════════════════════════════════ -->
-    <section class="brand-intro" aria-label="Giới thiệu thương hiệu">
+    <section class="lux-dual-pillars" aria-label="Hai phân khu năng lực chính">
       <div class="sv-container">
-        <div class="intro-grid">
+        <div class="lux-pillars-grid">
           
-          <!-- Text -->
-          <div data-sv-reveal>
-            <span class="sv-section-tag">TÁI ĐỊNH VỊ THƯƠNG HIỆU CKSV</span>
-            <h2 class="sv-section-title">Nhà Cung Cấp Giải Phải Cơ Khí Tổng Thể</h2>
-            <p style="font-size:var(--sv-fs-md); line-height:1.65; color:var(--sv-gray-text); margin-bottom:var(--sv-sp-4); font-weight:300;">
-              Hiện nay, phần lớn doanh nghiệp cơ khí tại Việt Nam đang giới thiệu năng lực theo cách truyền thống là liệt kê danh sách máy móc và dịch vụ gia công đơn lẻ. Tại **Cơ Khí Sao Vàng (CKSV)**, chúng tôi tin rằng khách hàng không đơn thuần mua thời gian chạy máy CNC mà họ mua một kết quả hoàn chỉnh, tiến độ cam kết và một đầu mối duy nhất chịu trách nhiệm.
-            </p>
-            <p style="font-size:var(--sv-fs-sm); line-height:1.6; color:var(--sv-gray-text); margin-bottom:var(--sv-sp-6);">
-              Vì vậy, CKSV chính thức tái định vị từ một xưởng gia công thông thường thành đơn vị cung cấp giải pháp cơ khí tổng thể theo mô hình chuỗi giá trị khép kín **EPCM (Engineering – Procurement – Construction – Maintenance)**.
-            </p>
-            <div style="display:flex; gap:16px; flex-wrap:wrap;">
-              <a href="#quickQuote" class="sv-btn sv-btn-gold">BÁO GIÁ NHANH &amp; NDA <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
-              <a href="nangluc.html" class="sv-btn sv-btn-outline-gold">NĂNG LỰC SẢN XUẤT</a>
+          <!-- Pillar 1: Residential -->
+          <a href="#residentialSection" class="lux-pillar-card" data-sv-reveal="left">
+            <div>
+              <span class="lux-pillar-num">01 — LUXURY RESIDENTIAL</span>
+              <h2 class="lux-pillar-title">Biệt Thự, Villa &amp; Nhà Ở Cao Cấp</h2>
+              <p class="lux-pillar-desc">Lan can inox/kính, Cầu thang &amp; tay vịn, Cổng &amp; hàng rào, Mái kính, Custom metalwork theo thiết kế.</p>
             </div>
-          </div>
+            <div class="lux-pillar-arrow" aria-hidden="true"><i class="ri-arrow-right-line"></i></div>
+          </a>
 
-          <!-- Image -->
-          <div class="intro-image-wrap" data-sv-reveal="right">
-            <img decoding="async" loading="lazy" src="https://i.pinimg.com/736x/1a/0f/58/1a0f58eb8082697858c8ecb47690fb0a3a.jpg" alt="Mối hàn Inox TIG vảy cá tại Sao Vàng" width="800" height="600">
-            <div class="intro-experience-badge" aria-label="Cam kết bảo hành kết cấu 5 năm">
-              <span class="intro-experience-num">5 Năm</span>
-              <span class="intro-experience-lbl">Bảo hành kết cấu</span>
+          <!-- Pillar 2: Yacht -->
+          <a href="#yachtSection" class="lux-pillar-card" data-sv-reveal="right">
+            <div>
+              <span class="lux-pillar-num">02 — LUXURY YACHT</span>
+              <h2 class="lux-pillar-title">Du Thuyền &amp; Hàng Hải Cao Cấp</h2>
+              <p class="lux-pillar-desc">Lan can inox 316, Lan can kính mạn tàu, Louver điều hòa, Máng nước inox và chi tiết kim loại hoàn thiện du thuyền.</p>
             </div>
-          </div>
+            <div class="lux-pillar-arrow" aria-hidden="true"><i class="ri-arrow-right-line"></i></div>
+          </a>
 
         </div>
-
-        <!-- Vision, Mission & Values subgrid -->
-        <div class="brand-vision-mission">
-          <div class="brand-vm-card">
-            <h3 class="brand-vm-title"><i class="ri-eye-line"></i> Tầm Nhìn</h3>
-            <p class="brand-vm-desc">Trở thành thương hiệu hàng đầu Việt Nam cung cấp giải pháp cơ khí tổng thể cho các công trình công nghiệp quy mô lớn và kiến trúc dân dụng cao cấp, chuẩn hóa chuỗi giá trị EPCM.</p>
-          </div>
-          <div class="brand-vm-card">
-            <h3 class="brand-vm-title"><i class="ri-compass-3-line"></i> Sứ Mệnh</h3>
-            <p class="brand-vm-desc">Đồng hành từ ý tưởng sơ khởi đến khi công trình vận hành an toàn, tối ưu hóa giá trị đầu tư cho khách hàng bằng giải pháp trọn gói kỹ thuật cao và loại bỏ hoàn toàn các rủi ro trung gian.</p>
-          </div>
-          <div class="brand-vm-card">
-            <h3 class="brand-vm-title"><i class="ri-heart-line"></i> Giá Trị Cốt Lõi</h3>
-            <p class="brand-vm-desc">Chính trực (100% CO/CQ, bảo mật NDA), Chuyên nghiệp (AWS, ASME), Tư duy thực chiến (Triết lý DFM tối ưu hóa kết cấu và hao phí phôi), Bền vững lâu dài.</p>
-          </div>
-        </div>
-
       </div>
     </section>
 
 
     <!-- ════════════════════════════════════════════
-         SECTION 4: 5 LỢI THẾ CẠNH TRANH CỐT LÕI (USPs)
+         COMPONENT 02: TRIẾT LÝ & 4 GIÁ TRỊ CỐT LÕI
     ════════════════════════════════════════════ -->
-    <section class="division-section" aria-label="Lợi thế cạnh tranh cốt lõi của CKSV">
+    <section class="lux-philosophy-sec" id="philosophySection" aria-label="Triết lý chế tác và 4 giá trị cốt lõi">
       <div class="sv-container">
         
-        <div style="text-align:center; margin-bottom:var(--sv-sp-8);" data-sv-reveal>
-          <span class="sv-section-tag">TẠI SAO CHỌN CƠ KHÍ SAO VÀNG?</span>
-          <h2 class="sv-section-title" style="margin-inline:auto;">5 Lợi Thế Cạnh Tranh Cốt Lõi (USPs)</h2>
-          <p style="font-size:var(--sv-fs-sm); color:var(--sv-gray-text); max-width:600px; margin-inline:auto; margin-top:var(--sv-sp-2);">
-            Giữa hàng ngàn doanh nghiệp cơ khí trên thị trường, CKSV tự tin khẳng định những giá trị khác biệt vượt trội sau đây.
+        <div class="lux-sec-header" data-sv-reveal>
+          <span class="lux-sec-tag">TRIẾT LÝ CHẾ TÁC</span>
+          <h2 class="lux-sec-title">CƠ KHÍ KHÔNG CHỈ LÀ GIA CÔNG KIM LOẠI</h2>
+          <p class="lux-sec-desc">
+            Chúng tôi tập trung vào các giải pháp cơ khí kiến trúc và cơ khí hoàn thiện cao cấp, nơi vật liệu inox và thép không chỉ đảm nhiệm vai trò kết cấu mà còn trở thành một phần của ngôn ngữ kiến trúc.
           </p>
         </div>
 
-        <div class="division-grid" style="grid-template-columns: repeat(5, 1fr);">
+        <div class="lux-values-grid">
           
-          <!-- USP 1 -->
-          <div class="division-card" data-sv-reveal data-sv-delay="1">
-            <div class="division-icon" aria-hidden="true">
-              <i class="ri-git-merge-line"></i>
-            </div>
-            <h3 class="division-title" style="font-size: 14px;">Chuỗi Dịch Vụ Khép Kín EPCM</h3>
-            <p class="division-desc" style="font-size: 12px; line-height: 1.5;">Đảm nhận toàn bộ vòng đời dự án: Khảo sát → Thiết kế DFM → Chế tạo tại xưởng → Thi công lắp dựng → Bảo trì. Khách hàng chỉ làm việc với một đầu mối chịu trách nhiệm duy nhất.</p>
+          <!-- Value 1 -->
+          <div class="lux-value-card" data-sv-reveal data-sv-delay="1">
+            <span class="lux-value-code">01 — PRECISION</span>
+            <h3 class="lux-value-title">Độ Chính Xác Trong Từng Chi Tiết</h3>
+            <p class="lux-value-desc">Kiểm soát kích thước, cao độ và góc liên kết chặt chẽ theo hồ sơ kỹ thuật, đảm bảo tính ăn khớp chuẩn xác khi lắp dựng tại công trình.</p>
           </div>
 
-          <!-- USP 2 -->
-          <div class="division-card" data-sv-reveal data-sv-delay="2">
-            <div class="division-icon" aria-hidden="true">
-              <i class="ri-pencil-ruler-2-line"></i>
-            </div>
-            <h3 class="division-title" style="font-size: 14px;">Tư Duy Thiết Kế Thực Chiến DFM</h3>
-            <p class="division-desc" style="font-size: 12px; line-height: 1.5;">Ứng dụng thiết kế DFM (Design for Manufacturing) trên SolidWorks/Inventor, chủ động phát hiện lỗi và hiệu chỉnh kết cấu 3D, giúp triệt tiêu 98% sai lệch khi thi công.</p>
+          <!-- Value 2 -->
+          <div class="lux-value-card" data-sv-reveal data-sv-delay="2">
+            <span class="lux-value-code">02 — CRAFTSMANSHIP</span>
+            <h3 class="lux-value-title">Kỹ Thuật Chế Tác &amp; Hoàn Thiện Tinh Xảo</h3>
+            <p class="lux-value-desc">Kỹ thuật xử lý điểm ráp nối, mối ghép và xử lý bề mặt kim loại phẳng mịn, chỉn chu dưới sự giám sát của đội ngũ thợ lành nghề.</p>
           </div>
 
-          <!-- USP 3 -->
-          <div class="division-card" data-sv-reveal data-sv-delay="3">
-            <div class="division-icon" aria-hidden="true">
-              <i class="ri-tools-line"></i>
-            </div>
-            <h3 class="division-title" style="font-size: 14px;">Năng Lực Tùy Biến Độc Bản</h3>
-            <p class="division-desc" style="font-size: 12px; line-height: 1.5;">Chúng tôi không bán sản phẩm đại trà có sẵn. CKSV chuyên thiết kế và chế tạo tùy biến hoàn toàn theo đúng nhu cầu và bản vẽ kỹ thuật chi tiết của đối tác.</p>
+          <!-- Value 3 -->
+          <div class="lux-value-card" data-sv-reveal data-sv-delay="3">
+            <span class="lux-value-code">03 — DESIGN INTEGRATION</span>
+            <h3 class="lux-value-title">Đồng Bộ Với Thiết Kế Kiến Trúc</h3>
+            <p class="lux-value-desc">Tôn trọng và bám sát ngôn ngữ thiết kế của Kiến trúc sư, phối hợp hài hòa giữa kết cấu kim loại với kính, đá và các vật liệu nội ngoại thất.</p>
           </div>
 
-          <!-- USP 4 -->
-          <div class="division-card" data-sv-reveal data-sv-delay="4">
-            <div class="division-icon" aria-hidden="true">
-              <i class="ri-checkbox-circle-line"></i>
-            </div>
-            <h3 class="division-title" style="font-size: 14px;">Chất Lượng B2B Chuẩn Mực</h3>
-            <p class="division-desc" style="font-size: 12px; line-height: 1.5;">Cam kết 100% phôi vật tư chính hãng có chứng chỉ CO/CQ rõ ràng, mối hàn đạt tiêu chuẩn AWS/ASME, dung sai kiểm soát chặt chẽ qua thiết bị đo kiểm hiện đại.</p>
-          </div>
-
-          <!-- USP 5 -->
-          <div class="division-card" data-sv-reveal data-sv-delay="5">
-            <div class="division-icon" aria-hidden="true">
-              <i class="ri-coins-line"></i>
-            </div>
-            <h3 class="division-title" style="font-size: 14px;">Tối Ưu Hóa Chi Phí Tổng Thể</h3>
-            <p class="division-desc" style="font-size: 12px; line-height: 1.5;">Thông qua khâu thiết kế chịu lực hợp lý tránh dư thừa và tiến độ thi công đồng bộ nhanh hơn 20%, giúp dự án sớm đưa vào khai thác và tối ưu hóa tổng chi phí.</p>
+          <!-- Value 4 -->
+          <div class="lux-value-card" data-sv-reveal data-sv-delay="4">
+            <span class="lux-value-code">04 — PREMIUM FINISHING</span>
+            <h3 class="lux-value-title">Hoàn Thiện Phù Hợp Công Trình Cao Cấp</h3>
+            <p class="lux-value-desc">Đa dạng lựa chọn hoàn thiện bề mặt từ xước mịn Hairline, Satin sang trọng đến Mirror Polish sáng bóng theo tiêu chuẩn từng không gian.</p>
           </div>
 
         </div>
+
       </div>
     </section>
 
