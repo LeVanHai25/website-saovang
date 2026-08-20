@@ -1,29 +1,36 @@
 /**
- * SV Aluminium — Smart Product Finder Engine
- * 3-Step Recommendation Wizard for Architectural Aluminium Systems
+ * SV Aluminium — 6-Step Solution Finder & Recommendation Engine
+ * Enterprise Architecture: Project -> Space -> Opening -> Performance -> Style -> Level -> Match Score (%)
  */
 
 (function () {
   let allSystems = [];
+  let allSolutions = [];
 
   const finderState = {
-    market: 'villa',
-    application: 'door-panorama',
-    priority: 'max-view'
+    project: 'villa',
+    space: 'living-balcony',
+    opening: 'lift-slide',
+    performance: 'max-span',
+    aesthetic: 'panorama-resort',
+    level: 'signature'
   };
 
-  async function loadSystems() {
+  async function initFinder() {
     try {
-      const res = await fetch('data/aluminium/systems.json');
-      const data = await res.json();
-      allSystems = data.systems || [];
+      const [sysRes, solRes] = await Promise.all([
+        fetch('data/aluminium/systems.json'),
+        fetch('data/aluminium/solutions.json')
+      ]);
+      allSystems = await sysRes.json();
+      allSolutions = await solRes.json();
       runRecommendation();
     } catch (e) {
-      console.warn('Could not load systems for finder:', e);
+      console.warn('Could not initialize finder data:', e);
     }
   }
 
-  function setFinderStep(stepKey, val, el) {
+  window.setFinderStep = function (stepKey, val, el) {
     finderState[stepKey] = val;
 
     // Update active UI pills
@@ -34,144 +41,149 @@
     }
 
     runRecommendation();
+  };
+
+  function calculateMatch(sys) {
+    let score = 50; // Base score
+
+    // 1. Level Match (Max +20)
+    if (sys.level_id === finderState.level) {
+      score += 20;
+    } else if (
+      (finderState.level === 'ultra_luxury' && sys.level_id === 'signature') ||
+      (finderState.level === 'signature' && (sys.level_id === 'ultra_luxury' || sys.level_id === 'premium')) ||
+      (finderState.level === 'premium' && (sys.level_id === 'signature' || sys.level_id === 'essential')) ||
+      (finderState.level === 'essential' && sys.level_id === 'premium')
+    ) {
+      score += 10;
+    }
+
+    // 2. Opening Mechanism Match (Max +20)
+    const op = finderState.opening;
+    if (op === 'swing' && sys.group_id === 'grp-opening') score += 20;
+    if (op === 'sliding' && sys.group_id === 'grp-sliding') score += 18;
+    if (op === 'lift-slide' && sys.id === 'l180') score += 25;
+    if (op === 'slim-hanging' && sys.id === 'slim-40') score += 25;
+    if (op === 'bifold' && (sys.id === 'x80-soco80' || sys.id === 'f63')) score += 22;
+    if (op === 'hydraulic' && sys.id === 'vh65-tl60') score += 25;
+    if (op === 'curtain-wall' && sys.group_id === 'grp-facade') score += 25;
+
+    // 3. Performance Match (Max +15)
+    const perf = finderState.performance;
+    if (perf === 'acoustic' && (sys.id === 'xf55-multi' || sys.id === 'c55-euro')) score += 15;
+    if (perf === 'thermal' && (sys.id === 'l180' || sys.id === 'c65-euro' || sys.id === 'md65')) score += 15;
+    if (perf === 'max-span' && (sys.id === 'l180' || sys.id === 'x80-soco80' || sys.id === 'md65')) score += 15;
+    if (perf === 'weather-marine' && (sys.anodize_compatible || sys.id === 'c65-euro' || sys.id === 'l180' || sys.id === 'md65')) score += 15;
+    if (perf === 'minimalist-profile' && sys.group_id === 'grp-slim') score += 15;
+
+    // 4. Space / Application Match (Max +10)
+    const space = finderState.space;
+    if (space === 'entrance' && (sys.id === 'vh65-tl60' || sys.id === 'c65-euro' || sys.id === 'xf55-flat')) score += 10;
+    if (space === 'living-balcony' && (sys.id === 'l180' || sys.id === 'l120' || sys.id === 'l94-l95' || sys.id === 'xf55-flat')) score += 10;
+    if (space === 'panorama' && (sys.id === 'l180' || sys.id === 'x80-soco80' || sys.id === 'l120')) score += 10;
+    if (space === 'bedroom' && (sys.id === 'xf55-multi' || sys.id === 'c55-euro' || sys.id === 'xf55-flat')) score += 10;
+    if (space === 'interior-slim' && (sys.id === 'slim-40' || sys.id === 'slim-130')) score += 10;
+    if (space === 'pool-garden' && (sys.id === 'x80-soco80' || sys.id === 'f63' || sys.id === 'l180')) score += 10;
+    if (space === 'facade' && (sys.id === 'md50-md52' || sys.id === 'md65')) score += 10;
+
+    // Normalize to max 98%
+    const finalScore = Math.min(98, Math.max(68, score));
+    return finalScore;
   }
 
   function runRecommendation() {
     if (!allSystems || allSystems.length === 0) return;
 
-    const { market, application, priority } = finderState;
-
-    // Score and match systems based on user selections
     const scored = allSystems.map(sys => {
-      let score = 0;
-
-      // 1. Market match
-      if (sys.market_ids && sys.market_ids.includes(market)) {
-        score += 30;
-      }
-
-      // 2. Application match
-      if (application === 'door-opening' && sys.group_id === 'opening') score += 50;
-      if (application === 'door-sliding' && sys.group_id === 'sliding-panorama') score += 40;
-      if (application === 'door-panorama' && sys.id === 'l180') score += 70;
-      if (application === 'door-panorama' && (sys.id === 'l120' || sys.id === 'slim-130')) score += 40;
-      if (application === 'door-slim' && sys.group_id === 'slim') score += 60;
-      if (application === 'door-folding' && (sys.id === 'x80-soco80' || sys.id === 'f63')) score += 60;
-      if (application === 'door-hydraulic' && sys.id === 'vh65-tl60') score += 60;
-      if (application === 'glazing-partition' && (sys.id === 'slim-40' || sys.id === 'md50-md52')) score += 50;
-      if (application === 'facade-curtain-wall' && sys.group_id === 'facade') score += 60;
-
-      // 3. Priority match
-      if (priority === 'cost-effective' && (sys.level && sys.level.recommended_value === 'essential')) score += 30;
-      if (priority === 'balanced' && (sys.level && sys.level.recommended_value === 'premium')) score += 30;
-      if (priority === 'high-end' && (sys.level && sys.level.recommended_value === 'signature')) score += 30;
-      if (priority === 'max-view' && (sys.id === 'l180' || sys.id === 'slim-130' || sys.id === 'l120')) score += 35;
-      if (priority === 'minimalist' && sys.group_id === 'slim') score += 35;
-      if (priority === 'coastal-marine' && (sys.finishes.anodizeColors && sys.finishes.anodizeColors.length > 0)) score += 35;
-
-      return { sys, score };
+      const matchScore = calculateMatch(sys);
+      return { sys, matchScore };
     });
 
-    // Sort by score descending and take top 2-3 systems
-    scored.sort((a, b) => b.score - a.score);
-    const topMatches = scored.slice(0, 3).map(x => x.sys);
+    // Sort descending by match score
+    scored.sort((a, b) => b.matchScore - a.matchScore);
+    const topMatches = scored.slice(0, 3);
 
     renderFinderResults(topMatches);
   }
 
-  function renderFinderResults(systems) {
+  function renderFinderResults(matches) {
     const resultsContainer = document.getElementById('finderResults');
     if (!resultsContainer) return;
 
-    if (!systems || systems.length === 0) {
-      resultsContainer.innerHTML = '<p style="color: #94A3B8; text-align: center;">Vui lòng chọn các tiêu chí để nhận đề xuất hệ nhôm phù hợp.</p>';
+    if (!matches || matches.length === 0) {
+      resultsContainer.innerHTML = '<p style="color: #94A3B8; text-align: center;">Vui lòng chọn các tiêu chí để nhận đề xuất giải pháp phù hợp.</p>';
       return;
     }
 
-    const groupNames = {
-      'opening': 'Cửa Mở Quay Châu Âu',
-      'sliding-panorama': 'Cửa Lùa & Panorama Khổ Lớn',
-      'slim': 'Hệ Nhôm Slim Tối Giản',
-      'special': 'Cửa Thủy Lực & Xếp Trượt Đặc Biệt',
-      'facade': 'Mặt Dựng & Vách Kính Kiến Trúc'
-    };
+    let cardsHtml = matches.map(({ sys, matchScore }, idx) => {
+      const isTop = idx === 0;
+      return `
+        <div class="finder-result-card" style="background: #1E293B; border: 1px solid ${isTop ? '#C9A227' : '#334155'}; border-radius: 12px; padding: 24px; position: relative; transition: all 0.3s ease; display: flex; flex-direction: column; justify-content: space-between;">
+          ${isTop ? `
+            <div style="position: absolute; top: -12px; left: 24px; background: linear-gradient(135deg, #C9A227 0%, #E5C158 100%); color: #0F172A; font-family: var(--ff-head); font-size: 11px; font-weight: 800; padding: 3px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.1em; box-shadow: 0 4px 12px rgba(201,162,39,0.35);">
+              ⭐ KHUYÊN DÙNG HÀNG ĐẦU
+            </div>
+          ` : ''}
 
-    resultsContainer.innerHTML = `
-      <div style="margin-bottom: 16px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-        <span style="font-family: var(--ff-head); font-size: 13px; font-weight: 800; color: #C9A227; text-transform: uppercase; letter-spacing: 0.08em;">
-          <i class="ri-sparkling-fill"></i> CÁC HỆ ĐỀ XUẤT ĐỂ XEM XÉT (${systems.length} Hệ)
-        </span>
-        <span style="font-size: 11.5px; color: #94A3B8;">Đề xuất dựa trên loại công trình và ưu tiên thiết kế của bạn</span>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
-        ${systems.map(s => {
-          const hasAnodize = s.finishes && s.finishes.anodizeColors && s.finishes.anodizeColors.length > 0;
-          return `
-            <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 20px; display: flex; flex-direction: column; transition: all 0.2s ease; position: relative;">
-              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
-                <span style="background: #0F172A; color: #C9A227; font-family: var(--ff-head); font-size: 11px; font-weight: 800; padding: 4px 10px; border-radius: 4px;">
-                  ${s.code}
-                </span>
-                <span style="font-size: 10.5px; font-weight: 700; color: #64748B; background: #F1F5F9; padding: 3px 8px; border-radius: 4px;">
-                  ${groupNames[s.group_id] || ''}
-                </span>
+          <div>
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; flex-wrap: wrap; gap: 8px;">
+              <div>
+                <span style="font-family: var(--ff-head); font-size: 11px; font-weight: 800; color: #C9A227; text-transform: uppercase; letter-spacing: 0.1em;">${sys.group_name}</span>
+                <h4 style="font-family: var(--ff-head); font-size: 18px; font-weight: 800; color: #FFFFFF; margin: 4px 0 2px;">${sys.name}</h4>
+                <div style="font-size: 12px; color: #94A3B8;">${sys.code} &bull; ${sys.manufacturer_source}</div>
               </div>
-              <h4 style="font-family: var(--ff-head); font-size: 16px; font-weight: 800; color: #0F172A; margin: 0 0 6px;">
-                ${s.name}
-              </h4>
-              <p style="font-size: 12.5px; color: #64748B; line-height: 1.5; margin: 0 0 14px; flex-grow: 1;">
-                ${s.marketing ? s.marketing.tagline : (s.applications || []).slice(0, 2).join(', ')}
-              </p>
-              <div style="font-size: 11.5px; color: #475569; border-top: 1px solid #F1F5F9; padding-top: 10px; margin-bottom: 14px;">
-                <div>&bull; Bề mặt: <strong>${(s.finishes.powderColors || []).slice(0, 3).join(', ')}</strong></div>
-                ${hasAnodize ? `<div style="color: #92400E; margin-top: 2px;">&bull; Anodize ED: <strong>Champagne V8/Y01</strong></div>` : ''}
-              </div>
-              <div style="display: flex; gap: 8px;">
-                <a href="thuvienprofilenhom.html" style="flex: 1; text-align: center; background: #F8FAFC; border: 1px solid #CBD5E1; color: #0F172A; font-family: var(--ff-head); font-size: 11.5px; font-weight: 700; padding: 8px; border-radius: 6px; text-decoration: none;">
-                  Xem Profile
-                </a>
-                <button onclick="selectSystemForRfq('${s.code}', '${s.name}')" style="flex: 1; text-align: center; background: #C9A227; border: none; color: #0F172A; font-family: var(--ff-head); font-size: 11.5px; font-weight: 800; padding: 8px; border-radius: 6px; cursor: pointer;">
-                  Nhận Báo Giá
-                </button>
+              <div style="background: rgba(201, 162, 39, 0.15); border: 1px solid #C9A227; padding: 4px 10px; border-radius: 6px; text-align: right;">
+                <div style="font-family: var(--ff-head); font-size: 16px; font-weight: 900; color: #E5C158;">${matchScore}%</div>
+                <div style="font-size: 9.5px; font-weight: 700; color: #94A3B8; text-transform: uppercase;">Match Score</div>
               </div>
             </div>
-          `;
-        }).join('')}
+
+            <p style="font-size: 13.5px; line-height: 1.6; color: #CBD5E1; margin-bottom: 16px;">
+              ${sys.description}
+            </p>
+
+            <div style="background: #0F172A; border-radius: 8px; padding: 12px 14px; margin-bottom: 16px; font-size: 12.5px; color: #94A3B8; display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+              <div><strong style="color: #E2E8F0;">Độ dày:</strong> ${sys.specs.thickness}</div>
+              <div><strong style="color: #E2E8F0;">Khẩu độ tối đa:</strong> ${sys.specs.max_width_leaf} x ${sys.specs.max_height_leaf}</div>
+              <div><strong style="color: #E2E8F0;">Kính tương thích:</strong> ${sys.specs.glass_thickness}</div>
+              <div><strong style="color: #E2E8F0;">Cấp đầu tư:</strong> <span style="color: #C9A227;">${sys.investment_level}</span></div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="thuvienprofilenhom.html?sys=${sys.id}" class="btn-secondary" style="flex: 1; text-align: center; font-size: 12px; font-weight: 700; padding: 9px 14px; border-radius: 6px; border: 1px solid #475569; color: #FFFFFF; text-decoration: none;">
+              Xem Hồ Sơ Kỹ Thuật
+            </a>
+            <button onclick="selectSystemForRfq('${sys.name}', '${sys.code}')" style="flex: 1; text-align: center; font-size: 12px; font-weight: 800; padding: 9px 14px; border-radius: 6px; background: #C9A227; color: #0F172A; border: none; cursor: pointer; font-family: var(--ff-head);">
+              Nhận Dự Toán Hệ Này
+            </button>
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    resultsContainer.innerHTML = `
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+        ${cardsHtml}
+      </div>
+      <div style="margin-top: 18px; padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border-left: 3px solid #C9A227; border-radius: 4px; font-size: 12px; color: #94A3B8; line-height: 1.6;">
+        ℹ️ <strong>Khuyến cáo kỹ thuật:</strong> Điểm đề xuất (Recommendation Score) mang tính tư vấn định hướng sơ bộ theo tiêu chí không gian. Cấu hình hệ nhôm, kích thước chia đố, tải trọng phụ kiện và chủng loại kính thực tế sẽ được kỹ sư Sao Vàng tính toán chính xác theo hồ sơ thiết kế công trình.
       </div>
     `;
   }
 
-  function selectSystemForRfq(code, name) {
-    const sysSelect = document.getElementById('rfqSystem');
-    const notesInput = document.getElementById('rfqNotes');
+  window.selectSystemForRfq = function (sysName, sysCode) {
+    const rfqTextarea = document.getElementById('rfqNotes') || document.querySelector('textarea[name="project_notes"]');
+    const rfqSection = document.getElementById('rfqSection');
     
-    if (sysSelect) {
-      // Find matching option or select
-      let found = false;
-      for (let i = 0; i < sysSelect.options.length; i++) {
-        if (sysSelect.options[i].text.toLowerCase().includes(code.toLowerCase())) {
-          sysSelect.selectedIndex = i;
-          found = true;
-          break;
-        }
-      }
-      if (!found) sysSelect.value = 'undecided';
+    if (rfqTextarea) {
+      rfqTextarea.value = `[Đề xuất từ Smart Finder] Yêu cầu tư vấn & dự toán hệ: ${sysName} (${sysCode}). Phân khúc: ${finderState.level.toUpperCase()} cho công trình ${finderState.project.toUpperCase()}.`;
     }
 
-    if (notesInput) {
-      notesInput.value = `[Đề xuất từ Smart Finder] Quan tâm hệ nhôm: ${code} (${name}). Cần tư vấn chi tiết cấu hình và gửi dự toán.`;
+    if (rfqSection) {
+      rfqSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
 
-    // Smooth scroll to RFQ section
-    const rfqSec = document.getElementById('rfqSection');
-    if (rfqSec) {
-      rfqSec.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-  // Expose global methods
-  window.setFinderStep = setFinderStep;
-  window.selectSystemForRfq = selectSystemForRfq;
-
-  document.addEventListener('DOMContentLoaded', loadSystems);
+  document.addEventListener('DOMContentLoaded', initFinder);
 })();
