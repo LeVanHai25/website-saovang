@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+import os
+import sys
+
+sys.stdout.reconfigure(encoding='utf-8')
+
+html_content = """<!DOCTYPE html>
 <html lang="vi">
 <head>
   <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
@@ -1179,3 +1184,9 @@
   </script>
 </body>
 </html>
+"""
+
+with open(r"d:\Sao Vàng\Website-SaoVang\website\nhomsaovang.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+
+print("✅ Successfully generated Master Hub nhomsaovang.html according to 11-step UX architecture!")
