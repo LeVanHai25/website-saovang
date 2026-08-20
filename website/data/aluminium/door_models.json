@@ -1,0 +1,147 @@
+[
+  {
+    "id": "model-swing-1",
+    "name": "Cửa Đi Mở Quay 1 Cánh",
+    "category": "Cửa Đi Mở Quay",
+    "opening_mechanism": "Mở quay trong / quay ngoài (Inswing / Outswing)",
+    "compatible_systems": [
+      "xf55-flat",
+      "c55-euro",
+      "c65-euro",
+      "xfv55"
+    ],
+    "max_size": "W: 1100 x H: 2800 mm",
+    "recommended_glass": "Kính an toàn 8.38 - 12mm hoặc Kính hộp 19mm",
+    "hardware": "Bản lề 3D/4D + Khóa đơn điểm / đa điểm Kinlong, Cmech"
+  },
+  {
+    "id": "model-swing-2",
+    "name": "Cửa Đi Mở Quay 2 Cánh",
+    "category": "Cửa Đi Mở Quay",
+    "opening_mechanism": "Mở quay 2 cánh đối xứng",
+    "compatible_systems": [
+      "xf55-flat",
+      "c55-euro",
+      "c65-euro",
+      "xfv55"
+    ],
+    "max_size": "W: 2200 x H: 3000 mm",
+    "recommended_glass": "Kính an toàn 10.38 - 12mm hoặc Kính hộp 24mm",
+    "hardware": "Bản lề cối rãnh C + Khóa đa điểm Cmech, Sigico"
+  },
+  {
+    "id": "model-swing-4",
+    "name": "Cửa Đi Mở Quay 4 Cánh",
+    "category": "Cửa Đi Mở Quay",
+    "opening_mechanism": "Mở quay 4 cánh xếp mở sang 2 bên",
+    "compatible_systems": [
+      "xf55-flat",
+      "c65-euro",
+      "xfv55"
+    ],
+    "max_size": "W: 4000 x H: 3000 mm",
+    "recommended_glass": "Kính dán an toàn 10.38mm hoặc Kính hộp",
+    "hardware": "Bản lề chịu tải 150kg/cánh + Chốt âm cánh phụ + Khóa đa điểm"
+  },
+  {
+    "id": "model-window-tilt",
+    "name": "Cửa Sổ Mở Quay Lật (Tilt & Turn)",
+    "category": "Cửa Sổ Thông Minh",
+    "opening_mechanism": "Mở quay 90° + Mở lật góc trên 15° thông gió",
+    "compatible_systems": [
+      "xf55-multi",
+      "c55-euro"
+    ],
+    "max_size": "W: 900 x H: 1800 mm",
+    "recommended_glass": "Kính hộp 19 - 24mm hút chân không",
+    "hardware": "Bộ phụ kiện quay lật đa năng Sigico / Hopo Châu Âu"
+  },
+  {
+    "id": "model-window-awning",
+    "name": "Cửa Sổ Mở Hất 45°",
+    "category": "Cửa Sổ Chống Mưa",
+    "opening_mechanism": "Mở hất ra ngoài 45° chống mưa hắt",
+    "compatible_systems": [
+      "xf55-flat",
+      "c55-euro",
+      "xfv55"
+    ],
+    "max_size": "W: 1000 x H: 1600 mm",
+    "recommended_glass": "Kính an toàn 6.38 - 10.38mm",
+    "hardware": "Bản lề ma sát chữ A Inox 304 + Tay gạt đơn/đa điểm"
+  },
+  {
+    "id": "model-sliding-2rail-4leaf",
+    "name": "Cửa Lùa 2 Ray 4 Cánh",
+    "category": "Cửa Lùa Trượt",
+    "opening_mechanism": "Trượt lùa 2 cánh giữa sang 2 bên",
+    "compatible_systems": [
+      "xf93",
+      "l94-l95"
+    ],
+    "max_size": "W: 4800 x H: 2600 mm",
+    "recommended_glass": "Kính cường lực 10 - 12mm",
+    "hardware": "Bánh xe bi kép Inox + Khóa đa điểm gạt"
+  },
+  {
+    "id": "model-sliding-3rail-6leaf",
+    "name": "Cửa Lùa 3 Ray 6 Cánh",
+    "category": "Cửa Lùa Trượt Khổ Lớn",
+    "opening_mechanism": "Trượt lùa 3 ray mở 67% khẩu độ ô chờ",
+    "compatible_systems": [
+      "l120"
+    ],
+    "max_size": "W: 6000 x H: 2800 mm",
+    "recommended_glass": "Kính cường lực 12mm hoặc Kính hộp 20mm",
+    "hardware": "Bánh xe chịu tải 200kg + Tay kéo âm sang trọng"
+  },
+  {
+    "id": "model-lift-slide-l180",
+    "name": "Cửa Trượt Nâng L180 Lift & Slide",
+    "category": "Cửa Trượt Nâng Panorama",
+    "opening_mechanism": "Xoay tay gạt 180° nâng cánh trượt êm / hạ cánh ép gioăng kín nước",
+    "compatible_systems": [
+      "l180"
+    ],
+    "max_size": "W: 2500 x H: 3500 mm / cánh",
+    "recommended_glass": "Kính hộp Low-E 28 - 36mm chống nóng",
+    "hardware": "Bộ cơ cấu trượt nâng Cmech / Hopo chịu tải 400kg/cánh"
+  },
+  {
+    "id": "model-slim-hanging",
+    "name": "Cửa Slim Lùa Treo Không Ray Dưới",
+    "category": "Cửa Slim Tối Giản",
+    "opening_mechanism": "Lùa liên động treo trên trần, sàn phẳng liền mạch",
+    "compatible_systems": [
+      "slim-40"
+    ],
+    "max_size": "W: 1200 x H: 3000 mm / cánh",
+    "recommended_glass": "Kính siêu trong Low-Iron 8mm, kính sọc Fluted",
+    "hardware": "Giảm chấn 2 chiều Soft-closing + Hệ liên động cáp thép"
+  },
+  {
+    "id": "model-hydraulic-entrance",
+    "name": "Cửa Thủy Lực Bản Lớn Đại Sảnh",
+    "category": "Cửa Thủy Lực",
+    "opening_mechanism": "Bản lề sàn đóng mở 2 chiều 180° tự động đóng êm",
+    "compatible_systems": [
+      "vh65-tl60"
+    ],
+    "max_size": "W: 1400 x H: 3400 mm / cánh",
+    "recommended_glass": "Kính cường lực 12mm hoặc Kính hoa đồng",
+    "hardware": "Bản lề sàn thủy lực Adler / Hafele + Tay nắm dài 1.8m mạ vàng"
+  },
+  {
+    "id": "model-bifolding-x80",
+    "name": "Cửa Xếp Trượt Khẩu Độ Lớn X80",
+    "category": "Cửa Xếp Trượt",
+    "opening_mechanism": "Xếp dồn 4-3-1 hoặc 6-3-3 mở 100% khẩu độ thông sân vườn",
+    "compatible_systems": [
+      "x80-soco80",
+      "f63"
+    ],
+    "max_size": "W: 10000 x H: 3200 mm",
+    "recommended_glass": "Kính hộp cản nhiệt 20 - 28mm",
+    "hardware": "Ray treo chịu lực 300kg + Bản lề xếp gấp Cmech / Hopo"
+  }
+]

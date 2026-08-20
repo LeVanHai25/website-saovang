@@ -1,0 +1,82 @@
+[
+  {
+    "brand": "CMECH (USA)",
+    "tier": "Ultra Luxury / Signature",
+    "standard": "Rãnh C Châu Âu 13.5mm",
+    "products": [
+      "Bộ trượt nâng Lift & Slide 400kg",
+      "Tay nắm mở quay Rãnh C",
+      "Bản lề cối chịu tải 150kg",
+      "Bản lề xếp trượt"
+    ],
+    "compatibility": [
+      "l180",
+      "c65-euro",
+      "c55-euro",
+      "x80-soco80"
+    ]
+  },
+  {
+    "brand": "HOPO (Đức / Quốc Tế)",
+    "tier": "Signature / Premium",
+    "standard": "Rãnh C Châu Âu & Tiêu Chuẩn",
+    "products": [
+      "Cơ cấu mở quay lật Tilt & Turn",
+      "Tay nắm cửa lùa Panorama",
+      "Khóa đa điểm an toàn",
+      "Bánh xe chịu tải"
+    ],
+    "compatibility": [
+      "xf55-multi",
+      "c55-euro",
+      "l120",
+      "f63"
+    ]
+  },
+  {
+    "brand": "SIGICO (Đức)",
+    "tier": "Signature / Premium",
+    "standard": "Rãnh C Châu Âu",
+    "products": [
+      "Phụ kiện cửa mở quay Rãnh C",
+      "Tay nắm đồng bộ màu Anodize",
+      "Khóa cửa lùa",
+      "Bản lề 3D"
+    ],
+    "compatibility": [
+      "c55-euro",
+      "c65-euro",
+      "l94-l95",
+      "f63"
+    ]
+  },
+  {
+    "brand": "KINLONG / DRAHO",
+    "tier": "Essential / Standard",
+    "standard": "Tiêu chuẩn thông dụng",
+    "products": [
+      "Bản lề 3D/4D",
+      "Khóa đơn/đa điểm",
+      "Bánh xe lùa đôi",
+      "Bản lề chữ A mở hất"
+    ],
+    "compatibility": [
+      "xf55-flat",
+      "xfv55",
+      "xf93"
+    ]
+  },
+  {
+    "brand": "ADLER / HAFELE / VVP",
+    "tier": "Thủy Lực Chuyên Dụng",
+    "standard": "Bản lề sàn thủy lực",
+    "products": [
+      "Bản lề sàn dầu thủy lực chịu tải 150–250kg",
+      "Kẹp kính trên/dưới",
+      "Tay nắm inox mạ PVD 1.8m"
+    ],
+    "compatibility": [
+      "vh65-tl60"
+    ]
+  }
+]

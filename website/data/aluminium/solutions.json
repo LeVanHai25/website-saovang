@@ -1,0 +1,121 @@
+[
+  {
+    "id": "sol-panoramic",
+    "code": "SOL-01",
+    "name": "Panoramic Opening Solution",
+    "tagline": "Giải pháp mở rộng tầm nhìn vô cực",
+    "description": "Khẩu độ cánh siêu lớn nối liền phòng khách với hồ bơi/sân vườn, cơ cấu trượt nâng Lift & Slide nhẹ êm, tùy chọn mở góc vuông 90° không cột giữa.",
+    "level_tier": "Signature / Ultra Luxury",
+    "primary_systems": [
+      "l180",
+      "x80-soco80",
+      "l120"
+    ],
+    "target_spaces": [
+      "Phòng khách",
+      "Hồ bơi",
+      "Ban công Panorama",
+      "Sân vườn"
+    ],
+    "glass_recommended": "Kính hộp Low-E 24–36mm cản nhiệt",
+    "finish_recommended": "Anodize ED Champagne V8 / Y01 hoặc Xám Vô Cực Nhũ Bạc"
+  },
+  {
+    "id": "sol-acoustic",
+    "code": "SOL-02",
+    "name": "Acoustic & Thermal Living",
+    "tagline": "Giải pháp cách âm & cản nhiệt đô thị",
+    "description": "Triệt tiêu tiếng ồn đường phố và cản bức xạ nhiệt cho căn hộ cao cấp và phòng ngủ bằng cấu trúc đa khoang, kính hộp và gioăng EPDM 3 lớp.",
+    "level_tier": "Essential / Premium",
+    "primary_systems": [
+      "xf55-multi",
+      "c55-euro",
+      "xf55-flat"
+    ],
+    "target_spaces": [
+      "Phòng ngủ",
+      "Căn hộ mặt đường",
+      "Phòng làm việc"
+    ],
+    "glass_recommended": "Kính hộp 19–24mm hút chân không",
+    "finish_recommended": "Sơn tĩnh điện Xám Ánh Kim / Đen Mờ"
+  },
+  {
+    "id": "sol-minimalist",
+    "code": "SOL-03",
+    "name": "Minimalist Interior Space",
+    "tagline": "Giải pháp không gian phẳng & vách ngăn Slim",
+    "description": "Cửa lùa liên động treo trên không ray dưới chân, thanh nhôm siêu mỏng nhìn chính diện chỉ 16mm, tích hợp giảm chấn Soft-closing.",
+    "level_tier": "Premium / Signature",
+    "primary_systems": [
+      "slim-40",
+      "slim-130"
+    ],
+    "target_spaces": [
+      "Phòng bếp",
+      "Phòng thay đồ Walk-in Closet",
+      "Phòng làm việc"
+    ],
+    "glass_recommended": "Kính siêu trong Low-Iron 8mm, kính sọc Fluted",
+    "finish_recommended": "Đen Mờ (Matte Black), Vàng Mờ Luxury"
+  },
+  {
+    "id": "sol-grand-entrance",
+    "code": "SOL-04",
+    "name": "Grand Architectural Entrance",
+    "tagline": "Giải pháp đại sảnh biệt thự bề thế",
+    "description": "Cửa chính 1-2 cánh bản lớn 120–180mm uy nghi, bản lề sàn thủy lực đóng mở 2 chiều êm ái, khung nhôm bọc viền bảo vệ góc kính an toàn tuyệt đối.",
+    "level_tier": "Signature / Ultra Luxury",
+    "primary_systems": [
+      "vh65-tl60",
+      "c65-euro"
+    ],
+    "target_spaces": [
+      "Đại sảnh biệt thự",
+      "Cửa chính tòa nhà",
+      "Showroom"
+    ],
+    "glass_recommended": "Kính cường lực 12mm hoặc Kính hoa đồng nghệ thuật",
+    "finish_recommended": "Anodize ED Champagne Y01, Vân Gỗ Óc Chó"
+  },
+  {
+    "id": "sol-marine",
+    "code": "SOL-05",
+    "name": "Marine & High-Rise Glazing",
+    "tagline": "Giải pháp mặt kính chịu bão & kháng muối biển",
+    "description": "Vách thông tầng biệt thự cao 8m và mặt dựng cao tầng với dầm kết cấu sâu 65–150mm, xử lý bề mặt mạ Anodize ED kháng muối biển bền bỉ >25 năm.",
+    "level_tier": "Signature / Ultra Luxury",
+    "primary_systems": [
+      "md65",
+      "md50-md52",
+      "c65-euro"
+    ],
+    "target_spaces": [
+      "Mặt dựng tòa nhà",
+      "Vách thông tầng biệt thự",
+      "Du thuyền Yacht"
+    ],
+    "glass_recommended": "Kính hộp dán an toàn phản quang Low-E 24–32mm",
+    "finish_recommended": "Anodize ED Champagne Y01 chuyên dụng Marine"
+  },
+  {
+    "id": "sol-essential",
+    "code": "SOL-06",
+    "name": "Essential Living & Optimised Cost",
+    "tagline": "Giải pháp tối ưu công năng cho nhà phố & căn hộ",
+    "description": "Độ bền vững chắc, thanh thoát, chi phí đầu tư hợp lý, đầy đủ tính năng mở quay, mở lùa 2 ray và mở hất 45° chống mưa an toàn.",
+    "level_tier": "Essential",
+    "primary_systems": [
+      "xf55-flat",
+      "xf93",
+      "xfv55"
+    ],
+    "target_spaces": [
+      "Nhà phố",
+      "Căn hộ chung cư",
+      "Nhà liền kề"
+    ],
+    "glass_recommended": "Kính an toàn 6.38–10.38mm 2 lớp",
+    "finish_recommended": "Sơn tĩnh điện Xám Ánh Kim / Đen Mờ"
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "id": "cs-ocean-villa",
+    "title": "Ocean View Villa — Da Nang Coastal",
+    "market": "Villa Ven Biển",
+    "location": "Đà Nẵng, Việt Nam",
+    "solution": "Panoramic Opening & Marine Glazing",
+    "system_used": "L180 Panorama Lift & Slide + Mặt Dựng MD65",
+    "finish": "Anodize ED Champagne Y01",
+    "glass": "Kính hộp Low-E 32mm",
+    "challenge": "Khẩu độ cửa phòng khách cao 3.4m view biển, chịu áp lực gió lớn và muối biển ăn mòn cao.",
+    "solution_applied": "SV Aluminium ứng dụng hệ trượt nâng L180 cơ cấu Lift & Slide ép gioăng kín nước và mạ Anodize ED Champagne Y01 kháng muối biển.",
+    "image": "assets/images/projects/yacht-tulip/hero.jpg"
+  },
+  {
+    "id": "cs-sky-penthouse",
+    "title": "Sky Penthouse — Grand Residence",
+    "market": "Penthouse Tầng 42",
+    "location": "Hà Nội, Việt Nam",
+    "solution": "Acoustic Living & Panorama Opening",
+    "system_used": "L180 Lift & Slide + XF55 Đa Khoang Cách Âm",
+    "finish": "Xám Vô Cực Nhũ Bạc",
+    "glass": "Kính hộp hút chân không cản nhiệt 28mm",
+    "challenge": "Tải trọng gió trên tầng 42 cực lớn, yêu cầu cách âm vượt trội khỏi tiếng ồn đô thị.",
+    "solution_applied": "Sử dụng cấu trúc nhôm đa khoang và kính hộp 28mm, gioăng EPDM 3 lớp triệt tiêu rung chấn và tiếng ồn gió.",
+    "image": "assets/images/projects/yacht-tulip/hero.jpg"
+  },
+  {
+    "id": "cs-golf-residence",
+    "title": "Golf View Residence — Villa Sân Golf",
+    "market": "Biệt Thự Cao Cấp",
+    "location": "Vĩnh Phúc, Việt Nam",
+    "solution": "European Luxury & Minimalist Slim",
+    "system_used": "C65 Rãnh C Châu Âu + Slim 40 Nội Thất",
+    "finish": "Xám Ánh Kim + Đen Mờ",
+    "glass": "Kính siêu trong Low-Iron 10mm & Kính hộp Low-E",
+    "challenge": "Gia chủ yêu cầu ngôn ngữ kiến trúc Châu Âu sắc sảo kết hợp không gian mở thông phòng không ray sàn.",
+    "solution_applied": "Kết hợp hệ C65 Rãnh C phụ kiện Cmech cho mặt tiền và hệ Slim 40 treo không ray sàn cho khu bếp - phòng khách.",
+    "image": "assets/images/projects/yacht-tulip/hero.jpg"
+  },
+  {
+    "id": "cs-resort-pavilion",
+    "title": "Boutique Resort Pavilion — Hồ Bơi Vô Cực",
+    "market": "Resort Nghỉ Dưỡng",
+    "location": "Phú Quốc, Việt Nam",
+    "solution": "Panoramic Opening & Bi-Folding",
+    "system_used": "Cửa Xếp Trượt Khẩu Độ Lớn X80 + Cửa Lùa L120",
+    "finish": "Anodize ED Champagne V8",
+    "glass": "Kính an toàn cản nhiệt 24mm",
+    "challenge": "Cần mở thông toàn bộ 10m mặt tiền nhà hàng hướng ra hồ bơi mà không có cột chắn.",
+    "solution_applied": "Lắp đặt hệ xếp trượt 8 cánh X80 dồn gọn về 2 bên, tạo không gian mở 100% đón gió biển tự nhiên.",
+    "image": "assets/images/projects/yacht-tulip/hero.jpg"
+  },
+  {
+    "id": "cs-marine-yacht",
+    "title": "SV Marine — 85ft Luxury Yacht Glazing",
+    "market": "Du Thuyền Hạng Sang",
+    "location": "Hải Phòng / Hạ Long",
+    "solution": "Marine Glazing & Inox 316L Yacht Metalwork",
+    "system_used": "SV Marine Aluminium Systems + Inox 316L",
+    "finish": "Anodize ED Champagne Y01 Marine Grade",
+    "glass": "Kính uốn cong cường lực dán an toàn chuyên dụng hàng hải",
+    "challenge": "Môi trường sóng biển, rung chấn cơ học động cơ tàu và nồng độ muối biển cực cao.",
+    "solution_applied": "Phân hiệu SV Marine chế tác nhôm mạ Anodize ED Y01 kết hợp lan can Inox 316L đánh bóng gương Satin bền bỉ.",
+    "image": "assets/images/projects/yacht-tulip/hero.jpg"
+  }
+]

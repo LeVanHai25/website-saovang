@@ -1,36 +1,34 @@
-{
-  "levels": [
-    {
-      "id": "essential",
-      "name_vi": "Essential",
-      "label_vi": "Phân Khúc Tiêu Chuẩn",
-      "tagline_vi": "Functional Architectural Solutions",
-      "description_vi": "Giải pháp nhôm kính thiết thực, đảm bảo 100% công năng, kết cấu bền bỉ và tối ưu chi phí đầu tư.",
-      "badge_color": "#475569"
-    },
-    {
-      "id": "premium",
-      "name_vi": "Premium",
-      "label_vi": "Phân Khúc Nâng Cao",
-      "tagline_vi": "Enhanced Architectural Solutions",
-      "description_vi": "Hoàn thiện bề mặt cao cấp, cấu hình cách âm cách nhiệt tăng cường, đa dạng tùy chọn màu sắc thời thượng.",
-      "badge_color": "#0284C7"
-    },
-    {
-      "id": "signature",
-      "name_vi": "Signature",
-      "label_vi": "Phân Khúc Cao Cấp",
-      "tagline_vi": "High-End Architectural Systems",
-      "description_vi": "Hệ nhôm rãnh C Châu Âu, hệ lùa 3 ray bản lớn và cửa Slim tối giản định hình phong cách kiến trúc tinh tế.",
-      "badge_color": "#D97706"
-    },
-    {
-      "id": "ultra-luxury",
-      "name_vi": "Ultra Luxury",
-      "label_vi": "Phân Khúc Độc Bản & Siêu Cao Cấp",
-      "tagline_vi": "Bespoke Architectural Solutions",
-      "description_vi": "Giải pháp cửa trượt nâng Panorama L180, xếp trượt khẩu độ lớn và bề mặt mạ Anodize ED cho các công trình siêu sang.",
-      "badge_color": "#C9A227"
-    }
-  ]
-}
+[
+  {
+    "id": "essential",
+    "name": "ESSENTIAL",
+    "tagline": "Smart Architecture",
+    "investment": "●●○○",
+    "description": "Tối ưu chi phí đầu tư & công năng sử dụng bền bỉ cho nhà phố và căn hộ tiêu chuẩn.",
+    "target_buildings": "Nhà phố, Nhà liền kề, Căn hộ tiêu chuẩn"
+  },
+  {
+    "id": "premium",
+    "name": "PREMIUM",
+    "tagline": "Enhanced Performance",
+    "investment": "●●●○",
+    "description": "Cấu trúc đa khoang cách âm, hệ Slim nội thất và hiệu năng thẩm mỹ nâng cao.",
+    "target_buildings": "Căn hộ cao cấp, Nhà ở phong cách, Biệt thự phố"
+  },
+  {
+    "id": "signature",
+    "name": "SIGNATURE",
+    "tagline": "Architectural Luxury",
+    "investment": "●●●●",
+    "description": "Chuẩn Rãnh C Châu Âu 13.5mm, trượt nâng Panorama và mạ Anodize ED Champagne cao cấp.",
+    "target_buildings": "Biệt thự, Penthouse, Dinh thự, Resort tiêu chuẩn"
+  },
+  {
+    "id": "ultra_luxury",
+    "name": "ULTRA LUXURY",
+    "tagline": "Bespoke Architecture",
+    "investment": "●●●●●",
+    "description": "Khẩu độ siêu lớn, mở góc vuông 90° không cột, dầm kết cấu 150mm độc bản.",
+    "target_buildings": "Biệt thự siêu sang, Resort cao cấp, Du thuyền (Yacht)"
+  }
+]

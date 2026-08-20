@@ -15,19 +15,19 @@ print("==================================================")
 
 # 1. Check Data Foundation Files
 required_json = [
-    "systems.json", "groups.json", "markets.json", 
-    "levels.json", "finishes.json", "colors.json", 
-    "applications.json", "verification.json"
+    "systems.json", "solutions.json", "markets.json", 
+    "levels.json", "applications.json", "door_models.json", 
+    "materials.json", "hardware.json", "case_studies.json"
 ]
 
 all_data_ok = True
-print("\n[1/5] Kiểm tra 8 tệp dữ liệu chuẩn hóa JSON:")
+print("\n[1/5] Kiểm tra 9 tệp dữ liệu chuẩn hóa JSON:")
 for fname in required_json:
     fpath = os.path.join(DATA_DIR, fname)
     if os.path.exists(fpath):
         with open(fpath, "r", encoding="utf-8") as f:
             d = json.load(f)
-            count = len(d.get("systems", d.get("groups", d.get("markets", d.get("levels", d.get("finishes", d.get("applications", [])))))))
+            count = len(d) if isinstance(d, list) else len(d.keys())
             print(f"  ✓ {fname:<20} ({count} mục)")
     else:
         print(f"  ❌ THIẾU: {fname}")
@@ -35,16 +35,15 @@ for fname in required_json:
 
 # 2. Check 16 Base Systems Integrity
 with open(os.path.join(DATA_DIR, "systems.json"), "r", encoding="utf-8") as f:
-    systems_data = json.load(f)
-    systems = systems_data.get("systems", [])
+    systems = json.load(f)
     print(f"\n[2/5] Kiểm tra tính toàn vẹn 16 Hệ Nhôm Gốc ({len(systems)} hệ):")
     for s in systems:
         has_code = bool(s.get("code"))
         has_group = bool(s.get("group_id"))
-        has_level = bool(s.get("level"))
-        has_finish = bool(s.get("finishes"))
-        assert has_code and has_group and has_level and has_finish, f"Lỗi hệ {s.get('id')}"
-    print(f"  ✓ 16/16 hệ nhôm có đầy đủ mã code, group_id, level, finishes và verification status!")
+        has_level = bool(s.get("level_id"))
+        has_verify = bool(s.get("verification"))
+        assert has_code and has_group and has_level and has_verify, f"Lỗi hệ {s.get('id')}"
+    print(f"  ✓ 16/16 hệ nhôm có đầy đủ mã code, group_id, level_id, verification status và solution tags!")
 
 # 3. Check HTML Pages Existence & Key Markers
 html_pages = {

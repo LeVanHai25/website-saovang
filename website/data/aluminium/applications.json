@@ -1,54 +1,81 @@
-{
-  "applications": [
-    {
-      "id": "main-entrance",
-      "name_vi": "Cửa Đi Chính Sảnh",
-      "group": "door"
-    },
-    {
-      "id": "balcony-sliding",
-      "name_vi": "Cửa Đi Ban Công Lùa",
-      "group": "door"
-    },
-    {
-      "id": "living-panorama",
-      "name_vi": "Cửa Panorama Phòng Khách",
-      "group": "door"
-    },
-    {
-      "id": "bedroom-door",
-      "name_vi": "Cửa Đi Thông Phòng",
-      "group": "door"
-    },
-    {
-      "id": "window-casement",
-      "name_vi": "Cửa Sổ Mở Quay / Hất",
-      "group": "window"
-    },
-    {
-      "id": "window-sliding",
-      "name_vi": "Cửa Sổ Lùa Trượt",
-      "group": "window"
-    },
-    {
-      "id": "garden-folding",
-      "name_vi": "Cửa Xếp Trượt Sân Vườn",
-      "group": "door"
-    },
-    {
-      "id": "slim-interior-partition",
-      "name_vi": "Vách Kính & Cửa Slim Nội Thất",
-      "group": "slim"
-    },
-    {
-      "id": "slim-exterior-door",
-      "name_vi": "Cửa Slim Ngoại Thất Chịu Lực",
-      "group": "slim"
-    },
-    {
-      "id": "curtain-wall-facade",
-      "name_vi": "Mặt Dựng Vách Kính Tòa Nhà",
-      "group": "facade"
-    }
-  ]
-}
+[
+  {
+    "id": "app-entrance",
+    "name": "Cửa Chính Đại Sảnh",
+    "recommended_systems": [
+      "vh65-tl60",
+      "c65-euro",
+      "xf55-flat"
+    ]
+  },
+  {
+    "id": "app-living",
+    "name": "Cửa Phòng Khách & Ban Công",
+    "recommended_systems": [
+      "l180",
+      "l120",
+      "l94-l95",
+      "xf55-flat"
+    ]
+  },
+  {
+    "id": "app-panorama",
+    "name": "Cửa Panorama View Biển / Sân Vườn",
+    "recommended_systems": [
+      "l180",
+      "x80-soco80",
+      "l120"
+    ]
+  },
+  {
+    "id": "app-bedroom",
+    "name": "Cửa Phòng Ngủ Cách Âm",
+    "recommended_systems": [
+      "xf55-multi",
+      "c55-euro",
+      "xf55-flat"
+    ]
+  },
+  {
+    "id": "app-interior",
+    "name": "Vách Ngăn & Cửa Thông Phòng Slim",
+    "recommended_systems": [
+      "slim-40",
+      "slim-130"
+    ]
+  },
+  {
+    "id": "app-pool",
+    "name": "Cửa Xếp Trượt Khu Hồ Bơi / Sân Golf",
+    "recommended_systems": [
+      "x80-soco80",
+      "f63",
+      "l180"
+    ]
+  },
+  {
+    "id": "app-facade",
+    "name": "Mặt Dựng Kính Tòa Nhà & Showroom",
+    "recommended_systems": [
+      "md50-md52",
+      "md65"
+    ]
+  },
+  {
+    "id": "app-atrium",
+    "name": "Vách Kính Thông Tầng Biệt Thự",
+    "recommended_systems": [
+      "md65",
+      "md50-md52"
+    ]
+  },
+  {
+    "id": "app-marine",
+    "name": "Hạng Mục Nhôm Kính Du Thuyền / Ven Biển",
+    "recommended_systems": [
+      "l180",
+      "c65-euro",
+      "md65"
+    ]
+  }
+]

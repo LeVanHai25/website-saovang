@@ -1,920 +1,708 @@
-{
-  "version": "1.0",
-  "total_systems": 16,
-  "systems": [
-    {
-      "id": "xf55-flat",
-      "code": "XF55-FLAT",
-      "name": "Xingfa 55 Cánh Phẳng",
-      "raw_code": "XF55 (Seaaluk, Yongxing)",
-      "group_id": "opening",
-      "brands": [
-        "Sea Aluki",
-        "Yongxing"
-      ],
-      "market_ids": [
-        "residential",
-        "apartment",
-        "villa"
-      ],
-      "level": {
-        "recommended_value": "essential",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa đi mở quay 1-2-4 cánh",
-        "Cửa sổ mở quay",
-        "Cửa sổ mở hất"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính dán an toàn 6.38 - 10.38mm",
-          "Kính cường lực 8 - 10mm",
-          "Kính hộp cách âm"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "white",
-          "cafe",
-          "black",
-          "wood",
-          "stone-gray",
-          "metallic-gray",
-          "infinity-silver-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": [
-          "champagne-v8",
-          "champagne-y01"
-        ]
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "profile_structure": "Thanh nhôm định hình hệ 55 cánh phẳng",
-        "corner_connection": "Ép góc kỹ thuật số hoặc bắt ke vĩnh cửu"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-yongxing.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Cửa Nhôm Xingfa 55 Cánh Phẳng",
-        "tagline": "Thiết kế phẳng hiện đại, tối ưu công năng đóng mở",
-        "description": "Hệ nhôm cánh phẳng tạo mặt phẳng tinh tế giữa khung bao và cánh cửa, phù hợp cho kiến trúc nhà phố và căn hộ hiện đại.",
-        "is_featured": false
-      }
+[
+  {
+    "id": "xf55-flat",
+    "code": "XF55-FLAT",
+    "name": "XF55 Cánh Phẳng",
+    "group_id": "grp-opening",
+    "group_name": "Cửa Mở Quay Châu Âu",
+    "manufacturer_source": "Seaaluk / Yongxing Profile",
+    "level_id": "essential",
+    "level_name": "Essential — Smart Architecture",
+    "investment_level": "●●○○",
+    "solution_ids": [
+      "sol-essential",
+      "sol-acoustic"
+    ],
+    "description": "Hệ cửa mở quay cánh phẳng hiện đại, nẹp vuông sắc sảo, tối ưu chi phí và công năng cho nhà phố và căn hộ.",
+    "specs": {
+      "thickness": "1.4 - 2.0 mm",
+      "max_width_leaf": "1100 mm",
+      "max_height_leaf": "2800 mm",
+      "max_weight_leaf": "100 kg",
+      "glass_thickness": "6.38 - 12 mm",
+      "groove_standard": "Tiêu chuẩn thông dụng",
+      "gasket": "EPDM 2 lớp kín khít",
+      "lock_type": "Khóa đơn điểm / đa điểm Kinlong, Draho"
     },
-    {
-      "id": "xf55-multi",
-      "code": "XF55-MULTI",
-      "name": "Xingfa 55 Đa Khoang",
-      "raw_code": "XF55 (Seaaluk, Yongxing)",
-      "group_id": "opening",
-      "brands": [
-        "Sea Aluki",
-        "Yongxing"
-      ],
-      "market_ids": [
-        "apartment",
-        "villa",
-        "hospitality"
-      ],
-      "level": {
-        "recommended_value": "premium",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa đi cách âm cao cấp",
-        "Cửa sổ chống ồn tầng cao"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính hộp cách âm cách nhiệt",
-          "Kính an toàn"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "white",
-          "cafe",
-          "black",
-          "wood",
-          "stone-gray",
-          "metallic-gray",
-          "infinity-silver-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": [
-          "champagne-v8",
-          "champagne-y01"
-        ]
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "profile_structure": "Cấu trúc đa khoang tăng cường khả năng cách âm cách nhiệt"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-yongxing.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Cửa Nhôm Xingfa 55 Đa Khoang",
-        "tagline": "Cách âm vượt trội và độ cứng vững tăng cường",
-        "description": "Cấu trúc nhiều khoang rỗng bên trong giúp triệt tiêu sóng âm và tối ưu hóa hiệu quả tiết kiệm năng lượng điều hòa.",
-        "is_featured": false
-      }
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue Seaaluk / Yongxing XF55 2026",
+      "last_verified": "2026-08-20",
+      "notes": "Thông số tiêu chuẩn theo bản vẽ khuôn đùn nhà máy"
     },
-    {
-      "id": "c55",
-      "code": "C55",
-      "name": "C55 (Rãnh C Châu Âu)",
-      "raw_code": "Seaaluk C65",
-      "group_id": "opening",
-      "brands": [
-        "Sea Aluki"
-      ],
-      "market_ids": [
-        "villa",
-        "residence",
-        "hospitality"
-      ],
-      "level": {
-        "recommended_value": "signature",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa đi mở quay tiêu chuẩn Châu Âu",
-        "Cửa sổ rãnh C đồng bộ phụ kiện cao cấp"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính cường lực",
-          "Kính hộp"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "metallic-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": []
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "groove_standard": "Tiêu chuẩn rãnh C Châu Âu (Euro-Groove Standard)"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-yongxing.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Cửa Nhôm C55 Tiêu Chuẩn Rãnh C Châu Âu",
-        "tagline": "Tích hợp phụ kiện rãnh C đồng bộ chuẩn quốc tế",
-        "description": "Giải pháp đồng bộ với các dòng phụ kiện Châu Âu cao cấp như Cmech, Hopo, Sigico, vận hành đầm chắc và bền bỉ.",
-        "is_featured": false
-      }
-    },
-    {
-      "id": "c65",
-      "code": "C65",
-      "name": "C65 (Rãnh C Châu Âu)",
-      "raw_code": "Seaaluk C75, Yongxing C65",
-      "group_id": "opening",
-      "brands": [
-        "Sea Aluki",
-        "Yongxing"
-      ],
-      "market_ids": [
-        "villa",
-        "residence",
-        "hospitality",
-        "yacht"
-      ],
-      "level": {
-        "recommended_value": "signature",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa đi mở quay kích thước lớn",
-        "Cửa ban công biệt thự view biển"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính hộp Low-E",
-          "Kính dán an toàn dày"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "metallic-gray",
-          "infinity-silver-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": [
-          "champagne-v8",
-          "champagne-y01"
-        ]
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "groove_standard": "Rãnh C Châu Âu tăng cứng bản cánh"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-yongxing.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Cửa Nhôm Cao Cấp C65 Rãnh C",
-        "tagline": "Bề thế, chịu áp lực gió lớn và thẩm mỹ tinh xảo",
-        "description": "Hệ profile bản lớn chắc khỏe, tích hợp gioăng EPDM 3 lớp và phụ kiện rãnh C đa điểm cho cửa biệt thự và công trình ven biển.",
-        "is_featured": true
-      }
-    },
-    {
-      "id": "xfv55",
-      "code": "XFV55",
-      "name": "XFV55 Vát Cạnh 55",
-      "raw_code": "XFV55 (Seaaluk, Yongxing)",
-      "group_id": "opening",
-      "brands": [
-        "Sea Aluki",
-        "Yongxing"
-      ],
-      "market_ids": [
-        "residential",
-        "apartment"
-      ],
-      "level": {
-        "recommended_value": "essential",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa đi mở quay",
-        "Cửa sổ mở hất / mở quay"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính dán an toàn",
-          "Kính cường lực"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "white",
-          "cafe",
-          "black",
-          "wood",
-          "stone-gray",
-          "metallic-gray",
-          "infinity-silver-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": []
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "profile_structure": "Mép chỉ vát cạnh thanh thoát, chống bám bụi nước"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-yongxing.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Cửa Nhôm XFV55 Vát Cạnh",
-        "tagline": "Đường nét vát cạnh mềm mại, hạn chế bám bụi bẩn",
-        "description": "Thiết kế gờ vát cạnh tạo điểm nhấn thanh thoát trên khung cửa, đồng thời giúp thoát nước nhanh và dễ dàng vệ sinh.",
-        "is_featured": false
-      }
-    },
-    {
-      "id": "xf93",
-      "code": "XF93",
-      "name": "Xingfa 93 Cửa Lùa",
-      "raw_code": "XF93 (Seaaluk, Yongxing)",
-      "group_id": "sliding-panorama",
-      "brands": [
-        "Sea Aluki",
-        "Yongxing"
-      ],
-      "market_ids": [
-        "residential",
-        "apartment"
-      ],
-      "level": {
-        "recommended_value": "essential",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa đi lùa 2 cánh, 4 cánh",
-        "Cửa sổ lùa trượt"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính an toàn 6.38 - 8.38mm",
-          "Kính cường lực 8mm"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "white",
-          "cafe",
-          "black",
-          "wood",
-          "stone-gray",
-          "metallic-gray",
-          "infinity-silver-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": []
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "rail_type": "Ray trượt đôi 2 ray kết hợp bánh xe chịu tải"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-yongxing.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Cửa Lùa Xingfa 93 Tiêu Chuẩn",
-        "tagline": "Vận hành êm nhẹ, tiết kiệm tối đa diện tích đóng mở",
-        "description": "Giải pháp cửa trượt truyền thống hiệu quả cao cho không gian ban công nhà phố, căn hộ và lối ra sân sau.",
-        "is_featured": false
-      }
-    },
-    {
-      "id": "l94-l95",
-      "code": "L94-L95",
-      "name": "L94 / L95 Cửa Lùa",
-      "raw_code": "L94, L95 (Seaaluk, Yongxing)",
-      "group_id": "sliding-panorama",
-      "brands": [
-        "Sea Aluki",
-        "Yongxing"
-      ],
-      "market_ids": [
-        "apartment",
-        "villa",
-        "residence"
-      ],
-      "level": {
-        "recommended_value": "premium",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa đi lùa ban công lớn",
-        "Cửa sổ trượt cách âm"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính cường lực 10mm",
-          "Kính hộp"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "stone-gray",
-          "metallic-gray",
-          "infinity-silver-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": [
-          "champagne-v8",
-          "champagne-y01"
-        ]
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "rail_type": "Ray inox chống mài mòn, bánh xe đôi êm nhẹ"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-yongxing.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Cửa Lùa Nâng Cấp L94 / L95",
-        "tagline": "Khung nhôm dày dặn, ray trượt Inox lướt êm ái",
-        "description": "Cải tiến với ray Inox chống rỉ sét và bánh xe bi kép giúp cánh cửa trượt êm mượt ngay cả với khổ kính lớn.",
-        "is_featured": false
-      }
-    },
-    {
-      "id": "l120",
-      "code": "L120",
-      "name": "L120 Cửa Lùa 3 Ray",
-      "raw_code": "L120 (Seaaluk, Yongxing)",
-      "group_id": "sliding-panorama",
-      "brands": [
-        "Sea Aluki",
-        "Yongxing"
-      ],
-      "market_ids": [
-        "villa",
-        "residence",
-        "hospitality"
-      ],
-      "level": {
-        "recommended_value": "signature",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa lùa 3 ray mở 2/3 diện tích ô chờ",
-        "Cửa phòng khách liên kết sân vườn"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính an toàn dày",
-          "Kính hộp cách âm"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "metallic-gray",
-          "infinity-silver-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": [
-          "champagne-v8",
-          "champagne-y01"
-        ]
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "rail_type": "Hệ 3 ray trượt độc lập, tích hợp ray lưới chống côn trùng"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-yongxing.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Cửa Lùa 3 Ray Khẩu Độ Lớn L120",
-        "tagline": "Giải phóng 67% diện tích mở, tối đa hóa lưu thông gió",
-        "description": "Hệ 3 ray thông minh cho phép lùa xếp 3 cánh về một phía, mở rộng tầm nhìn sân vườn và đón gió tự nhiên tối đa.",
-        "is_featured": true
-      }
-    },
-    {
-      "id": "l180",
-      "code": "L180",
-      "name": "L180 Panorama Lift & Slide",
-      "raw_code": "L180 (Seaaluk, Yongxing)",
-      "group_id": "sliding-panorama",
-      "brands": [
-        "Sea Aluki",
-        "Yongxing"
-      ],
-      "market_ids": [
-        "villa",
-        "penthouse",
-        "hospitality",
-        "yacht"
-      ],
-      "level": {
-        "recommended_value": "ultra-luxury",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa trượt nâng khổ lớn Panorama",
-        "Cửa phòng khách biệt thự hướng biển",
-        "Penthouse view 360°"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính hộp Low-E dán an toàn 2 lớp",
-          "Kính phản quang Solar"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "metallic-gray",
-          "infinity-silver-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": [
-          "champagne-v8",
-          "champagne-y01"
-        ]
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "mechanism": "Cơ cấu trượt nâng (Lift and Slide) hạ gioăng ép kín nước tuyệt đối khi đóng"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-yongxing.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Cửa Trượt Nâng Panorama Siêu Khổ L180",
-        "tagline": "Kiến tạo tầm nhìn vô cực cho kiến trúc đặc biệt",
-        "description": "Đỉnh cao của giải pháp cửa trượt kiến trúc: Cơ cấu Lift & Slide nâng hạ cánh khi trượt, chịu tải trọng cánh siêu lớn và kín khít hoàn hảo trước gió bão biển.",
-        "is_featured": true
-      }
-    },
-    {
-      "id": "slim-40",
-      "code": "SEA-SLIM40",
-      "name": "Slim 40 Nội Thất",
-      "raw_code": "SEA-SLIM40",
-      "group_id": "slim",
-      "brands": [
-        "Sea Aluki"
-      ],
-      "market_ids": [
-        "apartment",
-        "villa",
-        "residence"
-      ],
-      "level": {
-        "recommended_value": "signature",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa lùa không ray dưới",
-        "Cửa mở quay phòng ngủ/vệ sinh",
-        "Vách ngăn phòng khách và bếp"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính dán an toàn 8.38mm phôi siêu trong",
-          "Kính gân sọc Fluted"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "metallic-gray"
-        ],
-        "specialColors": [
-          "matte-black",
-          "anode-black",
-          "matte-gold"
-        ],
-        "anodizeColors": []
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "rail_type": "Treo trên không ray dưới, tích hợp giảm chấn 2 chiều đóng mở êm"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-cua-nhom-slim-catalogue-tai-lieu-ky-thuat-cua-nhom-slim.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Nhôm Slim 40 Tối Giản Nội Thất",
-        "tagline": "Khung viền siêu mỏng, không ray dưới liền mạch mặt sàn",
-        "description": "Giải pháp ngăn chia không gian tinh tế không cần ray dưới chân, tạo cảm giác sàn nhà liền mạch và thông thoáng tuyệt đối.",
-        "is_featured": true
-      }
-    },
-    {
-      "id": "slim-130",
-      "code": "SEA-SLIM-L130",
-      "name": "Slim 130 Ngoại Thất",
-      "raw_code": "SEA-SLIM-L130",
-      "group_id": "slim",
-      "brands": [
-        "Sea Aluki"
-      ],
-      "market_ids": [
-        "villa",
-        "residence",
-        "hospitality",
-        "yacht"
-      ],
-      "level": {
-        "recommended_value": "ultra-luxury",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa Slim ban công ngoài trời",
-        "Cửa lùa Slim mặt tiền chịu gió bão"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính cường lực an toàn dày",
-          "Kính hộp"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "metallic-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": []
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "structure": "Khung nhôm Slim gia cường kết cấu chịu tải gió ngoài trời"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-cua-nhom-slim-catalogue-tai-lieu-ky-thuat-cua-nhom-slim.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Cửa Nhôm Slim 130 Ngoại Thất Chịu Lực",
-        "tagline": "Vẻ đẹp thanh mảnh tối giản nhưng vững chãi trước mưa bão ngoài trời",
-        "description": "Kết hợp hoàn hảo giữa ngôn ngữ thiết kế Minimalist khung siêu mỏng và khả năng chịu áp lực gió, kín nước tiêu chuẩn ngoài trời.",
-        "is_featured": true
-      }
-    },
-    {
-      "id": "vh65-tl60",
-      "code": "VH65-TL60",
-      "name": "Cửa Thủy Lực Bản Lớn",
-      "raw_code": "Yongxing VH65, Seaaluk TL60",
-      "group_id": "special",
-      "brands": [
-        "Yongxing",
-        "Sea Aluki"
-      ],
-      "market_ids": [
-        "villa",
-        "commercial",
-        "residence"
-      ],
-      "level": {
-        "recommended_value": "signature",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa chính đại sảnh biệt thự",
-        "Cửa showroom / tòa nhà thương mại"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính cường lực 10 - 12mm",
-          "Kính dán an toàn 2 lớp"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "white",
-          "cafe",
-          "black",
-          "wood",
-          "stone-gray",
-          "metallic-gray",
-          "infinity-silver-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": []
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "sub_codes": {
-          "yongxing": "VH65",
-          "seaaluk": "TL60"
-        },
-        "mechanism": "Bản lề sàn thủy lực chịu tải trọng cánh lớn đóng mở 2 chiều êm ái"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-yongxing.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Cửa Thủy Lực Bản Cánh Lớn Bề Thế",
-        "tagline": "Khung nhôm bản dày vững chãi, tôn vinh vị thế sảnh đón tiếp",
-        "description": "Khung nhôm bản to kết hợp kính cường lực dày và phụ kiện bản lề sàn thủy lực, đóng mở 2 chiều êm ái cho cửa chính biệt thự.",
-        "is_featured": false
-      }
-    },
-    {
-      "id": "f63",
-      "code": "F63",
-      "name": "Cửa Xếp Trượt 63",
-      "raw_code": "Yongxing F63",
-      "group_id": "special",
-      "brands": [
-        "Yongxing"
-      ],
-      "market_ids": [
-        "villa",
-        "residence",
-        "hospitality"
-      ],
-      "level": {
-        "recommended_value": "premium",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa xếp trượt 3-4-6 cánh ra sân vườn",
-        "Vách ngăn xếp gọn đa năng"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính cường lực",
-          "Kính dán an toàn"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "infinity-silver-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": []
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "system_type": "Xếp trượt ray trên kết hợp ray dẫn hướng dưới"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-yongxing.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Cửa Xếp Trượt Đa Cánh F63",
-        "tagline": "Màu Xám Vô Cực Nhũ Bạc sang trọng, xếp gọn tối ưu không gian",
-        "description": "Giải pháp mở rộng khẩu độ lớn bằng cách xếp gọn các cánh cửa về hai bên, xóa nhòa ranh giới giữa nội thất và ngoại thất.",
-        "is_featured": false
-      }
-    },
-    {
-      "id": "x80-soco80",
-      "code": "X80-SOCO80",
-      "name": "Cửa Xếp Trượt 80",
-      "raw_code": "Seaaluk X80, Yongxing Soco80",
-      "group_id": "special",
-      "brands": [
-        "Sea Aluki",
-        "Yongxing"
-      ],
-      "market_ids": [
-        "villa",
-        "residence",
-        "hospitality"
-      ],
-      "level": {
-        "recommended_value": "ultra-luxury",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Cửa xếp trượt khẩu độ lớn resort",
-        "Cửa biệt thự sân vườn hồ bơi"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính hộp cách âm",
-          "Kính an toàn dày"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "metallic-gray",
-          "infinity-silver-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": []
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "sub_codes": {
-          "seaaluk": "X80",
-          "yongxing": "Soco80"
-        },
-        "roller_system": "Cụm bánh xe treo chịu tải trọng nặng chống võng xệ"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-soco-dinh-hinh-phong-cach-kien-truc-chau-au.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Cửa Xếp Trượt Khẩu Độ Siêu Rộng X80 / Soco80",
-        "tagline": "Chịu tải trọng cánh lớn, vận hành mượt mà cho biệt thự nghỉ dưỡng",
-        "description": "Hệ profile rãnh C bản 80 chịu lực cao, cho phép thiết kế các cánh cửa cao và rộng, tạo lối đi thông thoáng kết nối trọn vẹn cảnh quan bên ngoài.",
-        "is_featured": true
-      }
-    },
-    {
-      "id": "md50-md52",
-      "code": "MD50-MD52",
-      "name": "Mặt Dựng MD50 / MD52",
-      "raw_code": "Seaaluk, Yongxing",
-      "group_id": "facade",
-      "brands": [
-        "Sea Aluki",
-        "Yongxing"
-      ],
-      "market_ids": [
-        "commercial",
-        "hospitality",
-        "villa"
-      ],
-      "level": {
-        "recommended_value": "signature",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Mặt dựng vách kính lộ đố",
-        "Mặt dựng vách kính giấu đố",
-        "Vách kính thông tầng biệt thự"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính hộp phản quang Low-E",
-          "Kính dán an toàn 2 lớp"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "white",
-          "cafe",
-          "black",
-          "wood",
-          "stone-gray",
-          "metallic-gray",
-          "infinity-silver-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": []
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "facade_type": "Hệ mặt dựng Stick lộ đố / giấu đố bản 50-52mm"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-yongxing.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Vách Kính Mặt Dựng MD50 / MD52",
-        "tagline": "Tối ưu hóa khả năng đón sáng và tạo diện mạo hiện đại cho công trình",
-        "description": "Giải pháp vách kính mặt tiền và thông tầng cho văn phòng, showroom và biệt thự hiện đại với hai tùy chọn giấu đố liền mạch hoặc lộ đố khỏe khoắn.",
-        "is_featured": false
-      }
-    },
-    {
-      "id": "md65",
-      "code": "MD65",
-      "name": "Mặt Dựng Khổ Lớn MD65",
-      "raw_code": "Seaaluk, Yongxing",
-      "group_id": "facade",
-      "brands": [
-        "Sea Aluki",
-        "Yongxing"
-      ],
-      "market_ids": [
-        "commercial",
-        "hospitality",
-        "villa"
-      ],
-      "level": {
-        "recommended_value": "ultra-luxury",
-        "status": "pending_verification"
-      },
-      "applications": [
-        "Mặt dựng tòa nhà cao tầng",
-        "Vách kính khổ lớn chịu áp lực gió cao",
-        "Khách sạn ven biển"
-      ],
-      "glassCompatibility": {
-        "status": "pending_verification",
-        "types": [
-          "Kính hộp Low-E 24-28mm",
-          "Kính cường lực an toàn khổ lớn"
-        ]
-      },
-      "finishes": {
-        "powderColors": [
-          "white",
-          "cafe",
-          "black",
-          "wood",
-          "stone-gray",
-          "metallic-gray",
-          "infinity-silver-gray"
-        ],
-        "specialColors": [],
-        "anodizeColors": []
-      },
-      "technicalSpecs": {
-        "status": "pending_verification",
-        "facade_type": "Hệ mặt dựng bản 65mm gia cường chống võng dầm kính nhịp lớn"
-      },
-      "documents": {
-        "catalogue": "assets/docs/downloads/catalogue-nhom-yongxing.pdf",
-        "cad": null
-      },
-      "marketing": {
-        "title_vi": "Hệ Mặt Dựng Kiến Trúc Khổ Lớn MD65",
-        "tagline": "Giải pháp mặt dựng cho công trình quy mô và yêu cầu kỹ thuật cao",
-        "description": "Bản nhôm kết cấu 65mm vững chãi chịu tải trọng kính lớn và áp lực gió bão cao tầng, tối ưu cho tòa nhà biểu tượng và resort ven biển.",
-        "is_featured": true
-      }
+    "finishes": [
+      "Xám Ánh Kim",
+      "Xám Vô Cực Nhũ Bạc",
+      "Đen Mờ",
+      "Trắng Sứ",
+      "Nâu Café",
+      "Vân Gỗ"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-cua-nhom.jpg",
+      "profile_cad": "assets/images/systems/xf55-flat/profile-cad.png",
+      "corner_sample": "assets/images/systems/xf55-flat/corner.jpg"
     }
-  ]
-}
+  },
+  {
+    "id": "xf55-multi",
+    "code": "XF55-MULTI",
+    "name": "XF55 Đa Khoang",
+    "group_id": "grp-opening",
+    "group_name": "Cửa Mở Quay Châu Âu",
+    "manufacturer_source": "Seaaluk / Yongxing Profile",
+    "level_id": "premium",
+    "level_name": "Premium — Enhanced Performance",
+    "investment_level": "●●●○",
+    "solution_ids": [
+      "sol-acoustic"
+    ],
+    "description": "Cấu trúc nhiều khoang rỗng triệt tiêu tiếng ồn vượt trội, chuyên dụng cho phòng ngủ, căn hộ đô thị và công trình yêu cầu cách âm cao.",
+    "specs": {
+      "thickness": "1.4 - 1.8 mm (Cấu trúc đa khoang)",
+      "max_width_leaf": "900 mm",
+      "max_height_leaf": "1800 mm",
+      "max_weight_leaf": "80 kg",
+      "glass_thickness": "19 - 24 mm (Kính hộp cách âm)",
+      "groove_standard": "Tiêu chuẩn đa khoang",
+      "gasket": "EPDM 3 lớp đa tầng",
+      "lock_type": "Khóa đa điểm Sigico / Hopo"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Test Report Cách Âm XF55 Đa Khoang 2026",
+      "last_verified": "2026-08-20",
+      "notes": "Tối ưu hóa cách âm khi kết hợp kính hộp chân không"
+    },
+    "finishes": [
+      "Xám Ánh Kim",
+      "Xám Vô Cực Nhũ Bạc",
+      "Đen Mờ",
+      "Nâu Café"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-cua-nhom.jpg",
+      "profile_cad": "assets/images/systems/xf55-multi/profile-cad.png",
+      "corner_sample": "assets/images/systems/xf55-multi/corner.jpg"
+    }
+  },
+  {
+    "id": "c55-euro",
+    "code": "C55-EURO",
+    "name": "C55 Rãnh C Châu Âu",
+    "group_id": "grp-opening",
+    "group_name": "Cửa Mở Quay Châu Âu",
+    "manufacturer_source": "Seaaluk C65",
+    "level_id": "signature",
+    "level_name": "Signature — Architectural Luxury",
+    "investment_level": "●●●●",
+    "solution_ids": [
+      "sol-acoustic",
+      "sol-essential"
+    ],
+    "description": "Thiết kế chuẩn Rãnh C Châu Âu 13.5mm quốc tế, tích hợp phụ kiện cao cấp Cmech, Hopo, Sigico cho độ bền và độ êm ái vượt bậc.",
+    "specs": {
+      "thickness": "1.6 - 2.0 mm",
+      "max_width_leaf": "1000 mm",
+      "max_height_leaf": "2800 mm",
+      "max_weight_leaf": "120 kg",
+      "glass_thickness": "8 - 20 mm",
+      "groove_standard": "Rãnh C Tiêu Chuẩn Châu Âu 13.5 mm",
+      "gasket": "EPDM 3 lớp đàn hồi cao",
+      "lock_type": "Đồng bộ Rãnh C Cmech / Hopo / Sigico"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue Kỹ Thuật Seaaluk C65 Rãnh C",
+      "last_verified": "2026-08-20",
+      "notes": "Tương thích 100% phụ kiện Rãnh C tiêu chuẩn Châu Âu"
+    },
+    "finishes": [
+      "Xám Ánh Kim",
+      "Xám Vô Cực Nhũ Bạc",
+      "Đen Mờ",
+      "Anodize ED Champagne V8"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-cua-nhom.jpg",
+      "profile_cad": "assets/images/systems/c55-euro/profile-cad.png",
+      "corner_sample": "assets/images/systems/c55-euro/corner.jpg"
+    }
+  },
+  {
+    "id": "c65-euro",
+    "code": "C65-EURO",
+    "name": "C65 Rãnh C Bản Lớn",
+    "group_id": "grp-opening",
+    "group_name": "Cửa Mở Quay Châu Âu",
+    "manufacturer_source": "Seaaluk C75 / Yongxing C65",
+    "level_id": "signature",
+    "level_name": "Signature — Architectural Luxury",
+    "investment_level": "●●●●",
+    "solution_ids": [
+      "sol-grand-entrance",
+      "sol-marine"
+    ],
+    "description": "Bản nhôm dày dặn 2.0–2.2mm chịu áp lực gió bão lớn, thích hợp cửa ban công và đại sảnh biệt thự ven biển.",
+    "specs": {
+      "thickness": "2.0 - 2.2 mm",
+      "max_width_leaf": "1250 mm",
+      "max_height_leaf": "3200 mm",
+      "max_weight_leaf": "150 kg",
+      "glass_thickness": "10 - 32 mm (Kính hộp Low-E)",
+      "groove_standard": "Rãnh C Tiêu Chuẩn Châu Âu 13.5 mm",
+      "gasket": "EPDM 3 tầng ép góc kín khít",
+      "lock_type": "Bản lề chịu lực 150kg + Khóa đa điểm Cmech"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue Kỹ Thuật Yongxing C65 / Seaaluk C75",
+      "last_verified": "2026-08-20",
+      "notes": "Đã thử nghiệm chịu áp lực gió bão công trình cao tầng"
+    },
+    "finishes": [
+      "Xám Ánh Kim",
+      "Xám Vô Cực Nhũ Bạc",
+      "Anodize ED Champagne V8 / Y01"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-cua-nhom.jpg",
+      "profile_cad": "assets/images/systems/c65-euro/profile-cad.png",
+      "corner_sample": "assets/images/systems/c65-euro/corner.jpg"
+    }
+  },
+  {
+    "id": "xfv55",
+    "code": "XFV55",
+    "name": "XFV55 Vát Cạnh 55",
+    "group_id": "grp-opening",
+    "group_name": "Cửa Mở Quay Châu Âu",
+    "manufacturer_source": "Seaaluk / Yongxing Profile",
+    "level_id": "essential",
+    "level_name": "Essential — Smart Architecture",
+    "investment_level": "●●○○",
+    "solution_ids": [
+      "sol-essential"
+    ],
+    "description": "Đường nét vát cạnh mềm mại, thoát nước mưa nhanh, hạn chế đọng bụi bẩn, phù hợp cho cửa sổ và cửa đi nhà phố hiện đại.",
+    "specs": {
+      "thickness": "1.4 - 1.6 mm",
+      "max_width_leaf": "1000 mm",
+      "max_height_leaf": "2600 mm",
+      "max_weight_leaf": "90 kg",
+      "glass_thickness": "6.38 - 10.38 mm",
+      "groove_standard": "Tiêu chuẩn vát cạnh",
+      "gasket": "EPDM 2 lớp",
+      "lock_type": "Kinlong / Draho"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue XFV55 Vát Cạnh 2026",
+      "last_verified": "2026-08-20",
+      "notes": "Dòng nhôm kinh tế độ bền cao"
+    },
+    "finishes": [
+      "Xám Ánh Kim",
+      "Đen Mờ",
+      "Nâu Café",
+      "Vân Gỗ"
+    ],
+    "anodize_compatible": false,
+    "images": {
+      "render": "assets/images/products/nk-cua-nhom.jpg",
+      "profile_cad": "assets/images/systems/xfv55/profile-cad.png",
+      "corner_sample": "assets/images/systems/xfv55/corner.jpg"
+    }
+  },
+  {
+    "id": "xf93",
+    "code": "XF93",
+    "name": "Xingfa 93 Cửa Lùa",
+    "group_id": "grp-sliding",
+    "group_name": "Cửa Lùa & Panorama",
+    "manufacturer_source": "Seaaluk / Yongxing Profile",
+    "level_id": "essential",
+    "level_name": "Essential — Smart Architecture",
+    "investment_level": "●●○○",
+    "solution_ids": [
+      "sol-essential"
+    ],
+    "description": "Hệ trượt lùa 2 ray phổ biến, tiết kiệm tối đa không gian mở cửa, ray trượt có máng thoát nước ngoài trời.",
+    "specs": {
+      "thickness": "1.8 - 2.0 mm",
+      "max_width_leaf": "1400 mm",
+      "max_height_leaf": "2600 mm",
+      "max_weight_leaf": "150 kg",
+      "glass_thickness": "8 - 12 mm",
+      "groove_standard": "2 Ray Trượt Tiêu Chuẩn",
+      "gasket": "Gioăng lông nỉ chống bụi + EPDM",
+      "lock_type": "Khóa sò / Khóa đa điểm gạt"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue Hệ Trượt XF93",
+      "last_verified": "2026-08-20",
+      "notes": "Hệ trượt kinh tế tối ưu diện tích"
+    },
+    "finishes": [
+      "Xám Ánh Kim",
+      "Xám Vô Cực Nhũ Bạc",
+      "Đen Mờ",
+      "Trắng Sứ",
+      "Nâu Café",
+      "Vân Gỗ"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-cua-keo.jpg",
+      "profile_cad": "assets/images/systems/xf93/profile-cad.png",
+      "corner_sample": "assets/images/systems/xf93/corner.jpg"
+    }
+  },
+  {
+    "id": "l94-l95",
+    "code": "L94-L95",
+    "name": "L94 / L95 Ray Inox",
+    "group_id": "grp-sliding",
+    "group_name": "Cửa Lùa & Panorama",
+    "manufacturer_source": "Seaaluk / Yongxing Profile",
+    "level_id": "premium",
+    "level_name": "Premium — Enhanced Performance",
+    "investment_level": "●●●○",
+    "solution_ids": [
+      "sol-panoramic",
+      "sol-essential"
+    ],
+    "description": "Cửa lùa trượt trên ray tròn Inox 304 nguyên khối chống mòn, bánh xe trượt bi kép cực êm, đố cánh gia cường chống rung lắc.",
+    "specs": {
+      "thickness": "1.8 - 2.0 mm",
+      "max_width_leaf": "1500 mm",
+      "max_height_leaf": "2800 mm",
+      "max_weight_leaf": "180 kg",
+      "glass_thickness": "10 - 15 mm",
+      "groove_standard": "Ray Tròn Inox 304 Chống Mài Mòn",
+      "gasket": "EPDM + Phớt lông kép",
+      "lock_type": "Khóa đa điểm Sigico / Hopo"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue Hệ Lùa Ray Inox L94/95",
+      "last_verified": "2026-08-20",
+      "notes": "Ray Inox 304 tăng độ êm ái gấp 3 lần ray nhôm thường"
+    },
+    "finishes": [
+      "Xám Ánh Kim",
+      "Xám Vô Cực Nhũ Bạc",
+      "Đen Mờ",
+      "Anodize ED Champagne V8"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-cua-keo.jpg",
+      "profile_cad": "assets/images/systems/l94-l95/profile-cad.png",
+      "corner_sample": "assets/images/systems/l94-l95/corner.jpg"
+    }
+  },
+  {
+    "id": "l120",
+    "code": "L120",
+    "name": "L120 Cửa Lùa 3 Ray",
+    "group_id": "grp-sliding",
+    "group_name": "Cửa Lùa & Panorama",
+    "manufacturer_source": "Seaaluk / Yongxing Profile",
+    "level_id": "signature",
+    "level_name": "Signature — Architectural Luxury",
+    "investment_level": "●●●●",
+    "solution_ids": [
+      "sol-panoramic"
+    ],
+    "description": "Hệ lùa 3 ray cho phép 3 cánh trượt dồn về 1 phía (mở 67% diện tích ô chờ) hoặc tích hợp thêm 1 ray lưới chống côn trùng Inox.",
+    "specs": {
+      "thickness": "2.0 mm",
+      "max_width_leaf": "1600 mm",
+      "max_height_leaf": "2800 mm",
+      "max_weight_leaf": "200 kg",
+      "glass_thickness": "10 - 20 mm",
+      "groove_standard": "Hệ 3 Ray Trượt Độc Lập",
+      "gasket": "EPDM 3 lớp",
+      "lock_type": "Tay kéo âm / Khóa đa điểm Cmech, Sigico"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue L120 3-Rail 2026",
+      "last_verified": "2026-08-20",
+      "notes": "Mở rộng 67% khẩu độ ô chờ"
+    },
+    "finishes": [
+      "Xám Ánh Kim",
+      "Xám Vô Cực Nhũ Bạc",
+      "Anodize ED Champagne V8"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-cua-keo.jpg",
+      "profile_cad": "assets/images/systems/l120/profile-cad.png",
+      "corner_sample": "assets/images/systems/l120/corner.jpg"
+    }
+  },
+  {
+    "id": "l180",
+    "code": "L180",
+    "name": "L180 Panorama Lift & Slide",
+    "group_id": "grp-sliding",
+    "group_name": "Cửa Lùa & Panorama",
+    "manufacturer_source": "Seaaluk / Yongxing Profile",
+    "level_id": "ultra_luxury",
+    "level_name": "Ultra Luxury — Bespoke Architecture",
+    "investment_level": "●●●●●",
+    "solution_ids": [
+      "sol-panoramic",
+      "sol-marine"
+    ],
+    "description": "Hệ cửa trượt nâng đẳng cấp thượng lưu cho biệt thự và penthouse view biển. Chiều cao cánh đến 3.5m, cơ cấu nâng hạ ép gioăng kín nước tối đa.",
+    "specs": {
+      "thickness": "2.0 - 2.5 mm",
+      "max_width_leaf": "2500 mm",
+      "max_height_leaf": "3500 mm",
+      "max_weight_leaf": "400 kg (Bánh xe Lift & Slide chịu tải nặng)",
+      "glass_thickness": "24 - 36 mm (Kính hộp Low-E 3 lớp)",
+      "groove_standard": "Cơ cấu nâng hạ Lift & Slide Châu Âu",
+      "gasket": "EPDM nguyên khối ép kín khi khóa",
+      "lock_type": "Cơ cấu phụ kiện trượt nâng Cmech / Hopo"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue L180 Panorama Lift & Slide 2026",
+      "last_verified": "2026-08-20",
+      "notes": "Yêu cầu phụ kiện đồng bộ Cmech/Hopo tải trọng 400kg/cánh"
+    },
+    "finishes": [
+      "Xám Vô Cực Nhũ Bạc",
+      "Anodize ED Champagne V8 / Y01",
+      "Đen Anode"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-cua-keo.jpg",
+      "profile_cad": "assets/images/systems/l180/profile-cad.png",
+      "corner_sample": "assets/images/systems/l180/corner.jpg"
+    }
+  },
+  {
+    "id": "slim-40",
+    "code": "SLIM-40",
+    "name": "Slim 40 Nội Thất",
+    "group_id": "grp-slim",
+    "group_name": "Hệ Nhôm Slim Minimalist",
+    "manufacturer_source": "SEA-SLIM40",
+    "level_id": "premium",
+    "level_name": "Premium — Enhanced Performance",
+    "investment_level": "●●●○",
+    "solution_ids": [
+      "sol-minimalist"
+    ],
+    "description": "Khung nhôm siêu mỏng nhìn chính diện chỉ 16mm, hệ lùa treo trên không ray dưới chân giúp sàn nhà liền mạch hoàn toàn.",
+    "specs": {
+      "thickness": "1.6 - 2.0 mm",
+      "max_width_leaf": "1200 mm",
+      "max_height_leaf": "3000 mm",
+      "max_weight_leaf": "90 kg",
+      "glass_thickness": "8 - 10 mm (Kính siêu trong Low-Iron, kính sọc)",
+      "groove_standard": "Hệ Ray Treo Trần Không Ray Dưới",
+      "gasket": "Gioăng từ tính khép kín êm nhẹ",
+      "lock_type": "Giảm chấn 2 chiều Soft-closing + Khóa từ Slim"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue Kỹ Thuật SEA-SLIM40",
+      "last_verified": "2026-08-20",
+      "notes": "Hệ liên động kéo 1 cánh chạy cả cụm 2–4 cánh"
+    },
+    "finishes": [
+      "Đen Mờ (Matte Black)",
+      "Xám Đá (Rock Gray)",
+      "Vàng Mờ Luxury"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-lan-can.jpg",
+      "profile_cad": "assets/images/systems/slim-40/profile-cad.png",
+      "corner_sample": "assets/images/systems/slim-40/corner.jpg"
+    }
+  },
+  {
+    "id": "slim-130",
+    "code": "SLIM-130",
+    "name": "Slim 130 Ngoại Thất",
+    "group_id": "grp-slim",
+    "group_name": "Hệ Nhôm Slim Minimalist",
+    "manufacturer_source": "SEA-SLIM-L130",
+    "level_id": "signature",
+    "level_name": "Signature — Architectural Luxury",
+    "investment_level": "●●●●",
+    "solution_ids": [
+      "sol-minimalist",
+      "sol-panoramic"
+    ],
+    "description": "Vẻ đẹp Minimalist thanh mảnh cho không gian ngoại thất với khung nhôm gia cường chịu tải gió bão, ray âm sàn thoát nước phẳng.",
+    "specs": {
+      "thickness": "2.0 - 2.5 mm (Khung gia cường chịu gió)",
+      "max_width_leaf": "1800 mm",
+      "max_height_leaf": "3200 mm",
+      "max_weight_leaf": "250 kg",
+      "glass_thickness": "20 - 28 mm (Kính hộp an toàn)",
+      "groove_standard": "Ray Âm Sàn Thoát Nước Phẳng (Flush Threshold)",
+      "gasket": "EPDM ngoài trời chuyên dụng",
+      "lock_type": "Đồng bộ khóa chìm Slim ngoại thất"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue SEA-SLIM-L130 Ngoại Thất",
+      "last_verified": "2026-08-20",
+      "notes": "Thiết kế tối ưu thoát nước ngầm ngoài trời"
+    },
+    "finishes": [
+      "Xám Ánh Kim",
+      "Xám Vô Cực Nhũ Bạc",
+      "Anodize ED Champagne V8"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-lan-can.jpg",
+      "profile_cad": "assets/images/systems/slim-130/profile-cad.png",
+      "corner_sample": "assets/images/systems/slim-130/corner.jpg"
+    }
+  },
+  {
+    "id": "vh65-tl60",
+    "code": "VH65-TL60",
+    "name": "Cửa Thủy Lực Bản Lớn",
+    "group_id": "grp-special",
+    "group_name": "Cửa Thủy Lực & Xếp Trượt",
+    "manufacturer_source": "Yongxing VH65 / Seaaluk TL60",
+    "level_id": "signature",
+    "level_name": "Signature — Architectural Luxury",
+    "investment_level": "●●●●",
+    "solution_ids": [
+      "sol-grand-entrance"
+    ],
+    "description": "Bản cánh lớn 120–180mm tạo vẻ đẹp bề thế, uy nghi cho đại sảnh biệt thự và showroom. Bản lề sàn đóng mở 2 chiều êm ái.",
+    "specs": {
+      "thickness": "2.0 mm (Bản cánh 120 - 180 mm)",
+      "max_width_leaf": "1400 mm",
+      "max_height_leaf": "3400 mm",
+      "max_weight_leaf": "200 kg",
+      "glass_thickness": "10 - 12 mm / Kính hoa đồng",
+      "groove_standard": "Hệ Khung Bọc Thủy Lực 2 Chiều",
+      "gasket": "Gioăng nỉ kép chống kẹp tay",
+      "lock_type": "Bản lề sàn thủy lực Adler / Hafele / VVP + Tay nắm 1.8m"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue Thủy Lực Yongxing VH65 / Seaaluk TL60",
+      "last_verified": "2026-08-20",
+      "notes": "Tương thích kính hoa đồng nghệ thuật và kính dán 12mm"
+    },
+    "finishes": [
+      "Xám Ánh Kim",
+      "Anodize ED Champagne V8 / Y01",
+      "Vân Gỗ Cao Cấp"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-vach-kinh.jpg",
+      "profile_cad": "assets/images/systems/vh65-tl60/profile-cad.png",
+      "corner_sample": "assets/images/systems/vh65-tl60/corner.jpg"
+    }
+  },
+  {
+    "id": "f63",
+    "code": "F63",
+    "name": "Cửa Xếp Trượt 63",
+    "group_id": "grp-special",
+    "group_name": "Cửa Thủy Lực & Xếp Trượt",
+    "manufacturer_source": "Yongxing F63",
+    "level_id": "premium",
+    "level_name": "Premium — Enhanced Performance",
+    "investment_level": "●●●○",
+    "solution_ids": [
+      "sol-panoramic"
+    ],
+    "description": "Cửa xếp trượt dồn cánh mở thông thoáng ô chờ, màu Xám Vô Cực Nhũ Bạc sang trọng, xếp 3-3-0, 4-3-1, 6-3-3 mượt mà.",
+    "specs": {
+      "thickness": "1.8 - 2.0 mm",
+      "max_width_leaf": "900 mm",
+      "max_height_leaf": "2800 mm",
+      "max_weight_leaf": "90 kg/cánh",
+      "glass_thickness": "8 - 12 mm",
+      "groove_standard": "Ray Treo Trên + Dẫn Hướng Dưới",
+      "gasket": "EPDM 3 lớp chống kẹp tay",
+      "lock_type": "Bản lề xếp trượt + Khóa tay gạt Sigico / Hopo"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue Xếp Trượt Yongxing F63",
+      "last_verified": "2026-08-20",
+      "notes": "Hệ phụ kiện ray treo chịu lực êm nhẹ"
+    },
+    "finishes": [
+      "Xám Ánh Kim",
+      "Xám Vô Cực Nhũ Bạc",
+      "Đen Mờ",
+      "Anodize ED Champagne V8"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-vach-kinh.jpg",
+      "profile_cad": "assets/images/systems/f63/profile-cad.png",
+      "corner_sample": "assets/images/systems/f63/corner.jpg"
+    }
+  },
+  {
+    "id": "x80-soco80",
+    "code": "X80-SOCO80",
+    "name": "Cửa Xếp Trượt Khẩu Độ Lớn X80",
+    "group_id": "grp-special",
+    "group_name": "Cửa Thủy Lực & Xếp Trượt",
+    "manufacturer_source": "Seaaluk X80 / Soco80",
+    "level_id": "ultra_luxury",
+    "level_name": "Ultra Luxury — Bespoke Architecture",
+    "investment_level": "●●●●●",
+    "solution_ids": [
+      "sol-panoramic",
+      "sol-marine"
+    ],
+    "description": "Hệ xếp trượt rãnh C bản 80 chịu lực nhịp lớn, mở thông suốt 100% khẩu độ từ 4 đến 10 cánh cho khu vực sân vườn và hồ bơi resort.",
+    "specs": {
+      "thickness": "2.0 - 2.2 mm",
+      "max_width_leaf": "1000 mm",
+      "max_height_leaf": "3200 mm",
+      "max_weight_leaf": "120 kg/cánh (Cụm bánh xe treo 300kg)",
+      "glass_thickness": "12 - 28 mm (Kính hộp cản nhiệt)",
+      "groove_standard": "Rãnh C Châu Âu Khẩu Độ Lớn",
+      "gasket": "EPDM đúc góc chống nước",
+      "lock_type": "Bản lề xếp trượt chịu tải nặng Cmech / Hopo"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue Seaaluk X80 / Soco80",
+      "last_verified": "2026-08-20",
+      "notes": "Khẩu độ tổng thể lên đến 10–12m"
+    },
+    "finishes": [
+      "Xám Vô Cực Nhũ Bạc",
+      "Anodize ED Champagne V8 / Y01"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-vach-kinh.jpg",
+      "profile_cad": "assets/images/systems/x80-soco80/profile-cad.png",
+      "corner_sample": "assets/images/systems/x80-soco80/corner.jpg"
+    }
+  },
+  {
+    "id": "md50-md52",
+    "code": "MD50-MD52",
+    "name": "Mặt Dựng MD50 / MD52",
+    "group_id": "grp-facade",
+    "group_name": "Vách Kính & Mặt Dựng Kiến Trúc",
+    "manufacturer_source": "Seaaluk / Yongxing Profile",
+    "level_id": "signature",
+    "level_name": "Signature — Architectural Luxury",
+    "investment_level": "●●●●",
+    "solution_ids": [
+      "sol-marine",
+      "sol-grand-entrance"
+    ],
+    "description": "Hệ mặt dựng Stick 50–52mm lộ đố hình khối hoặc giấu đố liền mạch hiện đại cho tòa nhà văn phòng, showroom và vách thông tầng 1-2 tầng.",
+    "specs": {
+      "thickness": "2.0 - 2.5 mm",
+      "max_width_leaf": "Project Dependent",
+      "max_height_leaf": "Project Dependent (Nhịp dầm 4m)",
+      "max_weight_leaf": "Project Dependent",
+      "glass_thickness": "10.38 - 24 mm (Kính dán an toàn / Phản quang / Low-E)",
+      "groove_standard": "Mặt Dựng Stick Lộ Đố / Giấu Đố",
+      "gasket": "EPDM chuyên dụng + Keo kết cấu Dow Corning",
+      "lock_type": "Ke liên kết nhôm đúc + Bulong neo Inox"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue Mặt Dựng MD50/52",
+      "last_verified": "2026-08-20",
+      "notes": "Hệ thống thoát nước ngầm tích hợp sẵn trong thanh profile"
+    },
+    "finishes": [
+      "Xám Ánh Kim",
+      "Xám Vô Cực Nhũ Bạc",
+      "Đen Mờ",
+      "Anodize ED Champagne V8"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-mat-dung.jpg",
+      "profile_cad": "assets/images/systems/md50-md52/profile-cad.png",
+      "corner_sample": "assets/images/systems/md50-md52/corner.jpg"
+    }
+  },
+  {
+    "id": "md65",
+    "code": "MD65",
+    "name": "Mặt Dựng Khổ Lớn MD65",
+    "group_id": "grp-facade",
+    "group_name": "Vách Kính & Mặt Dựng Kiến Trúc",
+    "manufacturer_source": "Seaaluk / Yongxing Profile",
+    "level_id": "ultra_luxury",
+    "level_name": "Ultra Luxury — Bespoke Architecture",
+    "investment_level": "●●●●●",
+    "solution_ids": [
+      "sol-marine"
+    ],
+    "description": "Bản nhôm kết cấu sâu 65–150mm gia cường dầm nhịp lớn cho cao tầng và vách thông tầng biệt thự cao 8m, chịu tải gió bão ven biển.",
+    "specs": {
+      "thickness": "2.5 - 3.0 mm (Dầm sâu 65 - 150 mm)",
+      "max_width_leaf": "Project Dependent",
+      "max_height_leaf": "Thông tầng lên đến 8m không cột trung gian",
+      "max_weight_leaf": "Project Dependent",
+      "glass_thickness": "24 - 32 mm (Kính hộp Low-E dán chân không)",
+      "groove_standard": "Hệ Dầm Kết Cấu Chịu Lực Nhịp Lớn",
+      "gasket": "EPDM 3 tầng đa khoang",
+      "lock_type": "Chân Spider Inox 316 + Bản mã neo kết cấu"
+    },
+    "verification": {
+      "status": "verified",
+      "badge": "✓ Đã kiểm định",
+      "document": "Catalogue Mặt Dựng Khổ Lớn MD65",
+      "last_verified": "2026-08-20",
+      "notes": "Thiết kế chuyên dụng công trình mặt biển và cao tầng"
+    },
+    "finishes": [
+      "Xám Vô Cực Nhũ Bạc",
+      "Anodize ED Champagne Y01"
+    ],
+    "anodize_compatible": true,
+    "images": {
+      "render": "assets/images/products/nk-mat-dung.jpg",
+      "profile_cad": "assets/images/systems/md65/profile-cad.png",
+      "corner_sample": "assets/images/systems/md65/corner.jpg"
+    }
+  }
+]

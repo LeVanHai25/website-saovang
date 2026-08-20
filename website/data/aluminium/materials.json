@@ -1,0 +1,100 @@
+{
+  "powder_coating": [
+    {
+      "name": "Xám Ánh Kim (Metallic Gray)",
+      "hex": "#4A5568",
+      "feature": "Chủ lực, bắt sáng kim loại sang trọng, chống bám bụi."
+    },
+    {
+      "name": "Xám Vô Cực Nhũ Bạc (Infinity Silver)",
+      "hex": "#718096",
+      "feature": "Độc bản kiến trúc hiện đại, ánh kim đa chiều."
+    },
+    {
+      "name": "Đen Mờ (Matte Black)",
+      "hex": "#1A202C",
+      "feature": "Cá tính, mạnh mẽ, phong cách Minimalist & Industrial."
+    },
+    {
+      "name": "Trắng Sứ (Pure White)",
+      "hex": "#F7FAFC",
+      "feature": "Tươi sáng, thanh lịch, phong cách Tân Cổ Điển."
+    },
+    {
+      "name": "Nâu Café Ánh Kim",
+      "hex": "#3E2723",
+      "feature": "Ấm áp, sang trọng, bền màu thời gian."
+    },
+    {
+      "name": "Xám Đá Nhám (Rock Gray)",
+      "hex": "#2D3748",
+      "feature": "Bề mặt sần chống trầy xước, chịu va đập."
+    }
+  ],
+  "anodize_ed": [
+    {
+      "name": "Anodize ED Champagne V8",
+      "hex": "#D4AF37",
+      "feature": "Vàng sâm-panh ánh mờ quý phái, đanh cứng, chống tia UV."
+    },
+    {
+      "name": "Anodize ED Champagne Y01",
+      "hex": "#C5A059",
+      "feature": "Vàng sâm-panh cao cấp, chuyên dụng môi trường biển và du thuyền Yacht."
+    }
+  ],
+  "special_finishes": [
+    {
+      "name": "Đen Anode (Anodized Black)",
+      "hex": "#111827",
+      "feature": "Bề mặt oxy hóa sâu, chống oxy hóa muối biển."
+    },
+    {
+      "name": "Vàng Mờ Luxury (Matte Gold)",
+      "hex": "#E5C158",
+      "feature": "Đẳng cấp hoàng gia cho nội thất biệt thự."
+    },
+    {
+      "name": "Vân Gỗ Chuyển Nhiệt 3D",
+      "hex": "#5D4037",
+      "feature": "Vân gỗ óc chó / sồi tự nhiên, không mối mọt cong vênh."
+    }
+  ],
+  "glass_systems": [
+    {
+      "name": "Kính dán an toàn 2 lớp (Laminated Glass)",
+      "thickness": "6.38 - 12.38 mm",
+      "feature": "Chống vỡ rơi vụn, an toàn tuyệt đối."
+    },
+    {
+      "name": "Kính cường lực an toàn (Tempered Glass)",
+      "thickness": "8 - 15 mm",
+      "feature": "Chịu lực va đập gấp 5 lần kính thường."
+    },
+    {
+      "name": "Kính hộp cản nhiệt (Insulating Glass Unit - IGU)",
+      "thickness": "19 - 36 mm",
+      "feature": "Khoang khí trơ Argon cách âm và cản nhiệt tối đa."
+    },
+    {
+      "name": "Kính Low-E / Solar Control",
+      "thickness": "20 - 32 mm",
+      "feature": "Chặn 99% tia UV và 80% bức xạ nhiệt mặt trời."
+    },
+    {
+      "name": "Kính siêu trong Low-Iron",
+      "thickness": "8 - 12 mm",
+      "feature": "Độ truyền sáng 91%, không ánh xanh, trong suốt tuyệt đối."
+    },
+    {
+      "name": "Kính sọc Fluted nghệ thuật",
+      "thickness": "8 - 10 mm",
+      "feature": "Tạo hiệu ứng thị giác mờ ảo cho cửa thông phòng."
+    },
+    {
+      "name": "Kính tích hợp rèm trong khoang chân không",
+      "thickness": "24 - 28 mm",
+      "feature": "Điều khiển nam châm / motor từ xa, không bám bụi."
+    }
+  ]
+}
