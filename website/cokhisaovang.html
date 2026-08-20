@@ -968,6 +968,215 @@
       box-shadow: 0 10px 24px rgba(201, 162, 39, 0.3);
     }
 
+    /* Section 07: Materials & Surface Finishing */
+    .lux-mat-sec {
+      padding: 100px 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .lux-mat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    @media (max-width: 960px) {
+      .lux-mat-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .lux-mat-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+    .lux-mat-card:hover {
+      background: #FFFFFF;
+      border-color: var(--sv-luxury-gold);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+    }
+    .lux-mat-header {
+      background: var(--sv-luxury-dark);
+      padding: 24px 28px;
+      color: #FFFFFF;
+      border-bottom: 2px solid var(--sv-luxury-gold);
+    }
+    .lux-mat-tag {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      color: var(--sv-luxury-gold);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      display: block;
+    }
+    .lux-mat-title {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 18px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin: 0;
+    }
+    .lux-mat-body {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      flex-grow: 1;
+    }
+    .lux-mat-item-title {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--sv-luxury-dark);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .lux-mat-item-title i {
+      color: var(--sv-luxury-gold);
+      font-size: 15px;
+    }
+    .lux-mat-item-desc {
+      font-size: 13px;
+      color: #64748B;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Section 08: 5-Step Project Process */
+    .lux-process-sec {
+      padding: 100px 0;
+      background: var(--sv-luxury-dark);
+      color: #FFFFFF;
+    }
+    .lux-process-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 16px;
+      position: relative;
+    }
+    @media (max-width: 1100px) {
+      .lux-process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .lux-process-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .lux-process-card {
+      background: rgba(30, 41, 59, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 28px 22px;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+    .lux-process-card:hover {
+      background: rgba(30, 41, 59, 0.9);
+      border-color: var(--sv-luxury-gold);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+    }
+    .lux-process-num {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--sv-luxury-gold);
+      line-height: 1;
+      margin-bottom: 16px;
+      opacity: 0.9;
+    }
+    .lux-process-title {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 14.5px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .lux-process-desc {
+      font-size: 12.5px;
+      color: #94A3B8;
+      line-height: 1.65;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    /* Section 09: Workshop Capabilities */
+    .lux-cap-sec {
+      padding: 100px 0;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .lux-cap-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    @media (max-width: 1024px) {
+      .lux-cap-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .lux-cap-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .lux-cap-card {
+      background: #F8FAFC;
+      border: 1px solid #E2E8F0;
+      border-radius: 8px;
+      padding: 32px 24px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .lux-cap-card:hover {
+      background: #FFFFFF;
+      border-color: var(--sv-luxury-gold);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(15, 23, 42, 0.08);
+    }
+    .lux-cap-icon-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      background: var(--sv-luxury-dark);
+      color: var(--sv-luxury-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+    .lux-cap-title {
+      font-family: var(--sv-font-head, 'Montserrat', sans-serif);
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--sv-luxury-dark);
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .lux-cap-desc {
+      font-size: 13px;
+      color: #64748B;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+
 
 
 
@@ -2427,6 +2636,201 @@
             <div class="lux-detail-icon-wrap"><i class="ri-sun-foggy-line"></i></div>
             <h3 class="lux-detail-title">Xử Lý Chống Ăn Mòn &amp; Thời Tiết</h3>
             <p class="lux-detail-desc">Quy trình sơn phủ chuyên dụng và thụ động hóa bề mặt inox giúp sản phẩm bền bỉ trước điều kiện khí hậu nhiệt đới ẩm và vùng biển.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════
+         COMPONENT 07: MATERIALS & SURFACE FINISHING
+    ════════════════════════════════════════════ -->
+    <section class="lux-mat-sec" id="materialsSection" aria-label="Chủng loại vật liệu và tiêu chuẩn hoàn thiện bề mặt">
+      <div class="sv-container">
+        
+        <div class="lux-sec-header" data-sv-reveal>
+          <span class="lux-sec-tag">VẬT LIỆU &amp; BỀ MẶT</span>
+          <h2 class="lux-sec-title">CHỦNG LOẠI VẬT LIỆU &amp; TIÊU CHUẨN HOÀN THIỆN</h2>
+          <p class="lux-sec-desc">
+            Lựa chọn chính xác mác vật liệu và công nghệ hoàn thiện bề mặt phù hợp với công năng sử dụng và môi trường kiến trúc của từng dự án.
+          </p>
+        </div>
+
+        <div class="lux-mat-grid">
+          
+          <!-- Mat Group 1: Inox -->
+          <div class="lux-mat-card" data-sv-reveal data-sv-delay="1">
+            <div class="lux-mat-header">
+              <span class="lux-mat-tag">NHÓM 01 — STAINLESS STEEL</span>
+              <h3 class="lux-mat-title">Inox Kiến Trúc &amp; Hàng Hải</h3>
+            </div>
+            <div class="lux-mat-body">
+              <div>
+                <div class="lux-mat-item-title"><i class="ri-check-double-line"></i> Inox 316 / 316L Marine Grade</div>
+                <p class="lux-mat-item-desc">Chứa hàm lượng Molybdenum cao, chuyên dụng kháng ăn mòn muối biển cho du thuyền và biệt thự ven biển.</p>
+              </div>
+              <div>
+                <div class="lux-mat-item-title"><i class="ri-check-double-line"></i> Inox 304 Architectural Grade</div>
+                <p class="lux-mat-item-desc">Độ bền kết cấu cao, chống oxy hóa, thẩm mỹ sang trọng cho lan can, tay vịn và nội ngoại thất cao cấp.</p>
+              </div>
+              <div>
+                <div class="lux-mat-item-title"><i class="ri-sparkling-fill"></i> Hoàn thiện bề mặt:</div>
+                <p class="lux-mat-item-desc">Xước mịn Hairline, Satin mờ tinh tế hoặc đánh bóng gương Mirror Polish phản chiếu hoàn hảo.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mat Group 2: Structural Steel -->
+          <div class="lux-mat-card" data-sv-reveal data-sv-delay="2">
+            <div class="lux-mat-header">
+              <span class="lux-mat-tag">NHÓM 02 — STRUCTURAL STEEL</span>
+              <h3 class="lux-mat-title">Thép Kết Cấu &amp; Thép Tấm</h3>
+            </div>
+            <div class="lux-mat-body">
+              <div>
+                <div class="lux-mat-item-title"><i class="ri-check-double-line"></i> Thép SS400 / Q235 / Q345</div>
+                <p class="lux-mat-item-desc">Thép bản và thép hình chịu tải cao, sử dụng cho kết cấu cầu thang, dầm đỡ mái kính canopy và cổng biệt thự.</p>
+              </div>
+              <div>
+                <div class="lux-mat-item-title"><i class="ri-check-double-line"></i> Làm sạch bề mặt Sa 2.5</div>
+                <p class="lux-mat-item-desc">Xử lý tẩy gỉ, phun cát tạo nhám đạt chuẩn quốc tế Sa 2.5 trước khi sơn phủ chống ăn mòn.</p>
+              </div>
+              <div>
+                <div class="lux-mat-item-title"><i class="ri-paint-brush-line"></i> Hệ sơn bảo vệ:</div>
+                <p class="lux-mat-item-desc">Sơn lót giàu kẽm Epoxy + sơn hoàn thiện Polyurethane (PU) 2 thành phần hoặc sơn tĩnh điện ngoài trời.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mat Group 3: Glass & Fittings -->
+          <div class="lux-mat-card" data-sv-reveal data-sv-delay="3">
+            <div class="lux-mat-header">
+              <span class="lux-mat-tag">NHÓM 03 — GLASS INTEGRATION</span>
+              <h3 class="lux-mat-title">Kính &amp; Phụ Kiện Đồng Bộ</h3>
+            </div>
+            <div class="lux-mat-body">
+              <div>
+                <div class="lux-mat-item-title"><i class="ri-check-double-line"></i> Kính Cường Lực &amp; Dán An Toàn</div>
+                <p class="lux-mat-item-desc">Độ dày từ 10mm đến 19mm, tùy chọn kính siêu trong (Low-Iron) hoặc kính dán phim an toàn PVB/Sentry.</p>
+              </div>
+              <div>
+                <div class="lux-mat-item-title"><i class="ri-check-double-line"></i> Phụ kiện chân ngàm Inox 316</div>
+                <p class="lux-mat-item-desc">Pass kẹp kính, chân ngàm âm sàn gia công CNC chuẩn xác từ Inox 316 đúc đặc chịu lực.</p>
+              </div>
+              <div>
+                <div class="lux-mat-item-title"><i class="ri-shield-line"></i> Gioăng đệm EPDM:</div>
+                <p class="lux-mat-item-desc">Gioăng cao su kỹ thuật EPDM đàn hồi cao, chống rung chấn, ngăn lão hóa và rò rỉ nước tuyệt đối.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════
+         COMPONENT 08: 5-STEP PROJECT PROCESS
+    ════════════════════════════════════════════ -->
+    <section class="lux-process-sec" id="processSection" aria-label="Quy trình 5 bước triển khai dự án">
+      <div class="sv-container">
+        
+        <div class="lux-sec-header" data-sv-reveal>
+          <span class="lux-sec-tag" style="color: var(--sv-luxury-gold);">QUY TRÌNH TRIỂN KHAI</span>
+          <h2 class="lux-sec-title" style="color: #FFFFFF;">5 BƯỚC TRIỂN KHAI DỰ ÁN CƠ KHÍ KIẾN TRÚC</h2>
+          <p class="lux-sec-desc" style="color: #94A3B8;">
+            Quy trình làm việc chuẩn mực, rõ ràng từng giai đoạn giúp kiểm soát chặt chẽ chất lượng, độ ăn khớp và tiến độ thi công.
+          </p>
+        </div>
+
+        <div class="lux-process-grid">
+          
+          <!-- Step 1 -->
+          <div class="lux-process-card" data-sv-reveal data-sv-delay="1">
+            <span class="lux-process-num">01</span>
+            <h3 class="lux-process-title">Tiếp Nhận Bản Vẽ &amp; Tư Vấn DFM</h3>
+            <p class="lux-process-desc">Đọc hiểu hồ sơ kiến trúc, khảo sát hiện trạng thực tế và tư vấn giải pháp liên kết tối ưu tính khả thi.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="lux-process-card" data-sv-reveal data-sv-delay="2">
+            <span class="lux-process-num">02</span>
+            <h3 class="lux-process-title">Triển Khai Shop Drawing &amp; Lấy Dưỡng</h3>
+            <p class="lux-process-desc">Lập bản vẽ chế tạo 2D/3D chi tiết và đo đạc lấy dưỡng thực tế tại công trình biệt thự hoặc thân tàu.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="lux-process-card" data-sv-reveal data-sv-delay="3">
+            <span class="lux-process-num">03</span>
+            <h3 class="lux-process-title">Gia Công Chế Tác Tại Xưởng</h3>
+            <p class="lux-process-desc">Cắt CNC, uốn chấn định hình, hàn ghép kết cấu và xử lý bề mặt theo đúng tiêu chuẩn kỹ thuật.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="lux-process-card" data-sv-reveal data-sv-delay="4">
+            <span class="lux-process-num">04</span>
+            <h3 class="lux-process-title">Lắp Dựng &amp; Cân Chỉnh Hiện Trường</h3>
+            <p class="lux-process-desc">Vận chuyển, định vị cân chỉnh cao độ, siết liên kết bu-lông và hoàn thiện mối ghép đồng bộ.</p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="lux-process-card" data-sv-reveal data-sv-delay="5">
+            <span class="lux-process-num">05</span>
+            <h3 class="lux-process-title">Nghiệm Thu &amp; Bàn Giao Bảo Hành</h3>
+            <p class="lux-process-desc">Kiểm tra dung sai, độ phẳng, nghiệm thu chất lượng hoàn thiện và bàn giao hồ sơ bảo hành dài hạn.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ════════════════════════════════════════════
+         COMPONENT 09: WORKSHOP CAPABILITIES
+    ════════════════════════════════════════════ -->
+    <section class="lux-cap-sec" id="capabilitiesSection" aria-label="Năng lực xưởng sản xuất và cơ sở vật chất">
+      <div class="sv-container">
+        
+        <div class="lux-sec-header" data-sv-reveal>
+          <span class="lux-sec-tag">NĂNG LỰC SẢN XUẤT</span>
+          <h2 class="lux-sec-title">CƠ SỞ VẬT CHẤT &amp; NĂNG LỰC CHẾ TÁC</h2>
+          <p class="lux-sec-desc">
+            Sao Vàng làm chủ quy trình chế tác với hệ thống nhà xưởng và máy móc chuyên dụng cho cơ khí chính xác và hoàn thiện kiến trúc.
+          </p>
+        </div>
+
+        <div class="lux-cap-grid">
+          
+          <!-- Cap 1 -->
+          <div class="lux-cap-card" data-sv-reveal data-sv-delay="1">
+            <div class="lux-cap-icon-box"><i class="ri-flashlight-line"></i></div>
+            <h3 class="lux-cap-title">Cắt Laser Fiber Kim Loại Tấm &amp; Ống</h3>
+            <p class="lux-cap-desc">Cắt biên dạng phức tạp với độ chính xác cao trên inox, thép và nhôm tấm, mép cắt phẳng mịn không bavia.</p>
+          </div>
+
+          <!-- Cap 2 -->
+          <div class="lux-cap-card" data-sv-reveal data-sv-delay="2">
+            <div class="lux-cap-icon-box"><i class="ri-shape-line"></i></div>
+            <h3 class="lux-cap-title">Chấn Gấp CNC &amp; Uốn Tấm Thủy Lực</h3>
+            <p class="lux-cap-desc">Định hình các góc uốn chuẩn xác theo dưỡng uốn và bán kính thiết kế cho cầu thang cong, lan can và louver.</p>
+          </div>
+
+          <!-- Cap 3 -->
+          <div class="lux-cap-card" data-sv-reveal data-sv-delay="3">
+            <div class="lux-cap-icon-box"><i class="ri-fire-line"></i></div>
+            <h3 class="lux-cap-title">Hàn TIG / MIG Kỹ Thuật Thẩm Mỹ</h3>
+            <p class="lux-cap-desc">Đội ngũ thợ hàn tay nghề cao, kiểm soát dòng hàn hạn chế biến dạng nhiệt và xử lý mối nối phẳng không tì vết.</p>
+          </div>
+
+          <!-- Cap 4 -->
+          <div class="lux-cap-card" data-sv-reveal data-sv-delay="4">
+            <div class="lux-cap-icon-box"><i class="ri-contrast-drop-2-line"></i></div>
+            <h3 class="lux-cap-title">Khu Xử Lý Đánh Bóng Bề Mặt</h3>
+            <p class="lux-cap-desc">Hệ thống máy đánh bóng xước Hairline đồng đều và đánh bóng gương Inox 316 đạt tiêu chuẩn hàng hải cao cấp.</p>
           </div>
 
         </div>
