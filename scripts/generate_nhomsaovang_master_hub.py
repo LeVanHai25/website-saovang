@@ -488,6 +488,30 @@ html_content = """<!DOCTYPE html>
       line-height: 1.5;
     }
 
+    /* FINDER PILLS */
+    .finder-pill {
+      background: #0F172A;
+      border: 1px solid #334155;
+      color: #94A3B8;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-family: var(--ff-head);
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .finder-pill:hover {
+      border-color: var(--sv-gold);
+      color: #FFFFFF;
+    }
+    .finder-pill.active {
+      background: var(--sv-gold);
+      border-color: var(--sv-gold);
+      color: #0F172A;
+      box-shadow: 0 2px 10px rgba(201, 162, 39, 0.4);
+    }
+
     @media (max-width: 991px) {
       .al-stats-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
     }
@@ -541,8 +565,8 @@ html_content = """<!DOCTYPE html>
           <a href="#systemGroups" class="al-btn-gold">
             <i class="ri-dashboard-line"></i> KHÁM PHÁ 16 HỆ NHÔM
           </a>
-          <a href="#rfqSection" class="al-btn-outline">
-            <i class="ri-file-upload-line"></i> GỬI YÊU CẦU BẢN VẼ &amp; DỰ ÁN
+          <a href="#smartFinderSection" class="al-btn-outline">
+            <i class="ri-sparkling-2-line"></i> SMART PRODUCT FINDER
           </a>
         </div>
         
@@ -587,8 +611,7 @@ html_content = """<!DOCTYPE html>
         <p class="al-subtitle" style="margin: 0 auto;">Từ nhà ở phố thị đến biệt thự nghỉ dưỡng và phân nhánh du thuyền chuyên biệt biển mặn.</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;" id="marketContainer">
-        <!-- Market cards dynamically loaded or fallbacked -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
         <div class="al-market-card">
           <div class="al-market-icon"><i class="ri-home-4-line"></i></div>
           <div class="al-market-title">Nhà Ở &amp; Nhà Phố</div>
@@ -1025,7 +1048,79 @@ html_content = """<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- 10. TECHNICAL LIBRARY BANNER -->
+  <!-- 10. SMART PRODUCT FINDER WIZARD -->
+  <section style="padding: 90px 0; background: #0F172A; color: #FFFFFF;" id="smartFinderSection">
+    <div class="container" style="max-width: 1000px;">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <span class="al-tag" style="color: var(--sv-gold);"><i class="ri-sparkling-2-line"></i> SMART PRODUCT FINDER</span>
+        <h2 class="al-title al-title-light">Tìm Hệ Nhôm Phù Hợp Với Lựa Chọn Của Bạn</h2>
+        <p class="al-subtitle al-subtitle-light" style="margin: 0 auto;">
+          Bộ công cụ 3 bước giúp bạn nhanh chóng xác định các hệ nhôm đề xuất để xem xét theo loại công trình, vị trí cửa và ưu tiên thiết kế.
+        </p>
+      </div>
+
+      <div style="background: #1E293B; border: 1px solid #334155; border-radius: 14px; padding: 36px; box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+        
+        <!-- STEP 1 -->
+        <div style="margin-bottom: 28px;">
+          <div style="font-family: var(--ff-head); font-size: 13px; font-weight: 800; color: var(--sv-gold); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+            <span style="background: var(--sv-gold); color: #0F172A; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900;">1</span>
+            BƯỚC 01: BẠN ĐANG XÂY DỰNG LOẠI CÔNG TRÌNH NÀO?
+          </div>
+          <div class="finder-pill-group" style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="finder-pill" onclick="setFinderStep('market', 'residential', this)">Nhà Ở &amp; Nhà Phố</button>
+            <button class="finder-pill" onclick="setFinderStep('market', 'apartment', this)">Căn Hộ &amp; Chung Cư</button>
+            <button class="finder-pill active" onclick="setFinderStep('market', 'villa', this)">Biệt Thự &amp; Penthouse</button>
+            <button class="finder-pill" onclick="setFinderStep('market', 'hospitality', this)">Resort &amp; Khách Sạn</button>
+            <button class="finder-pill" onclick="setFinderStep('market', 'commercial', this)">Tòa Nhà Thương Mại</button>
+            <button class="finder-pill" onclick="setFinderStep('market', 'yacht', this)">Du Thuyền (Yacht Division)</button>
+          </div>
+        </div>
+
+        <!-- STEP 2 -->
+        <div style="margin-bottom: 28px;">
+          <div style="font-family: var(--ff-head); font-size: 13px; font-weight: 800; color: var(--sv-gold); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+            <span style="background: var(--sv-gold); color: #0F172A; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900;">2</span>
+            BƯỚC 02: BẠN CẦN GIẢI PHÁP / HẠNG MỤC NÀO?
+          </div>
+          <div class="finder-pill-group" style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="finder-pill" onclick="setFinderStep('application', 'door-opening', this)">Cửa Đi Mở Quay</button>
+            <button class="finder-pill" onclick="setFinderStep('application', 'door-sliding', this)">Cửa Lùa Trượt</button>
+            <button class="finder-pill active" onclick="setFinderStep('application', 'door-panorama', this)">Cửa Panorama Khổ Lớn</button>
+            <button class="finder-pill" onclick="setFinderStep('application', 'door-slim', this)">Cửa Slim Tối Giản</button>
+            <button class="finder-pill" onclick="setFinderStep('application', 'door-folding', this)">Cửa Xếp Trượt</button>
+            <button class="finder-pill" onclick="setFinderStep('application', 'door-hydraulic', this)">Cửa Thủy Lực Sảnh</button>
+            <button class="finder-pill" onclick="setFinderStep('application', 'glazing-partition', this)">Vách Kính Ngăn Phòng</button>
+            <button class="finder-pill" onclick="setFinderStep('application', 'facade-curtain-wall', this)">Mặt Dựng Tòa Nhà</button>
+          </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div style="margin-bottom: 32px;">
+          <div style="font-family: var(--ff-head); font-size: 13px; font-weight: 800; color: var(--sv-gold); margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+            <span style="background: var(--sv-gold); color: #0F172A; width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900;">3</span>
+            BƯỚC 03: ƯU TIÊN THIẾT KẾ &amp; YÊU CẦU CỦA BẠN?
+          </div>
+          <div class="finder-pill-group" style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <button class="finder-pill" onclick="setFinderStep('priority', 'cost-effective', this)">Tối Ưu Chi Phí &amp; Công Năng</button>
+            <button class="finder-pill" onclick="setFinderStep('priority', 'balanced', this)">Cân Bằng Thẩm Mỹ &amp; Cách Âm</button>
+            <button class="finder-pill" onclick="setFinderStep('priority', 'high-end', this)">Thẩm Mỹ Cao Cấp (Rãnh C Châu Âu)</button>
+            <button class="finder-pill active" onclick="setFinderStep('priority', 'max-view', this)">Tối Đa Hóa Tầm Nhìn Panorama</button>
+            <button class="finder-pill" onclick="setFinderStep('priority', 'minimalist', this)">Khung Siêu Mỏng Minimalist</button>
+            <button class="finder-pill" onclick="setFinderStep('priority', 'coastal-marine', this)">Kháng Gió Bão / Ven Biển (Anodize ED)</button>
+          </div>
+        </div>
+
+        <!-- RESULTS -->
+        <div id="finderResults" style="border-top: 1px solid #334155; padding-top: 28px;">
+          <!-- Loaded dynamically via aluminium-finder.js -->
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. TECHNICAL LIBRARY BANNER -->
   <section style="padding: 70px 0; background: radial-gradient(circle at 70% 50%, #1E293B 0%, #0F172A 100%); color: #FFFFFF; border-top: 1px solid rgba(201, 162, 39, 0.2); border-bottom: 1px solid rgba(201, 162, 39, 0.2);">
     <div class="container">
       <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px;">
@@ -1047,7 +1142,7 @@ html_content = """<!DOCTYPE html>
     </div>
   </section>
 
-  <!-- 11. PROJECT RFQ & NDA SECTION -->
+  <!-- 12. PROJECT RFQ & NDA SECTION -->
   <section style="padding: 90px 0; background: #FFFFFF;" id="rfqSection">
     <div class="container" style="max-width: 900px;">
       <div style="text-align: center; margin-bottom: 40px;">
@@ -1163,6 +1258,7 @@ html_content = """<!DOCTYPE html>
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/aluminium-finder.js"></script>
   <script>
     function handleAluminiumRfq(e) {
       e.preventDefault();
@@ -1189,4 +1285,4 @@ html_content = """<!DOCTYPE html>
 with open(r"d:\Sao Vàng\Website-SaoVang\website\nhomsaovang.html", "w", encoding="utf-8") as f:
     f.write(html_content)
 
-print("✅ Successfully generated Master Hub nhomsaovang.html according to 11-step UX architecture!")
+print("✅ Successfully updated Master Hub nhomsaovang.html with integrated Smart Product Finder Wizard!")
