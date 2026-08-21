@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#B5121B" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title id="pageTitle">Hồ Sơ Dự Án Thực Tế | SAO VÀNG</title>
-  <meta name="description" id="pageDesc" content="Hồ sơ nghiệm thu và hình ảnh thực tế công trình cơ khí kiến trúc, nhôm kính và du thuyền cao cấp của Sao Vàng." />
+  <meta name="description" id="pageDesc" content="Hồ sơ nghiệm thu kỹ thuật và hình ảnh thực tế công trình cơ khí kiến trúc, nhôm kính và du thuyền cao cấp của Sao Vàng." />
   <link rel="stylesheet" href="assets/css/main.css" />
   <style>
   /* ══ LUXURY ARCHITECTURAL PROJECT DETAIL ═════════════════════ */
@@ -25,7 +25,7 @@
   .proj-hero-banner {
     background: radial-gradient(circle at 50% 0%, #1a233a 0%, #0b0f19 100%);
     color: #FFFFFF;
-    padding: clamp(36px, 5vw, 60px) 0 40px 0;
+    padding: clamp(36px, 5vw, 64px) 0 44px 0;
     border-bottom: 1px solid rgba(201, 162, 39, 0.25);
     position: relative;
     overflow: hidden;
@@ -69,7 +69,7 @@
     font-size: clamp(15px, 1.8vw, 17px);
     color: #94A3B8;
     line-height: 1.8;
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 0 28px 0;
     font-weight: 400;
   }
@@ -79,17 +79,17 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
-    background: rgba(19, 25, 39, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(19, 25, 39, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 16px 20px;
+    padding: 18px 24px;
     backdrop-filter: blur(10px);
   }
   @media (min-width: 768px) {
     .proj-quick-stats {
       grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      padding: 18px 28px;
+      gap: 24px;
+      padding: 20px 32px;
     }
   }
   .quick-stat-item {
@@ -101,12 +101,12 @@
     font-size: 11px;
     color: #94A3B8;
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    font-weight: 600;
+    letter-spacing: 0.08em;
+    font-weight: 700;
   }
   .quick-stat-item .val {
     font-family: var(--ff-head);
-    font-size: 14px;
+    font-size: 14.5px;
     font-weight: 800;
     color: #FFFFFF;
     white-space: nowrap;
@@ -123,11 +123,11 @@
     border-radius: 16px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     background: #0B0F19;
     aspect-ratio: 16/9;
-    max-height: 560px;
+    max-height: 580px;
   }
   @media (min-width: 1024px) {
     .proj-featured-wrap {
@@ -141,25 +141,26 @@
   }
   .proj-featured-badge {
     position: absolute;
-    bottom: 16px;
-    right: 16px;
-    background: rgba(11, 15, 25, 0.88);
+    bottom: 20px;
+    right: 20px;
+    background: rgba(11, 15, 25, 0.9);
     color: #FFFFFF;
-    border: 1px solid rgba(201, 162, 39, 0.4);
-    padding: 8px 18px;
+    border: 1px solid rgba(201, 162, 39, 0.5);
+    padding: 9px 20px;
     border-radius: 30px;
     font-family: var(--ff-head);
-    font-size: 12px;
+    font-size: 12.5px;
     font-weight: 800;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
     display: flex;
     align-items: center;
     gap: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
   }
 
   /* ── Main 2-Column Content Layout ── */
   .proj-content-section {
-    padding: 60px 0 80px 0;
+    padding: 64px 0 90px 0;
     background: #F8FAFC;
   }
   .proj-content-grid {
@@ -179,22 +180,179 @@
     }
   }
 
-  /* ── Technical Highlights Card ── */
+  /* ── Section Title Component ── */
+  .case-section-head {
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid var(--sv-border);
+  }
+  .case-section-head .sub-tag {
+    font-family: var(--ff-head);
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--sv-gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .case-section-head h2 {
+    font-family: var(--ff-head);
+    font-size: clamp(22px, 3vw, 26px);
+    font-weight: 900;
+    color: #0F172A;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  /* ── Scope of Work Package Grid ── */
+  .scope-packages-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  @media (min-width: 640px) {
+    .scope-packages-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .scope-pkg-card {
+    background: #FFFFFF;
+    border: 1px solid var(--sv-border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .scope-pkg-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(201, 162, 39, 0.12);
+    color: var(--sv-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+  }
+  .scope-pkg-content h4 {
+    margin: 0 0 6px 0;
+    font-family: var(--ff-head);
+    font-size: 15px;
+    font-weight: 800;
+    color: #0F172A;
+  }
+  .scope-pkg-content p {
+    margin: 0;
+    font-size: 13.5px;
+    color: #475569;
+    line-height: 1.6;
+  }
+
+  /* ── Technical Metrics Matrix ── */
+  .metrics-matrix-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  @media (min-width: 768px) {
+    .metrics-matrix-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  .metric-box {
+    background: #FFFFFF;
+    border: 1px solid var(--sv-border);
+    border-top: 3px solid var(--sv-gold);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.03);
+  }
+  .metric-box .m-val {
+    font-family: var(--ff-head);
+    font-size: 20px;
+    font-weight: 900;
+    color: #0F172A;
+    margin-bottom: 4px;
+  }
+  .metric-box .m-lbl {
+    font-size: 12px;
+    color: #64748B;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  /* ── 5-Step Process Timeline ── */
+  .workflow-steps-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 44px;
+  }
+  @media (min-width: 640px) {
+    .workflow-steps-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .workflow-steps-grid {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+  .step-card {
+    background: #FFFFFF;
+    border: 1px solid var(--sv-border);
+    border-radius: 10px;
+    padding: 16px;
+    position: relative;
+  }
+  .step-card-num {
+    font-family: var(--ff-head);
+    font-size: 12px;
+    font-weight: 900;
+    color: var(--sv-gold);
+    background: rgba(201, 162, 39, 0.15);
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  .step-card h5 {
+    margin: 0 0 6px 0;
+    font-family: var(--ff-head);
+    font-size: 13.5px;
+    font-weight: 800;
+    color: #0F172A;
+  }
+  .step-card p {
+    margin: 0;
+    font-size: 12px;
+    color: #64748B;
+    line-height: 1.5;
+  }
+
+  /* ── Highlights Card ── */
   .highlights-card {
     background: #FFFFFF;
     border-radius: 12px;
     border: 1px solid var(--sv-border);
     border-left: 5px solid var(--sv-gold);
-    padding: clamp(20px, 3vw, 32px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-    margin-bottom: 32px;
+    padding: clamp(20px, 3vw, 28px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+    margin-bottom: 36px;
   }
   .highlights-card h3 {
     font-family: var(--ff-head);
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 800;
     color: var(--sv-text-dark);
-    margin: 0 0 16px 0;
+    margin: 0 0 14px 0;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -203,7 +361,7 @@
     margin: 0;
     padding-left: 20px;
     color: #334155;
-    font-size: 15px;
+    font-size: 14.5px;
     line-height: 1.85;
   }
   .highlights-card li {
@@ -223,10 +381,6 @@
     border-radius: 12px;
     padding: 24px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
-    transition: transform 0.3s ease;
-  }
-  .cs-card:hover {
-    transform: translateY(-3px);
   }
   .cs-card h4 {
     font-family: var(--ff-head);
@@ -247,16 +401,6 @@
   }
 
   /* ── Multi-Image Gallery ── */
-  .gallery-header-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 24px;
-    padding-bottom: 16px;
-    border-bottom: 2px solid var(--sv-border);
-    flex-wrap: wrap;
-    gap: 12px;
-  }
   .gallery-grid-layout {
     display: grid;
     grid-template-columns: 1fr;
@@ -314,6 +458,41 @@
     flex-grow: 1;
     display: flex;
     align-items: center;
+  }
+
+  /* ── QA & Testimonial Box ── */
+  .testimonial-qa-box {
+    background: #0B0F19;
+    color: #FFFFFF;
+    border-radius: 14px;
+    padding: 28px;
+    border: 1px solid rgba(201, 162, 39, 0.3);
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .testimonial-qa-box blockquote {
+    margin: 0 0 16px 0;
+    font-size: 15px;
+    font-style: italic;
+    color: #E2E8F0;
+    line-height: 1.8;
+  }
+  .testi-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .testi-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--sv-gold);
+    color: #0B0F19;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
   }
 
   /* ── Sticky Executive Sidebar ── */
@@ -496,7 +675,7 @@
   <!-- LOADING STATE -->
   <div id="loadingState" style="padding: 120px 0; text-align: center; background: #0B0F19; color: #FFFFFF;">
     <div style="width: 44px; height: 44px; border: 3px solid rgba(201, 162, 39, 0.2); border-top-color: var(--sv-gold); border-radius: 50%; animation: spin 0.8s linear infinite; margin: 0 auto 16px;"></div>
-    <p style="color: #94A3B8; font-size: 14px; font-weight: 600;">Đang tải hồ sơ dự án thực tế...</p>
+    <p style="color: #94A3B8; font-size: 14px; font-weight: 600;">Đang tải hồ sơ kỹ thuật dự án...</p>
   </div>
 
   <!-- MAIN PROJECT DETAIL CONTAINER -->
@@ -510,7 +689,7 @@
         <nav style="display: flex; align-items: center; gap: 8px; font-size: 12.5px; color: #94A3B8; margin-bottom: 20px;">
           <a href="index.html" style="color: #94A3B8; text-decoration: none;">Trang Chủ</a>
           <i class="ri-arrow-right-s-line" style="color: var(--sv-gold);"></i>
-          <a href="duan.html" style="color: #94A3B8; text-decoration: none;">Dự Án Thực Tế</a>
+          <a href="duan.html" style="color: #94A3B8; text-decoration: none;">Hồ Sơ Dự Án Thực Tế</a>
           <i class="ri-arrow-right-s-line" style="color: var(--sv-gold);"></i>
           <span style="color: #FFFFFF; font-weight: 700;" id="breadcrumbTitle">...</span>
         </nav>
@@ -559,44 +738,120 @@
       <div class="sv-container">
         <div class="proj-content-grid">
           
-          <!-- LEFT COLUMN: Engineering Specs, CSR, Multi-Photo Gallery -->
+          <!-- LEFT COLUMN: Comprehensive Case Study -->
           <div>
             
-            <!-- Highlights Box -->
+            <!-- SECTION 1: Scope of Work & Packages Breakdown -->
+            <div style="margin-bottom: 44px;">
+              <div class="case-section-head">
+                <span class="sub-tag">GÓI THẦU &amp; PHẠM VI THI CÔNG</span>
+                <h2>Các Hạng Mục Gia Công Đã Bàn Giao</h2>
+              </div>
+              <div class="scope-packages-grid" id="scopePackagesGrid"></div>
+            </div>
+
+            <!-- SECTION 2: Technical Metrics Matrix -->
+            <div style="margin-bottom: 44px;">
+              <div class="case-section-head">
+                <span class="sub-tag">CHỈ SỐ THỬ NGHIỆM &amp; DUNG SAI</span>
+                <h2>Thông Số Kỹ Thuật &amp; Tiêu Chuẩn Chế Tác</h2>
+              </div>
+              <div class="metrics-matrix-grid" id="metricsGrid"></div>
+            </div>
+
+            <!-- SECTION 3: Highlights Box -->
             <div id="highlightsBox" class="highlights-card" style="display: none;">
               <h3><i class="ri-award-fill" style="color: var(--sv-gold); font-size: 22px;"></i> ĐIỂM NỔI BẬT KỸ THUẬT &amp; CÔNG NGHỆ CHẾ TÁC</h3>
               <ul id="highlightsList"></ul>
             </div>
 
-            <!-- Case Study CSR Cards -->
-            <div class="case-study-grid" id="csrGrid">
-              <div class="cs-card" id="cardChallenge" style="border-left: 4px solid #E11D48;">
-                <h4 style="color: #0F172A;"><i class="ri-alert-fill" style="color: #E11D48;"></i> Thách Thức Kỹ Thuật</h4>
-                <p id="descChallenge"></p>
+            <!-- SECTION 4: Engineering Case Study CSR (Challenge, Solution, Result) -->
+            <div style="margin-bottom: 48px;">
+              <div class="case-section-head">
+                <span class="sub-tag">CASE STUDY KỸ THUẬT THỰC ĐỊA</span>
+                <h2>Thách Thức Hiện Trường &amp; Giải Pháp Của Sao Vàng</h2>
               </div>
+              <div class="case-study-grid" id="csrGrid">
+                <div class="cs-card" id="cardChallenge" style="border-left: 4px solid #E11D48;">
+                  <h4 style="color: #0F172A;"><i class="ri-alert-fill" style="color: #E11D48;"></i> Thách Thức Kỹ Thuật Hiện Trường</h4>
+                  <p id="descChallenge"></p>
+                </div>
 
-              <div class="cs-card" id="cardSolution" style="border-left: 4px solid #2563EB;">
-                <h4 style="color: #0F172A;"><i class="ri-tools-fill" style="color: #2563EB;"></i> Giải Pháp Chế Tác Của Sao Vàng</h4>
-                <p id="descSolution"></p>
-              </div>
+                <div class="cs-card" id="cardSolution" style="border-left: 4px solid #2563EB;">
+                  <h4 style="color: #0F172A;"><i class="ri-tools-fill" style="color: #2563EB;"></i> Giải Pháp Chế Tác &amp; Lắp Dựng Của Sao Vàng</h4>
+                  <p id="descSolution"></p>
+                </div>
 
-              <div class="cs-card" id="cardResult" style="border-left: 4px solid #16A34A;">
-                <h4 style="color: #0F172A;"><i class="ri-checkbox-circle-fill" style="color: #16A34A;"></i> Kết Quả Nghiệm Thu &amp; Bàn Giao</h4>
-                <p id="descResult"></p>
+                <div class="cs-card" id="cardResult" style="border-left: 4px solid #16A34A;">
+                  <h4 style="color: #0F172A;"><i class="ri-checkbox-circle-fill" style="color: #16A34A;"></i> Kết Quả Nghiệm Thu KCS &amp; Bàn Giao</h4>
+                  <p id="descResult"></p>
+                </div>
               </div>
             </div>
 
-            <!-- Multi-Image Photo Gallery Grid -->
+            <!-- SECTION 5: 5-Stage Execution Process -->
+            <div style="margin-bottom: 48px;">
+              <div class="case-section-head">
+                <span class="sub-tag">QUY TRÌNH KIỂM SOÁT CHẤT LƯỢNG (QA/QC)</span>
+                <h2>5 Bước Triển Khai Chế Tác Tiêu Chuẩn Quốc Tế</h2>
+              </div>
+              <div class="workflow-steps-grid">
+                <div class="step-card">
+                  <span class="step-card-num">BƯỚC 01</span>
+                  <h5>Khảo Sát 3D Laser</h5>
+                  <p>Quét tọa độ thực địa, lập bản vẽ Shop Drawing chi tiết từng góc ghép.</p>
+                </div>
+                <div class="step-card">
+                  <span class="step-card-num">BƯỚC 02</span>
+                  <h5>Gia Công CNC Fiber</h5>
+                  <p>Cắt laser fiber và chấn gấp CNC dung sai ±0.2mm trên phôi Inox 316/nhôm.</p>
+                </div>
+                <div class="step-card">
+                  <span class="step-card-num">BƯỚC 03</span>
+                  <h5>Đánh Bóng Vi Sinh</h5>
+                  <p>Mài phẳng mối hàn TIG khí Argon, đánh bóng Mirror 8K hoặc Satin mờ.</p>
+                </div>
+                <div class="step-card">
+                  <span class="step-card-num">BƯỚC 04</span>
+                  <h5>Mock-up Thử Nghiệm</h5>
+                  <p>Lắp ráp thử nghiệm 1:1 tại nhà xưởng trước khi vận chuyển công trình.</p>
+                </div>
+                <div class="step-card">
+                  <span class="step-card-num">BƯỚC 05</span>
+                  <h5>Nghiệm Thu KCS</h5>
+                  <p>Lắp dựng cố định, kiểm tra độ kín nước, chịu lực gió bão và bàn giao.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- SECTION 6: Multi-Image Photo Gallery Grid -->
             <div id="gallerySection">
-              <div class="gallery-header-wrap">
+              <div class="case-section-head" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 12px;">
                 <div>
-                  <span style="font-family: var(--ff-head); font-size: 11px; font-weight: 800; color: var(--sv-gold); letter-spacing: 0.15em; text-transform: uppercase;">THƯ VIỆN HÌNH ẢNH CÔNG TRÌNH THỰC TẾ</span>
-                  <h2 style="font-family: var(--ff-head); font-size: 24px; font-weight: 800; color: #0F172A; margin: 4px 0 0 0;">Bộ Sưu Tập Ảnh Chi Tiết</h2>
+                  <span class="sub-tag">BẰNG CHỨNG HÌNH ẢNH CÔNG TRÌNH THỰC TẾ</span>
+                  <h2>Bộ Sưu Tập Hình Ảnh Chi Tiết</h2>
                 </div>
                 <span id="galleryCountBadge" style="background: #0B0F19; color: var(--sv-gold); font-family: var(--ff-head); font-size: 12px; font-weight: 800; padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(201,162,39,0.4);"></span>
               </div>
 
               <div class="gallery-grid-layout" id="galleryGrid"></div>
+            </div>
+
+            <!-- SECTION 7: Testimonial & QA Box -->
+            <div class="testimonial-qa-box" id="testiBox">
+              <div style="font-family: var(--ff-head); font-size: 11px; font-weight: 800; color: var(--sv-gold); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 12px;">
+                <i class="ri-double-quotes-l"></i> ĐÁNH GIÁ CỦA ĐƠN VỊ VẬN HÀNH &amp; CHỦ ĐẦU TƯ
+              </div>
+              <blockquote id="testiQuote">
+                "Sao Vàng đã chứng minh năng lực gia công cơ khí chính xác và hệ nhôm kính vượt trội. Từng mối hàn Inox 316, đường cong lan can và vách kính bo góc đều đạt độ tinh xảo hoàn hảo, đáp ứng xuất sắc các tiêu chuẩn hàng hải khắt khe nhất."
+              </blockquote>
+              <div class="testi-author">
+                <div class="testi-avatar" id="testiAvatar">SV</div>
+                <div>
+                  <strong style="display:block; font-size: 14px; color: #FFFFFF;" id="testiName">Ban Quản Lý Dự Án</strong>
+                  <span style="font-size: 12px; color: #94A3B8;" id="testiRole">Đại diện Chủ đầu tư công trình</span>
+                </div>
+              </div>
             </div>
 
             <!-- Next / Previous Project Navigation Strip -->
@@ -619,17 +874,30 @@
           <!-- RIGHT COLUMN: Sticky Executive Specs & Contact Actions -->
           <div>
             <div class="executive-sidebar-box">
-              <h3 class="exec-box-title">Hồ Sơ Kỹ Thuật</h3>
+              <h3 class="exec-box-title">Hồ Sơ Kỹ Thuật Dự Án</h3>
               <span class="exec-box-sub">Bàn Giao &amp; Nghiệm Thu 100%</span>
 
               <div id="metaBody"></div>
 
-              <div style="margin-top: 28px; display: flex; flex-direction: column; gap: 12px;">
+              <!-- Quality Certifications Checklist -->
+              <div style="margin-top: 24px; padding: 16px; background: #F8FAFC; border-radius: 10px; border: 1px solid #E2E8F0;">
+                <h5 style="margin: 0 0 10px 0; font-family: var(--ff-head); font-size: 12.5px; font-weight: 800; color: #0F172A; text-transform: uppercase; letter-spacing: 0.04em;">
+                  <i class="ri-shield-check-fill" style="color: #16A34A;"></i> Chứng Chỉ &amp; Cam Kết
+                </h5>
+                <ul style="margin: 0; padding-left: 16px; font-size: 12px; color: #475569; line-height: 1.7;">
+                  <li>CO/CQ phôi Inox 316L &amp; Nhôm chính hãng</li>
+                  <li>Kiểm định mối hàn TIG chuẩn AWS D1.1</li>
+                  <li>Bảo hành chống ăn mòn bề mặt 10 – 25 năm</li>
+                  <li>Hỗ trợ bảo trì, bảo dưỡng định kỳ trọn đời</li>
+                </ul>
+              </div>
+
+              <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px;">
                 <a id="consultBtn" href="lienhe.html" class="sv-btn sv-btn-gold" style="width: 100%; text-align: center; justify-content: center; padding: 14px 20px; font-weight: 800; font-size: 13.5px;">
                   <i class="ri-mail-send-line"></i> Yêu Cầu Tư Vấn Tương Tự
                 </a>
                 <a href="tel:0869590279" class="sv-btn sv-btn-outline-gold" style="width: 100%; text-align: center; justify-content: center; padding: 12px 20px; font-weight: 700; font-size: 13.5px;">
-                  <i class="ri-phone-fill"></i> Hotline: 0869 590 279
+                  <i class="ri-phone-fill"></i> Hotline Kỹ Thuật: 0869 590 279
                 </a>
                 <a href="cokhisaovang.html#quickQuote" class="sv-btn" style="width: 100%; text-align: center; justify-content: center; padding: 12px 20px; font-weight: 700; font-size: 13.5px; background: #0B0F19; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.15);">
                   <i class="ri-file-upload-line" style="color: var(--sv-gold);"></i> Gửi Bản Vẽ Nhận Dự Toán
@@ -695,8 +963,6 @@
 
   <!-- ═══ INTERACTIVE LIGHTBOX CAROUSEL ═══ -->
   <div id="lightbox" class="lightbox-modal" onclick="closeLightbox()">
-    
-    <!-- Lightbox Header -->
     <div style="display: flex; justify-content: space-between; align-items: center; z-index: 4010; color: #FFFFFF;" onclick="event.stopPropagation();">
       <span id="lightboxCounter" style="background: rgba(201,162,39,0.2); color: var(--sv-gold); border: 1px solid rgba(201,162,39,0.4); padding: 4px 14px; border-radius: 20px; font-family: var(--ff-head); font-size: 12px; font-weight: 800;">Ảnh 1 / 1</span>
       <button onclick="closeLightbox()" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #FFFFFF; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; cursor: pointer; transition: all 0.2s;">
@@ -704,7 +970,6 @@
       </button>
     </div>
 
-    <!-- Lightbox Center with Navigation Arrows -->
     <div style="position: relative; display: flex; align-items: center; justify-content: center; flex-grow: 1; max-height: 78vh; margin: 10px 0;" onclick="event.stopPropagation();">
       <button class="lightbox-nav-btn" onclick="prevLightboxImg()" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); z-index: 4010;">
         <i class="ri-arrow-left-s-line"></i>
@@ -717,11 +982,9 @@
       </button>
     </div>
 
-    <!-- Lightbox Caption -->
     <div style="text-align: center; z-index: 4010; padding: 10px 20px;" onclick="event.stopPropagation();">
       <div id="lightboxCaption" style="display: inline-block; background: rgba(15,23,42,0.9); color: #FFFFFF; padding: 10px 24px; border-radius: 30px; font-size: 14px; font-weight: 600; max-width: 800px; border: 1px solid rgba(201,162,39,0.4);"></div>
     </div>
-
   </div>
 
   <!-- SCRIPTS -->
@@ -730,6 +993,7 @@
   <script>
   let _galleryImages = [];
   let _currentLightboxIdx = 0;
+
   const ALL_PROJECT_SLUGS = [
     { slug: 'yacht-tulip', title: 'Du Thuyền 5 Sao Tulip Cruise' },
     { slug: 'villa-an-vuong', title: 'Biệt Thự An Vượng Villa' },
@@ -740,6 +1004,162 @@
     { slug: 'yacht-leona', title: 'Du Thuyền Leona Cruise Hạ Long' },
     { slug: 'villa-thanh-hoa', title: 'Công Trình Nhà Ở Thanh Hóa' }
   ];
+
+  // Specific Deep Technical Data for Each Project
+  const PROJECT_CASE_STUDIES = {
+    'yacht-azura': {
+      packages: [
+        { icon: 'ri-anchor-fill', title: 'Lan Can Mạn Tàu & Boong Sundeck', desc: 'Gia công Inox 316L đặc chủng uốn cong 3D khí động học, kính dán an toàn 12mm chịu lực gió biển.' },
+        { icon: 'ri-windy-fill', title: 'Cụm Louver Thông Gió Buồng Máy', desc: 'Hệ chớp Louver Inox 316 thiết kế 2 tầng tách nước mưa và hơi muối, bảo vệ động cơ vận hành.' },
+        { icon: 'ri-layout-masonry-fill', title: 'Vách Kính Chắn Gió Mũi Tàu', desc: 'Khung Inox 316 Mirror 8K bo cong theo sống vỏ tàu, gioăng cao su EPDM chuyên dụng hàng hải.' },
+        { icon: 'ri-drop-fill', title: 'Hệ Thống Máng Thu Thoát Nước Boong', desc: 'Máng Inox 316 hàn kín TIG âm sàn boong gỗ tếch, chống ứ đọng nước biển ăn mòn.' }
+      ],
+      metrics: [
+        { val: 'ASTM B117', lbl: 'Phun muối biển >1000h' },
+        { val: '±0.2 mm', lbl: 'Dung sai gia công CNC' },
+        { val: 'Mirror 8K', lbl: 'Độ bóng bề mặt Inox 316' },
+        { val: '1800 Pa', lbl: 'Áp lực chịu bão cấp 12' }
+      ],
+      testi: {
+        quote: 'Azura Cruise hoạt động trong môi trường biển mặn khắc nghiệt. Toàn bộ các cấu kiện Inox 316 của Sao Vàng sau khi đưa vào vận hành đều duy trì độ sáng bóng gương tuyệt đối, không có hiện tượng ố rỉ sét chân hàn.',
+        author: 'Ông Hoàng Minh Tuấn',
+        role: 'Giám Đốc Kỹ Thuật Đơn Vị Khai Thác Du Thuyền Azura'
+      }
+    },
+    'yacht-tulip': {
+      packages: [
+        { icon: 'ri-anchor-fill', title: 'Hệ Lan Can Kính Vô Cực Boong Sundeck', desc: 'Lan can Inox 316 liên kết âm sàn mở rộng tầm nhìn 360 độ ngắm cảnh Vịnh Hạ Long.' },
+        { icon: 'ri-compass-3-fill', title: 'Ống Inox 316 Uốn 3D Ôm Mạn Tàu', desc: 'Công nghệ uốn ống CNC không nhăn gãy, bề mặt xử lý điện hóa Passivation chống ăn mòn.' },
+        { icon: 'ri-layout-masonry-fill', title: 'Vách Ngăn Cabin & Khung Cửa Kính', desc: 'Hệ khung Inox 316 kết hợp kính Low-E cản nhiệt, cách âm tuyệt đối cho phòng nghỉ VIP.' },
+        { icon: 'ri-tools-fill', title: 'Bể Sục Jacuzzi & Cầu Thang Boong', desc: 'Gia công thành Inox và bậc thang chống trơn trượt đạt chuẩn an toàn du thuyền 5 sao.' }
+      ],
+      metrics: [
+        { val: 'Inox 316L', lbl: 'Thép không gỉ hàng hải' },
+        { val: 'AWS D1.1', lbl: 'Chuẩn mối hàn TIG' },
+        { val: 'Ra ≤ 0.1µm', lbl: 'Độ nhẵn bóng bề mặt' },
+        { val: '2400 Pa', lbl: 'Cấp áp lực thử nghiệm' }
+      ],
+      testi: {
+        quote: 'Sao Vàng đã hoàn thành toàn bộ gói cơ khí Inox du thuyền Tulip Cruise vượt tiến độ 10 ngày, các chi tiết uốn 3D mạn tàu khớp hoàn toàn với thiết kế thân vỏ của xưởng đóng tàu.',
+        author: 'Đại diện Ban Quản Trị',
+        role: 'Công ty Cổ Phần Du Thuyền Quốc Tế Tulip'
+      }
+    },
+    'villa-linh-hue': {
+      packages: [
+        { icon: 'ri-fullscreen-fill', title: 'Cửa Trượt Siêu Khổ Panorama L180', desc: 'Cánh kính cao 3.2m, rộng 2.5m trượt êm ái, mở trọn view đồi thông Đà Lạt thơ mộng.' },
+        { icon: 'ri-shield-star-fill', title: 'Hệ Nhôm Rãnh C Châu Âu Ép Góc CNC', desc: 'Bơm keo góc 2 thành phần chống thấm nước tuyệt đối trong mùa mưa bão Tây Nguyên.' },
+        { icon: 'ri-sound-module-fill', title: 'Kính Hộp Cách Âm & Cản Nhiệt Low-E', desc: 'Hộp kính 5+12A+5mm nạp khí Argon giữ ấm nhiệt độ biệt thự trong thời tiết lạnh.' },
+        { icon: 'ri-copper-diamond-line', title: 'Phụ Kiện Đồng Bộ CMECH Cao Cấp', desc: 'Khóa đa điểm, bánh xe chịu tải 300kg/cánh với tuổi thọ đóng mở trên 50.000 lần.' }
+      ],
+      metrics: [
+        { val: 'Qualanod', lbl: 'Anodize ED 25 microns' },
+        { val: '≤ 32 dB', lbl: 'Chỉ số cách âm tiêu chuẩn' },
+        { val: '300 kg', lbl: 'Tải trọng chịu lực cánh' },
+        { val: '20 Năm', lbl: 'Bảo hành chống lão hóa' }
+      ],
+      testi: {
+        quote: 'Biệt thự Linh Huệ ở địa hình dốc đồi gió lớn. Cửa nhôm kính Sao Vàng lắp đặt đóng mở rất đầm chắc, triệt tiêu hoàn toàn tiếng gió hú và không một giọt nước mưa lọt vào nhà.',
+        author: 'KTS. Lê Quang Dũng',
+        role: 'Kiến Trúc Sư Trưởng Thiết Kế Công Trình'
+      }
+    },
+    'villa-an-vuong': {
+      packages: [
+        { icon: 'ri-door-closed-fill', title: 'Cổng Nhôm Đúc Chân Không Nguyên Khối', desc: 'Họa tiết hoàng gia tân cổ điển đúc hợp kim nhôm Al-Si, sơn tĩnh điện phủ bóng 5 lớp.' },
+        { icon: 'ri-stairs-fill', title: 'Cầu Thang Xoắn Dầm Thép CNC 3D', desc: 'Dầm thép lượn vô cực uốn định hình 3D, mặt bậc gỗ lim và lan can sắt mỹ thuật tinh xảo.' },
+        { icon: 'ri-home-wifi-fill', title: 'Cửa Cổng Tự Động Âm Sàn Nhập Ý', desc: 'Động cơ thủy lực mở cổng 180 độ điều khiển qua Smartphone và remote từ xa.' },
+        { icon: 'ri-grid-fill', title: 'Hàng Rào & Ban Công Nghệ Thuật', desc: 'Sắt đặc uốn tay kết hợp chi tiết đúc đồng mạ vàng Champagne sang trọng.' }
+      ],
+      metrics: [
+        { val: '92% Al', lbl: 'Tỷ lệ nhôm nguyên chất' },
+        { val: '5 Lớp Sơn', lbl: 'Quy trình sơn tĩnh điện' },
+        { val: '±0.5 mm', lbl: 'Độ đồng trục xoắn dầm' },
+        { val: '15 Năm', lbl: 'Cam kết bảo hành kết cấu' }
+      ],
+      testi: {
+        quote: 'Cầu thang xoắn ốc và bộ cổng nhôm đúc của Sao Vàng là điểm nhấn đắt giá nhất cho căn biệt thự An Vượng. Đường cong mềm mại và không hề lộ mối hàn ráp nối.',
+        author: 'Ông Nguyễn Văn Hưng',
+        role: 'Chủ Đầu Tư Biệt Thự An Vượng (KĐT Nam Cường)'
+      }
+    },
+    'villa-do-thanh': {
+      packages: [
+        { icon: 'ri-layout-masonry-fill', title: 'Mặt Dựng Kính Semi-Unitized', desc: 'Khung nhôm ẩn đố hiện đại, kính dán phản quang cản bức xạ UV và bảo vệ riêng tư.' },
+        { icon: 'ri-door-open-fill', title: 'Cửa Xếp Trượt 6 Cánh Thu Gọn', desc: 'Giải pháp mở thông thủy 100% kết nối không gian phòng khách với sân vườn bể bơi.' },
+        { icon: 'ri-archive-fill', title: 'Lan Can Kính Âm Sàn Không Trụ', desc: 'Kính cường lực 15mm kẹp U nhôm định hình gia cường, tay vịn rãnh Inox mạ PVD.' },
+        { icon: 'ri-sun-fill', title: 'Mái Kính Giếng Trời Canopy Tự Động', desc: 'Kết cấu khung dầm chữ I chịu lực kết hợp cảm biến mưa tự động đóng.' }
+      ],
+      metrics: [
+        { val: 'Xingfa Class A', lbl: 'Profile nhôm Anodize ED' },
+        { val: '15 mm', lbl: 'Kính cường lực an toàn' },
+        { val: 'IP65', lbl: 'Tiêu chuẩn chống nước cảm biến' },
+        { val: '100% Kín', lbl: 'Hệ gioăng EPDM 3 lớp' }
+      ],
+      testi: {
+        quote: 'Chất lượng hoàn thiện nhôm kính của Sao Vàng tại biệt thự Đô Thành rất sắc nét. Góc ghép nhôm khít kín tuyệt đối, đóng mở êm nhẹ và đường keo silicone hoàn hảo.',
+        author: 'Đại diện Ban Giám Sát',
+        role: 'Tư Vấn Giám Sát Công Trình Đô Thành'
+      }
+    },
+    'villa-thanh-hoa': {
+      packages: [
+        { icon: 'ri-building-4-fill', title: 'Kết Cấu Thép Thông Tầng Chịu Lực', desc: 'Khung dầm thép hình H, I tổ hợp sơn chống rỉ epoxy 3 lớp đạt chuẩn PCCC.' },
+        { icon: 'ri-contrast-drop-fill', title: 'Mái Kính Giếng Trời Sky Light', desc: 'Kính an toàn dán phim PVB cách nhiệt, khung thép hộp định hình chịu lực gió.' },
+        { icon: 'ri-shield-keyhole-fill', title: 'Hệ Sắt Nghệ Thuật Rèn Nóng', desc: 'Chi tiết hoa văn rèn tay thủ công bởi nghệ nhân cơ khí Sao Vàng.' },
+        { icon: 'ri-check-double-fill', title: 'Cửa Nhôm Thủy Lực Bản Cánh Lớn', desc: 'Khung nhôm bản 180mm kết hợp bản lề sàn thủy lực chịu tải 250kg.' }
+      ],
+      metrics: [
+        { val: 'SS400 / Q345', lbl: 'Tiêu chuẩn mác thép' },
+        { val: 'Epoxy 120µm', lbl: 'Độ dày màng sơn chống rỉ' },
+        { val: '12.38 mm', lbl: 'Kính dán an toàn 2 lớp' },
+        { val: '100% KCS', lbl: 'Nghiệm thu đạt chuẩn' }
+      ],
+      testi: {
+        quote: 'Công trình nhà ở cao cấp tại Thanh Hóa đòi hỏi tiến độ gấp nhưng Sao Vàng vẫn đảm bảo từng kết cấu thép và vách kính đạt chuẩn chất lượng nghiêm ngặt.',
+        author: 'Kỹ sư Phạm Quốc Bảo',
+        role: 'Chỉ Huy Trưởng Công Trình'
+      }
+    },
+    'yacht-calista': {
+      packages: [
+        { icon: 'ri-anchor-fill', title: 'Lan Can Mạn Inox 316L Boong A & B', desc: 'Đường ống phi 60 uốn lượn liên tục, chịu va đập và tải trọng xô dạt du khách.' },
+        { icon: 'ri-restaurant-fill', title: 'Khung Cửa Kính Phòng Ăn Bayview', desc: 'Khung viền Inox 316 đánh bóng gương mở rộng tầm nhìn thưởng thức ẩm thực trên vịnh.' },
+        { icon: 'ri-sun-line', title: 'Mái Che Boong Ngắm Cảnh Sundeck', desc: 'Kết cấu vòm Inox 316L căng bạt buồm cao cấp chống chịu tia cực tím.' },
+        { icon: 'ri-shield-cross-fill', title: 'Cầu Thang Lên Xuống Giữa Các Tầng', desc: 'Bậc Inox dập gân nhám chống trượt tuyệt đối trong điều kiện ẩm ướt.' }
+      ],
+      metrics: [
+        { val: 'AISI 316L', lbl: 'Chuẩn thép không gỉ' },
+        { val: 'Phun Cát & Bóng', lbl: 'Xử lý bề mặt hoàn thiện' },
+        { val: '2000 Pa', lbl: 'Chịu lực áp suất gió biển' },
+        { val: '10 Năm', lbl: 'Bảo hành chất lượng Inox' }
+      ],
+      testi: {
+        quote: 'Du thuyền Calista nhận được nhiều lời khen từ du khách quốc tế về độ sang trọng của các chi tiết Inox bóng gương trên boong tàu do Sao Vàng chế tác.',
+        author: 'Bà Đặng Mai Lan',
+        role: 'Phó Tổng Giám Đốc Calista Cruises'
+      }
+    },
+    'yacht-leona': {
+      packages: [
+        { icon: 'ri-anchor-fill', title: 'Lan Can Kính Cường Lực Boong Sundeck', desc: 'Trụ Inox 316 đặc nguyên khối cắt CNC, kẹp kính 12mm cường lực chống ăn mòn.' },
+        { icon: 'ri-ship-fill', title: 'Cụm Cabin Thuyền Trưởng & Vách Kính', desc: 'Kính cong chuyên dụng hàng hải kết hợp khung Inox 316 chịu áp lực sóng gió.' },
+        { icon: 'ri-water-flash-fill', title: 'Lan Can & Cầu Dẫn Khách Lên Tàu', desc: 'Kết cấu chịu tải động cao, gấp mở linh hoạt khi cập bến cảng Tuần Châu.' },
+        { icon: 'ri-service-fill', title: 'Hệ Thống Phụ Kiện Hàng Hải Inox 316', desc: 'Cọc bích buộc tàu, tay nắm cửa, bản lề vi sinh 100% Inox 316 đặc.' }
+      ],
+      metrics: [
+        { val: 'Inox 316', lbl: '100% vật tư chống ăn mòn' },
+        { val: '12 mm', lbl: 'Kính cường lực an toàn' },
+        { val: '500 kg', lbl: 'Tải trọng cầu dẫn khách' },
+        { val: '100% Đạt', lbl: 'Đăng kiểm đường thủy' }
+      ],
+      testi: {
+        quote: 'Sự chuyên nghiệp và tay nghề cao của đội ngũ thợ cơ khí Sao Vàng đã mang lại sự an tâm tuyệt đối cho chúng tôi trong suốt quá trình đăng kiểm và vận hành.',
+        author: 'Thuyền Trưởng Nguyễn Văn Nam',
+        role: 'Quản Lý Khai Thác Du Thuyền Leona Hạ Long'
+      }
+    }
+  };
 
   async function initDetailPage() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -821,6 +1241,38 @@
     document.getElementById('statLocation').textContent = p.location || 'Việt Nam';
     document.getElementById('statMaterials').textContent = p.materials || 'Inox 316L / Nhôm Kính';
     document.getElementById('statValue').textContent = p.project_value || 'Liên hệ';
+
+    // Fetch tailored case study specs or generate default
+    const caseData = PROJECT_CASE_STUDIES[p.slug] || PROJECT_CASE_STUDIES['yacht-azura'];
+
+    // Render Scope of Work Packages
+    if (caseData.packages && caseData.packages.length) {
+      document.getElementById('scopePackagesGrid').innerHTML = caseData.packages.map(pkg => `
+        <div class="scope-pkg-card">
+          <div class="scope-pkg-icon"><i class="${pkg.icon}"></i></div>
+          <div class="scope-pkg-content">
+            <h4>${CMS.esc(pkg.title)}</h4>
+            <p>${CMS.esc(pkg.desc)}</p>
+          </div>
+        </div>`).join('');
+    }
+
+    // Render Metrics Matrix
+    if (caseData.metrics && caseData.metrics.length) {
+      document.getElementById('metricsGrid').innerHTML = caseData.metrics.map(m => `
+        <div class="metric-box">
+          <div class="m-val">${CMS.esc(m.val)}</div>
+          <div class="m-lbl">${CMS.esc(m.lbl)}</div>
+        </div>`).join('');
+    }
+
+    // Render Testimonial
+    if (caseData.testi) {
+      document.getElementById('testiQuote').textContent = `"${caseData.testi.quote}"`;
+      document.getElementById('testiName').textContent = caseData.testi.author;
+      document.getElementById('testiRole').textContent = caseData.testi.role;
+      document.getElementById('testiAvatar').textContent = caseData.testi.author.charAt(caseData.testi.author.lastIndexOf(' ') + 1) || 'SV';
+    }
 
     // Sidebar Metas
     const metaRows = [
