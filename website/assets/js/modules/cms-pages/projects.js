@@ -74,13 +74,13 @@
     const cls = 'proj-item';
     
     // Parse gallery to count real photos
-    let photoCount = 1;
-    try {
-      if (p.gallery) {
+    let photoCount = parseInt(p.photoCount) || 1;
+    if (photoCount === 1 && p.gallery) {
+      try {
         const gal = typeof p.gallery === 'string' ? JSON.parse(p.gallery) : p.gallery;
-        if (Array.isArray(gal)) photoCount = gal.length;
-      }
-    } catch {}
+        if (Array.isArray(gal) && gal.length) photoCount = gal.length;
+      } catch {}
+    }
 
     const isYacht = (p.slug && p.slug.includes('yacht')) || (p.category && p.category.includes('Du Thuyền'));
     const badgeText = isYacht ? 'Du Thuyền Cao Cấp' : 'Biệt Thự & Villa';
@@ -199,14 +199,15 @@
       if (el) el.textContent = 'Đang tải...';
     });
 
-    const p = await CMS.getProject(slug);
+    const raw = await CMS.getProject(slug);
+    const p = (raw && raw.project) ? raw.project : raw;
     if (!p) {
       const t = document.getElementById('modalTitle');
       if (t) t.textContent = 'Không tìm thấy dự án';
       return;
     }
 
-    const imgSrc = p.thumbnail ? CMS.imgUrl(p.thumbnail) : 'assets/images/project-villa.png';
+    const imgSrc = p.thumbnail ? CMS.imgUrl(p.thumbnail) : 'assets/images/projects/yacht-tulip/hero.jpg';
     const setEl  = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val; };
 
     const mainImg = document.getElementById('modalMainImg');
@@ -215,10 +216,10 @@
     setEl('modalCat',       p.category || 'Dự Án');
     setEl('modalTitle',     p.title);
     setEl('modalDesc',      p.excerpt || '');
-    setEl('modalClient',    p.client   || 'Gia đình');
+    setEl('modalClient',    p.client   || 'Chủ đầu tư');
     setEl('modalValue',     p.project_value || 'Liên hệ');
     setEl('modalLocation',  p.location || 'Việt Nam');
-    setEl('modalYear',      p.year     || '2024');
+    setEl('modalYear',      p.year     || '2025');
     setEl('modalChallenge', p.challenge || 'Yêu cầu thi công đạt chất lượng thẩm mỹ cao nhất, đảm bảo khả năng chịu lực và chống ăn mòn.');
     setEl('modalSolution',  p.solution  || 'Ứng dụng công nghệ gia công cơ khí và nhôm kính tiên tiến để đảm bảo chất lượng hoàn mỹ.');
     setEl('modalResult',    p.result    || 'Dự án bàn giao hoàn thiện, đạt chuẩn quốc tế, nhận được sự hài lòng tuyệt đối của chủ đầu tư.');
@@ -227,9 +228,12 @@
     if (linkEl) linkEl.href = `duanchitiet.html?slug=${p.slug || p.id}`;
 
     // Gallery thumbnails
-    let gallery = [];
-    try { if (p.gallery) gallery = JSON.parse(p.gallery); } catch {}
-    if (!gallery.includes(imgSrc)) gallery.unshift(imgSrc);
+    let gallery = (raw && raw.gallery && raw.gallery.length) ? raw.gallery : [];
+    if (!gallery.length && p.gallery) {
+      try { gallery = typeof p.gallery === 'string' ? JSON.parse(p.gallery) : p.gallery; } catch {}
+    }
+    const cleanImg = p.thumbnail ? (p.thumbnail.startsWith('/') ? p.thumbnail : '/' + p.thumbnail) : '';
+    if (cleanImg && !gallery.includes(cleanImg)) gallery.unshift(cleanImg);
 
     const thumbsEl = document.getElementById('modalThumbs');
     if (thumbsEl) {
@@ -286,10 +290,13 @@
       if (e.key === 'Escape' && modal?.classList.contains('open')) closeModal();
     });
 
-    // Card click → open modal
+    // Card click → open modal ONLY when clicking card body, but allow <a> direct link clicks!
     const grid = document.getElementById('projectsGrid');
     if (grid) {
       grid.addEventListener('click', e => {
+        // If clicking on an anchor tag (e.g. "Hồ sơ"), allow normal link navigation to duanchitiet.html!
+        if (e.target.closest('a')) return;
+
         const card = e.target.closest('.proj-item');
         if (card && !e.ctrlKey && !e.shiftKey && !e.metaKey) {
           e.preventDefault();

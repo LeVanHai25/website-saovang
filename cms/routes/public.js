@@ -60,6 +60,7 @@ router.get('/projects', (req, res) => {
            ${metaSub('location')}      as location,
            ${metaSub('year')}          as year,
            ${metaSub('area')}          as area,
+           ${metaSub('photoCount')}    as photoCount,
            (SELECT slug  FROM categories WHERE name = c.category AND content_type = 'project' LIMIT 1) as cat_slug,
            (SELECT color FROM categories WHERE name = c.category AND content_type = 'project' LIMIT 1) as cat_color
     FROM content c
