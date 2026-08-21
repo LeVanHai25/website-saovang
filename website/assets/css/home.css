@@ -276,6 +276,13 @@
       align-items: center;
       gap: var(--sv-sp-3);
     }
+    .slider-section-brand img {
+      height: 38px;
+      width: auto;
+      max-width: 160px;
+      object-fit: contain;
+      display: block;
+    }
     .slider-brand-icon {
       width: 36px; height: 36px;
       display: flex; align-items: center; justify-content: center;
