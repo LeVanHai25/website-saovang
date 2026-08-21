@@ -1,299 +1,158 @@
 /**
- * MERIDIAN Group — Company Profile 2026
- * Interactive Navigation, Animations & PDF Export
+ * CƠ KHÍ VIRAL — COMPANY PROFILE 3D FLIPBOOK CONTROLLER
+ * Vanilla JS 3D Page Turning Engine
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    initNavigation();
-    initScrollAnimations();
-    initPageIndicator();
-    initPrintButton();
-    initKPIAnimations();
-    initMetricBars();
-    initSmoothScroll();
-});
+    // References to DOM Elements
+    const prevBtn = document.querySelector("#prev-btn");
+    const nextBtn = document.querySelector("#next-btn");
+    const book = document.querySelector("#book");
+    const pageDisplay = document.querySelector("#page-display");
 
-/* ═══════════════════════════════════════════════════════════════
-   NAVIGATION
-   ═══════════════════════════════════════════════════════════════ */
+    const papers = [
+        document.querySelector("#p1"),
+        document.querySelector("#p2"),
+        document.querySelector("#p3"),
+        document.querySelector("#p4"),
+        document.querySelector("#p5")
+    ];
 
-function initNavigation() {
-    const navItems = document.querySelectorAll('.nav-item');
-    const pages = document.querySelectorAll('.page');
+    // Event Listeners
+    prevBtn.addEventListener("click", goPrevPage);
+    nextBtn.addEventListener("click", goNextPage);
 
-    // Intersection Observer for active nav state
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const pageNum = entry.target.dataset.page;
-                updateActiveNav(pageNum);
-                updatePageIndicator(pageNum);
+    // Click on page faces to turn
+    papers.forEach((paper, index) => {
+        const frontFace = paper.querySelector(".front");
+        const backFace = paper.querySelector(".back");
+
+        frontFace.addEventListener("click", () => {
+            if (currentLocation === index + 1) {
+                goNextPage();
             }
         });
-    }, {
-        threshold: 0.3,
-        rootMargin: '-10% 0px -10% 0px'
-    });
 
-    pages.forEach(page => observer.observe(page));
-
-    // Click navigation
-    navItems.forEach(item => {
-        item.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = item.getAttribute('href');
-            const target = document.querySelector(targetId);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        backFace.addEventListener("click", () => {
+            if (currentLocation === index + 2) {
+                goPrevPage();
             }
         });
     });
-}
 
-function updateActiveNav(pageNum) {
-    const navItems = document.querySelectorAll('.nav-item');
-    let closestItem = null;
-    let closestDiff = Infinity;
-
-    navItems.forEach(item => {
-        item.classList.remove('active');
-        const itemPage = parseInt(item.dataset.page);
-        const currentPage = parseInt(pageNum);
-        if (itemPage <= currentPage && (currentPage - itemPage) < closestDiff) {
-            closestDiff = currentPage - itemPage;
-            closestItem = item;
+    // Keyboard Navigation
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowLeft" || e.key === "PageUp") {
+            goPrevPage();
+        } else if (e.key === "ArrowRight" || e.key === "PageDown") {
+            goNextPage();
         }
     });
 
-    if (closestItem) {
-        closestItem.classList.add('active');
-    }
-}
+    // Business Logic
+    let currentLocation = 1;
+    const maxLocation = papers.length + 1; // Cover, Spreads, Back Cover
 
-/* ═══════════════════════════════════════════════════════════════
-   PAGE INDICATOR
-   ═══════════════════════════════════════════════════════════════ */
-
-function initPageIndicator() {
-    // Already handled by navigation intersection observer
-}
-
-function updatePageIndicator(pageNum) {
-    const indicator = document.getElementById('page-indicator');
-    if (indicator) {
-        const currentEl = indicator.querySelector('.page-current');
-        if (currentEl) {
-            currentEl.textContent = String(pageNum).padStart(2, '0');
-        }
-    }
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   SCROLL ANIMATIONS
-   ═══════════════════════════════════════════════════════════════ */
-
-function initScrollAnimations() {
-    const animatedElements = document.querySelectorAll('.fade-in, .slide-up');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                // Don't unobserve — allow re-triggering feels better for this type of doc
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
-
-    animatedElements.forEach(el => observer.observe(el));
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   KPI COUNTER ANIMATIONS
-   ═══════════════════════════════════════════════════════════════ */
-
-function initKPIAnimations() {
-    const kpiNumbers = document.querySelectorAll('.kpi-number[data-target]');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const el = entry.target;
-                const target = parseInt(el.dataset.target);
-                animateCounter(el, target);
-                observer.unobserve(el);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    kpiNumbers.forEach(el => observer.observe(el));
-}
-
-function animateCounter(element, target) {
-    const duration = 2000;
-    const start = performance.now();
-
-    function update(currentTime) {
-        const elapsed = currentTime - start;
-        const progress = Math.min(elapsed / duration, 1);
-
-        // Ease out cubic
-        const eased = 1 - Math.pow(1 - progress, 3);
-        const current = Math.round(eased * target);
-
-        element.textContent = current;
-
-        if (progress < 1) {
-            requestAnimationFrame(update);
+    function updatePageDisplay() {
+        if (currentLocation === 1) {
+            pageDisplay.textContent = "Bìa Trước / 10";
+        } else if (currentLocation === maxLocation) {
+            pageDisplay.textContent = "Bìa Sau / 10";
+        } else {
+            const leftPage = (currentLocation - 1) * 2;
+            const rightPage = leftPage + 1;
+            pageDisplay.textContent = `Trang ${String(leftPage).padStart(2, '0')} - ${String(rightPage).padStart(2, '0')} / 10`;
         }
     }
 
-    requestAnimationFrame(update);
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   METRIC BARS ANIMATION
-   ═══════════════════════════════════════════════════════════════ */
-
-function initMetricBars() {
-    const metricFills = document.querySelectorAll('.metric-fill');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const el = entry.target;
-                const targetWidth = el.style.width;
-                el.style.width = '0%';
-                // Trigger reflow
-                el.offsetHeight;
-                requestAnimationFrame(() => {
-                    el.style.width = targetWidth;
-                    el.classList.add('animated');
-                });
-                observer.unobserve(el);
-            }
-        });
-    }, { threshold: 0.3 });
-
-    metricFills.forEach(el => observer.observe(el));
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   SMOOTH SCROLL
-   ═══════════════════════════════════════════════════════════════ */
-
-function initSmoothScroll() {
-    // Enable smooth scrolling on the document
-    document.documentElement.style.scrollBehavior = 'smooth';
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   PRINT / PDF EXPORT
-   ═══════════════════════════════════════════════════════════════ */
-
-function initPrintButton() {
-    const btn = document.getElementById('btn-print');
-    if (btn) {
-        btn.addEventListener('click', () => {
-            // Make all animations visible before printing
-            document.querySelectorAll('.fade-in, .slide-up').forEach(el => {
-                el.classList.add('is-visible');
-            });
-
-            // Set all metric bars to their target widths
-            document.querySelectorAll('.metric-fill').forEach(el => {
-                el.classList.add('animated');
-            });
-
-            // Short delay to ensure styles are applied
-            setTimeout(() => {
-                window.print();
-            }, 300);
-        });
-    }
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   KEYBOARD NAVIGATION
-   ═══════════════════════════════════════════════════════════════ */
-
-document.addEventListener('keydown', (e) => {
-    const pages = document.querySelectorAll('.page');
-    const currentPage = getCurrentPage();
-
-    if (e.key === 'ArrowDown' || e.key === 'PageDown') {
-        e.preventDefault();
-        const nextPage = document.querySelector(`[data-page="${currentPage + 1}"]`);
-        if (nextPage) {
-            nextPage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    function openBook() {
+        if (window.innerWidth > 768) {
+            book.style.transform = "translateX(0%)";
         }
     }
 
-    if (e.key === 'ArrowUp' || e.key === 'PageUp') {
-        e.preventDefault();
-        const prevPage = document.querySelector(`[data-page="${currentPage - 1}"]`);
-        if (prevPage) {
-            prevPage.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-    }
-
-    if (e.key === 'Home') {
-        e.preventDefault();
-        document.querySelector('#page-01').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-
-    if (e.key === 'End') {
-        e.preventDefault();
-        document.querySelector('#page-32').scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-});
-
-function getCurrentPage() {
-    const pages = document.querySelectorAll('.page');
-    let current = 1;
-    const scrollTop = window.scrollY || document.documentElement.scrollTop;
-    const windowHeight = window.innerHeight;
-
-    pages.forEach(page => {
-        const rect = page.getBoundingClientRect();
-        if (rect.top <= windowHeight * 0.4) {
-            current = parseInt(page.dataset.page);
-        }
-    });
-
-    return current;
-}
-
-/* ═══════════════════════════════════════════════════════════════
-   NAV SIDEBAR TOGGLE (Mobile)
-   ═══════════════════════════════════════════════════════════════ */
-
-// Auto-hide nav on scroll down, show on scroll up
-let lastScrollY = 0;
-let ticking = false;
-
-window.addEventListener('scroll', () => {
-    if (!ticking) {
-        requestAnimationFrame(() => {
-            const nav = document.getElementById('nav-sidebar');
-            const indicator = document.getElementById('page-indicator');
-            const currentScrollY = window.scrollY;
-
-            if (currentScrollY > lastScrollY && currentScrollY > 200) {
-                // Scrolling down
-                if (nav) nav.classList.add('nav-hidden');
-                if (indicator) indicator.classList.add('indicator-hidden');
+    function closeBook(isAtBeginning) {
+        if (window.innerWidth > 768) {
+            if (isAtBeginning) {
+                book.style.transform = "translateX(50%)";
             } else {
-                // Scrolling up
-                if (nav) nav.classList.remove('nav-hidden');
-                if (indicator) indicator.classList.remove('indicator-hidden');
+                book.style.transform = "translateX(-50%)";
+            }
+        }
+    }
+
+    function goNextPage() {
+        if (currentLocation < maxLocation) {
+            const activePaper = papers[currentLocation - 1];
+            activePaper.classList.add("flipped");
+            
+            // Manage z-index order as pages flip over to the left
+            setTimeout(() => {
+                activePaper.style.zIndex = currentLocation;
+            }, 100);
+
+            currentLocation++;
+            
+            if (currentLocation === 2) {
+                openBook();
+            }
+            if (currentLocation === maxLocation) {
+                closeBook(false);
+            }
+            
+            updatePageDisplay();
+        }
+    }
+
+    function goPrevPage() {
+        if (currentLocation > 1) {
+            currentLocation--;
+            const activePaper = papers[currentLocation - 1];
+            activePaper.classList.remove("flipped");
+            
+            // Restore original z-index hierarchy
+            const originalZIndex = papers.length - currentLocation + 1;
+            activePaper.style.zIndex = originalZIndex;
+
+            if (currentLocation === 1) {
+                closeBook(true);
+            }
+            if (currentLocation === papers.length) {
+                openBook();
             }
 
-            lastScrollY = currentScrollY;
-            ticking = false;
-        });
-        ticking = true;
+            updatePageDisplay();
+        }
     }
+
+    // Initialize display
+    updatePageDisplay();
+
+    // Reset layout on window resize to prevent alignment bugs
+    window.addEventListener("resize", () => {
+        if (window.innerWidth <= 768) {
+            book.style.transform = "none";
+            papers.forEach(p => {
+                p.style.zIndex = "";
+                p.style.transform = "";
+            });
+        } else {
+            if (currentLocation === 1) {
+                closeBook(true);
+            } else if (currentLocation === maxLocation) {
+                closeBook(false);
+            } else {
+                openBook();
+            }
+            
+            // Re-apply correct z-indices
+            papers.forEach((paper, idx) => {
+                if (idx < currentLocation - 1) {
+                    paper.style.zIndex = idx + 1;
+                } else {
+                    paper.style.zIndex = papers.length - idx;
+                }
+            });
+        }
+    });
 });
