@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" crossorigin="anonymous" />
+  <!-- ═══ Google Tag Manager — Sprint 6 ═══
+       Thay GTM-XXXXXXX bằng Container ID thực của bạn
+       Lấy tại: tagmanager.google.com
+  ═══════════════════════════════════════ -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="theme-color" content="#B5121B" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Chi Tiết Dự Án | SAO VÀNG</title>
+  <meta name="description" id="pageDesc" content="Chi tiết dự án cơ khí cao cấp của Sao Vàng." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+  /* ══ PROJECT DETAIL ══════════════════════════════════════════ */
+  .proj-detail-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(32px, 5vw, 64px);
+    align-items: start;
+  }
+  /* Main gallery */
+  .proj-gallery { display: flex; flex-direction: column; gap: clamp(8px, 2vw, 14px); }
+  .proj-main-img { border-radius: var(--radius-md); overflow: hidden; aspect-ratio: 16/9; }
+  .proj-main-img img { width: 100%; height: 100%; object-fit: cover; }
+  .proj-thumbs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(6px, 1.5vw, 12px);
+  }
+  .proj-thumb { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4/3; cursor: pointer; opacity: .7; transition: opacity .2s; }
+  .proj-thumb:hover, .proj-thumb.active { opacity: 1; }
+  .proj-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* Sidebar info */
+  .proj-info-box {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md); padding: clamp(20px, 4vw, 32px);
+    box-shadow: 0 4px 24px rgba(0,0,0,.06);
+  }
+  .proj-info-box h3 { font-family: var(--ff-head); font-size: clamp(16px, 2vw, 20px); font-weight: 800; color: var(--dark); margin-bottom: var(--sp-5); line-height: 1.3; }
+  .proj-meta-list { display: flex; flex-direction: column; gap: 0; }
+  .proj-meta-row { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--sp-3); padding: var(--sp-3) 0; border-bottom: 1px solid var(--gray-100); font-size: var(--fs-sm); }
+  .proj-meta-row:last-child { border-bottom: none; }
+  .proj-meta-row .lbl { color: var(--gray-500); font-weight: 400; flex-shrink: 0; }
+  .proj-meta-row .val { color: var(--dark); font-weight: 600; text-align: right; }
+  .proj-cta { margin-top: var(--sp-5); display: flex; flex-direction: column; gap: var(--sp-3); }
+  .proj-cta .btn { justify-content: center; }
+
+  /* Description */
+  .proj-desc { font-size: var(--fs-body-lg); font-weight: 300; color: var(--gray-500); line-height: 1.85; margin-bottom: var(--sp-5); }
+  .proj-section-title { font-family: var(--ff-head); font-size: var(--fs-h3); font-weight: 800; color: var(--dark); margin-bottom: var(--sp-4); }
+
+  /* Related projects */
+  .related-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(12px, 3vw, 20px);
+  }
+
+  /* ══ RESPONSIVE ══════════════════════════════════════════════ */
+  @media (min-width: 640px)  { .related-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1024px) { .proj-detail-layout { grid-template-columns: 1fr 360px; } }
+  @media (min-width: 1280px) { .proj-detail-layout { grid-template-columns: 1fr 400px; } }
+
+  /* ── prefers-reduced-motion ─────────────────────────────── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+    [data-reveal] { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+  <meta property="og:title" content="Chi Tiết Dự Án | SAO VÀNG" />
+  <meta property="og:description" content="Xem chi tiết dự án cơ khí cao cấp của Sao Vàng — hình ảnh, thông số kỹ thuật và giá trị công trình." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.cokhisaovang.com/assets/images/hero-interior.png" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://www.cokhisaovang.com/duanchitiet.html" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "LocalBusiness",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.cokhisaovang.com/#organization",
+      "name": "Cơ Khí Sao Vàng",
+      "legalName": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG",
+      "url": "https://www.cokhisaovang.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.cokhisaovang.com/assets/images/logo-sv-main.svg",
+        "width": 200,
+        "height": 200
+      },
+      "image": "https://www.cokhisaovang.com/assets/images/hero-bg.jpg",
+      "description": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG — Chuyên gia gia công cơ khí chính xác CNC, kết cấu thép, inox du thuyền, cửa nhôm kính, mặt dựng curtain wall và lan can kính cường lực tại Hà Nội. MST: 0110808047.",
+      "telephone": "+84869590279",
+      "email": "cokhisaovangvn@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tầng 3, TT7-35 Khu đô thị Văn Phú",
+        "addressLocality": "Quận Hà Đông",
+        "addressRegion": "Hà Nội",
+        "postalCode": "100000",
+        "addressCountry": "VN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "20.9715",
+        "longitude": "105.7825"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "52",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "17:30"
+        }
+      ],
+      "taxID": "0110808047",
+      "sameAs": [
+        "https://zalo.me/0869590279",
+        "https://www.cokhisaovang.com"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Việt Nam"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Dịch vụ Cơ Khí & SV Aluminium",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gia Công Cơ Khí Chính Xác CNC",
+              "url": "https://www.cokhisaovang.com/gia-cong-cnc-chinh-xac.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gia Công Inox Công Nghiệp & Mỹ Thuật",
+              "url": "https://www.cokhisaovang.com/gia-cong-inox.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Thiết Kế & Thi Công Kết Cấu Thép",
+              "url": "https://www.cokhisaovang.com/ket-cau-thep.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cơ Khí Mỹ Thuật & Sắt Nghệ Thuật",
+              "url": "https://www.cokhisaovang.com/cokhinghethuat.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Thi Công Cửa Nhôm Kính Cao Cấp",
+              "url": "https://www.cokhisaovang.com/cuanhomkinh.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vách Kính Mặt Dựng & Vách Ngăn Kính",
+              "url": "https://www.cokhisaovang.com/vachkinh.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lan Can Kính Cường Lực",
+              "url": "https://www.cokhisaovang.com/lancankinh.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mái Kính Cường Lực & Giếng Trời",
+              "url": "https://www.cokhisaovang.com/mai-kinh.html"
+            }
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Gia công cơ khí chính xác CNC",
+        "Kết cấu thép công nghiệp AWS D1.1",
+        "Cửa nhôm kính kiến trúc cao cấp",
+        "Mặt dựng kính curtain wall",
+        "Inox 316L marine grade",
+        "Lan can kính cường lực",
+        "Mái kính canopy giếng trời"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+<!-- SECTION 1 - HEADER -->
+    <!-- SECTION 1 - HEADER -->
+  <header class="header-v2" id="navbar" role="banner">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="Sao Vàng — Trang chủ">
+        <img width="200" height="60" fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" style="height: 48px; width: auto; display: block;" />
+      </a>
+
+      <!-- Desktop nav menu -->
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html"           class="nav-menu-link ">Trang Chủ</a>
+        <a href="gioithieu.html"      class="nav-menu-link ">Giới Thiệu</a>
+        <a href="cokhisaovang.html" class="nav-menu-link ">Cơ Khí Sao Vàng</a>
+        <a href="nhomsaovang.html"   class="nav-menu-link ">SV Aluminium</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linhvuchoatdong.html" class="nav-menu-link ">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linhvuchoatdong.html" class="nav-dropdown-item" role="menuitem">Tổng quan Lĩnh vực</a>
+            <a href="linhvuccokhi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linhvucnhomkinh.html"  class="nav-dropdown-item" role="menuitem">SV Aluminium</a>
+          </div>
+        </div>
+
+        <a href="sanpham.html"              class="nav-menu-link ">Sản Phẩm</a>
+        <a href="phukien.html"              class="nav-menu-link ">Phụ Kiện</a>
+        <a href="thuvienprofilenhom.html" class="nav-menu-link ">Profile Nhôm</a>
+        <a href="duan.html"                 class="nav-menu-link active">Dự Án</a>
+        <a href="tailieu.html"              class="nav-menu-link ">Tài Liệu Kỹ Thuật</a>
+        <a href="tintuc.html"               class="nav-menu-link ">Tin Tức</a>
+        <a href="lienhe.html"               class="nav-menu-link ">Liên Hệ</a>
+      </nav>
+
+      <!-- Hotline + Hamburger -->
+      <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+        <a href="tel:0869590279" class="nav-hotline" aria-label="Gọi hotline 0869 590 279">
+          <i class="ri-phone-fill" aria-hidden="true"></i>
+          <span>0869 590 279</span>
+        </a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html"                 class="nav-drawer-link ">Trang Chủ</a>
+    <a href="gioithieu.html"            class="nav-drawer-link ">Giới Thiệu</a>
+    <a href="cokhisaovang.html"      class="nav-drawer-link ">Cơ Khí Sao Vàng</a>
+    <a href="nhomsaovang.html"        class="nav-drawer-link ">SV Aluminium</a>
+    <a href="linhvuchoatdong.html"   class="nav-drawer-link ">Lĩnh Vực Hoạt Động</a>
+    <a href="sanpham.html"             class="nav-drawer-link ">Sản Phẩm</a>
+    <a href="phukien.html"             class="nav-drawer-link ">Phụ Kiện</a>
+    <a href="thuvienprofilenhom.html" class="nav-drawer-link ">Profile Nhôm</a>
+    <a href="duan.html"                class="nav-drawer-link active">Dự Án</a>
+    <a href="tailieu.html"              class="nav-drawer-link ">Tài Liệu Kỹ Thuật</a>
+    <a href="tintuc.html"              class="nav-drawer-link ">Tin Tức</a>
+    <a href="lienhe.html"              class="nav-drawer-link ">Liên Hệ</a>
+    <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
+      <i class="ri-phone-fill"></i> 0869 590 279
+    </a>
+  </nav>
+
+<!-- HERO -->
+<div class="detail-hero" id="detailHero">
+  <img width="800" height="600" decoding="async" loading="lazy" id="detailHeroImg" src="assets/images/project-villa.png" alt="Hình ảnh công trình Sao Vàng" />
+  <div class="detail-hero-overlay"></div>
+  <div class="detail-hero-content">
+    <div class="container">
+      <nav class="breadcrumb" style="margin-bottom:12px">
+        <a href="index.html" style="color:rgba(255,255,255,.7)">Trang chủ</a>
+        <span class="sep"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+        <a href="duan.html" style="color:rgba(255,255,255,.7)">Dự án</a>
+        <span class="sep"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span>
+        <span class="current" style="color:#fff" id="breadcrumbTitle">...</span>
+      </nav>
+    </div>
+  </div>
+</div>
+
+<!-- LOADING STATE -->
+<div id="loadingState" class="container" style="padding:60px 0;text-align:center">
+  <div style="width:40px;height:40px;border:3px solid var(--gray-200);border-top-color:var(--red);border-radius:50%;animation:spin 0.8s linear infinite;margin:0 auto 16px"></div>
+  <p style="color:var(--gray-400)">Đang tải dự án...</p>
+</div>
+
+<!-- DETAIL CONTENT -->
+<div id="detailContent" class="sv-container" style="display:none; padding-top: 48px; padding-bottom: 80px;">
+  
+  <div style="margin-bottom: 32px;">
+    <div id="detailCat" style="margin-bottom: 8px;"></div>
+    <h1 id="detailTitle" style="font-family: var(--ff-head); font-size: clamp(26px, 4vw, 40px); font-weight: 900; color: #0F172A; line-height: 1.25; margin: 0 0 16px 0;"></h1>
+    <div id="detailExcerpt" style="font-size: 16px; color: #475569; line-height: 1.8; max-width: 900px;"></div>
+  </div>
+
+  <div class="proj-detail-layout">
+    <!-- Main Column -->
+    <div class="detail-main">
+      
+      <!-- Highlights Box -->
+      <div id="detailBody" class="detail-body"></div>
+
+      <!-- Engineering CSR -->
+      <div id="csr" style="margin-top: 32px;"></div>
+
+      <!-- Multi-Image Photo Gallery -->
+      <div id="gallerySection" style="display:none; margin-top: 56px;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 24px; flex-wrap: wrap; gap: 12px; border-bottom: 2px solid #E2E8F0; padding-bottom: 16px;">
+          <div>
+            <span style="font-family: var(--ff-head); font-size: 11px; font-weight: 800; color: #C9A227; letter-spacing: 0.15em; text-transform: uppercase;">THƯ VIỆN HÌNH ẢNH CÔNG TRÌNH THỰC TẾ</span>
+            <h2 style="font-family: var(--ff-head); font-size: 24px; font-weight: 800; color: #0F172A; margin: 4px 0 0 0;" id="galleryTitle">Bộ Sưu Tập Ảnh Chi Tiết</h2>
+          </div>
+          <span id="galleryCountBadge" style="background: #0F172A; color: #C9A227; font-family: var(--ff-head); font-size: 12px; font-weight: 800; padding: 6px 16px; border-radius: 20px; border: 1px solid rgba(201,162,39,0.3);"></span>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;"></div>
+      </div>
+
+    </div>
+
+    <!-- Sidebar Column -->
+    <div class="detail-sidebar">
+      <div class="proj-info-box" style="position: sticky; top: 90px;">
+        <h3 style="font-family: var(--ff-head); font-size: 18px; font-weight: 800; color: #0F172A; border-bottom: 2px solid #C9A227; padding-bottom: 12px; margin-bottom: 16px;">
+          Hồ Sơ Kỹ Thuật Dự Án
+        </h3>
+        
+        <div class="proj-meta-list" id="metaBody">
+          <!-- Filled dynamically -->
+        </div>
+
+        <div style="margin-top: 28px; display: flex; flex-direction: column; gap: 10px;">
+          <a id="consultBtn" href="lienhe.html" class="sv-btn sv-btn-gold" style="width: 100%; text-align: center; justify-content: center; padding: 14px 20px; font-weight: 800;">
+            <i class="ri-mail-send-line"></i> Yêu Cầu Tư Vấn Tương Tự
+          </a>
+          <a href="tel:0869590279" class="sv-btn sv-btn-outline-gold" style="width: 100%; text-align: center; justify-content: center; padding: 12px 20px; font-weight: 700;">
+            <i class="ri-phone-fill"></i> Hotline: 0869 590 279
+          </a>
+          <a href="duan.html" style="display: block; text-align: center; margin-top: 12px; font-size: 13px; color: #64748B; text-decoration: none; font-weight: 600;">
+            ← Xem toàn bộ 8 dự án tiêu biểu
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Navigation Strip (Next / Prev) -->
+  <div style="margin-top: 80px; padding: 24px; background: #0F172A; border-radius: 12px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; border: 1px solid rgba(201,162,39,0.3);">
+    <a id="navPrevProj" href="#" style="color: #FFFFFF; text-decoration: none; font-family: var(--ff-head); font-size: 13.5px; font-weight: 700; display: flex; align-items: center; gap: 8px; transition: color 0.2s;">
+      <i class="ri-arrow-left-line" style="color: #C9A227; font-size: 18px;"></i>
+      <span><small style="display:block; font-size: 10px; color: #94A3B8; text-transform: uppercase;">Dự Án Trước</small><strong id="navPrevTitle">Đang tải...</strong></span>
+    </a>
+    <a href="duan.html" class="sv-btn sv-btn-outline-gold" style="padding: 8px 18px; font-size: 12px; font-weight: 700;">
+      <i class="ri-grid-fill"></i> TẤT CẢ DỰ ÁN
+    </a>
+    <a id="navNextProj" href="#" style="color: #FFFFFF; text-decoration: none; font-family: var(--ff-head); font-size: 13.5px; font-weight: 700; display: flex; align-items: center; gap: 8px; text-align: right; transition: color 0.2s;">
+      <span><small style="display:block; font-size: 10px; color: #94A3B8; text-transform: uppercase;">Dự Án Tiếp Theo</small><strong id="navNextTitle">Đang tải...</strong></span>
+      <i class="ri-arrow-right-line" style="color: #C9A227; font-size: 18px;"></i>
+    </a>
+  </div>
+
+</div>
+
+<!-- ERROR STATE -->
+<div id="errorState" class="sv-container" style="display:none; padding:100px 0; text-align:center;">
+  <i class="ri-folder-warning-line" style="font-size: 54px; color: #C9A227; margin-bottom: 16px; display: inline-block;"></i>
+  <h2 style="color:#0F172A; margin-bottom:8px; font-family: var(--ff-head);">Không Tìm Thấy Hồ Sơ Dự Án</h2>
+  <p style="color:#64748B; margin-bottom:24px;">Dự án này không tồn tại hoặc đã được cập nhật đường dẫn mới.</p>
+  <a href="duan.html" class="sv-btn sv-btn-gold">← Quay lại danh mục dự án</a>
+</div>
+
+<!-- RELATED PROJECTS -->
+<div id="relatedSection" style="display:none; background:#F8FAFC; padding:70px 0; border-top: 1px solid #E2E8F0;">
+  <div class="sv-container">
+    <div style="margin-bottom: 32px;">
+      <span style="font-family: var(--ff-head); font-size: 11px; font-weight: 800; color: #C9A227; letter-spacing: 0.15em; text-transform: uppercase;">CÙNG PHÂN KHÚC</span>
+      <h2 style="font-family: var(--ff-head); font-size: 26px; font-weight: 800; color: #0F172A; margin: 4px 0 0 0;">Dự Án <span style="color:#C9A227">Liên Quan</span></h2>
+    </div>
+    <div class="related-grid" id="relatedGrid"></div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════
+     SECTION 10: FOOTER
+════════════════════════════════════════════ -->
+<footer class="footer-v2" role="contentinfo">
+  <div class="sv-container">
+    <div class="footer-v2-grid">
+      <!-- Col 1: Brand -->
+      <div>
+        <div class="footer-logo-wrap" style="margin-bottom: 15px;">
+          <img width="200" height="60" fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" style="height: 44px; width: auto; display: block;" />
+        </div>
+        <span class="footer-logo-name">SAO VÀNG</span>
+        <p class="footer-address">
+          Công Ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng<br>
+          MST: 0110808047<br>
+          Tầng 3, TT7-35 KĐT Văn Phú, Phường Phú La, Quận Hà Đông, Hà Nội
+        </p>
+      </div>
+      <!-- Col 2: Divisions -->
+      <div>
+        <h4 style="font-family: var(--ff-head); font-size: 14px; font-weight: 800; color: #FFFFFF; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em;">Lĩnh Vực Hoạt Động</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13.5px; color: #94A3B8;">
+          <li><a href="cokhisaovang.html" style="color: inherit; text-decoration: none;">01 — SV Mechanical (Cơ Khí Kiến Trúc)</a></li>
+          <li><a href="nhomsaovang.html" style="color: inherit; text-decoration: none;">02 — SV Aluminium (Hệ Nhôm Cao Cấp)</a></li>
+          <li><a href="duan.html?cat=yacht" style="color: inherit; text-decoration: none;">03 — SV Marine (Inox Du Thuyền 316L)</a></li>
+          <li><a href="duan.html" style="color: inherit; text-decoration: none;">04 — Hồ Sơ Công Trình Đã Nghiệm Thu</a></li>
+        </ul>
+      </div>
+      <!-- Col 3: Contact -->
+      <div>
+        <h4 style="font-family: var(--ff-head); font-size: 14px; font-weight: 800; color: #FFFFFF; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.05em;">Tư Vấn &amp; Dự Toán</h4>
+        <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 13.5px; color: #94A3B8;">
+          <li>Hotline: <strong style="color: #C9A227;">0869 590 279</strong></li>
+          <li>Email: <strong style="color: #FFFFFF;">info@cokhisaovang.com</strong></li>
+          <li>Website: <strong style="color: #FFFFFF;">www.cokhisaovang.com</strong></li>
+          <li>Thời gian: 08:00 – 17:30 (Thứ 2 – Thứ 7)</li>
+        </ul>
+      </div>
+    </div>
+    <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; margin-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; font-size: 12px; color: #64748B;">
+      <span>© 2026 CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG. MST: 0110808047.</span>
+      <span>Hồ sơ công trình thực tế 100% — Không sử dụng hình ảnh AI</span>
+    </div>
+  </div>
+</footer>
+
+<!-- INTERACTIVE LIGHTBOX CAROUSEL -->
+<div id="lightbox" class="lightbox" style="display:none; position: fixed; inset: 0; z-index: 3000; background: rgba(10,15,28,0.95); backdrop-filter: blur(12px); flex-direction: column; justify-content: space-between; padding: 20px;" onclick="closeLightbox()">
+  
+  <!-- Lightbox Header -->
+  <div style="display: flex; justify-content: space-between; align-items: center; z-index: 3010; color: #FFFFFF;" onclick="event.stopPropagation();">
+    <span id="lightboxCounter" style="background: rgba(201,162,39,0.2); color: #C9A227; border: 1px solid rgba(201,162,39,0.4); padding: 4px 14px; border-radius: 20px; font-family: var(--ff-head); font-size: 12px; font-weight: 800;">Ảnh 1 / 1</span>
+    <button onclick="closeLightbox()" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #FFFFFF; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; cursor: pointer; transition: all 0.2s;">
+      <i class="ri-close-line"></i>
+    </button>
+  </div>
+
+  <!-- Lightbox Main Image & Navigation Arrows -->
+  <div style="position: relative; display: flex; align-items: center; justify-content: center; flex-grow: 1; max-height: 80vh; margin: 10px 0;" onclick="event.stopPropagation();">
+    <button onclick="prevLightboxImg()" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(15,23,42,0.85); border: 1px solid rgba(201,162,39,0.4); color: #C9A227; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px; cursor: pointer; z-index: 3010; transition: all 0.2s;">
+      <i class="ri-arrow-left-s-line"></i>
+    </button>
+
+    <img id="lightboxImg" src="" alt="Hình ảnh công trình Sao Vàng" style="max-width: 90vw; max-height: 75vh; object-fit: contain; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.8); border: 1px solid rgba(255,255,255,0.1);">
+
+    <button onclick="nextLightboxImg()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(15,23,42,0.85); border: 1px solid rgba(201,162,39,0.4); color: #C9A227; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px; cursor: pointer; z-index: 3010; transition: all 0.2s;">
+      <i class="ri-arrow-right-s-line"></i>
+    </button>
+  </div>
+
+  <!-- Lightbox Caption -->
+  <div style="text-align: center; z-index: 3010; padding: 10px 20px;" onclick="event.stopPropagation();">
+    <div id="lightboxCaption" style="display: inline-block; background: rgba(15,23,42,0.9); color: #FFFFFF; padding: 10px 24px; border-radius: 30px; font-size: 14px; font-weight: 600; max-width: 800px; border: 1px solid rgba(201,162,39,0.4);"></div>
+  </div>
+
+</div>
+
+<!-- STICKY MOBILE CTA BAR -->
+<div class="sticky-cta-bar" id="stickyCtaBar" role="complementary" aria-label="Liên hệ nhanh">
+  <a href="tel:0869590279" class="btn btn-gold btn-sm">
+    <i class="ri-phone-fill"></i> Gọi Ngay
+  </a>
+  <a href="https://zalo.me/0869590279" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
+  <a href="lienhe.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Nhận Dự Toán</a>
+</div>
+
+<script src="assets/js/cms-client.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+let _galleryImages = [];
+let _currentLightboxIdx = 0;
+const ALL_PROJECT_SLUGS = [
+  { slug: 'yacht-tulip', title: 'Du Thuyền 5 Sao Tulip Cruise' },
+  { slug: 'villa-an-vuong', title: 'Biệt Thự An Vượng Villa' },
+  { slug: 'yacht-azura', title: 'Du Thuyền Siêu Sang Azura Cruise' },
+  { slug: 'villa-do-thanh', title: 'Biệt Thự Đô Thành Villa' },
+  { slug: 'yacht-calista', title: 'Du Thuyền Calista Cruise' },
+  { slug: 'villa-linh-hue', title: 'Biệt Thự Linh Huệ Villa Đà Lạt' },
+  { slug: 'yacht-leona', title: 'Du Thuyền Leona Cruise Hạ Long' },
+  { slug: 'villa-thanh-hoa', title: 'Công Trình Nhà Ở Thanh Hóa' }
+];
+
+async function initDetailPage() {
+  const settings = await CMS.getSettings();
+  if (settings.logo_badge)    { ['logoBadge','footerLogoBadge'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = settings.logo_badge; }); }
+  if (settings.company_short) { ['logoName','footerLogoName'].forEach(id => { const el = document.getElementById(id); if(el) el.textContent = settings.company_short; }); }
+
+  const urlParams = new URLSearchParams(window.location.search);
+  const slug = urlParams.get('slug') || urlParams.get('id') || CMS.getSlugFromUrl() || 'yacht-tulip';
+
+  let result = await CMS.getProject(slug);
+  
+  if (!result || !result.project) {
+    try {
+      const res = await fetch('data/projects.json');
+      const data = await res.json();
+      const p = data.projects.find(x => x.slug === slug || x.id === slug);
+      if (p) {
+        const vi = p.translations.vi;
+        const isYacht = p.sector === 'yacht-metalwork';
+        result = {
+          project: {
+            title: vi.title,
+            slug: p.slug,
+            excerpt: vi.description,
+            thumbnail: '/' + p.image,
+            category: isYacht ? 'Du Thuyền & Inox Hàng Hải' : 'Cơ Khí Kiến Trúc Villa',
+            client: vi.client,
+            project_value: vi.value,
+            location: vi.location,
+            year: '2025',
+            area: vi.scale,
+            duration: vi.timeline,
+            materials: vi.materials,
+            finishing: vi.finishing,
+            challenge: `Công trình đòi hỏi độ chính xác cao về dung sai, độ ăn khớp đa vật liệu và khả năng kháng chịu môi trường khắc nghiệt (${isYacht ? 'muối biển ăn mòn cao' : 'thời tiết nhiệt đới ẩm'}).`,
+            solution: `Ứng dụng gia công CNC laser fiber, chấn gấp chính xác, hàn TIG thẩm mỹ và quy trình xử lý bề mặt ${vi.finishing}.`,
+            result: `Dự án đã bàn giao hoàn thiện, nghiệm thu đạt 100% tiêu chuẩn kỹ thuật thiết kế và nhận được đánh giá cao từ chủ đầu tư.`,
+            highlights: vi.highlights,
+            galleryWithCaptions: p.galleryWithCaptions || p.gallery.map((img, i) => ({ url: '/' + img, caption: `${vi.title} - Ảnh chi tiết #${i + 1}` })),
+            photoCount: p.photoCount
+          },
+          gallery: p.gallery.map(img => '/' + img),
+          galleryWithCaptions: p.galleryWithCaptions || [],
+          related: data.projects.filter(x => x.slug !== slug && x.sector === p.sector).slice(0, 3).map(r => ({
+            title: r.translations.vi.title,
+            slug: r.slug,
+            thumbnail: '/' + r.image,
+            category: r.sector === 'yacht-metalwork' ? 'Du Thuyền' : 'Villa & Nhà Ở'
+          }))
+        };
+      }
+    } catch (e) {
+      console.warn('Fallback error:', e);
+    }
+  }
+
+  if (!result || !result.project) { showError(); return; }
+
+  renderDetail(result);
+}
+
+function showError() {
+  document.getElementById('loadingState').style.display = 'none';
+  document.getElementById('errorState').style.display = 'block';
+}
+
+function renderDetail({ project: p, blocks, gallery, galleryWithCaptions, related }) {
+  document.getElementById('loadingState').style.display = 'none';
+  document.getElementById('detailContent').style.display = 'block';
+
+  // SEO & Headings
+  document.getElementById('pageTitle').textContent = `${p.title} | SAO VÀNG`;
+  document.getElementById('pageDesc').setAttribute('content', p.seo_desc || p.excerpt || '');
+  document.getElementById('breadcrumbTitle').textContent = p.title;
+
+  // Hero image
+  if (p.thumbnail) document.getElementById('detailHeroImg').src = CMS.imgUrl(p.thumbnail);
+
+  // Category & Title
+  document.getElementById('detailCat').innerHTML = `
+    <span style="background: rgba(201,162,39,0.15); color: #C9A227; border: 1px solid rgba(201,162,39,0.3); padding: 5px 14px; border-radius: 4px; font-family: var(--ff-head); font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; display: inline-flex; align-items: center; gap: 6px;">
+      <i class="ri-shield-check-fill"></i> ${CMS.esc(p.category || 'Công Trình Đã Bàn Giao')}
+    </span>`;
+
+  document.getElementById('detailTitle').textContent = p.title;
+  document.getElementById('detailExcerpt').textContent = p.excerpt || '';
+
+  // Meta sidebar
+  const metaRows = [
+    { label: 'Chủ đầu tư / Đơn vị', val: p.client,         cls: '' },
+    { label: 'Địa điểm công trình', val: p.location,       cls: '' },
+    { label: 'Quy mô công trình',   val: p.area,           cls: '' },
+    { label: 'Chủng loại vật tư',   val: p.materials,      cls: '' },
+    { label: 'Tiêu chuẩn bề mặt',   val: p.finishing,      cls: '' },
+    { label: 'Thời gian thi công',  val: p.duration,       cls: '' },
+    { label: 'Tổng giá trị dự án',  val: p.project_value,  cls: 'gold' },
+    { label: 'Trạng thái dự án',    val: 'Đã nghiệm thu bàn giao 100%', cls: '' },
+  ].filter(r => r.val);
+
+  document.getElementById('metaBody').innerHTML = metaRows.map(r => `
+    <div class="meta-row" style="padding: 12px 0; border-bottom: 1px solid #F1F5F9; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; font-size: 13px;">
+      <span class="meta-row-label" style="color: #64748B; font-weight: 600; flex-shrink: 0;">${r.label}:</span>
+      <span class="meta-row-val" style="color: ${r.cls === 'gold' ? '#C9A227' : '#0F172A'}; font-weight: 700; text-align: right;">${CMS.esc(r.val)}</span>
+    </div>`).join('');
+
+  // Pre-fill enquiry button
+  const consultBtn = document.getElementById('consultBtn');
+  if (consultBtn) consultBtn.href = `lienhe.html?project=${encodeURIComponent(p.title)}`;
+
+  // Highlights
+  const bodyEl = document.getElementById('detailBody');
+  if (p.highlights && Array.isArray(p.highlights) && p.highlights.length) {
+    bodyEl.innerHTML = `
+      <div style="background: #F8FAFC; border-left: 4px solid #C9A227; padding: 24px; border-radius: 0 10px 10px 0; box-shadow: 0 4px 16px rgba(0,0,0,0.03);">
+        <h3 style="font-family: var(--ff-head); font-size: 16px; font-weight: 800; color: #0F172A; margin: 0 0 14px 0; display: flex; align-items: center; gap: 8px;">
+          <i class="ri-award-fill" style="color: #C9A227; font-size: 20px;"></i> ĐIỂM NỔI BẬT KỸ THUẬT &amp; CÔNG NGHỆ CHẾ TÁC
+        </h3>
+        <ul style="margin: 0; padding-left: 20px; color: #334155; font-size: 14.5px; line-height: 1.85;">
+          ${p.highlights.map(h => `<li>${CMS.esc(h)}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+  } else if (blocks && blocks.length) {
+    bodyEl.innerHTML = blocks.map(b => renderBlock(b)).join('');
+  }
+
+  // Challenge / Solution / Result
+  if (p.challenge || p.solution || p.result) {
+    const csrEl = document.getElementById('csr');
+    csrEl.innerHTML = `
+      <div style="display: grid; grid-template-columns: 1fr; gap: 18px;">
+        ${p.challenge ? `
+          <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 22px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <h4 style="font-family: var(--ff-head); font-size: 14px; font-weight: 800; color: #0F172A; text-transform: uppercase; margin: 0 0 8px 0; display: flex; align-items: center; gap: 8px;">
+              <i class="ri-alert-line" style="color: #E11D48;"></i> Thách Thức Kỹ Thuật
+            </h4>
+            <p style="margin: 0; font-size: 14px; color: #475569; line-height: 1.75;">${CMS.esc(p.challenge)}</p>
+          </div>` : ''}
+
+        ${p.solution ? `
+          <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 22px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <h4 style="font-family: var(--ff-head); font-size: 14px; font-weight: 800; color: #0F172A; text-transform: uppercase; margin: 0 0 8px 0; display: flex; align-items: center; gap: 8px;">
+              <i class="ri-tools-line" style="color: #2563EB;"></i> Giải Pháp Chế Tác Của Sao Vàng
+            </h4>
+            <p style="margin: 0; font-size: 14px; color: #475569; line-height: 1.75;">${CMS.esc(p.solution)}</p>
+          </div>` : ''}
+
+        ${p.result ? `
+          <div style="background: #FFFFFF; border: 1px solid #E2E8F0; border-radius: 10px; padding: 22px; box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+            <h4 style="font-family: var(--ff-head); font-size: 14px; font-weight: 800; color: #0F172A; text-transform: uppercase; margin: 0 0 8px 0; display: flex; align-items: center; gap: 8px;">
+              <i class="ri-checkbox-circle-line" style="color: #16A34A;"></i> Kết Quả Nghiệm Thu &amp; Bàn Giao
+            </h4>
+            <p style="margin: 0; font-size: 14px; color: #475569; line-height: 1.75;">${CMS.esc(p.result)}</p>
+          </div>` : ''}
+      </div>
+    `;
+  }
+
+  // Multi-Image Gallery
+  const rawList = galleryWithCaptions || p.galleryWithCaptions || (Array.isArray(gallery) ? gallery.map((g, idx) => ({ url: typeof g === 'string' ? g : g.url, caption: typeof g === 'string' ? `${p.title} - Chi tiết thực tế #${idx + 1}` : g.caption })) : []);
+  
+  _galleryImages = rawList.map((item, idx) => ({
+    url: typeof item === 'string' ? CMS.imgUrl(item) : CMS.imgUrl(item.url),
+    caption: typeof item === 'string' ? `${p.title} - Chi tiết #${idx + 1}` : (item.caption || `${p.title} - Chi tiết #${idx + 1}`)
+  }));
+
+  if (_galleryImages.length) {
+    document.getElementById('gallerySection').style.display = 'block';
+    document.getElementById('galleryCountBadge').textContent = `${_galleryImages.length} HÌNH ẢNH THỰC TẾ`;
+    
+    document.getElementById('galleryGrid').innerHTML = _galleryImages.map((item, idx) => `
+      <div class="gallery-item-card" onclick="openLightbox(${idx})" style="border-radius: 10px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.05); cursor: pointer; background: #FFFFFF; border: 1px solid #E2E8F0; display: flex; flex-direction: column; transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease;">
+        <div style="aspect-ratio: 16/11; overflow: hidden; background: #0F172A; position: relative;">
+          <img decoding="async" src="${item.url}" alt="${CMS.esc(item.caption)}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+          
+          <span style="position: absolute; top: 10px; left: 10px; background: rgba(15,23,42,0.85); color: #C9A227; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 4px; backdrop-filter: blur(4px); border: 1px solid rgba(201,162,39,0.3);">
+            #${idx + 1}
+          </span>
+
+          <span style="position: absolute; bottom: 10px; right: 10px; background: rgba(15,23,42,0.85); color: #FFFFFF; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 20px; backdrop-filter: blur(4px); display: flex; align-items: center; gap: 4px;">
+            <i class="ri-zoom-in-line" style="color: #C9A227;"></i> Phóng to
+          </span>
+        </div>
+        <div style="padding: 14px 16px; font-size: 13px; color: #334155; line-height: 1.5; font-weight: 600; border-top: 1px solid #F1F5F9; background: #FFFFFF; flex-grow: 1; display: flex; align-items: center;">
+          ${CMS.esc(item.caption)}
+        </div>
+      </div>`).join('');
+  }
+
+  // Next / Previous Project Navigation
+  const currentIdx = ALL_PROJECT_SLUGS.findIndex(x => x.slug === p.slug);
+  if (currentIdx !== -1) {
+    const prevIdx = (currentIdx - 1 + ALL_PROJECT_SLUGS.length) % ALL_PROJECT_SLUGS.length;
+    const nextIdx = (currentIdx + 1) % ALL_PROJECT_SLUGS.length;
+
+    const prevP = ALL_PROJECT_SLUGS[prevIdx];
+    const nextP = ALL_PROJECT_SLUGS[nextIdx];
+
+    const prevEl = document.getElementById('navPrevProj');
+    const nextEl = document.getElementById('navNextProj');
+
+    if (prevEl) {
+      prevEl.href = `duanchitiet.html?slug=${prevP.slug}`;
+      document.getElementById('navPrevTitle').textContent = prevP.title;
+    }
+    if (nextEl) {
+      nextEl.href = `duanchitiet.html?slug=${nextP.slug}`;
+      document.getElementById('navNextTitle').textContent = nextP.title;
+    }
+  }
+
+  // Related projects
+  if (related && related.length) {
+    document.getElementById('relatedSection').style.display = 'block';
+    document.getElementById('relatedGrid').innerHTML = related.map(r => `
+      <a href="duanchitiet.html?slug=${r.slug || r.id}" class="related-card" style="text-decoration: none; border-radius: 10px; overflow: hidden; background: #FFFFFF; border: 1px solid #E2E8F0; box-shadow: 0 4px 16px rgba(0,0,0,0.04); display: flex; flex-direction: column; transition: transform 0.3s ease;">
+        <div style="aspect-ratio: 16/10; overflow: hidden; background: #0F172A;">
+          <img decoding="async" src="${CMS.imgUrl(r.thumbnail) || 'assets/images/project-villa.png'}" alt="${CMS.esc(r.title)}" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <div class="related-card-body" style="padding: 18px;">
+          <div class="related-card-cat" style="font-size: 10.5px; font-weight: 800; color: #C9A227; text-transform: uppercase; margin-bottom: 6px;">${CMS.esc(r.category || '')}</div>
+          <div class="related-card-title" style="font-family: var(--ff-head); font-size: 15px; font-weight: 800; color: #0F172A; line-height: 1.35;">${CMS.esc(r.title)}</div>
+        </div>
+      </a>`).join('');
+  }
+}
+
+function renderBlock(block) {
+  let data = {};
+  try { data = typeof block.data === 'string' ? JSON.parse(block.data) : block.data; } catch {}
+  switch (block.type) {
+    case 'text':    return `<div class="detail-body" style="margin-bottom:20px">${data.content || data.html || ''}</div>`;
+    case 'image':   return `<figure style="margin:24px 0"><img decoding="async" loading="lazy" src="${CMS.imgUrl(data.url||data.src||'')}" alt="${CMS.esc(data.alt||data.caption||'')}" style="width:100%;border-radius:8px" width="800" height="600">${data.caption?`<figcaption style="font-size:13px;color:var(--gray-400);text-align:center;margin-top:8px">${CMS.esc(data.caption)}</figcaption>`:''}</figure>`;
+    default:        return '';
+  }
+}
+
+// ── Lightbox Carousel Handlers ─────────────────────────────────────
+function openLightbox(idx) {
+  if (!_galleryImages.length) return;
+  _currentLightboxIdx = typeof idx === 'number' ? idx : 0;
+  updateLightboxView();
+  const lb = document.getElementById('lightbox');
+  if (lb) lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function updateLightboxView() {
+  if (!_galleryImages.length) return;
+  const cur = _galleryImages[_currentLightboxIdx];
+  const img = document.getElementById('lightboxImg');
+  const cap = document.getElementById('lightboxCaption');
+  const counter = document.getElementById('lightboxCounter');
+
+  if (img) img.src = cur.url;
+  if (cap) cap.textContent = cur.caption;
+  if (counter) counter.textContent = `Ảnh ${_currentLightboxIdx + 1} / ${_galleryImages.length}`;
+}
+
+function nextLightboxImg() {
+  if (!_galleryImages.length) return;
+  _currentLightboxIdx = (_currentLightboxIdx + 1) % _galleryImages.length;
+  updateLightboxView();
+}
+
+function prevLightboxImg() {
+  if (!_galleryImages.length) return;
+  _currentLightboxIdx = (_currentLightboxIdx - 1 + _galleryImages.length) % _galleryImages.length;
+  updateLightboxView();
+}
+
+function closeLightbox() {
+  const lb = document.getElementById('lightbox');
+  if (lb) lb.style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+window.openLightbox = openLightbox;
+window.closeLightbox = closeLightbox;
+window.nextLightboxImg = nextLightboxImg;
+window.prevLightboxImg = prevLightboxImg;
+
+document.addEventListener('DOMContentLoaded', initDetailPage);
+document.addEventListener('keydown', e => {
+  const lb = document.getElementById('lightbox');
+  if (lb && lb.style.display === 'flex') {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowRight') nextLightboxImg();
+    if (e.key === 'ArrowLeft') prevLightboxImg();
+  }
+});
+</script>
+
+<!-- Shared components -->
+<script src="assets/js/shared/internal-links.js"></script>
+<script src="assets/js/shared/service-cta.js"></script>
+<script src="assets/js/shared/floating-widget.js"></script>
+<script src="assets/js/shared/faq-accordion.js"></script>
+<script src="assets/js/shared/breadcrumb.js"></script>
+<script src="assets/js/shared/analytics.js"></script>
+<script src="assets/js/modules/navbar.js"></script>
+</body>
+</html>

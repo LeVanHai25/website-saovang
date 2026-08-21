@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-sv-main.svg" />
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.min.css" crossorigin="anonymous" />
+  <!-- ═══ Google Tag Manager — Sprint 6 ═══
+       Thay GTM-XXXXXXX bằng Container ID thực của bạn
+       Lấy tại: tagmanager.google.com
+  ═══════════════════════════════════════ -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  <!-- End Google Tag Manager -->
+  <meta name="theme-color" content="#B5121B" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tin Tức & Kiến Thức Cơ Khí | SAO VÀNG</title>
+  <meta name="description" content="Tin tức mới nhất về thiết kế cơ khí, vật liệu inox, du thuyền và công trình cao cấp từ Sao Vàng." />
+  <link rel="preload" as="image" href="assets/images/hero-interior.png" />
+    <meta property="og:title" content="Tin Tức & Kiến Thức | SAO VÀNG" />
+  <meta property="og:description" content="Tin tức, kiến thức kỹ thuật và xu hướng thiết kế cơ khí cao cấp từ đội ngũ chuyên gia Sao Vàng." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cokhisaovang.com/tintuc.html" />
+  <meta property="og:image" content="https://www.cokhisaovang.com/assets/images/hero-interior.png" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+  /* ══ NEWS LAYOUT ════════════════════════════════════════════ */
+  .news-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(24px, 4vw, 48px);
+    align-items: start;
+  }
+
+  /* Article cards */
+  .article-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(16px, 3vw, 24px);
+  }
+  .article-card {
+    background: var(--white); border: 1px solid var(--gray-200);
+    border-radius: var(--radius-md); overflow: hidden;
+    transition: all .25s var(--ease); cursor: pointer;
+  }
+  .article-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,.09); transform: translateY(-3px); border-color: transparent; }
+  .article-thumb { aspect-ratio: 16/9; overflow: hidden; background: var(--gray-100); }
+  .article-thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+  .article-card:hover .article-thumb img { transform: scale(1.05); }
+  .article-body { padding: clamp(14px, 3vw, 24px); }
+  .article-meta { display: flex; align-items: center; gap: var(--sp-3); margin-bottom: var(--sp-3); flex-wrap: wrap; }
+  .article-cat { font-family: var(--ff-head); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-a11y); }
+  .article-date { font-size: var(--fs-xs); color: var(--gray-400); }
+  .article-read { font-size: var(--fs-xs); color: var(--gray-400); }
+  .article-title { font-family: var(--ff-head); font-size: clamp(14px, 1.8vw, 18px); font-weight: 700; color: var(--dark); line-height: 1.4; margin-bottom: var(--sp-2); }
+  .article-excerpt { font-size: var(--fs-body); color: var(--gray-500); line-height: 1.7; font-weight: 300; margin-bottom: var(--sp-3); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .article-link { font-family: var(--ff-head); font-size: 11px; font-weight: 700; color: var(--gold-a11y); display: inline-flex; align-items: center; gap: 4px; transition: gap .2s; }
+  .article-card:hover .article-link { gap: 8px; }
+
+  /* Featured article (first) */
+  .article-card.featured .article-thumb { aspect-ratio: 21/9; }
+  .article-card.featured .article-title { font-size: clamp(16px, 2.5vw, 24px); }
+
+  /* Sidebar */
+  .news-sidebar { display: flex; flex-direction: column; gap: clamp(20px, 3vw, 32px); }
+  .sidebar-widget { background: var(--white); border: 1px solid var(--gray-200); border-radius: var(--radius-md); padding: clamp(16px, 3vw, 24px); }
+  .sidebar-title { font-family: var(--ff-head); font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--dark); margin-bottom: var(--sp-4); padding-bottom: var(--sp-3); border-bottom: 2px solid var(--gold); display: inline-block; }
+  .sidebar-article { display: flex; gap: var(--sp-3); padding: var(--sp-3) 0; border-bottom: 1px solid var(--gray-100); }
+  .sidebar-article:last-child { border-bottom: none; padding-bottom: 0; }
+  .sidebar-thumb { width: 72px; height: 56px; min-width: 72px; border-radius: var(--radius); overflow: hidden; background: var(--gray-100); }
+  .sidebar-thumb img { width: 100%; height: 100%; object-fit: cover; }
+  .sidebar-article h4 { font-family: var(--ff-head); font-size: 12px; font-weight: 700; color: var(--dark); line-height: 1.4; margin-bottom: 4px; }
+  .sidebar-article span { font-size: 11px; color: var(--gray-400); }
+  .category-list { display: flex; flex-direction: column; gap: var(--sp-2); }
+  .cat-item { display: flex; align-items: center; justify-content: space-between; padding: var(--sp-2) 0; border-bottom: 1px solid var(--gray-100); font-size: var(--fs-sm); color: var(--gray-600); transition: color .2s; cursor: pointer; }
+  .cat-item:hover { color: var(--gold-a11y); }
+  .cat-count { font-family: var(--ff-head); font-size: 11px; font-weight: 700; background: var(--gray-100); color: var(--gray-500); padding: 2px 8px; border-radius: 20px; }
+
+  /* Pagination */
+  .pagination { display: flex; align-items: center; justify-content: center; gap: var(--sp-2); margin-top: var(--sp-7); flex-wrap: wrap; }
+  .page-btn { width: 40px; height: 40px; border-radius: var(--radius); display: flex; align-items: center; justify-content: center; font-family: var(--ff-head); font-size: 13px; font-weight: 700; border: 1.5px solid var(--gray-200); color: var(--gray-500); transition: all .2s; cursor: pointer; }
+  .page-btn:hover { border-color: var(--gold); color: var(--gold-a11y); }
+  .page-btn.active { background: var(--gold); color: var(--white); border-color: var(--gold); }
+
+  /* ══ RESPONSIVE ══════════════════════════════════════════════ */
+  @media (min-width: 640px)  { .article-grid { grid-template-columns: 1fr 1fr; } .article-card.featured { grid-column: span 2; } }
+  @media (min-width: 1024px) { .news-layout { grid-template-columns: 1fr 320px; } .article-grid { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 1280px) { .news-layout { grid-template-columns: 1fr 340px; } }
+
+  /* ── prefers-reduced-motion ─────────────────────────────── */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+    [data-reveal] { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+  <link rel="canonical" href="https://www.cokhisaovang.com/tintuc.html" />
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": [
+        "Organization",
+        "LocalBusiness",
+        "ProfessionalService"
+      ],
+      "@id": "https://www.cokhisaovang.com/#organization",
+      "name": "Cơ Khí Sao Vàng",
+      "legalName": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG",
+      "url": "https://www.cokhisaovang.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.cokhisaovang.com/assets/images/logo-sv-main.svg",
+        "width": 200,
+        "height": 200
+      },
+      "image": "https://www.cokhisaovang.com/assets/images/hero-bg.jpg",
+      "description": "CÔNG TY CỔ PHẦN SẢN XUẤT CƠ KHÍ SAO VÀNG — Chuyên gia gia công cơ khí chính xác CNC, kết cấu thép, inox du thuyền, cửa nhôm kính, mặt dựng curtain wall và lan can kính cường lực tại Hà Nội. MST: 0110808047.",
+      "telephone": "+84869590279",
+      "email": "cokhisaovangvn@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Tầng 3, TT7-35 Khu đô thị Văn Phú",
+        "addressLocality": "Quận Hà Đông",
+        "addressRegion": "Hà Nội",
+        "postalCode": "100000",
+        "addressCountry": "VN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "20.9715",
+        "longitude": "105.7825"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "52",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "08:00",
+          "closes": "17:30"
+        }
+      ],
+      "taxID": "0110808047",
+      "sameAs": [
+        "https://zalo.me/0869590279",
+        "https://www.cokhisaovang.com"
+      ],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Việt Nam"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Dịch vụ Cơ Khí & SV Aluminium",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gia Công Cơ Khí Chính Xác CNC",
+              "url": "https://www.cokhisaovang.com/gia-cong-cnc-chinh-xac.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Gia Công Inox Công Nghiệp & Mỹ Thuật",
+              "url": "https://www.cokhisaovang.com/gia-cong-inox.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Thiết Kế & Thi Công Kết Cấu Thép",
+              "url": "https://www.cokhisaovang.com/ket-cau-thep.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Cơ Khí Mỹ Thuật & Sắt Nghệ Thuật",
+              "url": "https://www.cokhisaovang.com/cokhinghethuat.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Thi Công Cửa Nhôm Kính Cao Cấp",
+              "url": "https://www.cokhisaovang.com/cuanhomkinh.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Vách Kính Mặt Dựng & Vách Ngăn Kính",
+              "url": "https://www.cokhisaovang.com/vachkinh.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Lan Can Kính Cường Lực",
+              "url": "https://www.cokhisaovang.com/lancankinh.html"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mái Kính Cường Lực & Giếng Trời",
+              "url": "https://www.cokhisaovang.com/mai-kinh.html"
+            }
+          }
+        ]
+      },
+      "knowsAbout": [
+        "Gia công cơ khí chính xác CNC",
+        "Kết cấu thép công nghiệp AWS D1.1",
+        "Cửa nhôm kính kiến trúc cao cấp",
+        "Mặt dựng kính curtain wall",
+        "Inox 316L marine grade",
+        "Lan can kính cường lực",
+        "Mái kính canopy giếng trời"
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <!-- SECTION 1 - HEADER -->
+  <header class="header-v2" id="navbar" role="banner">
+    <div class="nav-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="nav-logo" aria-label="Sao Vàng — Trang chủ">
+        <img width="200" height="60" fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG — Kiến Tạo Giá Trị Bền Vững" style="height: 48px; width: auto; display: block;" />
+      </a>
+
+      <!-- Desktop nav menu -->
+      <nav class="nav-menu" id="navMenu" role="navigation" aria-label="Menu chính">
+        <a href="index.html"           class="nav-menu-link ">Trang Chủ</a>
+        <a href="gioithieu.html"      class="nav-menu-link ">Giới Thiệu</a>
+        <a href="cokhisaovang.html" class="nav-menu-link ">Cơ Khí Sao Vàng</a>
+        <a href="nhomsaovang.html"   class="nav-menu-link ">SV Aluminium</a>
+
+        <!-- Dropdown Lĩnh Vực -->
+        <div class="nav-dropdown-wrap">
+          <a href="linhvuchoatdong.html" class="nav-menu-link ">Lĩnh Vực Hoạt Động</a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="linhvuchoatdong.html" class="nav-dropdown-item" role="menuitem">Tổng quan Lĩnh vực</a>
+            <a href="linhvuccokhi.html"     class="nav-dropdown-item" role="menuitem">Cơ Khí Sao Vàng</a>
+            <a href="linhvucnhomkinh.html"  class="nav-dropdown-item" role="menuitem">SV Aluminium</a>
+          </div>
+        </div>
+
+        <a href="sanpham.html"              class="nav-menu-link ">Sản Phẩm</a>
+        <a href="phukien.html"              class="nav-menu-link ">Phụ Kiện</a>
+        <a href="thuvienprofilenhom.html" class="nav-menu-link ">Profile Nhôm</a>
+        <a href="duan.html"                 class="nav-menu-link ">Dự Án</a>
+        <a href="tailieu.html"              class="nav-menu-link ">Tài Liệu Kỹ Thuật</a>
+        <a href="tintuc.html"               class="nav-menu-link active">Tin Tức</a>
+        <a href="lienhe.html"               class="nav-menu-link ">Liên Hệ</a>
+      </nav>
+
+      <!-- Hotline + Hamburger -->
+      <div style="display:flex;align-items:center;gap:12px;flex-shrink:0;">
+        <a href="tel:0869590279" class="nav-hotline" aria-label="Gọi hotline 0869 590 279">
+          <i class="ri-phone-fill" aria-hidden="true"></i>
+          <span>0869 590 279</span>
+        </a>
+        <button class="nav-hamburger" id="hamburger" aria-label="Mở menu" aria-expanded="false" aria-controls="navDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="nav-backdrop" id="navBackdrop" aria-hidden="true"></div>
+  <nav class="nav-drawer" id="navDrawer" role="dialog" aria-label="Menu di động">
+    <a href="index.html"                 class="nav-drawer-link ">Trang Chủ</a>
+    <a href="gioithieu.html"            class="nav-drawer-link ">Giới Thiệu</a>
+    <a href="cokhisaovang.html"      class="nav-drawer-link ">Cơ Khí Sao Vàng</a>
+    <a href="nhomsaovang.html"        class="nav-drawer-link ">SV Aluminium</a>
+    <a href="linhvuchoatdong.html"   class="nav-drawer-link ">Lĩnh Vực Hoạt Động</a>
+    <a href="sanpham.html"             class="nav-drawer-link ">Sản Phẩm</a>
+    <a href="phukien.html"             class="nav-drawer-link ">Phụ Kiện</a>
+    <a href="thuvienprofilenhom.html" class="nav-drawer-link ">Profile Nhôm</a>
+    <a href="duan.html"                class="nav-drawer-link ">Dự Án</a>
+    <a href="tailieu.html"              class="nav-drawer-link ">Tài Liệu Kỹ Thuật</a>
+    <a href="tintuc.html"              class="nav-drawer-link active">Tin Tức</a>
+    <a href="lienhe.html"              class="nav-drawer-link ">Liên Hệ</a>
+    <a href="tel:0869590279" style="margin-top:auto;" class="sv-btn sv-btn-gold">
+      <i class="ri-phone-fill"></i> 0869 590 279
+    </a>
+  </nav>
+
+<section class="page-hero">
+  <div class="page-hero-bg"><img width="1920" height="1080" fetchpriority="high" loading="eager" src="assets/images/hero-interior.png" alt="Tin tức Sao Vàng" /><div class="page-hero-overlay"></div></div>
+  <div class="container page-hero-content">
+    <span class="tag">Tin Tức &amp; Kiến Thức</span>
+    <h1 class="page-hero-title">Blog Cơ Khí Sao Vàng</h1>
+    <p class="page-hero-sub">Xu hướng thiết kế · Kiến thức vật liệu · Tin tức công ty</p>
+    <nav class="breadcrumb"><a href="index.html">Trang chủ</a><span class="sep"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></span><span class="current">Tin tức</span></nav>
+  </div>
+</section>
+
+<div class="filter-section">
+  <div class="container">
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">Tất cả</button>
+    </div>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:8px">
+      <label style="font-size:12px;color:var(--gray-500)">Sắp xếp:</label>
+      <select class="sort-select" id="sortSelect" onchange="onSortChange()" style="border:1.5px solid var(--gray-200);border-radius:4px;padding:6px 10px;font-size:12px;color:var(--dark);background:var(--white)">
+        <option value="desc">Mới nhất</option>
+        <option value="asc">Cũ nhất</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+<section class="section" style="padding:48px 0 80px">
+  <div class="container">
+    <div class="news-layout">
+      <!-- Main -->
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+          <p id="articleCount" style="font-size:13px;color:var(--gray-400)">Đang tải...</p>
+        </div>
+        <div class="article-grid" id="blogGrid">
+          <div class="blog-skeleton"></div>
+          <div class="blog-skeleton"></div>
+          <div class="blog-skeleton"></div>
+          <div class="blog-skeleton"></div>
+        </div>
+        <div class="pagination" id="blogPagination"></div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="news-sidebar">
+        <div class="sidebar-widget">
+          <div class="sidebar-title">Bài Viết Mới Nhất</div>
+          <div class="sidebar-widget-body" id="recentPosts"><p style="font-size:13px;color:var(--gray-400)">Đang tải...</p></div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="sidebar-title">Danh Mục</div>
+          <div class="sidebar-widget-body" id="catWidget"><p style="font-size:13px;color:var(--gray-400)">Đang tải...</p></div>
+        </div>
+        <div class="sidebar-widget">
+          <div class="sidebar-title">Liên Hệ Tư Vấn</div>
+          <div class="sidebar-widget-body" style="text-align:center;padding:20px">
+            <p style="font-size:13px;color:var(--gray-500);margin-bottom:14px">Cần tư vấn về dự án cơ khí?</p>
+            <a href="lienhe.html" class="sv-btn sv-btn-gold" style="display:inline-flex;justify-content:center;width:100%">Liên Hệ Ngay</a>
+            <a href="tel:0869590279" style="display:block;text-align:center;margin-top:8px;font-size:13px;color:var(--gray-400)">0869 590 279</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer-v2" role="contentinfo">
+    <div class="sv-container">
+      <div class="footer-v2-grid">
+
+        <!-- Col 1: Brand -->
+        <div>
+          <div class="footer-logo-wrap" style="display: flex; align-items: center; gap: 10px; margin-bottom: 15px;">
+            <img width="200" height="60" fetchpriority="high" loading="eager" src="assets/images/logo-sv-main.svg" alt="SAO VÀNG" style="height: 54px; width: auto; display: block;" />
+          </div>
+          <p class="footer-address" style="font-size: var(--sv-text-sm); color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 20px;">
+            Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng — chuyên cơ khí chính xác &amp; nhôm kính cao cấp.
+          </p>
+          <div class="footer-socials" aria-label="Mạng xã hội">
+            <a href="#" class="footer-social" aria-label="Facebook Sao Vàng"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="YouTube Sao Vàng"><i class="ri-youtube-fill" aria-hidden="true"></i></a>
+            <a href="#" class="footer-social" aria-label="LinkedIn Sao Vàng"><i class="ri-linkedin-fill" aria-hidden="true"></i></a>
+            <a href="tel:0869590279" class="footer-social" aria-label="Gọi hotline Sao Vàng"><i class="ri-phone-fill" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Cơ Khí Sao Vàng -->
+        <div>
+          <h4 class="footer-col-title">Cơ Khí Sao Vàng</h4>
+          <div class="footer-links">
+            <a href="linhvuccokhi.html" class="footer-link">Gia công cơ khí chính xác</a>
+            <a href="linhvuccokhi.html" class="footer-link">Gia công CNC</a>
+            <a href="linhvuccokhi.html" class="footer-link">Kết cấu thép</a>
+            <a href="cauthangxoan.html" class="footer-link">Lan can, cầu thang, mái kính</a>
+            <a href="congnghethuat.html" class="footer-link">Cổng &amp; hàng rào</a>
+            <a href="linhvuccokhi.html" class="footer-link">Gia công inox &amp; nhôm</a>
+          </div>
+        </div>
+
+        <!-- Col 3: SV Aluminium -->
+        <div>
+          <h4 class="footer-col-title">SV Aluminium</h4>
+          <div class="footer-links">
+            <a href="cuanhomkinh.html" class="footer-link">Cửa nhôm kính cao cấp</a>
+            <a href="vachkinh.html" class="footer-link">Vách kính mặt dựng</a>
+            <a href="lancankinh.html" class="footer-link">Lan can kính</a>
+            <a href="thuvienprofilenhom.html" class="footer-link">Thư viện Profile Nhôm</a>
+            <a href="vachkinh.html" class="footer-link">Phòng tắm kính</a>
+            <a href="vachkinh.html" class="footer-link">Mái kính cường lực</a>
+            <a href="linhvucnhomkinh.html" class="footer-link">Phụ kiện nhôm kính</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Công ty -->
+        <div>
+          <h4 class="footer-col-title">Công Ty</h4>
+          <div class="footer-links">
+            <a href="gioithieu.html" class="footer-link">Giới thiệu</a>
+            <a href="linhvuchoatdong.html" class="footer-link">Lĩnh vực hoạt động</a>
+            <a href="duan.html" class="footer-link">Dự án đã thực hiện</a>
+            <a href="sanpham.html" class="footer-link">Sản phẩm</a>
+            <a href="tintuc.html" class="footer-link">Tin tức</a>
+            <a href="lienhe.html" class="footer-link">Liên hệ</a>
+          </div>
+        </div>
+
+        <!-- Col 5: Liên hệ -->
+        <div>
+          <h4 class="footer-col-title">Liên Hệ</h4>
+          <div class="footer-contact-items">
+            <div class="footer-contact-item">
+              <i class="ri-map-pin-2-line" aria-hidden="true"></i>
+              <span>Tầng 3, TT7-35 KĐT Văn Phú, phường Phú La, TP Hà Nội, Việt Nam.</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-phone-line" aria-hidden="true"></i>
+              <a href="tel:0869590279" style="color: inherit; text-decoration: none;">0869 590 279</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-mail-line" aria-hidden="true"></i>
+              <a href="mailto:info@cokhisaovang.com" style="color: inherit; text-decoration: none;">info@cokhisaovang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-time-line" aria-hidden="true"></i>
+              <span>Thứ 2 - Thứ 7: 8:00 - 17:00</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-global-line" aria-hidden="true"></i>
+              <a href="https://www.cokhisaovang.com" target="_blank" style="color: inherit; text-decoration: none;">www.CoKhiSaoVang.com</a>
+            </div>
+            <div class="footer-contact-item">
+              <i class="ri-file-list-3-line" aria-hidden="true"></i>
+              <span>MST: 0110808047</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinhsachbaomat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lienhe.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <span>© 2025 Công ty Cổ Phần Sản Xuất Cơ Khí Sao Vàng. All Rights Reserved. MST: 0110808047.</span>
+        <nav style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;"><a href="chinhsachbaomat.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;transition:opacity .2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Chính sách bảo mật</a><a href="lienhe.html" style="color:inherit;text-decoration:none;font-size:12px;opacity:0.6;margin-left:8px;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.6'">Liên hệ</a></nav>
+        <span>Design by <a href="https://readdy.ai" target="_blank" rel="noopener" style="color: inherit; text-decoration: none; font-weight: 500;">Readdy.ai</a></span>
+      </div>
+
+    </div>
+  </footer>
+
+<!-- ════════════════════════════════════════════
+     FLOATING BUTTONS
+════════════════════════════════════════════ -->
+<div class="floating-left" aria-label="Kênh liên hệ nhanh">
+  <a href="https://zalo.me/0869590279" class="float-btn float-btn-zalo"
+     target="_blank" rel="noopener" aria-label="Chat Zalo" title="Zalo: 0869 590 279">
+    <i class="ri-message-3-fill" aria-hidden="true"></i>
+  </a>
+  <a href="tel:0869590279" class="float-btn float-btn-phone"
+     aria-label="Gọi điện 0869 590 279" title="Gọi ngay">
+    <i class="ri-phone-fill" aria-hidden="true"></i>
+  </a>
+</div>
+
+<div class="floating-right">
+  <button class="float-btn float-btn-top" id="scrollTopBtn" aria-label="Cuộn lên đầu trang" title="Lên đầu trang">
+    <i class="ri-arrow-up-line" aria-hidden="true"></i>
+  </button>
+</div>
+
+<!-- ════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════ -->
+<!-- navbar.js handles this -->
+<script src="assets/js/cms-client.js"></script>
+<script src="assets/js/main.js"></script>
+<!-- blog.js handles this -->
+
+<!-- STICKY MOBILE CTA BAR -->
+<div class="sticky-cta-bar" id="stickyCtaBar" role="complementary" aria-label="Liên hệ nhanh">
+  <a href="tel:0869590279" class="btn btn-gold btn-sm">
+    <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    Gọi Ngay
+  </a>
+  <a href="https://zalo.me/0869590279" class="btn btn-outline-dark btn-sm" target="_blank" rel="noopener">Zalo</a>
+  <a href="baogia.html" class="btn btn-sm" style="background:rgba(255,255,255,.08);color:#fff;border-color:rgba(255,255,255,.15)">Báo Giá</a>
+</div>
+  <script src="assets/js/modules/navbar.js"></script>
+  <script src="assets/js/modules/cms-pages/blog.js"></script>
+  <script src="assets/js/shared/internal-links.js"></script>
+  <!-- Sprint 3: Service CTA -->
+  <script src="assets/js/shared/service-cta.js"></script>
+    <!-- Sprint 2: Shared components -->
+  <script src="assets/js/shared/floating-widget.js"></script>
+  <script src="assets/js/shared/faq-accordion.js"></script>
+  <script src="assets/js/shared/breadcrumb.js"></script>
+  <!-- Sprint 6: Analytics -->
+  <!-- ═══ Microsoft Clarity — Sprint 6 ═══
+       Thay XXXXXXXXXX bằng Project ID thực của bạn
+       Lấy tại: clarity.microsoft.com
+  ═══════════════════════════════════════ -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "XXXXXXXXXX");
+  </script>
+  <!-- End Microsoft Clarity -->
+  <script src="assets/js/shared/analytics.js"></script>
+</body>
+</html>
