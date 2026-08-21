@@ -80,15 +80,20 @@ router.get('/projects/:slug', (req, res) => {
   const db = getDb();
   const project = db.prepare(`
     SELECT c.*,
-           ${metaSub('client')}         as client,
-           ${metaSub('project_value')}  as project_value,
-           ${metaSub('location')}       as location,
-           ${metaSub('year')}           as year,
-           ${metaSub('area')}           as area,
-           ${metaSub('duration')}       as duration,
-           ${metaSub('challenge')}      as challenge,
-           ${metaSub('solution')}       as solution,
-           ${metaSub('result')}         as result
+           ${metaSub('client')}              as client,
+           ${metaSub('project_value')}       as project_value,
+           ${metaSub('location')}            as location,
+           ${metaSub('year')}                as year,
+           ${metaSub('area')}                as area,
+           ${metaSub('duration')}            as duration,
+           ${metaSub('materials')}           as materials,
+           ${metaSub('finishing')}           as finishing,
+           ${metaSub('challenge')}           as challenge,
+           ${metaSub('solution')}            as solution,
+           ${metaSub('result')}              as result,
+           ${metaSub('highlights')}          as highlights,
+           ${metaSub('photoCount')}          as photoCount,
+           ${metaSub('galleryWithCaptions')}  as galleryWithCaptions
     FROM content c
     WHERE (c.slug = ? OR CAST(c.id AS TEXT) = ?)
       AND c.type = 'project' AND c.status = 'published'
@@ -96,6 +101,10 @@ router.get('/projects/:slug', (req, res) => {
   `).get(req.params.slug, req.params.slug);
 
   if (!project) return res.status(404).json({ error: 'Project not found' });
+
+  // Parse JSON fields if string
+  try { if (project.highlights && typeof project.highlights === 'string') project.highlights = JSON.parse(project.highlights); } catch {}
+  try { if (project.galleryWithCaptions && typeof project.galleryWithCaptions === 'string') project.galleryWithCaptions = JSON.parse(project.galleryWithCaptions); } catch {}
 
   const blocks  = db.prepare('SELECT * FROM blocks WHERE content_id = ? AND visible = 1 ORDER BY position ASC').all(project.id);
   const gallery = db.prepare("SELECT field_value FROM content_meta WHERE content_id = ? AND field_key = 'gallery' LIMIT 1").get(project.id);
@@ -109,6 +118,7 @@ router.get('/projects/:slug', (req, res) => {
     project,
     blocks: blocks.map(b => ({ ...b, data: JSON.parse(b.data || '{}') })),
     gallery: gallery ? JSON.parse(gallery.field_value || '[]') : [],
+    galleryWithCaptions: project.galleryWithCaptions || [],
     related,
   });
 });

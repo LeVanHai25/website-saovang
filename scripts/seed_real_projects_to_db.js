@@ -60,7 +60,9 @@ initDb().then(db => {
       solution: `Ứng dụng gia công CNC laser fiber, chấn gấp chính xác, hàn TIG thẩm mỹ và quy trình xử lý bề mặt ${vi.finishing}.`,
       result: `Dự án đã bàn giao hoàn thiện, nghiệm thu đạt 100% tiêu chuẩn kỹ thuật thiết kế và nhận được đánh giá cao từ chủ đầu tư.`,
       highlights: JSON.stringify(vi.highlights),
-      gallery: JSON.stringify(p.gallery.map(img => '/' + img))
+      gallery: JSON.stringify(p.gallery.map(img => '/' + img)),
+      galleryWithCaptions: JSON.stringify(p.galleryWithCaptions.map(item => ({ url: '/' + item.url, caption: item.caption }))),
+      photoCount: p.photoCount
     };
 
     Object.entries(metas).forEach(([k, v]) => {
